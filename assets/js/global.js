@@ -49,8 +49,8 @@ jQuery(function($) {
             os: platform.os.toString(),
             perf: perfResults
         };
-        if (platform.name === 'Chrome') {
-            data.browser = data.browser.replace(/^(Chrome \d+\.\d+)\..*$/, '$1');
+        if (platform.name === 'Chrome' || platform.name === 'Opera' || platform.name === 'Chrome Mobile') {
+            data.browser = data.browser.replace(/^([a-z ]+ \d+\.\d+)\..*$/i, '$1');
         }
 
         localStorage.setItem('perf:' + artwork[0], data);

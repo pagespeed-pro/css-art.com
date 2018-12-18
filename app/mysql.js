@@ -40,6 +40,12 @@ function getBrowser(browser, os) {
 // get/insert artwork
 function getArtworkID(artwork) {
     return new Promise(function(resolve, reject) {
+
+        var artwork_id = cache.get(artwork + ':id');
+        if (artwork_id) {
+            return resolve(artwork_id);
+        }
+
         connection.query('SELECT `id` FROM `artworks` WHERE `name` = ? LIMIT 1', [artwork], function(error, results, fields) {
             if (error) {
                 reject(error);
@@ -50,10 +56,16 @@ function getArtworkID(artwork) {
                     if (error || !results.insertId) {
                         return reject(error);
                     } else {
+
+                        cache.put(artwork + ':id', results.insertId);
+
                         resolve(results.insertId);
                     }
                 });
             } else {
+
+                cache.put(artwork + ':id', results[0].id);
+
                 resolve(results[0].id);
             }
         });
@@ -61,13 +73,15 @@ function getArtworkID(artwork) {
 }
 
 // log IP for test results
-function logIP(artwork, version, ip) {
+function logIP(artwork_id, version, ip) {
     return new Promise(function(resolve, reject) {
-        connection.query('SELECT * FROM `ip_log` WHERE `artwork` = ? AND `version` = ? AND `ip` = INET_ATON(?) LIMIT 1', [artwork, version, ip], function(error, results, fields) {
+        connection.query('SELECT * FROM `ip_log` WHERE `artwork` = ? AND `version` = ? AND `ip` = INET_ATON(?) LIMIT 1', [artwork_id, version, ip], function(error, results, fields) {
             if (error) {
                 reject(error);
             } else if (results.length === 0) {
-                connection.query('INSERT IGNORE INTO `ip_log` (`artwork`, `version`, `ip`) VALUES (?, ?, INET_ATON(?))', [artwork, version, ip], function(error, results, fields) {
+                //  || ip === '216.37.72.238'
+                // crossbrowsertesting.com = 216.37.72.238
+                connection.query('INSERT IGNORE INTO `ip_log` (`artwork`, `version`, `ip`) VALUES (?, ?, INET_ATON(?))', [artwork_id, version, ip], function(error, results, fields) {
                     if (error) {
                         return reject(error);
                     } else {
@@ -97,7 +111,7 @@ function registerPerformanceResults(artwork, version, ip, browser, os, perfResul
 
             getArtworkID(artwork).then(function(artwork_id) {
 
-                logIP(artwork, version, ip).then(function(already_logged) {
+                logIP(artwork_id, version, ip).then(function(already_logged) {
                     if (already_logged) {
                         resolve(false);
                     } else {
@@ -137,7 +151,6 @@ function registerPerformanceResults(artwork, version, ip, browser, os, perfResul
 // query scores for artwork
 function getScores(artwork, version) {
     return new Promise(function(resolve, reject) {
-
         getArtworkID(artwork).then(function(artwork_id) {
 
             connection.query('SELECT b.browser, b.os, t.tests, t.async/t.tests as `async`, ' +
@@ -145,7 +158,7 @@ function getScores(artwork, version) {
                 't.localstorage/t.tests as `localstorage`, ' +
                 '(SUM(pt.localstorage)/SUM(pt.tests)) as `localstorage_prev`, ' +
                 't.api/t.tests as `api`, ' +
-                '(SUM(pt.api)/SUM(pt.tests)) as `api_prev` FROM `tests` as t INNER JOIN `browsers` as b ON (b.id=t.browser) LEFT JOIN `tests` as pt ON (pt.artwork = t.artwork AND pt.browser = t.browser AND pt.version != t.version) WHERE t.artwork=? AND t.version = ? GROUP BY t.id LIMIT 1', [artwork_id, version],
+                '(SUM(pt.api)/SUM(pt.tests)) as `api_prev` FROM `tests` as t INNER JOIN `browsers` as b ON (b.id=t.browser) LEFT JOIN `tests` as pt ON (pt.artwork = t.artwork AND pt.browser = t.browser AND pt.version != t.version) WHERE t.artwork=? AND t.version = ? GROUP BY t.id ORDER BY t.tests DESC LIMIT 50', [artwork_id, version],
                 function(error, results, fields) {
                     if (error) {
                         reject(error);
@@ -187,20 +200,20 @@ function getArtworkIndex(version) {
         // artwork directory
         var artwork_base_dir = '../artwork/';
 
-        indexPromises.push(new Promise(function(resolve, reject) {
-            try {
-                fs.readdir(artwork_base_dir, (err, files) => {
-                    if (err) {
-                        return reject(err);
-                    }
-                    files.forEach(dir => {
+        try {
+            fs.readdir(artwork_base_dir, (err, files) => {
+                if (err) {
+                    return reject(err);
+                }
+                files.forEach(dir => {
+
+                    indexPromises.push(new Promise(function(resolve, reject) {
 
                         var artwork_dir = artwork_base_dir + dir + '/';
                         fs.lstat(artwork_dir, function(err, stats) {
                             if (err) {
                                 return reject(err);
                             }
-
                             if (!stats.isDirectory()) {
                                 resolve();
                             } else {
@@ -247,22 +260,27 @@ function getArtworkIndex(version) {
 
                                             // render description markdown
                                             pack.description = md.render(pack.description);
-
                                             pack.keywords = (pack.keywords) ? pack.keywords.join(', ') : '';
 
-                                            if (pack.thumbnail) {
+                                            // get ID
+                                            getArtworkID(pack.name).then(function(artwork_id) {
 
-                                                fs.lstat(artwork_dir + pack.thumbnail, function(err, stats) {
-                                                    if (err || !stats) {
-                                                        pack.thumbnail = false;
-                                                    } else {
+                                                pack.artwork_id = artwork_id;
+
+                                                if (pack.thumbnail) {
+
+                                                    fs.lstat(artwork_dir + pack.thumbnail, function(err, stat) {
+                                                        if (err || !stat) {
+                                                            pack.thumbnail = false;
+                                                        }
                                                         resolve(pack);
-                                                    }
-                                                });
+                                                    });
 
-                                            } else {
-                                                resolve(pack);
-                                            }
+                                                } else {
+                                                    resolve(pack);
+                                                }
+
+                                            });
 
                                         });
                                     });
@@ -270,25 +288,71 @@ function getArtworkIndex(version) {
                             }
                         });
 
-                    });
+
+                    }));
+
                 });
 
-            } catch (e) {
-                reject(e);
-            }
+                Promise.all(indexPromises).then(function(index) {
 
-        }));
+                    cache.put('artwork-index', index);
 
-        Promise.all(indexPromises).then(function(index) {
+                    resolve(index);
 
-            cache.put('artwork-index', index);
+                }).catch(function(err) {
+                    console.log('index error:', err);
+                    reject(err);
+                });
 
-            resolve(index);
 
-        }).catch(function(err) {
-            console.log('index error:', err);
-            reject(err);
+            });
+
+        } catch (e) {
+            reject(e);
+        }
+    });
+}
+
+// query artworks
+function getArtworkIndexStats(index) {
+    return new Promise(function(resolve, reject) {
+        var promises = [];
+
+        var artwork_ids = [];
+        var id_index = {};
+
+        index.forEach(function(artwork, i) {
+            id_index[artwork.artwork_id] = i;
+            artwork_ids.push(artwork.artwork_id);
         });
+
+        connection.query('SELECT `id`, `past7days`, `past3months`, `total` FROM `artworks` WHERE `id` IN (?)', [artwork_ids], function(error, results, fields) {
+            if (error) {
+                reject(error);
+            } else {
+                results.forEach(function(row) {
+                    if (row.id) {
+                        index[id_index[row.id]].stats = {
+                            week: row['past7days'],
+                            month: row['past3months'],
+                            total: row['total']
+                        }
+                    }
+                });
+
+                index.sort(function(a, b) {
+                    return b.stats.week - a.stats.week;
+                });
+
+                // set rank
+                index.forEach(function(row, i) {
+                    index[i].rank = i + 1;
+                });
+
+                resolve(index);
+            }
+        });
+
     });
 }
 
@@ -317,5 +381,7 @@ module.exports = {
     registerPerformanceResults: registerPerformanceResults,
     getScores: getScores,
     getArtworkIndex: getArtworkIndex,
-    getArtwork: getArtwork
+    getArtworkIndexStats: getArtworkIndexStats,
+    getArtwork: getArtwork,
+    getArtworkID: getArtworkID
 };
