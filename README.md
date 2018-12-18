@@ -7,3 +7,5 @@ The gallery is self-maintained and open source. The rankings are based on Google
 ### Crowd sourced test environment
 
 While watching CSS art you are helping to test and improve the 📐 Style.Tools CSS loader.
+
+![CSS Art](https://github.com/style-tools/css-art.com/blob/master/httpdocs/images/css-art.png)
