@@ -1,0 +1,54 @@
+{
+  "name": "@style.tools/css-art.com",
+  "version": "1.0.0",
+  "description": "Node.js CSS Art Gallery server. Art work sorted based on Disqus recommendation votes and Google Analytics traffic.",
+  "main": "server.js",
+  "engines": {
+    "node": "~0.10"
+  },
+  "scripts": {
+    "start": "node-dev --no-deps --no-notify server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --fix server.js"
+  },
+  "author": {
+    "name": "info@style.tools",
+    "email": "info@style.tools",
+    "web": "style.tools"
+  },
+  "keywords": [
+    "css",
+    "art",
+    "gallery",
+    "node",
+    "express",
+    "mustache"
+  ],
+  "homepage": "https://github.com/style-tools/css-art.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/style-tools/css-art.com.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/style-tools/css-art.com/issues"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.3",
+    "express": "^4.16.3",
+    "googleapis": "^36.0.0",
+    "helmet": "^3.12.0",
+    "html-minifier": "^3.5.21",
+    "markdown-it": "^8.4.2",
+    "memory-cache": "^0.2.0",
+    "mustache-express": "^1.2.8",
+    "mysql": "^2.16.0",
+    "node-dev": "^3.1.3"
+  },
+  "devDependencies": {
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.9.0"
+  }
+}

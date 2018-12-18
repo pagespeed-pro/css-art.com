@@ -1,0 +1,32 @@
+{
+    "name": "mona-lisa",
+    "version": "1.0.0",
+    "title": "Mona Lisa with pure CSS",
+    "description": "Mona Lisa with pure CSS.\nPointless but fun!\n\nOf course, it 's not handcrafted.\nHere is my code:\n[https: //github.com/jaysalvat/image2css](https://github.com/jaysalvat/image2css)",
+    "author": {
+        "name": "Jay Salvat",
+        "avatar": "https://gravatar.com/avatar/93468d34c43eaae3fa56f7efbe0a3f4a?s=100",
+        "web": "http://jaysalvat.com/",
+        "social": [{
+            "title": "Github",
+            "url": "https://github.com/jaysalvat"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/jaysalvat"
+        }]
+    },
+    "html": "mona-lisa.html",
+    "css": [
+        "mona-lisa.css"
+    ],
+    "thumbnail": "thumbnail.png",
+    "categories": [
+        "Paintings"
+    ],
+    "keywords": [
+        "mona lisa",
+        "painting"
+    ],
+    "original": "https://codepen.io/jaysalvat/pen/HaqBf",
+    "codepen": "https://codepen.io/jaysalvat/pen/HaqBf"
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0" />
+	<title>PURE CSS ART GALLERY - CSS-ART.COM</title>
+	<style>{{{cssart_css}}}</style>
+	<script src="/js/css-art.js" async></script>
+</head>
+<body scroll="no">
+<div class="cssart-frame">
+	<header class="cssart">
+		<div class="cssart-buttons">
+			<div class="cssart-publish"><a href="https://github.com/style-tools/async-css/pulls" target="_blank" rel="noopener">Publish Art via Github</a></div>
+		</div>
+		<h1>PURE CSS ART GALLERY</h1>
+	</header>
+	<main class="cssart">
+		<section class="cssart-index">
+			<h1 class="cssart-head">Welcome to CSS-ART.COM</h1>
+
+			<div class="cssart-head-desc">
+				<p>CSS-ART.COM is a gallery for pure CSS web art and a crowd-sourced test environment for the <a href="https://github.com/style-tools/async-css" target="_blank" rel="noopener">📐 Style.Tools CSS loader</a>.</p>
+				<p>The gallery is self-maintained and <a href="https://github.com/style-tools/css-art.com" target="_blank" rel="noopener">open source</a>. The rankings are based on Google Analytics data.</p>
+			</div>
+
+			<div class="cssart-rankings">
+				<table id="rankings">
+					<thead>
+						<tr>
+							<td>Rank</td>
+							<td>Artwork</td>
+							<td class="cssart-t">Past week</td>
+							<td class="cssart-t">Total views</td>
+						</tr>
+					</thead>
+					<tbody>
+						{{#artworks}}
+			            <tr>
+			                <td class="cssart-rank">
+			                	<span class="cssart-rank-nr">{{rank}}.</span>
+			                	<span class="cssart-rank-change">
+			                		<span class="cssart-rank-arrow">↥</span>
+			                		<span class="cssart-rank-change-nr">+20</span>
+			                	</span>
+							</td>
+							<td class="cssart-title">
+								<a href="/{{name}}/">{{#thumbnail}}<img src="/artwork/{{name}}/{{thumbnail}}">{{/thumbnail}}
+								{{title}}</a><div class="cssart-keywords">{{keywords}}</div>
+							</td>
+								
+							<td class="cssart-t">{{pastweek}}</td>
+							<td class="cssart-t">{{views}}</td>
+			            </tr>
+			            {{/artworks}}
+					</tbody>
+				</table>
+			</div>
+		</section>
+	</main>
+</div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<footer class="cssart">
+	<nav class="cssart">
+		<h3>📐 <span class="cssart-large">Style.Tools CSS Loader </span>Performance Test</h3>
+		<button class="cssart-view-perf"><span class="cssart-large">View Test </span>Results</button>
+		<a href="https://github.com/style-tools/async-css/releases" target="_blank" rel="noopener" class="cssart-version">v{{cssloader_version}}</a>
+	</nav>
+	<section class="cssart-results">
+		<p class="cssart-description">While watching CSS art you are helping to test and improve the <a href="https://github.com/style-tools/async-css" target="_blank" rel="noopener">📐 Style.Tools CSS loader</a>. Feedback can be submitted on <a href="https://github.com/style-tools/async-css/issues" target="_blank" rel="noopener">Github</a>.</p>
+
+		<div class="cssart-perf">
+			<div class="cssart-perf-cols">
+				<div class="cssart-perf-col cssart-perf-async">
+					<h3>Async <code>&lt;link&gt;</code></h3>
+
+					<div class="cssart-perf-round">
+						<h5>Total</h5>
+						<div class="cssart-perf-total cssart-perf-sheet-total">&hellip;s</div>
+						<div class="cssart-perf-details cssart-perf-download">
+							Download
+							<div>Start: <span class="cssart-perf-start">&hellip;</span>ms</div>
+							<div>Duration: <span class="cssart-perf-duration">&hellip;</span>ms</div>
+						</div>
+						<div class="cssart-perf-details  cssart-perf-render">
+							Render
+							<div>Start: <span class="cssart-perf-start">&hellip;</span>ms</div>
+							<div>Duration: <span class="cssart-perf-duration">1&hellip;</span>ms</div>
+						</div>
+					</div>
+				</div>
+				<div class="cssart-perf-col cssart-perf-ls">
+					<h3>localStorage</h3>
+
+					<div class="cssart-perf-round">
+						<h5>Total</h5>
+						<div class="cssart-perf-total cssart-perf-sheet-total">&hellip;s</div>
+						<div class="cssart-perf-details cssart-perf-download">
+							Download
+							<div>Start: <span class="cssart-perf-start">&hellip;</span>ms</div>
+							<div>Duration: <span class="cssart-perf-duration">&hellip;</span>ms</div>
+						</div>
+						<div class="cssart-perf-details  cssart-perf-render">
+							Render
+							<div>Start: <span class="cssart-perf-start">&hellip;</span>ms</div>
+							<div>Duration: <span class="cssart-perf-duration">1&hellip;</span>ms</div>
+						</div>
+					</div>
+				</div>
+				<div class="cssart-perf-col cssart-perf-api">
+					<h3>Cache-API</h3>
+
+					<div class="cssart-perf-round">
+						<h5>Total</h5>
+						<div class="cssart-perf-total cssart-perf-sheet-total">&hellip;s</div>
+						<div class="cssart-perf-details cssart-perf-download">
+							Download
+							<div>Start: <span class="cssart-perf-start">&hellip;</span>ms</div>
+							<div>Duration: <span class="cssart-perf-duration">&hellip;</span>ms</div>
+						</div>
+						<div class="cssart-perf-details  cssart-perf-render">
+							Render
+							<div>Start: <span class="cssart-perf-start">&hellip;</span>ms</div>
+							<div>Duration: <span class="cssart-perf-duration">1&hellip;</span>ms</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="cssart-perf-browsers">
+				<table id="perf-browsers">
+					<thead>
+						<tr>
+							<td>Browser</td>
+							<td>OS</td>
+							<td class="cssart-t">Async</td>
+							<td class="cssart-t">localStorage</td>
+							<td class="cssart-t">Cache-API</td>
+							<td class="cssart-t">Tests</td>
+							<td class="cssart-t">Improvement</td>
+						</tr>
+					</thead>
+					<tbody>
+						{{#perfResults}}
+			            <tr>
+			                <td>{{browser}}</td>
+							<td>{{os}}</td>
+							<td class="cssart-t">{{async}}ms</td>
+							<td class="cssart-t">{{localstorage}}ms</td>
+							<td class="cssart-t">{{api}}ms</td>
+							<td class="cssart-t">{{tests}}</td>
+							<td class="cssart-t">-</td>
+			            </tr>
+			            {{/perfResults}}
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<br />
+			<div class="cssart-clear"></div>
+	</section>
+</footer>

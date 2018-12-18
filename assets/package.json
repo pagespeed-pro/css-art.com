@@ -1,0 +1,27 @@
+{
+  "name": "css-art-assets",
+  "version": "1.0.0",
+  "description": "CSS-ART.com assets.",
+  "author": {
+    "name": "info@style.tools",
+    "email": "info@style.tools",
+    "web": "style.tools"
+  },
+  "engines": {
+    "node": "~0.10"
+  },
+  "dependencies": {
+    "datatables.net-dt": "^1.10.19",
+    "jquery": "^3.3.1",
+    "platform": "^1.3.5"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-iife": "latest",
+    "matchdep": "latest",
+    "merge": "latest"
+  }
+}

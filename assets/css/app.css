@@ -1,0 +1,243 @@
+
+body, html {
+	height:100%;
+	overflow:hidden;
+}
+body {
+	font-family:Roboto, arial, sans-serif;
+	padding:0px;
+	margin:0px;
+	border:0px;
+}
+.cssart-frame {
+	display:flex;
+	flex-direction:column;
+	height:100vh;
+}
+header.cssart {
+	padding:0px;
+	margin:0px;
+	border-bottom:solid 2px #dfdfdf;
+	height:45px;    overflow: hidden;
+}
+header.cssart .cssart-buttons {
+	float:right;
+}
+header.cssart .cssart-buttons a {
+    display: inline-block;
+    border: solid 2px #efefef;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 5px;
+    color: #555;
+    text-decoration: none;
+}
+header.cssart .cssart-buttons .cssart-nav {
+	    display: inline-block;
+    padding-right: 5px;    top: -2px;
+    position: relative;
+}
+header.cssart .cssart-buttons .cssart-publish {
+	    display: inline-block;
+	        border-left: solid #efefef 1px;
+    padding-left: 5px;
+    margin-left: 5px;
+}
+header.cssart .cssart-buttons .cssart-nav a {
+	font-size:12px;
+    margin: 0;
+    margin-left: 5px;
+}
+.cssart-flip-h {
+    display: inline-block;
+	-moz-transform: scale(-1, 1);
+-webkit-transform: scale(-1, 1);
+-o-transform: scale(-1, 1);
+-ms-transform: scale(-1, 1);
+transform: scale(-1, 1);
+}
+header.cssart > h1 {
+	padding:0px;
+	margin:0px;
+	padding:5px;
+
+}
+header.cssart > nav {
+	border-top:solid 1px #dfdfdf;
+	padding:5px;
+}
+header.cssart > nav > ul {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+header.cssart > nav > ul > li {
+	display:inline;
+}
+
+main.cssart {
+	flex:1;
+	display:flex;
+	flex-direction: row nowrap;
+}
+section.cssart {
+	display:fixed;
+	flex:1;
+            flex-grow: 1;
+	border-right:solid 2px #dfdfdf;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+section.cssart h1.cssart-loading {
+	    width: 100%;
+    text-align: center;
+    height: 100%;
+    vertical-align: middle;
+    color: #ccc;
+    font-weight: normal;
+    font-size: 40px;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100%;
+    margin: 0;
+    padding: 0;
+}
+section.cssart > iframe {
+	    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+section.cssart-author {
+	width:300px;
+    max-width: 30vw;
+	overflow:auto;
+	
+    min-width: 200px;
+}
+section.cssart-author .cssart-inner {
+	padding:1em;
+}
+section.cssart-author .cssart-avatar {
+float:right;
+
+    border-radius: 100%;
+	}
+section.cssart-author h3 {
+	margin:0;
+	padding:0;
+}
+section.cssart-author .cssart-social {
+	    font-size: 12px;
+    margin-top: 5px;
+}
+section.cssart-author .cssart-social a {
+	    margin-right: 3px;
+    border-right: solid 1px #efefef;
+    padding-right: 3px;
+    text-decoration: none;
+    color: #555;
+}
+section.cssart-author .cssart-social a:hover {
+text-decoration: underline;
+	}
+section.cssart-author .cssart-social a:last-child {
+	margin-right:0px;
+	padding-right:0px;
+	border-right:0px;
+}
+
+	section.cssart-author .cssart-name {
+	margin-bottom:1em;
+	border-bottom:solid 1px #dfdfdf;
+	padding-bottom:1em;
+}
+section.cssart-author .cssart-description {
+	margin-bottom:1.5em;    color: #333;
+    font-size: 16px;
+    line-height: 20px;
+    font-style: italic;
+}
+section.cssart-author .cssart-links > div {
+	margin-bottom:1em;
+}
+.cssart-clear {
+	clear:both;
+	height:1px;
+	overflow:hidden;
+}
+
+.cssart-index {
+	    width: 900px;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+table#rankings {
+	width:100%!important;
+}
+table#rankings td.cssart-t {
+	text-align:center;
+}
+.cssart-title img {
+	float:left;
+	width:50px;
+	height:50px;border-radius:5px;
+	margin-right:7px;
+	background:#efefef;
+}
+.cssart-keywords {
+	    color: #777;
+    font-size: 11px;
+}
+
+.cssart-rank-nr {
+	float: left;
+    font-weight: bold;
+    font-size: 18px;
+}
+.cssart-rank-change {
+	display: inline-block;
+    width: 30px;
+    text-align: center;
+    overflow: hidden;
+    color: #777;
+}
+.cssart-rank-arrow {
+font-size: 18px;
+    background: rgba(34, 139, 34, .8);
+    color: white;
+    border-radius: 3px;
+    
+    margin-bottom: 2px;
+    display: inline-block;
+}
+.cssart-rank-change-nr {
+display: block;
+    font-size: 10px;
+}
+
+.cssart-head {
+				    margin: 0;
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom:.5em;
+			}
+			.cssart-head-desc {
+				margin-bottom:2em;
+			}
+.cssart-head-desc p {
+	color:#555;
+	font-size:16px;
+	line-height: 18px;
+	margin:0;
+	margin-bottom:.5em;
+}
+.cssart-head-desc p a {
+color:#333;
+	}

@@ -1,0 +1,22 @@
+<section class="cssart-author">
+	<div class="cssart-inner">
+		<div class="cssart-name">
+			{{#author.avatar}}<img src="{{author.avatar}}" width=50 height=50 border="0" class="cssart-avatar">{{/author.avatar}}
+			<h3>{{author.name}}</h3>
+			{{#author.web}}<a href="{{author.web}}" target="_blank" rel="noopener">{{author.web_print}}</a>{{/author.web}}
+			<div class="cssart-social">
+			{{#author.social}}<a href="{{url}}" target="_blank" rel="noopener">{{title}}</a>{{/author.social}}
+			</div>
+			<div class="cssart-clear"></div>
+		</div>
+
+		<div class="cssart-description">
+			{{{ description}}}
+		</div>
+
+		<div class="cssart-links">
+			{{#original}}<div><a href="{{original}}" target="_blank" rel="noopener">View original</a></div>{{/original}}
+			{{#codepen}}<div><a href="{{codepen}}" target="_blank" rel="noopener">Edit on Codepen</a></div>{{/codepen}}
+		</div>
+	</div>
+</section>
