@@ -6,4 +6,4 @@ The gallery is self-maintained and open source. The rankings are based on Google
 
 ### Crowd sourced test environment
 
-While watching CSS art you are helping to test and improve the 📐 Style.Tools CSS loader. 
+While watching CSS art you are helping to test and improve the 📐 Style.Tools CSS loader.
