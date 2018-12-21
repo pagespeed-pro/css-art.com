@@ -12,13 +12,17 @@ const mustacheExpress = require('mustache-express');
 const cache = require('memory-cache');
 const html_minify = require('html-minifier').minify;
 
-app.use(require('helmet')()); // use helmet
+// security
+app.use(require('helmet')({
+    hsts: false // managed by nginx
+})); // use helmet
 app.use(require('cors')()); // enable CORS
 
+// mustache templates
 app.engine('html', mustacheExpress());
 app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
-app.disable('view cache');
+//app.disable('view cache'); // disable view cache for debugging
 
 // start server
 const port = 14299;
@@ -28,17 +32,27 @@ const server = require('http').Server(app);
 const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
+// 📐 Style.Tools CSS loader
 const styletools_cssloader_version = '1.0.0';
-const styletools_cssloader_js = fs.readFileSync('tmp/async-css+all.js', 'utf-8');
+const styletools_cssloader_js = fs.readFileSync('node_modules/@style.tools/async-css/dist/iife/debug/async-css+all.js', 'utf-8');
+
+// application CSS
 const cssart_css = fs.readFileSync('../httpdocs/css/css-art.css', 'utf-8');
 
 // register CSS loader performance timing
 app.post('/perf', jsonParser, (req, res) => {
-    if (!req.body) return res.sendStatus(400);
 
+    // verify body
     var body = req.body;
+    if (!body || typeof body !== 'object' || !body.artwork || !body.browser || !body.os || !body.perf) {
+        return res.sendStatus(403);
+    }
+
+    // determine IP
     var ip = req.headers['x-forwarded-for'] ||
         req.connection.remoteAddress;
+
+    // IPv6 on localhost
     if (ip.substr(0, 7) == "::ffff:") {
         ip = ip.substr(7);
     }
@@ -47,10 +61,15 @@ app.post('/perf', jsonParser, (req, res) => {
 
         console.log('perf logged', ip, logged);
 
+        // output
         res.json({
             "logged": logged
         });
     }).catch(function(error) {
+
+        console.log('perf log error', error);
+
+        // output error
         res.json({
             "error": error
         });
@@ -61,28 +80,47 @@ app.post('/perf', jsonParser, (req, res) => {
 // art index
 app.get('/', (req, res) => {
 
+    // expire time
     var now = Math.round(Date.now() / 1000);
+    var expire = 86400; // update index daily (Google/Amazon CDN cache)
+    var aws = false;
 
-    res.set('Cache-Control', 'public, max-age: 3600');
+    // Amazon CDN: 7 day cache
+    if (req.headers['x-cf']) {
+        expire = 86400 * 7;
+        aws = true;
+    }
 
+    res.set('Cache-Control', 'public, max-age: ' + expire);
+
+    // get cached HTML
     var cached_html = cache.get('/');
-    if (cached_html && cached_html instanceof Array && cached_html[0] > (now - 3600)) {
+    if (cached_html && cached_html instanceof Array && cached_html[0] > (now - expire)) {
         res.set('Last-Modified', new Date(cached_html[0] * 1000));
-        res.set('Expires', new Date((cached_html[0] + 3600) * 1000));
+        res.set('Expires', new Date((cached_html[0] + expire) * 1000));
         res.send(cached_html[1]);
         return;
     }
 
+    // get art work index
     mysql.getArtworkIndex(styletools_cssloader_version).then(function(index) {
 
         // get stats for index
         mysql.getArtworkIndexStats(index).then(function(index) {
 
+            index.forEach(function(row, i) {
+                index[i].title_sort = row.title.replace(/"/g, '&quot;');
+                index[i].title_search = index[i].title_sort + ' ' + row.keywords.replace(/"/g, '&quot;');
+            });
+
+            // render index HTML
             res.render('index', {
                 artworks: index,
-                cssart_css: cssart_css
+                cssart_css: cssart_css,
+                aws: aws
             }, function(err, html) {
 
+                // minify HTML
                 html = html_minify(html, {
                     "removeComments": true,
                     "ignoreCustomComments": false,
@@ -93,13 +131,15 @@ app.get('/', (req, res) => {
                     "removeAttributeQuotes": true
                 });
 
+                // cache headers
                 var modified = Math.round(Date.now() / 1000);
                 res.set('Last-Modified', new Date(modified * 1000));
-                res.set('Expires', new Date((modified + 3600) * 1000));
+                res.set('Expires', new Date((modified + expire) * 1000));
 
                 // cache HTML
                 cache.put('/', [modified, html]);
 
+                // output
                 res.send(html);
             });
 
@@ -118,24 +158,41 @@ app.get('/:artwork/', (req, res) => {
         return res.sendStatus(404);
     }
 
+    // expire time
     var now = Math.round(Date.now() / 1000);
+    var expire = 86400; // update artwork pages daily (Google/Amazon CDN cache)
+    var aws = false;
 
+    // Amazon CDN: 7 day cache
+    if (req.headers['x-cf']) {
+        expire = 86400 * 7;
+        aws = true;
+    }
+
+    res.set('Cache-Control', 'public, max-age: ' + expire);
+
+    // get cached HTML
     var cached_html = cache.get(artwork);
-    if (cached_html && cached_html instanceof Array && cached_html[0] > (now - 3600)) {
-        res.send(cached_html[1]);
-        return;
+    if (cached_html && cached_html instanceof Array && cached_html[0] > (now - expire)) {
+        res.set('Last-Modified', new Date(cached_html[0] * 1000));
+        res.set('Expires', new Date((cached_html[0] + expire) * 1000));
+
+        // output
+        return res.send(cached_html[1]);
     }
 
     // get artwork from index
     mysql.getArtwork(artwork, styletools_cssloader_version).then(function(pack) {
 
+        // not found
         if (!pack) {
-            return res.sendStatus(404);
+            return res.status(404).send('Artwork not found. <a href="/">Return to index</a>')
         }
 
         // get performance scores for artwork
         mysql.getScores(pack.name, styletools_cssloader_version).then(function(perfResults) {
 
+            // render artwork page HTML
             res.render('artwork', {
                 title: pack.title,
                 description: pack.description,
@@ -153,9 +210,11 @@ app.get('/:artwork/', (req, res) => {
                     pack.html,
                     styletools_cssloader_js
                 ]),
-                perfResults: perfResults
+                perfResults: perfResults,
+                aws: aws
             }, function(err, html) {
 
+                // minify HTML
                 html = html_minify(html, {
                     "removeComments": true,
                     "ignoreCustomComments": false,
@@ -166,10 +225,15 @@ app.get('/:artwork/', (req, res) => {
                     "removeAttributeQuotes": true
                 });
 
-                // cache HTML
-                cache.put(artwork, [Math.round(Date.now() / 1000), html]);
+                // cache headers
+                var modified = Math.round(Date.now() / 1000);
+                res.set('Last-Modified', new Date(modified * 1000));
+                res.set('Expires', new Date((modified + expire) * 1000));
 
-                //console.log(html);
+                // cache HTML
+                cache.put(artwork, [modified, html]);
+
+                // output
                 res.send(html);
             });
         });

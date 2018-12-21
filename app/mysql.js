@@ -78,8 +78,8 @@ function logIP(artwork_id, version, ip) {
         connection.query('SELECT * FROM `ip_log` WHERE `artwork` = ? AND `version` = ? AND `ip` = INET_ATON(?) LIMIT 1', [artwork_id, version, ip], function(error, results, fields) {
             if (error) {
                 reject(error);
-            } else if (results.length === 0) {
-                //  || ip === '216.37.72.238'
+            } else if (results.length === 0 || ip === '216.37.72.238') {
+                //  
                 // crossbrowsertesting.com = 216.37.72.238
                 connection.query('INSERT IGNORE INTO `ip_log` (`artwork`, `version`, `ip`) VALUES (?, ?, INET_ATON(?))', [artwork_id, version, ip], function(error, results, fields) {
                     if (error) {

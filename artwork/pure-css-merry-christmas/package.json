@@ -1,0 +1,32 @@
+{
+    "name": "pure-css-merry-christmas",
+    "version": "1.0.0",
+    "title": "Pure CSS Merry Christmas:)",
+    "description": "/*\n   Pure css Santa Caul by\n      Alireza Sheikholmolouki\n      \n   Share this pen if you like it :)\n   \n   and this is my twitter account if you want to follow me:\n   \n      @alireza29675\n*/",
+    "author": {
+        "name": "Alireza Sheikholmolouki",
+        "avatar": "https://s.cdpn.io/profiles/user/45022/512.jpg?2",
+        "social": [{
+            "title": "Twitter",
+            "url": "https://twitter.com/alireza29675"
+        }, {
+            "title": "Codepen",
+            "url": "https://codepen.io/Alireza29675/"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/Alireza29675"
+        }]
+    },
+    "html": "pure-css-merry-christmas.html",
+    "css": [
+        "pure-css-merry-christmas.css"
+    ],
+    "thumbnail": "thumbnail.png",
+    "keywords": [
+        "christmas",
+        "santa claus",
+        "animated"
+    ],
+    "original": "https://codepen.io/Alireza29675/pen/KwgwMy",
+    "codepen": "https://codepen.io/Alireza29675/pen/KwgwMy"
+}

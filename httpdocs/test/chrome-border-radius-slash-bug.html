@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<title>Border-Radius slash bug</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style id="test">
+* {
+  border-radius: 10px 20px 30px 10px / 30px 40px 20px 10px;
+}
+</style>
+</head>
+<body>
+
+<p><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=917522&q=&colspec=ID%20Pri%20M%20Stars%20ReleaseBlock%20Component%20Status%20Owner%20Summary%20OS%20Modified">https://bugs.chromium.org/p/chromium/issues/detail?id=917522&amp;q=&amp;colspec=ID%20Pri%20M%20Stars%20ReleaseBlock%20Component%20Status%20Owner%20Summary%20OS%20Modified</a></p>
+<p>Open the console and enter:</p>
+
+<textarea style="width:100%;font-size:24px">
+    document.styleSheets[0].cssRules[0]
+</textarea>
+
+Result: <h3>cssText: "* { border-radius: 10px 30px 20px 40px 30px 20px 10px; }"</h3>
+
+Expected result:
+
+<h3>cssText: "* { border-radius: 10px 20px 30px 10px / 30px 40px 20px 10px; }"</h3>
+</body>
+</html>

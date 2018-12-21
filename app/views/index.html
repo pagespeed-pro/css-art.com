@@ -11,7 +11,7 @@
 <div class="cssart-frame">
 	<header class="cssart">
 		<div class="cssart-buttons">
-			<div class="cssart-publish"><a href="https://github.com/style-tools/async-css/pulls" target="_blank" rel="noopener">Publish Art via Github</a></div>
+			<div class="cssart-publish"><a href="https://github.com/style-tools/css-art.com/pulls" target="_blank" rel="noopener">Publish Art via Github</a></div>
 		</div>
 		<h1>PURE CSS ART GALLERY</h1>
 	</header>
@@ -22,6 +22,14 @@
 			<div class="cssart-head-desc">
 				<p>CSS-ART.COM is a gallery for pure CSS web art and a crowd-sourced test environment for the <a href="https://github.com/style-tools/async-css" target="_blank" rel="noopener">📐 Style.Tools CSS loader</a>.</p>
 				<p>The gallery is self-maintained and <a href="https://github.com/style-tools/css-art.com" target="_blank" rel="noopener">open source</a>. The rankings are based on Google Analytics data.</p>
+
+				{{^aws}}
+				<p class="cssart-hosting"><a href="https://www.cloudscale.ch/" target="_blank" rel="noopener" class="cssart-cs"><img src="https://style.tools/cloudscale.png" alt="CloudScale.ch" width="121" height="15" align="absmiddle" alt="CloudScale.ch"></a>Hosted in Switzerland (Europe). Slow from your location? Use the 7-day cache Amazon AWS endpoint: <a href="https://aws.css-art.com/">https://aws.css-art.com/</a>.</p>
+				{{/aws}}
+				{{#aws}}
+				<p class="cssart-hosting"><a href="https://aws.amazon.com/cloudfront/" target="_blank" rel="noopener" class="cssart-cs cssart-aws"><img src="/images/aws.png" alt="AWS" width="67" height="25" align="absmiddle" alt="AWS"></a>You are using the Amazon AWS 7-day cache endpoint <u>aws.css-art.com</u>. Want more actual data? Visit <a href="https://css-art.com/">https://css-art.com/</a> (Europe).</p>
+				{{/aws}}
+
 			</div>
 
 			<div class="cssart-rankings">
@@ -37,20 +45,20 @@
 					<tbody>
 						{{#artworks}}
 			            <tr>
-			                <td class="cssart-rank">
+			                <td class="cssart-rank" data-order="{{rank}}" data-search="{{rank}}">
 			                	<span class="cssart-rank-nr">{{rank}}.</span>
 			                	<span class="cssart-rank-change">
 			                		<span class="cssart-rank-arrow">↥</span>
 			                		<span class="cssart-rank-change-nr">+20</span>
 			                	</span>
 							</td>
-							<td class="cssart-title">
+							<td class="cssart-title" data-order="{{title_sort}}" data-search="{{title_search}}">
 								<a href="/{{name}}/">{{#thumbnail}}<img src="/artwork/{{name}}/{{thumbnail}}">{{/thumbnail}}
 								{{title}}</a><div class="cssart-keywords">{{keywords}}</div>
 							</td>
 								
-							<td class="cssart-t">{{pastweek}}</td>
-							<td class="cssart-t">{{views}}</td>
+							<td class="cssart-t" data-order="{{stats.week}}">{{stats.week}}</td>
+							<td class="cssart-t" data-order="{{stats.total}}">{{stats.total}}</td>
 			            </tr>
 			            {{/artworks}}
 					</tbody>

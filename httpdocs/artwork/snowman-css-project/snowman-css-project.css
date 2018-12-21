@@ -1,0 +1,530 @@
+/* CSS-ART.COM by 📐 Style.Tools */
+.main {
+  position: relative;
+  display: block;
+  margin: auto;
+  width: 600px;
+  height: 750px;
+  background: radial-gradient(transparent 75%, #05426f 100%),
+    linear-gradient(
+      135deg,
+      #91a5a6,
+      #8a9b8b,
+      #8dabab,
+      #889a80,
+      #6d969c,
+      #477e92,
+      #518998
+    );
+}
+
+.sun {
+  position: absolute;
+  height: 14%;
+  width: 18%;
+  top: 20%;
+  right: 15%;
+  background: radial-gradient(#ecc56b, #e4ddb7);
+  box-shadow: 0 0 60px 20px #e4ddb7;
+  border-radius: 50%;
+}
+
+.snowman {
+  position: absolute;
+  height: 80%;
+  width: 70%;
+  top: 15%;
+  left: 15%;
+}
+
+.top-hat {
+  position: absolute;
+  height: 30%;
+  width: 30%;
+  left: 36%;
+}
+
+.round-top {
+  position: absolute;
+  width: 60%;
+  height: 10%;
+  left: 20%;
+  top: 5%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at top left, #9b9d8f, #667177, black);
+  z-index: 10;
+}
+
+.hat-body-top {
+  position: absolute;
+  height: 38%;
+  width: 60%;
+  left: 20%;
+  top: 10%;
+  background: linear-gradient(
+    to right,
+    #364e4e,
+    #3a494e,
+    #32454c,
+    #59646a,
+    #7d848a,
+    #919284,
+    #6e7d7a
+  );
+  border-bottom: 3px solid black;
+  border-bottom-left-radius: 20%;
+  border-bottom-right-radius: 20%;
+  z-index: 9;
+}
+
+.hat-body-bottom {
+  position: absolute;
+  width: 60%;
+  height: 33%;
+  left: 20%;
+  top: 36%;
+  background: linear-gradient(
+    to right,
+    #630408,
+    #500106,
+    #2f0304,
+    #820f14,
+    #9e1723,
+    #af2228,
+    #992d3a
+  );
+  z-index: 8;
+}
+
+.rounded-bottom {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 90%;
+  background: linear-gradient(
+    to right,
+    #630408,
+    #500106,
+    #2f0304,
+    #820f14,
+    #9e1723,
+    #af2228,
+    #992d3a
+  );
+  border-bottom: 3px solid black;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  z-index: 7;
+}
+
+.brim {
+  position: absolute;
+  width: 110%;
+  height: 24%;
+  top: 68%;
+  left: -5%;
+  background: radial-gradient(
+    ellipse at top left,
+    #6f6e76,
+    #918593,
+    #889395,
+    #6c7981,
+    #3e5054,
+    #3f333d,
+    #707068
+  );
+  border-radius: 50%;
+  z-index: 6;
+}
+
+.snowman-head {
+  position: absolute;
+  width: 33%;
+  height: 21%;
+  left: 34%;
+  top: 22%;
+  border-radius: 50%;
+  border-left: 3px solid #b9b4a5;
+  border-right: 3px solid #d4d4d4;
+  background: radial-gradient(
+    ellipse at top left,
+    #96afa8,
+    #7d9798,
+    #8babba,
+    #a9b5c3,
+    #c6c7c9,
+    #c6c7c9,
+    #c0cccc
+  );
+  z-index: 5;
+}
+
+.left-eye {
+  position: absolute;
+  top: 38%;
+  left: 35%;
+  width: 10%;
+  height: 13%;
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, gray, black);
+}
+
+.right-eye {
+  position: absolute;
+  top: 37%;
+  left: 60%;
+  width: 10%;
+  height: 13%;
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, gray, black);
+}
+
+.carrot-nose {
+  position: absolute;
+  width: 10%;
+  height: 45%;
+  top: 35%;
+  left: 63%;
+  border-radius: 50% 50% 50% 50% / 70% 70% 10% 10%;
+  background: linear-gradient(to right, #eab4a7, #ca7f68, #b94b34);
+  transform: rotate(76deg);
+}
+
+.coal-mouth {
+  position: absolute;
+  width: 8%;
+  height: 10%;
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, gray, black);
+}
+
+.coal-1 {
+  top: 79%;
+  left: 51%;
+}
+
+.coal-2 {
+  top: 78%;
+  left: 39%;
+}
+
+.coal-3 {
+  top: 71%;
+  left: 27%;
+}
+
+.coal-4 {
+  top: 78%;
+  left: 63%;
+}
+
+.coal-5 {
+  top: 71%;
+  left: 75%;
+}
+
+.scarf {
+  position: absolute;
+  width: 44%;
+  height: 38%;
+  left: 30%;
+  top: 40%;
+  z-index: 4;
+}
+
+.scarf-top {
+  position: absolute;
+  width: 76%;
+  height: 32%;
+  left: 11%;
+  top: -8%;
+  border-radius: 50%;
+  background: linear-gradient(#d3d3b5, #c73f44, #8c0d0f);
+  z-index: 2;
+}
+
+.left-side {
+  position: absolute;
+  width: 20%;
+  height: 40%;
+  top: -21%;
+  left: 13%;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 180px solid #ab1a27;
+  border-radius: 5px;
+}
+
+.left-shadow {
+  position: absolute;
+  width: 11%;
+  height: 1%;
+  top: 20%;
+  left: 26%;
+  background: transparent;
+  box-shadow: 0 0 40px 8px;
+}
+
+.left-bottom-shadow {
+  position: absolute;
+  width: 31%;
+  height: 0;
+  top: 96%;
+  left: 16%;
+  background: transparent;
+  box-shadow: 0 0 20px 1px;
+}
+
+.left-fringe {
+  position: absolute;
+  width: 35%;
+  height: 15%;
+  top: 97%;
+  left: 12%;
+}
+
+.right-fringe {
+  position: absolute;
+  width: 35%;
+  height: 15%;
+  top: 92%;
+  left: 50%;
+}
+
+.tassel {
+  position: absolute;
+  width: 25%;
+  border-radius: 50%;
+  background: transparent;
+  border-left: 3px solid #cdcdcf;
+}
+
+.tassel-1 {
+  height: 70%;
+}
+
+.tassel-2 {
+  height: 60%;
+  left: 13%;
+}
+
+.tassel-3 {
+  height: 70%;
+  left: 26%;
+}
+
+.tassel-4 {
+  height: 40%;
+  left: 39%;
+}
+
+.tassel-5 {
+  height: 60%;
+  left: 52%;
+}
+
+.tassel-6 {
+  height: 70%;
+  left: 65%;
+}
+
+.tassel-7 {
+  height: 40%;
+  left: 78%;
+}
+
+.tassel-8 {
+  height: 50%;
+  left: 91%;
+}
+
+.right-side {
+  position: absolute;
+  width: 15%;
+  height: 35%;
+  top: -21%;
+  left: 50%;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 180px solid #ab1a27;
+  border-radius: 5px;
+}
+
+.right-shadow {
+  position: absolute;
+  width: 7%;
+  height: 1%;
+  top: 20%;
+  left: 62%;
+  background: transparent;
+  box-shadow: 0 0 40px 8px;
+}
+
+.right-bottom-shadow {
+  position: absolute;
+  width: 30%;
+  height: 0;
+  top: 92%;
+  left: 50%;
+  background: transparent;
+  box-shadow: 0 0 14px 1px;
+}
+
+.snowman-middle {
+  position: absolute;
+  width: 41%;
+  height: 26%;
+  left: 31%;
+  top: 42%;
+  border-radius: 50%;
+  border-left: 3px solid #b9b4a5;
+  border-right: 3px solid #d4d4d4;
+  background: radial-gradient(
+    ellipse at top left,
+    #96afa8,
+    #7d9798,
+    #8babba,
+    #a9b5c3,
+    #c6c7c9,
+    #c6c7c9,
+    #c0cccc
+  );
+  z-index: 3;
+}
+
+.coal-button {
+  position: absolute;
+  width: 8%;
+  height: 11%;
+  left: 46%;
+  border-radius: 50%;
+  background: radial-gradient(circle at top left, gray, black);
+}
+
+.button-1 {
+  top: 38%;
+}
+
+.button-2 {
+  top: 56%;
+}
+
+.button-3 {
+  top: 74%;
+}
+
+.snowman-bottom {
+  position: absolute;
+  width: 71%;
+  height: 42%;
+  left: 16%;
+  top: 58%;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  border-left: 3px solid #b9b4a5;
+  border-right: 3px solid #d4d4d4;
+  background: radial-gradient(
+    ellipse at top left,
+    #96afa8,
+    #7d9798,
+    #8babba,
+    #a9b5c3,
+    #c6c7c9,
+    #c6c7c9,
+    #c0cccc
+  );
+  z-index: 2;
+}
+
+.branch-arms {
+  position: absolute;
+  top: 27%;
+  width: 30%;
+  height: 40%;
+  z-index: 6;
+}
+
+.left-arm {
+  left: 8%;
+}
+
+.right-arm {
+  left: 65%;
+  transform: scaleX(-1);
+}
+
+.arm-base {
+  position: absolute;
+  width: 10%;
+  height: 30%;
+  top: 50%;
+  left: 77%;
+  border-radius: 50% 50% 50% 50% / 40% 50% 10% 10%;
+  border-left: 8px solid #6f3316;
+  transform: rotate(-45deg);
+}
+
+.arm-top {
+  position: absolute;
+  width: 10%;
+  height: 20%;
+  top: 40%;
+  left: 63%;
+  border-radius: 50% 50% 50% 50% / 40% 50% 10% 10%;
+  border-left: 6px solid #6f3316;
+  transform: rotate(-15deg);
+}
+
+.finger-branch {
+  position: absolute;
+  width: 10%;
+  height: 9%;
+  border-radius: 50% 50% 50% 50% / 40% 0% 10% 100%;
+  border-left: 4px solid #6f3316;
+}
+
+.branch-left {
+  top: 45%;
+  left: 56%;
+  transform: rotate(-50deg);
+}
+
+.branch-top {
+  top: 41%;
+  left: 59%;
+  transform: rotate(210deg);
+}
+
+.snow {
+  position: absolute;
+  width: 100%;
+  height: 18%;
+  background: radial-gradient(
+    ellipse at top,
+    #cdcdcf,
+    #a7bac6,
+    #528b9d,
+    #3b6c89
+  );
+  bottom: 0;
+  opacity: 0.75;
+}
+
+.snowfall {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: url("https://user-images.githubusercontent.com/7342669/50293046-ab4ed880-0440-11e9-8537-8a0e70729b34.png"),
+    url("https://user-images.githubusercontent.com/7342669/50293049-ad189c00-0440-11e9-8cae-a57ad65c22ca.png"),
+    url("https://user-images.githubusercontent.com/7342669/50294834-c58ab580-0444-11e9-84b6-186b19edf94d.png");
+  animation: letItSnow 20s linear infinite;
+  z-index: 9;
+}
+
+@keyframes letItSnow {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 500px 1000px, 400px 400px, 300px;
+  }
+}
