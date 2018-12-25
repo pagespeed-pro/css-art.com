@@ -1,0 +1,119 @@
+body {
+  background: linear-gradient(#f0b2ad, #f4e4d0);
+  background-repeat: no-repeat; background-attachment: fixed;
+  height: 100%;
+}
+.box {
+  position: relative; 
+  margin: auto; 
+  display: block;
+  background: none; 
+  border: solid 4px white; 
+  margin-top: 8%;
+  width: 700px; 
+  height: 420px;
+}
+.head {
+  position: absolute;
+  background: #f0b2ad;
+  top: 17%;
+  left: 25%;
+  width: 45%; 
+  height: 70%;
+  border-radius: 50%;
+}
+.head-copy {
+  position: absolute;
+  background: #f0b2ad;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 2;
+}
+.ear-left {
+  position: absolute;
+  height: 65%;
+  width: 60%; 
+  background: #f0b2ad;
+  border-radius: 50%;
+  left: -20%;
+  top: 5%;
+  z-index: 1; 
+}
+.ear-right{
+  position: absolute;
+  background: #f0b2ad;
+  height: 65%;
+  width: 60%; 
+  border-radius: 50%;
+  right: -20%;
+  top: 5%;
+  z-index: 1;
+}
+.inner-ear {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background: #f5f5dc;
+  border-radius: 50%;
+  left: 10%;
+  top: 10%;
+}
+.eye-left{
+  position: absolute;
+  background: black; 
+  width: 25%; 
+  height: 25%; 
+  z-index: 2; 
+  border-radius: 50%;
+  top: 10%;
+}
+.eye-right{
+  position: absolute;
+  background: black;
+  width: 25%; 
+  height: 25%; 
+  border-radius: 50%;
+  z-index: 2; 
+  right: 10%;
+  top: 10%;
+}
+.pupil{
+  position: absolute;
+  background: white; 
+  width: 28%;
+  height: 30%;
+  border-radius: 50%;
+  top: 10%;
+  left: 10%;
+}
+.nose {
+  position: absolute;
+  background: linear-gradient(#f4e4d0, #f0b2ad);;
+  width: 40%;
+  height: 80%;
+  z-index: 4;
+  right: 37%; 
+  top: 25%;
+  border-radius: 50px;
+}
+.hair-left {
+  position: absolute; 
+  width: 20%; 
+  height: 20%;
+  background: #f0b2ad;
+  top: -8%; 
+  left: 30%;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%)
+}
+.hair-right {
+  position: absolute;
+  width: 20%;
+  height: 20%;
+  background: #f0b2ad; 
+  left: 48%;
+  top: -4%;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}

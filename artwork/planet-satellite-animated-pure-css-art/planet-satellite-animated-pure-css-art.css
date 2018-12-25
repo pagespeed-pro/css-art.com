@@ -1,0 +1,204 @@
+@import url(https://fonts.googleapis.com/css?family=Eczar:700);
+body {
+  height: 100vh;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  z-index: -1;
+  width: 720px;
+  height: 500px;
+  background: #0e2875;
+  border: 4px solid #000000;
+  overflow: hidden;
+  background-color: #0e2875;
+  background-image: radial-gradient(white, rgba(255, 255, 255, 0.2) 2px, transparent 40px), radial-gradient(white, rgba(255, 255, 255, 0.15) 1px, transparent 30px), radial-gradient(white, rgba(255, 255, 255, 0.1) 2px, transparent 40px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, transparent 30px);
+  background-size: 550px 550px, 350px 350px, 250px 250px, 150px 150px;
+  background-position: 0 0, 40px 60px, 130px 270px, 70px 100px;
+}
+
+/* content */
+.planet {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 200px;
+  bottom: 20%;
+  left: 40%;
+  z-index: 10;
+  background: #f4242d;
+  border-radius: 100%;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  background: #CB356B;
+  background: -webkit-linear-gradient(to right, #f4242d, #CB356B);
+  background: linear-gradient(to right, #f4242d, #CB356B);
+}
+
+.sides {
+  position: absolute;
+  content: "";
+  width: 220px;
+  height: 220px;
+  bottom: 17.5%;
+  left: 38.5%;
+  z-index: 10;
+  background: transparent;
+  border-radius: 100%;
+  border: 3px solid #f4242d;
+  -webkit-clip-path: polygon(49% 0, 89% 0, 88% 100%, 72% 100%);
+  clip-path: polygon(49% 0, 89% 0, 88% 100%, 72% 100%);
+}
+
+.ring {
+  position: absolute;
+  content: "";
+  width: 400px;
+  height: 400px;
+  bottom: -50%;
+  left: -55%;
+  z-index: 50;
+  background: transparent;
+  border: 15px solid #ffffff;
+  border-radius: 100%;
+  transform: rotate3d(0.8, 0, 0, 75deg);
+  animation: ring 1s 0s infinite ease-out;
+}
+
+.satellite-wrap {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 241px;
+  bottom: 24%;
+  left: 52%;
+  z-index: 50;
+  background: transparent;
+  transform-origin: bottom;
+  animation: satellite 1s 0s infinite linear;
+}
+
+.satellite {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  bottom: 88%;
+  left: 2%;
+  z-index: 50;
+  background: #87e6b6;
+  border-radius: 100%;
+}
+
+.distant-planet1 {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  bottom: 85%;
+  left: 11%;
+  z-index: 50;
+  background: #4d64c1;
+  border-radius: 100%;
+}
+.distant-planet1:before {
+  position: absolute;
+  content: "";
+  width: 110px;
+  height: 50px;
+  bottom: -22px;
+  left: -53px;
+  z-index: 50;
+  background: transparent;
+  border: 2px solid #4d64c1;
+  border-radius: 100%;
+  transform: rotate3d(0.8, 0.4, 0.2, 35deg);
+}
+.distant-planet1:after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  bottom: 10px;
+  left: 40px;
+  z-index: 55;
+  background: #4d64c1;
+  border-radius: 100%;
+  box-shadow: -60px 10px 0 -1px #4d64c1;
+}
+
+.distant-planet2 {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  bottom: 12%;
+  left: 88%;
+  z-index: 50;
+  background: #4d64c1;
+  border-radius: 100%;
+}
+.distant-planet2:before {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 20px;
+  bottom: -8px;
+  left: -25px;
+  z-index: 50;
+  background: transparent;
+  border: 2px solid #4d64c1;
+  border-radius: 100%;
+  transform: rotate3d(0.8, 0.9, 0.2, 35deg);
+}
+
+@keyframes satellite {
+  0% {
+    transform: rotateZ(65deg);
+  }
+  50% {
+    transform: rotateZ(-65deg);
+  }
+  100% {
+    transform: rotateZ(65deg);
+  }
+}
+@keyframes ring {
+  0% {
+    transform: rotate3d(0.8, -0.05, 0, 75deg);
+  }
+  10% {
+    transform: rotate3d(0.8, -0.04, 0, 75deg);
+  }
+  20% {
+    transform: rotate3d(0.8, -0.03, 0, 75deg);
+  }
+  30% {
+    transform: rotate3d(0.8, -0.02, 0, 75deg);
+  }
+  40% {
+    transform: rotate3d(0.8, -0.01, 0, 75deg);
+  }
+  50% {
+    transform: rotate3d(0.8, 0, 0, 75deg);
+  }
+  60% {
+    transform: rotate3d(0.8, -0.01, 0, 75deg);
+  }
+  70% {
+    transform: rotate3d(0.8, -0.02, 0, 75deg);
+  }
+  80% {
+    transform: rotate3d(0.8, -0.03, 0, 75deg);
+  }
+  90% {
+    transform: rotate3d(0.8, -0.04, 0, 75deg);
+  }
+  100% {
+    transform: rotate3d(0.8, -0.05, 0, 75deg);
+  }
+}

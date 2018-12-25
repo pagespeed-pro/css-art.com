@@ -147,7 +147,7 @@ async function updateArtworkTraffic() {
 
                         // artwork exists
                         mysql.getArtworkID(artwork_name).then(function(artwork_id) {
-                            mysql.connection.query('UPDATE `artworks` SET `past7days`=?, `past3months`=?, `total`=?, `last_stats_update`=NOW() WHERE `id`=? LIMIT 1', [stats.week, stats.month, stats.total, artwork_id], function(error, results, fields) {
+                            mysql.connection.query('UPDATE `artworks` SET `past7days`=?, `prev_past7days`=`past7days`, `past3months`=?, `total`=?, `last_stats_update`=NOW() WHERE `id`=? AND `last_stats_update` < DATE_SUB(NOW(), INTERVAL 1 DAY) LIMIT 1', [stats.week, stats.month, stats.total, artwork_id], function(error, results, fields) {
                                 if (error) {
                                     return reject(error);
                                 } else {

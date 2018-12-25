@@ -326,7 +326,7 @@ function getArtworkIndexStats(index) {
             artwork_ids.push(artwork.artwork_id);
         });
 
-        connection.query('SELECT `id`, `past7days`, `past3months`, `total` FROM `artworks` WHERE `id` IN (?)', [artwork_ids], function(error, results, fields) {
+        connection.query('SELECT `id`, `past7days`, `prev_past7days`, `past3months`, `total` FROM `artworks` WHERE `id` IN (?)', [artwork_ids], function(error, results, fields) {
             if (error) {
                 reject(error);
             } else {
@@ -334,19 +334,34 @@ function getArtworkIndexStats(index) {
                     if (row.id) {
                         index[id_index[row.id]].stats = {
                             week: row['past7days'],
+                            prev_week: row['prev_past7days'],
                             month: row['past3months'],
                             total: row['total']
                         }
                     }
                 });
 
+                // set rank previous week
                 index.sort(function(a, b) {
-                    return b.stats.week - a.stats.week;
+                    return b.stats.prev_week - a.stats.prev_week;
+                });
+                index.forEach(function(row, i) {
+                    index[i].prev_rank = i + 1;
                 });
 
                 // set rank
+                index.sort(function(a, b) {
+                    return b.stats.week - a.stats.week;
+                });
                 index.forEach(function(row, i) {
                     index[i].rank = i + 1;
+                    index[i].change = index[i].prev_rank - index[i].rank;
+                    if (index[i].change > 0) {
+                        index[i].change_type = 'up';
+                        index[i].change = '+' + index[i].change;
+                    } else {
+                        index[i].change_type = 'down';
+                    }
                 });
 
                 resolve(index);
@@ -361,17 +376,45 @@ function getArtwork(artwork, version) {
     return new Promise(function(resolve, reject) {
         getArtworkIndex(version).then(function(index) {
 
-            var resolved;
-            index.forEach(function(row) {
-                if (!resolved && row.name === artwork) {
-                    resolved = 1;
-                    resolve(row);
-                }
-            });
+            // get rankings for index
+            getArtworkIndexStats(index).then(function(index) {
 
-            if (!resolved) {
-                resolve();
-            }
+                var resolved;
+                index.forEach(function(row, i) {
+                    if (!resolved && row.name === artwork) {
+
+                        var prev = i - 1;
+                        while (0 <= prev) {
+                            if (!index[prev]) {
+                                prev--;
+                            } else {
+                                row.prev = index[prev];
+                                break;
+                            }
+                        }
+                        var next = i + 1;
+                        while (index.length > next) {
+                            if (!index[next]) {
+                                next++;
+                            } else {
+                                row.next = index[next];
+                                break;
+                            }
+                        }
+                        if (!row.next && i > 0 && index[0]) {
+                            row.next = index[0];
+                        }
+
+                        resolved = 1;
+                        resolve(row);
+                    }
+                });
+
+                if (!resolved) {
+                    resolve();
+                }
+
+            }).catch(reject);
         }).catch(reject);
     });
 }

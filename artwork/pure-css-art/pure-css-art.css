@@ -1,0 +1,225 @@
+body {
+  background: #050505;
+}
+
+.head {
+  position: absolute;
+  top: 16.5%;
+  left: 25%;
+  width: 50%;
+  height: 67%;
+  background: #6E3B7D;
+  border-radius: 50%;
+  animation: moveMe 13s infinite;
+}
+
+.inner-ear {
+  position: absolute;
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
+  top: -2%;
+  left: 10%;
+  background: #B67CAD;
+}
+
+.ear-left {
+  position: absolute;
+  border-radius: 50%;
+  width: 10%;
+  height: 15%;
+  top: 25%;
+  left: -4%;
+  background: #FDD748;
+  z-index: 2;
+}
+
+.ear-right {
+  position: absolute;
+  border-radius: 50%;
+  width: 10%;
+  height: 15%;
+  top: 30%;
+  right: -5%;
+  background: #FDD748;
+}
+
+.eye-right {
+  position: absolute;
+  border-radius: 40%;
+  width: 20%;
+  height: 20%;
+  top: 20%;
+  right: 20%;
+  background: #C0E0DE;
+}
+
+.eye-left {
+  position: absolute;
+  border-radius: 40%;
+  width: 20%;
+  height: 20%;
+  top: 20%;
+  left: 20%;
+  background: #C0E0DE;
+}
+
+.pupil {
+  position: absolute;
+  border-radius: 40%;
+  width: 20%;
+  height: 30%;
+  top: 20%;
+  left: 20%;
+  background: black;
+}
+
+.mouth {
+  position: absolute;
+  border-radius: 50%;
+  width: 20%;
+  height: 10%;
+  bottom: 20%;
+  left: 40%;
+  top: 65%;
+  background: #C0E0DE;
+}
+
+.nose {
+  position: absolute;
+  border-radius: 100%;
+  width: 20%;
+  height: 15%;
+  top: 40%;
+  right: 40%;
+  background: #C0E0DE;
+}
+
+.upper-nose {
+  position: absolute;
+  width: 20%;
+  height: 15%;
+  top: 30.1%;
+  right: 40%;
+  background: #C0E0DE;
+  -webkit-clip-path: polygon(100% 100%, 56% 0, 0 100%);
+  clip-path: polygon(100% 100%, 56% 0, 0 100%);
+  z-index: 1;
+}
+
+.circle {
+  position: absolute;
+  width: 8%;
+  height: 8%;
+  top: 5.0%;
+  right: 45%;
+  background: #B54151;
+  border-radius: 50%;
+}
+
+.hair {
+  position: absolute;
+  width: 20%;
+  height: 5%;
+  top: -4%;
+  right: 40%;
+  background: #C0E0DE;
+  -webkit-clip-path: polygon(100% 100%, 56% 0, 0 100%);
+  clip-path: polygon(100% 100%, 56% 0, 0 100%);
+  z-index: 1;
+}
+
+.body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 95.0%;
+  right: 5%;
+  background: #AD343E;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  top: 16.5%;
+  left: 70%;
+  width: 5%;
+  height: 15%;
+  background: #FDD748;
+  border-radius: 50%;
+  -webkit-clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  animation: spinMe 3s infinite;
+}
+
+.moon {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  width: 15%;
+  height: 100%;
+  background: #C0E0DE;
+  -webkit-clip-path: circle(50% at 100% 27%);
+  clip-path: circle(50% at 100% 27%);
+}
+
+.moon:hover {
+  animation: moveMe 3s infinite;
+}
+
+@media all and (min-width: 600px) {
+  .head {
+    width: 20%;
+  }
+}
+@media all and (max-height: 150px) {
+  .head {
+    width: 10%;
+    border-radius: 50%;
+  }
+}
+@media all and (min-height: 400px) {
+  .head {
+    height: 30%;
+  }
+}
+@keyFrames spinMe {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyFrames moveMe {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(10px, 100px);
+  }
+}
+@keyFrames stopMe {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+.button {
+  height: 50px;
+  top: 0;
+  width: 15%;
+  text-align: center;
+  background-color: #FDAD00;
+}
+
+.movePlayer {
+  animation: moveMe 1s infinite;
+}
+
+.stopPlayer {
+  animation: stopMe 1s infinite;
+}

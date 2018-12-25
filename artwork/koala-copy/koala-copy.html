@@ -1,0 +1,79 @@
+<!-- Learning Pure CSS Art by making "Koala" by following mikemang's tutorial -->
+<body>
+  <!-- Begin Image --> 
+  <!-- Invisible Box--> 
+  <div class="box"> <!-- No closing div tag until near the end --> 
+    
+    <!--Circular Head--> 
+    <div class="head"> 
+    <!-- Nested divs: 
+    All other shapes will be on top of the   
+    head-->   
+      <!-- Circular Head Copy --> 
+      <!-- used to allow the ears to appear  
+      behind the head --> 
+      <div class="head-copy"></div>
+      
+      <!--Left Ear ~ Light Gray -->
+      <div class="ear-left">
+      <!-- Inner ear ~ Dark Gray --> 
+        <div class="inner-ear"></div> <!-- Closing div tag of Left ear --> 
+      </div>
+      <!-- Nested divs: 
+      Ear-right is the parent div; inner-ear is a       child div; percentage for widths and    
+      heights of shapes applies to parent div -->
+      
+      <!-- Right Ear ~ Light Gray -->
+      <div class="ear-right">
+      <!-- Inner Ear ~ Dark Dray --> 
+        <div class="inner-ear"></div>
+      </div>
+      
+      <!-- Left Outer Eye ~ White -->
+      <div class="eye-left">
+          <!-- Pupil ~ Black -->
+          <div class="pupil"></div>
+      </div>   
+      
+      <!-- Right Outer Eye ~ White -->
+      <div class="eye-right">
+          <!-- Pupil ~ Black -->
+          <div class="pupil"></div>
+      </div>   
+      
+      <!-- Nose ~ Brown --> 
+      <div class="nose"> 
+      </div> 
+      
+      <!-- Challenge: Add Mouth ~ Coral --> 
+      <div class="mouth"></div> 
+      
+        <!--Challenge: Add Tongue ~ Red --> 
+        <div class="tongue"></div> 
+      
+      <!-- Hair ~ Light Gray --> 
+      <div class="hair-left"></div> 
+      <div class="hair-right"></div>
+      
+      <!-- End Head --> 
+    </div> 
+  <!-- End Invisibile Box --> 
+  </div> 
+  
+</body> 
+
+<!-- Check understanding of: 
+<div>, position property, top, percentage -->
+<!-- 
+
+<div> element: generic container for flow content; doesn't inherently represent anything; used to group element for styling (using class or id attribute), marking a section of a document in a different language (using lang attribute), etc.
+
+flow content: elements in this catebory contain text or embedded content. See MDN for the whole list. 
+
+position property: specifies the type of positioning method used for an element (static, relative, fixed, absolute, sticky); elements are then positioned using the top, bottom, left, and right properites -- set position property first.
+
+position: absolute 
+{the element with this property is positioned relative to the nearest positioned ancestor; if element has no positioned ancestors, it uses the document body and moves along with page scrolling} 
+
+--> 
+      

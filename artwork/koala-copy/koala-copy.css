@@ -1,0 +1,184 @@
+body {
+  background: #25A9FC; 
+}
+
+.box {
+  position: relative; 
+  margin: auto;
+  display: block; 
+  margin-top: 10%;  
+  width: 600px; 
+  height: 420px; 
+  background: none;
+  border: solid 4px red;
+}
+
+/* position: relative -- the element is positioned relative to its normal position, which is the very top left corner 
+$ margin: auto centers the box
+$ margin-top: 8% lowers the box by 8%
+$ margin: auto was not overwritten 
+*/ 
+
+.head {
+  position: absolute; 
+  top: 16.5%; 
+  left: 25%; 
+  width: 50%; 
+  height: 67%; 
+  background: #A6BECF; 
+  border-radius: 50%;  
+}
+/* Position percentages to ABSOLUTELY CENTER: 
+left = (100 - width of parent div)/2
+top = (100 - height of parent div)/2
+*/
+
+.head-copy {
+  width: 100%; 
+  height: 100%; 
+  /* head-copy's parent div is head; it   will be positioned and measured 
+  relative to head */
+  position: absolute; 
+  /* significance of width and height at 100% and before position: absolute? */ 
+  background: #A6BECF; 
+  border-radius: 50%; 
+  z-index: 2; 
+}
+/* 
+$ z-index indicates the depth of the div (think layers) ; the highter the z-index, the closer that div is to the top. Example: 
+Have 2 divs. z-index: 1 would be like the bottom layer; z-index: 2 would be the top layer. 
+$ ears will the bottom layer and will have z-index: 1
+$ giving head div a value of z-index: 2 won't put the ears behind the head - WHY?
+$ giving head-copy div a vlue of z-index: 2 will put ears behind the head 
+*/ 
+
+.ear-left{
+  position: absolute; 
+  width: 60%; 
+  height: 65%; 
+  left: -20%;
+  /* negative sign: shift in the specified direction */  
+  top: 5%; 
+  background: #A6BECF; 
+  border-radius: 50%; 
+  z-index: 1; 
+}
+
+.ear-right{
+  position: absolute; 
+  width: 60%; 
+  height: 65%; 
+  right: -20%; 
+  top: 5%; 
+  background: #A6BECF; 
+  border-radius: 50%; 
+  z-index: 1; 
+}
+
+/* inner-ear's parent div is ear-left and ear-right*/ 
+.inner-ear{
+  position: absolute; 
+  border-radius: 50%; 
+  width: 80%; 
+  height: 80%; 
+  top: 10%; 
+  left: 10%; 
+  /* top and left are relative to the ears */ 
+  background: #819CAF; 
+}
+
+/*parent div is head */ 
+.eye-left {
+  position: absolute; 
+  border-radius: 50%; 
+  width: 30%; 
+  height: 33%; 
+  top: 25%; 
+  left: 21%; 
+  background: white;
+  z-index: 3; 
+ }
+
+/*parent div is head */ 
+.eye-right {
+  position: absolute; 
+  border-radius: 50%; 
+  width: 30%; 
+  height: 33%;
+  top: 25%; 
+  right: 21%; 
+  /* original position is at the top left corner of head. And no right property applied does not mean right: 100% (which is not the maximum furthest distance)
+  $default right: percentage is at top left corner of parent div */ 
+  background: white;
+  z-index: 2; 
+}
+
+.pupil {
+  position: absolute; 
+  width: 28%; 
+  height: 30%; 
+  top: 35%; 
+  left: 36%; 
+  border-radius: 50%; 
+  background: #27354A; 
+}
+
+.nose {
+  position: absolute; 
+  background: #BE845F; 
+  width: 25%; 
+  height: 40%; 
+  left: 37%; 
+  top: 45%; 
+  border-radius: 50px; /* round the corners of the rectangle - when rounding slightly, easier to use px instead of percentage. */ 
+  z-index: 4; /*on top of eyes */ 
+}
+
+.mouth{
+  position: absolute; 
+  background: 	#F08080; 
+  width: 40%; 
+  height: 22%; 
+  left: 30%; 
+  top: 70%; 
+  z-index: 3; 
+  border-radius: 50%; 
+}
+
+/*parent div of tongue div is mouth div*/ 
+.tongue {
+  position: absolute; 
+  background: red; 
+  border-radius: 50%;
+  width: 29%; 
+  height: 30%;
+  left: 35%; 
+  top: 65%;
+  z-index: 3; 
+  
+}
+
+.hair-left {
+  position: absolute; 
+  top: -8%; /*to stick out above head */ 
+  left: 30%;
+  width: 20%; 
+  height: 20%; 
+  background: #A6BECF; 
+  -webkit-clip-path: polygon (50% 0%, 0% 100%, 100% 100%); 
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.hair-right{
+  position: absolute; 
+  top: -4%; /* to stick out above head */ 
+  left: 48%;
+  width: 20%;
+  height: 20%; 
+  background: #A6BECF; 
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%); clip-path: polygon(50% 0%, 0% 100%, 100% 100%); 
+}
+
+/*clip-path used to make any shape outside a square, rectangle, and circle. This method is supported by Safari, Chrome, and Opera, but not Firefox. 
+$ the tool called Clippy automatically gives us the clip-path for different shapes */ 
+
