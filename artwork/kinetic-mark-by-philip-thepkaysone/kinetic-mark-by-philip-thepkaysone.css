@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #DB5956;
+}
+
+.logo {
+  width: 230px;
+  height: 230px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.rings {
+  border-radius: 50%;
+  border: 10px solid #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.rings:before, .rings:after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.rings:before {
+  top: -18px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.rings:after {
+  bottom: -18px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.rings:first-of-type {
+  width: 230px;
+  height: 230px;
+  animation: rotate 5s linear infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.rings:first-of-type:before {
+  box-shadow: 5px 0 0 #DB5956;
+}
+
+.rings:first-of-type:after {
+  box-shadow: -5px 0 0 #DB5956;
+}
+
+.rings:nth-of-type(2) {
+  width: 150px;
+  height: 150px;
+  transform: rotate(90deg);
+  animation: rotate 4s linear infinite;
+  animation-fill-mode: forwards;
+  animation-direction: reverse;
+  animation-timing-function: ease;
+}
+
+.rings:nth-of-type(2):before {
+  box-shadow: -5px 0 0 #DB5956;
+}
+
+.rings:nth-of-type(2):after {
+  box-shadow: 5px 0 0 #DB5956;
+}
+
+.rings:nth-of-type(3) {
+  width: 70px;
+  height: 70px;
+  transform: rotate(45deg);
+  animation: rotate 3s linear infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.rings:nth-of-type(3):before {
+  box-shadow: 5px 0 0 #DB5956;
+}
+
+.rings:nth-of-type(3):after {
+  box-shadow: -5px 0 0 #DB5956;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
