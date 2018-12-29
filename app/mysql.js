@@ -326,7 +326,7 @@ function getArtworkIndexStats(index) {
             artwork_ids.push(artwork.artwork_id);
         });
 
-        connection.query('SELECT `id`, `past7days`, `prev_past7days`, `past3months`, `total` FROM `artworks` WHERE `id` IN (?)', [artwork_ids], function(error, results, fields) {
+        connection.query('SELECT `id`, `past7days`, `past3months`, `total` FROM `artworks` WHERE `id` IN (?)', [artwork_ids], function(error, results, fields) {
             if (error) {
                 reject(error);
             } else {
@@ -334,7 +334,7 @@ function getArtworkIndexStats(index) {
                     if (row.id) {
                         index[id_index[row.id]].stats = {
                             week: row['past7days'],
-                            prev_week: row['prev_past7days'],
+                            prev_week: (row['past3months'] / 12), //row['prev_past7days'],
                             month: row['past3months'],
                             total: row['total']
                         }

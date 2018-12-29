@@ -33,8 +33,8 @@ const bodyParser = require('body-parser');
 const jsonParser = bodyParser.json();
 
 // 📐 Style.Tools CSS loader
-const styletools_cssloader_version = '1.0.0';
-const styletools_cssloader_js = fs.readFileSync('node_modules/@style.tools/async-css/dist/iife/debug/async-css+all.js', 'utf-8');
+const styletools_cssloader_version = '1.0.7';
+const styletools_cssloader_js = fs.readFileSync('node_modules/@style.tools/async-css/dist/iife/debug/all.js', 'utf-8');
 
 // application CSS
 const cssart_css = fs.readFileSync('../httpdocs/css/css-art.css', 'utf-8');
@@ -201,6 +201,7 @@ app.get('/:artwork/', (req, res) => {
                 author: pack.author,
                 original: pack.original,
                 codepen: pack.codepen,
+                github: pack.github,
                 cssart_css: cssart_css,
                 cssloader: styletools_cssloader_js,
                 cssloader_version: styletools_cssloader_version,

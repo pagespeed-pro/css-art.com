@@ -34,7 +34,7 @@
         "url": "https://github.com/style-tools/css-art.com/issues"
     },
     "dependencies": {
-        "@style.tools/async-css": "^1.0.0",
+        "@style.tools/async-css": "^1.0.7",
         "body-parser": "^1.17.2",
         "cors": "^2.8.3",
         "express": "^4.16.3",
