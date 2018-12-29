@@ -21,8 +21,8 @@
     "html": "dog-toggle.html",
     "css": ["dog-toggle.css"],
     "js": "// ",
-    "thumbnail": "https://codepen.io/techxastrish/pen/YEpvaE/image/small.png",
-    "splash": "https://codepen.io/techxastrish/pen/YEpvaE/image/large.png",
+    "thumbnail": "thumbnail.png",
+    "splash": "thumbnail.png",
     "keywords": ["dog", "toggle"],
     "original": "https://codepen.io/techxastrish/pen/YEpvaE",
     "codepen": "https://codepen.io/techxastrish/pen/YEpvaE"
