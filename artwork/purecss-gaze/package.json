@@ -1,8 +1,8 @@
 {
-    "name": "pure-css-francine",
+    "name": "purecss-gaze",
     "version": "1.0.0",
-    "title": "Pure CSS Francine",
-    "description": "HTML/CSS drawing in the style of an 18th-century oil painting. Hand-coded entirely in HTML & CSS. ",
+    "title": "Pure CSS Gaze",
+    "description": "HTML/CSS drawing in style of italian renaissance painting. Hand-coded entirely in HTML & CSS.",
     "author": {
         "name": "Diana Smith",
         "avatar": "https://avatars3.githubusercontent.com/u/8030961?s=460&v=4",
@@ -18,12 +18,12 @@
             "url": "https://twitter.com/cyanharlow"
         }]
     },
-    "html": "pure-css-francine.html",
-    "css": ["pure-css-francine.css"],
+    "html": "purecss-gaze.html",
+    "css": ["purecss-gaze.css"],
     "js": "",
     "thumbnail": "thumbnail.png",
     "splash": "splash.png",
-    "keywords": ["painting", "francine", "18th-century", "oil painting"],
-    "original": "http://diana-adrianne.com/purecss-francine/",
-    "github": "https://github.com/cyanharlow/purecss-francine"
+    "keywords": ["italian", "renaissance", "painting", "drawing"],
+    "original": "http://diana-adrianne.com/purecss-gaze/",
+    "github": "https://github.com/cyanharlow/purecss-gaze"
 }
