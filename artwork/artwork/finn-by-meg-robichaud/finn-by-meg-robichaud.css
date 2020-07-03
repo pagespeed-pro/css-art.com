@@ -1,0 +1,332 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #D4DFC0;
+}
+
+.finn {
+  width: 9.4em;
+  height: 13.6em;
+  border: 1px dashed transparent;
+  margin: 89px auto;
+  position: relative;
+  z-index: 100;
+}
+.finn .head {
+  width: 100%;
+  height: 8.3em;
+  background: #fff;
+  position: absolute;
+  top: 1.7em;
+  border: 0.25em solid #483C38;
+}
+.finn .head .face {
+  width: 7.45em;
+  height: 6em;
+  background: #F9F8D2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  margin: auto;
+  border: 0.25em solid #483C38;
+  box-shadow: inset 0 0.5em 0 0 rgba(0, 0, 0, 0.07);
+}
+.finn .head .ear {
+  width: 1.9em;
+  height: 1.9em;
+  background: #fff;
+  position: absolute;
+  top: -1.9em;
+  border-radius: 50%;
+  border: 0.25em solid #483C38;
+}
+.finn .head .ear:after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 1.9em;
+  height: 1.7em;
+  background: #fff;
+  border: 0.25em solid #483C38;
+  border-top: #fff;
+  border-bottom: transparent;
+  left: -0.25em;
+  top: 0.7em;
+  z-index: 1;
+}
+.finn .head .ear.l {
+  left: -0.3em;
+}
+.finn .head .ear.r {
+  right: -0.3em;
+}
+.finn .head .eye {
+  position: absolute;
+  width: 1.2em;
+  height: 0.7em;
+  overflow: hidden;
+  top: 3.3em;
+}
+.finn .head .eye:before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 50%;
+  bottom: 0;
+  background: #F9F8D2;
+  border: 0.25em solid #483C38;
+}
+.finn .head .eye.l {
+  left: 2em;
+}
+.finn .head .eye.r {
+  right: 2em;
+}
+.finn .head .freckles {
+  width: 0.25em;
+  height: 0.25em;
+  border-radius: 50%;
+  background: #483C38;
+  position: absolute;
+  top: 4.25em;
+  left: 3em;
+  box-shadow: 0.46em 0.35em 0 0 #483C38, 0.46em -0.3em 0 0 #483C38, 1.95em -0.3em 0 0 #483C38, 1.95em 0.35em 0 0 #483C38, 2.4em 0em 0 0 #483C38;
+}
+.finn .head .side-shadow {
+  width: 0.25em;
+  height: 5.4em;
+  position: absolute;
+  background: #483C38;
+  left: 0.2em;
+  top: 0.1em;
+  z-index: 2;
+}
+.finn .head .ear-shadow {
+  width: 0.7em;
+  height: 1.2em;
+  position: absolute;
+  top: -1.6em;
+  left: 0.1em;
+  overflow: hidden;
+  z-index: 2;
+}
+.finn .head .ear-shadow:before {
+  content: '';
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 30%;
+  top: 0.2em;
+  left: 0.1em;
+  border: 0.25em solid #483C38;
+}
+.finn .head .shirt {
+  position: absolute;
+  width: 5.8em;
+  height: 1.3em;
+  background: #3DACB9;
+  top: 8.05em;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border: 0.25em solid #483C38;
+  border-top: transparent;
+  box-shadow: inset 0 0.25em 0 0 rgba(0, 0, 0, 0.07);
+}
+.finn .head .shirt .shirt-shadow {
+  position: absolute;
+  height: 0.25em;
+  width: 4.5em;
+  background: #483C38;
+  bottom: 0.1em;
+  left: 0.2em;
+}
+.finn .head .shirt .shirt-shadow:after {
+  content: '';
+  position: absolute;
+  width: 0.25em;
+  height: 0.5em;
+  left: 3.5em;
+  bottom: 0;
+  background: #3DACB9;
+}
+.finn .head .strap {
+  position: absolute;
+  width: 0.5em;
+  height: 1.1em;
+  background: #5FB246;
+  top: 8.05em;
+  border-bottom: 0.25em solid #483C38;
+}
+.finn .head .strap.l {
+  left: 1em;
+  border-left: 0.25em solid #483C38;
+}
+.finn .head .strap.r {
+  right: 1em;
+  border-right: 0.25em solid #483C38;
+}
+.finn .head .sleeve {
+  position: absolute;
+  top: 8.05em;
+  width: 0.5em;
+  height: 0.7em;
+  background: #3DACB9;
+  box-shadow: inset 0 0.25em 0 0 rgba(0, 0, 0, 0.07);
+}
+.finn .head .sleeve.l {
+  left: 0.5em;
+  border-left: 0.25em solid #483C38;
+  border-bottom: 0.25em solid #483C38;
+}
+.finn .head .sleeve.r {
+  right: 0.5em;
+  border-right: 0.25em solid #483C38;
+  border-bottom: 0.25em solid #483C38;
+}
+.finn .head .shorts {
+  position: absolute;
+  top: 9.14em;
+  height: 0.8em;
+  width: 4.8em;
+  background: #4A6D86;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-bottom: 0.25em solid #483C38;
+  border-top: 0.35em solid #483C38;
+  z-index: 1;
+}
+.finn .head .pant-leg {
+  position: absolute;
+  width: 1.1em;
+  height: 1.1em;
+  background: #4A6D86;
+  top: 9.2em;
+  border: 0.25em solid #483C38;
+}
+.finn .head .pant-leg.l {
+  left: 1.28em;
+}
+.finn .head .pant-leg.r {
+  right: 1.28em;
+}
+.finn .head .leg {
+  position: absolute;
+  width: 0.6em;
+  height: 0.66em;
+  background: #F9F8D2;
+  top: 10.3em;
+  border: 0.2em solid #483C38;
+  border-top: transparent;
+}
+.finn .head .leg.l {
+  left: 1.5em;
+}
+.finn .head .leg.r {
+  right: 1.6em;
+}
+.finn .head .sock {
+  position: absolute;
+  background: #fff;
+  top: 10.85em;
+  width: 1.1em;
+  height: 0.4em;
+  border: 0.15em solid #483C38;
+  z-index: 1;
+}
+.finn .head .sock.l {
+  left: 1.25em;
+}
+.finn .head .sock.r {
+  right: 1.25em;
+}
+.finn .head .shoe {
+  position: absolute;
+  top: 11.2em;
+  width: 1.3em;
+  height: 0.6em;
+  border-bottom: 0.2em solid #483C38;
+  overflow: hidden;
+}
+.finn .head .shoe.l {
+  left: 1em;
+  border-right: 0.2em solid #483C38;
+}
+.finn .head .shoe.r {
+  right: 1.1em;
+  border-left: 0.2em solid #483C38;
+}
+.finn .head .shoe:after {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  background: #776863;
+  width: 2.6em;
+  height: 2.6em;
+  border-radius: 50%;
+  border: 0.2em solid #483C38;
+  top: -0.6em;
+}
+.finn .head .shoe.l:after {
+  left: 0;
+}
+.finn .head .shoe.r:after {
+  right: 0;
+}
+.finn .head .arm {
+  position: absolute;
+  width: 0.4em;
+  height: 1.5em;
+  background: #F9F8D2;
+  border-left: 0.2em solid #483C38;
+  border-right: 0.2em solid #483C38;
+  top: 8.75em;
+  z-index: 2;
+}
+.finn .head .arm.l {
+  left: 0.7em;
+}
+.finn .head .arm.r {
+  right: 0.7em;
+}
+.finn .head .hand {
+  position: absolute;
+  top: 10.05em;
+  width: 1em;
+  height: 0.8em;
+  background: #F9F8D2;
+  border: 0.2em solid #483C38;
+  border-radius: 48% 40% 40% 48%;
+  overflow: hidden;
+}
+.finn .head .hand.l {
+  left: 0.4em;
+}
+.finn .head .hand.l:after {
+  transform: rotate(-45deg);
+  bottom: -0.1em;
+  right: 0.1em;
+}
+.finn .head .hand.r {
+  right: 0.4em;
+}
+.finn .head .hand.r:after {
+  transform: rotate(45deg);
+  bottom: -0.1em;
+  left: 0.1em;
+}
+.finn .head .hand:after {
+  content: '';
+  width: 0.2em;
+  height: 0.4em;
+  background: #483C38;
+  position: absolute;
+}

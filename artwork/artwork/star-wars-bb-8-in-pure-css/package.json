@@ -1,0 +1,29 @@
+{
+    "name": "star-wars-bb-8-in-pure-css",
+    "version": "1.0.0",
+    "title": "Star Wars BB-8 in pure CSS",
+    "description": "I made BB-8 using pure CSS. Art is based on Brent Clouse's BB-8 animation on Dribbble.\n\n/*\nBB-8 in Pure CSS\n[https://github.com/jrlmontejo/bb-8](https://github.com/jrlmontejo/bb-8)\n\nArt by Brent Clouse [https://dribbble.com/shots/2178528-BB-8](https://dribbble.com/shots/2178528-BB-8)\n*/",
+    "author": {
+        "name": "Jaye Renzo",
+        "avatar": "https://s.cdpn.io/profiles/user/449907/512.jpg?5",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/jrlmontejo"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/jrlmontejo/"
+        }]
+    },
+    "html": "star-wars-bb-8-in-pure-css.html",
+    "css": [
+        "star-wars-bb-8-in-pure-css.css"
+    ],
+    "thumbnail": "thumbnail.png",
+    "keywords": [
+        "Star Wars",
+        "BB-8",
+        "animated"
+    ],
+    "original": "https://codepen.io/jrlmontejo/pen/NxrEVg",
+    "codepen": "https://codepen.io/jrlmontejo/pen/NxrEVg"
+}

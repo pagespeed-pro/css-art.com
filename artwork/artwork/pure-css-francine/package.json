@@ -1,0 +1,29 @@
+{
+    "name": "pure-css-francine",
+    "version": "1.0.0",
+    "title": "Pure CSS Francine",
+    "description": "HTML/CSS drawing in the style of an 18th-century oil painting. Hand-coded entirely in HTML & CSS. ",
+    "author": {
+        "name": "Diana Smith",
+        "avatar": "https://avatars3.githubusercontent.com/u/8030961?s=460&v=4",
+        "web": "http://diana-adrianne.com/",
+        "social": [{
+            "title": "Github",
+            "url": "https://github.com/cyanharlow"
+        }, {
+            "title": "Instagram",
+            "url": "https://www.instagram.com/cyanharlow"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/cyanharlow"
+        }]
+    },
+    "html": "pure-css-francine.html",
+    "css": ["pure-css-francine.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["painting", "francine", "18th-century", "oil painting"],
+    "original": "http://diana-adrianne.com/purecss-francine/",
+    "github": "https://github.com/cyanharlow/purecss-francine"
+}

@@ -1,0 +1,28 @@
+{
+    "name": "a-single-div",
+    "version": "1.0.0",
+    "title": "a.singlediv.com - a CSS drawing project",
+    "description": "A Single Div: a CSS drawing project by [Lynn Fisher](https://twitter.com/lynnandtonic)",
+    "author": {
+        "name": "Lynn Fisher",
+        "avatar": "https://s.cdpn.io/profiles/user/1025350/512.jpg?1",
+        "web": "https://lynnandtonic.com/",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/lynnandtonic"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/lynnandtonic"
+        }, {
+            "title": "Medium.com",
+            "url": "https://medium.com/@lynnandtonic"
+        }]
+    },
+    "html": "a-single-div.html",
+    "css": ["a-single-div.css"],
+    "js": "// ",
+    "thumbnail": "thumbnail.png",
+    "splash": "thumbnail.png",
+    "keywords": ["single div", "drawing"],
+    "original": "https://a.singlediv.com/"
+}

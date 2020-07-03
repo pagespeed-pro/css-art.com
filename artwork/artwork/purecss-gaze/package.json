@@ -1,0 +1,29 @@
+{
+    "name": "purecss-gaze",
+    "version": "1.0.0",
+    "title": "Pure CSS Gaze",
+    "description": "HTML/CSS drawing in style of italian renaissance painting. Hand-coded entirely in HTML & CSS.",
+    "author": {
+        "name": "Diana Smith",
+        "avatar": "https://avatars3.githubusercontent.com/u/8030961?s=460&v=4",
+        "web": "http://diana-adrianne.com/",
+        "social": [{
+            "title": "Github",
+            "url": "https://github.com/cyanharlow"
+        }, {
+            "title": "Instagram",
+            "url": "https://www.instagram.com/cyanharlow"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/cyanharlow"
+        }]
+    },
+    "html": "purecss-gaze.html",
+    "css": ["purecss-gaze.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["italian", "renaissance", "painting", "drawing"],
+    "original": "http://diana-adrianne.com/purecss-gaze/",
+    "github": "https://github.com/cyanharlow/purecss-gaze"
+}

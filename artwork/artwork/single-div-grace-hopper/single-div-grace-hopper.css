@@ -1,0 +1,126 @@
+body {
+  --outer-circle: #f6c482;
+  --inner-circle: rgba(101, 141, 188, .9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle, var(--inner-circle) 20%, var(--outer-circle) 20%);
+}
+
+div {
+  margin-right: 55px;
+  margin-top: -115px;
+  width: 350px;
+  height: 470px;
+  background-repeat: no-repeat;  
+  /* colors */
+  --grace-top-lip: #ce8f7e;
+  --grace-bottom-lip: #e39e8c;
+  --eye-white: #efebe9;
+  --eye-iris: #525f72;
+  --ear: #ebc099;
+  --eye-dark-blue: #28282a;
+  --face: #e9caae;
+  --neck: #ebc099;
+  --glasses: #404040;
+  --glasses-bottom: #e8e4e4;
+  --hat-yellow: #f9d42a;
+  
+  --glasses-left-end-piece: radial-gradient(circle at 72% 80%, var(--glasses) 0%, var(--glasses) 35%, var(--glasses) 35%, var(--glasses) 40%, var(--glasses) 40%, var(--glasses) 45%, var(--glasses) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%);
+  
+  --glasses-right-end-piece: radial-gradient(circle at 32% 80%, var(--glasses) 0%, var(--glasses) 35%, var(--glasses) 35%, var(--glasses) 40%, var(--glasses) 40%, var(--glasses) 45%, var(--glasses) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%);
+
+  --glasses-bridge: radial-gradient(ellipse, var(--face) 6px, transparent 6px),/*left glass circle*/radial-gradient(ellipse, transparent 5px, transparent 5px),/*right glass circle*/radial-gradient(ellipse, transparent 5px, transparent 5px),/*connector*/linear-gradient(var(--glasses) 8px, transparent 8px);
+
+  --glasses-left-top-rim: radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, var(--glasses) 35%, var(--glasses) 40%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%);
+  
+  --glasses-right-top-rim: radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, var(--glasses) 35%, var(--glasses) 40%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%);
+  
+  --glasses-left-bottom-rim: radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, var(--glasses-bottom) 35%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%);
+  
+  --glasses-right-bottom-rim: radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, var(--glasses-bottom) 35%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%);
+  
+  --hat-top-circle: radial-gradient(circle, #00004d 30px, transparent 30px);
+  
+  --hat-rim: radial-gradient(circle, #00004d 15px, transparent 15px), radial-gradient(circle, #00004d 15px, transparent 15px);
+  
+  --hat-base: linear-gradient(#00004d 58px, transparent 58px);
+  
+  --hat-top-back: radial-gradient(circle at 50% 100%, white 62px, transparent 62px);
+  
+  --eye-wrinkles: /*left eye top small wrinkle */radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 35%, rgba(201, 156, 128, .2) 40%, rgba(201, 156, 128, .2) 40%, rgba(201, 156, 128, .2) 45%, rgba(201, 156, 128, .2) 45%, rgba(201, 156, 128, .2) 50%, rgba(201, 156, 128, .2) 50%, rgba(201, 156, 128, .2) 55%, rgba(201, 156, 128, .2) 55%, rgba(201, 156, 128, .2) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%), /*left eye top wrinkle */radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 35%, rgba(201, 156, 128, .4) 40%, rgba(201, 156, 128, .4) 40%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%),/*right eye top small wrinkle */radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 35%, rgba(201, 156, 128, .2) 40%, rgba(201, 156, 128, .2) 40%, rgba(201, 156, 128, .2) 45%, rgba(201, 156, 128, .2) 45%, rgba(201, 156, 128, .2) 50%, rgba(201, 156, 128, .2) 50%, rgba(201, 156, 128, .2) 55%, rgba(201, 156, 128, .2) 55%, rgba(201, 156, 128, .2) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%), /*right eye top wrinkle */radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 35%, rgba(201, 156, 128, .4) 40%, rgba(201, 156, 128, .4) 40%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%), /*left eye wrinkle */radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 35%, rgba(201, 156, 128, .4) 40%, rgba(201, 156, 128, .4) 40%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%), /*right eye wrinkle */radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 35%, rgba(201, 156, 128, .4) 40%, rgba(201, 156, 128, .4) 40%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%);
+  
+  --nose: radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 35%, rgba(201, 156, 128, .4) 40%, rgba(201, 156, 128, .4) 40%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%);
+  
+  --mouth-wrinkles: /*left wrinkle */radial-gradient(circle at -10% 100%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 35%, rgba(201, 156, 128, .3) 40%, rgba(201, 156, 128, .3) 40%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%), /*right wrinkle */radial-gradient(circle at 110% 100%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 35%, rgba(201, 156, 128, .3) 40%, rgba(201, 156, 128, .3) 40%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%), /*chin wrinkle */radial-gradient(circle at 50% 100%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 35%, rgba(201, 156, 128, .4) 40%, rgba(201, 156, 128, .4) 40%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%);
+  
+  --right-eye: /*right eye pupil and iris */radial-gradient(circle, rgba(239, 235, 233, .4) .5px, transparent 1px), radial-gradient(circle, var(--eye-white) 1px, transparent 1.5px), radial-gradient(var(--eye-dark-blue) 2.5px, transparent 2.5px), radial-gradient(circle, var(--eye-iris) 4px, transparent 5px),/*right eye sclera*/radial-gradient(ellipse, var(--eye-white) 8px, transparent 9px);
+  
+  --left-eye: /*left eye pupil and iris*/radial-gradient(circle, rgba(239, 235, 233, .4) .5px, transparent 1px), radial-gradient(circle, #efebe9 1px, transparent 1.5px), radial-gradient(var(--eye-dark-blue) 2.5px, transparent 2.5px), radial-gradient(circle, var(--eye-iris) 4px, transparent 5px),/*left eye sclera*/radial-gradient(ellipse, var(--eye-white) 8px, transparent 9px);
+  
+  --left-eyebrow: /*left eyebrow shape*/radial-gradient(ellipse, var(--face) 13px, transparent 13px), /*left eyebrow */radial-gradient(ellipse, white 14px, transparent 14px);
+  
+  --right-eyebrow: /*right eyebrow shape*/radial-gradient(ellipse, var(--face) 13px, transparent 13px),/*right eyebrow */radial-gradient(ellipse, white 14px, transparent 14px);
+  
+  --mouth: /*top lip */radial-gradient(ellipse, var(--grace-top-lip) 16px, transparent 16px), /* bottom lip */ radial-gradient(ellipse, var(--grace-bottom-lip) 13px, transparent 13px);
+  
+  --face-shape: /* face */ radial-gradient(ellipse, #e9caae 58px, transparent 58px), /* chin */ radial-gradient(ellipse, #e9caae 28px, transparent 28px);
+
+  --ears: /* right ear */ radial-gradient(circle,  var(--ear) 20px, transparent 20px),/* left ear */ radial-gradient(circle,  var(--ear) 20px, transparent 20px);
+  
+  --hair: radial-gradient(circle,  white 71px, transparent 5px);
+  
+  --neck-shape: linear-gradient(var(--neck) 25px, transparent 25px), radial-gradient(var(--neck) 23px, transparent 23px);
+  
+  --yellow-hat-details: /*piece 1*/radial-gradient(circle at 72% 80%, var(--hat-yellow) 0%, var(--hat-yellow) 35%, var(--hat-yellow) 35%, var(--hat-yellow) 40%, var(--hat-yellow) 40%, var(--hat-yellow) 45%, var(--hat-yellow) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%),/*piece 2*/radial-gradient(circle at 32% 80%, var(--hat-yellow) 0%, var(--hat-yellow) 35%, var(--hat-yellow) 35%, var(--hat-yellow) 40%, var(--hat-yellow) 40%, var(--hat-yellow) 45%, var(--hat-yellow) 45%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%);
+  
+  --eagle: radial-gradient(circle, white 1.8px, transparent 1px), radial-gradient(circle, white 1.8px, transparent 1px),/*eagle center*/linear-gradient(white 4px, transparent 4px), linear-gradient(white 10px, transparent 10px),/*eagle left*/radial-gradient(circle at 42% 100%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 35%, white 40%, white 40%, white 45%, white 45%, rgba(299, 299, 299, 0.6) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%),/*eagle right*/radial-gradient(circle at 60% 100%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0) 35%, white 40%, white 40%, white 45%, white 45%, rgba(299, 299, 299, 0.6) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0) 65%);
+  
+  --decorations: linear-gradient(#f25624 10px, transparent 10px), linear-gradient(#df3b80 10px, transparent 10px), linear-gradient(#f86042 10px, transparent 10px), linear-gradient(white 10px, transparent 10px);
+  
+  --hat-line-details: linear-gradient(var(--hat-yellow) 10px, transparent 10px), linear-gradient(var(--hat-yellow) 10px, transparent 10px);
+
+  background-image: var(--decorations), var(--eagle), var(--hat-line-details), var(--glasses-left-end-piece), var(--glasses-right-end-piece), var(--glasses-bridge), var(--glasses-left-top-rim), var(--glasses-right-top-rim), var(--glasses-left-bottom-rim), var(--glasses-right-bottom-rim), var(--hat-top-circle), var(--hat-rim), var(--hat-base), var(--hat-top-back), var(--eye-wrinkles), var(--nose), var(--mouth-wrinkles), var(--right-eye), var(--left-eye), var(--left-eyebrow), var(--right-eyebrow), var(--mouth), var(--face-shape), var(--ears),  var(--hair), var(--neck-shape), var(--yellow-hat-details);
+  
+  background-size: 20px 2px, 20px 2px, 15px 2px, 20px 2px, /*eagle*/4px 4px, 4px 4px, 8px 3px, 5px 7px, 13px 22px, 13px 22px,/*hat details*/30px 2px, 32px 2px, /*glass detail top*/7px 11px, 7px 11px, /*connector shape*/11px 16px, /*left glass circle*/9px 7px,/*right glass circle*/9px 7px,/*connector*/13px 7px,/*top right glasses*/44px 70px,/*top left glasses*/44px 70px,/*bottom right glasses*/50px 55px,/*bottom left glasses*/50px 55px,/*hat top*/60px 60px,/*hat right side*/30px 30px, /*hat left side*/30px 30px,/*hat bottom*/122px 50px,/*hat back white*/124px 63px,/*left eye top small wrinkle*/12px 8px, /*left eye top wrinkle*/ 25px 38px,/*right eye top small wrinkle*/12px 8px,/*right eye top wrinkle*/ 25px 38px, /* left eye wrinkle */ 20px 24px, /* right eye wrinkle */ 20px 24px, /*nose */ 11px 16px, /*mouth - left wrinkle */24px 9px,/*mouth - right wrinkle */24px 9px,  /*chin wrinkle */ 22px 10px,  /* left eye*/3px 3px, 5px 5px, 6px 6px, 10px 9px, /* left eye*/25px 12px, /* left eye*/3px 3px, 5px 5px, 6px 6px, 10px 9px, /* left eye*/25px 12px, /* right eyebrow shape */26px 9px, /* right eyebrow */30px 7px, /* left eyebrow shape */26px 9px, /* left eyebrow */30px 7px, /* top lip */32px 5px, /* bottom lip */ 26px 8px, /* face */ 122px 140px, /* chin */ 60px 42px,/* right ear */50px 50px, /* left ear */50px 50px,/* hair */ 200px 115px, /* neck */ 46px 30px, 46px 46px,/*yellow hat pieces*/ 17px 11px, 16px 11px;
+  
+  background-position: 253px 371px, 253px 368px, 253px 365px, 130px 365px, /*eagle*/202px 178px, 192px 178px, 194px 167px, 197px 170px, 186px 162px, 199px 162px,/*hat details*/ 140px 180px, 230px 180px,/*glass detail top*/145px 236px, 248px 236px, /*connector shape*/195px 247px, /*left glass circle*/144px 241px,/*right glass circle*/248px 241px,/*connector*/193px 243px,/*top right glasses*/150px 192px,/*top left glasses*/206px 192px,/*bottom right glasses*/147px 247px,/*bottom left glasses*/204px 247px,/*hat top*/170px 151px,/*hat left side*/ 248px 200px,/*hat left side*/ 123px 200px,/*hat bottom*/140px 180px,/*hat back white*/139px 149px,/*left eye top small wrinkle*/163px 244px, /*left eye top wrinkle*/ 168px 222px,/*right eye top small wrinkle*/227px 244px, /*right eye top wrinkle*/208px 222px, /*right eye wrinkle */ 170px 252px, /*right eye wrinkle */ 210px 252px,/*nose */ 194px 272px, /*mouth - left wrinkle */211px 288px, /*mouth - right wrinkle */165px 288px,/*chin wrinkle*/189px 311px,  /*left eye*/219px 251px, 217px 246px, 217px 246px, 215px 246px, /* left eye*/208px 244px, /*left eye*/180.5px 251px, 179.5px 246px, 178px 246px, 176px 246px, /*left eye*/169px 244px,/*left eyebrow shape */162px 238px, /*right eyebrow */164px 234px, /*left eyebrow shape */213px 238px, /*left eyebrow */206px 234px, /*top lip */184px 295px, /*bottom lip */187px 295px, /*face */ 140px 190px, /* chin */ 171px 289px, /* right ear */ 220px 240px,/*left ear */ 132px 240px,/*hair */ 101px 196px,/*neck*/ 177px 312px, 177px 312px,/*yellow hat piece*/135px 175px, 250px 175px;
+}
+
+div::before {
+  content: "\2015";
+  font-size: 28px;
+  line-height: 12px;
+  color: #80a5bd;
+  display: block;
+  background: linear-gradient(to right, white 0%, white 50%, white 50%, white 100%);
+  border-radius: 0% 0% 90% 90%;
+  display: inline-block;
+  border: 2px solid var(--hat-yellow);
+  height: 25px;
+  margin-top: 190px;
+  margin-left: 183px;
+  position: relative;
+  width: 28px;
+}
+
+div::after {
+  content: '';
+  display: block;
+  width: 75px;
+  height: 0;
+  margin-top: 110px;
+  margin-left: 113px;
+  position: absolute;
+  z-index: -1;
+  border-left: 50px solid #00004d;
+  border-right: 50px solid #00004d;
+  border-bottom: 40px solid #00004d;
+  border-top: 35px solid white;
+  -moz-border-radius: 30%;
+  -webkit-border-radius: 30%;
+  border-radius: 30%;
+}
+

@@ -1,0 +1,29 @@
+{
+    "name": "tesla-cybertruck",
+    "version": "1.0.0",
+    "title": "Tesla Cybertruck",
+    "description": "Single div CSS Tesla Cybertruck",
+    "author": {
+        "name": "Lynn Fisher",
+        "avatar": "https://s.cdpn.io/profiles/user/1025350/512.jpg?1",
+        "web": "https://lynnandtonic.com/",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/lynnandtonic"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/lynnandtonic"
+        }, {
+            "title": "Medium.com",
+            "url": "https://medium.com/@lynnandtonic"
+        }]
+    },
+    "html": "tesla-cybertruck.html",
+    "css": ["tesla-cybertruck.css"],
+    "js": "// ",
+    "thumbnail": "thumbnail.png",
+    "splash": "thumbnail.png",
+    "keywords": ["single div", "drawing", "tesla", "cybertruck"],
+    "original": "https://codepen.io/lynnandtonic/pen/NWWmzjr",
+    "codepen": "https://codepen.io/lynnandtonic/pen/NWWmzjr"
+}

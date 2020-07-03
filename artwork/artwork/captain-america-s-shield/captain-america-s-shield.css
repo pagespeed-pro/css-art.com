@@ -1,0 +1,137 @@
+body {
+  background: #131820;
+}
+
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 8%;
+  width: 400px;
+  height: 400px;
+  background: none;
+}
+
+.shield1 {
+  width: 70%;
+  height: 70%;
+  background: #B3000E;
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 15%;
+}
+
+.shield2 {
+  width: 80%;
+  height: 80%;
+  background: #FFFFFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.shield3 {
+  width: 75%;
+  height: 75%;
+  background: #B3000E;
+  border-radius: 50%;
+  position: absolute;
+  top: 12.5%;
+  left: 12.5%;
+}
+
+.shield4 {
+  width: 65%;
+  height: 65%;
+  background: #242E5F;
+  border-radius: 50%;
+  position: absolute;
+  top: 17.5%;
+  left: 17.5%;
+}
+
+/*.star{
+  width: 0;
+  height: 0;
+  margin: 32px 5px;
+  color: $white;
+  position: relative;
+  display: block;
+  border-right: 50px solid transparent;
+  border-bottom: 35px solid $white;
+  border-left: 50px solid transparent;
+  transform: rotate(35deg);
+}
+
+.star::before {
+    height: 0;
+    width: 0;
+    position: absolute;
+    display: block;
+    top: -22.5px;
+    left: -32.5px;
+    border-bottom: 40px solid $white;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    content: '';
+    transform: rotate(-35deg);
+}
+
+.star::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    display: block;
+    top: 1.5px;
+    left: -52.5px;
+    color: $white;
+    border-right: 50px solid transparent;
+    border-bottom: 35px solid $white;
+    border-left: 50px solid transparent;
+    transform: rotate(-70deg);
+}
+*/
+.star1, .star2, .star3, .star4, .star5 {
+  width: 50%;
+  height: 50%;
+  background: #FFFFFF;
+  clip-path: polygon(50% 0, 75% 25%, 50% 100%, 25% 25%);
+}
+
+.star1 {
+  position: absolute;
+  top: 2%;
+  left: 25%;
+  transform: rotate(180deg);
+}
+
+.star2 {
+  position: absolute;
+  top: 20%;
+  right: 2%;
+  transform: rotate(250deg);
+}
+
+.star3 {
+  position: absolute;
+  bottom: 5%;
+  right: 10%;
+  transform: rotate(325deg);
+}
+
+.star4 {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  transform: rotate(35deg);
+}
+
+.star5 {
+  position: absolute;
+  top: 20%;
+  left: 2%;
+  transform: rotate(110deg);
+}

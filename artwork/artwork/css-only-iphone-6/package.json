@@ -1,0 +1,36 @@
+{
+    "name": "css-only-iphone-6",
+    "version": "1.0.0",
+    "title": "CSS Only iPhone 6",
+    "description": "//You may also like Plugin\n```javascript\n/*alsolike(\n  \"LwlqI\", \"100 followers jelly cake!\",\n  \"nKCsI\", \"Semantic Sandwich\",\n  \"whxbF\", \"CSS Only Bending Effect\" \n);*/",
+    "author": {
+        "name": "Fabrizio Bianchi",
+        "avatar": "https://s.cdpn.io/profiles/user/164210/512.jpg?1530273637",
+        "web": "http://fabrizio.io/",
+        "social": [{
+            "title": "Twitter",
+            "url": "https://twitter.com/_fbrz"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/fabrizio-bianchi"
+        }, {
+            "title": "Codepen",
+            "url": "https://codepen.io/_fbrz"
+        }, {
+            "title": "Instagram",
+            "url": "https://www.instagram.com/_fbrz/"
+        }]
+    },
+    "html": "css-only-iphone-6.html",
+    "css": [
+        "css-only-iphone-6.css"
+    ],
+    "thumbnail": "thumbnail.png",
+    "keywords": [
+        "iphone 6",
+        "3d",
+        "animated"
+    ],
+    "original": "https://codepen.io/_fbrz/pen/vlrnd",
+    "codepen": "https://codepen.io/_fbrz/pen/vlrnd"
+}

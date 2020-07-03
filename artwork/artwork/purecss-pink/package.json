@@ -1,0 +1,29 @@
+{
+    "name": "purecss-pink",
+    "version": "1.0.0",
+    "title": "Pure CSS Pink",
+    "description": "HTML/CSS drawing of gel studio lighting. Hand-coded entirely in HTML & CSS. ",
+    "author": {
+        "name": "Diana Smith",
+        "avatar": "https://avatars3.githubusercontent.com/u/8030961?s=460&v=4",
+        "web": "http://diana-adrianne.com/",
+        "social": [{
+            "title": "Github",
+            "url": "https://github.com/cyanharlow"
+        }, {
+            "title": "Instagram",
+            "url": "https://www.instagram.com/cyanharlow"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/cyanharlow"
+        }]
+    },
+    "html": "purecss-pink.html",
+    "css": ["purecss-pink.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["gel studio lighting", "drawing", "pink"],
+    "original": "http://diana-adrianne.com/purecss-pink/",
+    "github": "https://github.com/cyanharlow/purecss-pink"
+}
