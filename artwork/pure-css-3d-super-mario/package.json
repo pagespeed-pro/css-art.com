@@ -1,0 +1,29 @@
+{
+    "name": "pure-css-3d-super-mario",
+    "version": "1.0.0",
+    "title": "Pure CSS animated 3D Super Mario Icon",
+    "description": "A time-wasting & fun experiment by Andreas Jacob, a German Webdesigner and Frontend-Developer.",
+    "author": {
+        "name": "Andreas Jacob",
+        "avatar": "https://avatars2.githubusercontent.com/u/1158?s=460&v=4",
+        "web": "https://cordobo.com/",
+        "social": [{
+            "title": "Github",
+            "url": "https://github.com/Cordobo"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/cordobo"
+        }, {
+            "title": "Pinterest",
+            "url": "https://www.pinterest.com/cordobo/"
+        }]
+    },
+    "html": "pure-css-3d-super-mario.html",
+    "css": ["pure-css-3d-super-mario.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["super mario", "3d", "animated"],
+    "original": "https://cordobo.com/wp-content/uploads/pure-css-animated-3d-super-mario/",
+    "github": "https://github.com/Cordobo/pure-css-super-mario"
+}

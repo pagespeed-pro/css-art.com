@@ -1,8 +1,8 @@
 {
-    "name": "pure-css-merry-christmas",
+    "name": "pure-css-super-meat-boy",
     "version": "1.0.0",
-    "title": "Pure CSS Merry Christmas:)",
-    "description": "/*\n   Pure css Santa Caul by\n      Alireza Sheikholmolouki\n      \n   Share this pen if you like it :)\n   \n   and this is my twitter account if you want to follow me:\n   \n      @alireza29675\n*/",
+    "title": "Pure CSS SUPER MEAT BOY Guy <3",
+    "description": "Pure CSS SUPER MEAT BOY made with <3 by Alireza Sheikholmolouki in [WorldSkills Iran](http://worldskills.ir/) ©",
     "author": {
         "name": "Alireza Sheikholmolouki",
         "avatar": "https://s.cdpn.io/profiles/user/45022/512.jpg?2",
@@ -20,16 +20,15 @@
             "url": "https://medium.com/@alireza.sheikholmolouki"
         }]
     },
-    "html": "pure-css-merry-christmas.html",
+    "html": "pure-css-super-meat-boy.html",
     "css": [
-        "pure-css-merry-christmas.css"
+        "pure-css-super-meat-boy.css"
     ],
+    "splash": "splash.png",
     "thumbnail": "thumbnail.png",
     "keywords": [
-        "christmas",
-        "santa claus",
-        "animated"
+        "boy", "animated"
     ],
-    "original": "https://codepen.io/Alireza29675/pen/KwgwMy",
-    "codepen": "https://codepen.io/Alireza29675/pen/KwgwMy"
+    "original": "https://codepen.io/Alireza29675/pen/qEENpR",
+    "codepen": "https://codepen.io/Alireza29675/pen/qEENpR"
 }

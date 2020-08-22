@@ -1,0 +1,34 @@
+{
+    "name": "pure-css-happy-nowrooz",
+    "version": "1.0.0",
+    "title": "Pure CSS \"Happy Nowrooz!\"",
+    "description": "/*\n  ->BETTER VIEW ON GOOGLE CHROME<-\n  ->Change View to Full Screen and Enjoy<-\n  ->Happy Nowrooz Eid<-\n\n   Pure css (No Image) Haft-Seen by\n      Alireza Sheikholmolouki\n      \n   Share this pen if you like it :)\n   \n   and this is my twitter account if you want to follow me:\n      @alireza29675\n      \n      Made with love^_^\n*/",
+    "author": {
+        "name": "Alireza Sheikholmolouki",
+        "avatar": "https://s.cdpn.io/profiles/user/45022/512.jpg?2",
+        "social": [{
+            "title": "Twitter",
+            "url": "https://twitter.com/alireza29675"
+        }, {
+            "title": "Codepen",
+            "url": "https://codepen.io/Alireza29675/"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/Alireza29675"
+        }, {
+            "title": "Medium.com",
+            "url": "https://medium.com/@alireza.sheikholmolouki"
+        }]
+    },
+    "html": "pure-css-happy-nowrooz.html",
+    "css": [
+        "pure-css-happy-nowrooz.css"
+    ],
+    "splash": "splash.png",
+    "thumbnail": "thumbnail.png",
+    "keywords": [
+        "nowrooz", "1395", "animated"
+    ],
+    "original": "https://codepen.io/Alireza29675/pen/vGxNRB",
+    "codepen": "https://codepen.io/Alireza29675/pen/vGxNRB"
+}

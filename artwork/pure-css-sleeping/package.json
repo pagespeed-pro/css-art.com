@@ -1,0 +1,34 @@
+{
+    "name": "pure-css-sleeping",
+    "version": "1.0.0",
+    "title": "Sleeping (Pure CSS)",
+    "description": "/*\n    ** ِ This code is dedicaded to my eager students ♥ **\n\n    Authors:\n      • An amazing illustration by Nick Slater(https://dribbble.com/slaterdesign)\n    \n      • Made with pure css (no image) and ♥ by Alireza Sheikholmolouki\n    (https://twitter.com/alireza29675, http://alireza.sheikholmolouki.com)\n*/",
+    "author": {
+        "name": "Alireza Sheikholmolouki",
+        "avatar": "https://s.cdpn.io/profiles/user/45022/512.jpg?2",
+        "social": [{
+            "title": "Twitter",
+            "url": "https://twitter.com/alireza29675"
+        }, {
+            "title": "Codepen",
+            "url": "https://codepen.io/Alireza29675/"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/Alireza29675"
+        }, {
+            "title": "Medium.com",
+            "url": "https://medium.com/@alireza.sheikholmolouki"
+        }]
+    },
+    "html": "pure-css-sleeping.html",
+    "css": [
+        "pure-css-sleeping.css"
+    ],
+    "splash": "splash.png",
+    "thumbnail": "thumbnail.png",
+    "keywords": [
+        "sleeping", "illustration", "animated"
+    ],
+    "original": "https://codepen.io/Alireza29675/pen/YVMBOg",
+    "codepen": "https://codepen.io/Alireza29675/pen/YVMBOg"
+}

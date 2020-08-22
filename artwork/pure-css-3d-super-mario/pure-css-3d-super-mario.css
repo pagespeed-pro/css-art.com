@@ -1,0 +1,1180 @@
+/*------------------------------------------------------------------
+[CSS3 Stylesheet]
+
+Project: A Pure CSS3 animated 3D Super Mario Retro Icon without images
+Last change: 23. July 2014
+Designed by: Andreas Jacob, http://cordobo.com/
+Supported Browsers: Safari 5+, Google Chrome 14+
+-------------------------------------------------------------------*/
+/*
+
+    A Pure CSS3 animated 3D Super Mario Retro Icon without images
+    Built on top of the "CSS 4D Framework" by Andreas Jacob
+
+    This is an ALPHA
+    Be aware of the inline-styles from hell and keep in mind this code is not in compliance with any CSS styleguide while in ALPHA
+
+*/
+body {
+  background-color: #3377D3;
+  color: #fff;
+  font: 100.1%/1.5 "Gill Sans MT", Calibri, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 0 100px;
+}
+h1 {
+  color: #fff;
+  font-size: 4em;
+  font-style: normal;
+  line-height: 1.1;
+  margin: 80px 0 0;
+}
+h2 {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.5em;
+  line-height: 1.5;
+  font-style: normal;
+}
+span.amp {
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+  font-size: 1.1em;
+  font-style: italic;
+}
+sup,
+small {
+  font-size: 0.8em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+a {
+  text-decoration: none;
+}
+a:link,
+a:visited {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  color: #eee;
+}
+#note a:link,
+#note a:visited {
+  color: #969BA2;
+  border-bottom: 1px solid #ddd;
+}
+a:focus,
+a:hover,
+a:active {
+  border-bottom: 1px solid #fff;
+  color: #fff;
+}
+#note a:focus,
+#note a:hover,
+#note a:active {
+  border-bottom: 1px solid #aaa;
+  color: #FE3000;
+}
+h2 a:focus,
+h2 a:hover,
+h2 a:active {
+  color: #FE3000;
+}
+header,
+article,
+footer {
+  margin: 0 auto;
+}
+#bottom,
+#top,
+.wrapper {
+  margin: 0 auto;
+}
+#bottom,
+#top {
+  width: 700px;
+}
+#content {
+  padding: 1em;
+  text-align: center;
+}
+#subtext {
+  line-height: 100px;
+  margin: 0 auto;
+}
+#note {
+  background-color: #EEF2F5;
+  bottom: 0;
+  color: #bbb;
+  height: 80px;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+#note .container {
+  margin: 0 auto;
+  padding: 28px 0;
+  width: 700px;
+}
+#note div.read {
+  float: left;
+}
+#note .right {
+  float: right;
+}
+/*------------------------------------------------------------------
+[CSS3 Stylesheet]
+
+Project: CSS 4D - CSS Animation Core
+Last change: 23. July 2014
+Designed by: Andreas Jacob, http://cordobo.com/
+Supported Browsers: Safari 5+, Google Chrome 14+
+-------------------------------------------------------------------*/
+/*
+
+    This is an ALPHA
+    Be aware of the inline-styles from hell and keep in mind this code is not in compliance with any CSS styleguide while in ALPHA
+
+*/
+.wrapper {
+  height: 224px;
+  padding: 30px;
+  position: relative;
+  width: 224px;
+}
+.wrapper:hover {
+  opacity: 0.6;
+  -moz-perspective: 200px;
+  -moz-perspective-origin: 100px 100px;
+  -moz-transition: all 1s ease-in-out;
+  -moz-transform-style: preserve-3d;
+  -webkit-perspective: 200;
+  -webkit-transition: all 1s ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  /*
+    perspective: 200;
+    perspective-origin: 150 150;
+    transition: all 1s ease-in-out;
+    transform-style: preserve-3d;
+    */
+
+}
+.wrapper:hover div > div {
+  border: 1px solid #ddd;
+}
+.wrapper p {
+  margin: auto 0;
+}
+#parent {
+  height: 224px;
+  margin: 0;
+  width: 224px;
+}
+#mario-retro-icon,
+#mario-retro-icon div {
+  position: absolute;
+}
+#mario-retro-icon {
+  height: 224px;
+  width: 224px;
+  -moz-animation: spin 6s infinite linear;
+  -moz-transform-origin: 50% 50% 0;
+  -moz-backface-visibility: visible;
+  -moz-transform-style: preserve-3d;
+  -webkit-animation: spin 6s infinite linear;
+  -webkit-transform-origin: 50% 50% 0;
+  -webkit-backface-visibility: visible;
+  -webkit-transform-style: preserve-3d;
+  animation: spin 6s infinite linear;
+  transform-origin: 50% 50% 0;
+  backface-visibility: visible;
+  transform-style: preserve-3d;
+}
+#mario-retro-icon:hover {
+  -moz-animation: hoverSpin 6s infinite linear;
+  -webkit-animation: hoverSpin 6s infinite linear;
+  animation: hoverSpin 6s infinite linear;
+}
+#mario-retro-icon div {
+  -moz-transform-style: preserve-3d;
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotateY(0);
+  }
+  to {
+    -moz-transform: rotateY(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotateY(0);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
+}
+@-ms-keyframes spin {
+  from {
+    -ms-transform: rotateY(0);
+  }
+  to {
+    -ms-transform: rotateY(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+@-moz-keyframes hoverSpin {
+  from {
+    -moz-transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  to {
+    -moz-transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+@-webkit-keyframes hoverSpin {
+  from {
+    -webkit-transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+  to {
+    -webkit-transform: rotateX(360deg) rotateY(360deg) rotateZ(720deg);
+  }
+}
+@-ms-keyframes hoverSpin {
+  from {
+    -ms-transform: rotateZ(0);
+  }
+  to {
+    -ms-transform: rotateZ(360deg);
+  }
+}
+@keyframes hoverSpin {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+/*
+@-moz-keyframes hoverSpin,
+@-webkit-keyframes hoverSpin,
+@-ms-keyframes hoverSpin,
+@keyframes hoverSpin {
+    from {
+        -moz-transform: rotateZ(0);
+        -webkit-transform: rotateZ(0);
+        -ms-transform: rotateZ(0);
+    }
+    to   {
+        -moz-transform: rotateZ(360deg);
+        -webkit-transform: rotateZ(360deg);
+        -ms-transform: rotateZ(360deg);
+    }
+}
+*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*
+
+CSS 4D Framework by Andreas Jacob
+Author URL: http://cordobo.com/
+
+V 0.3 (Alpha)
+07/23/2014
+
+
+A small CSS framework to create 3D animations with CSS
+
+*/
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*
+ * The place where the magic starts
+ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* This little sucker is the LOOP, culprit of all generated classes */
+/* Height = h */
+.h15 {
+  height: 210px;
+}
+.h14 {
+  height: 196px;
+}
+.h13 {
+  height: 182px;
+}
+.h12 {
+  height: 168px;
+}
+.h11 {
+  height: 154px;
+}
+.h10 {
+  height: 140px;
+}
+.h9 {
+  height: 126px;
+}
+.h8 {
+  height: 112px;
+}
+.h7 {
+  height: 98px;
+}
+.h6 {
+  height: 84px;
+}
+.h5 {
+  height: 70px;
+}
+.h4 {
+  height: 56px;
+}
+.h3 {
+  height: 42px;
+}
+.h2 {
+  height: 28px;
+}
+.h1 {
+  height: 14px;
+}
+.h0 {
+  height: 0px;
+}
+.h-1 {
+  height: -14px;
+}
+.h-2 {
+  height: -28px;
+}
+.h-3 {
+  height: -42px;
+}
+.h-4 {
+  height: -56px;
+}
+.h-5 {
+  height: -70px;
+}
+.h-6 {
+  height: -84px;
+}
+.h-7 {
+  height: -98px;
+}
+.h-8 {
+  height: -112px;
+}
+.h-9 {
+  height: -126px;
+}
+.h-10 {
+  height: -140px;
+}
+.h-11 {
+  height: -154px;
+}
+.h-12 {
+  height: -168px;
+}
+.h-13 {
+  height: -182px;
+}
+.h-14 {
+  height: -196px;
+}
+.h-15 {
+  height: -210px;
+}
+/* Left = l */
+.l15 {
+  left: 210px;
+}
+.l14 {
+  left: 196px;
+}
+.l13 {
+  left: 182px;
+}
+.l12 {
+  left: 168px;
+}
+.l11 {
+  left: 154px;
+}
+.l10 {
+  left: 140px;
+}
+.l9 {
+  left: 126px;
+}
+.l8 {
+  left: 112px;
+}
+.l7 {
+  left: 98px;
+}
+.l6 {
+  left: 84px;
+}
+.l5 {
+  left: 70px;
+}
+.l4 {
+  left: 56px;
+}
+.l3 {
+  left: 42px;
+}
+.l2 {
+  left: 28px;
+}
+.l1 {
+  left: 14px;
+}
+.l0 {
+  left: 0px;
+}
+.l-1 {
+  left: -14px;
+}
+.l-2 {
+  left: -28px;
+}
+.l-3 {
+  left: -42px;
+}
+.l-4 {
+  left: -56px;
+}
+.l-5 {
+  left: -70px;
+}
+.l-6 {
+  left: -84px;
+}
+.l-7 {
+  left: -98px;
+}
+.l-8 {
+  left: -112px;
+}
+.l-9 {
+  left: -126px;
+}
+.l-10 {
+  left: -140px;
+}
+.l-11 {
+  left: -154px;
+}
+.l-12 {
+  left: -168px;
+}
+.l-13 {
+  left: -182px;
+}
+.l-14 {
+  left: -196px;
+}
+.l-15 {
+  left: -210px;
+}
+/* top = t */
+.t15 {
+  top: 210px;
+}
+.t14 {
+  top: 196px;
+}
+.t13 {
+  top: 182px;
+}
+.t12 {
+  top: 168px;
+}
+.t11 {
+  top: 154px;
+}
+.t10 {
+  top: 140px;
+}
+.t9 {
+  top: 126px;
+}
+.t8 {
+  top: 112px;
+}
+.t7 {
+  top: 98px;
+}
+.t6 {
+  top: 84px;
+}
+.t5 {
+  top: 70px;
+}
+.t4 {
+  top: 56px;
+}
+.t3 {
+  top: 42px;
+}
+.t2 {
+  top: 28px;
+}
+.t1 {
+  top: 14px;
+}
+.t0 {
+  top: 0px;
+}
+.t-1 {
+  top: -14px;
+}
+.t-2 {
+  top: -28px;
+}
+.t-3 {
+  top: -42px;
+}
+.t-4 {
+  top: -56px;
+}
+.t-5 {
+  top: -70px;
+}
+.t-6 {
+  top: -84px;
+}
+.t-7 {
+  top: -98px;
+}
+.t-8 {
+  top: -112px;
+}
+.t-9 {
+  top: -126px;
+}
+.t-10 {
+  top: -140px;
+}
+.t-11 {
+  top: -154px;
+}
+.t-12 {
+  top: -168px;
+}
+.t-13 {
+  top: -182px;
+}
+.t-14 {
+  top: -196px;
+}
+.t-15 {
+  top: -210px;
+}
+/* Width = w */
+.w15 {
+  width: 210px;
+}
+.w14 {
+  width: 196px;
+}
+.w13 {
+  width: 182px;
+}
+.w12 {
+  width: 168px;
+}
+.w11 {
+  width: 154px;
+}
+.w10 {
+  width: 140px;
+}
+.w9 {
+  width: 126px;
+}
+.w8 {
+  width: 112px;
+}
+.w7 {
+  width: 98px;
+}
+.w6 {
+  width: 84px;
+}
+.w5 {
+  width: 70px;
+}
+.w4 {
+  width: 56px;
+}
+.w3 {
+  width: 42px;
+}
+.w2 {
+  width: 28px;
+}
+.w1 {
+  width: 14px;
+}
+.w0 {
+  width: 0px;
+}
+.w-1 {
+  width: -14px;
+}
+.w-2 {
+  width: -28px;
+}
+.w-3 {
+  width: -42px;
+}
+.w-4 {
+  width: -56px;
+}
+.w-5 {
+  width: -70px;
+}
+.w-6 {
+  width: -84px;
+}
+.w-7 {
+  width: -98px;
+}
+.w-8 {
+  width: -112px;
+}
+.w-9 {
+  width: -126px;
+}
+.w-10 {
+  width: -140px;
+}
+.w-11 {
+  width: -154px;
+}
+.w-12 {
+  width: -168px;
+}
+.w-13 {
+  width: -182px;
+}
+.w-14 {
+  width: -196px;
+}
+.w-15 {
+  width: -210px;
+}
+/* Translate X */
+.tx15 {
+  -moz-transform: translateX(210px);
+  -webkit-transform: translateX(210px);
+  transform: translateX(210px);
+}
+.tx14 {
+  -moz-transform: translateX(196px);
+  -webkit-transform: translateX(196px);
+  transform: translateX(196px);
+}
+.tx13 {
+  -moz-transform: translateX(182px);
+  -webkit-transform: translateX(182px);
+  transform: translateX(182px);
+}
+.tx12 {
+  -moz-transform: translateX(168px);
+  -webkit-transform: translateX(168px);
+  transform: translateX(168px);
+}
+.tx11 {
+  -moz-transform: translateX(154px);
+  -webkit-transform: translateX(154px);
+  transform: translateX(154px);
+}
+.tx10 {
+  -moz-transform: translateX(140px);
+  -webkit-transform: translateX(140px);
+  transform: translateX(140px);
+}
+.tx9 {
+  -moz-transform: translateX(126px);
+  -webkit-transform: translateX(126px);
+  transform: translateX(126px);
+}
+.tx8 {
+  -moz-transform: translateX(112px);
+  -webkit-transform: translateX(112px);
+  transform: translateX(112px);
+}
+.tx7 {
+  -moz-transform: translateX(98px);
+  -webkit-transform: translateX(98px);
+  transform: translateX(98px);
+}
+.tx6 {
+  -moz-transform: translateX(84px);
+  -webkit-transform: translateX(84px);
+  transform: translateX(84px);
+}
+.tx5 {
+  -moz-transform: translateX(70px);
+  -webkit-transform: translateX(70px);
+  transform: translateX(70px);
+}
+.tx4 {
+  -moz-transform: translateX(56px);
+  -webkit-transform: translateX(56px);
+  transform: translateX(56px);
+}
+.tx3 {
+  -moz-transform: translateX(42px);
+  -webkit-transform: translateX(42px);
+  transform: translateX(42px);
+}
+.tx2 {
+  -moz-transform: translateX(28px);
+  -webkit-transform: translateX(28px);
+  transform: translateX(28px);
+}
+.tx1 {
+  -moz-transform: translateX(14px);
+  -webkit-transform: translateX(14px);
+  transform: translateX(14px);
+}
+.tx0 {
+  -moz-transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+}
+.tx-1 {
+  -moz-transform: translateX(-14px);
+  -webkit-transform: translateX(-14px);
+  transform: translateX(-14px);
+}
+.tx-2 {
+  -moz-transform: translateX(-28px);
+  -webkit-transform: translateX(-28px);
+  transform: translateX(-28px);
+}
+.tx-3 {
+  -moz-transform: translateX(-42px);
+  -webkit-transform: translateX(-42px);
+  transform: translateX(-42px);
+}
+.tx-4 {
+  -moz-transform: translateX(-56px);
+  -webkit-transform: translateX(-56px);
+  transform: translateX(-56px);
+}
+.tx-5 {
+  -moz-transform: translateX(-70px);
+  -webkit-transform: translateX(-70px);
+  transform: translateX(-70px);
+}
+.tx-6 {
+  -moz-transform: translateX(-84px);
+  -webkit-transform: translateX(-84px);
+  transform: translateX(-84px);
+}
+.tx-7 {
+  -moz-transform: translateX(-98px);
+  -webkit-transform: translateX(-98px);
+  transform: translateX(-98px);
+}
+.tx-8 {
+  -moz-transform: translateX(-112px);
+  -webkit-transform: translateX(-112px);
+  transform: translateX(-112px);
+}
+.tx-9 {
+  -moz-transform: translateX(-126px);
+  -webkit-transform: translateX(-126px);
+  transform: translateX(-126px);
+}
+.tx-10 {
+  -moz-transform: translateX(-140px);
+  -webkit-transform: translateX(-140px);
+  transform: translateX(-140px);
+}
+.tx-11 {
+  -moz-transform: translateX(-154px);
+  -webkit-transform: translateX(-154px);
+  transform: translateX(-154px);
+}
+.tx-12 {
+  -moz-transform: translateX(-168px);
+  -webkit-transform: translateX(-168px);
+  transform: translateX(-168px);
+}
+.tx-13 {
+  -moz-transform: translateX(-182px);
+  -webkit-transform: translateX(-182px);
+  transform: translateX(-182px);
+}
+.tx-14 {
+  -moz-transform: translateX(-196px);
+  -webkit-transform: translateX(-196px);
+  transform: translateX(-196px);
+}
+.tx-15 {
+  -moz-transform: translateX(-210px);
+  -webkit-transform: translateX(-210px);
+  transform: translateX(-210px);
+}
+/* Translate Y */
+.ty15 {
+  -moz-transform: translateY(210px);
+  -webkit-transform: translateY(210px);
+  transform: translateY(210px);
+}
+.ty14 {
+  -moz-transform: translateY(196px);
+  -webkit-transform: translateY(196px);
+  transform: translateY(196px);
+}
+.ty13 {
+  -moz-transform: translateY(182px);
+  -webkit-transform: translateY(182px);
+  transform: translateY(182px);
+}
+.ty12 {
+  -moz-transform: translateY(168px);
+  -webkit-transform: translateY(168px);
+  transform: translateY(168px);
+}
+.ty11 {
+  -moz-transform: translateY(154px);
+  -webkit-transform: translateY(154px);
+  transform: translateY(154px);
+}
+.ty10 {
+  -moz-transform: translateY(140px);
+  -webkit-transform: translateY(140px);
+  transform: translateY(140px);
+}
+.ty9 {
+  -moz-transform: translateY(126px);
+  -webkit-transform: translateY(126px);
+  transform: translateY(126px);
+}
+.ty8 {
+  -moz-transform: translateY(112px);
+  -webkit-transform: translateY(112px);
+  transform: translateY(112px);
+}
+.ty7 {
+  -moz-transform: translateY(98px);
+  -webkit-transform: translateY(98px);
+  transform: translateY(98px);
+}
+.ty6 {
+  -moz-transform: translateY(84px);
+  -webkit-transform: translateY(84px);
+  transform: translateY(84px);
+}
+.ty5 {
+  -moz-transform: translateY(70px);
+  -webkit-transform: translateY(70px);
+  transform: translateY(70px);
+}
+.ty4 {
+  -moz-transform: translateY(56px);
+  -webkit-transform: translateY(56px);
+  transform: translateY(56px);
+}
+.ty3 {
+  -moz-transform: translateY(42px);
+  -webkit-transform: translateY(42px);
+  transform: translateY(42px);
+}
+.ty2 {
+  -moz-transform: translateY(28px);
+  -webkit-transform: translateY(28px);
+  transform: translateY(28px);
+}
+.ty1 {
+  -moz-transform: translateY(14px);
+  -webkit-transform: translateY(14px);
+  transform: translateY(14px);
+}
+.ty0 {
+  -moz-transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+}
+.ty-1 {
+  -moz-transform: translateY(-14px);
+  -webkit-transform: translateY(-14px);
+  transform: translateY(-14px);
+}
+.ty-2 {
+  -moz-transform: translateY(-28px);
+  -webkit-transform: translateY(-28px);
+  transform: translateY(-28px);
+}
+.ty-3 {
+  -moz-transform: translateY(-42px);
+  -webkit-transform: translateY(-42px);
+  transform: translateY(-42px);
+}
+.ty-4 {
+  -moz-transform: translateY(-56px);
+  -webkit-transform: translateY(-56px);
+  transform: translateY(-56px);
+}
+.ty-5 {
+  -moz-transform: translateY(-70px);
+  -webkit-transform: translateY(-70px);
+  transform: translateY(-70px);
+}
+.ty-6 {
+  -moz-transform: translateY(-84px);
+  -webkit-transform: translateY(-84px);
+  transform: translateY(-84px);
+}
+.ty-7 {
+  -moz-transform: translateY(-98px);
+  -webkit-transform: translateY(-98px);
+  transform: translateY(-98px);
+}
+.ty-8 {
+  -moz-transform: translateY(-112px);
+  -webkit-transform: translateY(-112px);
+  transform: translateY(-112px);
+}
+.ty-9 {
+  -moz-transform: translateY(-126px);
+  -webkit-transform: translateY(-126px);
+  transform: translateY(-126px);
+}
+.ty-10 {
+  -moz-transform: translateY(-140px);
+  -webkit-transform: translateY(-140px);
+  transform: translateY(-140px);
+}
+.ty-11 {
+  -moz-transform: translateY(-154px);
+  -webkit-transform: translateY(-154px);
+  transform: translateY(-154px);
+}
+.ty-12 {
+  -moz-transform: translateY(-168px);
+  -webkit-transform: translateY(-168px);
+  transform: translateY(-168px);
+}
+.ty-13 {
+  -moz-transform: translateY(-182px);
+  -webkit-transform: translateY(-182px);
+  transform: translateY(-182px);
+}
+.ty-14 {
+  -moz-transform: translateY(-196px);
+  -webkit-transform: translateY(-196px);
+  transform: translateY(-196px);
+}
+.ty-15 {
+  -moz-transform: translateY(-210px);
+  -webkit-transform: translateY(-210px);
+  transform: translateY(-210px);
+}
+/* Translate Z */
+.tz15 {
+  -moz-transform: translateZ(210px);
+  -webkit-transform: translateZ(210px);
+  transform: translateZ(210px);
+}
+.tz14 {
+  -moz-transform: translateZ(196px);
+  -webkit-transform: translateZ(196px);
+  transform: translateZ(196px);
+}
+.tz13 {
+  -moz-transform: translateZ(182px);
+  -webkit-transform: translateZ(182px);
+  transform: translateZ(182px);
+}
+.tz12 {
+  -moz-transform: translateZ(168px);
+  -webkit-transform: translateZ(168px);
+  transform: translateZ(168px);
+}
+.tz11 {
+  -moz-transform: translateZ(154px);
+  -webkit-transform: translateZ(154px);
+  transform: translateZ(154px);
+}
+.tz10 {
+  -moz-transform: translateZ(140px);
+  -webkit-transform: translateZ(140px);
+  transform: translateZ(140px);
+}
+.tz9 {
+  -moz-transform: translateZ(126px);
+  -webkit-transform: translateZ(126px);
+  transform: translateZ(126px);
+}
+.tz8 {
+  -moz-transform: translateZ(112px);
+  -webkit-transform: translateZ(112px);
+  transform: translateZ(112px);
+}
+.tz7 {
+  -moz-transform: translateZ(98px);
+  -webkit-transform: translateZ(98px);
+  transform: translateZ(98px);
+}
+.tz6 {
+  -moz-transform: translateZ(84px);
+  -webkit-transform: translateZ(84px);
+  transform: translateZ(84px);
+}
+.tz5 {
+  -moz-transform: translateZ(70px);
+  -webkit-transform: translateZ(70px);
+  transform: translateZ(70px);
+}
+.tz4 {
+  -moz-transform: translateZ(56px);
+  -webkit-transform: translateZ(56px);
+  transform: translateZ(56px);
+}
+.tz3 {
+  -moz-transform: translateZ(42px);
+  -webkit-transform: translateZ(42px);
+  transform: translateZ(42px);
+}
+.tz2 {
+  -moz-transform: translateZ(28px);
+  -webkit-transform: translateZ(28px);
+  transform: translateZ(28px);
+}
+.tz1 {
+  -moz-transform: translateZ(14px);
+  -webkit-transform: translateZ(14px);
+  transform: translateZ(14px);
+}
+.tz0 {
+  -moz-transform: translateZ(0px);
+  -webkit-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
+.tz-1 {
+  -moz-transform: translateZ(-14px);
+  -webkit-transform: translateZ(-14px);
+  transform: translateZ(-14px);
+}
+.tz-2 {
+  -moz-transform: translateZ(-28px);
+  -webkit-transform: translateZ(-28px);
+  transform: translateZ(-28px);
+}
+.tz-3 {
+  -moz-transform: translateZ(-42px);
+  -webkit-transform: translateZ(-42px);
+  transform: translateZ(-42px);
+}
+.tz-4 {
+  -moz-transform: translateZ(-56px);
+  -webkit-transform: translateZ(-56px);
+  transform: translateZ(-56px);
+}
+.tz-5 {
+  -moz-transform: translateZ(-70px);
+  -webkit-transform: translateZ(-70px);
+  transform: translateZ(-70px);
+}
+.tz-6 {
+  -moz-transform: translateZ(-84px);
+  -webkit-transform: translateZ(-84px);
+  transform: translateZ(-84px);
+}
+.tz-7 {
+  -moz-transform: translateZ(-98px);
+  -webkit-transform: translateZ(-98px);
+  transform: translateZ(-98px);
+}
+.tz-8 {
+  -moz-transform: translateZ(-112px);
+  -webkit-transform: translateZ(-112px);
+  transform: translateZ(-112px);
+}
+.tz-9 {
+  -moz-transform: translateZ(-126px);
+  -webkit-transform: translateZ(-126px);
+  transform: translateZ(-126px);
+}
+.tz-10 {
+  -moz-transform: translateZ(-140px);
+  -webkit-transform: translateZ(-140px);
+  transform: translateZ(-140px);
+}
+.tz-11 {
+  -moz-transform: translateZ(-154px);
+  -webkit-transform: translateZ(-154px);
+  transform: translateZ(-154px);
+}
+.tz-12 {
+  -moz-transform: translateZ(-168px);
+  -webkit-transform: translateZ(-168px);
+  transform: translateZ(-168px);
+}
+.tz-13 {
+  -moz-transform: translateZ(-182px);
+  -webkit-transform: translateZ(-182px);
+  transform: translateZ(-182px);
+}
+.tz-14 {
+  -moz-transform: translateZ(-196px);
+  -webkit-transform: translateZ(-196px);
+  transform: translateZ(-196px);
+}
+.tz-15 {
+  -moz-transform: translateZ(-210px);
+  -webkit-transform: translateZ(-210px);
+  transform: translateZ(-210px);
+}
+.rot0 {
+  -moz-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+.rot90 {
+  -moz-transform: rotateY(90deg);
+  -webkit-transform: rotateY(90deg);
+  transform: rotateY(90deg);
+}
+.rot-90 {
+  -moz-transform: rotateY(-90deg);
+  -webkit-transform: rotateY(-90deg);
+  transform: rotateY(-90deg);
+}
+.rot180 {
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/* Orange, Skin color, Green, DEBUG (yellow, pink) */
+.o {
+  background-color: #fe3000;
+}
+.s {
+  background-color: #feb644;
+}
+.g {
+  background-color: #a48b00;
+}
+.y {
+  background-color: yellow;
+}
+/*  DEBUG */
+.pink {
+  background-color: pink;
+}
+/*  DEBUG */
