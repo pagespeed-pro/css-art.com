@@ -1,0 +1,571 @@
+body .container {
+  max-width: 600px;
+  padding: 0;
+  margin: 0 auto;
+  min-height: 500px;
+  position: relative;
+}
+body .container h1, body .container h2 {
+  font-family: "Chango", helvetica, arial, sans-serif;
+  margin: 30px 0px;
+  font-size: 46px;
+  letter-spacing: -2px;
+  color: #F86CB5;
+  line-height: 60px;
+  text-align: center;
+  z-index: 30;
+  position: relative;
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+}
+body .container :before, body .container :after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+}
+
+.girls-container {
+  z-index: 10;
+}
+
+.ppgirl {
+  height: 230px;
+  width: 40px;
+  margin: 50px auto 0 auto;
+  position: absolute;
+  width: 246px;
+}
+.ppgirl * {
+  position: absolute;
+}
+.ppgirl .head {
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 180px;
+  background-color: #FCDDC9;
+  border: 8px solid #000000;
+  overflow: hidden;
+  z-index: 30;
+}
+.ppgirl .head .eye {
+  top: 20px;
+  width: 110px;
+  height: 118px;
+  border: 2px solid #000000;
+  background: #FFFFFF;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.ppgirl .head .eye.left {
+  left: -14px;
+}
+.ppgirl .head .eye.right {
+  right: -14px;
+}
+.ppgirl .head .eye .pupil {
+  -moz-border-radius: inherit;
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
+  height: 94%;
+  width: 96%;
+}
+.ppgirl .head .eye .pupil:before {
+  -moz-border-radius: inherit;
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
+  z-index: 5;
+  height: 76%;
+  width: 80%;
+  background: #000000;
+}
+.ppgirl .head .eye .pupil:after {
+  -moz-border-radius: inherit;
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
+  z-index: 10;
+  height: 26%;
+  width: 30%;
+  background: white;
+}
+.ppgirl .head .mouth {
+  top: 78%;
+  left: calc(50% - 15px);
+  -moz-border-radius: 0 0 50% 50%/10% 10% 90% 90%;
+  -webkit-border-radius: 0;
+  border-radius: 0 0 50% 50%/10% 10% 90% 90%;
+  height: 20px;
+  width: 30px;
+  border: 2px solid #000000;
+  border-top-color: transparent;
+}
+.ppgirl .body {
+  top: 190px;
+  left: calc(50% - (40px / 2) - 5px);
+  height: 50px;
+  width: 40px;
+  -moz-perspective: 60px;
+  -webkit-perspective: 60px;
+  perspective: 60px;
+  z-index: 10;
+}
+.ppgirl .body .dress {
+  height: 100%;
+  width: 100%;
+  border: 5px solid #000000;
+  -moz-transform: rotateX(-10deg) skewY(180deg);
+  -ms-transform: rotateX(-10deg) skewY(180deg);
+  -webkit-transform: rotateX(-10deg) skewY(180deg);
+  transform: rotateX(-10deg) skewY(180deg);
+  transform-origin: 0% 0%;
+}
+.ppgirl .body .dress:after {
+  top: 10px;
+  height: 40%;
+  width: 100%;
+  background: #000000;
+}
+.ppgirl .arm {
+  bottom: -2px;
+  height: 35px;
+  width: 30px;
+  border: 5px solid #000000;
+  background: #FCDDC9;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  z-index: 5;
+}
+.ppgirl .arm.left {
+  left: 85px;
+}
+.ppgirl .arm.right {
+  right: 85px;
+}
+.ppgirl .leg {
+  bottom: -50px;
+  height: 40px;
+  width: 14px;
+  background: #FFFFFF;
+  -moz-border-radius: 0 0 50% 50%/0 0 30% 30%;
+  -webkit-border-radius: 0;
+  border-radius: 0 0 50% 50%/0 0 30% 30%;
+  border: 5px solid #000000;
+  z-index: 5;
+  overflow: hidden;
+}
+.ppgirl .leg:before {
+  bottom: -10px;
+  left: -30%;
+  height: 40px;
+  width: 160%;
+  border-bottom: 20px solid #000000;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.ppgirl .leg:after {
+  bottom: 15px;
+  width: 100%;
+  border-bottom: 2px solid #000000;
+}
+.ppgirl .foot.left {
+  left: 20px;
+}
+.ppgirl .foot.right {
+  right: 20px;
+}
+
+.blossom {
+  top: 50px;
+  left: calc(50% - (246px / 2));
+}
+.blossom .knot {
+  top: -20px;
+  left: calc(50% - 15px);
+  width: 30px;
+  height: 30px;
+  border-top: 5px solid #000000;
+  background: #D82E39;
+  -moz-border-radius: 50% 50% 0 0/10% 10% 0 0;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 50% 0 0/10% 10% 0 0;
+}
+.blossom .bow {
+  width: 75px;
+  top: -110px;
+}
+.blossom .bow.left {
+  left: 12px;
+  -moz-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+.blossom .bow.right {
+  right: 12px;
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+.blossom .head {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.blossom .head .hair {
+  width: 246px;
+  top: -12px;
+  left: calc(50% - (246px / 2));
+  z-index: 30;
+}
+.blossom .head .eye .pupil {
+  background: #EC6B6F;
+}
+.blossom .head .eye.left .pupil {
+  top: 3%;
+  left: 14%;
+}
+.blossom .head .eye.left .pupil:before {
+  top: 8%;
+  left: 16%;
+}
+.blossom .head .eye.left .pupil:after {
+  top: 22%;
+  right: 16%;
+}
+.blossom .head .eye.right .pupil {
+  top: 3%;
+  left: 4%;
+}
+.blossom .head .eye.right .pupil:before {
+  top: 8%;
+  left: 14%;
+}
+.blossom .head .eye.right .pupil:after {
+  top: 22%;
+  right: 20%;
+}
+.blossom .body {
+  -moz-perspective-origin: 50% 50%;
+  -webkit-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+}
+.blossom .body .dress {
+  background: #EC6B6F;
+}
+.blossom .leg.left {
+  left: 100px;
+}
+.blossom .leg.right {
+  right: 102px;
+}
+.blossom .hair {
+  bottom: -60px;
+  left: calc(50% - 75px - 2px);
+  height: 150px;
+  width: 150px;
+  z-index: 4;
+}
+
+.buttercup {
+  top: 55px;
+  right: 0%;
+}
+.buttercup .head {
+  -moz-border-radius: 55% 45% 55% 40%/55% 45% 55% 45%;
+  -webkit-border-radius: 55%;
+  border-radius: 55% 45% 55% 40%/55% 45% 55% 45%;
+}
+.buttercup .head .fringe {
+  width: 240px;
+  left: -10px;
+  top: -10px;
+  height: 100px;
+  border-top: 60px solid #000000;
+  -moz-border-radius: 50% 50% 0 0/60% 60% 40% 40%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 50% 0 0/60% 60% 40% 40%;
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  z-index: 40;
+}
+.buttercup .head .fringe .gap {
+  height: 50px;
+  width: 46px;
+  left: 123px;
+  top: -42px;
+  z-index: 50;
+  -moz-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  -webkit-transform: rotate(8deg);
+  transform: rotate(8deg);
+}
+.buttercup .head .eye .pupil {
+  background: #46B82F;
+}
+.buttercup .head .eye.right {
+  top: 14px;
+  right: -10%;
+  -moz-transform: scaleX(0.8);
+  -ms-transform: scaleX(0.8);
+  -webkit-transform: scaleX(0.8);
+  transform: scaleX(0.8);
+}
+.buttercup .head .eye.right .pupil {
+  top: 3%;
+  left: 3%;
+}
+.buttercup .head .eye.right .pupil:before {
+  top: 10%;
+  left: 14%;
+}
+.buttercup .head .eye.right .pupil:after {
+  top: 26%;
+  right: 22%;
+}
+.buttercup .head .eye.left {
+  height: 130px;
+  width: 126px;
+  top: 32px;
+  left: -2%;
+}
+.buttercup .head .eye.left .pupil {
+  top: 3%;
+  left: 6%;
+}
+.buttercup .head .eye.left .pupil:before {
+  top: 4%;
+  left: 20%;
+}
+.buttercup .head .eye.left .pupil:after {
+  width: 24%;
+  top: 16%;
+  right: 10%;
+}
+.buttercup .head .mouth {
+  -moz-transform: scaleY(0.7) skewX(-20deg);
+  -ms-transform: scaleY(0.7) skewX(-20deg);
+  -webkit-transform: scaleY(0.7) skewX(-20deg);
+  transform: scaleY(0.7) skewX(-20deg);
+  right: 34%;
+  left: auto;
+}
+.buttercup .hair {
+  top: -20px;
+  left: 75px;
+  width: 180px;
+  height: 110px;
+  border-bottom: 80px solid #000000;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+.buttercup .body {
+  -moz-perspective-origin: 0% 50%;
+  -webkit-perspective-origin: 0% 50%;
+  perspective-origin: 0% 50%;
+}
+.buttercup .body .dress {
+  background: #46B82F;
+}
+.buttercup .leg.left {
+  left: 98px;
+}
+.buttercup .leg.right {
+  right: 105px;
+}
+
+.bubbles {
+  top: 55px;
+  left: 0%;
+}
+.bubbles .pony-tail {
+  top: 10px;
+  left: -20px;
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+.bubbles .head {
+  -moz-border-radius: 45% 55% 45% 50%/45% 55% 45% 55%;
+  -webkit-border-radius: 45%;
+  border-radius: 45% 55% 45% 50%/45% 55% 45% 55%;
+}
+.bubbles .head .hair {
+  top: -55px;
+  left: -70px;
+  height: 100px;
+  width: 180px;
+  background: #FDED62;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  border: 3px solid #000000;
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  z-index: 40;
+}
+.bubbles .head .hair:after {
+  top: 40px;
+  right: -140px;
+  -moz-border-radius: inherit;
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  -moz-transform: rotate(28deg);
+  -ms-transform: rotate(28deg);
+  -webkit-transform: rotate(28deg);
+  transform: rotate(28deg);
+  background: inherit;
+  border: 3px solid #000000;
+  border-left-color: transparent;
+  z-index: 40;
+}
+.bubbles .head .eye .pupil {
+  background: #38ACE5;
+}
+.bubbles .head .eye.left {
+  top: 14px;
+  left: -10%;
+  -moz-transform: scaleX(0.8);
+  -ms-transform: scaleX(0.8);
+  -webkit-transform: scaleX(0.8);
+  transform: scaleX(0.8);
+}
+.bubbles .head .eye.left .pupil {
+  top: 3%;
+  left: 12%;
+}
+.bubbles .head .eye.left .pupil:before {
+  top: 6%;
+  left: 22%;
+}
+.bubbles .head .eye.left .pupil:after {
+  top: 14%;
+  right: 15%;
+}
+.bubbles .head .eye.right {
+  height: 130px;
+  width: 126px;
+  top: 32px;
+  right: -2%;
+}
+.bubbles .head .eye.right .pupil {
+  top: 3%;
+  left: 8%;
+}
+.bubbles .head .eye.right .pupil:before {
+  top: 8%;
+  left: 10%;
+}
+.bubbles .head .eye.right .pupil:after {
+  width: 28%;
+  top: 22%;
+  right: 36%;
+}
+.bubbles .head .mouth {
+  -moz-transform: scaleY(0.7) skewX(20deg);
+  -ms-transform: scaleY(0.7) skewX(20deg);
+  -webkit-transform: scaleY(0.7) skewX(20deg);
+  transform: scaleY(0.7) skewX(20deg);
+  left: 34%;
+}
+.bubbles .body {
+  -moz-perspective-origin: 100% 50%;
+  -webkit-perspective-origin: 100% 50%;
+  perspective-origin: 100% 50%;
+}
+.bubbles .body .dress {
+  background: #38ACE5;
+}
+.bubbles .leg.left {
+  left: 104px;
+}
+.bubbles .leg.right {
+  right: 100px;
+}
+
+.shadow-container {
+  position: relative;
+  height: 400px;
+  width: 80%;
+  margin-top: 70px;
+  margin-left: 10%;
+  -moz-perspective: 30px;
+  -webkit-perspective: 30px;
+  perspective: 30px;
+}
+.shadow-container.bubbles {
+  -moz-perspective-origin: 80% 50%;
+  -webkit-perspective-origin: 80% 50%;
+  perspective-origin: 80% 50%;
+}
+.shadow-container.bubbles > div {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFA3D0F1', endColorstr='#FFA3D0F1');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2EzZDBmMSIvPjxzdG9wIG9mZnNldD0iMjAlIiBzdG9wLWNvbG9yPSIjYTNkMGYxIiBzdG9wLW9wYWNpdHk9IjAuMiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2EzZDBmMSIgc3RvcC1vcGFjaXR5PSIwLjEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #a3d0f1), color-stop(20%, rgba(163, 208, 241, 0.2)), color-stop(100%, rgba(163, 208, 241, 0.1)));
+  background-image: -moz-linear-gradient(top, #a3d0f1 0%, rgba(163, 208, 241, 0.2) 20%, rgba(163, 208, 241, 0.1) 100%);
+  background-image: -webkit-linear-gradient(top, #a3d0f1 0%, rgba(163, 208, 241, 0.2) 20%, rgba(163, 208, 241, 0.1) 100%);
+  background-image: linear-gradient(to bottom, #a3d0f1 0%, rgba(163, 208, 241, 0.2) 20%, rgba(163, 208, 241, 0.1) 100%);
+}
+.shadow-container.blossom {
+  -moz-perspective-origin: 50% 50%;
+  -webkit-perspective-origin: 50% 50%;
+  perspective-origin: 50% 50%;
+  -moz-perspective: 80px;
+  -webkit-perspective: 80px;
+  perspective: 80px;
+}
+.shadow-container.blossom > div {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFF6A89E', endColorstr='#FFF6A89E');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y2YTg5ZSIvPjxzdG9wIG9mZnNldD0iMzAlIiBzdG9wLWNvbG9yPSIjZjZhODllIiBzdG9wLW9wYWNpdHk9IjAuMiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2Y2YTg5ZSIgc3RvcC1vcGFjaXR5PSIwLjEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f6a89e), color-stop(30%, rgba(246, 168, 158, 0.2)), color-stop(100%, rgba(246, 168, 158, 0.1)));
+  background-image: -moz-linear-gradient(top, #f6a89e 0%, rgba(246, 168, 158, 0.2) 30%, rgba(246, 168, 158, 0.1) 100%);
+  background-image: -webkit-linear-gradient(top, #f6a89e 0%, rgba(246, 168, 158, 0.2) 30%, rgba(246, 168, 158, 0.1) 100%);
+  background-image: linear-gradient(to bottom, #f6a89e 0%, rgba(246, 168, 158, 0.2) 30%, rgba(246, 168, 158, 0.1) 100%);
+}
+.shadow-container.buttercup {
+  -moz-perspective-origin: 20% 50%;
+  -webkit-perspective-origin: 20% 50%;
+  perspective-origin: 20% 50%;
+}
+.shadow-container.buttercup > div {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF9CD07E', endColorstr='#FF9CD07E');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzljZDA3ZSIvPjxzdG9wIG9mZnNldD0iMjAlIiBzdG9wLWNvbG9yPSIjOWNkMDdlIiBzdG9wLW9wYWNpdHk9IjAuMiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzljZDA3ZSIgc3RvcC1vcGFjaXR5PSIwLjEiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #9cd07e), color-stop(20%, rgba(156, 208, 126, 0.2)), color-stop(100%, rgba(156, 208, 126, 0.1)));
+  background-image: -moz-linear-gradient(top, #9cd07e 0%, rgba(156, 208, 126, 0.2) 20%, rgba(156, 208, 126, 0.1) 100%);
+  background-image: -webkit-linear-gradient(top, #9cd07e 0%, rgba(156, 208, 126, 0.2) 20%, rgba(156, 208, 126, 0.1) 100%);
+  background-image: linear-gradient(to bottom, #9cd07e 0%, rgba(156, 208, 126, 0.2) 20%, rgba(156, 208, 126, 0.1) 100%);
+}
+.shadow-container > div {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 400px;
+  z-index: -5;
+  -moz-transform: rotateX(-16deg) skewY(180deg);
+  -ms-transform: rotateX(-16deg) skewY(180deg);
+  -webkit-transform: rotateX(-16deg) skewY(180deg);
+  transform: rotateX(-16deg) skewY(180deg);
+  transform-origin: 0% 0%;
+}

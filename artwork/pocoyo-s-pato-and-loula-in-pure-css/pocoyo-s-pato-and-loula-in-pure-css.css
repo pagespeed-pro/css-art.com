@@ -1,0 +1,640 @@
+body {
+  background-color: #31a7c3;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFFFFF', endColorstr='#FFCDE8FB');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IiIgcj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIxMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjZGU4ZmIiLz48L3JhZGlhbEdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -moz-radial-gradient(center, ellipse cover, #ffffff 10%, #cde8fb 100%);
+  background-image: -webkit-radial-gradient(center, ellipse cover, #ffffff 10%, #cde8fb 100%);
+  background-image: radial-gradient(ellipse cover at center, #ffffff 10%, #cde8fb 100%);
+}
+body .container {
+  max-width: 550px;
+  padding: 0;
+  margin: 0 auto;
+  min-height: 450px;
+}
+body .container :before, body .container :after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+}
+
+.character-container {
+  position: absolute;
+  width: 400px;
+  height: 260px;
+  top: calc(48% - 130px);
+  left: calc(50% - 200px);
+  z-index: 10;
+}
+
+.pato {
+  left: 60%;
+  height: 58px;
+  width: 56px;
+  margin: 145px auto 0 auto;
+  position: absolute;
+}
+.pato * {
+  position: absolute;
+}
+.pato .hat {
+  top: -130px;
+  right: -10px;
+  height: 24px;
+  width: 29px;
+  z-index: -1;
+  background: #40993F;
+  -moz-border-radius: 50% 50% 50% 50%/30% 30% 2% 2%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 50% 50% 50%/30% 30% 2% 2%;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.pato .hat:before {
+  left: -7px;
+  bottom: -14px;
+  height: 34px;
+  width: 46px;
+  background: #111111;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: inset 5px 11px 10px 0 #40993f;
+  -webkit-box-shadow: inset 5px 11px 10px 0 #40993f;
+  box-shadow: inset 5px 11px 10px 0 #40993f;
+}
+.pato .head {
+  top: -120px;
+  left: 9px;
+  height: 130px;
+  width: 42px;
+  background: #FACB00;
+  z-index: 2;
+  -moz-border-radius: 50% 50% 10% 10%/20% 20% 80% 80%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 50% 10% 10%/20% 20% 80% 80%;
+  -moz-transform-origin: bottom center;
+  -ms-transform-origin: bottom center;
+  -webkit-transform-origin: bottom center;
+  transform-origin: bottom center;
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
+  -moz-box-shadow: inset 0 -4px 15px -10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 -4px 15px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -4px 15px -10px rgba(0, 0, 0, 0.5);
+}
+.pato .head:after {
+  bottom: 15px;
+  right: 12px;
+  height: 30%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.pato .head .eye {
+  top: 10px;
+  width: 30px;
+  height: 48px;
+  background: #F4F4F4;
+  z-index: 2;
+}
+.pato .head .eye.left {
+  left: -8px;
+  -moz-border-radius: 50% 45% 40% 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 45% 40% 50%;
+  -moz-box-shadow: 1px 6px 5px -5px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: 1px 6px 5px -5px rgba(0, 0, 0, 0.8);
+  box-shadow: 1px 6px 5px -5px rgba(0, 0, 0, 0.8);
+}
+.pato .head .eye.left:before {
+  right: 5px;
+}
+.pato .head .eye.right {
+  top: 13px;
+  height: 44px;
+  right: -8px;
+  -moz-border-radius: 45% 50% 50% 40%;
+  -webkit-border-radius: 45%;
+  border-radius: 45% 50% 50% 40%;
+  -moz-box-shadow: -1px 6px 5px -5px rgba(0, 0, 0, 0.8);
+  -webkit-box-shadow: -1px 6px 5px -5px rgba(0, 0, 0, 0.8);
+  box-shadow: -1px 6px 5px -5px rgba(0, 0, 0, 0.8);
+}
+.pato .head .eye.right:before {
+  left: 5px;
+}
+.pato .head .eye:before {
+  top: 32%;
+  height: 42%;
+  width: 38%;
+  background: black;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.pato .head .eye:after {
+  width: 100%;
+  height: 100%;
+  -moz-border-radius: inherit;
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
+  -moz-box-shadow: inset 0 -3px 6px -3px rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: inset 0 -3px 6px -3px rgba(0, 0, 0, 0.9);
+  box-shadow: inset 0 -3px 6px -3px rgba(0, 0, 0, 0.9);
+}
+.pato .head .beak {
+  top: 58px;
+  left: -12px;
+  height: 20px;
+  width: 120px;
+  background: #EC6C2B;
+  -moz-border-radius: 30% 50% 40% 60%/30% 50% 50% 80%;
+  -webkit-border-radius: 30%;
+  border-radius: 30% 50% 40% 60%/30% 50% 50% 80%;
+  -moz-box-shadow: inset 5px -8px 15px -10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 5px -8px 15px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 5px -8px 15px -10px rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+.pato .head .beak:before {
+  top: 5px;
+  right: 0%;
+  width: 60%;
+  height: 140%;
+  background: #EC6C2B;
+  -moz-border-radius: 1% 20% 60% 40%/1% 20% 80% 80%;
+  -webkit-border-radius: 1%;
+  border-radius: 1% 20% 60% 40%/1% 20% 80% 80%;
+  -moz-box-shadow: inset 0 -8px 15px -8px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 -8px 15px -8px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -8px 15px -8px rgba(0, 0, 0, 0.5);
+}
+.pato .head .beak:after {
+  top: 11px;
+  left: 8%;
+  width: 54%;
+  height: 70%;
+  background: #EC6C2B;
+  -moz-transform: rotate(17deg);
+  -ms-transform: rotate(17deg);
+  -webkit-transform: rotate(17deg);
+  transform: rotate(17deg);
+  -moz-border-radius: 20% 1% 50% 50%/20% 1% 20% 20%;
+  -webkit-border-radius: 20%;
+  border-radius: 20% 1% 50% 50%/20% 1% 20% 20%;
+  -moz-box-shadow: inset 0 -8px 15px -10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 -8px 15px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -8px 15px -10px rgba(0, 0, 0, 0.5);
+}
+.pato .body {
+  height: 58px;
+  width: 56px;
+  background: #FACB00;
+  z-index: 1;
+  -moz-border-radius: 50% 50% 40% 50%/55% 50% 45% 45%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 50% 40% 50%/55% 50% 45% 45%;
+  -moz-box-shadow: inset 0 -5px 15px -5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 -5px 15px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -5px 15px -5px rgba(0, 0, 0, 0.5);
+}
+.pato .wing {
+  top: 3px;
+  height: 30px;
+  width: 15px;
+  background: #FACB00;
+  z-index: -1;
+}
+.pato .wing.left {
+  left: -10px;
+  -moz-transform: rotate(105deg);
+  -ms-transform: rotate(105deg);
+  -webkit-transform: rotate(105deg);
+  transform: rotate(105deg);
+  -moz-border-radius: 5% 20% 90% 2%/5% 5% 98% 2%;
+  -webkit-border-radius: 5%;
+  border-radius: 5% 20% 90% 2%/5% 5% 98% 2%;
+  -moz-box-shadow: inset -3px 0px 10px -5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset -3px 0px 10px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset -3px 0px 10px -5px rgba(0, 0, 0, 0.5);
+}
+.pato .wing.right {
+  right: -10px;
+  -moz-transform: rotate(-105deg);
+  -ms-transform: rotate(-105deg);
+  -webkit-transform: rotate(-105deg);
+  transform: rotate(-105deg);
+  -moz-border-radius: 20% 5% 2% 90%/5% 5% 2% 98%;
+  -webkit-border-radius: 20%;
+  border-radius: 20% 5% 2% 90%/5% 5% 2% 98%;
+  -moz-box-shadow: inset 3px 0px 10px -5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 3px 0px 10px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 3px 0px 10px -5px rgba(0, 0, 0, 0.5);
+}
+.pato .leg {
+  bottom: -25px;
+  height: 35px;
+  width: 11px;
+  background: #EC6C2B;
+  -moz-box-shadow: inset 0 6px 8px -2px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 6px 8px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 6px 8px -2px rgba(0, 0, 0, 0.5);
+}
+.pato .leg.left {
+  left: 11px;
+}
+.pato .leg.left .foot {
+  right: -10px;
+  height: 24px;
+  bottom: -18px;
+  width: 60px;
+  -moz-transform: rotate(-20deg) skewX(-20deg);
+  -ms-transform: rotate(-20deg) skewX(-20deg);
+  -webkit-transform: rotate(-20deg) skewX(-20deg);
+  transform: rotate(-20deg) skewX(-20deg);
+  -moz-border-radius: 20% 80% 30% 70%/40% 80% 20% 55%;
+  -webkit-border-radius: 20%;
+  border-radius: 20% 80% 30% 70%/40% 80% 20% 55%;
+}
+.pato .leg.right {
+  right: 11px;
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+}
+.pato .leg.right .foot {
+  left: -12px;
+  bottom: -17px;
+  height: 22px;
+  width: 70px;
+  -moz-transform: rotate(20deg) skewX(20deg);
+  -ms-transform: rotate(20deg) skewX(20deg);
+  -webkit-transform: rotate(20deg) skewX(20deg);
+  transform: rotate(20deg) skewX(20deg);
+  -moz-border-radius: 80% 20% 50% 20%/85% 40% 45% 10%;
+  -webkit-border-radius: 80%;
+  border-radius: 80% 20% 50% 20%/85% 40% 45% 10%;
+}
+.pato .leg .foot {
+  background: #EC6C2B;
+  -moz-box-shadow: inset 0 -3px 15px -5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 -3px 15px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -3px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+.loula {
+  position: absolute;
+  left: 10%;
+  height: 82px;
+  width: 116px;
+  bottom: 60px;
+}
+.loula * {
+  position: absolute;
+}
+.loula .head {
+  top: -27px;
+  right: -25px;
+  width: 70px;
+  height: 60px;
+  background: #F0923B;
+  -moz-border-radius: 50% 50% 45% 45%/40% 40% 60% 60%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 50% 45% 45%/40% 40% 60% 60%;
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+  -moz-box-shadow: inset 0 -4px 15px -5px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 -4px 15px -5px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 -4px 15px -5px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+.loula .head:before {
+  left: 5px;
+  top: -30px;
+  height: 60px;
+  width: 60px;
+  background: #F0923B;
+  -moz-border-radius: 48% 48% 5% 5%/60% 60% 5% 5%;
+  -webkit-border-radius: 48%;
+  border-radius: 48% 48% 5% 5%/60% 60% 5% 5%;
+}
+.loula .head .nose {
+  left: calc(50% - (25px / 2));
+  height: 10px;
+  width: 25px;
+  background: #000000;
+  -moz-border-radius: 50% 50% 30% 30%/90% 90% 10% 10%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 50% 30% 30%/90% 90% 10% 10%;
+  -moz-box-shadow: 0 -3px 5px 0 rgba(255, 255, 255, 0.3);
+  -webkit-box-shadow: 0 -3px 5px 0 rgba(255, 255, 255, 0.3);
+  box-shadow: 0 -3px 5px 0 rgba(255, 255, 255, 0.3);
+}
+.loula .head .nose:before {
+  top: 6px;
+  width: 100%;
+  height: 200%;
+  background: #000000;
+  -moz-border-radius: 30% 30% 50% 50%/10% 10% 90% 90%;
+  -webkit-border-radius: 30%;
+  border-radius: 30% 30% 50% 50%/10% 10% 90% 90%;
+}
+.loula .head .eye {
+  top: -22px;
+  height: 18px;
+  width: 10px;
+  background: #000000;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.loula .head .eye.left {
+  left: 21px;
+}
+.loula .head .eye.right {
+  right: 21px;
+}
+.loula .ear.left {
+  top: -58px;
+  left: 70px;
+  height: 70px;
+  width: 40px;
+  background: #060103;
+  -moz-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+  -moz-border-radius: 50% 50% 20% 20%/60% 60% 40% 40%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 50% 20% 20%/60% 60% 40% 40%;
+  -moz-box-shadow: inset 7px 0 10px 0px #aa2962;
+  -webkit-box-shadow: inset 7px 0 10px 0px #aa2962;
+  box-shadow: inset 7px 0 10px 0px #aa2962;
+}
+.loula .ear.right {
+  top: -75px;
+  right: -38px;
+  height: 40px;
+  width: 25px;
+  background: #811f4a;
+  -moz-border-radius: 50% 50% 50% 50%/10% 10% 90% 90%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 50% 50% 50%/10% 10% 90% 90%;
+  -moz-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+  -moz-box-shadow: inset -5px 15px 5px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset -5px 15px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: inset -5px 15px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.loula .ear.right:after {
+  top: -6px;
+  left: 1px;
+  width: 33px;
+  height: 20px;
+  background: #AA2962;
+  -moz-border-radius: 50% 50% 50% 50%/20% 40% 60% 80%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 50% 50% 50%/20% 40% 60% 80%;
+  -moz-transform: rotate(-12deg);
+  -ms-transform: rotate(-12deg);
+  -webkit-transform: rotate(-12deg);
+  transform: rotate(-12deg);
+}
+.loula .body {
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  width: 62px;
+  background: #F0923B;
+  -moz-border-radius: 40% 40% 50% 50%/60% 50% 50% 40%;
+  -webkit-border-radius: 40%;
+  border-radius: 40% 40% 50% 50%/60% 50% 50% 40%;
+  -moz-box-shadow: inset 0 -5px 15px -5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 -5px 15px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -5px 15px -5px rgba(0, 0, 0, 0.5);
+  z-index: 5;
+}
+.loula .body:after {
+  top: 10px;
+  right: 10px;
+  height: 20%;
+  -moz-box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.1);
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+.loula .body-back {
+  top: 10px;
+  left: 0px;
+  height: 60px;
+  width: 90px;
+  background: #F0923B;
+  overflow: hidden;
+  -moz-border-radius: 50% 60% 40% 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 60% 40% 50%;
+  -moz-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+  -moz-box-shadow: inset 0 -2px 10px -6px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0 -2px 10px -6px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -2px 10px -6px rgba(0, 0, 0, 0.5);
+  z-index: 6;
+}
+.loula .body-back:before {
+  top: -16px;
+  left: 20px;
+  height: 40px;
+  width: 40px;
+  background: #AA2962;
+  -moz-border-radius: 50% 5% 30% 90%/30% 5% 30% 40%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 5% 30% 90%/30% 5% 30% 40%;
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.loula .leg.front {
+  background: #F0923B;
+}
+.loula .leg.front.left {
+  bottom: -40px;
+  width: 26px;
+  height: 54px;
+  right: 32px;
+  z-index: 6;
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+  transform: rotate(2deg);
+  -moz-border-radius: 20% 20% 15% 15%/40% 40% 50% 50%;
+  -webkit-border-radius: 20%;
+  border-radius: 20% 20% 15% 15%/40% 40% 50% 50%;
+}
+.loula .leg.front.left .foot {
+  bottom: -20px;
+  left: -2px;
+  width: 32px;
+  height: 30px;
+  -moz-border-radius: 40% 60% 40% 40%/50% 50% 50% 50%;
+  -webkit-border-radius: 40%;
+  border-radius: 40% 60% 40% 40%/50% 50% 50% 50%;
+}
+.loula .leg.front.right {
+  bottom: -40px;
+  height: 60px;
+  width: 24px;
+  right: -1px;
+  z-index: 4;
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  -moz-border-radius: 20% 20% 20% 30%/30% 40% 40% 70%;
+  -webkit-border-radius: 20%;
+  border-radius: 20% 20% 20% 30%/30% 40% 40% 70%;
+  -moz-box-shadow: inset 10px 0 20px -5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 10px 0 20px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 10px 0 20px -5px rgba(0, 0, 0, 0.5);
+}
+.loula .leg.front.right .foot {
+  bottom: -8px;
+  left: -2px;
+  width: 45px;
+  height: 25px;
+  -moz-transform: rotate(22deg) skewX(25deg);
+  -ms-transform: rotate(22deg) skewX(25deg);
+  -webkit-transform: rotate(22deg) skewX(25deg);
+  transform: rotate(22deg) skewX(25deg);
+  -moz-border-radius: 70% 30% 40% 20%/70% 40% 50% 20%;
+  -webkit-border-radius: 70%;
+  border-radius: 70% 30% 40% 20%/70% 40% 50% 20%;
+  -moz-box-shadow: inset 8px -3px 15px -5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 8px -3px 15px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 8px -3px 15px -5px rgba(0, 0, 0, 0.5);
+}
+.loula .leg.front .foot {
+  background: #F0923B;
+  -moz-box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 1px 1px -1px rgba(0, 0, 0, 0.9);
+}
+.loula .tail {
+  top: -12px;
+  left: 7px;
+  height: 35px;
+  width: 14px;
+  background: #ed7d15;
+  overflow: hidden;
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  -moz-border-radius: 90% 2% 5% 20%/98% 2% 5% 5%;
+  -webkit-border-radius: 90%;
+  border-radius: 90% 2% 5% 20%/98% 2% 5% 5%;
+}
+.loula .tail:before {
+  top: 8px;
+  right: -8px;
+  height: 12px;
+  width: 15px;
+  background: #AA2962;
+  -moz-border-radius: 60% 40%;
+  -webkit-border-radius: 60%;
+  border-radius: 60% 40%;
+}
+.loula .leg.back.right {
+  top: 60px;
+  left: 28px;
+  height: 35px;
+  width: 24px;
+  z-index: -1;
+  background: #ee8523;
+  -moz-border-radius: 10% 10% 90% 10%/40% 40% 40% 40%;
+  -webkit-border-radius: 10%;
+  border-radius: 10% 10% 90% 10%/40% 40% 40% 40%;
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+.loula .leg.back.left {
+  top: 50px;
+  left: 0px;
+  height: 60px;
+  width: 24px;
+  background: #F0923B;
+  -moz-border-radius: 10% 10% 10% 10%/40% 40% 40% 40%;
+  -webkit-border-radius: 10%;
+  border-radius: 10% 10% 10% 10%/40% 40% 40% 40%;
+  -moz-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+  z-index: 7;
+}
+.loula .leg.back.left .foot {
+  bottom: -15px;
+  left: 1px;
+  width: 35px;
+  height: 32px;
+  background: #F0923B;
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  -moz-border-radius: 40% 60% 50% 50%/50% 50% 50% 50%;
+  -webkit-border-radius: 40%;
+  border-radius: 40% 60% 50% 50%/50% 50% 50% 50%;
+}
+.loula .foot.back {
+  bottom: -22px;
+  left: 27px;
+  width: 40px;
+  height: 22px;
+  background: #ee8523;
+  -moz-border-radius: 60% 40% 30% 30%/40% 50% 10% 30%;
+  -webkit-border-radius: 60%;
+  border-radius: 60% 40% 30% 30%/40% 50% 10% 30%;
+}
+
+.logo {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  z-index: 20;
+}
+.logo img {
+  margin: 0 0 0 -5px;
+}
+.logo h1, .logo h2 {
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 1px;
+  color: #666666;
+  font-weight: 100;
+}

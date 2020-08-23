@@ -1,0 +1,558 @@
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  overflow: hidden;
+  background-color: #A1E3F1;
+  background-image: linear-gradient(to bottom, #A1E3F1 0%, #ffffff 60%);
+}
+body .container {
+  position: absolute;
+  padding: 0;
+  top: calc(50% - (30px / 2));
+  left: calc(50% - (660px / 2));
+}
+body .container :before, body .container :after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+}
+body .container .boys-container {
+  min-width: 660px;
+  height: 210px;
+  margin: 0 auto;
+}
+body .container .boys-container .kenny, body .container .boys-container .stan, body .container .boys-container .kyle, body .container .boys-container .cartman {
+  position: absolute;
+}
+body .container .boys-container .kenny *, body .container .boys-container .stan *, body .container .boys-container .kyle *, body .container .boys-container .cartman * {
+  position: absolute;
+}
+
+.container .eye {
+  left: calc(50% - 33px);
+  top: 50px;
+  height: 40px;
+  width: 32px;
+  background: #FFFFFF;
+  border-radius: 50%;
+}
+.container .eye:before {
+  top: 15px;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background: #333333;
+}
+.container .eye.left {
+  margin-right: 34px;
+  transform: rotate(30deg);
+}
+.container .eye.left:before {
+  right: 7px;
+}
+.container .eye.right {
+  margin-left: 34px;
+  transform: rotate(-30deg);
+}
+.container .eye.right:before {
+  left: 7px;
+}
+
+.container .mouth {
+  left: calc(50% - 10px);
+  bottom: 5px;
+  height: 10px;
+  width: 20px;
+  border: 1px solid transparent;
+  border-top: 1px solid #333333;
+  border-radius: 50%;
+  transform: rotate(8deg);
+}
+
+.container .body {
+  top: 35px;
+  left: 18%;
+  width: 64%;
+  perspective: 60px;
+  perspective-origin: 50% 50%;
+  z-index: 7;
+}
+.container .body .scarf {
+  left: -8%;
+  top: 0;
+  height: 28px;
+  width: 116%;
+  background: #E1383B;
+  border-radius: 50% 50% 50% 50% / 0 0 85% 85%;
+}
+.container .body .inner {
+  left: 0;
+  height: 54px;
+  width: 100%;
+  background: #BB6F4F;
+  transform: rotateX(20deg);
+  border-radius: 10% 10% 50% 50% / 0 0 5% 5%;
+}
+.container .body .inner:before {
+  left: 50%;
+  height: 100%;
+  width: 10px;
+  border-left: 1px solid #333333;
+}
+.container .body .arm {
+  height: 38px;
+  width: 14px;
+  background: #BB6F4F;
+  transform: rotateX(25deg);
+}
+.container .body .arm:before {
+  bottom: 0;
+  height: 10px;
+  width: 10px;
+}
+.container .body .arm .hand {
+  bottom: -11px;
+  height: 18px;
+  width: 18px;
+  background: #E33940;
+}
+.container .body .arm.left {
+  left: -10px;
+  border-radius: 0 0 30% 50% / 0 0 10% 20%;
+}
+.container .body .arm.left:before {
+  right: -2px;
+  border-right: 1px solid #333333;
+}
+.container .body .arm.left .hand {
+  left: -1px;
+  transform: rotateX(-30deg) skewX(14deg);
+  border-radius: 50% 50% 40% 60% / 50% 20% 20% 50%;
+}
+.container .body .arm.right {
+  right: -10px;
+  border-radius: 0 0 50% 30% / 0 0 20% 10%;
+}
+.container .body .arm.right:before {
+  left: -2px;
+  border-left: 1px solid #333333;
+}
+.container .body .arm.right .hand {
+  right: -1px;
+  transform: rotateX(-30deg) skewX(-14deg);
+  border-radius: 50% 50% 60% 40% / 20% 50% 50% 20%;
+}
+
+.container .buttons {
+  top: 77px;
+  left: calc(50% - 6px);
+  height: 4px;
+  width: 4px;
+  background: #333333;
+  border-radius: 50%;
+  z-index: 12;
+}
+.container .buttons:before, .container .buttons:after {
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background: inherit;
+}
+.container .buttons:before {
+  top: -12px;
+}
+.container .buttons:after {
+  bottom: -12px;
+}
+
+.container .legs {
+  left: 17%;
+  bottom: 12px;
+  width: 66%;
+  height: 20px;
+  background: #5060AB;
+}
+.container .legs .foot {
+  bottom: 0;
+  width: calc(50% + 5px);
+  height: 5px;
+  background: #333333;
+  border-radius: 50% 50% 0 0 / 95% 95% 0 0;
+}
+.container .legs .foot.left {
+  left: -5px;
+}
+.container .legs .foot.right {
+  right: -5px;
+}
+
+.stan {
+  left: calc(13% - (120px / 2));
+  height: 120px;
+  width: 120px;
+  margin-top: 90px;
+}
+.stan .head {
+  top: -60px;
+  left: calc(50% - (120px / 2));
+  width: 120px;
+  height: 120px;
+  background-color: #FEDDB2;
+  border-radius: 50% 50% 50% 50% / 45% 45% 50% 50%;
+  overflow: hidden;
+  z-index: 8;
+}
+.stan .head:before {
+  top: 0;
+  border-top: 46px solid #5162AA;
+  height: 70px;
+  width: 100%;
+  border-radius: inherit;
+}
+.stan .hat {
+  top: -10px;
+  left: -2px;
+  width: 124px;
+  height: 150px;
+  box-shadow: 0 -14px 0 -1px #E33940;
+  border-radius: 50% 50% 0 0 / 10% 10% 0 0;
+  z-index: 9;
+}
+.stan .bobble {
+  top: -73px;
+  left: calc(50% - 14px);
+  height: 28px;
+  width: 28px;
+  z-index: 9;
+}
+.stan .bobble span {
+  left: calc(50% - 2px);
+  height: 100%;
+  width: 4px;
+  background: #E33940;
+}
+.stan .bobble span:nth-of-type(1) {
+  transform: rotate(25.7142857143deg);
+}
+.stan .bobble span:nth-of-type(2) {
+  transform: rotate(51.4285714286deg);
+}
+.stan .bobble span:nth-of-type(3) {
+  transform: rotate(77.1428571429deg);
+}
+.stan .bobble span:nth-of-type(4) {
+  transform: rotate(102.8571428571deg);
+}
+.stan .bobble span:nth-of-type(5) {
+  transform: rotate(128.5714285714deg);
+}
+.stan .bobble span:nth-of-type(6) {
+  transform: rotate(154.2857142857deg);
+}
+.stan .bobble span:nth-of-type(7) {
+  transform: rotate(180deg);
+}
+
+.kyle {
+  left: calc(36% - (112px / 2));
+  height: 120px;
+  width: 112px;
+  margin-top: 90px;
+}
+.kyle .head {
+  top: -60px;
+  left: calc(50% - (112px / 2));
+  width: 112px;
+  height: 120px;
+  background-color: #FEDDB2;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 8;
+}
+.kyle .head .eye {
+  top: 48px;
+}
+.kyle .hat {
+  top: -60px;
+  left: calc(50% - 55px);
+  width: 110px;
+  height: 45px;
+  background: #6AC065;
+  border-radius: 12px 12px 0 0;
+  z-index: 9;
+}
+.kyle .hat span {
+  top: 20px;
+  left: calc(50% - 48px);
+  background: #06A064;
+  width: 96px;
+  height: 34px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 93% 95%, 85% 92%, 79% 89%, 72% 87%, 65% 86%, 35% 86%, 24% 87%, 20% 89%, 14% 92%, 7% 95%, 0% 100%);
+  z-index: 12;
+}
+.kyle .hat:before, .kyle .hat:after {
+  top: 38px;
+  width: 20px;
+  height: 54px;
+  border-radius: 50% 50% 50% 50% / 45% 45% 45% 45%;
+  background: #6AC065;
+  z-index: 10;
+}
+.kyle .hat:before {
+  left: -10px;
+  transform: rotate(18deg);
+}
+.kyle .hat:after {
+  right: -10px;
+  transform: rotate(-18deg);
+}
+.kyle .body .scarf {
+  background: #288F5D;
+}
+.kyle .body .inner, .kyle .body .arm {
+  background: #EF731B;
+}
+.kyle .body .arm .hand {
+  background: #65C36A;
+}
+.kyle .pocket {
+  top: 66px;
+  width: 16px;
+  height: 18px;
+  border: 1px solid #333333;
+  z-index: 12;
+}
+.kyle .pocket:before {
+  top: -6px;
+  left: 1px;
+  height: 60%;
+  width: 80%;
+  border-bottom: 1px solid #333333;
+  border-right: 1px solid #333333;
+  transform: rotate(45deg);
+}
+.kyle .pocket.left {
+  left: 31px;
+}
+.kyle .pocket.right {
+  right: 31px;
+}
+.kyle .legs {
+  background: #056758;
+}
+
+.cartman {
+  left: calc(61% - (160px / 2));
+  height: 120px;
+  width: 160px;
+  margin-top: 90px;
+}
+.cartman .head {
+  top: -55px;
+  left: calc(50% - (135px / 2));
+  width: 135px;
+  height: 110px;
+  background-color: #FEDDB2;
+  border-radius: 50% 50% 50% 50% / 50% 50% 48% 48%;
+  overflow: hidden;
+  z-index: 8;
+}
+.cartman .head:before {
+  left: -5%;
+  top: 0;
+  border-top: 36px solid #59BFD5;
+  height: 100px;
+  width: 110%;
+  border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+}
+.cartman .head .eye {
+  top: 39px;
+}
+.cartman .head .chin {
+  left: 2%;
+  bottom: 5px;
+  height: 90%;
+  width: 96%;
+  border-radius: inherit;
+  border: 1px solid transparent;
+  border-bottom-color: #888888;
+}
+.cartman .hat {
+  top: -16px;
+  left: calc(50% - ((135px + 4px) / 2));
+  width: 139px;
+  height: 150px;
+  box-shadow: 0 -6px 0 -1px #FCDF12;
+  border-radius: 60% 40% 0 0 / 10% 10% 0 0;
+  z-index: 9;
+}
+.cartman .bobble {
+  top: -62px;
+  left: calc(50% - 17px);
+  height: 12px;
+  width: 34px;
+  background: #FCDF12;
+  border-radius: 50% 50% 50% 50% / 65% 65% 35% 35%;
+  z-index: 9;
+}
+.cartman .body-cartman {
+  top: 30px;
+  left: 3%;
+  height: 70px;
+  width: 94%;
+  background: #E03A41;
+  transform: rotateX(10deg);
+  border-radius: 30% 30% 40% 40% / 70% 70% 30% 30%;
+}
+.cartman .body-cartman:before {
+  left: 50%;
+  height: 100%;
+  width: 10px;
+  border-left: 1px solid #333333;
+}
+.cartman .body-cartman .arm {
+  top: -8px;
+  height: 42px;
+  width: 25px;
+  background: #E03A41;
+}
+.cartman .body-cartman .arm .hand {
+  bottom: -8px;
+  height: 20px;
+  width: 30px;
+  background: #FDE318;
+}
+.cartman .body-cartman .arm.left {
+  left: 0px;
+  border-radius: 40% 0 0 30% / 70% 0 0 30%;
+  transform: rotate(30deg);
+}
+.cartman .body-cartman .arm.left .hand {
+  left: -1px;
+  border-radius: 50% 50% 40% 60% / 50% 30% 50% 50%;
+}
+.cartman .body-cartman .arm.right {
+  right: 0;
+  border-radius: 0 40% 30% 0 / 0 70% 30% 0;
+  transform: rotate(-30deg);
+}
+.cartman .body-cartman .arm.right .hand {
+  right: -1px;
+  border-radius: 50% 50% 60% 40% / 30% 50% 50% 50%;
+}
+.cartman .legs {
+  left: 5%;
+  width: 90%;
+  height: 30px;
+  background: #7F3521;
+  border-radius: 0 0 8% 8% / 0 0 99% 99%;
+}
+.cartman .legs .foot {
+  width: 52%;
+  height: 4px;
+}
+.cartman .legs .foot.left {
+  left: 2%;
+}
+.cartman .legs .foot.right {
+  right: 2%;
+}
+
+.kenny {
+  left: calc(87% - (120px / 2));
+  height: 120px;
+  width: 120px;
+  margin-top: 90px;
+}
+.kenny .hoodie {
+  top: -60px;
+  left: calc(50% - ((120px + 4px) / 2));
+  height: 122px;
+  width: 124px;
+  background: #F7731E;
+  border-radius: 50% 50% 50% 50% / 48% 48% 50% 50%;
+  z-index: 8;
+  box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.5);
+}
+.kenny .hoodie:before, .kenny .hoodie:after {
+  top: 90px;
+  height: 25px;
+  width: 1px;
+  border: 1px solid transparent;
+  border-left: 1px solid #333333;
+  border-radius: 50%;
+  transform-origin: top, center;
+  left: 50%;
+}
+.kenny .hoodie:before {
+  transform: rotate(20deg);
+}
+.kenny .hoodie:after {
+  transform: rotate(-20deg);
+}
+.kenny .head {
+  top: -60px;
+  left: calc(50% - (120px / 2));
+  width: 120px;
+  height: 120px;
+  background-color: #FEDDB2;
+  border-radius: 50% 50% 50% 50% / 48% 48% 50% 50%;
+  clip-path: circle(28% at 50% 50%);
+  z-index: 8;
+}
+.kenny .head .eye {
+  top: 39px;
+}
+.kenny .hoodie-edge {
+  top: -31px;
+  left: 20px;
+  height: 72px;
+  width: 80px;
+  border: 1px solid #333333;
+  border-top-color: transparent;
+  border-radius: 50%;
+  z-index: 9;
+}
+.kenny .hoodie-edge:before, .kenny .hoodie-edge:after {
+  top: -5px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border-left: 14px solid #7E3821;
+  border-radius: 50%;
+}
+.kenny .hoodie-edge:before {
+  left: 1px;
+}
+.kenny .hoodie-edge:after {
+  transform: rotate(180deg);
+  right: 1px;
+}
+.kenny .body .inner, .kenny .body .arm {
+  background: #F37521;
+}
+.kenny .body .inner {
+  box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.5);
+}
+.kenny .body .arm .hand {
+  background: #78341E;
+}
+.kenny .legs {
+  background: #F07321;
+}
+
+.logo {
+  position: absolute;
+  bottom: 62%;
+  right: 28%;
+  z-index: -1;
+  height: 295px;
+  width: 260px;
+  background: url("http://vignette2.wikia.nocookie.net/logopedia/images/b/bc/South_Park_Logo.svg/revision/latest?cb=20150317201007") no-repeat;
+  background-size: 260px;
+  transform: rotate(3deg);
+}

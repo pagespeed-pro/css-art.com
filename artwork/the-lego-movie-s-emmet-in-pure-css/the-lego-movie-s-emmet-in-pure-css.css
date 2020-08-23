@@ -1,0 +1,627 @@
+body {
+  background-color: #2c4c79;
+  background-image: linear-gradient(to bottom, #2c4c79 0%, #8dbbea 100%);
+  display: inline;
+}
+body .container {
+  max-width: 300px;
+  padding: 0;
+  margin: 0 auto;
+  min-height: 600px;
+}
+body .container :before, body .container :after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+}
+
+.emmet-container {
+  position: absolute;
+  height: 250px;
+  width: 75px;
+  top: calc(50% - (250px / 2));
+  left: calc(50% - (75px / 2));
+}
+
+.emmet {
+  height: 85px;
+  width: 75px;
+  margin: 74px auto 0 auto;
+  position: relative;
+}
+.emmet * {
+  position: absolute;
+}
+.emmet .head {
+  top: -73px;
+  left: calc(50% - (63px / 2));
+  width: 63px;
+  height: 67px;
+  background-color: #FCCC29;
+  box-shadow: 0px 16px 10px -18px rgba(0, 0, 0, 0.5), inset 0px -16px 5px -15px rgba(0, 0, 0, 0.2), inset -18px 0px 15px -15px rgba(0, 0, 0, 0.5);
+  border-radius: 25%;
+}
+.emmet .head:before {
+  left: 5px;
+  bottom: -5px;
+  width: 60%;
+  height: 100%;
+  border-radius: 20px;
+  background-image: radial-gradient(30% 30%, ellipse cover, rgba(250, 250, 250, 0.6) 0%, rgba(250, 250, 250, 0) 60%);
+  filter: blur(5px);
+  z-index: 1;
+}
+.emmet .head .hair {
+  top: -13px;
+  left: calc(50% - (79px / 2));
+  height: 40px;
+  width: 74px;
+  background: #834435;
+  border-radius: 50% 50% 60% 40% / 80% 50% 50% 20%;
+  z-index: 2;
+  box-shadow: 0 7px 2px -7px rgba(0, 0, 0, 0.5), inset 0 -12px 8px -10px rgba(0, 0, 0, 0.6);
+}
+.emmet .head .hair .highlight {
+  left: 0;
+  top: 0;
+  width: 70%;
+  height: 150%;
+  border-radius: 50%;
+  background-image: radial-gradient(40% 40%, ellipse cover, rgba(250, 250, 250, 0.3) 0%, rgba(250, 250, 250, 0) 30%);
+  filter: blur(5px);
+  z-index: 1;
+  translate: rotate(40deg);
+}
+.emmet .head .hair span {
+  border-radius: 0 0 60% 40%;
+  z-index: 2;
+  box-shadow: 0px 4px 4px -5px rgba(255, 255, 255, 0.5);
+  translate: rotate(-7deg);
+}
+.emmet .head .hair span:nth-of-type(1) {
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 18px;
+  border-bottom: 1px solid #713b2e;
+}
+.emmet .head .hair span:nth-of-type(2) {
+  bottom: 20px;
+  right: 10px;
+  width: 50px;
+  height: 10px;
+  border-bottom: 1px solid #783e31;
+}
+.emmet .head .hair span:nth-of-type(3) {
+  bottom: 12px;
+  right: 8px;
+  width: 50px;
+  height: 18px;
+  border-top: 1px solid #7f4234;
+  border-radius: 40% 60% 0 0;
+  box-shadow: 0px -4px 4px -5px rgba(255, 255, 255, 0.5);
+}
+.emmet .head .hair:before, .emmet .head .hair:after {
+  bottom: -13px;
+  width: 12px;
+  background: #834435;
+}
+.emmet .head .hair:before {
+  left: 0px;
+  height: 23px;
+  border-radius: 10% 70% 40% 60% / 10% 20% 80% 70%;
+  box-shadow: 2px 0 2px -2px rgba(0, 0, 0, 0.5), inset -12px -5px 8px -10px rgba(0, 0, 0, 0.8);
+}
+.emmet .head .hair:after {
+  height: 33px;
+  right: -4px;
+  border-radius: 60% 40% 60% 40% / 50% 40% 60% 50%;
+  box-shadow: -2px 0 2px -2px rgba(0, 0, 0, 0.5), inset 12px -10px 15px -10px rgba(0, 0, 0, 0.8);
+}
+.emmet .head .eye {
+  top: 34px;
+  height: 7px;
+  width: 7px;
+  background: #333333;
+  border-radius: 50%;
+  z-index: 2;
+}
+.emmet .head .eye.left {
+  left: 18px;
+}
+.emmet .head .eye.right {
+  right: 18px;
+}
+.emmet .head .mouth {
+  height: 15px;
+  width: 26px;
+  left: calc(50% - (26px / 2));
+  top: 33px;
+  border-radius: 50%;
+  box-shadow: 0 10px 0 0px #333333;
+}
+.emmet .head .mouth .inner {
+  width: 98%;
+  height: 100%;
+  left: 1%;
+  top: 2px;
+  border-radius: 50%;
+  box-shadow: 0 8px 0 -2px #FFFFFF;
+}
+.emmet .head .mouth .inner:before, .emmet .head .mouth .inner:after {
+  bottom: -3px;
+  height: 0;
+  width: 0;
+  border: 1px solid transparent;
+}
+.emmet .head .mouth .inner:before {
+  left: 1px;
+}
+.emmet .head .mouth .inner:after {
+  right: 1px;
+}
+.emmet .head .mouth .inner:before {
+  border-left-color: #333333;
+  border-left-width: 8px;
+  translate: rotate(8deg);
+}
+.emmet .head .mouth .inner:after {
+  border-right-color: #333333;
+  border-right-width: 8px;
+  translate: rotate(-8deg);
+}
+.emmet .neck {
+  top: -7px;
+  left: calc(50% - (35px / 2));
+  height: 7px;
+  width: 35px;
+  z-index: -2;
+  background-color: #FCCC29;
+  background-image: linear-gradient(left, #ffcd38 0%, #ffcd38 30%, #e5be32 50%, #ffcd38 70%, #ffcd38 100%);
+}
+.emmet .body {
+  top: 0;
+  left: calc(50% - ((75px + 24px) / 2));
+  height: 0;
+  width: 75px;
+  border-style: solid;
+  border-width: 0 12.5px 85px 12.5px;
+  border-color: transparent transparent #F16017 transparent;
+  box-shadow: 0 3px 2px -2px rgba(0, 0, 0, 0.5);
+  z-index: 4;
+}
+.emmet .body .highlight {
+  bottom: -85px;
+  width: 60%;
+  height: 85px;
+  border-radius: 20px;
+  background-image: radial-gradient(30% 30%, ellipse cover, rgba(250, 250, 250, 0.5) 0%, rgba(250, 250, 250, 0) 60%);
+  filter: blur(5px);
+  z-index: 12;
+}
+.emmet .body:before, .emmet .body:after {
+  top: 22px;
+  height: 40px;
+  width: 18px;
+  border-top: 3px solid #000000;
+  z-index: 4;
+}
+.emmet .body:before {
+  left: 18px;
+}
+.emmet .body:after {
+  right: 18px;
+}
+.emmet .body:before {
+  border-right: 2px solid #000000;
+  transform: skewY(65deg);
+}
+.emmet .body:after {
+  border-left: 2px solid #000000;
+  transform: skewY(-65deg);
+}
+.emmet .body .shirt {
+  top: 2px;
+  left: calc(50% - (38px / 2));
+  height: 30px;
+  width: 38px;
+  z-index: 3;
+  background: #FFFFFF;
+  clip-path: polygon(50% 95%, 15% 0, 85% 0);
+}
+.emmet .body .shirt:before, .emmet .body .shirt:after {
+  top: 0;
+  height: 40px;
+  width: 20px;
+  background: #2872BA;
+  border: 1px solid #000000;
+  z-index: 1;
+}
+.emmet .body .shirt:before {
+  left: 0;
+}
+.emmet .body .shirt:after {
+  right: 0;
+}
+.emmet .body .shirt:before {
+  border-radius: 1% 90% 1% 20% / 1% 70% 1% 20%;
+}
+.emmet .body .shirt:after {
+  border-radius: 90% 1% 20% 1% / 70% 1% 20% 1%;
+}
+.emmet .body .shirt .collar {
+  top: -3px;
+  height: 20px;
+  width: 20px;
+  z-index: 2;
+}
+.emmet .body .shirt .collar.left {
+  left: -10px;
+  transform: rotate(45deg);
+}
+.emmet .body .shirt .collar.right {
+  right: -10px;
+  transform: rotate(-45deg);
+}
+.emmet .body .shirt .collar.left {
+  border-right: 1px solid #000000;
+}
+.emmet .body .shirt .collar.right {
+  border-left: 1px solid #000000;
+}
+.emmet .body span {
+  top: 2px;
+  height: 81px;
+  width: 10px;
+  background: #D3CDCC;
+  z-index: 2;
+}
+.emmet .body span:nth-of-type(1) {
+  left: 4px;
+}
+.emmet .body span:nth-of-type(2) {
+  right: 4px;
+}
+.emmet .body span:nth-of-type(3) {
+  top: -7px;
+  left: 32px;
+  height: 78px;
+}
+.emmet .body span:nth-of-type(4) {
+  top: 34px;
+  left: 32px;
+  height: 89px;
+}
+.emmet .body span:nth-of-type(3), .emmet .body span:nth-of-type(4) {
+  transform: rotate(90deg);
+}
+.emmet .body .pen {
+  top: 48px;
+  left: 6px;
+  height: 10px;
+  width: 6px;
+  background: #006FAD;
+  border-radius: 5px 5px 0 0;
+  z-index: 10;
+  border: 2px solid #000000;
+}
+.emmet .body .pen:before {
+  top: -6px;
+  left: calc(50% - 2px);
+  height: 4px;
+  width: 4px;
+  background: #006FAD;
+}
+.emmet .body .pen:after {
+  top: 4px;
+  left: calc(50% - 1px);
+  height: 15px;
+  width: 2px;
+  background: #000000;
+}
+.emmet .body .pocket {
+  top: 60px;
+  width: 25px;
+  height: 6px;
+  border: 2px solid #000000;
+  z-index: 5;
+  border-radius: 2px 2px 0 0;
+}
+.emmet .body .pocket.left {
+  left: -5px;
+}
+.emmet .body .pocket.right {
+  right: -5px;
+}
+.emmet .shoulder {
+  z-index: 2;
+  top: 5px;
+  width: 24px;
+  height: 54px;
+  background: #2872BA;
+  overflow: hidden;
+}
+.emmet .shoulder.left {
+  left: -22px;
+  transform: rotate(25deg);
+}
+.emmet .shoulder.right {
+  right: -22px;
+  transform: rotate(-25deg);
+}
+.emmet .shoulder.left {
+  border-radius: 50px 50px 0 20px;
+  box-shadow: inset -15px 0 10px -5px rgba(0, 0, 0, 0.3);
+}
+.emmet .shoulder.left:before {
+  top: 0;
+  width: 60%;
+  height: 85px;
+  border-radius: 20px;
+  background-image: radial-gradient(30% 30%, ellipse cover, rgba(250, 250, 250, 0.3) 0%, rgba(250, 250, 250, 0) 60%);
+  filter: blur(5px);
+  z-index: 12;
+}
+.emmet .shoulder.right {
+  border-radius: 50px 50px 20px 0;
+  box-shadow: inset 18px 0 15px -5px rgba(0, 0, 0, 0.5);
+}
+.emmet .arm {
+  bottom: -1px;
+  width: 25px;
+  height: 35px;
+  background: #2872BA;
+  z-index: 1;
+  border-radius: 15% 15% 50% 50% / 15% 15% 20% 20%;
+}
+.emmet .arm.left {
+  left: -35px;
+  transform: rotate(8deg);
+}
+.emmet .arm.right {
+  right: -35px;
+  transform: rotate(-8deg);
+}
+.emmet .arm.left {
+  box-shadow: inset -15px 0 10px -5px rgba(0, 0, 0, 0.3), inset 0 -10px 0 -5px #1a4b7b;
+  overflow: hidden;
+}
+.emmet .arm.left:before {
+  top: 0;
+  width: 60%;
+  height: 33px;
+  border-radius: 20px;
+  background-image: radial-gradient(30% 30%, ellipse cover, rgba(250, 250, 250, 0.2) 0%, rgba(250, 250, 250, 0) 60%);
+  filter: blur(5px);
+  z-index: 12;
+}
+.emmet .arm.right {
+  box-shadow: inset 18px 0 15px -5px rgba(0, 0, 0, 0.5), inset 0 -10px 0 -5px #1a4b7b;
+}
+.emmet .hand {
+  bottom: -22px;
+  height: 12px;
+  width: 12px;
+  border: 6px solid #FCCC29;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  box-shadow: 4px 0px 0 -1px #d6a603, inset 4px 3px 0 -1px #d6a603;
+  z-index: 3;
+}
+.emmet .hand.left {
+  left: -38px;
+  transform: rotate(5deg);
+}
+.emmet .hand.right {
+  right: -38px;
+  transform: rotate(-5deg);
+}
+.emmet .hand.left .wrist {
+  left: calc(50% - (15px / 2));
+}
+.emmet .hand.right .wrist {
+  right: calc(50% - (15px / 2));
+}
+.emmet .hand.left .wrist:before {
+  left: calc(50% - (24px / 2));
+}
+.emmet .hand.right .wrist:before {
+  right: calc(50% - (24px / 2));
+}
+.emmet .hand .wrist {
+  top: -10px;
+  height: 10px;
+  width: 15px;
+  background: #FCCC29;
+  border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+  box-shadow: 3px 0 0 -2px #bc9203;
+}
+.emmet .hand .wrist:before {
+  top: -5px;
+  width: 24px;
+  height: 10px;
+  border-top: 5px solid #163f66;
+  border-radius: 50%;
+}
+.emmet .hand:after {
+  bottom: -4px;
+  left: -3px;
+  height: 6px;
+  width: 6px;
+  background: #FCCC29;
+  border-radius: 50%;
+  box-shadow: 12px 0 0 0 #FCCC29;
+}
+.emmet .belt {
+  bottom: -13px;
+  left: calc(50% - (91px / 2));
+  width: 83px;
+  height: 9px;
+  background: #000000;
+  border: 2px solid #F16017;
+  border-left-width: 4px;
+  border-right-width: 4px;
+  z-index: 4;
+}
+.emmet .belt:before, .emmet .belt:after {
+  top: 0;
+  height: 9px;
+  width: 4px;
+  background: #F16017;
+}
+.emmet .belt:before {
+  left: 5px;
+}
+.emmet .belt:after {
+  right: 5px;
+}
+.emmet .belt:before {
+  box-shadow: 15px 0 0 0 #F16017;
+}
+.emmet .belt:after {
+  box-shadow: -15px 0 0 0 #F16017;
+}
+.emmet .belt .buckle {
+  height: 9px;
+  width: 20px;
+  left: calc(50% - 10px);
+  background: #D3CDCC;
+}
+.emmet .belt .buckle:before {
+  top: calc(50% - ((5px / 2) + 2px));
+  left: calc(50% - (5px / 2));
+  height: 5px;
+  width: 5px;
+  border-top: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  border-radius: 50%;
+  transform: rotate(-45deg);
+}
+.emmet .pelvis {
+  bottom: -49px;
+  left: calc(50% - (91px / 2));
+  width: 91px;
+  height: 36px;
+  background: #F16017;
+  box-shadow: inset 0 18px 8px -15px rgba(0, 0, 0, 0.7), inset 0 -20px 10px -10px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #AB3602;
+}
+.emmet .pelvis .highlight {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 36px;
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(5px);
+  z-index: 12;
+}
+.emmet .pelvis:before {
+  left: calc(50% - (6px / 2) - 1px);
+  width: 6px;
+  height: calc(100% - 2px);
+  border: 1px solid #AB3602;
+  border-top: 0;
+  box-shadow: inset 0 -5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+.emmet .pelvis .tag {
+  top: 9px;
+  right: 4px;
+  width: 34.5px;
+  height: 26px;
+  background: #000000;
+  border-radius: 4px;
+  z-index: 2;
+}
+.emmet .pelvis .tag:before {
+  top: -8px;
+  left: calc(50% - 14%);
+  width: 28%;
+  height: 8px;
+  background: #000000;
+}
+.emmet .pelvis .tag:after {
+  top: -10px;
+  left: calc(50% - 7%);
+  width: 14%;
+  height: 8px;
+  background: #666666;
+}
+.emmet .pelvis .tag .id {
+  left: 2px;
+  bottom: 2px;
+  height: 16px;
+  width: 30.5px;
+  background: #999999;
+  border-radius: 2px;
+}
+.emmet .pelvis .tag .id:before {
+  top: 2px;
+  left: 2px;
+  height: 10px;
+  width: 10px;
+  background: #000000;
+}
+.emmet .pelvis .tag .id:after {
+  top: 2px;
+  right: 2px;
+  height: 2px;
+  width: 15px;
+  background: #000000;
+  box-shadow: 0 3px 0 0 #000000, 0 6px 0 0 #000000;
+}
+.emmet .pelvis .leg {
+  bottom: -53px;
+  width: 42.5px;
+  height: 52px;
+  background: #F16017;
+  box-shadow: inset 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+}
+.emmet .pelvis .leg.left {
+  left: 0;
+}
+.emmet .pelvis .leg.right {
+  right: 0;
+}
+.emmet .pelvis .leg:before {
+  top: 8px;
+  left: 3px;
+  width: 36.5px;
+  height: 12px;
+  background: #D3CDCC;
+}
+.emmet .pelvis .leg .foot {
+  bottom: 0;
+  height: 15px;
+  width: 100%;
+  box-shadow: 0 -4px 8px -2px rgba(255, 255, 255, 0.6);
+}
+.emmet .shadow {
+  bottom: -101px;
+  left: -20px;
+  width: 220px;
+  height: 60px;
+  z-index: -1;
+  background: radial-gradient(circle at 50% 80%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 35%, rgba(0, 0, 0, 0) 45%);
+  transform: skewX(-60deg);
+}
+
+.logo {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  z-index: 20;
+}
+.logo img {
+  margin: 0 0 5px -2px;
+  width: 200px;
+  height: auto;
+}
+.logo h1, .logo h2 {
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  font-weight: 100;
+}

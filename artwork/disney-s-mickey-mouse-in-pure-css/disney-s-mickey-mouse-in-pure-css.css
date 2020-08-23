@@ -1,0 +1,392 @@
+body {
+  background-color: #db4d56;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFDB4D56', endColorstr='#FF6D0110');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IiIgcj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RiNGQ1NiIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzZkMDExMCIvPjwvcmFkaWFsR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -moz-radial-gradient(center, ellipse cover, #db4d56 0%, #6d0110 100%);
+  background-image: -webkit-radial-gradient(center, ellipse cover, #db4d56 0%, #6d0110 100%);
+  background-image: radial-gradient(ellipse cover at center, #db4d56 0%, #6d0110 100%);
+}
+
+.container {
+  max-width: 800px;
+  margin: 15px auto;
+  padding: 0;
+  height: 500px;
+  box-sizing: border-box;
+}
+.container h1 {
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 100;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+  font-size: 36px;
+  text-align: center;
+}
+
+.mickey {
+  position: relative;
+  margin: 0 auto;
+  top: 60px;
+  left: 50%;
+  margin-left: -100px;
+}
+.mickey .ear {
+  position: absolute;
+  top: -70px;
+  height: 120px;
+  width: 110px;
+  background: black;
+  border-radius: 100%;
+}
+.mickey .ear.left {
+  left: -55px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.mickey .ear.left .highlight {
+  top: 10px;
+  left: 13px;
+  -webkit-box-shadow: -10px 0px 10px -5px rgba(255, 255, 255, 0.4);
+  -moz-box-shadow: -10px 0px 10px -5px rgba(255, 255, 255, 0.4);
+  box-shadow: -10px 0px 10px -5px rgba(255, 255, 255, 0.4);
+}
+.mickey .ear.right {
+  right: -55px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.mickey .ear.right .highlight {
+  right: 10px;
+  top: 13px;
+  -webkit-box-shadow: 0px -10px 10px -5px rgba(255, 255, 255, 0.4);
+  -moz-box-shadow: 0px -10px 10px -5px rgba(255, 255, 255, 0.4);
+  box-shadow: 0px -10px 10px -5px rgba(255, 255, 255, 0.4);
+}
+.mickey .ear .highlight {
+  position: absolute;
+  height: 85%;
+  width: 80%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.mickey .head {
+  position: relative;
+  background: black;
+  height: 200px;
+  width: 190px;
+  border-radius: 100%;
+  -webkit-box-shadow: inset 2px 5px 20px -2px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: inset 2px 5px 20px -2px rgba(255, 255, 255, 0.5);
+  box-shadow: inset 2px 5px 20px -2px rgba(255, 255, 255, 0.5);
+}
+.mickey .head .mouth-border {
+  position: absolute;
+  width: 200px;
+  left: 50%;
+  margin-left: -100px;
+  bottom: -10px;
+  height: 150px;
+  background: black;
+  border-radius: 50%;
+  z-index: 20;
+}
+.mickey .head .mouth-border .eye-patch {
+  position: absolute;
+  top: -40px;
+  background: #F2E1CF;
+  height: 140px;
+  width: 90px;
+  border-radius: 50%;
+  z-index: 20;
+}
+.mickey .head .mouth-border .eye-patch.left {
+  left: 20px;
+  -ms-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
+  -webkit-box-shadow: inset 5px 10px 15px -5px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: inset 5px 10px 15px -5px rgba(255, 255, 255, 0.5);
+  box-shadow: inset 5px 10px 15px -5px rgba(255, 255, 255, 0.5);
+}
+.mickey .head .mouth-border .eye-patch.right {
+  right: 20px;
+  -ms-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  -webkit-box-shadow: inset 0px 10px 15px -5px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: inset 0px 10px 15px -5px rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0px 10px 15px -5px rgba(255, 255, 255, 0.5);
+}
+.mickey .head .mouth-border .eye {
+  position: absolute;
+  top: -10px;
+  background: white;
+  border: 2px solid #444444;
+  border-top-width: 4px;
+  height: 70px;
+  width: 22px;
+  border-radius: 50%;
+  z-index: 26;
+}
+.mickey .head .mouth-border .eye.left {
+  right: 70px;
+  -ms-transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+.mickey .head .mouth-border .eye.left .eyeball {
+  left: 1px;
+}
+.mickey .head .mouth-border .eye.right {
+  left: 70px;
+  -ms-transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+.mickey .head .mouth-border .eye.right .eyeball {
+  right: 1px;
+}
+.mickey .head .mouth-border .eye .eyeball {
+  position: absolute;
+  bottom: 6px;
+  height: 25px;
+  width: 14px;
+  border-radius: 50%;
+  background: black;
+  background: -moz-linear-gradient(top, black 0%, #444444 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, black) color-stop(100%, #444444));
+  background: -webkit-linear-gradient(top, black 0%, #444444 100%);
+  background: -o-linear-gradient(top, black 0%, #444444 100%);
+  background: -ms-linear-gradient(top, black 0%, #444444 100%);
+  background: linear-gradient(to bottom, #000000 0%, #444444 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$mickey-skin', endColorstr='$mickey-skin-shadow', GradientType=0 );
+}
+.mickey .head .mouth-border .eye .eyeball .highlight {
+  position: relative;
+  top: 7px;
+  left: 4px;
+  height: 2px;
+  width: 0;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 0px 2px 2px rgba(255, 255, 255, 0.75);
+}
+.mickey .head .mouth-border .nose-ridge {
+  position: absolute;
+  width: 70px;
+  left: 50%;
+  margin-left: -37px;
+  top: 53px;
+  height: 30px;
+  border: 2px solid black;
+  background: #F2E1CF;
+  border-radius: 50%;
+  z-index: 27;
+  -webkit-box-shadow: inset 0 2px 5px 1px rgba(255, 255, 255, 0.5), 0px -4px 5px -2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 2px 5px 1px rgba(255, 255, 255, 0.5), 0px -4px 5px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 2px 5px 1px rgba(255, 255, 255, 0.5), 0px -4px 5px -2px rgba(0, 0, 0, 0.3);
+}
+.mickey .head .mouth-border .mouth-patch {
+  position: absolute;
+  bottom: 10px;
+  height: 75px;
+  width: 135px;
+  border-radius: 50%;
+  z-index: 28;
+  background: #F2E1CF;
+  background: -moz-linear-gradient(top, #F2E1CF 0%, #F2E1CF 60%, #C1B4A5 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #F2E1CF), color-stop(60%, #F2E1CF), color-stop(100%, #C1B4A5));
+  background: -webkit-linear-gradient(top, #F2E1CF 0%, #F2E1CF 80%, #C1B4A5 100%);
+  background: -o-linear-gradient(top, #F2E1CF 0%, #F2E1CF 80%, #C1B4A5 100%);
+  background: -ms-linear-gradient(top, #F2E1CF 0%, #F2E1CF 80%, #C1B4A5 100%);
+  background: linear-gradient(to bottom, #f2e1cf 0%, #f2e1cf 60%, #c1b4a5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$mickey-skin', endColorstr='$mickey-skin-shadow', GradientType=0 );
+}
+.mickey .head .mouth-border .mouth-patch.left {
+  left: 2px;
+  -ms-transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+}
+.mickey .head .mouth-border .mouth-patch.right {
+  right: 2px;
+  -ms-transform: rotate(-25deg);
+  -webkit-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+}
+.mickey .head .mouth-border .chin-white {
+  position: absolute;
+  bottom: -10px;
+  width: 80px;
+  left: 50%;
+  margin-left: -40px;
+  height: 80px;
+  border-radius: 50%;
+  background: #C1B4A5;
+}
+.mickey .head .nose {
+  position: absolute;
+  top: 120px;
+  width: 65px;
+  left: 50%;
+  margin-left: -32.5px;
+  height: 35px;
+  border-radius: 50%;
+  background: black;
+  z-index: 32;
+  overflow: hidden;
+  -webkit-box-shadow: 8px 8px 5px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 8px 8px 5px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 8px 8px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.mickey .head .nose:before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  height: 0px;
+  width: 10px;
+  -webkit-box-shadow: 0px 0px 20px 6px rgba(255, 255, 255, 0.75);
+  -moz-box-shadow: 0px 0px 20px 6px rgba(255, 255, 255, 0.75);
+  box-shadow: 0px 0px 20px 6px rgba(255, 255, 255, 0.75);
+  background: white;
+  border-radius: 50%;
+  overflow: hidden;
+  -ms-transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+.mickey .head .lips {
+  position: absolute;
+  top: 93px;
+  width: 150px;
+  left: 50%;
+  margin-left: -75px;
+  height: 90px;
+  border-radius: 50%;
+  border-bottom: 5px solid black;
+  z-index: 25;
+  /*-webkit-box-shadow: $lips-shadow-bottom, $lips-shadow-top;
+  -moz-box-shadow: $lips-shadow-bottom, $lips-shadow-top;
+  box-shadow: $lips-shadow-bottom, $lips-shadow-top;*/
+}
+.mickey .head .dimple {
+  position: absolute;
+  top: 138px;
+  height: 15px;
+  width: 20px;
+  border-radius: 50%;
+  border-top: 2px solid black;
+  z-index: 30;
+  -webkit-box-shadow: inset 0px 5px 8px -5px rgba(0, 0, 0, 0.75), 0px -9px 10px 0px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: inset 0px 5px 8px -5px rgba(0, 0, 0, 0.75), 0px -9px 10px 0px rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0px 5px 8px -5px rgba(0, 0, 0, 0.75), 0px -9px 10px 0px rgba(255, 255, 255, 0.5);
+}
+.mickey .head .dimple.left {
+  left: 15px;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.mickey .head .dimple.right {
+  right: 15px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.mickey .head .mouth {
+  position: absolute;
+  top: 155px;
+  width: 55px;
+  left: 50%;
+  margin-left: -27.5px;
+  height: 58px;
+  background: black;
+  border-radius: 50%;
+  z-index: 30;
+}
+.mickey .head .mouth:before, .mickey .head .mouth:after {
+  position: absolute;
+  top: 25px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.mickey .head .mouth:before {
+  left: -20px;
+  border-width: 0 28px 15px 0;
+  border-color: transparent black transparent transparent;
+  -ms-transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
+}
+.mickey .head .mouth:after {
+  right: -20px;
+  border-width: 15px 28px 0 0;
+  border-color: black transparent transparent transparent;
+  -ms-transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+.mickey .head .mouth .hole {
+  position: absolute;
+  bottom: 0;
+  border: 3px solid black;
+  height: 50px;
+  width: 49px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.mickey .head .mouth .hole .tongue {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: #C66C76;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #6d0019 0%, #6d0019 20%, #C66C76 50%, #C66C76 99%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6d0019), color-stop(20%, #6d0019), color-stop(50%, #C66C76), color-stop(99%, #C66C76));
+  background: -webkit-linear-gradient(top, #6d0019 0%, #6d0019 20%, #C66C76 50%, #C66C76 99%);
+  background: -o-linear-gradient(top, #6d0019 0%, #6d0019 20%, #C66C76 50%, #C66C76 99%);
+  background: -ms-linear-gradient(top, #6d0019 0%, #6d0019 20%, #C66C76 50%, #C66C76 99%);
+  background: linear-gradient(to bottom, #6d0019 0%, #6d0019 20%, #c66c76 50%, #c66c76 99%);
+  border-radius: 50%;
+  bottom: -10px;
+}
+.mickey .head .mouth .hole .tongue.left {
+  left: 5px;
+}
+.mickey .head .mouth .hole .tongue.right {
+  right: 5px;
+  border-top: 5px solid black;
+}
+.mickey .head .mouth-hider {
+  position: relative;
+  top: 149px;
+  width: 100px;
+  left: 50%;
+  margin-left: -50px;
+  height: 35px;
+  border-radius: 50%;
+  z-index: 31;
+  background: #F2E1CF;
+  -webkit-box-shadow: inset 0px -5px 5px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px -5px 5px -5px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px -5px 5px -5px rgba(0, 0, 0, 0.75);
+}
+.mickey .head .chin-border {
+  position: absolute;
+  bottom: -24px;
+  width: 90px;
+  left: 50%;
+  margin-left: -45px;
+  background: black;
+  height: 90px;
+  border-radius: 50%;
+  z-index: 5;
+}

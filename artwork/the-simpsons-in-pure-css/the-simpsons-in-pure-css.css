@@ -1,0 +1,987 @@
+body {
+  background-color: #FCEFA7;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFCEFA7', endColorstr='#FFFDDB5A');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHJhZGlhbEdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IiIgcj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZjZWZhNyIvPjxzdG9wIG9mZnNldD0iNTAlIiBzdG9wLWNvbG9yPSIjZmRkYjVhIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZmRkYjVhIi8+PC9yYWRpYWxHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+  background-size: 100%;
+  background-image: -moz-radial-gradient(center, ellipse cover, #fcefa7 0%, #fddb5a 50%, #fddb5a 100%);
+  background-image: -webkit-radial-gradient(center, ellipse cover, #fcefa7 0%, #fddb5a 50%, #fddb5a 100%);
+  background-image: radial-gradient(ellipse cover at center, #fcefa7 0%, #fddb5a 50%, #fddb5a 100%);
+}
+body .container {
+  max-width: 500px;
+  padding: 0;
+  margin: 0 auto 0 auto;
+  min-height: 400px;
+}
+body .container .title {
+  display: block;
+  text-align: center;
+}
+
+.sofa * {
+  position: absolute;
+}
+
+:before, :after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+}
+
+/* ----- z-index ------ */
+.homer-arm {
+  z-index: 12;
+}
+
+.homer-sleeve {
+  z-index: 11;
+}
+
+.sofa-arm.left {
+  z-index: 10;
+}
+
+.homer {
+  z-index: 9;
+}
+
+.marge {
+  z-index: 8;
+}
+
+.lisa {
+  z-index: 7;
+}
+
+.maggie {
+  z-index: 6;
+}
+
+.bart {
+  z-index: 5;
+}
+
+.sofa-seat {
+  z-index: 4;
+}
+
+.sofa-base {
+  z-index: 3;
+}
+
+.sofa-arm.right {
+  z-index: 2;
+}
+
+.sofa {
+  z-index: -1;
+}
+
+.sofa {
+  position: relative;
+  height: 170px;
+  width: 370px;
+  margin: 120px 20px 0 20px;
+  background: #8A3B12;
+  border: 1px solid #222222;
+  -moz-border-radius: 50px 60px 0 0;
+  -webkit-border-radius: 50px;
+  border-radius: 50px 60px 0 0;
+  -moz-transform: skewY(-2deg);
+  -ms-transform: skewY(-2deg);
+  -webkit-transform: skewY(-2deg);
+  transform: skewY(-2deg);
+}
+.sofa:before {
+  top: -3px;
+  left: 15px;
+  height: 100px;
+  width: 100px;
+  -moz-border-radius: 50px 0 0 0;
+  -webkit-border-radius: 50px;
+  border-radius: 50px 0 0 0;
+  border-left: 1px solid #222222;
+}
+.sofa .sofa-arm {
+  bottom: -30px;
+  width: 90px;
+  height: 130px;
+  background: #8A3B12;
+  border: 1px solid #222222;
+  -moz-border-radius: 45px 20px 5px 5px/60px 20px 5px 5px;
+  -webkit-border-radius: 45px;
+  border-radius: 45px 20px 5px 5px/60px 20px 5px 5px;
+  -moz-transform: skewY(30deg);
+  -ms-transform: skewY(30deg);
+  -webkit-transform: skewY(30deg);
+  transform: skewY(30deg);
+}
+.sofa .sofa-arm.left {
+  left: -1px;
+}
+.sofa .sofa-arm.right {
+  right: -61px;
+}
+.sofa .sofa-arm:before {
+  bottom: -16px;
+  left: -1px;
+  height: 50%;
+  width: calc(100% - 45px);
+  background: #8A3B12;
+  border-bottom: 1px solid #222222;
+  border-left: 1px solid #222222;
+  -moz-border-radius: 0 0 4px 2px;
+  -webkit-border-radius: 0;
+  border-radius: 0 0 4px 2px;
+  -moz-transform: skewY(26deg);
+  -ms-transform: skewY(26deg);
+  -webkit-transform: skewY(26deg);
+  transform: skewY(26deg);
+}
+.sofa .sofa-arm .end {
+  right: -1px;
+  bottom: -16px;
+  height: calc(100% + 7px);
+  width: 45px;
+  border: 1px solid #222222;
+  background: #8A3B12;
+  -moz-transform: skewY(-30deg);
+  -ms-transform: skewY(-30deg);
+  -webkit-transform: skewY(-30deg);
+  transform: skewY(-30deg);
+  -moz-border-radius: 20px 20px 5px 5px;
+  -webkit-border-radius: 20px;
+  border-radius: 20px 20px 5px 5px;
+}
+.sofa .sofa-arm .end:before {
+  left: 7%;
+  bottom: 0;
+  width: 80%;
+  height: 97%;
+  border: 1px solid #222222;
+  border-bottom: 0;
+  -moz-border-radius: 20px 20px 0 0;
+  -webkit-border-radius: 20px;
+  border-radius: 20px 20px 0 0;
+}
+.sofa .sofa-seat {
+  top: 111px;
+  left: 48px;
+  width: 312px;
+  height: 45px;
+  background: #8A3B12;
+  border: 1px solid #222222;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  -moz-transform: skewX(60deg) rotateX(55deg);
+  -ms-transform: skewX(60deg) rotateX(55deg);
+  -webkit-transform: skewX(60deg) rotateX(55deg);
+  transform: skewX(60deg) rotateX(55deg);
+}
+.sofa .sofa-base {
+  bottom: -58px;
+  left: 89px;
+  height: 80px;
+  width: 294px;
+  border: 1px solid #222222;
+  background: #8A3B12;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.sofa .sofa-base:before {
+  width: 100%;
+  height: 22px;
+  border-bottom: 1px solid #222222;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.sofa .homer {
+  height: 130px;
+  width: 75px;
+  top: 10px;
+  left: 48px;
+}
+.sofa .homer .head {
+  top: -128px;
+  left: -10px;
+  width: 65px;
+  height: 100px;
+  background: #FFCD38;
+  -moz-border-radius: 50% 50% 50% 10%/35% 30% 50% 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 50% 50% 10%/35% 30% 50% 50%;
+  -moz-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  -webkit-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+  z-index: 3;
+  border: 1px solid #222222;
+  border-bottom-color: transparent;
+}
+.sofa .homer .head .hair {
+  top: -8px;
+  height: 110px;
+  width: 50px;
+}
+.sofa .homer .head .hair:before, .sofa .homer .head .hair:after {
+  height: 100%;
+  width: 100%;
+  border: 1px solid transparent;
+  border-top-color: #000000;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transform: rotate(-12deg);
+  -ms-transform: rotate(-12deg);
+  -webkit-transform: rotate(-12deg);
+  transform: rotate(-12deg);
+}
+.sofa .homer .head .hair:before {
+  left: 8px;
+}
+.sofa .homer .head .hair:after {
+  left: 16px;
+}
+.sofa .homer .head .brow {
+  top: 32px;
+  right: -6px;
+  width: 40px;
+  height: 20px;
+  background: #FFCD38;
+  border: 1px solid #222222;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  -webkit-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+  z-index: 5;
+}
+.sofa .homer .head .eye {
+  height: 29px;
+  width: 29px;
+  background: #FFFFFF;
+  border: 1px solid #222222;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.sofa .homer .head .eye.left {
+  z-index: 2;
+  left: 16px;
+}
+.sofa .homer .head .eye.right {
+  left: 42.36364px;
+  z-index: 1;
+}
+.sofa .homer .head .eye.right:before {
+  left: 60%;
+}
+.sofa .homer .head .eye:before {
+  top: 50%;
+  left: 50%;
+  height: 3px;
+  width: 3px;
+  background: black;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.sofa .homer .head .eye.left {
+  top: 40px;
+  z-index: 8;
+}
+.sofa .homer .head .eye.right {
+  top: 42px;
+  z-index: 6;
+}
+.sofa .homer .head .nose {
+  top: 65px;
+  right: -3px;
+  width: 40px;
+  height: 12px;
+  z-index: 7;
+  background: #FFCD38;
+  border: 1px solid #222222;
+  border-left-color: transparent;
+  -moz-border-radius: 0 60% 30% 0/0 45% 45% 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 60% 30% 0/0 45% 45% 0;
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.sofa .homer .head .ear {
+  top: 60px;
+  left: -7px;
+  height: 16px;
+  width: 12px;
+  border: 1px solid #222222;
+  border-right-color: transparent;
+  background: #FFCD38;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.sofa .homer .head .ear:before {
+  top: 30%;
+  left: 12%;
+  width: 70%;
+  height: 40%;
+  border-top: 1px solid #222222;
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -moz-border-radius: 45%;
+  -webkit-border-radius: 45%;
+  border-radius: 45%;
+}
+.sofa .homer .head .ear:after {
+  top: 37%;
+  left: 35%;
+  width: 40%;
+  height: 20%;
+  border-top: 1px solid #222222;
+  -moz-transform: rotate(-60deg);
+  -ms-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+  -moz-border-radius: 45%;
+  -webkit-border-radius: 45%;
+  border-radius: 45%;
+}
+.sofa .homer .head .beard {
+  top: 76px;
+  right: 5px;
+  height: 38px;
+  width: 45px;
+  background: #C7A47D;
+  border: 1px solid #222222;
+  -moz-border-radius: 50% 10% 30% 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 10% 30% 50%;
+  -moz-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  -webkit-transform: rotate(8deg);
+  transform: rotate(8deg);
+}
+.sofa .homer .head .beard:before {
+  top: -3px;
+  right: -9px;
+  width: 19px;
+  height: 29px;
+  background: inherit;
+  border-right: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+  -moz-border-radius: 0 85% 40% 0/0 80% 20% 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 85% 40% 0/0 80% 20% 0;
+  -moz-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+.sofa .homer .neck {
+  top: -50px;
+  left: -5px;
+  height: 60px;
+  width: 50px;
+  background: #FFCD38;
+  border-left: 1px solid #222222;
+  border-right: 1px solid #222222;
+  z-index: 2;
+  -moz-border-radius: 20% 5% 1% 1%/90% 5% 1% 1%;
+  -webkit-border-radius: 20%;
+  border-radius: 20% 5% 1% 1%/90% 5% 1% 1%;
+}
+.sofa .homer .collar {
+  top: -10px;
+  height: 16px;
+  width: 34px;
+  background: #FFFFFF;
+  border: 1px solid #222222;
+}
+.sofa .homer .collar.left {
+  left: -12px;
+  z-index: 3;
+  -moz-transform: rotate(20deg) skewX(4deg);
+  -ms-transform: rotate(20deg) skewX(4deg);
+  -webkit-transform: rotate(20deg) skewX(4deg);
+  transform: rotate(20deg) skewX(4deg);
+  -moz-border-radius: 1% 1% 1% 50%/1% 1% 1% 20%;
+  -webkit-border-radius: 1%;
+  border-radius: 1% 1% 1% 50%/1% 1% 1% 20%;
+}
+.sofa .homer .collar.right {
+  top: -13px;
+  left: 22px;
+  z-index: 1;
+  -moz-transform: rotate(15deg) skewX(30deg);
+  -ms-transform: rotate(15deg) skewX(30deg);
+  -webkit-transform: rotate(15deg) skewX(30deg);
+  transform: rotate(15deg) skewX(30deg);
+  -moz-border-radius: 1% 20% 20% 50%/1% 30% 50% 20%;
+  -webkit-border-radius: 1%;
+  border-radius: 1% 20% 20% 50%/1% 30% 50% 20%;
+}
+.sofa .homer .collar-neck {
+  top: 1px;
+  height: 15px;
+  width: 22px;
+  border-top: 1px solid #222222;
+  z-index: 2;
+}
+.sofa .homer .collar-neck.left {
+  background: #FFFFFF;
+  left: 20px;
+  -moz-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  transform: rotate(35deg);
+}
+.sofa .homer .collar-neck.right {
+  top: -3px;
+  left: 44px;
+  -moz-transform: rotate(-52deg);
+  -ms-transform: rotate(-52deg);
+  -webkit-transform: rotate(-52deg);
+  transform: rotate(-52deg);
+}
+.sofa .homer .collar-neck.right:before {
+  top: 0;
+  height: 10px;
+  width: 8px;
+  background: #FFFFFF;
+}
+.sofa .homer .body {
+  top: 0;
+  left: 0;
+  height: 130px;
+  width: 75px;
+  background: #FFFFFF;
+  border-top: 1px solid #222222;
+  border-right: 1px solid #222222;
+  -moz-border-radius: 30% 50% 10% 1%/20% 50% 20% 1%;
+  -webkit-border-radius: 30%;
+  border-radius: 30% 50% 10% 1%/20% 50% 20% 1%;
+  z-index: 1;
+}
+.sofa .homer .belly {
+  bottom: 22px;
+  left: 35px;
+  width: 70px;
+  height: 80px;
+  background: #FFFFFF;
+  border-right: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+  -moz-border-radius: 1% 80% 25% 60%/1% 90% 10% 20%;
+  -webkit-border-radius: 1%;
+  border-radius: 1% 80% 25% 60%/1% 90% 10% 20%;
+  -moz-transform: rotate(-10deg);
+  -ms-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+  z-index: 4;
+}
+.sofa .homer .belly:before {
+  height: 30px;
+  width: 30px;
+  top: -5px;
+  left: 11px;
+  background: #FFFFFF;
+  -moz-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+.sofa .homer .bum {
+  bottom: 0;
+  left: 28px;
+  width: 80px;
+  height: 40px;
+  background: #4369BC;
+  border-right: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+  -moz-border-radius: 1% 1% 40% 1%/1% 1% 90% 1%;
+  -webkit-border-radius: 1%;
+  border-radius: 1% 1% 40% 1%/1% 1% 90% 1%;
+  z-index: 3;
+}
+.sofa .homer .leg {
+  top: 115px;
+  width: 50px;
+  height: 100px;
+  background: #4369BC;
+  border: 1px solid #222222;
+  -moz-border-radius: 1% 50% 40% 60%/1% 30% 10% 10%;
+  -webkit-border-radius: 1%;
+  border-radius: 1% 50% 40% 60%/1% 30% 10% 10%;
+}
+.sofa .homer .leg.left {
+  left: 42px;
+  z-index: 4;
+}
+.sofa .homer .leg.left:before {
+  top: -3px;
+  height: 30px;
+  width: 30px;
+  background: #4369BC;
+}
+.sofa .homer .leg.right {
+  left: 82px;
+  z-index: 2;
+}
+.sofa .homer .leg.right:before {
+  top: -18px;
+  height: 45px;
+  width: 50px;
+  background: #4369BC;
+  border-top: 1px solid #222222;
+  border-right: 1px solid #222222;
+  -moz-border-radius: 1% 90% 1% 1%/1% 80% 1% 1%;
+  -webkit-border-radius: 1%;
+  border-radius: 1% 90% 1% 1%/1% 80% 1% 1%;
+}
+.sofa .homer .leg:after {
+  bottom: 15px;
+  width: 100%;
+  height: 80%;
+  border-bottom: 1px solid #222222;
+  -moz-border-radius: inherit;
+  -webkit-border-radius: inherit;
+  border-radius: inherit;
+}
+.sofa .homer .shoe {
+  top: 200px;
+  width: 55px;
+  height: 38px;
+  background: #757F88;
+  border: 1px solid #222222;
+  -moz-border-radius: 1% 90% 15% 50%/1% 85% 15% 50%;
+  -webkit-border-radius: 1%;
+  border-radius: 1% 90% 15% 50%/1% 85% 15% 50%;
+  -moz-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+.sofa .homer .shoe.left {
+  left: 49px;
+  z-index: 2;
+}
+.sofa .homer .shoe.right {
+  left: 92px;
+  z-index: 1;
+}
+.sofa .homer .shoe:before {
+  top: 1px;
+  left: -9px;
+  width: 15px;
+  height: 30px;
+  border-left: 1px solid #222222;
+  background: inherit;
+  -moz-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+.sofa .homer .shoe:after {
+  bottom: 1px;
+  left: -5px;
+  height: 6px;
+  width: 12px;
+  border-left: 1px solid #222222;
+  border-right: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+  background: inherit;
+  -moz-transform: rotate(5deg) skew(20deg);
+  -ms-transform: rotate(5deg) skew(20deg);
+  -webkit-transform: rotate(5deg) skew(20deg);
+  transform: rotate(5deg) skew(20deg);
+}
+.sofa .homer-sleeve {
+  top: 8px;
+  left: 15px;
+  height: 40px;
+  width: 48px;
+  border: 1px solid #222222;
+  background: #FFFFFF;
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -moz-border-radius: 50% 50% 50% 50%/80% 80% 15% 15%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 50% 50% 50%/80% 80% 15% 15%;
+}
+.sofa .homer-sleeve:before {
+  bottom: -10px;
+  width: 100%;
+  height: 20px;
+  border-top: 1px solid #222222;
+  -moz-border-radius: 50% 50% 1% 1%/50% 50% 1% 1%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 50% 1% 1%/50% 50% 1% 1%;
+}
+.sofa .homer-arm {
+  top: 37px;
+  left: 8px;
+  height: 30px;
+  width: 40px;
+  background: #FFCD38;
+  border-left: 1px solid #222222;
+  border-right: 1px solid #222222;
+  -moz-transform: rotate(25deg);
+  -ms-transform: rotate(25deg);
+  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
+  -moz-border-radius: 40% 60% 1% 1%/13% 32% 1% 1%;
+  -webkit-border-radius: 40%;
+  border-radius: 40% 60% 1% 1%/13% 32% 1% 1%;
+}
+.sofa .homer-arm .elbow {
+  bottom: -26px;
+  left: -1px;
+  height: 25px;
+  width: 40px;
+  border-left: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+  background: #FFCD38;
+  -moz-border-radius: 1% 1% 40% 50%/1% 1% 50% 90%;
+  -webkit-border-radius: 1%;
+  border-radius: 1% 1% 40% 50%/1% 1% 50% 90%;
+}
+.sofa .homer-arm .elbow .arm-lower {
+  bottom: 13px;
+  left: 17px;
+  width: 73px;
+  height: 36px;
+  background: #FFCD38;
+  border-top: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+  border-right: 1px solid #222222;
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -webkit-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+  -moz-border-radius: 30% 70% 1% 10%/20% 90% 1% 10%;
+  -webkit-border-radius: 30%;
+  border-radius: 30% 70% 1% 10%/20% 90% 1% 10%;
+}
+.sofa .homer-arm .elbow .arm-lower:before {
+  left: -5px;
+  top: -5px;
+  height: 20px;
+  width: 20px;
+  background: #FFCD38;
+}
+.sofa .homer-arm .elbow .arm-lower span {
+  width: 8px;
+  height: 16px;
+  background: #FFCD38;
+  border: 1px solid #222222;
+  border-top-color: transparent;
+  -moz-border-radius: 0 30% 50% 50%;
+  -webkit-border-radius: 0;
+  border-radius: 0 30% 50% 50%;
+  -moz-transform: rotate(-25deg);
+  -ms-transform: rotate(-25deg);
+  -webkit-transform: rotate(-25deg);
+  transform: rotate(-25deg);
+}
+.sofa .homer-arm .elbow .arm-lower span:nth-of-type(1) {
+  left: 56px;
+  bottom: -12px;
+  z-index: 3;
+  -moz-transform: rotate(-36deg);
+  -ms-transform: rotate(-36deg);
+  -webkit-transform: rotate(-36deg);
+  transform: rotate(-36deg);
+}
+.sofa .homer-arm .elbow .arm-lower span:nth-of-type(2) {
+  left: 61px;
+  bottom: -8px;
+  z-index: 2;
+  -moz-transform: rotate(-32deg);
+  -ms-transform: rotate(-32deg);
+  -webkit-transform: rotate(-32deg);
+  transform: rotate(-32deg);
+}
+.sofa .homer-arm .elbow .arm-lower span:nth-of-type(3) {
+  left: 66px;
+  bottom: -4px;
+  z-index: 1;
+  -moz-transform: rotate(-28deg);
+  -ms-transform: rotate(-28deg);
+  -webkit-transform: rotate(-28deg);
+  transform: rotate(-28deg);
+}
+.sofa .marge {
+  height: 130px;
+  width: 75px;
+  top: 10px;
+  left: 110px;
+}
+.sofa .marge .head {
+  top: -80px;
+  left: -10px;
+  width: 60px;
+  height: 70px;
+  background: #FFCD38;
+  -moz-border-radius: 50% 50% 50% 20%/35% 30% 50% 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50% 50% 50% 20%/35% 30% 50% 50%;
+  -moz-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  -webkit-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+  z-index: 3;
+  border: 1px solid #222222;
+  border-bottom-color: transparent;
+}
+.sofa .marge .head .hair {
+  top: -130px;
+  left: 0px;
+  height: 150px;
+  width: 65px;
+  background: #4673AC;
+  -moz-border-radius: 35% 50% 25% 25%/10% 42% 8% 5%;
+  -webkit-border-radius: 35%;
+  border-radius: 35% 50% 25% 25%/10% 42% 8% 5%;
+  -moz-transform: rotate(-12deg);
+  -ms-transform: rotate(-12deg);
+  -webkit-transform: rotate(-12deg);
+  transform: rotate(-12deg);
+}
+.sofa .marge .head .hair .front,
+.sofa .marge .head .hair .back {
+  height: 100%;
+  width: 16px;
+}
+.sofa .marge .head .hair .front span,
+.sofa .marge .head .hair .back span {
+  height: 16px;
+  width: 10px;
+  border: 1px solid #222222;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.sofa .marge .head .hair .front span.hair_1,
+.sofa .marge .head .hair .back span.hair_1 {
+  top: 0px;
+}
+.sofa .marge .head .hair .front span.hair_2,
+.sofa .marge .head .hair .back span.hair_2 {
+  top: 14px;
+}
+.sofa .marge .head .hair .front span.hair_3,
+.sofa .marge .head .hair .back span.hair_3 {
+  top: 28px;
+}
+.sofa .marge .head .hair .front span.hair_4,
+.sofa .marge .head .hair .back span.hair_4 {
+  top: 42px;
+}
+.sofa .marge .head .hair .front span.hair_5,
+.sofa .marge .head .hair .back span.hair_5 {
+  top: 56px;
+}
+.sofa .marge .head .hair .front span.hair_6,
+.sofa .marge .head .hair .back span.hair_6 {
+  top: 70px;
+}
+.sofa .marge .head .hair .front span.hair_7,
+.sofa .marge .head .hair .back span.hair_7 {
+  top: 84px;
+}
+.sofa .marge .head .hair .front span.hair_8,
+.sofa .marge .head .hair .back span.hair_8 {
+  top: 98px;
+}
+.sofa .marge .head .hair .front span.hair_9,
+.sofa .marge .head .hair .back span.hair_9 {
+  top: 112px;
+}
+.sofa .marge .head .hair .front span.hair_10,
+.sofa .marge .head .hair .back span.hair_10 {
+  top: 126px;
+}
+.sofa .marge .head .hair .front span.hair_1,
+.sofa .marge .head .hair .back span.hair_1 {
+  right: 17px;
+  -moz-transform: rotate(-20deg);
+  -ms-transform: rotate(-20deg);
+  -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+}
+.sofa .marge .head .hair .front span.hair_2,
+.sofa .marge .head .hair .back span.hair_2 {
+  right: 13px;
+  -moz-transform: rotate(-18deg);
+  -ms-transform: rotate(-18deg);
+  -webkit-transform: rotate(-18deg);
+  transform: rotate(-18deg);
+}
+.sofa .marge .head .hair .front span.hair_3,
+.sofa .marge .head .hair .back span.hair_3 {
+  right: 10px;
+  -moz-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+}
+.sofa .marge .head .hair .front span.hair_4,
+.sofa .marge .head .hair .back span.hair_4 {
+  right: 7px;
+  -moz-transform: rotate(-13deg);
+  -ms-transform: rotate(-13deg);
+  -webkit-transform: rotate(-13deg);
+  transform: rotate(-13deg);
+}
+.sofa .marge .head .hair .front span.hair_5,
+.sofa .marge .head .hair .back span.hair_5 {
+  right: 5px;
+  -moz-transform: rotate(-11deg);
+  -ms-transform: rotate(-11deg);
+  -webkit-transform: rotate(-11deg);
+  transform: rotate(-11deg);
+}
+.sofa .marge .head .hair .front span.hair_6,
+.sofa .marge .head .hair .back span.hair_6 {
+  right: 3px;
+  -moz-transform: rotate(-9deg);
+  -ms-transform: rotate(-9deg);
+  -webkit-transform: rotate(-9deg);
+  transform: rotate(-9deg);
+}
+.sofa .marge .head .hair .front span.hair_7,
+.sofa .marge .head .hair .back span.hair_7 {
+  right: 2px;
+  -moz-transform: rotate(-7deg);
+  -ms-transform: rotate(-7deg);
+  -webkit-transform: rotate(-7deg);
+  transform: rotate(-7deg);
+}
+.sofa .marge .head .hair .front span.hair_8,
+.sofa .marge .head .hair .back span.hair_8 {
+  right: 1px;
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.sofa .marge .head .hair .front span.hair_9,
+.sofa .marge .head .hair .back span.hair_9 {
+  right: 0px;
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.sofa .marge .head .hair .front span.hair_10,
+.sofa .marge .head .hair .back span.hair_10 {
+  right: 0px;
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.sofa .marge .head .hair .front {
+  right: -6px;
+}
+.sofa .marge .head .hair .back {
+  left: -6px;
+}
+.sofa .marge .head .eye {
+  height: 25px;
+  width: 25px;
+  background: #FFFFFF;
+  border: 1px solid #222222;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.sofa .marge .head .eye.left {
+  z-index: 2;
+  left: 16px;
+}
+.sofa .marge .head .eye.right {
+  left: 38.72727px;
+  z-index: 1;
+}
+.sofa .marge .head .eye.right:before {
+  left: 60%;
+}
+.sofa .marge .head .eye:before {
+  top: 50%;
+  left: 50%;
+  height: 3px;
+  width: 3px;
+  background: black;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.sofa .marge .head .eye.left {
+  top: 30px;
+  z-index: 8;
+}
+.sofa .marge .head .eye.right {
+  top: 33px;
+  z-index: 6;
+}
+.sofa .marge .body .dress-bottom {
+  top: 88px;
+  left: 45px;
+  background: #98CB54;
+  height: 105px;
+  width: 80px;
+  border-right: 1px solid #222222;
+  border-bottom: 1px solid #222222;
+  -moz-border-radius: 0 80% 30% 70%/0 35% 10% 30%;
+  -webkit-border-radius: 0;
+  border-radius: 0 80% 30% 70%/0 35% 10% 30%;
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -webkit-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+.sofa .marge .body .dress-bottom:before {
+  top: -20px;
+  left: -6px;
+  background: #98CB54;
+  height: 100px;
+  width: 60px;
+  border-right: 1px solid #222222;
+  -moz-transform: rotate(-80deg);
+  -ms-transform: rotate(-80deg);
+  -webkit-transform: rotate(-80deg);
+  transform: rotate(-80deg);
+  -moz-border-radius: 0 20% 30% 0/0 20% 50% 0;
+  -webkit-border-radius: 0;
+  border-radius: 0 20% 30% 0/0 20% 50% 0;
+}
+.sofa .marge .body .dress-top {
+  background: #98CB54;
+  height: 100px;
+  width: 80px;
+  top: 10px;
+  left: 0px;
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
+  border-right: 1px solid #222222;
+}

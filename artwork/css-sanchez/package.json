@@ -1,0 +1,25 @@
+{
+    "name": "css-sanchez",
+    "version": "1.0.0",
+    "title": "CSS Sanchez",
+    "description": "You've heard of Pickle Rick? This is CSS Sanchez broh. 100% lightweight, retina-friendly HTML + CSS inspired by Adult Swim's Rick and Morty.",
+    "author": {
+        "name": "Michael Loscalzo",
+        "avatar": "https://pbs.twimg.com/profile_images/1028008661455720448/UBqcWke6_200x200.jpg",
+        "web": "http://billythespacekid.com/",
+        "social": [{
+            "title": "Twitter",
+            "url": "https://twitter.com/MichaelLoscalzo"
+        }, {
+            "title": "Medium.com",
+            "url": "https://medium.com/@MichaelLoscalzo"
+        }]
+    },
+    "html": "css-sanchez.html",
+    "css": ["css-sanchez.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["sanchez", "picklerick"],
+    "original": "http://billythespacekid.com/css-sanchez/"
+}

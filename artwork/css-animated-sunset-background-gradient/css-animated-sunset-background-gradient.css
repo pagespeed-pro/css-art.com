@@ -1,0 +1,78 @@
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+body .container1, body .container2, body .container3, html .container1, html .container2, html .container3 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body .container1, html .container1 {
+  background-image: linear-gradient(#eebaa5, #de7d8e 70%);
+}
+body .container2, html .container2 {
+  background: #5583BE;
+}
+body .container3, html .container3 {
+  background-image: linear-gradient(#ef4700 20%, #ff9919 90%);
+}
+body .content, html .content {
+  background-image: url("http://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Silhouettes-PNG/Palm_Trees_Silhouette_PNG_Clip_Art_Image.png?m=1463584089");
+  background-size: 500px;
+  background-repeat: no-repeat;
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  bottom: 0;
+  left: -120px;
+}
+
+@keyframes opacity-change1 {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes opacity-change2 {
+  0%, 100%, 50% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.5;
+  }
+}
+@keyframes opacity-change3 {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.container1 {
+  -moz-animation: opacity-change1 linear 5s infinite;
+  -webkit-animation: opacity-change1 linear 5s infinite;
+  animation: opacity-change1 linear 5s infinite;
+}
+
+.container2 {
+  -moz-animation: opacity-change2 linear 5s infinite;
+  -webkit-animation: opacity-change2 linear 5s infinite;
+  animation: opacity-change2 linear 5s infinite;
+}
+
+.container3 {
+  -moz-animation: opacity-change3 linear 5s infinite;
+  -webkit-animation: opacity-change3 linear 5s infinite;
+  animation: opacity-change3 linear 5s infinite;
+}
