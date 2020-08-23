@@ -1,1 +1,32 @@
-{"name":"abatron-803-replica-in-css","version":"1.0.0","title":"Abatron 803 replica in CSS","description":"I stumbled upon an image of a calculator the other day, and I really liked it so decided to replicate it in HTML/CSS. \n\nThis is the Abatron 803 from 1976: https://www.calculator.org/calculators/Abatron_803.html\n\nThe original image I stumbled upon (which I thought was a real calculator too) and inspired my design by turned out to be a photoshop creation by https://dribbble.com/shots/499001-Abatron-Calculator-Buttons. That design was an interpretation of a real calculator from 1975, called the Abatron 803. \n\nHowever, I have since edited my design to reflect the design of the real Abatron 803.","author":{"name":"Sarah Fossheim","web":"https://fossheim.io/","social":[{"title":"Codepen","url":"https://codepen.io/fossheim/"},{"title":"Twitter","url":"https://twitter.com/liatrisbian"},{"title":"Github","url":"https://github.com/sarahfossheim"},{"title":"dev.to","url":"https://dev.to/fossheim"}]},"html":"abatron-803-replica-in-css.html","css":["abatron-803-replica-in-css.css"],"js":"","thumbnail":"thumbnail.png","splash":"splash.png","keywords":["abatron","803","calculator"],"original":"https://codepen.io/fossheim/pen/xxbmXZq","codepen":"https://codepen.io/fossheim/pen/xxbmXZq"}
+{
+    "name": "abatron-803-replica-in-css",
+    "version": "1.0.0",
+    "title": "Abatron 803 replica in CSS",
+    "description": "I stumbled upon an image of a calculator the other day, and I really liked it so decided to replicate it in HTML/CSS. \n\nThis is the Abatron 803 from 1976: https://www.calculator.org/calculators/Abatron_803.html\n\nThe original image I stumbled upon (which I thought was a real calculator too) and inspired my design by turned out to be a photoshop creation by https://dribbble.com/shots/499001-Abatron-Calculator-Buttons. That design was an interpretation of a real calculator from 1975, called the Abatron 803. \n\nHowever, I have since edited my design to reflect the design of the real Abatron 803.",
+    "author": {
+        "name": "Sarah Fossheim",
+        "web": "https://fossheim.io/",
+        "avatar": "https://assets.codepen.io/3445183/internal/avatars/users/default.png?format=auto&height=512&version=1573597468&width=512",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/fossheim/"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/liatrisbian"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/sarahfossheim"
+        }, {
+            "title": "dev.to",
+            "url": "https://dev.to/fossheim"
+        }]
+    },
+    "html": "abatron-803-replica-in-css.html",
+    "css": ["abatron-803-replica-in-css.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["abatron", "803", "calculator"],
+    "original": "https://codepen.io/fossheim/pen/xxbmXZq",
+    "codepen": "https://codepen.io/fossheim/pen/xxbmXZq"
+}

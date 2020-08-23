@@ -1,1 +1,32 @@
-{"name":"braunradio-css","version":"1.0.0","title":"braun radio","description":"","author":{"name":"Sarah Fossheim","web":"https://fossheim.io/","social":[{"title":"Codepen","url":"https://codepen.io/fossheim/"},{"title":"Twitter","url":"https://twitter.com/liatrisbian"},{"title":"Github","url":"https://github.com/sarahfossheim"},{"title":"dev.to","url":"https://dev.to/fossheim"}]},"html":"braunradio-css.html","css":["braunradio-css.css"],"js":"","thumbnail":"thumbnail.png","splash":"splash.png","keywords":["braun","radio"],"original":"https://codepen.io/fossheim/pen/OJypZve","codepen":"https://codepen.io/fossheim/pen/OJypZve"}
+{
+    "name": "braunradio-css",
+    "version": "1.0.0",
+    "title": "braun radio",
+    "description": "",
+    "author": {
+        "name": "Sarah Fossheim",
+        "web": "https://fossheim.io/",
+        "avatar": "https://assets.codepen.io/3445183/internal/avatars/users/default.png?format=auto&height=512&version=1573597468&width=512",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/fossheim/"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/liatrisbian"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/sarahfossheim"
+        }, {
+            "title": "dev.to",
+            "url": "https://dev.to/fossheim"
+        }]
+    },
+    "html": "braunradio-css.html",
+    "css": ["braunradio-css.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["braun", "radio"],
+    "original": "https://codepen.io/fossheim/pen/OJypZve",
+    "codepen": "https://codepen.io/fossheim/pen/OJypZve"
+}
