@@ -1,1 +1,32 @@
-{"name":"only-css-starfox-arwing-drone","version":"1.0.0","title":"Only CSS: STARFOX Arwing Drone","description":"Arwing Drone. :)\nClick to barrel roll.","author":{"name":"Yusuke Nakaya","avatar":"https://assets.codepen.io/1343285/internal/avatars/users/default.png?format=auto&height=512&version=100000&width=512","web":"","social":[{"title":"Codepen","url":"https://codepen.io/YusukeNakaya/"},{"title":"Twitter","url":"https://twitter.com/s14garnet"},{"title":"Github","url":"https://github.com/YusukeNakaya"},{"title":"Dribbble","url":"https://dribbble.com/yusukeMX5"}]},"html":"only-css-starfox-arwing-drone.html","css":["only-css-starfox-arwing-drone.css"],"js":"","thumbnail":"thumbnail.png","splash":"splash.png","keywords":["animation","3d","starfox"],"original":"https://codepen.io/YusukeNakaya/pen/LvePgj","codepen":"https://codepen.io/YusukeNakaya/pen/LvePgj"}
+{
+    "name": "only-css-starfox-arwing-drone",
+    "version": "1.0.0",
+    "title": "STARFOX Arwing Drone",
+    "description": "Arwing Drone. :)\nClick to barrel roll.",
+    "author": {
+        "name": "Yusuke Nakaya",
+        "avatar": "https://assets.codepen.io/1343285/internal/avatars/users/default.png?format=auto&height=512&version=100000&width=512",
+        "web": "",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/YusukeNakaya/"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/s14garnet"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/YusukeNakaya"
+        }, {
+            "title": "Dribbble",
+            "url": "https://dribbble.com/yusukeMX5"
+        }]
+    },
+    "html": "only-css-starfox-arwing-drone.html",
+    "css": ["only-css-starfox-arwing-drone.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["animation", "3d", "starfox"],
+    "original": "https://codepen.io/YusukeNakaya/pen/LvePgj",
+    "codepen": "https://codepen.io/YusukeNakaya/pen/LvePgj"
+}

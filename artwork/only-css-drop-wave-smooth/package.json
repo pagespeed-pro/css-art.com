@@ -1,1 +1,32 @@
-{"name":"only-css-drop-wave-smooth","version":"1.0.0","title":"Only CSS: Drop Wave Smooth","description":"CSS Smooth water :)","author":{"name":"Yusuke Nakaya","avatar":"https://assets.codepen.io/1343285/internal/avatars/users/default.png?format=auto&height=512&version=100000&width=512","web":"","social":[{"title":"Codepen","url":"https://codepen.io/YusukeNakaya/"},{"title":"Twitter","url":"https://twitter.com/s14garnet"},{"title":"Github","url":"https://github.com/YusukeNakaya"},{"title":"Dribbble","url":"https://dribbble.com/yusukeMX5"}]},"html":"only-css-drop-wave-smooth.html","css":["only-css-drop-wave-smooth.css"],"js":"","thumbnail":"thumbnail.png","splash":"splash.png","keywords":["wave","animation","3d"],"original":"https://codepen.io/YusukeNakaya/pen/VMGmyX","codepen":"https://codepen.io/YusukeNakaya/pen/VMGmyX"}
+{
+    "name": "only-css-drop-wave-smooth",
+    "version": "1.0.0",
+    "title": "Drop Wave Smooth",
+    "description": "CSS Smooth water :)",
+    "author": {
+        "name": "Yusuke Nakaya",
+        "avatar": "https://assets.codepen.io/1343285/internal/avatars/users/default.png?format=auto&height=512&version=100000&width=512",
+        "web": "",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/YusukeNakaya/"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/s14garnet"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/YusukeNakaya"
+        }, {
+            "title": "Dribbble",
+            "url": "https://dribbble.com/yusukeMX5"
+        }]
+    },
+    "html": "only-css-drop-wave-smooth.html",
+    "css": ["only-css-drop-wave-smooth.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["wave", "animation", "3d"],
+    "original": "https://codepen.io/YusukeNakaya/pen/VMGmyX",
+    "codepen": "https://codepen.io/YusukeNakaya/pen/VMGmyX"
+}

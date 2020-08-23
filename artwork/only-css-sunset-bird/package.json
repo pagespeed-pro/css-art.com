@@ -1,1 +1,32 @@
-{"name":"only-css-sunset-bird","version":"1.0.0","title":"Only CSS: Sunset Bird","description":"Autumn is coming :)","author":{"name":"Yusuke Nakaya","avatar":"https://assets.codepen.io/1343285/internal/avatars/users/default.png?format=auto&height=512&version=100000&width=512","web":"","social":[{"title":"Codepen","url":"https://codepen.io/YusukeNakaya/"},{"title":"Twitter","url":"https://twitter.com/s14garnet"},{"title":"Github","url":"https://github.com/YusukeNakaya"},{"title":"Dribbble","url":"https://dribbble.com/yusukeMX5"}]},"html":"only-css-sunset-bird.html","css":["only-css-sunset-bird.css"],"js":"","thumbnail":"thumbnail.png","splash":"splash.png","keywords":["sunset","bird"],"original":"https://codepen.io/YusukeNakaya/pen/oNNLeyv","codepen":"https://codepen.io/YusukeNakaya/pen/oNNLeyv"}
+{
+    "name": "only-css-sunset-bird",
+    "version": "1.0.0",
+    "title": "Sunset Bird",
+    "description": "Autumn is coming :)",
+    "author": {
+        "name": "Yusuke Nakaya",
+        "avatar": "https://assets.codepen.io/1343285/internal/avatars/users/default.png?format=auto&height=512&version=100000&width=512",
+        "web": "",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/YusukeNakaya/"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/s14garnet"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/YusukeNakaya"
+        }, {
+            "title": "Dribbble",
+            "url": "https://dribbble.com/yusukeMX5"
+        }]
+    },
+    "html": "only-css-sunset-bird.html",
+    "css": ["only-css-sunset-bird.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["sunset", "bird"],
+    "original": "https://codepen.io/YusukeNakaya/pen/oNNLeyv",
+    "codepen": "https://codepen.io/YusukeNakaya/pen/oNNLeyv"
+}

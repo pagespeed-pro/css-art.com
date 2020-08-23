@@ -1,1 +1,32 @@
-{"name":"only-css-showcase-car","version":"1.0.0","title":"Only CSS: Showcase Car","description":"I really like car!! :)","author":{"name":"Yusuke Nakaya","avatar":"https://assets.codepen.io/1343285/internal/avatars/users/default.png?format=auto&height=512&version=100000&width=512","web":"","social":[{"title":"Codepen","url":"https://codepen.io/YusukeNakaya/"},{"title":"Twitter","url":"https://twitter.com/s14garnet"},{"title":"Github","url":"https://github.com/YusukeNakaya"},{"title":"Dribbble","url":"https://dribbble.com/yusukeMX5"}]},"html":"only-css-showcase-car.html","css":["only-css-showcase-car.css"],"js":"","thumbnail":"thumbnail.png","splash":"splash.png","keywords":["car","animation","3d","interactive"],"original":"https://codepen.io/YusukeNakaya/pen/ZadZxL","codepen":"https://codepen.io/YusukeNakaya/pen/ZadZxL"}
+{
+    "name": "only-css-showcase-car",
+    "version": "1.0.0",
+    "title": "Showcase Car",
+    "description": "I really like car!! :)",
+    "author": {
+        "name": "Yusuke Nakaya",
+        "avatar": "https://assets.codepen.io/1343285/internal/avatars/users/default.png?format=auto&height=512&version=100000&width=512",
+        "web": "",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/YusukeNakaya/"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/s14garnet"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/YusukeNakaya"
+        }, {
+            "title": "Dribbble",
+            "url": "https://dribbble.com/yusukeMX5"
+        }]
+    },
+    "html": "only-css-showcase-car.html",
+    "css": ["only-css-showcase-car.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["car", "animation", "3d", "interactive"],
+    "original": "https://codepen.io/YusukeNakaya/pen/ZadZxL",
+    "codepen": "https://codepen.io/YusukeNakaya/pen/ZadZxL"
+}

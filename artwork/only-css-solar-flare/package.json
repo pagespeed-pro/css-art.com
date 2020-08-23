@@ -1,1 +1,32 @@
-{"name":"only-css-solar-flare","version":"1.0.0","title":"Only CSS: Solar Flare","description":"The perfect sun.","author":{"name":"Yusuke Nakaya","avatar":"https://assets.codepen.io/1343285/internal/avatars/users/default.png?format=auto&height=512&version=100000&width=512","web":"","social":[{"title":"Codepen","url":"https://codepen.io/YusukeNakaya/"},{"title":"Twitter","url":"https://twitter.com/s14garnet"},{"title":"Github","url":"https://github.com/YusukeNakaya"},{"title":"Dribbble","url":"https://dribbble.com/yusukeMX5"}]},"html":"only-css-solar-flare.html","css":["only-css-solar-flare.css"],"js":"","thumbnail":"thumbnail.png","splash":"splash.png","keywords":["sun","solar flare"],"original":"https://codepen.io/YusukeNakaya/pen/XaeMvq","codepen":"https://codepen.io/YusukeNakaya/pen/XaeMvq"}
+{
+    "name": "only-css-solar-flare",
+    "version": "1.0.0",
+    "title": "Solar Flare",
+    "description": "The perfect sun.",
+    "author": {
+        "name": "Yusuke Nakaya",
+        "avatar": "https://assets.codepen.io/1343285/internal/avatars/users/default.png?format=auto&height=512&version=100000&width=512",
+        "web": "",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/YusukeNakaya/"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/s14garnet"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/YusukeNakaya"
+        }, {
+            "title": "Dribbble",
+            "url": "https://dribbble.com/yusukeMX5"
+        }]
+    },
+    "html": "only-css-solar-flare.html",
+    "css": ["only-css-solar-flare.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["sun", "solar flare"],
+    "original": "https://codepen.io/YusukeNakaya/pen/XaeMvq",
+    "codepen": "https://codepen.io/YusukeNakaya/pen/XaeMvq"
+}
