@@ -1,8 +1,8 @@
 {
-    "name": "one-div-unikitty-pixelart",
+    "name": "airbender-aang-x-blm",
     "version": "1.0.0",
-    "title": "One Div Unikitty Pixelart",
-    "description": "Everything is awesome!!! (Thank you for exisiting Lego Movie)",
+    "title": "Airbender Aang x BLM",
+    "description": "This CSS art/animation was inspired by a video of monks marching peacefully in a BlackLivesMatter protest, Berlin, Germany.",
     "author": {
         "name": "Annie Bombanie",
         "web": "https://anniebombanie.com/",
@@ -21,12 +21,12 @@
             "url": "https://medium.com/@anniebombanie"
         }]
     },
-    "html": "one-div-unikitty-pixelart.html",
-    "css": ["one-div-unikitty-pixelart.css"],
+    "html": "airbender-aang-x-blm.html",
+    "css": ["airbender-aang-x-blm.css"],
     "js": "// Twitter @anniebombanie_",
     "thumbnail": "thumbnail.png",
     "splash": "splash.png",
-    "keywords": ["unicorn", "single div"],
-    "original": "https://codepen.io/anniebombanie/pen/yLYjWmq",
-    "codepen": "https://codepen.io/anniebombanie/pen/yLYjWmq"
+    "keywords": ["avatar", "airbender", "monk"],
+    "original": "https://codepen.io/anniebombanie/pen/qBbXQej",
+    "codepen": "https://codepen.io/anniebombanie/pen/qBbXQej"
 }
