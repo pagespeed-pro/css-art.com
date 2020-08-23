@@ -1,0 +1,29 @@
+{
+    "name": "coffee-for-you",
+    "version": "1.0.0",
+    "title": "Coffee for you",
+    "description": "I made you a coffee Hot beverage\n\nCSS only\n\nTook me some time.\n\nUnfortunately, I couldn't make it responsive because of the SVG filters. And the filters don't work properly under Safari but hey...it's something Smiling face with open mouth and cold sweat",
+    "author": {
+        "name": "Vadim Bauer",
+        "web": "https://vbauer.de/",
+        "avatar": "https://assets.codepen.io/282310/internal/avatars/users/default.png?format=auto&height=512&version=1592069297&width=512",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/v_Bauer/"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/BauerVadim"
+        }, {
+            "title": "XING",
+            "url": "https://www.xing.com/profile/Vadim_Bauer2"
+        }]
+    },
+    "html": "coffee-for-you.html",
+    "css": ["coffee-for-you.css"],
+    "js": "  function resize() {\n    if (window.innerWidth <=800) {\n      console.log('set to 4');\n      document.getElementById('blurFilter').setAttribute('stdDeviation', 4);\n    }else{\n      console.log('set to 10');\n      document.getElementById('blurFilter').setAttribute('stdDeviation', 8);\n    }\n  }\n\n  window.addEventListener(\"resize\", resize);\n  document.addEventListener(\"DOMContentLoaded\", resize);\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["coffee"],
+    "original": "https://codepen.io/v_Bauer/pen/zYrBoJa",
+    "codepen": "https://codepen.io/v_Bauer/pen/zYrBoJa"
+}

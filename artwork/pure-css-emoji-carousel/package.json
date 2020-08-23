@@ -1,0 +1,29 @@
+{
+    "name": "pure-css-emoji-carousel",
+    "version": "1.0.0",
+    "title": "Pure CSS Emoji Carousel 🎠",
+    "description": "Carousels tend to get negative press. I think this one has a little charm to it 😅\n\nCreated with CSS and CSS properties ",
+    "author": {
+        "name": "Jhey",
+        "web": "https://jhey.dev/",
+        "avatar": "https://assets.codepen.io/605876/internal/avatars/users/default.png?format=auto&height=512&version=1529079380&width=512",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/jh3y/"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/jh3yy"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/jh3y"
+        }]
+    },
+    "html": "pure-css-emoji-carousel.html",
+    "css": ["pure-css-emoji-carousel.css"],
+    "js": "// NOPE",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["carousel", "3d", "horse", "emoji"],
+    "original": "https://codepen.io/jh3y/pen/qwqOwK",
+    "codepen": "https://codepen.io/jh3y/pen/qwqOwK"
+}

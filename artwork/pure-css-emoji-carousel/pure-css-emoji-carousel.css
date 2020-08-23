@@ -1,0 +1,236 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  transform-style: preserve-3d;
+  perspective: 1500px;
+  background: #86e2d5;
+}
+:root {
+  --carouselDur: 4;
+  --horseDur: 2;
+  --baseInnerEven: #ff8565;
+  --baseInnerOdd: #dcdad4;
+  --baseEven: #ff7653;
+  --baseOdd: #e7e5e2;
+  --core: #abb7b7;
+  --coreWindow: #fff;
+  --coreWindowSill: #7b8e8e;
+  --baseLight: #fff;
+  --baseSkirt: #ff9478;
+  --hatOdd: #ff9478;
+  --hatEven: #f2f1ef;
+}
+.carousel {
+  height: 100px;
+  width: 100px;
+  transform: translate(-50%, -50%) rotateX(-15deg) rotateY(40deg);
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.carousel__core {
+  bottom: -10%;
+  height: 150%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  transform-style: preserve-3d;
+  width: 20%;
+}
+.carousel__core div {
+  background: var(--core);
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotateY(calc(((-360 / var(--sides)) * var(--side)) * 1deg)) translate3d(0, 0, 30px) rotateY(180deg);
+  width: 100%;
+}
+.carousel__core div:nth-of-type(even):after {
+  background: var(--coreWindow);
+  border: 2px solid var(--coreWindowSill);
+  border-radius: 35% 35% 0 0;
+  content: '';
+  height: 15%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, 0%);
+  width: 50%;
+}
+.carousel__horses {
+  animation: carousel calc(var(--carouselDur) * 1s) infinite linear;
+  height: 50px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  width: 50px;
+  z-index: 5;
+}
+.carousel__horse {
+  animation: horse calc(var(--horseDur) * 1s) calc((var(--horseDur) * var(--delay)) * 1s) infinite linear;
+  font-size: 2rem;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+}
+.carousel__base {
+  animation: carousel calc(var(--carouselDur) * 1s) infinite linear;
+  left: 50%;
+  position: absolute;
+  top: 100%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+}
+.carousel__base div {
+  background: var(--baseOdd);
+  height: 20px;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, 0) rotateY(calc(((-360 / var(--sides)) * var(--side)) * 1deg)) translate3d(0, 0, 50px);
+  transform-origin: top center;
+  transform-style: preserve-3d;
+  width: 20px;
+}
+.carousel__base div:before {
+  -webkit-clip-path: inset(40% 0 0 0);
+  content: '';
+  position: absolute;
+  border-bottom: 120px solid var(--baseInnerOdd);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  clip-path: inset(40% 0 0 0);
+  left: 50%;
+  transform: translate(-50%, 0) rotateX(90deg) translate(0, -50px);
+  transform-origin: top center;
+  transform-style: preserve-3d;
+}
+.carousel__base div:nth-of-type(even) {
+  background: var(--baseEven);
+}
+.carousel__base div:nth-of-type(even):before {
+  border-bottom: 120px solid var(--baseInnerEven);
+}
+.carousel__base div:after {
+  content: '';
+  background: radial-gradient(circle at 50% 50%, var(--baseLight) 20%, var(--baseSkirt) 20%), var(--baseSkirt);
+  height: 20px;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translate3d(-50%, 0, 70px);
+  transform-origin: top center;
+  width: 40px;
+}
+.carousel__hat {
+  animation: carousel calc(var(--carouselDur) * 1s) infinite linear;
+  bottom: 100%;
+  height: 50px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  width: 50px;
+}
+.carousel__hat div {
+  border-bottom: 140px solid var(--hatOdd);
+  border-top: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, 0) rotateY(calc(((-360 / var(--sides)) * var(--side)) * 1deg)) rotateX(65deg);
+  transform-origin: top center;
+  transform-style: preserve-3d;
+}
+.carousel__hat div:nth-of-type(even) {
+  border-bottom: 140px solid var(--hatEven);
+}
+.carousel__hat div:nth-of-type(even):after {
+  background: var(--hatEven);
+}
+.carousel__hat div:after {
+  background: var(--hatOdd);
+  border-radius: 0 0 40px 40px;
+  content: '';
+  height: 20px;
+  position: absolute;
+  top: 140px;
+  transform: translate(-50%, 0) rotateX(-65deg);
+  transform-origin: top center;
+  width: 40px;
+}
+@-moz-keyframes carousel {
+  from {
+    transform: translate(-50%, -50%) rotateY(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateY(360deg);
+  }
+}
+@-webkit-keyframes carousel {
+  from {
+    transform: translate(-50%, -50%) rotateY(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateY(360deg);
+  }
+}
+@-o-keyframes carousel {
+  from {
+    transform: translate(-50%, -50%) rotateY(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateY(360deg);
+  }
+}
+@keyframes carousel {
+  from {
+    transform: translate(-50%, -50%) rotateY(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotateY(360deg);
+  }
+}
+@-moz-keyframes horse {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotateY(calc(((-360 / var(--horses)) * var(--horse)) * 1deg)) translate3d(0, 0, calc(var(--depth) * 1px)) rotateY(180deg);
+  }
+  50% {
+    transform: translate(-50%, 0) rotateY(calc(((-360 / var(--horses)) * var(--horse)) * 1deg)) translate3d(0, 0, calc(var(--depth) * 1px)) rotateY(180deg);
+  }
+}
+@-webkit-keyframes horse {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotateY(calc(((-360 / var(--horses)) * var(--horse)) * 1deg)) translate3d(0, 0, calc(var(--depth) * 1px)) rotateY(180deg);
+  }
+  50% {
+    transform: translate(-50%, 0) rotateY(calc(((-360 / var(--horses)) * var(--horse)) * 1deg)) translate3d(0, 0, calc(var(--depth) * 1px)) rotateY(180deg);
+  }
+}
+@-o-keyframes horse {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotateY(calc(((-360 / var(--horses)) * var(--horse)) * 1deg)) translate3d(0, 0, calc(var(--depth) * 1px)) rotateY(180deg);
+  }
+  50% {
+    transform: translate(-50%, 0) rotateY(calc(((-360 / var(--horses)) * var(--horse)) * 1deg)) translate3d(0, 0, calc(var(--depth) * 1px)) rotateY(180deg);
+  }
+}
+@keyframes horse {
+  0%, 100% {
+    transform: translate(-50%, -50%) rotateY(calc(((-360 / var(--horses)) * var(--horse)) * 1deg)) translate3d(0, 0, calc(var(--depth) * 1px)) rotateY(180deg);
+  }
+  50% {
+    transform: translate(-50%, 0) rotateY(calc(((-360 / var(--horses)) * var(--horse)) * 1deg)) translate3d(0, 0, calc(var(--depth) * 1px)) rotateY(180deg);
+  }
+}

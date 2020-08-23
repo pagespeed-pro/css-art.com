@@ -1,1 +1,29 @@
-{"name":"piano-css-drawing","version":"1.0.0","title":"Piano CSS Drawing","description":"","author":{"name":"Brianna McDonald","web":"https://briannamcdonald.carrd.co/","social":[{"title":"Codepen","url":"https://codepen.io/briannamcdonald/"},{"title":"Twitter","url":"https://twitter.com/Brianna_Codes"},{"title":"Github","url":"https://github.com/briannamcdonald"}]},"html":"piano-css-drawing.html","css":["piano-css-drawing.css"],"js":"","thumbnail":"thumbnail.png","splash":"splash.png","keywords":["piano","drawing"],"original":"https://codepen.io/briannamcdonald/pen/RwrExpZ","codepen":"https://codepen.io/briannamcdonald/pen/RwrExpZ"}
+{
+    "name": "piano-css-drawing",
+    "version": "1.0.0",
+    "title": "Piano CSS Drawing",
+    "description": "",
+    "author": {
+        "name": "Brianna McDonald",
+        "web": "https://briannamcdonald.carrd.co/",
+        "avatar": "https://avatars1.githubusercontent.com/u/54158369?s=460&u=23ab9a8dc460bf57d2303ced5d097b295840562f&v=4",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/briannamcdonald/"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/Brianna_Codes"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/briannamcdonald"
+        }]
+    },
+    "html": "piano-css-drawing.html",
+    "css": ["piano-css-drawing.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["piano", "drawing"],
+    "original": "https://codepen.io/briannamcdonald/pen/RwrExpZ",
+    "codepen": "https://codepen.io/briannamcdonald/pen/RwrExpZ"
+}

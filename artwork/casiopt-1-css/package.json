@@ -1,7 +1,7 @@
 {
     "name": "casiopt-1-css",
     "version": "1.0.0",
-    "title": "CasioPT-1",
+    "title": "Casio PT-1",
     "description": "Vintage Casio PT-1 keyboard drawn entirely with HTML and CSS; using divs, gradients and box-shadows. \n\nTutorials on how to make drawings like this: \nhttps://fossheim.io/writing/posts/css-macintosh/\nhttps://fossheim.io/writing/posts/css-polaroid-camera/\n\nGitHub repo with my CSS drawings:\nhttps://github.com/sarahfossheim/art.css\n\nIf you like my work: \nhttps://www.buymeacoffee.com/fossheim\nhttps://www.patreon.com/fossheim",
     "author": {
         "name": "Sarah Fossheim",

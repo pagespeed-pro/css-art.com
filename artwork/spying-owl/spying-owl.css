@@ -1,0 +1,321 @@
+body {
+  background-color: #54c9f7;
+}
+.container{
+  position: absolute;
+  top: 50%;
+  left: 45%;
+}
+.triangle1{
+  width: 10px;
+	height: 0;
+	border-top: 68px solid transparent;
+	border-left: 90px solid #a2bdbd;
+	border-bottom: 45px solid transparent;
+}
+.triangle2{
+  width: 10px;
+	height: 0;
+	border-top: 65px solid transparent;
+	border-right: 90px solid #c3d4d4;
+	border-bottom: 45px solid transparent;
+  position: relative;
+  bottom: 66px;
+  right: 12px;
+}
+.triangle3{
+  width: 0;
+	height: 0;
+	border-top: 45px solid transparent;
+	border-right: 40px solid #a1b3b3;
+	border-bottom: 25px solid transparent;
+  position: relative;
+  bottom: 122px;
+  right: 50px;
+  transform: rotate(21deg);
+}
+.triangle4{
+  width: 0;
+	height: 0;
+	border-top: 45px solid transparent;
+	border-left: 40px solid #a1b3b3;
+	border-bottom: 25px solid transparent;
+  position: relative;
+  bottom: 190px;
+  left: 11px;
+  transform: rotate(-21deg);
+}
+.triangle5{
+  width: 0;
+	height: 0;
+	border-left: 27px solid transparent;
+	border-right: 27px solid transparent;
+	border-bottom: 61px solid #638585;
+  position: relative;
+  bottom: 251px;
+  right: 27.5px;
+}
+.triangle6{
+  width: 0;
+	height: 0;
+	border-left: 27px solid transparent;
+	border-right: 27px solid transparent;
+	border-top: 35px solid #638585;
+  position: relative;
+  bottom: 251.5px;
+  right: 27px;
+}
+.triangle7{
+  width: 0;
+  height: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 80px 40px;
+  border-color: transparent transparent #638585 transparent;
+  position: relative;
+  bottom: 408px;
+  right: 123px;
+  transform: rotate(-10deg);
+  z-index: -1;
+}
+.triangle8{
+  width: 0;
+  height: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 80px 40px;
+  border-color: transparent transparent #638585 transparent;
+  position: relative;
+  bottom: 488px;
+  left: 81px;
+  transform: rotate(10deg) rotateY(180deg);
+  z-index: -1;
+}
+.triangle9{
+  width: 10px;
+	height: 0;
+	border-top: 58px solid transparent;
+	border-right:88px solid #fff;
+	border-bottom: 65px solid transparent;
+  position: relative;
+  bottom: 630px;
+  right: 1px;
+  transform: rotate(0deg) rotateY(180deg);
+}
+.triangle10{
+  width: 10px;
+	height: 0;
+	border-top: 58px solid transparent;
+	border-right: 89px solid #dae3e3;
+	border-bottom: 65px solid transparent;
+  position: relative;
+  bottom: 753px;
+  right: 100px;
+  transform: rotate(0deg) rotateY(0deg);
+}
+.triangle11{
+  width: 10px;
+	height: 0;
+	border-top: 58px solid transparent;
+	border-right:88px solid #abb6ba;
+	border-bottom: 65px solid transparent;
+  position: relative;
+  bottom: 935px;
+  right: 89px;
+  transform: rotate(0deg) rotateY(180deg);
+  z-index: -1;
+}
+.triangle12{
+  width: 10px;
+	height: 0;
+	border-top: 58px solid transparent;
+	border-right: 89px solid #a1b3b3;
+	border-bottom: 65px solid transparent;
+  position: relative;
+  bottom: 1058px;
+  right: 11px;
+  transform: rotate(0deg) rotateY(0deg);
+  z-index: -1;
+}
+.circle1{
+  width: 80px;
+  height: 80px;
+  background-color: black;
+  border-radius: 50%;
+  position: relative;
+  bottom: 65px;
+  left: 10px;
+  z-index: 99 !important;
+}
+.circle2{
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 50%;
+  position: relative;
+  bottom: -9.5px;
+  left: 10px;
+}
+.dot1{
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  position: relative;
+  left: 65px;
+  top: -10px;
+}
+.eye1{
+  width: 45px;
+  height: 45px;
+  background-color: #1d3945;
+  border-radius: 50%;
+  position: relative;
+  top: 12px;
+  left: 7px;
+}
+.eyelash1{
+    width: 60px;
+    height: 30px; 
+    background-color: #a1b3b3;
+    border-top-left-radius: 110px;  
+    border-top-right-radius: 110px; 
+    border-bottom: 0;
+  transform: rotate(-35deg);
+  position: relative;
+  bottom: 43px;
+  left: -10px;
+}
+.triangle12{
+  width: 10px;
+	height: 0;
+	border-top: 58px solid transparent;
+	border-right:88px solid #a1b3b3;
+	border-bottom: 65px solid transparent;
+  position: relative;
+  bottom: 1057px;
+  right: 11px;
+  transform: rotate(0deg);
+  z-index: -1;
+}
+.uppertriangle1{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 90px 60px 0;
+  border-color: transparent #7b8b94 transparent transparent;
+  position: relative;
+  bottom: 138px;
+  right: 80.5px; 
+}
+.uppertriangle2{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 90px 60px 0;
+  border-color: transparent #a2bdbd transparent transparent;
+  position: relative;
+  bottom: 198px;
+  right: -9px;
+  transform: rotateY(180deg);
+}
+.halfcircle3{
+  width: 60px;
+  height: 30px; 
+  background-color: white;
+  border-top-left-radius: 110px;  
+  border-top-right-radius: 110px; 
+  border-bottom: 0;
+  transform: rotate(146deg);
+  position: relative;
+  bottom: 1154px;
+  left: 22px;  
+}
+.halfcircle4{
+  width: 44px;
+  height: 22px; 
+  background-color: #1d3945;
+  border-top-left-radius: 110px;  
+  border-top-right-radius: 110px; 
+  border-bottom: 0;
+  transform: rotate(146deg);
+  position: relative;
+  bottom: 1182px;
+  left: 24px;  
+}
+.headtriangle1{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 52px 50px;
+  border-color: transparent transparent #7e8d94 transparent;
+  position: relative;
+  bottom: 280px;
+  z-index: -9;
+}
+.headtriangle2{
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 52px 50px;
+  border-color: transparent transparent #7e8d94 transparent;
+  position: relative;
+  bottom: 330.5px;
+  left: 128px;
+  transform: rotateY(180deg);
+  
+}
+.headrectangle{
+  width: 86px;
+  height: 35px;
+  background-color: #698894;  
+  position: relative;
+  bottom: 366px;
+  left: 48px;
+  z-index: -9;
+}
+.eartriangle1{
+  width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-left: 50px solid #555;
+	border-bottom: 25px solid transparent;
+  position: relative;
+  bottom: 430px;
+  left: -3px;
+  transform: rotate(-20deg);
+}
+.eartriangle2{
+  width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-left: 50px solid #555;
+	border-bottom: 25px solid transparent;
+  position: relative;
+  bottom: 480px;
+  left: 130px;
+  transform: rotate(20deg) rotateY(180deg);
+}
+.nosetriangle1{
+  width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-right: 25px solid #fa992a;
+	border-bottom: 40px solid transparent;
+  position: relative;
+  bottom: 410px;
+  left: 65px;
+}
+.nosetriangle2{
+  width: 0;
+	height: 0;
+	border-top: 15px solid transparent;
+	border-right: 25px solid #f2a957;
+	border-bottom: 40px solid transparent;
+  position: relative;
+  bottom: 465px;
+  left: 88px;
+  transform: rotateY(180deg);
+}
