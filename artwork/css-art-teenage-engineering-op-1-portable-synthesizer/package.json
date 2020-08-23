@@ -1,1 +1,32 @@
-{"name":"css-art-teenage-engineering-op-1-portable-synthesizer","version":"1.0.0","title":"CSS-Art Teenage Engineering OP-1 Portable Synthesizer","description":"Hope you like it!","author":{"name":"Shunya","web":"https://t.co/6qX2X63Lxj?amp=1","avatar":"https://gravatar.com/avatar/ff9e2ef303b0b34363306f94ffbbf744?d=https%3A%2F%2Fassets.codepen.io%2Finternal%2Favatars%2Fusers%2Fdefault.png&format=auto&height=512&version=0&width=512","social":[{"title":"Codepen","url":"https://codepen.io/shunyadezain/"},{"title":"Twitter","url":"https://twitter.com/shunyadezain"},{"title":"Instagram","url":"https://www.instagram.com/shunyadezain/?hl=ja"},{"title":"Dribbble","url":"https://dribbble.com/shunyakoide"}]},"html":"css-art-teenage-engineering-op-1-portable-synthesizer.html","css":["css-art-teenage-engineering-op-1-portable-synthesizer.css"],"js":"// Teenage Engineering OP-1 Portable Synthesizer\n//Hope you like it!","thumbnail":"thumbnail.png","splash":"splash.png","keywords":["synthesizer","op-1","softui","neumorphism"],"original":"https://codepen.io/shunyadezain/pen/QWyVwep","codepen":"https://codepen.io/shunyadezain/pen/QWyVwep"}
+{
+    "name": "css-art-teenage-engineering-op-1-portable-synthesizer",
+    "version": "1.0.0",
+    "title": "CSS-Art Teenage Engineering OP-1 Portable Synthesizer",
+    "description": "Hope you like it!",
+    "author": {
+        "name": "Shunya",
+        "web": "http://13creativ.com/",
+        "avatar": "https://gravatar.com/avatar/ff9e2ef303b0b34363306f94ffbbf744?d=https%3A%2F%2Fassets.codepen.io%2Finternal%2Favatars%2Fusers%2Fdefault.png&format=auto&height=512&version=0&width=512",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/shunyadezain/"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/shunyadezain"
+        }, {
+            "title": "Instagram",
+            "url": "https://www.instagram.com/shunyadezain/?hl=ja"
+        }, {
+            "title": "Dribbble",
+            "url": "https://dribbble.com/shunyakoide"
+        }]
+    },
+    "html": "css-art-teenage-engineering-op-1-portable-synthesizer.html",
+    "css": ["css-art-teenage-engineering-op-1-portable-synthesizer.css"],
+    "js": "// Teenage Engineering OP-1 Portable Synthesizer\n//Hope you like it!",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["synthesizer", "op-1", "softui", "neumorphism"],
+    "original": "https://codepen.io/shunyadezain/pen/QWyVwep",
+    "codepen": "https://codepen.io/shunyadezain/pen/QWyVwep"
+}
