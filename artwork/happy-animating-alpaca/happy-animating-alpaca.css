@@ -1,0 +1,443 @@
+body {
+  margin: 0;
+  background: #f5e9c7;
+  background: linear-gradient(#f5e9c7, #f1e1b1, #f1e1b1 92vmin, #e87e70 calc( 92vmin + 1px ), #e46a5a);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+}
+
+.clouds {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+.clouds div,
+.clouds div::before,
+.clouds div::after {
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  bottom: 0;
+}
+.clouds div {
+  background-color: #f0aea5;
+  position: absolute;
+}
+.clouds div:first-child {
+  width: 20vmin;
+  height: 10vmin;
+  top: 5%;
+  left: 10%;
+}
+.clouds div:first-child::before {
+  content: '';
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  background-color: #f3bdb6;
+  left: -20%;
+}
+.clouds div:first-child::after {
+  content: '';
+  width: 30%;
+  height: 30%;
+  position: absolute;
+  background-color: #f2b5ae;
+  right: -15%;
+}
+.clouds div:last-child {
+  width: 30vmin;
+  height: 15vmin;
+  top: 15%;
+  right: 15%;
+}
+.clouds div:last-child::before {
+  content: '';
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  background-color: #f4c1bb;
+  left: -15%;
+}
+.clouds div:last-child::after {
+  content: '';
+  width: 70%;
+  height: 70%;
+  position: absolute;
+  background-color: #f3b9b2;
+  right: -25%;
+}
+
+.alpaca {
+  width: 50vmin;
+  height: 80vmin;
+}
+.alpaca__top, .alpaca__btm {
+  width: 100%;
+  height: 50%;
+  position: relative;
+}
+.alpaca__top {
+  justify-content: space-between;
+}
+
+.head {
+  width: 40%;
+  height: 100%;
+  position: relative;
+  align-items: flex-end;
+}
+.head__ears {
+  width: 100%;
+  height: 28%;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.head__ears div {
+  background-color: #75c9b1;
+  width: 25%;
+  height: 100%;
+  width: 25%;
+  position: relative;
+}
+.head__ears div::after {
+  content: '';
+  width: 62%;
+  height: 72%;
+  position: absolute;
+  background-color: #23646f;
+  bottom: 5%;
+}
+.head__ears div:first-child, .head__ears div:first-child::after {
+  border-radius: 100% 0 0 100% / 50% 0 0 50%;
+}
+.head__ears div:first-child {
+  transform-origin: 100% 100%;
+  transform: rotate(0);
+  animation: twitch-ear-left 10s 3s infinite ease-in-out;
+}
+.head__ears div:first-child::after {
+  right: 10%;
+}
+.head__ears div:last-child, .head__ears div:last-child::after {
+  border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+}
+.head__ears div:last-child {
+  transform-origin: 0 100%;
+  transform: rotate(0deg);
+  animation: twitch-ear-right 10s 3.1s infinite ease-in-out;
+}
+.head__ears div:last-child::after {
+  left: 10%;
+}
+.head__face-neck {
+  width: 100%;
+  height: 75%;
+  background-color: #75c9b1;
+  border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+}
+.head__face-neck .face {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 36%;
+}
+.head__face-neck .face::before {
+  content: '';
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  background-color: #9ad7c6;
+  border-radius: 50%;
+}
+.head__face-neck .eyes,
+.head__face-neck .cheeks,
+.head__face-neck .nose,
+.head__face-neck .mouth {
+  z-index: 10;
+}
+.head__face-neck .eyes {
+  width: 76%;
+  height: 45%;
+  justify-content: space-between;
+  margin-top: -5%;
+}
+.head__face-neck .eyes div {
+  width: 35%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 50%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.head__face-neck .eyes div::after {
+  content: '';
+  width: 45%;
+  height: 45%;
+  position: absolute;
+  background-color: #23646f;
+  border-radius: 50%;
+  animation: blink 5s infinite ease-in-out;
+}
+.head__face-neck .cheeks {
+  width: 90%;
+  height: 25%;
+  justify-content: space-between;
+  margin-top: 3%;
+}
+.head__face-neck .cheeks div {
+  width: 18%;
+  height: 100%;
+  background-color: #e87e70;
+  border-radius: 50%;
+}
+.head__face-neck .snout {
+  position: absolute;
+  width: 77%;
+  height: 70%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: -4%;
+}
+.head__face-neck .snout::before {
+  content: '';
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  background-color: #b7e3d6;
+  border-radius: 50%;
+}
+.head__face-neck .nose {
+  width: 20%;
+  height: 15%;
+  background-color: #23646f;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  margin-top: 5%;
+}
+.head__face-neck .mouth {
+  width: 50%;
+  height: 25%;
+  background-color: #23646f;
+  border-radius: 0 0 50% 50% / 0 0 100% 100%;
+  margin-top: 5%;
+  animation: smile 4s 0.5s infinite ease-in-out;
+}
+
+.tail {
+  border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+  background-color: #75c9b1;
+  width: 10%;
+  height: 30%;
+  align-self: flex-end;
+  transform-origin: 0% 100%;
+  transform: rotate(0);
+  animation: flick-tail 8s 1.5s infinite ease-in-out;
+}
+
+.body {
+  background-color: #75c9b1;
+  width: 90%;
+  height: 55%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 50% 50% / 0 0 60% 60%;
+  align-items: center;
+  justify-content: flex-end;
+}
+.body .spots,
+.body .spots::after,
+.body .spots::before {
+  border-radius: 50%;
+}
+.body .spots {
+  width: 0;
+  height: 0;
+  position: relative;
+  right: 16%;
+  bottom: 13%;
+  border-top: 6.5vmin solid #acdfd0;
+  border-right: 2.5vmin solid transparent;
+  border-left: 2.5vmin solid transparent;
+}
+.body .spots::before, .body .spots::after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  background-color: transparent;
+  border-top: 5vmin solid #acdfd0;
+  border-right: 2vmin solid transparent;
+  border-left: 2vmin solid transparent;
+  transform-origin: 50% 0;
+}
+.body .spots::before {
+  left: -130%;
+  transform: rotate(55deg) translate3d(0, -90%, 0);
+}
+.body .spots::after {
+  right: -130%;
+  transform: rotate(-55deg) translate3d(0, -90%, 0);
+}
+
+.legs {
+  width: 90%;
+  height: 100%;
+  justify-content: space-between;
+}
+.legs__front, .legs__back {
+  width: 45%;
+  height: 100%;
+  position: relative;
+}
+.legs__front div, .legs__back div {
+  width: 55%;
+  height: 90%;
+  background-color: #75c9b1;
+  position: absolute;
+}
+.legs__front div::after, .legs__back div::after {
+  content: '';
+  width: 35%;
+  height: 50%;
+  position: absolute;
+  background-color: #75c9b1;
+  bottom: -20%;
+}
+.legs__front div:first-child, .legs__front div:first-child::after, .legs__back div:first-child, .legs__back div:first-child::after {
+  background-color: #23646f;
+}
+.legs__front div {
+  border-radius: 0 0 100% 100% / 0 0 25% 25%;
+}
+.legs__front div:first-child::after, .legs__front div:last-child::after {
+  left: 50%;
+  transform: translate3d(-50%, 0, 0);
+}
+.legs__front div:last-child {
+  right: 0;
+}
+.legs__back div {
+  border-radius: 0 0 0 100% / 0 0 0 30%;
+}
+.legs__back div:last-child, .legs__back div:last-child::after, .legs__back div:first-child::after {
+  right: 0;
+}
+
+@keyframes blink {
+  0% {
+    height: 45%;
+  }
+  2% {
+    height: 0%;
+  }
+  4% {
+    height: 45%;
+  }
+  6% {
+    height: 0%;
+  }
+  8% {
+    height: 45%;
+  }
+  100% {
+    height: 45%;
+  }
+}
+@keyframes flick-tail {
+  0% {
+    transform: rotate(0);
+  }
+  2% {
+    transform: rotate(45deg);
+  }
+  6% {
+    transform: rotate(-10deg);
+  }
+  9% {
+    transform: rotate(45deg);
+  }
+  12% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes twitch-ear-left {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(-45deg);
+  }
+  8% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0sdeg);
+  }
+}
+@keyframes twitch-ear-right {
+  0% {
+    transform: rotate(0deg);
+  }
+  5% {
+    transform: rotate(45deg);
+  }
+  8% {
+    transform: rotate(0deg);
+  }
+  51% {
+    transform: rotate(0deg);
+  }
+  53% {
+    transform: rotate(45deg);
+  }
+  55% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes smile {
+  0% {
+    height: 25%;
+  }
+  70% {
+    height: 25%;
+  }
+  75% {
+    height: 40%;
+  }
+  80% {
+    height: 40%;
+  }
+  85% {
+    height: 5%;
+  }
+  90% {
+    height: 20%;
+  }
+  95% {
+    height: 5%;
+  }
+  100% {
+    height: 25%;
+  }
+}
