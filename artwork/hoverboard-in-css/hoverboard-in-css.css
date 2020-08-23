@@ -1,0 +1,237 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #731e29;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #5c5d70;
+  background-image: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.2));
+  overflow: hidden;
+}
+
+.scene {
+  position: relative;
+  font-size: 90vmin;
+  width: 1em;
+  height: 0.0567em;
+}
+
+.board,
+.shadow {
+  animation: 1s ease-in-out alternate infinite;
+}
+
+.board {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-origin: 56% 50%;
+  animation-name: float;
+  will-change: transform;
+}
+
+.foot-binding {
+  position: absolute;
+  left: 10%;
+  width: 26.5%;
+  bottom: calc(100% + 0.005em);
+  height: 0.014175em;
+  border-width: 0.005em 0.005em 0;
+  border-color: #90af42;
+  border-radius: 0.014175em 0.014175em 0 0;
+  background-color: #ccd883;
+}
+.foot-binding::after {
+  content: '';
+  position: absolute;
+  left: 33%;
+  bottom: 0;
+  width: 33%;
+  height: 0.02835em;
+  border-width: 0.005em 0.005em 0;
+  border-color: #dd5a56;
+  border-radius: 50% 50% 0 0;
+  background-color: #ed787b;
+}
+
+.grav-pads {
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  top: calc(100% + 0.005em);
+  height: 0.02835em;
+}
+.grav-pads::before, .grav-pads::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 33%;
+  height: 100%;
+  border-color: #474747;
+  border-width: 0 0.005em 0.005em;
+  border-radius: 0 0 0.0567em 0.0567em;
+  background-color: #8b8b8b;
+}
+.grav-pads::before {
+  left: 0;
+  box-shadow: inset 0.0099225em -0.0099225em 0 rgba(0, 0, 0, 0.2);
+}
+.grav-pads::after {
+  right: 0;
+  box-shadow: inset -0.0099225em -0.0099225em 0 rgba(0, 0, 0, 0.2);
+}
+
+.power {
+  position: absolute;
+  left: 43.75%;
+  width: 12.5%;
+  top: calc(100% + 0.005em);
+  height: 0.02835em;
+  background: #9251ea;
+  border-width: 0 0.005em 0.0075em;
+  border-color: #5b23af;
+  box-shadow: inset 0 -0.0099225em 0 rgba(0, 0, 0, 0.2);
+  transform-origin: top center;
+  transform: perspective(1rem) rotateX(-30deg);
+}
+
+.body {
+  position: absolute;
+  right: 0;
+  width: .84em;
+  height: 100%;
+  border-width: 0.005em;
+  border-radius: 0 0.02835em 0.02835em 0.01125em;
+  background-color: #ed787b;
+  box-shadow: inset -0.014175em -0.014175em #dd5a56;
+}
+.body::after {
+  content: '';
+  position: absolute;
+  right: calc(100% - 0.01em);
+  top: -0.005em;
+  width: .175em;
+  height: calc(100% + 0.01em);
+  background-color: inherit;
+  border-width: inherit;
+  border-right-width: 0;
+  border-radius: 0.02835em 0 0 0.02835em;
+  box-shadow: inset 0.014175em -0.014175em #dd5a56;
+  transform-origin: 100% 50%;
+  transform: rotate(15deg) translateX(-0.00125em);
+}
+
+.shadow {
+  position: absolute;
+  left: 12.5%;
+  top: 0.1701em;
+  width: 82.5%;
+  height: 0.02835em;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  filter: blur(0.005em);
+  animation-name: shade;
+  will-change: opacity, transform;
+}
+
+.fx {
+  position: absolute;
+  left: 50%;
+  width: .1em;
+  height: 0.005em;
+  border-radius: 0.005em;
+  background-color: #e6e6e6;
+  animation: fx linear infinite both;
+  will-change: transform;
+}
+.fx:first-child {
+  top: -.1em;
+  box-shadow: 50vw -10vh 0 #e6e6e6, -40vw 20vh 0 #e6e6e6;
+  animation-duration: 2s;
+}
+.fx:last-child {
+  top: .1em;
+  box-shadow: 30vw -25vh 0 #e6e6e6, -40vw 15vh 0 #e6e6e6;
+  animation-duration: 1s;
+  animation-delay: -1.5s;
+}
+
+.dust {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: .1em;
+  height: .1em;
+}
+.dust::before, .dust::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-width: 0 0 0 .01em;
+  border-color: #8b8b8b;
+  border-radius: 50%;
+  filter: blur(0.005em);
+  animation: dust 2s linear infinite both;
+  will-change: opacity, transform;
+}
+.dust::before {
+  left: 0;
+  top: 0;
+}
+.dust::after {
+  left: -25%;
+  top: 25%;
+  animation-delay: .5s;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(0) rotate(-0.5deg);
+  }
+  to {
+    transform: translateY(-0.0567em) rotate(1deg);
+  }
+}
+@keyframes shade {
+  to {
+    opacity: .5;
+    transform: scaleX(0.9);
+  }
+}
+@keyframes fx {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100vw);
+  }
+}
+@keyframes dust {
+  0% {
+    opacity: 0;
+    transform: translateX(0) rotate(-90deg);
+  }
+  12.5% {
+    opacity: 1;
+  }
+  25%,
+  100% {
+    opacity: 0;
+    transform: translateX(-0.1em) rotate(90deg);
+  }
+}

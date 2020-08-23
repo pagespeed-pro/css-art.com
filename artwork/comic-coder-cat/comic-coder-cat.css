@@ -1,0 +1,500 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* --- Colours --- */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.wrapper {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+@media only screen and (min-width: 640px) and (orientation: landscape) {
+  .wrapper {
+    display: flex;
+  }
+}
+
+p {
+  font-style: italic;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+}
+p.desc {
+  display: block;
+  background-color: #000;
+  color: #fff;
+  padding: 2%;
+  font-size: 1.2rem;
+}
+@media only screen and (min-width: 767px) and (orientation: landscape) {
+  p.desc {
+    font-size: 1.5rem;
+  }
+}
+
+.bubble {
+  line-height: 1.3;
+  padding: 2%;
+  transform: rotate(-10deg);
+}
+.bubble p {
+  text-shadow: -0.2vmin -0.2vmin 0 #fff, -0.4vmin -0.4vmin 0 #fff, -0.6vmin -0.6vmin 0 #fff, -0.8vmin -0.8vmin 0 #fff, -1vmin -1vmin 0 #fff, -1.2vmin -1.2vmin 0 #fff, -1.4vmin -1.4vmin 0 #fff, 0.2vmin 0.2vmin 0 #fff, 0.4vmin 0.4vmin 0 #fff, 0.6vmin 0.6vmin 0 #fff, 0.8vmin 0.8vmin 0 #fff, 1vmin 1vmin 0 #fff, 1.2vmin 1.2vmin 0 #fff, 1.4vmin 1.4vmin 0 #fff;
+}
+.bubble p:first-child {
+  font-style: italic;
+  font-size: 2.5rem;
+  margin-top: -2%;
+}
+@media only screen and (min-width: 767px) and (orientation: landscape) {
+  .bubble p:first-child {
+    font-size: 4rem;
+  }
+}
+.bubble p:last-child {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 767px) and (orientation: landscape) {
+  .bubble p:last-child {
+    font-size: 2.5rem;
+  }
+}
+
+.b1,
+.b2 {
+  border: 10px solid #000;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(#d3d3d3, #fff);
+  width: 100%;
+  height: 50%;
+}
+@media only screen and (min-width: 640px) and (orientation: landscape) {
+  .b1,
+  .b2 {
+    width: 50%;
+    height: 100%;
+  }
+}
+.b1::before,
+.b2::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: radial-gradient(circle at center, #000 1px, transparent 1%);
+  background-repeat: repeat;
+  background-size: 8px 8px;
+}
+.b1__cat,
+.b2__cat {
+  width: 70vmin;
+  height: 70vmin;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate3d(-50%, -20%, 0);
+}
+@media only screen and (min-width: 640px) and (orientation: landscape) {
+  .b1__cat,
+  .b2__cat {
+    transform: translate3d(-50%, -25%, 0);
+  }
+}
+.b1__cat--head,
+.b2__cat--head {
+  width: 28vmin;
+  height: 21vmin;
+  border-radius: 88% 88% 60% 60% / 100% 100% 75% 75%;
+  position: absolute;
+  box-shadow: 0.5vmin 0 0 0 #000, -0.5vmin 0 0 0 #000, 0 -0.5vmin 0 0 #000;
+  top: 17%;
+  left: 33%;
+}
+.b1__cat--head .snout,
+.b2__cat--head .snout {
+  width: 15vmin;
+  height: 10vmin;
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #d3d3d3;
+  top: 55%;
+  left: 22.5%;
+}
+.b1__cat--head .snout:after,
+.b2__cat--head .snout:after {
+  content: '';
+  width: 3.5vmin;
+  height: 2.2vmin;
+  display: block;
+  position: absolute;
+  border-radius: 45% 45% 70% 70% / 40% 40% 100% 100%;
+  background-color: #000;
+  top: 10%;
+  left: 39%;
+}
+.b1__cat--head .whiskers--l, .b1__cat--head .whiskers--r,
+.b2__cat--head .whiskers--l,
+.b2__cat--head .whiskers--r {
+  width: 6vmin;
+  height: 0.4vmin;
+  position: absolute;
+  background-color: #7e7e7e;
+  border-radius: 15% 15% 10% 10% / 100%;
+}
+.b1__cat--head .whiskers--l::after, .b1__cat--head .whiskers--l::before, .b1__cat--head .whiskers--r::after, .b1__cat--head .whiskers--r::before,
+.b2__cat--head .whiskers--l::after,
+.b2__cat--head .whiskers--l::before,
+.b2__cat--head .whiskers--r::after,
+.b2__cat--head .whiskers--r::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background-color: #7e7e7e;
+  border-radius: 15% 15% 10% 10% / 100%;
+}
+.b1__cat--ear-l, .b1__cat--ear-r,
+.b2__cat--ear-l,
+.b2__cat--ear-r {
+  width: 10vmin;
+  height: 10vmin;
+  position: absolute;
+  background-color: #d3d3d3;
+  border-radius: 20%;
+  border: 2px solid #000;
+  clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+}
+@media only screen and (min-width: 640px) and (orientation: landscape) {
+  .b1__cat--ear-l, .b1__cat--ear-r,
+  .b2__cat--ear-l,
+  .b2__cat--ear-r {
+    border: 0.5vmin solid #000;
+  }
+}
+.b1__cat--ear-l::before, .b1__cat--ear-r::before,
+.b2__cat--ear-l::before,
+.b2__cat--ear-r::before {
+  content: '';
+  width: 70%;
+  height: 70%;
+  display: block;
+  position: absolute;
+  position: absolute;
+  background-color: #a8a8a8;
+  border-radius: 20%;
+  clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+}
+.b1__cat--ear-l,
+.b2__cat--ear-l {
+  top: 16%;
+  left: 32%;
+  transform: rotate(114deg) skewY(-30deg);
+}
+.b1__cat--ear-l::before,
+.b2__cat--ear-l::before {
+  top: 20%;
+  left: 10.5%;
+}
+.b1__cat--ear-r,
+.b2__cat--ear-r {
+  top: 16.2%;
+  left: 59.6%;
+  transform: rotate(156deg) skewX(-30deg);
+}
+.b1__cat--ear-r::before,
+.b2__cat--ear-r::before {
+  top: 20%;
+  left: 13%;
+}
+.b1__cat--body,
+.b2__cat--body {
+  width: 35vmin;
+  height: 18vmin;
+  top: 41.6%;
+  left: 27.2%;
+  position: absolute;
+  background-color: #000;
+  border-radius: 50% 50% 0% 0% / 100% 100% 0% 0;
+  background: linear-gradient(transparent 52%, #000 52.5%);
+}
+.b1__cat--body::before,
+.b2__cat--body::before {
+  content: '';
+  width: 97%;
+  height: 97%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 1.5%;
+  border-radius: 50% 50% 0% 0% / 100% 100% 0% 0;
+  background: radial-gradient(1% 2.2% at 50% 100%, #fff 12vmin, transparent 12.1vmin), linear-gradient(transparent 10%, #d3d3d3 10%);
+}
+.b1__table,
+.b2__table {
+  width: 200%;
+  height: 100vmin;
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(#fff, #d3d3d3);
+  border-top: 2px solid #000;
+  position: absolute;
+  transform: translate3d(-50%, 25vmin, 0);
+}
+.b1__computer,
+.b2__computer {
+  width: 41vmin;
+  height: 30vmin;
+  position: absolute;
+  top: 60%;
+  left: 6%;
+}
+.b1__computer::before, .b1__computer::after,
+.b2__computer::before,
+.b2__computer::after {
+  border: 0.5vmin solid #000;
+}
+.b1__computer::before,
+.b2__computer::before {
+  content: '';
+  width: 25vmin;
+  height: 13vmin;
+  display: block;
+  position: absolute;
+  box-shadow: 0.2vmin 0.2vmin 0 0 #000, 0.4vmin 0.4vmin 0 0 #000, 0.6vmin 0.6vmin 0 0 #000, 0.8vmin 0.8vmin 0 0 #000, 1vmin 1vmin 0 0 #000;
+  top: 58.6%;
+  left: 36.8%;
+  border-radius: 8%;
+  background-color: #7e7e7e;
+  transform: rotate(15deg) skewX(-35deg);
+}
+.b1__computer::after,
+.b2__computer::after {
+  content: '';
+  width: 34vmin;
+  height: 24vmin;
+  display: block;
+  position: absolute;
+  border-right: 1vmin solid #000;
+  transform: skewY(15deg);
+  top: 17%;
+  left: 0.5%;
+  border-radius: 5%;
+  background-color: #a8a8a8;
+}
+.b1__txt,
+.b2__txt {
+  z-index: 10;
+  position: relative;
+}
+
+.b1 {
+  border-bottom: 0;
+}
+@media only screen and (min-width: 640px) and (orientation: landscape) {
+  .b1 {
+    border-bottom: 10px solid #000;
+    border-right: 5px solid #000;
+  }
+}
+.b1__cat--spark {
+  width: 150%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -85%, 0);
+  position: relative;
+  background: radial-gradient(circle at 50% 70%, #fff 30%, transparent);
+  clip-path: polygon(14% 93%, 2% 84%, 17% 81%, 5% 66%, 23% 70%, 5% 41%, 30% 57%, 22% 24%, 42% 48%, 48% 12%, 55% 49%, 75% 25%, 67% 57%, 90% 45%, 72% 68%, 99% 63%, 77% 80%, 100% 80%, 83% 92%, 100% 100%, 0 100%);
+}
+.b1__cat--head {
+  background: linear-gradient(transparent 50%, #d3d3d3 50.5%), radial-gradient(1.1% 2% at 25% 50%, #d3d3d3 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 25% 49%, #000 1.7vmin, transparent 1.8vmin), radial-gradient(1.1% 2% at 74% 50%, #d3d3d3 1.3vmin, transparent 1.4vmin), radial-gradient(1% 2% at 74% 49%, #000 1.7vmin, transparent 1.8vmin), #d3d3d3;
+}
+.b1__cat--head .snout {
+  background: linear-gradient(#d3d3d3 30%, transparent 30.5%), radial-gradient(1% 1.6% at 37.5% 28%, #d3d3d3 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 38% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.6% at 64.5% 28%, #d3d3d3 1.8vmin, transparent 1.9vmin), radial-gradient(1% 1.6% at 64% 28%, #000 2.2vmin, transparent 2.3vmin), radial-gradient(1% 1.4% at 51.5% 46%, #000 2.5vmin, transparent 2.7vmin);
+}
+.b1__cat--head .whiskers--l {
+  transform: rotate(5deg);
+  top: 65%;
+  left: -7%;
+}
+.b1__cat--head .whiskers--l::before {
+  transform: rotate(5deg);
+  top: -300%;
+  left: 0;
+}
+.b1__cat--head .whiskers--l::after {
+  transform: rotate(-5deg);
+  top: 300%;
+  left: 1%;
+}
+.b1__cat--head .whiskers--r {
+  transform: rotate(-5deg);
+  top: 65%;
+  left: 85%;
+}
+.b1__cat--head .whiskers--r::before {
+  transform: rotate(-5deg);
+  top: -300%;
+  left: 0;
+}
+.b1__cat--head .whiskers--r::after {
+  transform: rotate(5deg);
+  top: 300%;
+  left: 1%;
+}
+.b1__cat--arm-l, .b1__cat--arm-r {
+  width: 9vmin;
+  height: 28vmin;
+  position: absolute;
+  background: radial-gradient(1% 0.35% at 79% 17%, rgba(255, 255, 255, 0.6) 0.5vmin, rgba(255, 255, 255, 0.6) 0.9vmin, transparent 1vmin), radial-gradient(1% 0.35% at 48% 12%, rgba(255, 255, 255, 0.6) 0.5vmin, rgba(255, 255, 255, 0.6) 0.9vmin, transparent 1vmin), radial-gradient(1% 0.35% at 21% 17%, rgba(255, 255, 255, 0.6) 0.5vmin, rgba(255, 255, 255, 0.6) 0.9vmin, transparent 1vmin), radial-gradient(1% 0.35% at 51% 28%, rgba(255, 255, 255, 0.6) 1vmin, rgba(255, 255, 255, 0.6) 1.9vmin, transparent 2vmin), linear-gradient(transparent 15%, #d3d3d3 15.1%), radial-gradient(1% 0.6% at 48% 18%, #d3d3d3 1vmin, #d3d3d3 1.9vmin, transparent 2vmin), radial-gradient(1% 0.5% at 80% 18%, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 1.86vmin), radial-gradient(1% 0.5% at 20% 18%, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 1.86vmin), radial-gradient(1% 0.6% at 48% 18%, #d3d3d3 1.9vmin, #000 2vmin, #000 2.3vmin, transparent 2.36vmin), linear-gradient(transparent 15%, #d3d3d3 15.1%);
+}
+.b1__cat--arm-l::before, .b1__cat--arm-r::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  border-right: 0.5vmin solid #000;
+  border-left: 0.5vmin solid #000;
+  top: 15%;
+  left: 0;
+}
+.b1__cat--arm-l {
+  top: 15%;
+  left: 21%;
+  transform: rotate(-30deg);
+}
+.b1__cat--arm-r {
+  top: 15%;
+  left: 72%;
+  transform: rotate(30deg);
+}
+
+.b2 {
+  border-top: 5px solid #000;
+}
+@media only screen and (min-width: 640px) and (orientation: landscape) {
+  .b2 {
+    border-top: 10px solid #000;
+    border-left: 5px solid #000;
+  }
+}
+.b2__cat--circle {
+  width: 100%;
+  height: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-47%, -75%, 0);
+  position: relative;
+  background: radial-gradient(#fff 50%, transparent 70%);
+  border-radius: 50%;
+}
+.b2__cat--body {
+  width: 36vmin;
+  height: 18vmin;
+  top: 41.6%;
+  left: 27.2%;
+  position: absolute;
+  background-color: #000;
+  border-radius: 50% 50% 0% 0% / 100% 100% 0% 0;
+  background: linear-gradient(transparent 14.5%, #000 15%);
+}
+.b2__cat--body::before {
+  content: '';
+  width: 97%;
+  height: 97%;
+  display: block;
+  position: absolute;
+  top: 1.5%;
+  left: 1.5%;
+  border-radius: 50% 50% 0% 0% / 100% 100% 0% 0;
+  background: radial-gradient(1% 2.2% at 50% 100%, #fff 12vmin, transparent 12.1vmin), linear-gradient(transparent 10%, #d3d3d3 10%);
+}
+.b2__cat--head {
+  background: linear-gradient(182deg, #d3d3d3 41%, transparent 41.5%), linear-gradient(90deg, transparent 36%, #d3d3d3 37%, #d3d3d3 60%, transparent 61.5%), radial-gradient(1.1% 0.3% at 51% 37%, #d3d3d3 10vmin, transparent 10.4vmin), radial-gradient(1.1% 0.3% at 51% 39%, #000 10vmin, transparent 10.4vmin), radial-gradient(1% 2% at 27% 49%, #fff 0.4vmin, transparent 0.5vmin), radial-gradient(1% 2% at 27% 49%, #000 1.4vmin, transparent 1.5vmin), radial-gradient(1% 2% at 72% 49%, #fff 0.4vmin, transparent 0.5vmin), radial-gradient(1% 2% at 72% 49%, #000 1.4vmin, transparent 1.5vmin), #d3d3d3;
+}
+.b2__cat--head .snout {
+  background: linear-gradient(#d3d3d3 25%, transparent 25.5%, transparent 53.5%, #d3d3d3 54%), radial-gradient(1% 1% at 51% 65%, #d3d3d3 3.2vmin, transparent 3.4vmin), radial-gradient(1% 1.2% at 51% 64%, #000 3.2vmin, transparent 3.4vmin), linear-gradient(90deg, transparent 50%, #000 50%, #000 53%, transparent 53%);
+}
+.b2__cat--head .whiskers--l {
+  transform: rotate(-10deg);
+  top: 72%;
+  left: -7%;
+}
+.b2__cat--head .whiskers--l::before {
+  top: -300%;
+  left: 0;
+  transform: rotate(5deg);
+}
+.b2__cat--head .whiskers--l::after {
+  top: 300%;
+  left: 1%;
+  transform: rotate(-5deg);
+}
+.b2__cat--head .whiskers--r {
+  transform: rotate(10deg);
+  top: 72%;
+  left: 85%;
+}
+.b2__cat--head .whiskers--r::before {
+  top: -300%;
+  left: 0;
+  transform: rotate(-5deg);
+}
+.b2__cat--head .whiskers--r::after {
+  top: 300%;
+  left: -1%;
+  transform: rotate(5deg);
+}
+.b2__cat--arm-r {
+  width: 8vmin;
+  height: 20vmin;
+  position: absolute;
+  top: 42%;
+  left: 64%;
+  transform: rotate(-25deg);
+  border-radius: 100% 100% 0% 0% / 100% 50% 0% 100%;
+  border: 0.5vmin solid #000;
+  background-color: #d3d3d3;
+}
+.b2__cat--arm-r::after {
+  content: '';
+  width: 100%;
+  height: 44.5%;
+  display: block;
+  position: absolute;
+  top: -6.6%;
+  left: -23%;
+  border-radius: 30% 100% 100% 40% / 100% 100% 100% 90%;
+  transform: rotate(29.6deg);
+  background: linear-gradient(181deg, #000 6.5%, #d3d3d3 7.5%, #d3d3d3 94%, #000 95%);
+}
+.b2__cat--arm-r::before {
+  content: '';
+  width: 160%;
+  height: 45%;
+  display: block;
+  position: absolute;
+  top: -6%;
+  left: -50%;
+  transform: rotate(30deg);
+  background: radial-gradient(1% 1.2% at 25% 21%, #d3d3d3 1.4vmin, transparent 1.5vmin, transparent 1.8vmin), radial-gradient(1% 1.2% at 20% 47%, #d3d3d3 1.6vmin, #000 1.7vmin, #000 2vmin, transparent 2.2vmin), radial-gradient(1% 1.2% at 25% 21%, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 2vmin), radial-gradient(1% 1.2% at 26% 79%, #d3d3d3 1.4vmin, #000 1.5vmin, #000 1.8vmin, transparent 2vmin);
+}

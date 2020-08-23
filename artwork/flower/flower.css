@@ -1,0 +1,140 @@
+.back_petal_SW {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: 40px;
+  left: 40px;
+
+  background: linear-gradient(180deg, #63559D 0%, rgba(27, 144, 194, 0.67) 100%);
+  border: 7px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 20px rgba(61, 74, 192, 0.7);
+  border-radius: 50px 0px;
+}
+
+.back_petal_SE {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: 40px;
+  right: 40px;
+
+  background: linear-gradient(180deg, #63559D 0%, rgba(27, 144, 194, 0.67) 100%);
+  border: 7px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 20px rgba(61, 74, 192, 0.7);
+  border-radius: 0px 50px;
+}
+
+.front_petal_S {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  bottom: 40px;
+  left: 150px;
+ 
+  background: linear-gradient(180deg, #63559D 0%, rgba(27, 144, 194, 0.90) 100%);
+  border: 7px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 20px rgba(61, 74, 192, 0.7);
+  border-radius: 50px 0px;
+  transform: rotate(-45deg);
+}
+
+.back_petal_NE {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 40px;
+  right: 40px;
+  
+  background: linear-gradient(180deg, #6C559D 0%, rgba(27, 144, 194, 0.67) 100%);
+  border: 7px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 20px rgba(61, 74, 192, 0.7);
+  border-radius: 50px 0px;
+  transform: rotate(180deg);
+}
+
+.front_petal_E {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 150px;
+  right: 40px;
+  
+  background: linear-gradient(180deg, #63559D 0%, rgba(27, 144, 194, 0.90) 100%);
+  border: 7px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 20px rgba(61, 74, 192, 0.7);
+  border-radius: 50px 0px;
+  transform: rotate(-135deg);
+}
+
+.back_petal_NW {
+
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 40px;
+  left: 40px;
+
+  background: linear-gradient(180deg, #6C559D 0%, rgba(27, 144, 194, 0.67) 100%);
+  border: 7px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 20px rgba(61, 74, 192, 0.7);
+  border-radius: 0px 50px;
+  transform: rotate(180deg);
+}
+
+.front_petal_N { 
+  position: relative;
+  width: 200px;
+  height: 200px;
+  left: 150px;
+  top: 40px;
+
+  background: linear-gradient(180deg, #6C559D 0%, rgba(27, 144, 194, 0.90) 100%);
+  border: 7px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 20px rgba(61, 74, 192, 0.7);
+  border-radius: 50px 0px;
+  transform: rotate(135deg);
+}
+
+.front_petal_W {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 150px;
+  left: 40px;
+  background: linear-gradient(180deg, #63559D 0%, rgba(27, 144, 194, 0.90) 100%);
+  border: 7px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 20px rgba(61, 74, 192, 0.7);
+  border-radius: 50px 0px;
+  transform: rotate(45deg);
+}
+
+.core {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 200px;
+  top: 200px;
+  background: #FF9500;
+  border: 6px solid #000000;
+  box-sizing: border-box;
+  border-radius: 50px;
+}
+
+.box {
+	width: 500px;
+	height: 500px;
+  
+	background-color: #fff;
+	position: relative;
+	margin: auto;
+  margin-top: 100px;
+	display: block;
+}

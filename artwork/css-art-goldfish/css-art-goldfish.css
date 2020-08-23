@@ -1,0 +1,160 @@
+body {
+  background-color: #33e3ff;
+}
+
+#container {
+  width: 400px;
+  height: 400px;
+  background-color: transparent;
+  position: fixed;
+  left: calc(50% - 250px);
+  top: 50px;
+}
+
+#fish {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  animation: lr 4s ease-in-out infinite;
+}
+
+.fish-body, .fin-back, .fin-dorsal, .fin-bottom, .fin-bottom2, .eye, .pupil, .mouth,
+.bubble, .bubble-lite {
+  position: absolute;
+}
+
+.fin-bottom, .fin-bottom2, .fin-back, .fin-dorsal {
+  border-color: transparent transparent transparent #ff5b00;
+  border-style: solid;
+  height: 0px;
+  width: 0px;
+  opacity: .8;
+}
+
+.fish-body {
+  background-color: #fbe5b0;
+  background-image: linear-gradient(to bottom right, #fbe5b0, #f47705);
+  border: 5px #ff5b00 solid;
+  border-radius: 10px 150px;
+  width: 150px;
+  height: 150px;
+  transform: rotate(-45deg);
+  left: 120px;
+  top: 100px;
+}
+
+.fin-dorsal {
+  border-width: 0px 0px 75px 40px;
+  transform: rotate(100deg);
+  top: 10px;
+  left: 80px;
+}
+
+.fin-back {
+  border-width: 0px 0px 70px 70px;
+  left: 130px;
+  top: 130px;
+}
+
+.fin-bottom2 {
+  border-width: 0px 0px 40px 40px;
+  left: 15px;
+  top: 70px;
+}
+
+.fin-bottom {
+  border-width: 0px 0px 40px 40px;
+  left: 60px;
+  top: 115px;
+  transform: rotate(-10deg);
+}
+
+.eye {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 30px;
+  border: 5px #ff5b00 solid;
+  left: 10px;
+  top: 8px;
+}
+
+.pupil {
+  width: 17px;
+  height: 17px;
+  border-radius: 17px;
+  background-color: black;
+  left: 20px;
+  top: 20px;
+}
+
+.mouth {
+  width: 10px;
+  height: 10px;
+  background-color: #ff5b00;
+  border-radius: 10px;
+  left: -2px;
+  top: -1px;
+}
+
+#bubble1, #bubble2, #bubble3 {
+  position: relative;
+}
+
+#bubble1 {
+  left: 30px;
+  top: 40px;
+  margin-top: -300px;
+}
+
+#bubble2 {
+  left: 20px;
+  top: 90px;
+  transform: scale(.7);
+}
+
+#bubble3 {
+  top: 130px;
+  left: -70px;
+  transform: scale(.5);
+}
+
+.bubble {
+  background-color: #4da3e5;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  border: 5px #2678b7 solid;
+  left: 0px;
+  top: 0px;
+  animation: bob 2s ease-in-out infinite;
+}
+
+.bubble-lite{
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  left: 25px;
+  top: 12px;
+  animation: bob2 2s ease-in-out .25s infinite;
+}
+
+@keyframes bob {
+  0% { transform: translate(0px); }
+  50%   { transform: translate(5px);
+          background-color: #63b8f9; }
+  100% { transform: translate(0px); }
+}
+
+@keyframes bob2 {
+  0% { transform: translate(0px); }
+  50%   { transform: translate(5px);}
+  100% { transform: translate(0px); }
+}
+
+@keyframes lr {
+  0% { transform: translateX(0px); }
+  50% { transform: translateX(10px); }
+  100% { transform: translateX(0px); }
+}

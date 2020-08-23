@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Lexend Deca', sans-serif;
+  color: white;
+  overflow: hidden;
+}
+
+.base {
+  min-width: 500px;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  position: relative;
+  width: 500px;
+  height: 700px;
+  background: linear-gradient(#c6ffdd, #fbd786, #f7797d);
+  box-shadow: 0 30px 20px -5px rgba(0, 0, 0, 0.1), 0 65px 50px -10px rgba(0, 0, 0, 0.05);
+}
+
+.text {
+  font-size: 20px;
+  position: absolute;
+  width: 480px;
+  height: 680px;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.flex-right, .flex-left {
+  display: flex;
+  height: 680px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.circle {
+  width: 330px;
+  height: 330px;
+  border-radius: 50%;
+  background: linear-gradient(#c6ffdd, #fbd786, #f7797d);
+  background-size: 200% 200%;
+  margin: 0 auto;
+  margin-top: 50px;
+  -webkit-animation: AnimateGrad 30s ease infinite;
+  -moz-animation: AnimateGrad 30s ease infinite;
+  animation: AnimateGrad 30s ease infinite;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes AnimateGrad {
+  0% {
+    background-position: 4% 0%;
+  }
+  50% {
+    background-position: 97% 100%;
+  }
+  100% {
+    background-position: 4% 0%;
+  }
+}
+@-moz-keyframes AnimateGrad {
+  0% {
+    background-position: 4% 0%;
+  }
+  50% {
+    background-position: 97% 100%;
+  }
+  100% {
+    background-position: 4% 0%;
+  }
+}
+@keyframes AnimateGrad {
+  0% {
+    background-position: 4% 0%;
+  }
+  50% {
+    background-position: 97% 100%;
+  }
+  100% {
+    background-position: 4% 0%;
+  }
+}
+.rects {
+  width: 100%;
+  height: 100%;
+}
+.rects .rect {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border: 1px solid white;
+  top: 42%;
+  left: 17%;
+  -webkit-animation: rectAnime 20s ease-in-out infinite alternate;
+  -moz-animation: rectAnime 20s ease-in-out infinite alternate;
+  animation: rectAnime 20s ease-in-out infinite alternate;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.rects .rect:nth-child(1) {
+  animation-delay: 0.6s;
+}
+.rects .rect:nth-child(2) {
+  animation-delay: 1.2s;
+}
+.rects .rect:nth-child(3) {
+  animation-delay: 1.8s;
+}
+.rects .rect:nth-child(4) {
+  animation-delay: 2.4s;
+}
+.rects .rect:nth-child(5) {
+  animation-delay: 3s;
+}
+.rects .rect:nth-child(6) {
+  animation-delay: 3.6s;
+}
+.rects .rect:nth-child(7) {
+  animation-delay: 4.2s;
+}
+
+@-webkit-keyframes rectAnime {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-225deg);
+  }
+}
+@-moz-keyframes rectAnime {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-225deg);
+  }
+}
+@keyframes rectAnime {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-225deg);
+  }
+}

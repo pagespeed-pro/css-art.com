@@ -1,0 +1,334 @@
+body {
+  margin-top: 30px;
+  background-color: #355C7D;
+}
+
+#container {
+  width: 650px;
+  height: 650px;
+  border-radius: 50%;
+  border: 50px #70AD7C solid;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: inset 0px 0px 0px 150px #87D196;
+}
+
+.flower1, .petals1, .petals1 > div, 
+.petals1 >div::after, .center1,
+.flower2, .petals2, .petals2 > div,
+.petals2 > div::after, .center2, 
+.flower3, .petals3, .petals3 > div, 
+.petals3 > div::after, .center3, 
+.flower4, .petals4, .petals4 > div, 
+.petals4 > div::after, .center4, 
+.flower5, .flower6, .flower7, .flower8, 
+.flower9, .mini, .mini > div, .m-center, 
+.flower10, .flower11, .mini2, .mini2 > div, 
+.flower12, .flower15, .mini3, .mini3 > div, 
+.flower13, .flower14, .mini4, .mini4 > div, 
+.title, .credit {
+  position: absolute;
+}
+
+.center1, .center2, .center3, .center4, .m-center {
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, .2);
+}
+
+.flower1, .flower2, .flower3, .flower4, 
+.flower5, .flower6, .flower7, .flower8, 
+.flower9, .flower10, .flower11, .flower12, 
+.flower13, .flower14, .flower15 {
+ width: 300px;
+ height: 300px;
+}
+
+
+/*PETAL ORIENTATION*/
+
+.p1, .p2, .p3, .p4, .p5, .p6, 
+.p7, .p8, .p9, .p10, .p11, .p12 {
+  transform-origin: 0% 100%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, .2);
+}
+.p2 {transform: rotate(30deg);}
+.p3 {transform: rotate(60deg);}
+.p4 {transform: rotate(90deg);}
+.p5 {transform: rotate(120deg);}
+.p6 {transform: rotate(150deg);}
+.p7 {transform: rotate(180deg);}
+.p8 {transform: rotate(210deg);}
+.p9 {transform: rotate(240deg);}
+.p10 {transform: rotate(270deg);}
+.p11 {transform: rotate(300deg);}
+.p12 {transform: rotate(330deg);}
+.p2, .p4, .p6, .p8, .p10, .p12 {z-index: 2;}
+.p1, .p3, .p5, .p7, .p9, .p11 {z-index: 1;}
+
+/*FLOWER1*/
+
+.flower1 {
+  top: 40px;
+  left: 0px;
+}
+.petals1 {
+  right: 150px;
+  top: 50px;
+}
+.petals1 > div, .mini > div {
+  width: 100px;
+  height: 100px;
+  border-radius: 100% 0%;
+  background-color: #F67280;
+  border: 2px #A34C55 solid;
+}
+.petals1 > div::after {
+  content: "";
+  width: 0px;
+  height: 90px;
+  border-right: 2px #A34C55 solid;
+  transform: rotate(45deg);
+  transform-origin: 0% 100%;
+  top: 10px;
+}
+.center1 {
+  width: 50px;
+  height: 50px;
+  background-color: #F8D095;
+  border-radius: 50%;
+  left: calc(50% - 27px);
+  top: calc(50% - 24px);
+  z-index: 3;
+  border: 2px #DBA042 solid;
+}
+
+/*FLOWER1*/
+
+.flower2 {
+  right: 0px;
+  bottom: 50px;
+  transform: scale(1.05) rotate(-50deg);
+}
+.petals2 {
+  right: 150px;
+  top: 50px;
+}
+.petals2 > div, .mini2 > div {
+  width: 100px;
+  height: 100px;
+  border-radius: 70% 0%;
+  background-color: #C06C84;
+  border: 2px #7F4858 solid;
+}
+.petals2 > div::after {
+  content: "";
+  width: 0px;
+  height: 110px;
+  border-right: 2px #7F4858 solid;
+  transform: rotate(45deg);
+  transform-origin: 0% 100%;
+  top: -11px;
+}
+.center2 {
+  width: 80px;
+  height: 80px;
+  background-color: #F8C371;
+  border-radius: 50%;
+  left: calc(50% - 44px);
+  top: calc(50% - 40px);
+  z-index: 3;
+  border: 5px #DBAC64 solid;
+}
+
+/*FLOWER3*/
+
+.flower3 {
+  top: -5px;
+  right: 50px;
+  transform: scale(.9) rotate(-10deg);
+  z-index: 4;
+}
+.petals3 {
+  right: 150px;
+  top: 50px;
+}
+.petals3 > div, .mini3 > div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50% 0% 100% 0% / 
+                100% 0% 50% 0%;
+  background-color: #F8B195;
+  border: 2px #BA8570 solid;
+}
+.petals3 > div::after {
+  content: "";
+  width: 0px;
+  height: 70px;
+  border-right: 2px #BA8570 solid;
+  transform: rotate(45deg);
+  transform-origin: 0% 100%;
+  top: 30px;
+}
+.center3 {
+  width: 40px;
+  height: 40px;
+  background-color: #FFD46F;
+  border-radius: 50%;
+  left: calc(50% - 22px);
+  top: calc(50% - 18px);
+  z-index: 3;
+  border: 2px #D1AE5B solid;
+}
+
+/*FLOWER4*/
+
+.flower4 {
+  bottom: -40px;
+  left: 190px;
+  z-index: 5;
+  transform: scale(.75) rotate(-10deg);
+}
+.petals4 {
+  right: 150px;
+  top: 50px;
+}
+.petals4 > div, .mini4 > div {
+  width: 100px;
+  height: 100px;
+  border-radius: 50% 50% 100% 0% / 
+                100% 50% 50% 0%;
+  background-color:#947DA8;
+  border: 2px #5E4F6B solid;
+}
+.petals4 > div::after {
+  content: "";
+  width: 0px;
+  height: 55px;
+  border-right: 2px #5E4F6B solid;
+  transform: rotate(45deg);
+  transform-origin: 0% 100%;
+  top: 45px;
+}
+.center4 {
+  width: 60px;
+  height: 60px;
+  background-color: #F7C916;
+  border-radius: 50%;
+  left: calc(50% - 32px);
+  top: calc(50% - 28px);
+  z-index: 3;
+  border: 2px #D1A810 solid;
+}
+
+/*FLOWER 5*/
+
+.flower5 {
+  top: 110px;
+  right: -40px;
+  z-index: 5;
+  transform: scale(.8) rotate(-30deg);
+}
+
+/*REPEAT FLOWERS*/
+
+.flower6 {
+  top: -50px;
+  left: 150px;
+  z-index: 4;
+  transform: scale(.8) rotate(-25deg);
+}
+.flower7 {
+  bottom: -10px;
+  left: 40px;
+  z-index: 4;
+  transform: scale(.9) rotate(25deg);
+}
+.flower8 {
+  bottom: 130px;
+  left: -65px;
+  bottom: 110px;
+  z-index: 1;
+  transform: scale(.85) rotate(-20deg);
+}
+/*MINI FLOWERS*/
+.m-center {
+  width: 50px;
+  height: 50px;
+  background-color: #F7C916;
+  border-radius: 50%;
+  left: -27px;
+  top: 77px;
+  z-index: 3;
+  border: 2px #D1A810 solid;
+}
+.flower9 {
+  right: 160px;
+  bottom: 40px;
+  z-index: 10;
+  transform: scale(.3) rotate(-25deg);
+}
+.flower10 {
+  left: -60px;
+  top: 140px;
+  z-index: 10;
+  transform: scale(.3) rotate(-40deg);
+}
+.flower11 {
+  left: -25px;
+  bottom: -50px;
+  z-index: 10;
+  transform: scale(.25) rotate(-15deg);
+}
+.flower12 {
+  right: -150px;
+  bottom: 190px;
+  z-index: 10;
+  transform: scale(.35) rotate(-35deg);
+}
+.flower13 {
+  right: -20px;
+  bottom: 190px;
+  z-index: 3;
+  transform: scale(.45) rotate(-20deg);
+}
+.flower14 {
+  right: -100px;
+  top: 40px;
+  z-index: 10;
+  transform: scale(.25) rotate(-0deg);
+}
+.flower15 {
+  left: 100px;
+  top: -40px;
+  z-index: 10;
+  transform: scale(.4) rotate(30deg);
+}
+
+.title {
+  font-family: 'Pacifico', cursive;
+  font-size: 200px;
+  color: rgba(255, 255, 255, 1);
+  line-height: 85%;
+  z-index: 10;
+  text-align: center;
+  top: 110px;
+  left: 15px;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, .3);
+  user-select: none;
+  transition: all 1s ease-in-out;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body {
+  cursor: none;
+}
+
+.credit {
+  bottom: 0px;
+  right: 0px;
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+}

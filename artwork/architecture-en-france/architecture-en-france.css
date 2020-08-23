@@ -1,0 +1,102 @@
+body {
+  font-size: 100%;
+  background: #f1f1f1;
+  font-family: "Roboto", sans-serif;
+}
+
+#page {
+  width: calc(393px * 1.5);
+  height: calc(563px * 1.5);
+  margin: 0 auto;
+  background: #ffe4db;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+#page:after {
+  content: "";
+  background: #fa0f2d;
+  position: absolute;
+  width: calc(121px * 1.5);
+  height: calc(252px * 1.5);
+  right: 0;
+  top: calc(120px * 1.5);
+}
+#page:before {
+  content: "";
+  background: #1082c9;
+  position: absolute;
+  width: calc(156px * 1.5);
+  height: calc(253px * 1.5);
+  left: 0;
+  top: calc(120px * 1.5);
+}
+
+.black {
+  position: absolute;
+  width: calc(122px * 1.5);
+  height: calc(100% - calc(12px * 1.5));
+  left: calc(150px * 1.5);
+  bottom: 0;
+  top: 0;
+  background: #191a15;
+}
+.black:after {
+  content: "";
+  position: absolute;
+  width: calc(108px * 1.5);
+  height: calc(254px * 1.5);
+  background: #ffe4db;
+  -ms-transform: rotate(-32deg);
+  transform: rotate(-31deg);
+  top: calc(-139px * 1.5);
+  left: calc(51px * 1.5);
+}
+.black:before {
+  content: "";
+  position: absolute;
+  width: calc(52px * 1.5);
+  height: calc(436px * 1.5);
+  background: #ffe4db;
+  top: 0;
+  left: 0;
+}
+
+.copy {
+  position: absolute;
+  left: calc(15px * 1.5);
+  top: calc(390px * 1.5);
+  z-index: 1;
+}
+.copy:before {
+  content: "";
+  position: absolute;
+  width: calc(108px * 1.5);
+  height: calc(174px * 1.5);
+  background: #ffe4db;
+  -ms-transform: rotate(-32deg);
+  transform: rotate(-31deg);
+  top: calc(32px * 1.5);
+  left: calc(62px * 1.5);
+  z-index: -1;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: calc(25px * 1.5);
+  line-height: 1;
+  margin: 0;
+}
+
+p {
+  font-weight: 300;
+  font-size: calc(8.5px * 1.5);
+  line-height: 1.4;
+}
+
+.footnote {
+  position: absolute;
+  left: calc(293px * 1.5);
+  top: calc(465px * 1.5);
+  z-index: 1;
+}

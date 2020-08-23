@@ -1,0 +1,443 @@
+html {
+  background: black;
+}
+.page {
+  background: linear-gradient(
+    to bottom,
+    rgba(96, 46, 66, 1) 0%,
+    rgba(175, 88, 21, 1) 73%,
+    rgba(226, 219, 11, 1) 85%,
+    rgba(139, 10, 204, 1) 85%,
+    rgba(8, 58, 173, 1) 100%
+  );
+  height: 43rem;
+  position: relative;
+}
+.page:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  display: block;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 168, 76, 1) 0%,
+    rgba(219, 219, 219, 0) 100%
+  );
+  mix-blend-mode: color-burn;
+}
+
+.page:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 11;
+  display: block;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 168, 76, 0) 60%,
+    rgb(85, 35, 178) 100%
+  );
+  mix-blend-mode: saturation;
+}
+
+.sun {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #ffd300;
+  left: 350px;
+  top: 370px;
+  filter: blur(10px);
+  mix-blend-mode: screen;
+}
+
+.neck4 {
+  height: 100px;
+  width: 100px;
+  top: 170px;
+  left: 310px;
+  position: absolute;
+  border-radius: 100% 0px 0px;
+  border-top: 60px solid rgb(255, 118, 142);
+  border-left: 60px solid rgb(255, 118, 142);
+  transform: scale(0.4) rotate(-180deg);
+}
+.neck1 {
+  height: 100px;
+  width: 100px;
+  top: 10px;
+  left: 250px;
+  position: absolute;
+  border-radius: 100% 0px 0px;
+  border-top: 60px solid rgb(255, 118, 142);
+  border-left: 60px solid rgb(255, 118, 142);
+  transform: scale(0.4);
+}
+.neck2 {
+  height: 100px;
+  width: 100px;
+  top: 70px;
+  left: 250px;
+  position: absolute;
+  border-radius: 100% 0px 0px;
+  border-top: 60px solid rgb(255, 118, 142);
+  border-left: 60px solid rgb(255, 118, 142);
+  transform: scale(0.4) rotate(-90deg);
+}
+.neck3 {
+  height: 100px;
+  width: 100px;
+  top: 110px;
+  left: 310px;
+  position: absolute;
+  border-radius: 100% 0px 0px;
+  border-top: 60px solid rgb(255, 118, 142);
+  border-left: 60px solid rgb(255, 118, 142);
+  transform: scale(0.4) rotate(90deg);
+}
+.head {
+  height: 100px;
+  width: 140px;
+  top: 20px;
+  left: 310px;
+  position: absolute;
+  z-index: 0;
+  background: rgb(255, 118, 142) none repeat scroll 0% 0%;
+  border-radius: 50%;
+  transform: scale(0.6);
+}
+.beak1 {
+  height: 80px;
+  width: 80px;
+  top: 30px;
+  left: 370px;
+  position: absolute;
+  z-index: 1;
+  background: pink none repeat scroll 0% 0%;
+  border-radius: 25px;
+  transform: scale(0.4) rotate(45deg);
+}
+.thigh2 {
+  height: 100px;
+  width: 100px;
+  top: 300px;
+  left: 230px;
+  position: absolute;
+  background: rgb(255, 118, 142) none repeat scroll 0% 0%;
+  border-radius: 100% 0px 0px 100%;
+  transform: rotate(-90deg) scale(0.4);
+}
+.thigh1 {
+  height: 100px;
+  width: 100px;
+  top: 260px;
+  left: 230px;
+  position: absolute;
+  background: rgb(255, 118, 142) none repeat scroll 0% 0%;
+  border-radius: 100% 0px 0px 100%;
+  transform: rotate(-90deg);
+}
+.body1 {
+  height: 100px;
+  width: 200px;
+  top: 230px;
+  left: 170px;
+  position: absolute;
+  background: rgb(255, 118, 142) none repeat scroll 0% 0%;
+  border-radius: 100% 50% 70% 20%;
+  transform: scale(1.2);
+  z-index: 0;
+}
+.beak3 {
+  height: 80px;
+  width: 180px;
+  top: 79px;
+  left: 351px;
+  position: absolute;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0)
+    linear-gradient(100deg, pink 30%, rgb(2, 2, 1) 100%) repeat scroll 0% 0%;
+  border-radius: 0px 100%;
+  transform: scale(0.4) rotate(69deg);
+}
+.beak2 {
+  height: 80px;
+  width: 150px;
+  top: 40px;
+  left: 345px;
+  position: absolute;
+  z-index: 0;
+  background: pink none repeat scroll 0% 0%;
+  border-radius: 50px 50px 0px;
+  transform: scale(0.4) rotate(42deg);
+}
+.eye1 {
+  height: 100px;
+  width: 100px;
+  top: 20px;
+  left: 340px;
+  position: absolute;
+  background: pink none repeat scroll 0% 0%;
+  border-radius: 50%;
+  transform: scale(0.2);
+}
+.eye2 {
+  height: 50px;
+  width: 50px;
+  top: 45px;
+  left: 365px;
+  position: absolute;
+  z-index: 2;
+  background: black none repeat scroll 0% 0%;
+  border-radius: 50%;
+  transform: scale(0.2);
+}
+.feathers4 {
+  height: 180px;
+  width: 80px;
+  top: 192px;
+  left: 286px;
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  box-shadow: rgb(253, 67, 99) 15px 15px 0px 0px;
+  transform: rotate(72deg) scale(0.75);
+}
+.feathers1 {
+  height: 180px;
+  width: 80px;
+  top: 186px;
+  left: 249px;
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  box-shadow: rgb(253, 67, 99) 15px 15px 0px 0px;
+  transform: rotate(-260deg) scale(1.15);
+}
+.feathers3 {
+  height: 180px;
+  width: 80px;
+  top: 178px;
+  left: 250px;
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  box-shadow: rgb(253, 67, 99) 15px 15px 0px 0px;
+  transform: rotate(-260deg) scale(0.525);
+}
+.feathers2 {
+  height: 180px;
+  width: 80px;
+  top: 182px;
+  left: 208px;
+  position: absolute;
+  z-index: 2;
+  border-radius: 50%;
+  box-shadow: rgb(253, 67, 99) 15px 15px 0px 0px;
+  transform: rotate(-260deg) scale(0.575);
+}
+.headfeather1 {
+  height: 20px;
+  width: 100px;
+  top: 33px;
+  left: 328px;
+  position: absolute;
+  z-index: 1;
+  background: rgb(255, 118, 142) none repeat scroll 0% 0%;
+  border-radius: 100% 0px;
+  transform: scale(0.525) rotate(18deg);
+}
+.headfeather2 {
+  background: rgb(253, 67, 99) none repeat scroll 0% 0%;
+  height: 20px;
+  width: 100px;
+  position: absolute;
+  border-radius: 100% 0px;
+  top: 36px;
+  left: 317px;
+  transform: scale(0.375) rotate(9deg);
+}
+.tail3 {
+  height: 100px;
+  width: 100px;
+  top: 297px;
+  left: 115px;
+  position: absolute;
+  z-index: 1;
+  background: rgb(255, 118, 142) none repeat scroll 0% 0%;
+  border-radius: 100% 0px;
+  transform: scale(0.275) rotate(-15deg);
+}
+.tail5 {
+  height: 100px;
+  width: 100px;
+  top: 307px;
+  left: 106px;
+  position: absolute;
+  z-index: 0;
+  background: rgb(253, 67, 99) none repeat scroll 0% 0%;
+  border-radius: 100% 0px;
+  transform: scale(0.375) rotate(-18deg);
+}
+.tail2 {
+  height: 100px;
+  width: 100px;
+  top: 292px;
+  left: 96px;
+  position: absolute;
+  background: rgb(255, 118, 142) none repeat scroll 0% 0%;
+  border-radius: 100% 0px;
+  transform: scale(0.525);
+}
+.tail4 {
+  height: 100px;
+  width: 100px;
+  top: 278px;
+  left: 95px;
+  position: absolute;
+  background: rgb(253, 67, 99) none repeat scroll 0% 0%;
+  border-radius: 100% 0px;
+  transform: scale(0.525);
+}
+.tail1 {
+  height: 100px;
+  width: 100px;
+  top: 267px;
+  left: 96px;
+  position: absolute;
+  z-index: 1;
+  background: rgb(255, 118, 142) none repeat scroll 0% 0%;
+  border-radius: 100% 0px;
+  transform: scale(0.525) rotate(18deg);
+}
+.bodyfeather2 {
+  height: 50px;
+  width: 80px;
+  top: 245px;
+  left: 300px;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: rgb(253, 223, 228) 10px 10px 0px 0px;
+  transform: rotate(-33deg) scale(0.85);
+}
+.bodyfeather3 {
+  height: 40px;
+  width: 80px;
+  top: 267px;
+  left: 292px;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: rgb(253, 223, 228) 5px 5px 0px 0px;
+  transform: rotate(-9deg) scale(0.775);
+}
+.bodyfeather1 {
+  height: 80px;
+  width: 80px;
+  top: 215px;
+  left: 312px;
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: rgb(253, 223, 228) 15px 15px 0px 0px;
+  transform: rotate(-11deg) scale(0.35);
+}
+.leftleg2 {
+  height: 140px;
+  width: 10px;
+  top: 500px;
+  left: 275px;
+  position: absolute;
+  z-index: 2;
+  background: pink none repeat scroll 0% 0%;
+  border-radius: 5px;
+}
+.rightleg2 {
+  height: 140px;
+  width: 10px;
+  top: 374px;
+  left: 249px;
+  position: absolute;
+  background: pink none repeat scroll 0% 0%;
+  border-radius: 5px;
+  transform: rotate(77deg);
+}
+.rightknee {
+  height: 100px;
+  width: 100px;
+  top: 410px;
+  left: 130px;
+  position: absolute;
+  background: pink none repeat scroll 0% 0%;
+  border-radius: 50%;
+  transform: scale(-0.2);
+}
+.rightfoot {
+  height: 0px;
+  width: 0px;
+  top: 390px;
+  left: 281.5px;
+  position: absolute;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid pink;
+  border-left: 50px solid transparent;
+  transform: rotate(-45deg) scale(0.4);
+}
+.leftleg1 {
+  height: 140px;
+  width: 10px;
+  top: 360px;
+  left: 275px;
+  position: absolute;
+  background: pink none repeat scroll 0% 0%;
+  border-radius: 5px;
+}
+.rightleg1 {
+  height: 140px;
+  width: 10px;
+  top: 340px;
+  left: 225px;
+  position: absolute;
+  background: pink none repeat scroll 0% 0%;
+  border-radius: 5px;
+  transform: rotate(45deg);
+}
+.leftknee {
+  height: 100px;
+  width: 100px;
+  top: 450px;
+  left: 230px;
+  position: absolute;
+  background: pink none repeat scroll 0% 0%;
+  border-radius: 50%;
+  transform: scale(-0.2);
+}
+.leftfoot {
+  height: 0px;
+  width: 0px;
+  top: 596px;
+  left: 239.5px;
+  position: absolute;
+  z-index: 2;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid pink;
+  border-left: 50px solid transparent;
+  transform: rotate(-45deg) scale(0.4);
+}
+.shadow {
+  height: 60px;
+  width: 200px;
+  top: 624px;
+  left: 189px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0)
+    radial-gradient(
+      at center center,
+      rgba(0, 0, 0, 0.65) 0%,
+      rgba(0, 0, 0, 0) 90%
+    )
+    repeat scroll 0% 0%;
+  border-radius: 50%;
+}

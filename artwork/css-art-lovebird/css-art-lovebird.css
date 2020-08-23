@@ -1,0 +1,321 @@
+@import url(https://fonts.googleapis.com/css?family=Sail);
+
+body {
+  background-color: #90E8FF;
+}
+
+#container {
+  width: 600px;
+  height: 600px;
+  background-color: transparent;
+  position: relative;
+  left: calc(50% - 300px);
+  margin-top: 50px;
+}
+
+.heart, .heart::before, .heart::after, .bar, .tail, .tail::before, .bird, .bird::before, .bird::after, .face, .face::before, .face::after, .feet, .feet::after, .note1, .note1::before, .note1::after, .note2, .note2::before, .note2::after, .banner, .banner::before, .banner::after, .banner-pos, .banner-pos::after {
+  position: absolute;
+}
+
+.heart, .heart::before, .heart::after {
+  background-color: pink;
+  height: 300px;
+}
+
+.heart {
+  width: 350px;
+  border-radius: 150px;
+}
+
+.heart::before {
+  content: "";
+  width: 300px;
+  left: 200px;
+  transform: rotate(90deg);
+}
+
+.heart::after {
+  content: "";
+  width: 350px;
+  border-radius: 150px;
+  left: 175px;
+  top: -175px;
+  transform: rotate(90deg);
+}
+
+.heart-pos {
+  transform: rotate(45deg);
+  position: relative;
+  top: 180px;
+  left: 70px;
+}
+
+.heart-pos2 {
+  transform: rotate(45deg) scale(1.1);
+  position: relative;
+  top: 169px;
+  left: 78px;
+  z-index: -1;
+}
+
+.color, .color::before, .color::after {
+  background-color: #F02A60;
+}
+
+.bar {
+  width: 328px;
+  height: 0px;
+  border-style: solid;
+  border-color: #593B34 transparent transparent transparent;
+  border-width: 40px 40px 40px 40px;
+  top: 330px;
+  left: calc(50% - 204px);
+}
+
+.tail {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-color: transparent transparent #3ad20f transparent;
+  border-width: 100px 50px 200px 50px;
+  left: 230px;
+  top: 120px;
+  transform: scale(.9) rotate(30deg);
+}
+
+.tail::before {
+  content: "";
+  width: 100px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #3ad20f;
+  left: -50px;
+  top: 182px;
+  
+}
+
+.bird {
+  width: 160px;
+  height: 160px;
+  border-radius: 90px;
+  background-image: linear-gradient(#3ad20f, #1e8000);
+  background-image: linear-gradient(76deg, #3ad20f 0%, #3ad20f 30%, #ff0000 100%);
+  left: 200px;
+  top: 175px;
+}
+
+.bird::before {
+  content:"";
+  width: 70px;
+  height: 110px;
+  border-radius: 50%;
+  left: 25px;
+  top: 40px;
+  background-image: linear-gradient(90deg, yellow, #1e8000);
+  opacity: .5;
+  transform: rotate(30deg);
+}
+
+.bird::after{
+  content:"";
+  width: 90px;
+  height: 90px;
+  border-radius: 45px;
+  left: 70px;
+  top: -45px;
+  background-image: linear-gradient(90deg, #3ad20f 0%, #ff0000 100%)
+}
+
+.face {
+  width: 22px;
+  height: 22px;
+  border-radius: 22px;
+  border: 3px #589D3E solid;
+  background-color: black;
+  left: 305px;
+  top: 145px;
+}
+
+.face::before {
+  content: "";
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.face::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-color: transparent transparent transparent #F0E27E;
+  border-width: 7px 10px 7px 30px;
+  left: 40px;
+  top: 10px;
+}
+
+.feet {
+  width: 25px;
+  height: 15px;
+  border-radius: 10px;
+  background-color: #BDAA86;
+  top: 323px;
+  left: 255px;
+}
+
+.feet::after {
+  content: "";
+  width: 25px;
+  height: 15px;
+  border-radius: 10px;
+  background-color: #BDAA86;
+  left: 45px;
+}
+
+.note1 {
+  height: 50px;
+  width: 35px;
+  border-style: solid;
+  border-color: #F02A60;
+  border-width: 5px 5px 0px 5px;
+}
+
+.note1::before {
+  content: "";
+  height: 18px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #F02A60;
+  top: 39px;
+  left: -23px;
+  transform: rotate(-30deg);
+}
+
+.note1::after {
+  content: "";
+  height: 18px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #F02A60;
+  top: 37px;
+  left: 18px;
+  transform: rotate(-30deg);
+}
+
+.note-pos {
+  position: absolute;
+  right: 200px;
+  top: 120px;
+  transform: scale(.5) rotate(-25deg);
+}
+
+.note2 {
+  height: 50px;
+  width: 25px;
+  border-style: solid;
+  border-color: #F02A60;
+  border-width: 5px 0px 0px 5px;
+}
+
+.note2::before {
+  content: "";
+  height: 18px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: #F02A60;
+  top: 39px;
+  left: -23px;
+  transform: rotate(-30deg);
+}
+
+.note2::after {
+  content:"";
+  top: 5px;
+  width: 20px;
+  border-style: solid;
+  border-color: #F02A60;
+  border-width: 5px 0px 0px 0px;
+}
+
+.note-pos2 {
+  position: absolute;
+  right: 200px;
+  top: 170px;
+  transform: scale(.5) rotate(10deg);
+}
+
+.note-pos3 {
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  right: 205px;
+  top: 80px;
+  transform: scale(.55) rotate(10deg);
+}
+
+h1 {
+  color:#073749;
+  font-family: 'Sail', cursive;
+  font-size: 35px;
+  position: relative;
+  color: #8E430C;
+  bottom: 20px;
+}
+
+.banner {
+  width: 300px;
+  height: 50px;
+  background-color: #FFD765;
+  left: 150px;
+  bottom: 120px;
+  text-align: center;
+}
+
+.banner::before {
+  content:"";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-color: #F7C434 #F7C434 #F7C434 transparent;
+  border-width: 25px;
+  top: 15px;
+  left: -35px;
+  z-index: -1;
+  
+}
+
+.banner::after {
+  content:"";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-color: #CAA027 #CAA027 transparent transparent;
+  border-width: 8px;
+  left: 0px;
+  top: 50px;
+  
+}
+
+.banner-pos {
+  content:"";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-color: #F7C434 transparent #F7C434 #F7C434;
+  border-width: 25px;
+  bottom: 105px;
+  right: 115px;
+  z-index: -1;
+}
+
+.banner-pos::after {
+  content:"";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-color: #CAA027 transparent transparent #CAA027;
+  border-width: 8px;
+  left: -25px;
+  top: 10px; 
+}

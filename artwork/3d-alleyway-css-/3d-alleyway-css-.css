@@ -1,0 +1,72 @@
+body {
+  font-size: 100%;
+  overflow: hidden;
+  background: black;
+}
+
+#SceneContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -10em;
+  margin-top: -10em;
+  transform-style: preserve-3d;
+  width: 20em;
+  height: 20em;
+  perspective: 300px;
+  perspective-origin: 50% 50%;
+  animation-name: spin;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.wall, #Right, #Left, #Bottom, #Top, #Back {
+  width: 20em;
+  height: 20em;
+  background: red;
+  position: absolute;
+}
+
+#Right {
+  transform: rotateY(90deg) translateZ(10em);
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/96252/walls.jpg");
+  background-size: cover;
+}
+
+#Left {
+  transform: rotateY(90deg) translateZ(-10em);
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/96252/spraywall.jpg");
+  background-size: cover;
+}
+
+#Bottom {
+  background: blue;
+  transform: rotateX(90deg) translateZ(-10em);
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/96252/floor.jpg");
+  background-size: cover;
+}
+
+#Top {
+  background: blue;
+  transform: rotateX(90deg) translateZ(10em);
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/96252/roof.jpg");
+  background-size: cover;
+}
+
+#Back {
+  background: yellow;
+  transform: translateZ(-10em);
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/96252/backwall.jpg");
+  background-size: cover;
+}
+
+@keyframes spin {
+  from {
+    perspective-origin: 80% 60%;
+  }
+  to {
+    perspective-origin: 20% 40%;
+  }
+}

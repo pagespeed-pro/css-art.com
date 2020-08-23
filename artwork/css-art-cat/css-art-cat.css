@@ -1,0 +1,215 @@
+body {
+  background-color: #86ffb7;
+}
+
+#container {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  left: calc(50% - 135px);
+  overflow: hidden;
+  top: 10px !important;
+  transform: scale(1.5);
+}
+
+.body, .eyes, .eyes::after, .head, .facel, .feet, .feet::after, .facel::after, .hind, .hind::after, .earl, .earl::after, .nose, .whisker, .whisker::before, .whisker::after, .tail, .tailtip {
+  position: absolute;
+}
+
+.triangle {
+  height: 0px;
+  width: 0px;
+  border-style: solid;
+}
+
+.body {
+ background-image: linear-gradient(90deg, #f1a052 0%, #f6cda2 30%, #f1a052 80%);
+  width: 200px;
+  height: 170px;
+  border-radius: 80px;
+  left: 50px;
+  bottom: -75px; 
+}
+
+.head {
+  background-image: radial-gradient(#f6cda2 0%, #f1a052 40%, #f1a052 100%);
+  width: 82px;
+  height: 82px;
+  border-radius: 41px;
+  bottom: 30px;
+  left: 40px;
+}
+
+.eyes, .eyes::after {
+  background-color: black;
+}
+
+.eyes {
+  width: 13px;
+  height: 13px;
+  border-radius: 13px;
+  border: 3px #86ffb7 solid;
+  bottom: 70px;
+  left: 50px;
+}
+
+.eyes::after {
+  content: "";
+  width: 13px;
+  height: 13px;
+  border-radius: 13px;
+  border: 3px #86ffb7 solid;
+  left: 34px;
+  top: -3px;
+}
+
+.feet, .feet:after {
+  background-color: #f1a052;
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  transform: scaley(.9);
+}
+
+.feet {
+  bottom: -18px;
+  left: 22px;
+  transform: scaley(.9);
+}
+
+.feet::after {
+  content:"";
+  left: 50px;
+}
+
+.facel {
+  border-color: transparent #f1a052 transparent transparent;
+  border-width: 35px;
+  left: -12px;
+  bottom: 35px;
+}
+
+.facel::after {
+  content: "";
+  border-color: transparent transparent transparent #f1a052;
+  border-style: solid;
+  height: 0px;
+  width: 0px;
+  border-width: 35px;
+  left: 80px;
+  bottom: -35px;
+}
+
+.hind {
+  width: 100px;
+  height: 100px;
+  background-image: linear-gradient(227deg, #ffeec2 0%, #f1a052 70%, #f1a052 100%);
+  bottom: -50px;
+  border-radius: 50px;
+  left: 150px;
+}
+
+.hind::after {
+  content: "";
+  width: 36px;
+  height: 36px;
+  background-color: #f1a052;
+  bottom: 30px;
+  left: -20px;
+  border-radius: 16px; 
+}
+
+.earl {
+  border-color: transparent transparent #f1a052 transparent;
+  border-width: 5px 15px 30px 15px;
+  left: 34px;
+  bottom: 90px;
+  transform: rotate(-30deg);
+}
+
+.earl::after {
+  content: "";
+  border-style: solid;
+  border-color: transparent transparent pink transparent;
+  border-width: 3px 7px 18px 7px;
+  left: -7px;
+  top: 3px;
+}
+
+.earr {
+  position:relative;
+  width: 100px;
+  height: 100px;
+  top: 173px;
+  left: 16px;
+  transform: rotate(60deg);
+}
+
+.nose {
+  width: 12px;
+  height: 12px;
+  border-radius: 5px;
+  background-image: radial-gradient(#fbd5f3 0%, pink 50%, pink 100%);
+  bottom: 50px;
+  left: 73px;
+}
+
+.whisker, .whisker::before, .whisker::after {
+  width: 25px;
+  height: 1.5px;
+  background-color: black;
+}
+
+.whisker {
+  bottom: 55px;
+  left: 50px;
+}
+
+.whisker::before {
+  content:"";
+  top: -4px;
+  transform: rotate(7deg);
+}
+
+.whisker::after {
+  content:"";
+  top: 4px;
+  transform: rotate(-9deg);
+}
+
+.whiskerr {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  top: 88px;
+  left: 57px;
+  transform: rotate(180deg);
+}
+
+.tail {
+  width: 100px;
+  height: 100px;
+  border-radius: 70px;
+  left: -65px;
+  border: 20px #f1a052 solid;
+}
+
+.tail-contain {
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  left: 200px;
+  bottom: 40px;
+  position: relative;
+  z-index: -1;
+}
+
+.tailtip {
+  width: 20px;
+  height: 20px;
+  background-color: #f1a052;
+  border-radius: 10px;
+  z-index: 1;
+  bottom: 120px;
+  right: 90px;
+}

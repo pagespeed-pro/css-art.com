@@ -1,0 +1,59 @@
+/* --- Universal Box Sizing with Inheritance --- */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* --- Colours --- */
+/* --- Styles --- */
+body {
+  margin: 0;
+  min-height: 100vh;
+  position: relative;
+}
+
+div,
+div::before,
+div::after {
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+div,
+div::before {
+  border-radius: 3.4vmin 3.6vmin / 3.8vmin 3.6vmin;
+  top: 50%;
+  left: 50%;
+  height: 90vmin;
+  width: 62.2vmin;
+}
+
+div {
+  /* --- back --- */
+  transform: translate3d(-60%, -50%, 0);
+  box-shadow: inset 0 0.2vmin 1vmin 0.4vmin rgba(100, 59, 53, 0.3), inset -0.5vmin 0.1vmin 0.1vmin 0.1vmin #643b35, inset -1vmin -1.2vmin 1vmin 0.1vmin rgba(100, 59, 53, 0.6), inset 0 -0.05vmin 0.3vmin 0.1vmin #643b35, inset -2vmin 0.5vmin 0.2vmin 0.3vmin rgba(220, 177, 171, 0.4), inset 0.2vmin 0 1vmin 0 rgba(152, 105, 98, 0.8), inset 0.4vmin 1.5vmin 0.6vmin 1.2vmin rgba(255, 227, 224, 0.5), -1.5vmin 0.4vmin 2.5vmin 0 rgba(152, 105, 98, 0.2);
+  background: radial-gradient(circle at 13% 0.2%, #000 0.3vmin, transparent calc( 0.3vmin + 1px )), radial-gradient(circle at 14.5% 0.2%, #000 0.3vmin, transparent calc( 0.3vmin + 1px )), radial-gradient(circle at 16% 0.2%, #000 0.3vmin, transparent calc( 0.3vmin + 1px )), radial-gradient(circle at 17.5% 0.2%, #000 0.3vmin, transparent calc( 0.3vmin + 1px )), radial-gradient(circle at 19% 0.2%, #000 0.3vmin, transparent calc( 0.3vmin + 1px )), radial-gradient(circle at 20.5% 0.2%, #000 0.3vmin, transparent calc( 0.3vmin + 1px )), radial-gradient(circle at 22% 0.2%, #000 0.3vmin, transparent calc( 0.3vmin + 1px )), radial-gradient(circle at 23.5% 0.2%, #000 0.3vmin, transparent calc( 0.3vmin + 1px )), radial-gradient(circle at 23.5% 99.9%, #000 0.3vmin, transparent calc( 0.3vmin + 1px )), radial-gradient(circle at 25% 99.9%, #000 0.3vmin, transparent calc( 0.3vmin + 1px )), radial-gradient(circle at 26.5% 99.9%, #000 0.3vmin, transparent calc( 0.3vmin + 1px )), radial-gradient(circle at 28% 99.9%, #000 0.3vmin, transparent calc( 0.3vmin + 1px )), radial-gradient(circle at 6.1% 3.8%, #3a4d67 0.2vmin, transparent calc( 0.2vmin + 1px )), radial-gradient(circle at 5.8% 4.4%, #487f9e 0.1vmin, transparent 0.35vmin), radial-gradient(circle at 6% 4.1%, #253044 0.4vmin, #253044 calc( 0.4vmin + 1px ), #131919 0.9vmin, #060200 1.3vmin, #ffdcd8 1.44vmin, transparent 1.5vmin), radial-gradient(circle at 5.8% 2.1%, #ffdcd8 0.8vmin, transparent 1.7vmin), radial-gradient(circle at 7% 3.6%, #2b1e1c 0.5vmin, transparent 1vmin), radial-gradient(circle at 4.9% 4.5%, #2b1e1c 0.5vmin, transparent 1vmin), radial-gradient(circle at 7% 4.4%, #986962 0.7vmin, transparent 1vmin), radial-gradient(circle at 6% 4.1%, #ffdcd8 1.5vmin, rgba(152, 105, 98, 0.6) 1.6vmin, transparent 1.75vmin), radial-gradient(circle at 6% 7.7%, #d8d1b0 0.1vmin, transparent calc( 0.1vmin + 1px)), radial-gradient(circle at 6.2% 7.5%, #d8d1b0 0.1vmin, transparent calc( 0.1vmin + 1px)), radial-gradient(circle at 6% 7.6%, #eae7d0 0.1vmin, #ece3d1 0.2vmin, #f9f7ea 0.4vmin, transparent 0.55vmin), radial-gradient(circle at 6.2% 7.5%, #986962 0.4vmin, transparent 0.55vmin), radial-gradient(circle at 5.8% 7.7%, #986962 0.4vmin, transparent 0.55vmin), radial-gradient(circle at 6% 7.6%, rgba(152, 105, 98, 0.3) 0.7vmin, transparent calc( 0.7vmin + 1px)), radial-gradient(circle at -0.2% 8.3%, #ffdcd8 0.6vmin, transparent 0.7vmin), radial-gradient(circle at -0.1% 8%, #060200 0.6vmin, transparent 0.7vmin), linear-gradient(transparent 1%, #ffdcd8 2%, #ffdcd8 8%, transparent 8%), radial-gradient(circle at -0.2% 16.2%, #ffdcd8 0.6vmin, transparent 0.7vmin), radial-gradient(circle at -0.1% 16.5%, #060200 0.6vmin, transparent 0.7vmin), radial-gradient(circle at 0.6% 11.5%, #060200 0.15vmin, transparent 0.3vmin), radial-gradient(circle at 0.6% 13%, #060200 0.15vmin, transparent 0.3vmin), linear-gradient(transparent 16.8%, #ffdcd8 17%, #d5a099), linear-gradient(90deg, transparent 0.7%, #986962 0.9%, transparent 1.2%), radial-gradient(circle at 6.2% 0.2%, #ffdcd8 0.25vmin, transparent calc( 0.25vmin + 1px )), radial-gradient(circle at 5.7% 0.2%, #000 0.25vmin, transparent calc( 0.25vmin + 1px )), radial-gradient(circle at 10.3% 0.2%, #ffdcd8 0.25vmin, transparent calc( 0.25vmin + 1px )), radial-gradient(circle at 10.8% 0.2%, #000 0.25vmin, transparent calc( 0.25vmin + 1px )), linear-gradient(90deg, #ffdcd8, #ffdcd8 5.6%, transparent 5.8%, transparent 10.7%, #ffdcd8 10.9%), linear-gradient(transparent 0.4%, #060200 0.6%, transparent 0.8%), #ffdcd8;
+  /* --- front --- */
+}
+div::before {
+  content: '';
+  display: block;
+  transform: translate3d(-25%, -50%, 0);
+  box-shadow: -0.3vmin 0.5vmin 1vmin 0 rgba(100, 59, 53, 0.6), -3vmin 1vmin 3vmin -1vmin rgba(152, 105, 98, 0.6);
+  background: radial-gradient(circle at 1.6% 1.6%, #ffe3e0 0.2vmin, transparent 1.3vmin), radial-gradient(circle at 97.5% 1.7%, #ffe3e0 0.5vmin, transparent 1.3vmin), radial-gradient(circle at 97.8% 99.3%, #ffe3e0 0.7vmin, transparent 1.3vmin), radial-gradient(circle at 2% 98%, #ffe3e0 0.6vmin, transparent 1.3vmin), linear-gradient(90deg, transparent 2%, #643b35 2.5%, #dcb1ab 15%, #ffdcd8, #dcb1ab 78%, #643b35 90%, #986962, transparent 99%), linear-gradient(#ffe3e0 1.5%, #643b35 2%, #dcb1ab 15%, #ffdcd8, #dcb1ab 70%, #643b35 98%, #ffe3e0), #ffdcd8;
+}
+div::after {
+  content: '';
+  height: 89.2vmin;
+  width: 61.1vmin;
+  top: 50%;
+  left: 58.2%;
+  display: block;
+  border-radius: 3vmin 2.8vmin / 3.6vmin 3.2vmin;
+  transform: translate3d(-33%, -50%, 0);
+  box-shadow: 0.1vmin 0.1vmin 0 0 #dcb1ab, -0.1vmin -0.08vmin 0 0 #dcb1ab;
+  background: radial-gradient(circle at 50.1% 3.4%, rgba(243, 240, 242, 0.4) 0.1vmin, transparent 0.5vmin), radial-gradient(circle at 50% 3.5%, #060200 0.35vmin, transparent 0.55vmin), radial-gradient(circle at 50% 96.8%, #f3f0f2 1.5vmin, transparent calc( 1.5vmin + 1px)), radial-gradient(circle at 51.2% 97.1%, #ffdcd8 0.8vmin, transparent 1.3vmin), radial-gradient(circle at 49% 97.1%, #ffdcd8 0.8vmin, transparent 1.3vmin), radial-gradient(circle at 50.9% 96.9%, #dcb1ab 1.3vmin, transparent 1.6vmin), radial-gradient(circle at 49.2% 97.1%, #dcb1ab 1.2vmin, transparent 1.6vmin), radial-gradient(circle at 50% 96.9%, #986962 1.9vmin, transparent calc( 1.9vmin + 1px)), linear-gradient(#f3f0f3 6.5%, transparent 6.85%, transparent 93%, #f3f0f2 93.2%), linear-gradient(90deg, #f3f0f2 2.9%, transparent 3.3%, transparent 96.8%, #f3f0f2 97.2%), linear-gradient(#060200 6.6%, transparent 6.9%, transparent 92.8%, #060200 93.3%), linear-gradient(90deg, #060200 3.1%, transparent 3.5%, transparent 96.6%, #060200 97.2%), linear-gradient(247deg, rgba(243, 240, 242, 0.1) 40%, transparent 40.2%), linear-gradient(-20deg, transparent 30%, rgba(72, 216, 164, 0.5) 30.2%, transparent 80%), linear-gradient(150deg, #ec008c, transparent 50%), linear-gradient(80deg, #10afe0 5%, transparent 65%), linear-gradient(160deg, #3a5cec 10%, #eeb4aa);
+}

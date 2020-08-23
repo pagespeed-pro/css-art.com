@@ -1,0 +1,168 @@
+body {
+  background-color: #f0e576;
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
+}
+
+.flex {
+  display: flex;
+}
+
+.container__outer {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container__outer::before {
+  content: '';
+  clip-path: polygon(0 0, 100% 0, 100% 20%, 0 90%);
+  background-color: #feb65e;
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -10;
+}
+.container__art {
+  justify-content: center;
+  align-items: flex-start;
+}
+.container__popsicle {
+  flex-direction: column;
+  align-items: center;
+}
+.container__popsicle .popsicle {
+  width: 240px;
+  height: 350px;
+  background-color: #f982bf;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 115px 115px 30px 30px;
+  border-top: 8px solid #ff98cc;
+}
+.container__popsicle .glare {
+  width: 35px;
+  height: 70px;
+  background-color: #ff98cc;
+  position: relative;
+  left: 170px;
+  bottom: 20px;
+  transform: rotate(-38deg);
+  border-radius: 50%;
+}
+.container__popsicle .face {
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 78px;
+}
+.container__popsicle .eyes {
+  justify-content: space-between;
+  width: 160px;
+}
+.container__popsicle .eye {
+  width: 28px;
+  height: 28px;
+  background: #ff2995;
+  border-radius: 50%;
+  position: relative;
+  border-bottom: 2px solid #ff98cc;
+}
+.container__popsicle .eye::before, .container__popsicle .eye::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.container__popsicle .eye:before {
+  width: 9px;
+  height: 9px;
+  top: 6px;
+  right: 6px;
+}
+.container__popsicle .eye:after {
+  width: 4px;
+  height: 4px;
+  bottom: 6px;
+  left: 7px;
+}
+.container__popsicle .cheeks {
+  justify-content: space-between;
+  width: 210px;
+}
+.container__popsicle .cheek {
+  width: 32px;
+  height: 16px;
+  margin-top: 3px;
+  background: #ff98cc;
+  border-radius: 14px;
+  position: relative;
+}
+.container__popsicle .mouth {
+  width: 75px;
+  height: 25px;
+  background-color: #ff2995;
+  border-radius: 10px 10px 40px 40px;
+  border-bottom: 2px solid #ff98cc;
+}
+.container__popsicle .stick {
+  width: 60px;
+  height: 72px;
+  border-top: 12px solid #db9e74;
+  background-color: #ecaa7d;
+  border-radius: 0 0 26px 26px;
+}
+.container__bubble {
+  position: relative;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-left: 40px;
+  margin-top: 40px;
+  width: 120px;
+  height: 120px;
+  justify-content: center;
+  align-items: center;
+}
+.container__bubble:before {
+  content: '';
+  transform: skewX(-40deg);
+  position: absolute;
+  top: 70%;
+  left: 0;
+  border-width: 30px 60px 0 0;
+  border-style: solid;
+  border-color: #fff transparent;
+}
+.container__bubble .heart {
+  background-color: #ff2995;
+  height: 30px;
+  width: 30px;
+  transform: rotate(-45deg);
+  position: relative;
+  margin-top: 10px;
+}
+.container__bubble .heart::before, .container__bubble .heart::after {
+  content: '';
+  background-color: #ff2995;
+  border-radius: 50%;
+  position: absolute;
+  height: 30px;
+  width: 30px;
+}
+.container__bubble .heart::before {
+  top: -16px;
+  left: 0;
+}
+.container__bubble .heart::after {
+  top: 0;
+  right: -16px;
+}

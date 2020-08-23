@@ -1,0 +1,416 @@
+/* Variables */
+/* Reset */
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Generic */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #FFC26F;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+  width: 800px;
+  height: 600px;
+  perspective: 400px;
+}
+
+.cup {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 180px;
+  height: 320px;
+  transform: rotateX(-25deg);
+  transform-style: preserve-3d;
+  background-color: #FFE7B6;
+  box-shadow: inset -40px 20px #FFD599;
+}
+.cup-g {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 55px;
+  width: 220px;
+  height: 250px;
+  position: relative;
+}
+.cup__circle {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  width: 125px;
+  height: 125px;
+  border-radius: 50%;
+  background-image: radial-gradient(#333351 40%, #ffffff 40%, #ffffff 50%, #FF7861 50%);
+}
+.cup__top {
+  position: absolute;
+  top: -1px;
+  width: 240px;
+  height: 15px;
+  border-radius: 10px;
+  background-color: #FFE7B6;
+}
+.cup__bottom {
+  position: absolute;
+  bottom: -10px;
+  width: 155px;
+  height: 20px;
+  border-radius: 50%;
+  background-image: linear-gradient(93deg, #FFE7B6 78%, #FFD599 78%);
+}
+.cup__shadow {
+  position: absolute;
+  left: 0;
+  bottom: -18px;
+  width: 320px;
+  height: 30px;
+  background-color: #FFA265;
+  z-index: -100;
+  border-radius: 50%;
+}
+
+.top {
+  position: absolute;
+  bottom: 45px;
+  right: 20%;
+  width: 195px;
+  height: 190px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+.top__s {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 160px;
+  height: 170px;
+  border-radius: 50%;
+  background-color: #FFE7B6;
+}
+.top__s::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 18px;
+  bottom: 10px;
+  left: 44%;
+  border-radius: 20px;
+  transform: rotateZ(-10deg);
+  background-color: #FFC26F;
+}
+.top__s::after {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 13px;
+  width: 130px;
+  height: 115px;
+  background-color: #FFD599;
+  transform: rotateZ(-10deg);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+  box-shadow: inset -10px 0px #FFC26F;
+}
+
+.smoke {
+  width: 90%;
+  margin-right: 5%;
+  z-index: -1;
+  animation: smoke 8s infinite alternate;
+}
+
+.s {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 50px;
+  border-radius: 50px;
+  background-color: #ffffff;
+  z-index: -100;
+  opacity: .015;
+}
+
+/* */
+.s-0 {
+  animation: s 2s ease infinite 0s, s-2 2s ease infinite 0s;
+}
+
+.s-1 {
+  animation: s 2s ease infinite 0.15s, s-2 2s ease infinite 0.15s;
+}
+
+.s-2 {
+  animation: s 2s ease infinite 0.3s, s-2 2s ease infinite 0.3s;
+}
+
+.s-3 {
+  animation: s 2s ease infinite 0.45s, s-2 2s ease infinite 0.45s;
+}
+
+.s-4 {
+  animation: s 2s ease infinite 0.6s, s-2 2s ease infinite 0.6s;
+}
+
+.s-5 {
+  animation: s 2s ease infinite 0.75s, s-2 2s ease infinite 0.75s;
+}
+
+.s-6 {
+  animation: s 2s ease infinite 0.9s, s-2 2s ease infinite 0.9s;
+}
+
+.s-7 {
+  animation: s 2s ease infinite 1.05s, s-2 2s ease infinite 1.05s;
+}
+
+.s-8 {
+  animation: s 2s ease infinite 1.2s, s-2 2s ease infinite 1.2s;
+}
+
+.s-9 {
+  animation: s 2s ease infinite 1.35s, s-2 2s ease infinite 1.35s;
+}
+
+.s-10 {
+  animation: s 2s ease infinite 1.5s, s-2 2s ease infinite 1.5s;
+}
+
+.s-11 {
+  animation: s 2s ease infinite 1.65s, s-2 2s ease infinite 1.65s;
+}
+
+.s-12 {
+  animation: s 2s ease infinite 1.8s, s-2 2s ease infinite 1.8s;
+}
+
+.s-13 {
+  animation: s 2s ease infinite 1.95s, s-2 2s ease infinite 1.95s;
+}
+
+.s-14 {
+  animation: s 2s ease infinite 2.1s, s-2 2s ease infinite 2.1s;
+}
+
+.s-15 {
+  animation: s 2s ease infinite 2.25s, s-2 2s ease infinite 2.25s;
+}
+
+.s-16 {
+  animation: s 2s ease infinite 2.4s, s-2 2s ease infinite 2.4s;
+}
+
+.s-17 {
+  animation: s 2s ease infinite 2.55s, s-2 2s ease infinite 2.55s;
+}
+
+.s-18 {
+  animation: s 2s ease infinite 2.7s, s-2 2s ease infinite 2.7s;
+}
+
+.s-19 {
+  animation: s 2s ease infinite 2.85s, s-2 2s ease infinite 2.85s;
+}
+
+.s-20 {
+  animation: s 2s ease infinite 3s, s-2 2s ease infinite 3s;
+}
+
+.s-21 {
+  animation: s 2s ease infinite 3.15s, s-2 2s ease infinite 3.15s;
+}
+
+.s-22 {
+  animation: s 2s ease infinite 3.3s, s-2 2s ease infinite 3.3s;
+}
+
+.s-23 {
+  animation: s 2s ease infinite 3.45s, s-2 2s ease infinite 3.45s;
+}
+
+.s-24 {
+  animation: s 2s ease infinite 3.6s, s-2 2s ease infinite 3.6s;
+}
+
+.s-25 {
+  animation: s 2s ease infinite 3.75s, s-2 2s ease infinite 3.75s;
+}
+
+.s-26 {
+  animation: s 2s ease infinite 3.9s, s-2 2s ease infinite 3.9s;
+}
+
+.s-27 {
+  animation: s 2s ease infinite 4.05s, s-2 2s ease infinite 4.05s;
+}
+
+.s-28 {
+  animation: s 2s ease infinite 4.2s, s-2 2s ease infinite 4.2s;
+}
+
+.s-29 {
+  animation: s 2s ease infinite 4.35s, s-2 2s ease infinite 4.35s;
+}
+
+.s-30 {
+  animation: s 2s ease infinite 4.5s, s-2 2s ease infinite 4.5s;
+}
+
+.s-31 {
+  animation: s 2s ease infinite 4.65s, s-2 2s ease infinite 4.65s;
+}
+
+.s-32 {
+  animation: s 2s ease infinite 4.8s, s-2 2s ease infinite 4.8s;
+}
+
+.s-33 {
+  animation: s 2s ease infinite 4.95s, s-2 2s ease infinite 4.95s;
+}
+
+.s-34 {
+  animation: s 2s ease infinite 5.1s, s-2 2s ease infinite 5.1s;
+}
+
+.s-35 {
+  animation: s 2s ease infinite 5.25s, s-2 2s ease infinite 5.25s;
+}
+
+.s-36 {
+  animation: s 2s ease infinite 5.4s, s-2 2s ease infinite 5.4s;
+}
+
+.s-37 {
+  animation: s 2s ease infinite 5.55s, s-2 2s ease infinite 5.55s;
+}
+
+.s-38 {
+  animation: s 2s ease infinite 5.7s, s-2 2s ease infinite 5.7s;
+}
+
+.s-39 {
+  animation: s 2s ease infinite 5.85s, s-2 2s ease infinite 5.85s;
+}
+
+.s-40 {
+  animation: s 2s ease infinite 6s, s-2 2s ease infinite 6s;
+}
+
+.s-41 {
+  animation: s 2s ease infinite 6.15s, s-2 2s ease infinite 6.15s;
+}
+
+.s-42 {
+  animation: s 2s ease infinite 6.3s, s-2 2s ease infinite 6.3s;
+}
+
+.s-43 {
+  animation: s 2s ease infinite 6.45s, s-2 2s ease infinite 6.45s;
+}
+
+.s-44 {
+  animation: s 2s ease infinite 6.6s, s-2 2s ease infinite 6.6s;
+}
+
+.s-45 {
+  animation: s 2s ease infinite 6.75s, s-2 2s ease infinite 6.75s;
+}
+
+.s-46 {
+  animation: s 2s ease infinite 6.9s, s-2 2s ease infinite 6.9s;
+}
+
+.s-47 {
+  animation: s 2s ease infinite 7.05s, s-2 2s ease infinite 7.05s;
+}
+
+.s-48 {
+  animation: s 2s ease infinite 7.2s, s-2 2s ease infinite 7.2s;
+}
+
+.s-49 {
+  animation: s 2s ease infinite 7.35s, s-2 2s ease infinite 7.35s;
+}
+
+.s-50 {
+  animation: s 2s ease infinite 7.5s, s-2 2s ease infinite 7.5s;
+}
+
+@keyframes smoke {
+  0% {
+    transform: scaleY(1) scaleX(1.05) skewX(-3deg);
+  }
+  100% {
+    transform: scaleY(0.94) scaleX(1) skewX(3deg);
+  }
+}
+@keyframes s {
+  0%,10% {
+    top: 0;
+    left: 40%;
+    width: 0;
+  }
+  20% {
+    top: -25px;
+    left: 0;
+    width: 100%;
+  }
+  30% {
+    top: -50px;
+    left: 20%;
+    width: 90%;
+  }
+  40% {
+    top: -75px;
+    left: 20%;
+    width: 80%;
+    opacity: .4;
+  }
+  60% {
+    top: -100px;
+    left: 18%;
+    width: 60%;
+  }
+  70% {
+    width: 50%;
+    top: -125px;
+    left: 35%;
+    opacity: .5;
+  }
+  80% {
+    width: 40%;
+    top: -150px;
+    left: 40%;
+    opacity: .1;
+  }
+  100% {
+    width: 30%;
+    top: -125px;
+    left: 60%;
+    opacity: .5;
+  }
+}
+@keyframes s-2 {
+  0% {
+    transform: skewY(5deg);
+    border-radius: 50px;
+  }
+  100% {
+    transform: skewY(-5deg);
+    border-radius: 45px;
+  }
+}

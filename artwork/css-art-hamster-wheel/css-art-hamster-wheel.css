@@ -1,0 +1,255 @@
+body {
+  background-color: pink;
+}
+
+#container{
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-color: #E1F1FF;
+  margin: 0 auto;
+  margin-top: 100px;
+  z-index: -2;
+}
+
+.wheel, .wheel::before, .wheel::after, 
+.stand, .stand::after, .stand::before, 
+.hamster, .hamster::before, .hamster::after, 
+.head, .head::after, .head::before, .tail, 
+.legs, .pos, .title, .bottom {
+  position: absolute;
+}
+
+.wheel {
+  width: 300px;
+  height: 300px;
+  border: 30px #999 dashed;
+  border-radius: 50%;
+  left: calc(50% - 200px);
+  top: 10%;
+  animation: 3.5s linear 0s infinite normal wheel;
+}
+
+@keyframes wheel { 
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+
+}
+
+
+.wheel::before {
+  content: "";
+  width: 300px;
+  height: 300px;
+  border: 30px #555 solid;
+  border-radius: 50%;
+  left: -30px;
+  bottom: -30px;
+}
+
+.wheel::after{
+  content: "";
+  width: 300px;
+  height: 26px;
+  background-color: #555;
+  left: 0px;
+  top: calc(50% - 13px);
+  transform: rotate(1deg);
+}
+
+.stand::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-color: #3592E6 #3592E6 transparent transparent;
+  border-width: 150px;
+  border-style: solid;
+  border-radius: 50%;
+  right: 70px;
+  bottom: 70px;
+  opacity: .2;
+  z-index: -1;
+  transform: rotate(10deg);
+}
+
+.stand {
+  content: "";
+  width: 220px;
+  height: 210px;
+  border-color: #777;
+  border-style: solid;
+  border-width: 25px 20px 20px 0px;
+  border-radius: 0px 100px 0px 0px;
+  right: 30px;
+  bottom: 30px;
+}
+
+.stand::after {
+  content: "";
+  width: 45px;
+  height: 45px;
+  background-color: #666;
+  border-radius: 50%;
+  top: -34px;
+  left: -20px;
+}
+
+.hamster {
+  width: 120px;
+  height: 75px;
+  background-color: #F9BA8B;
+  border-radius: 30% 30% 50% 50% / 
+                 50% 50% 40% 40%;
+  bottom: 130px;
+  left: 165px;
+  animation: .75s ease-in-out 0s infinite normal bob;
+}
+
+@keyframes bob { 
+  0% {
+    transform: translateY(2px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(2px);
+  }
+
+}
+
+.head {
+  width: 65px;
+  height: 55px;
+  background-color: #F9BA8B;
+  border-radius: 70% 50% 50% 60% / 
+                 60% 50% 50% 50%;
+  bottom: 17px;
+  right: 70px;
+}
+
+.head::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: black;
+  top: 18px;
+  left: 15px;
+}
+
+.head::after {
+  content: "";
+  width: 16px;
+  height: 24px;
+  background-color: #DE9056;
+  border: 3px #F9BA8B solid;
+  border-radius: 50% 50% 50% 50% / 
+                 60% 60% 30% 30%;
+  top: -15px;
+  left: 28px;
+  transform: rotate(25deg);
+  animation: 1.5s ease-in-out .25s infinite normal ear;
+}
+
+@keyframes ear { 
+  0% {
+    transform: rotate(25deg);
+  }
+
+  50% {
+    transform: rotate(35deg) translateX(3px);
+  }
+
+  100% {
+    transform: rotate(25deg);
+  }
+
+}
+
+
+.tail {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #F9BA8B;
+  bottom: 26px;
+  right: -8px;
+  animation: 1s linear .5s infinite normal bob;
+}
+
+@keyframes bob { 
+  0% {
+    transform: translateY(2px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(2px);
+  }
+
+}
+
+.legs {
+  width: 20px;
+  height: 18px;
+  background-color: #F9BA8B;
+  border-radius: 50% 50% 50% 50% / 
+  30% 30% 60% 60%;
+  bottom: -5px;
+  left: 20px;
+  animation: .75s ease-in-out .5s infinite normal run;
+}
+
+@keyframes run { 
+  0% {}
+
+  25% {
+    transform: rotate(35deg) translateX(3px);
+  }
+
+  75% {
+    transform: rotate(-35deg) translateX(3px);
+  }
+
+  100% {}
+
+}
+
+.pos {
+  background-color: #F9BA8B;
+  left: 70px;
+  bottom: -7px;
+}
+
+.title {
+  top: 10px;
+  width: 100%;
+  height: 10px;
+  text-indent: 10px;
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+}
+
+.bottom {
+  bottom: 70px;
+  right: -350px;
+  width: 100%;
+  height: 10px;
+  text-indent: 10px;
+  font-family: 'Roboto', sans-serif;
+  color: #444;
+}
+
+.fab {
+  color: #444;
+}
