@@ -4,12 +4,12 @@
     "title": "Skull and Snake",
     "description": "//inspiration from [https://dribbble.com/shots/3045320-Club-Kiddo-Co-Halloween-Series](https://dribbble.com/shots/3045320-Club-Kiddo-Co-Halloween-Series)",
     "author": {
-        "name": "Trish Katz",
+        "name": "Tricia Katz",
         "avatar": "https://s.cdpn.io/profiles/user/417846/512.jpg?1",
         "web": "",
         "social": [{
             "title": "Codepen",
-            "url": "https://codepen.io/techxastrish/"
+            "url": "https://codepen.io/triciaakatz/"
         }, {
             "title": "Twitter",
             "url": "https://twitter.com/triciaakatz"
@@ -24,6 +24,6 @@
     "thumbnail": "thumbnail.png",
     "splash": "splash.png",
     "keywords": ["skull", "snake", "halloween", "bone", "october"],
-    "original": "https://codepen.io/techxastrish/pen/jaOKoo",
-    "codepen": "https://codepen.io/techxastrish/pen/jaOKoo"
+    "original": "https://codepen.io/triciaakatz/pen/jaOKoo",
+    "codepen": "https://codepen.io/triciaakatz/pen/jaOKoo"
 }

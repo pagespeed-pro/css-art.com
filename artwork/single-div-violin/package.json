@@ -4,18 +4,19 @@
     "title": "Single Div Violin",
     "description": "",
     "author": {
-        "name": "Trish Katz",
+        "name": "Tricia Katz",
         "avatar": "https://s.cdpn.io/profiles/user/417846/512.jpg?1",
         "web": "",
         "social": [{
             "title": "Codepen",
-            "url": "https://codepen.io/techxastrish/"
-}, {    "title": "Twitter",
-    "url": "https://twitter.com/triciaakatz"
-}, {
-    "title": "Medium.com",
-    "url": "https://medium.com/@techxastrish"
-}]
+            "url": "https://codepen.io/triciaakatz/"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/triciaakatz"
+        }, {
+            "title": "Medium.com",
+            "url": "https://medium.com/@techxastrish"
+        }]
     },
     "html": "single-div-violin.html",
     "css": ["single-div-violin.css"],
@@ -23,6 +24,6 @@
     "thumbnail": "thumbnail.png",
     "splash": "splash.png",
     "keywords": ["violin", "single div", "music", "orchestra"],
-    "original": "https://codepen.io/techxastrish/pen/xdWPYx",
-    "codepen": "https://codepen.io/techxastrish/pen/xdWPYx"
+    "original": "https://codepen.io/triciaakatz/pen/xdWPYx",
+    "codepen": "https://codepen.io/triciaakatz/pen/xdWPYx"
 }

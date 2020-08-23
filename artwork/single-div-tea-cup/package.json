@@ -4,12 +4,12 @@
     "title": "Single Div Tea Cup",
     "description": "",
     "author": {
-        "name": "Trish Katz",
+        "name": "Tricia Katz",
         "avatar": "https://s.cdpn.io/profiles/user/417846/512.jpg?1",
         "web": "",
         "social": [{
             "title": "Codepen",
-            "url": "https://codepen.io/techxastrish/"
+            "url": "https://codepen.io/triciaakatz/"
         }, {
             "title": "Twitter",
             "url": "https://twitter.com/triciaakatz"
@@ -24,6 +24,6 @@
     "thumbnail": "thumbnail.png",
     "splash": "splash.png",
     "keywords": ["tea cup", "tea", "single div", "coffee"],
-    "original": "https://codepen.io/techxastrish/pen/zKgKoN",
-    "codepen": "https://codepen.io/techxastrish/pen/zKgKoN"
+    "original": "https://codepen.io/triciaakatz/pen/zKgKoN",
+    "codepen": "https://codepen.io/triciaakatz/pen/zKgKoN"
 }
