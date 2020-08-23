@@ -1,0 +1,250 @@
+:root {
+	--background-color: #46c7ff;
+	--hat-color: #dd0009;
+	--hat-shadow: #a60108;
+	--hat-tassel: #ffb425;
+	--skin-color: #ffffff;
+	--shadow-light: #e5edd6;
+	--shadow-dark: #b9c8a7;
+}
+
+.container {
+	width: 500px;
+	height: 500px;
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0 0 -250px;
+	background-color: var(--background-color);
+}
+
+.hat {
+	width: 15%;
+	height: 15%;
+	position: absolute;
+	top: 5%;
+	left: 30%;
+	background-color: var(--hat-color);
+}
+
+.hat-shadow {
+	width: 33%;
+	height: 66%;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+	background-color: var(--hat-shadow);
+}
+
+.hat-tassel { 
+	width: 33%; 
+	height: 33%;
+	position: absolute;
+	background-color: var(--hat-tassel);
+}
+
+.hat-tassel.tassel2 { left: -33%; top: 33%; }
+
+.head {
+	width: 65%;
+	height: 35%;
+	position: absolute;
+	top: 20%;
+	left: 15%;
+	background-color: var(--skin-color);
+}
+
+.headcorner {
+	width: calc(100%/13);
+	height: calc(100%/7);
+	background-color: var(--background-color);
+	position: absolute;
+	z-index: 3;
+}
+
+.headcorner.ne { top: 0; right: 0; }
+.headcorner.se { bottom: 0; right: 0; }
+.headcorner.sw { bottom: 0; left: 0; }
+.headcorner.nw { top: 0; left: 0; }
+
+.head .light-shadow-side {
+	width: calc(100%/13 * 2);
+	height: calc(100%/7 * 6);
+	position: absolute;
+	left: calc(100%/13);
+	top: 0;
+	background-color: var(--shadow-light);
+	z-index: 2;
+}
+
+.head .cover {
+	width: calc(100%/13);
+	height: calc(100%/7 * 3);
+	position: absolute;
+	left: calc(100%/13 * 2);
+	top: calc(100%/7 * 2);
+	background-color: var(--skin-color);
+	z-index: 4;
+}
+
+.head .light-shadow-cheek {
+	width: calc(100%/13);
+	height: calc(100%/7);
+	position: absolute;
+	left: calc(100%/13 * 3);
+	bottom: 0;
+	background-color: var(--shadow-light);
+}
+
+.head .shadow-nw {
+	width: calc(100%/13);
+	height: calc(100%/7);
+	position: absolute;
+	top: 0;
+	left: calc(100%/13);
+	background-color: var(--shadow-dark);
+	z-index: 2;
+}
+
+.head .dark-shadow-side {
+	width: calc(100%/13 * 3);
+	height: calc(100%/7 * 6);
+	position: absolute;
+	bottom: 0;
+	background-color: var(--shadow-dark);
+	z-index: 1;
+}
+
+.eye {
+	width: calc(100%/13);
+	height: calc(100%/7);
+	background-color: black;
+	position: absolute;
+	top: calc(100%/7 * 3);
+}
+
+.eye-left { left: calc(100%/13 * 3); }
+.eye-right { right: calc(100%/13); }
+
+.neck {
+	width: 20%;
+	height: 5%;
+	background-color: var(--skin-color);
+	position: absolute;
+	top: 55%;
+	left: 35%;
+}
+
+.neck-shadow {
+	height: 100%;
+	position: absolute;
+}
+
+.neck-shadow.dark {
+	width: 50%;
+	background-color: var(--shadow-dark);
+}
+
+.neck-shadow.light {
+	left: 50%;
+	width: 25%;
+	background-color: var(--shadow-light);
+}
+
+.torso {
+	width: 30%;
+	height: 30%;
+	position: absolute;
+	top: 60%;
+	left: 30%;
+	background-color: var(--skin-color);
+}
+
+.torso .dark-shadow {
+	width: calc(100%/6);
+	height: calc(100%/6 * 8);
+	position: absolute;
+	background-color: var(--shadow-dark);
+}
+
+.torso .shadow-shoulder, .shadow-bottom {
+	width: calc(100%/6);
+	height: calc(100%/6);
+	position: absolute;
+	left: calc(100%/6);
+	background-color: var(--shadow-light);
+}
+
+.torso .shadow-bottom {
+	bottom: 0;
+	left: calc(100%/6 * 2);
+}
+
+.torso .shadow-side {
+	width: calc(100%/6);
+	height: calc(100%/6 * 4);
+	position: absolute;
+	top: calc(100%/6 * 3);
+	left: calc(100%/6);
+	background-color: var(--shadow-light);
+}
+
+.arm-left, .hand-left {
+	width: 10%;
+	height: 5%;
+	position: absolute;
+	background-color: var(--skin-color);
+}
+
+.arm-left {
+	top: 65%;
+	left: 25%;
+}
+
+.hand-left {
+	top: 70%;
+	left: 20%;
+}
+
+.arm-left .shadow, .hand-left .shadow {
+	height: 100%;
+	width: 50%;
+	position: absolute;
+	background-color: var(--shadow-dark);
+}
+
+.arm-right {
+	width: 5%;
+	height: 5%;
+	position: absolute;
+	top: 70%;
+	right: 35%;
+	background-color: var(--shadow-dark);
+}
+
+.leg-right {
+	width: 10%;
+	height: 10%;
+	position: absolute;
+	bottom: 0%;
+	right: 40%;
+	background-color: var(--shadow-dark);
+}
+
+.leg-right .shadow, .leg-right .cover {
+	width: 50%;
+	height: 50%;
+	position: absolute;
+}
+
+.leg-right .shadow {
+	right: 0;
+	top: 0;
+	background-color: var(--shadow-light);
+}
+
+.leg-right .cover {
+	background-color: var(--background-color);
+	bottom: 0;
+	left: 0;
+}

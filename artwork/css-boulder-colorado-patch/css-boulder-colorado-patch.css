@@ -1,0 +1,509 @@
+.pseudo, .star:before, .star:after, .cloud-small:before, .cloud-big:before, .cloud__big:before, .cloud__small:before, .cloud-big:after, .cloud__big:after, .ribbon:before, .ribbon:after, .sun:after, .moon:before, .mountains .mountain__left:before, .mountains .mountain__right:before, .mountains .mountain__middle:before, .tent:before, .tent:after, .tree__left:before, .tree__left:after, .tree__right:before, .tree__right:after {
+  content: '';
+  position: absolute;
+}
+
+.star {
+  height: 2.5em;
+  width: 2.5em;
+  background: #faf7e8;
+  position: absolute;
+}
+.star:before, .star:after, .star .cover {
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 100%;
+  background: #395a6d;
+  position: absolute;
+}
+.star:before {
+  top: -1.25em;
+  left: -1.25em;
+}
+.star:after {
+  top: -1.25em;
+  right: -1.25em;
+}
+.star .cover.left {
+  left: -1.25em;
+  bottom: -1.25em;
+}
+.star .cover.right {
+  bottom: -1.25em;
+  right: -1.25em;
+}
+
+.cloud-small, .cloud-big, .cloud__big, .cloud__small {
+  width: 4em;
+  height: 2em;
+  border-radius: 4em 4em 0 0;
+  position: absolute;
+  background: #86beb3;
+}
+.cloud-small:before, .cloud-big:before, .cloud__big:before, .cloud__small:before {
+  background: #86beb3;
+  height: 1em;
+  width: 2em;
+  border-radius: 2em 2em 0 0;
+  left: -1.2em;
+  bottom: 0;
+}
+
+.cloud-big:after, .cloud__big:after {
+  width: 4.2em;
+  height: 2.1em;
+  border-radius: 4.2em 4.2em 0 0;
+  background: #86beb3;
+  position: absolute;
+  right: -3.1em;
+  bottom: 0;
+}
+
+body {
+  font-size: 10px;
+  min-height: 97vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #DCC48E;
+}
+
+.patch-container {
+  position: relative;
+  z-index: -2;
+  height: 50em;
+  width: 46em;
+  top: -1em;
+}
+
+.patch-base {
+  height: 45.5em;
+  width: 40em;
+  background: linear-gradient(180deg, #395a6d 55%, #86beb3 55%);
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+  border-radius: 0 0 20em 20em;
+  border: 1.3em solid #faf7e8;
+  border-top: none;
+  box-sizing: border-box;
+}
+
+.patch-top {
+  height: 4.5em;
+  width: 40em;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 0;
+  overflow: hidden;
+}
+.patch-top .patch-top-rounding {
+  height: 110em;
+  width: 110em;
+  border-radius: 100%;
+  background: #395a6d;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 0;
+  border: 1.3em solid #faf7e8;
+}
+
+.ribbon {
+  width: 42.5em;
+  height: 7.6em;
+  position: relative;
+  top: 26.5em;
+  left: 1.75em;
+  border: 3.8em solid #395a6d;
+  border-right-width: 1em;
+  border-right-color: #faf7e8;
+  border-left-width: 1em;
+  border-left-color: #faf7e8;
+  box-sizing: border-box;
+  text-align: center;
+}
+.ribbon:before, .ribbon:after {
+  border: 5em solid #faf7e8;
+  top: -5em;
+  z-index: -1;
+}
+.ribbon:before {
+  border-left-width: 1.3em;
+  border-left-color: transparent;
+  left: -2.7em;
+}
+.ribbon:after {
+  border-right-width: 1.3em;
+  border-right-color: transparent;
+  right: -2.7em;
+}
+
+.ribbon span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  font-size: 3.2em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  color: #faf7e8;
+}
+
+.sun {
+  font-size: 1.05em;
+  position: absolute;
+  height: 0;
+  width: 0;
+  box-sizing: border-box;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 9.9em;
+}
+.sun:after {
+  height: 2.8em;
+  width: 2.8em;
+  border-radius: 100%;
+  border: 0.6em solid #faf7e8;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #86beb3;
+}
+.sun .ray {
+  width: 0.55em;
+  background: #faf7e8;
+  border-radius: 1.1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sun .ray1 {
+  height: 7.6em;
+  width: 0.6em;
+}
+.sun .ray2 {
+  transform: translate(-50%, -50%) rotate(22.5deg);
+  height: 8em;
+  top: -0.05em;
+  right: -0.05em;
+}
+.sun .ray3 {
+  transform: translate(-50%, -50%) rotate(45deg);
+  height: 9.7em;
+  top: -0.25em;
+  left: 0.28em;
+}
+.sun .ray4 {
+  transform: translate(-50%, -50%) rotate(67.5deg);
+  height: 15.6em;
+  top: -0.585em;
+  left: 1.4em;
+}
+.sun .ray5 {
+  transform: translate(-50%, -50%) rotate(90deg);
+  height: 18.6em;
+}
+.sun .ray6 {
+  transform: translate(-50%, -50%) rotate(112.5deg);
+  height: 15.6em;
+  top: -0.585em;
+  left: -1.4em;
+}
+.sun .ray7 {
+  transform: translate(-50%, -50%) rotate(135deg);
+  height: 9.7em;
+  top: -0.25em;
+  left: -0.28em;
+}
+.sun .ray8 {
+  transform: translate(-50%, -50%) rotate(157.5deg);
+  height: 8em;
+}
+
+.curved-text {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  color: #faf7e8;
+  width: 36em;
+  height: 18em;
+  position: relative;
+  margin: 0 auto;
+  top: 22.6em;
+}
+.curved-text span {
+  font-size: 2.8em;
+  position: absolute;
+  top: 0;
+  height: 7.4em;
+  width: 1em;
+  margin-left: -0.5em;
+  line-height: 11.5em;
+  transform-origin: top center;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  text-align: center;
+}
+.curved-text span:nth-child(1) {
+  transform: rotate(66.75deg);
+}
+.curved-text span:nth-child(2) {
+  transform: rotate(57.85deg);
+}
+.curved-text span:nth-child(3) {
+  transform: rotate(48.95deg);
+}
+.curved-text span:nth-child(4) {
+  transform: rotate(40.05deg);
+}
+.curved-text span:nth-child(5) {
+  transform: rotate(31.15deg);
+}
+.curved-text span:nth-child(6) {
+  transform: rotate(22.25deg);
+}
+.curved-text span:nth-child(7) {
+  transform: rotate(13.35deg);
+}
+.curved-text span:nth-child(8) {
+  transform: rotate(4.45deg);
+}
+.curved-text span:nth-child(9) {
+  transform: rotate(-4.45deg);
+}
+.curved-text span:nth-child(10) {
+  transform: rotate(-13.35deg);
+}
+.curved-text span:nth-child(11) {
+  transform: rotate(-22.25deg);
+}
+.curved-text span:nth-child(12) {
+  transform: rotate(-31.15deg);
+}
+.curved-text span:nth-child(13) {
+  transform: rotate(-40.05deg);
+}
+.curved-text span:nth-child(14) {
+  transform: rotate(-48.95deg);
+}
+.curved-text span:nth-child(15) {
+  transform: rotate(-57.85deg);
+}
+.curved-text span:nth-child(16) {
+  transform: rotate(-66.75deg);
+}
+
+.moon {
+  height: 6.2em;
+  width: 6.2em;
+  border-radius: 100%;
+  background: #faf7e8;
+  position: absolute;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 4.7em;
+}
+.moon:before {
+  height: 3.6em;
+  width: 3.6em;
+  border-radius: 100%;
+  background: #395a6d;
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  right: -0.6em;
+}
+
+.cloud__small {
+  top: 7.4em;
+}
+.cloud__small.left {
+  left: 12.5em;
+}
+.cloud__small.right {
+  transform: scaleX(-1);
+  right: 12.5em;
+}
+
+.cloud__big {
+  top: 12.8em;
+}
+.cloud__big.left {
+  left: 7.3em;
+}
+.cloud__big.right {
+  transform: scaleX(-1);
+  right: 7.3em;
+}
+
+.mountains {
+  height: 13em;
+  width: 37.4;
+  position: absolute;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 9em;
+}
+.mountains .mountain__left, .mountains .mountain__right, .mountains .mountain__middle {
+  position: absolute;
+  bottom: 0;
+}
+.mountains .mountain__left {
+  border-bottom: solid 9.2em #86beb3;
+  border-left: solid 9.3em transparent;
+}
+.mountains .mountain__left:before {
+  border-bottom: solid 9.2em #faf7e8;
+  border-right: solid 9.3em transparent;
+}
+.mountains .mountain__right {
+  border-bottom: solid 9.2em #faf7e8;
+  border-right: solid 9.3em transparent;
+  right: 0;
+}
+.mountains .mountain__right:before {
+  border-bottom: solid 9.2em #86beb3;
+  border-left: solid 9.3em transparent;
+  left: -9.3em;
+}
+.mountains .mountain__middle {
+  border-bottom: solid 13em #86beb3;
+  border-left: solid 13em transparent;
+  border-right: solid 13em transparent;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+}
+.mountains .mountain__middle:before {
+  border-bottom: solid 13em #faf7e8;
+  border-right: solid 13em transparent;
+}
+
+.tent {
+  border-bottom: solid 4.5em #395a6d;
+  border-left: solid 4.8em transparent;
+  border-right: solid 4.8em transparent;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  bottom: 0;
+}
+.tent:before, .tent:after {
+  bottom: -4.5em;
+}
+.tent:before {
+  height: 1.7em;
+  width: 1.7em;
+  background: #86beb3;
+}
+.tent:after {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  border-bottom: solid 1.7em #faf7e8;
+  border-left: solid 1.7em transparent;
+  border-right: solid 1.7em transparent;
+}
+.tent .tent__flag {
+  border-left: solid 3em #395a6d;
+  border-top: solid 0.55em transparent;
+  border-bottom: solid 0.55em transparent;
+  position: absolute;
+  bottom: 0;
+}
+
+.tree__left, .tree__right {
+  border-bottom: solid 1.4em #395a6d;
+  border-left: solid 1.6em transparent;
+  border-right: solid 1.6em transparent;
+  position: absolute;
+  bottom: 0;
+}
+.tree__left:before, .tree__left:after, .tree__right:before, .tree__right:after {
+  border-bottom: solid 1.4em #395a6d;
+  border-left: solid 1.6em transparent;
+  border-right: solid 1.6em transparent;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+}
+.tree__left:before, .tree__right:before {
+  bottom: -0.15em;
+}
+.tree__left:after, .tree__right:after {
+  bottom: 1.1em;
+}
+
+.tree__left {
+  right: 4.8em;
+}
+
+.tree__right {
+  right: -8em;
+}
+
+.stars {
+  width: 32.5em;
+  height: 16em;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+  top: 3em;
+}
+.stars .star1 {
+  top: 2.7em;
+  left: 0em;
+}
+.stars .star2 {
+  top: 0em;
+  left: 9.3em;
+}
+.stars .star3 {
+  top: 0em;
+  right: 9.3em;
+}
+.stars .star4 {
+  top: 2.7em;
+  right: 0em;
+}
+.stars .star5 {
+  bottom: 0em;
+  left: 0em;
+}
+.stars .star6 {
+  top: 8.2em;
+  left: 9em;
+}
+.stars .star7 {
+  top: 8.2em;
+  right: 9em;
+}
+.stars .star8 {
+  bottom: 0em;
+  right: 0em;
+}
+
+.link-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  padding: 0.75em;
+  font-size: 1.5em;
+  color: #395a6d;
+  font-family: sans-serif;
+}
+.link-container a {
+  color: #86beb3;
+  font-weight: 600;
+  text-decoration: none;
+}

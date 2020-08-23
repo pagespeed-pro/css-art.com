@@ -1,0 +1,16 @@
+html {
+  font-size: 20px;
+  background: #353F68;
+}
+
+.logo {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 50%;
+  background: linear-gradient(#FF8551, #FF8551 100%) 9.2rem 7.82rem/5.2rem 4.2rem, radial-gradient(200% 100% at 0% 50%, #ff8551 49%, rgba(0, 0, 0, 0) 50%) 13.8rem 12.9rem/3.5rem 7rem, radial-gradient(200% 100% at 0% 50%, #353f68 49%, rgba(0, 0, 0, 0) 50%) 13.8rem 11.95rem/5rem 10rem, linear-gradient(to right, #FF8551, #FF8551 100%) 13.97rem 11.95rem/4rem 3rem, radial-gradient(200% 150% at 0% 73%, #ff8551 49%, rgba(0, 0, 0, 0) 50%) 13.85rem 7.775rem/4.15rem 5.9rem, linear-gradient(45deg, transparent 50%, #353F68 50%) 10rem 10rem/10rem 10rem, linear-gradient(135deg, transparent 50%, #353F68 50%) 10rem 0/10rem 10rem, radial-gradient(rgba(0, 0, 0, 0) 41.5%, #ff8551 42%, #ff8551 70.5%, rgba(0, 0, 0, 0) 71%);
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-40%, -50%);
+}
