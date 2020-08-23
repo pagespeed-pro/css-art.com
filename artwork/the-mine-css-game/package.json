@@ -1,0 +1,29 @@
+{
+    "name": "the-mine-css-game",
+    "version": "1.0.0",
+    "title": "The Mine: CSS only adventure game",
+    "description": "Nope, no javascript. Just a big long list of checkboxes and radio buttons.... You see, what happens is, let's say you click on the boulder, the input for the boulder is checked but the input for the pickaxe isn't. So CSS check to see if the checkbox is checked and the other checkbox is checked to check if the rule should apply. If the checkbox of the pickaxe is not checked then the check shows that the checkbox checked state of the previous checkbox isnt checked and thus the current checked box doesnt apply the checked checkbox state. Got that? Great. Me neither.",
+    "author": {
+        "name": "Jamie Coulter",
+        "avatar": "https://assets.codepen.io/217233/internal/avatars/users/default.png?format=auto&height=512&version=1545928745&width=512",
+        "web": "http://www.jamiecoulter.co.uk/",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/jcoulterdesign"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/jamiecoulter89"
+        }, {
+            "title": "CSSDesignAwards",
+            "url": "https://www.cssdesignawards.com/dd/design-stories-8-analogue-passions-of-web-professionals/55/"
+        }]
+    },
+    "html": "the-mine-css-game.html",
+    "css": ["the-mine-css-game.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["game", "adventure", "mine"],
+    "original": "https://codepen.io/jcoulterdesign/pen/NOMeEb",
+    "codepen": "https://codepen.io/jcoulterdesign/pen/NOMeEb"
+}
