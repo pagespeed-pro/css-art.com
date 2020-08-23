@@ -1,0 +1,31 @@
+body {
+  font-size: 10px;
+}
+
+div {
+  width: 100em;
+  height: 55em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-style: preserve-3d;
+  background: linear-gradient(#E8B51F 50%, #fed449 50%) 50% 36.5%/27.6em 0.3em, linear-gradient(#E8B51F 50%, #fed449 50%) 50% 40.5%/27.6em 0.3em, linear-gradient(#E8B51F 50%, #fed449 50%) 50% 44.5%/27.6em 0.3em, linear-gradient(#E8B51F 50%, #fed449 50%) 50% 48.5%/27.6em 0.3em, linear-gradient(#E8B51F 50%, #fed449 50%) 50% 52.5%/27.6em 0.3em, linear-gradient(#E8B51F 50%, #fed449 50%) 50% 56.5%/27.6em 0.3em, linear-gradient(#E8B51F 50%, #fed449 50%) 50% 60.5%/27.6em 0.3em, linear-gradient(#E8B51F 50%, #fed449 50%) 50% 64.5%/27.6em 0.3em, linear-gradient(#E8B51F 50%, #fed449 50%) 50% 68.5%/27.6em 0.3em, linear-gradient(#E8B51F 50%, #fed449 50%) 50% 72.5%/27.6em 0.3em, linear-gradient(#E8B51F 50%, #fed449 50%) 50% 76.5%/27.6em 0.3em, linear-gradient(#E8B51F 50%, #fed449 50%) 50% 80.5%/27.6em 0.3em, linear-gradient(#E8B51F 50%, #fed449 50%) 50% 84.5%/27.6em 0.3em, radial-gradient(180% 180% at 100% 100%, transparent 50%, #fff 51%) 36.9% 27%/3.2em 3.2em, radial-gradient(180% 180% at 0% 100%, transparent 50%, #fff 51%) 63.1% 27%/3.2em 3.2em, linear-gradient(to right, rgba(255, 225, 109, 0.07) 20%, rgba(255, 225, 109, 0.34)) 50% 29%/22em 1em, radial-gradient(190% 190% at 0% 100%, transparent 1.45em, #fcd647 1em, rgba(252, 234, 153, 0.1) 50%, transparent 51%) 61.4% 29%/5em 2em, linear-gradient(to left, rgba(197, 127, 14, 0.2) 20%, rgba(253, 228, 126, 0.1)) 63.3% 76%/2em 36em, linear-gradient(to right, rgba(197, 127, 14, 0.7), rgba(239, 181, 40, 0.7), rgba(240, 189, 48, 0.2)) 37.1% 75%/3em 36em, linear-gradient(45deg, #EAAF23, #FBD94A) 50% 75%/28em 36em, linear-gradient(#EAAF23 20%, #EAAF23) 50% 92%/21.5em 1em, linear-gradient(to right, #3c3c3c, #676767 0%, #676767 5%, #373737, #373737, #373737) 50.2% 8%/9em 1.5em, linear-gradient(to right, #3c3c3c, #999 0%, #737373 5%, #373737, #373737, #494949 30%, #494949 70%, #999 73%, #373737 79%, #373737) 46.65% 11.3%/1em 10em, linear-gradient(to right, #3c3c3c, #999 0%, #737373 5%, #373737, #373737, #494949 30%, #494949 70%, #999 73%, #373737 79%, #373737) 53.7% 11.3%/1em 10em;
+  background-repeat: no-repeat;
+}
+div:after {
+  content: '';
+  position: absolute;
+  width: 100em;
+  height: 55em;
+  position: absolute;
+  background: radial-gradient(100% 100% at 50% 50%, #2F2B2C 50%, transparent 53%) 39% 94.8%/2.2em 2.2em, radial-gradient(100% 100% at 50% 50%, #000 50%, transparent 53%) 39% 95%/2.5em 2.5em, radial-gradient(100% 100% at 50% 50%, #2F2B2C 50%, transparent 53%) 39% 95.4%/3em 3em, radial-gradient(100% 100% at 50% 50%, #2F2B2C 50%, transparent 53%) 62.92% 94.8%/2.2em 2.2em, radial-gradient(100% 100% at 50% 50%, #000 50%, transparent 53%) 62.94% 95%/2.5em 2.5em, radial-gradient(100% 100% at 50% 50%, #2F2B2C 50%, transparent 53%) 63% 95.4%/3em 3em, linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.1) 42%, rgba(255, 255, 255, 0)) 62% 93.4%/3em 2em, linear-gradient(45deg, transparent 40%, #373737 42%) 62% 93.4%/3em 2em, linear-gradient(90deg, transparent 40%, #512910 42%) 59.8% 91.5%/4em 1em, radial-gradient(200% 100% at 0% 100%, #373737 50%, #EBB226 55%) 40.3% 89.68%/1.2em 1.2em, radial-gradient(200% 100% at 100% 100%, #373737 50%, #F1C033 55%) 59.8% 89.68%/1.2em 1.2em, radial-gradient(170% 90% at 15% 0%, #373737 50%, #fff 55%) 62.2% 93%/5em 2.5em, linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.1) 42%, rgba(255, 255, 255, 0)) 37.8% 93.4%/3em 2em, linear-gradient(45deg, transparent 40%, #373737 42%) 37.8% 93.4%/3em 2em, linear-gradient(45deg, transparent 50%, #512910 50%) 38.58% 92%/4em 1em, radial-gradient(170% 90% at 80% 0%, #373737 50%, #fff 55%) 37.9% 93%/5em 2.5em;
+  background-repeat: no-repeat;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 5px;
+  }
+}

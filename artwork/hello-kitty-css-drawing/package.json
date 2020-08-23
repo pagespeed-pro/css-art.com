@@ -1,0 +1,29 @@
+{
+    "name": "hello-kitty-css-drawing",
+    "version": "1.0.0",
+    "title": "Hello Kitty CSS Drawing",
+    "description": "My first attempt at CSS art ♥",
+    "author": {
+        "name": "Brianna McDonald",
+        "web": "https://briannamcdonald.carrd.co/",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/briannamcdonald/"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/Brianna_Codes"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/briannamcdonald"
+        }]
+    },
+    "html": "hello-kitty-css-drawing.html",
+    "css": ["hello-kitty-css-drawing.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["hello kitty", "drawing"],
+    "original": "https://codepen.io/briannamcdonald/pen/YzwLbrV",
+    "codepen": "https://codepen.io/briannamcdonald/pen/YzwLbrV",
+    "github": "https://github.com/briannamcdonald/css-art"
+}

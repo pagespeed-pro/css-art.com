@@ -1,0 +1,837 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 1095) * 1vmin);
+  --shadow: rgb(150, 107, 95);
+  --db: hsl(15, 34%, 23%);
+  --mb: hsl(22, 22%, 33%);
+  --lb: hsl(25, 22%, 47%);
+  --dp: hsl(24, 26%, 61%);
+  --mp: hsl(25, 58%, 78%);
+  --lp: hsl(17, 81%, 85%);
+  --h: hsl(22, 64%, 85%);
+  --rosy: rgb(247, 197, 205);
+  --b: #25547f;
+  --blur: blur(calc(1 * var(--unit)));
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0e0e0e;
+}
+
+.canvas {
+  height: calc(1095 * var(--unit));
+  width: calc(935 * var(--unit));
+  position: fixed;
+  top: 0%;
+  z-index: 1;
+  overflow: hidden;
+}
+.canvas * {
+  position: absolute;
+}
+.canvas .side-shadow {
+  width: 25%;
+  height: 40%;
+  background: rgba(0, 0, 0, 0.212);
+  transform: rotate(30deg);
+  right: 30%;
+  top: 25%;
+  z-index: 24;
+  filter: blur(calc(20 * var(--unit)));
+}
+.canvas .earring {
+  filter: var(--blur);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.548) 100%), radial-gradient(circle at 50% 0%, rgba(0, 0, 0, 0.164) 70%, rgba(255, 255, 255, 0.212) 90%), radial-gradient(circle at 10% 40%, #cac1c1 5%, rgba(0, 0, 0, 0.521) 30%, rgba(41, 41, 41, 0.822) 60%), linear-gradient(0deg, white 10%, #bbb3b3 40%, #4d4d4d 100%);
+  border-radius: 50%;
+  width: 5%;
+  height: 4.5%;
+  bottom: 43.5%;
+  right: 34.5%;
+}
+.canvas .collar {
+  filter: var(--blur);
+  width: 35%;
+  height: 30%;
+  background: linear-gradient(90deg, #dad7c1 80%, #636259 100%);
+  box-shadow: inset 0 calc(2 * var(--unit)) calc(10 * var(--unit)) #636259;
+  left: 41%;
+  bottom: 13.5%;
+  border-radius: 83% 5% 0% 0%;
+  z-index: -1;
+}
+.canvas .collar::before {
+  content: "";
+  position: absolute;
+  width: 108%;
+  height: 100%;
+  border-radius: 90% 0% 0% 0%;
+  background: #464129;
+  background: linear-gradient(90deg, #443f25 0%, #91743e 20%, #91743e 30%, #463720 50%, #161007 80%, #0a0703 100%);
+  top: 10%;
+  left: -8%;
+  box-shadow: inset calc(40 * var(--unit)) calc(-30 * var(--unit)) calc(20 * var(--unit)) rgba(51, 42, 20, 0.637);
+}
+.canvas .jacket {
+  filter: blur(calc(2 * var(--unit)));
+  width: 50%;
+  height: 40%;
+  background: linear-gradient(62deg, #91743e 40%, #463720 55%, #1a140b 70%, #161007 80%, #0a0703 100%);
+  left: 35%;
+  bottom: -15%;
+  border-radius: 100% 100% 0% 0% / 100% 100% 0% 0%;
+  transform: rotate(20deg);
+  z-index: 20;
+  box-shadow: inset calc(10 * var(--unit)) calc(-9 * var(--unit)) calc(15 * var(--unit)) #3b3420, inset calc(25 * var(--unit)) calc(-20 * var(--unit)) calc(18 * var(--unit)) calc(5 * var(--unit)) rgba(68, 57, 28, 0.637);
+}
+.canvas .jacket::after {
+  content: "";
+  position: absolute;
+  width: 15%;
+  height: 60%;
+  bottom: 0%;
+  left: 20%;
+  border-radius: 40% / 50%;
+  background: linear-gradient(260deg, #68512f 0%, #463920 50%);
+  transform: rotate(-20deg);
+  filter: blur(calc(8 * var(--unit)));
+  box-shadow: calc(-30 * var(--unit)) calc(40 * var(--unit)) calc(20 * var(--unit)) rgba(73, 58, 35, 0.89), calc(80 * var(--unit)) calc(-50 * var(--unit)) calc(25 * var(--unit)) calc(5 * var(--unit)) #4d3d26, calc(150 * var(--unit)) calc(-10 * var(--unit)) calc(30 * var(--unit)) calc(15 * var(--unit)) #1b160f, calc(200 * var(--unit)) calc(30 * var(--unit)) calc(20 * var(--unit)) calc(35 * var(--unit)) #1d1710;
+}
+.canvas .band {
+  width: 42%;
+  height: 30%;
+  filter: var(--blur);
+  background: linear-gradient(110deg, rgba(188, 208, 231, 0.5) 20%, rgba(86, 117, 155, 0.5) 40%, rgba(30, 58, 85, 0.9) 53%, #0b1b2b 70%, black 100%), radial-gradient(ellipse at 0% 100%, #6085a8 50%, #0f151b 80%);
+  top: 18%;
+  left: 33%;
+  border-radius: 70% 100% 50% 0% / 80% 100% 50% 0%;
+  overflow: hidden;
+}
+.canvas .band::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 40%;
+  background: rgba(30, 58, 85, 0.9);
+  filter: blur(calc(5 * var(--unit)));
+  top: 39%;
+  left: -6%;
+  border-radius: 100% / 100%;
+  transform: rotate(32deg);
+}
+.canvas .top-band {
+  width: 27%;
+  height: 5%;
+  background: linear-gradient(68deg, #6382a8 0%, #152f47 50%, #0b1b2b 80%, black 100%);
+  border-radius: 50% 30% 10% 0%;
+  z-index: 20;
+  transform: rotate(45deg);
+  filter: blur(calc(2 * var(--unit)));
+  top: 36%;
+  right: 27%;
+  box-shadow: calc(1 * var(--unit)) calc(2 * var(--unit)) calc(1 * var(--unit)) var(--db), 0 calc(3 * var(--unit)) calc(1 * var(--unit)) #352121;
+}
+.canvas .top-yellow-band {
+  filter: blur(calc(2.5 * var(--unit)));
+  width: 26%;
+  height: 20%;
+  top: 11%;
+  left: 51%;
+  background: #74694a;
+  border-radius: 70% 100% 20% 0% / 70% 100% 20% 0%;
+  transform: rotate(-30deg);
+  z-index: -20;
+  overflow: hidden;
+}
+.canvas .top-yellow-band::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background: linear-gradient(80deg, #29251a 30%, #d4be82 80%, #29251a 90%, black 100%);
+  border-radius: inherit;
+  right: 0%;
+  bottom: 15%;
+  box-shadow: inset 0 calc(3 * var(--unit)) calc(1 * var(--unit)) #4d472f;
+}
+.canvas .top-yellow-band::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  background: linear-gradient(80deg, #29251a 60%, #e4cd8d 70%, #29251a 90%, black 100%);
+  border-radius: inherit;
+  right: 0%;
+  bottom: -10%;
+  box-shadow: inset 0 calc(3 * var(--unit)) calc(1 * var(--unit)) #4d472f;
+}
+.canvas .yellow-band {
+  width: 30%;
+  height: 18%;
+  filter: var(--blur);
+  background: #e4cd8d;
+  background: linear-gradient(110deg, rgba(228, 205, 141, 0.8) 20%, rgba(129, 116, 79, 0.8) 65%, rgba(41, 37, 26, 0.5) 80%, black 100%), radial-gradient(circle at bottom center, rgba(253, 233, 176, 0.8), rgba(185, 171, 131, 0.8) 60%, rgba(34, 30, 20, 0.8) 100%);
+  z-index: -1;
+  left: 45%;
+  top: 15%;
+  border-radius: 80% 100% 20% 0% / 80% 100% 20% 0%;
+  box-shadow: inset calc(-3 * var(--unit)) calc(3 * var(--unit)) calc(5 * var(--unit)) rgba(41, 37, 26, 0.5);
+  overflow: hidden;
+}
+.canvas .yellow-band .shadow {
+  width: 105%;
+  height: 80%;
+  border-radius: inherit;
+  background: linear-gradient(110deg, rgba(228, 205, 141, 0.8) 20%, rgba(129, 116, 79, 0.8) 65%, rgba(41, 37, 26, 0.5) 80%);
+  box-shadow: inset calc(-15 * var(--unit)) calc(5 * var(--unit)) calc(5 * var(--unit)) #353021, calc(80 * var(--unit)) 0 calc(10 * var(--unit)) #332e20, calc(60 * var(--unit)) calc(-10 * var(--unit)) calc(10 * var(--unit)) #5a5139;
+  top: 15%;
+  left: -5%;
+  transform: rotate(10deg);
+}
+.canvas .yellow-drape {
+  filter: var(--blur);
+  width: 10%;
+  height: 61%;
+  background: linear-gradient(85deg, #81744f 0%, #e4cd8d 40%, #413a29 60%);
+  right: 15%;
+  top: 20%;
+  z-index: 30;
+  border-radius: 10% 100% 20% 20% / 5% 100% 15% 15%;
+  transform: rotate(-3deg);
+  box-shadow: inset calc(4 * var(--unit)) calc(2 * var(--unit)) calc(10 * var(--unit)) #272318, inset calc(-4 * var(--unit)) calc(2 * var(--unit)) calc(10 * var(--unit)) #272318, calc(-4 * var(--unit)) calc(-4 * var(--unit)) calc(10 * var(--unit)) #272318, calc(6 * var(--unit)) calc(0 * var(--unit)) calc(10 * var(--unit)) rgba(39, 34, 21, 0.877);
+  overflow: hidden;
+}
+.canvas .yellow-drape::before {
+  content: "";
+  filter: var(--blur);
+  position: absolute;
+  background: linear-gradient(100deg, rgba(14, 18, 22, 0.856) 0%, rgba(73, 93, 131, 0.8) 40%, rgba(41, 52, 65, 0.5) 80%);
+  width: 110%;
+  height: 18%;
+  z-index: -10;
+  bottom: -2%;
+  transform: rotate(-10deg);
+}
+.canvas .yellow-drape::after {
+  content: "";
+  filter: blur(calc(10 * var(--unit)));
+  position: absolute;
+  background: #2e260d;
+  width: 10%;
+  height: 50%;
+  z-index: -10;
+  bottom: 60%;
+  left: 30%;
+  transform: rotate(-5deg);
+  box-shadow: calc(-4 * var(--unit)) calc(150 * var(--unit)) calc(1 * var(--unit)) #2e260d;
+}
+.canvas .yellow-drape-back {
+  filter: var(--blur);
+  width: 10%;
+  height: 55%;
+  z-index: -10;
+  background: linear-gradient(85deg, #81744f 0%, #495d83 40%, #1f262e 60%, black 100%);
+  right: 10%;
+  top: 20%;
+  border-radius: 10% 100% 20% 20% / 5% 100% 15% 15%;
+  transform: rotate(-10deg);
+  box-shadow: inset calc(2 * var(--unit)) calc(2 * var(--unit)) calc(10 * var(--unit)) #272318, inset calc(-2 * var(--unit)) calc(2 * var(--unit)) calc(10 * var(--unit)) #16140d, calc(-4 * var(--unit)) calc(-4 * var(--unit)) calc(10 * var(--unit)) #272318;
+  overflow: hidden;
+}
+.canvas .yellow-drape-back::before {
+  content: "";
+  position: absolute;
+  background: linear-gradient(100deg, rgba(139, 170, 206, 0.8) 0%, rgba(73, 93, 131, 0.8) 40%, rgba(41, 52, 65, 0.5) 80%);
+  width: 110%;
+  height: 15%;
+  z-index: -10;
+  bottom: 0;
+  transform: rotate(-10deg);
+}
+.canvas .neck {
+  background: linear-gradient(70deg, var(--mp) 10%, #835f51 30%, #52392f 50%, #1f1512 100%);
+  filter: blur(calc(2 * var(--unit)));
+  width: 20%;
+  height: 20%;
+  z-index: 30;
+  left: 48%;
+  top: 50%;
+  z-index: -1;
+  transform: rotate(-28deg);
+}
+.canvas .side-blur {
+  background: var(--db);
+  filter: blur(calc(20 * var(--unit)));
+  width: 9%;
+  height: 13%;
+  left: 55%;
+  top: 40%;
+  z-index: 20;
+  border-radius: 20%;
+  transform: rotate(20deg);
+}
+.canvas .blob:nth-child(2) {
+  background: var(--lp);
+  filter: blur(calc(15 * var(--unit)));
+  width: 9%;
+  height: 11%;
+  transform: rotate(20deg);
+  left: 42%;
+  top: 40%;
+  z-index: 2;
+  border-radius: 20%;
+}
+.canvas .blob:nth-child(3) {
+  background: var(--h);
+  filter: blur(calc(10 * var(--unit)));
+  width: 10%;
+  height: 6%;
+  transform: rotate(20deg);
+  left: 35%;
+  top: 30%;
+  z-index: 2;
+  border-radius: 50%;
+}
+.canvas .blob:nth-child(4) {
+  background: linear-gradient(90deg, #1f2c3f 20%, black);
+  filter: blur(calc(10 * var(--unit)));
+  width: 22%;
+  height: 18.5%;
+  transform: rotate(40deg);
+  left: 56%;
+  top: 26%;
+  z-index: 21;
+  border-radius: 0% 50% 0% 0%;
+}
+.canvas .blob:nth-child(4)::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  filter: blur(calc(2 * var(--unit)));
+  height: 35%;
+  border-radius: 100% 0% 0% 0% / 100% 0% 0% 0%;
+  background: linear-gradient(90deg, rgba(30, 58, 85, 0.9), #1f2c3f);
+  bottom: 3%;
+  left: -40%;
+}
+.canvas .ear {
+  width: 9%;
+  height: 5.7%;
+  filter: var(--blur);
+  transform: rotate(-43deg);
+  background: linear-gradient(170deg, #966d60 50%, #422f29);
+  right: 32%;
+  top: 44%;
+  z-index: 15;
+  border-radius: 32%;
+  box-shadow: 0 calc(2 * var(--unit)) #574239;
+}
+.canvas .ear::before {
+  content: "";
+  position: absolute;
+  background: #52382d;
+  filter: blur(calc(2 * var(--unit)));
+  width: 60%;
+  height: 30%;
+  left: 20%;
+  top: 20%;
+  border-radius: 50%;
+}
+.canvas .ear::after {
+  content: "";
+  position: absolute;
+  background: #966d60;
+  transform: rotate(-20deg);
+  width: 80%;
+  height: 40%;
+  left: 0%;
+  top: 0%;
+  border-radius: 50%;
+}
+.canvas .face {
+  width: 35%;
+  height: 32%;
+  border-radius: 30%;
+  left: 30%;
+  top: 29%;
+  overflow: hidden;
+}
+.canvas .face .temple {
+  background: linear-gradient(90deg, var(--mp) 0%, #b99084 20%, #966d60 30%);
+  filter: blur(calc(4 * var(--unit)));
+  width: 25%;
+  height: 20%;
+  z-index: 3;
+  right: 23%;
+  top: 20%;
+  transform: rotate(30deg);
+}
+.canvas .face .chin-blur {
+  width: 9%;
+  height: 15%;
+  background: rgba(163, 121, 105, 0.836);
+  border-radius: 30%;
+  transform: rotate(-40deg);
+  left: 32%;
+  bottom: 5%;
+  z-index: 10;
+  filter: blur(calc(4 * var(--unit)));
+}
+.canvas .face .chin-blur::after {
+  content: "";
+  position: absolute;
+  background: radial-gradient(circle at -10% 0%, var(--mp) 0%, rgba(163, 121, 105, 0.836) 50%);
+  width: 150%;
+  height: 50%;
+  transform: rotate(30deg);
+  bottom: 0%;
+  left: -70%;
+}
+.canvas .face .f1 {
+  background: var(--lp);
+  background: linear-gradient(10deg, var(--lp) 0%, var(--mp) 100%);
+  width: 60%;
+  height: 36%;
+  left: 5%;
+  top: 5%;
+  border-radius: 70% 80% 100% 50% / 100% 90% 100% 100%;
+  transform: rotate(28deg);
+  filter: var(--blur);
+  box-shadow: inset 0 calc(2 * var(--unit)) calc(8 * var(--unit)) var(--db), inset calc(1 * var(--unit)) calc(1 * var(--unit)) calc(1 * var(--unit)) var(--db);
+}
+.canvas .face .f2 {
+  background: var(--mp);
+  filter: var(--blur);
+  z-index: -1;
+  width: 85%;
+  height: 58%;
+  left: 5%;
+  top: 14%;
+  border-radius: 30% 100% 100% 50% / 20% 100% 100% 100%;
+  transform: rotate(30deg);
+}
+.canvas .face .left-cheek {
+  background: var(--lp);
+  background: linear-gradient(0deg, var(--lp) 0%, var(--h) 15%, var(--mp) 70%);
+  filter: var(--blur);
+  width: 80%;
+  height: 40%;
+  left: -13%;
+  top: 36%;
+  border-radius: 100% 0% 80% 100%;
+  transform: rotate(75deg);
+}
+.canvas .face .f4 {
+  background: var(--mp);
+  background: radial-gradient(circle at 0% 50%, var(--lp) 35%, #9e6857 100%);
+  width: 39%;
+  height: 30%;
+  left: 13%;
+  top: 68%;
+  border-radius: 30% 0% 50% 45% / 30% 0% 50% 58%;
+  transform: rotate(25deg);
+  filter: var(--blur);
+}
+.canvas .face .right-cheek {
+  background: linear-gradient(75deg, var(--mp) 10%, var(--shadow) 50%);
+  width: 45%;
+  height: 50%;
+  left: 47%;
+  top: 30%;
+  border-radius: 0% 50%;
+  transform: rotate(42deg);
+  filter: var(--blur);
+}
+.canvas .face .right-cheek::after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 50%;
+  background: #70473a;
+  background: linear-gradient(115deg, #bd9182 0%, var(--shadow) 40%);
+  bottom: -10%;
+  transform: rotate(-80deg);
+  border-radius: 80% 0% 40% 60% / 50%;
+}
+.canvas .face .right-cheek .blob:nth-child(1) {
+  background: linear-gradient(75deg, var(--mp) 10%, var(--shadow) 50%);
+  -webkit-filter: blur(calc(5 * var(--unit)));
+  filter: blur(calc(5 * var(--unit)));
+  width: 89%;
+  height: 156%;
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-3deg);
+  left: 2%;
+  top: -5%;
+  z-index: 2;
+  border-radius: 5% 89% 67% 10%;
+}
+.canvas .face .lips {
+  width: 50%;
+  height: 30%;
+  left: 10%;
+  border: solid calc(3 * var(--unit)) transparent;
+  bottom: 5%;
+  z-index: 5;
+  filter: var(--blur);
+}
+.canvas .face .lips .top-lip {
+  width: 52%;
+  height: 20%;
+  filter: var(--blur);
+  background: linear-gradient(3deg, #9b372a 20%, #a54033 30%, transparent 55%);
+  transform: rotate(15deg);
+  top: 11%;
+  left: 5%;
+  z-index: 5;
+  border-radius: 100% 100% 20% 20% / 100%;
+  box-shadow: 0 calc(1 * var(--unit)) #570e0e;
+}
+.canvas .face .lips .top-lip::before {
+  content: "";
+  position: absolute;
+  left: 20%;
+  top: 36%;
+  width: 72%;
+  height: 50%;
+  background: #a75449;
+  background: linear-gradient(20deg, #a55045 10%, transparent 50%);
+  border-radius: 30%;
+  transform: rotate(4deg);
+  box-shadow: calc(-3 * var(--unit)) calc(3 * var(--unit)) #a75449;
+}
+.canvas .face .lips .top-lip::after {
+  content: "";
+  position: absolute;
+  left: 2%;
+  top: 38%;
+  width: 14%;
+  height: 60%;
+  background: linear-gradient(0deg, #7c3930 0%, #a75449 50%, transparent 100%);
+  filter: var(--blur);
+  border-radius: 50% 50% 50% 10%;
+}
+.canvas .face .lips .teeth {
+  width: 28%;
+  height: 16%;
+  background: #dbbc94;
+  background: linear-gradient(190deg, #c9a87d 65%, #9b4439 75%, #2c130f 100%);
+  top: 24%;
+  left: 18%;
+  border-radius: 0% 100% 0% 50% / 0% 100% 0% 100%;
+  z-index: 2;
+  overflow: hidden;
+  box-shadow: calc(-4 * var(--unit)) calc(1 * var(--unit)) calc(-2 * var(--unit)) calc(1 * var(--unit)) rgba(100, 32, 23, 0.5), calc(-2 * var(--unit)) calc(1 * var(--unit)) calc(3 * var(--unit)) calc(1 * var(--unit)) #74352c, calc(-6 * var(--unit)) calc(1 * var(--unit)) calc(3 * var(--unit)) calc(2 * var(--unit)) #853328, calc(-7 * var(--unit)) calc(6 * var(--unit)) calc(3 * var(--unit)) calc(1 * var(--unit)) rgba(167, 34, 17, 0.5), calc(2 * var(--unit)) 0 calc(1 * var(--unit)) calc(1 * var(--unit)) rgba(123, 32, 20, 0.5), calc(2 * var(--unit)) calc(2 * var(--unit)) calc(3 * var(--unit)) calc(3 * var(--unit)) rgba(111, 14, 1, 0.5);
+}
+.canvas .face .lips .teeth .teeth-right {
+  width: 50%;
+  height: 100%;
+  right: 0%;
+  background: red;
+  background: linear-gradient(100deg, #66342c 0%, #e6cba9 45%, #9b4439 65%, #66342c 80%);
+}
+.canvas .face .lips .teeth .teeth-right::after {
+  content: "";
+  position: absolute;
+  width: 55%;
+  right: 30%;
+  height: 100%;
+  background: #c0a887;
+  border-radius: 0% 0% 50% 30%;
+  box-shadow: inset calc(0.5 * var(--unit)) calc(-0.5 * var(--unit)) #8d7c5f, inset calc(-0.5 * var(--unit)) calc(-0.5 * var(--unit)) #ac9772;
+}
+.canvas .face .lips .teeth::before {
+  content: "";
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  background: black;
+  background: radial-gradient(circle at 80% 0%, #684a31 0%, #ccb598 45%, #9b4439 65%, #66342c 80%);
+  top: 0%;
+  border-radius: 30%;
+  box-shadow: inset calc(2 * var(--unit)) calc(1 * var(--unit)) #3d1212;
+}
+.canvas .face .lips .teeth::after {
+  content: "";
+  position: absolute;
+  width: 28%;
+  height: 85%;
+  background: #c2ae95;
+  left: 30%;
+  top: 0%;
+  border-radius: 0% 0% 50% 30%;
+  box-shadow: inset calc(0.5 * var(--unit)) calc(-0.5 * var(--unit)) #b8a584, inset calc(-0.5 * var(--unit)) calc(-0.5 * var(--unit)) #ac9772;
+}
+.canvas .face .lips .bottom-lip {
+  width: 42%;
+  height: 40%;
+  background: radial-gradient(60% 60% at 35% 20%, #a14741 50%, #993b37 70%, #a3504a 100%);
+  top: 25%;
+  left: 8%;
+  border-radius: 30% 30% 80% 70%/ 30% 30% 100% 100%;
+  transform: rotate(12deg);
+  overflow: hidden;
+  box-shadow: calc(2 * var(--unit)) calc(1 * var(--unit)) calc(4 * var(--unit)) calc(2 * var(--unit)) rgba(164, 133, 112, 0.5), calc(4 * var(--unit)) calc(1 * var(--unit)) calc(4 * var(--unit)) calc(2 * var(--unit)) rgba(164, 133, 112, 0.5), calc(10 * var(--unit)) calc(5 * var(--unit)) calc(6 * var(--unit)) calc(3 * var(--unit)) rgba(164, 133, 112, 0.4);
+}
+.canvas .face .lips .bottom-lip .lip-highlight {
+  width: 55%;
+  height: 45%;
+  left: 2%;
+  border-radius: 30% 10%;
+  filter: var(--blur);
+  top: 57%;
+  background: rgba(226, 187, 187, 0.356);
+}
+.canvas .face .lips .bottom-lip .lip-highlight::after {
+  content: "";
+  position: absolute;
+  right: 5%;
+  top: -10%;
+  width: 15%;
+  height: 60%;
+  border-radius: 50%;
+  background: rgba(238, 231, 231, 0.781);
+  filter: blur(calc(2 * var(--unit)));
+  box-shadow: calc(-10 * var(--unit)) calc(1 * var(--unit)) calc(1 * var(--unit)) calc(3 * var(--unit)) #d49e9e;
+}
+.canvas .face .lips .bottom-lip .lip-highlight::before {
+  content: "";
+  position: absolute;
+  left: 30%;
+  top: 5%;
+  width: 20%;
+  height: 50%;
+  border-radius: 50%;
+  background: rgba(243, 231, 231, 0.788);
+  filter: blur(calc(2 * var(--unit)));
+}
+.canvas .face .noseblob {
+  width: 22%;
+  height: 15%;
+  background: linear-gradient(-60deg, rgba(240, 204, 178, 0.8) 40%, var(--lb) 70%);
+  left: 31%;
+  top: 21%;
+  z-index: 1;
+  filter: blur(calc(5 * var(--unit)));
+  border-radius: 30%;
+}
+.canvas .face .noseblob::after {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: -45%;
+  width: 20%;
+  height: 30%;
+  background: #d8b8a3;
+}
+.canvas .face .nose {
+  background: linear-gradient(-80deg, transparent 40%, var(--dp) 100%);
+  transform: rotate(25deg);
+  width: 20%;
+  height: 45%;
+  border-radius: 20% 20% 50% 100% / 20%;
+  left: 22%;
+  top: 22%;
+  filter: var(--blur);
+}
+.canvas .face .nose::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  border-radius: 30%;
+  left: 0%;
+  height: 12%;
+  background: var(--mb);
+  filter: var(--blur);
+  bottom: 4%;
+  transform: rotate(8deg);
+}
+.canvas .face .nose::after {
+  content: "";
+  position: absolute;
+  width: 35%;
+  height: 95%;
+  background: var(--h);
+  filter: blur(calc(3 * var(--unit)));
+  left: -34%;
+  border-radius: 0% 50% 0% 80% / 0% 50% 0% 100%;
+}
+.canvas .face .nose span:nth-child(1) {
+  opacity: 0.5;
+  width: 80%;
+  height: 100%;
+  left: -35%;
+  transform: rotate(-30deg);
+  filter: blur(calc(4 * var(--unit)));
+  background: linear-gradient(-40deg, var(--mb) 40%, var(--dp) 60%, transparent 61%);
+  border-radius: 50%;
+  box-shadow: calc(1 * var(--unit)) calc(1 * var(--unit)) calc(2 * var(--unit)) calc(2 * var(--unit)) var(--mb);
+}
+.canvas .face .nose span:nth-child(2) {
+  width: 100%;
+  height: 20%;
+  left: 0%;
+  bottom: 8%;
+  transform: rotate(-10deg);
+  background: var(--dp);
+  filter: blur(calc(2 * var(--unit)));
+  background: linear-gradient(-20deg, var(--db) 0%, #361609 10%, #aa8678 70%);
+  border-radius: 90% 80% 50% 10% / 100%;
+  box-shadow: inset calc(-1 * var(--unit)) 0 black, inset calc(-3 * var(--unit)) 0 #331306;
+}
+.canvas .face .nose span:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 20%;
+  background: linear-gradient(90deg, #1d0a02 0%, #331306 20%, rgba(68, 25, 8, 0.3) 23%);
+  box-shadow: calc(-10 * var(--unit)) calc(3 * var(--unit)) rgba(51, 19, 6, 0.5), calc(10 * var(--unit)) calc(20 * var(--unit)) calc(1 * var(--unit)) calc(15 * var(--unit)) rgba(189, 143, 127, 0.3);
+  border-radius: 50%;
+  left: 28%;
+  bottom: 0%;
+}
+.canvas .face .nose .philtrum {
+  width: 85%;
+  height: 35%;
+  bottom: -20%;
+  border-radius: 0% 50% 0% 0%;
+  background: linear-gradient(90deg, #8d675b, transparent 90%), linear-gradient(0deg, #8d675b 0%, transparent 60%);
+  left: 46%;
+  z-index: -3;
+  transform: rotate(-15deg);
+  filter: blur(calc(2 * var(--unit)));
+}
+.canvas .face .left-eye-hollow {
+  width: 18%;
+  height: 22%;
+  left: 1%;
+  top: 15%;
+}
+.canvas .face .left-eye-hollow span:nth-child(1) {
+  filter: blur(calc(1.5 * var(--unit)));
+  background: linear-gradient(95deg, var(--h) 0%, #c59f8c 80%);
+  border-radius: 20% 100% 30% 30%;
+  width: 80%;
+  height: 100%;
+  left: 30%;
+}
+.canvas .face .left-eye-hollow span:nth-child(1)::after {
+  content: "";
+  position: absolute;
+  left: 20%;
+  top: 93%;
+  width: 70%;
+  height: 7%;
+  filter: blur(calc(4 * var(--unit)));
+  background: var(--lb);
+  transform: rotate(20deg);
+  border-radius: 0% 0% 50% 50%;
+}
+.canvas .face .left-eye-hollow span:nth-child(2) {
+  background: radial-gradient(#6c4d3d 10%, #edccc0 30%, #684837 90%);
+  width: 66%;
+  height: 50%;
+  border-radius: 30% 60% 0% 65%;
+  left: 33%;
+  top: 30%;
+  filter: blur(calc(0.8 * var(--unit)));
+  box-shadow: calc(1 * var(--unit)) calc(-2 * var(--unit)) calc(4 * var(--unit)) calc(1 * var(--unit)) var(--lb), calc(-2 * var(--unit)) calc(12 * var(--unit)) calc(3 * var(--unit)) #ab8573;
+}
+.canvas .face .left-eye-hollow span:nth-child(3) {
+  background: radial-gradient(#4e3e37 0%, #ebc9bc 30%, #906c5a 100%);
+  width: 70%;
+  height: 42%;
+  border-radius: 50% 80% 30% 65%;
+  box-shadow: calc(1 * var(--unit)) calc(1 * var(--unit)) calc(4 * var(--unit)) calc(1 * var(--unit)) var(--lb);
+  left: 30%;
+  top: 45%;
+  filter: blur(calc(0.8 * var(--unit)));
+  transform: rotate(8deg);
+}
+.canvas .face .left-eye-hollow .left-eye {
+  background: linear-gradient(90deg, #f5f3df 20%, rgba(235, 222, 215, 0.3) 80%);
+  filter: blur(calc(0.5 * var(--unit)));
+  box-shadow: inset 0 0 calc(2 * var(--unit)) calc(1 * var(--unit)) #856861, calc(-1 * var(--unit)) calc(-1 * var(--unit)) calc(2 * var(--unit)) 0 var(--db), calc(-2 * var(--unit)) calc(-2 * var(--unit)) calc(2 * var(--unit)) 0 var(--db);
+  top: 46%;
+  left: 35%;
+  width: 62%;
+  height: 33%;
+  border-radius: 50% 100% 30% 90% / 60% 100% 30% 100%;
+  transform: rotate(5deg);
+  overflow: hidden;
+}
+.canvas .face .left-eye-hollow .left-eye span:nth-child(1) {
+  filter: blur(calc(0.5 * var(--unit)));
+  background: radial-gradient(circle at 22% 25%, white, transparent 17%), radial-gradient(circle at 55% 45%, black, #4a4e4c 40%, #343a31 60%, #1f1f1f 70%);
+  width: 80%;
+  height: 105%;
+  left: 35%;
+  border-radius: 50%;
+}
+.canvas .face .right-eye-hollow {
+  z-index: 3;
+  width: 30%;
+  height: 20%;
+  left: 30%;
+  top: 25%;
+}
+.canvas .face .right-eye-hollow span:nth-child(1) {
+  background: linear-gradient(70deg, #c59886 0%, #ecc6b6 40%, #8a6b5c 80%);
+  box-shadow: calc(5 * var(--unit)) calc(-2 * var(--unit)) calc(3 * var(--unit)) rgba(79, 49, 39, 0.2), calc(10 * var(--unit)) calc(-2 * var(--unit)) calc(5 * var(--unit)) rgba(79, 49, 39, 0.3);
+  filter: blur(calc(1 * var(--unit)));
+  width: 62%;
+  transform: rotate(22deg);
+  height: 45%;
+  top: 12%;
+  left: 24%;
+  border-radius: 50% 60% 30% 30% / 100% 100% 20% 20%;
+}
+.canvas .face .right-eye-hollow span:nth-child(2) {
+  background: linear-gradient(0deg, #ceada0 20%, #c79f8f 100%);
+  filter: var(--blur);
+  width: 52%;
+  transform: rotate(16deg);
+  height: 30%;
+  top: 41%;
+  left: 21%;
+  border-radius: 50% 50% 90% 80% / 100% 100% 90% 100%;
+  box-shadow: inset calc(-2 * var(--unit)) 0 calc(1 * var(--unit)) rgba(79, 49, 39, 0.8), calc(10 * var(--unit)) 0 calc(5 * var(--unit)) rgba(79, 49, 39, 0.8), calc(7 * var(--unit)) calc(3 * var(--unit)) calc(6 * var(--unit)) calc(1 * var(--unit)) var(--lb), calc(15 * var(--unit)) calc(6 * var(--unit)) calc(8 * var(--unit)) 0 var(--lb), calc(15 * var(--unit)) calc(-6 * var(--unit)) calc(6 * var(--unit)) calc(1 * var(--unit)) rgba(79, 49, 39, 0.8);
+}
+.canvas .face .right-eye-hollow span:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 15%;
+  background: var(--mp);
+  border: calc(1 * var(--unit)) solid var(--mb);
+  border-radius: 50%;
+  left: -3%;
+  bottom: 46%;
+}
+.canvas .face .right-eye-hollow .right-eye {
+  background: linear-gradient(90deg, #f5f3df 10%, rgba(235, 222, 215, 0.3) 80%);
+  filter: blur(calc(0.5 * var(--unit)));
+  box-shadow: inset 0 calc(1 * var(--unit)) calc(2 * var(--unit)) calc(1 * var(--unit)) rgba(51, 38, 25, 0.63), inset calc(-5 * var(--unit)) 0 calc(5 * var(--unit)) calc(1 * var(--unit)) rgba(51, 38, 25, 0.822), calc(1.5 * var(--unit)) calc(-0.5 * var(--unit)) calc(1 * var(--unit)) calc(1 * var(--unit)) rgba(75, 49, 37, 0.822);
+  top: 30%;
+  left: 25%;
+  width: 48%;
+  height: 35%;
+  border-radius: 70% 100% 60% 90% / 80% 100% 80% 80%;
+  transform: rotate(12deg);
+  overflow: hidden;
+}
+.canvas .face .right-eye-hollow .right-eye span:nth-child(1) {
+  filter: blur(calc(0.5 * var(--unit)));
+  background: radial-gradient(circle at 5% 25%, white, transparent 20%), radial-gradient(circle at 45% 35%, black, #4a4e4c 50%, #343a31 60%, #1f1f1f 70%);
+  width: 60%;
+  height: 100%;
+  left: 38%;
+  border-radius: 50%;
+}

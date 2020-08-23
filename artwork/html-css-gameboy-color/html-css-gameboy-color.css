@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 9px;
+  background: #ff1654;
+  background-size: 320px;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+@media (max-width: 599px) {
+  body {
+    font-size: 7px;
+  }
+}
+body #name {
+  font-size: 2.8em;
+  font-family: 'Pacifico', cursive;
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  transform: rotate(270deg);
+}
+@media (max-width: 600px) {
+  body #name {
+    left: -5%;
+    font-size: 3.3em;
+  }
+}
+body #name a {
+  color: #44a5f7;
+  text-decoration: none;
+  text-shadow: 1px 1px #000;
+}
+body .btns_top {
+  z-index: 5;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+}
+
+.gb_body {
+  width: 32em;
+  height: 55.1em;
+  position: relative;
+  background: radial-gradient(240% 240% at 100% 100%, transparent 49%, #ff1654 50%) 0 0/2em 2em, radial-gradient(240% 240% at 0% 100%, transparent 49%, #ff1654 50%) 100% 0/2em 2em, radial-gradient(130% 150% at 0% 0%, rgba(0, 0, 0, 0) 75%, #ff1654 76%) 30em 51em/2em 2em, radial-gradient(283% 202% at 0% 0%, rgba(0, 0, 0, 0) 49%, #ff1654 50%) 100% 100%/10em 10em, radial-gradient(130% 150% at 100% 0%, rgba(0, 0, 0, 0) 75%, #ff1654 76%) 0em 51em/2em 2em, radial-gradient(283% 202% at 100% 0%, rgba(0, 0, 0, 0) 49%, #ff1654 50%) 0 100%/10em 10em, linear-gradient(to left, #e9e9e7, rgba(209, 209, 207, 0.1)) 0% 0%/4.8em 100%, linear-gradient(to left, #e9e9e7, rgba(209, 209, 207, 0.1)) 100% 0%/4.8em 100%, #e9e9e7;
+  background-repeat: no-repeat;
+}
+.gb_body .screen {
+  z-index: 3;
+  width: 28.3em;
+  height: 25.6em;
+  position: absolute;
+  top: 2em;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: radial-gradient(230% 230% at 100% 100%, transparent 49%, #e9e9e7 50%) 0 0/2em 2em, radial-gradient(230% 230% at 0% 100%, transparent 49%, #e9e9e7 50%) 100% 0/2em 2em, radial-gradient(200% 200% at 100% 0%, rgba(0, 0, 0, 0) 49%, #e9e9e7 50%) 0% 96.5%/2em 2em, radial-gradient(200% 200% at 0% 0%, transparent 49%, #e9e9e7 50%) 100% 96.5%/2em 2em, radial-gradient(400% 204% at 0% 0%, rgba(0, 0, 0, 0) 49%, #e9e9e7 50%) 100% 100%/10em 10em, radial-gradient(400% 204% at 100% 0%, rgba(0, 0, 0, 0) 49%, #e9e9e7 50%) 0 100%/10em 10em, linear-gradient(#272727, #141414) 50% 50%/100%;
+  background-repeat: no-repeat;
+}
+.gb_body .screen .power {
+  width: 5em;
+  height: 3em;
+  position: absolute;
+  left: 0%;
+  top: 7.5em;
+  font-family: verdana;
+  color: #fff;
+  background: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0.3) 47%, rgba(0, 0, 0, 0) 50%) 1em 0.3em/0.3em 0.3em, radial-gradient(100% 100% at 50% 50%, #ff0d33 47%, rgba(0, 0, 0, 0) 50%) 0.7em 0.1em/0.8em 0.8em, radial-gradient(circle at 0% 50%, transparent 0.3em, #fff, transparent 0.6em) 3.4em 0.1em/0.8em 0.8em, radial-gradient(circle at 0% 50%, transparent 0.3em, #fff, transparent 0.6em) 2.7em 0.1em/0.8em 0.8em, radial-gradient(circle at 0% 50%, transparent 0.3em, #fff, transparent 0.6em) 2em 0.1em/0.8em 0.8em;
+  background-repeat: no-repeat;
+}
+.gb_body .screen .power p {
+  font-size: .8em;
+  position: absolute;
+  top: 2em;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.gb_body .screen .screen_main {
+  width: 19em;
+  height: 17em;
+  position: absolute;
+  box-shadow: inset 2px 5px 3px 3px #000;
+  left: 50%;
+  top: 3em;
+  transform: translate(-50%, 0%);
+  background: linear-gradient(#272727, #141414) 50% 50%/100%;
+  background-repeat: no-repeat;
+}
+.gb_body .btm .text {
+  z-index: 6;
+  border: 2px solid rgba(185, 185, 184, 0.7);
+  text-shadow: 1px 1px rgba(185, 185, 184, 0.7);
+  font-weight: bold;
+  font-family: verdana;
+  color: #E8E8E6;
+  position: absolute;
+  font-size: 1.4em;
+  top: 53.5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  text-align: center;
+  padding: 3px;
+  border-radius: 35%;
+}
+.gb_body .btm .middle {
+  z-index: 4;
+  width: 22em;
+  height: 23em;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: radial-gradient(100% 100% at 50% 0%, #141414 47%, rgba(0, 0, 0, 0) 50%) 50% 0%/27em 2.7em, radial-gradient(400% 202% at 0% 0%, rgba(0, 0, 0, 0) 49%, #e9e9e7 50%) 100% 100%/10em 10em, radial-gradient(400% 202% at 100% 0%, rgba(0, 0, 0, 0) 49%, #e9e9e7 50%) 0 100%/10em 10em, linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+  background-repeat: no-repeat;
+}
+.gb_body .btm .btns .btns_circle div {
+  width: 4.3em;
+  height: 4.3em;
+  position: absolute;
+  border: 2px solid #000;
+  border-radius: 50%;
+  color: #000;
+  background: radial-gradient(100% 100% at 50% 90%, rgba(0, 0, 0, 0) 46%, rgba(233, 233, 231, 0.4) 50%) 50% -1.4em/110% 4em, linear-gradient(#3A3839, #191718);
+  background-repeat: no-repeat;
+  z-index: 5;
+}
+.gb_body .btm .btns .btns_circle div h1 {
+  position: absolute;
+  top: 18%;
+  left: 18%;
+  font-size: 2.5em;
+  font-family: arial;
+}
+.gb_body .btm .btns .btns_circle .btns_circle_left {
+  left: 61%;
+  top: 64%;
+}
+.gb_body .btm .btns .btns_circle .btns_circle_right {
+  left: 79%;
+  top: 60.5%;
+}
+.gb_body .btm .btns .btns_btm {
+  z-index: 5;
+  width: 9em;
+  height: 1.6em;
+  top: 44.4em;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+.gb_body .btm .btns .btns_btm div {
+  border-radius: 10px;
+  background: linear-gradient(rgba(0, 0, 0, 0.2) 14%, rgba(255, 255, 255, 0.5) 15%, rgba(0, 0, 0, 0.2) 50%), #302F33;
+  border: 1.5px solid #000;
+  width: 3.5em;
+  background-repeat: no-repeat;
+  text-shadow: 1px 1px rgba(185, 185, 184, 0.7);
+  font-weight: bold;
+  font-family: verdana;
+  color: #E8E8E6;
+}
+.gb_body .btm .btns .btns_btm .btns_left:after {
+  width: 50%;
+  content: 'SELECT';
+  position: absolute;
+  top: 1.9em;
+  left: -.5em;
+  text-align: center;
+}
+.gb_body .btm .btns .btns_btm .btns_right:after {
+  width: 50%;
+  content: 'START';
+  position: absolute;
+  top: 1.9em;
+  left: 5em;
+  text-align: center;
+}
+.gb_body .btm .speaker {
+  z-index: 6;
+  transform: rotate(-5deg);
+  width: 8em;
+  height: 8em;
+  position: absolute;
+  top: 45em;
+  left: 22.5em;
+  background: radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 5.2em 0/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 4.3em 0/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 3.5em 0/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 2.5em 0/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 1.5em 0/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 0.5em 1em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 1.5em 1em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 2.5em 1em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 3.5em 1em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 4.5em 1em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 5.5em 1em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 6.5em 1em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 0.5em 2em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 1.5em 2em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 2.5em 2em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 3.5em 2em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 4.5em 2em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 5.5em 2em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 6.5em 2em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 0.5em 3em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 1.5em 3em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 2.5em 3em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 3.5em 3em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 4.5em 3em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 5.5em 3em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 6.5em 3em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 0.5em 4em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 1.5em 4em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 2.5em 4em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 3.5em 4em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 4.5em 4em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 5.5em 4em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 6.5em 4em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 0.5em 5em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 1.5em 3em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 2.5em 5em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 3.5em 5em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 4.5em 5em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 5.5em 5em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 6.5em 5em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 5.2em 6em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 4.3em 0em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 3.5em 6em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #d0d0cf 49%, rgba(255, 22, 84, 0) 50%) 2.5em 6em/0.6em 0.6em, radial-gradient(100% 100% at 50% 50%, #232323 49%, rgba(255, 22, 84, 0) 50%) 1.5em 6em/0.6em 0.6em;
+  background-repeat: no-repeat;
+}
+
+.button_dpad {
+  z-index: 5;
+  width: 12em;
+  height: 12em;
+  position: absolute;
+  top: 69.2%;
+  left: 25.5%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+}
+.button_dpad .inner {
+  position: relative;
+  width: 8.6em;
+  height: 8.6em;
+  border-radius: 50%;
+}
+.button_dpad .inner i {
+  font-size: 3.2em;
+  color: #000;
+  position: absolute;
+}
+.button_dpad .inner .left_right {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 2.9em;
+  background: linear-gradient(to right, rgba(233, 233, 231, 0.2), rgba(233, 233, 231, 0.2)) 100% 100%/0.2em 100%, linear-gradient(to right, rgba(209, 209, 207, 0), rgba(233, 233, 231, 0.2)) 100% 100%/2em 100%, linear-gradient(to right, rgba(233, 233, 231, 0.2), rgba(209, 209, 207, 0)) 0% 100%/2em 100%, #282828;
+  border-radius: 8px;
+  border: 3px solid #000;
+  background-repeat: no-repeat;
+}
+.button_dpad .inner .left_right .r i {
+  top: -.17em;
+  left: 2.05em;
+}
+.button_dpad .inner .left_right .left i {
+  top: -.17em;
+}
+.button_dpad .inner .up_down {
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.9em;
+  height: 100%;
+  background: #282828;
+  border-radius: 8px;
+  border: 3px solid #000;
+}
+.button_dpad .inner .up_down:after {
+  content: '';
+  position: absolute;
+  width: 1.7em;
+  height: 1.7em;
+  background: radial-gradient(100% 100% at 50% 10%, rgba(0, 0, 0, 0.5) 55%, rgba(233, 233, 231, 0.4) 60%, rgba(0, 0, 0, 0.4) 63%) 50% -1.2em/140% 4em, black;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.button_dpad .inner .up_down:before {
+  content: '';
+  border: 3px solid #282828;
+  position: absolute;
+  width: 100%;
+  height: 2.5em;
+  background: #282828;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.button_dpad .inner .up_down div {
+  display: flex;
+  justify-content: center;
+}
+.button_dpad .inner .up_down .u i {
+  top: -.2em;
+}
+.button_dpad .inner .up_down .d {
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(209, 209, 207, 0), rgba(233, 233, 231, 0.2)) 0% 100%/100% 0.2em, linear-gradient(rgba(209, 209, 207, 0), rgba(233, 233, 231, 0.1)) 0% 100%/100% 2em, linear-gradient(rgba(233, 233, 231, 0.5), rgba(209, 209, 207, 0)) 0% 0%/100% 0.2em, linear-gradient(rgba(233, 233, 231, 0.3), rgba(209, 209, 207, 0)) 0% 0%/100% 2em;
+  background-repeat: no-repeat;
+}
+.button_dpad .inner .up_down .d i {
+  top: 1.5em;
+}

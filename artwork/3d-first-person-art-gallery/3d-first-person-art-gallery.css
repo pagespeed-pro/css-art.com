@@ -1,0 +1,775 @@
+img {
+  width: 100%;
+  position: static;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+input {
+  display: none;
+}
+
+html {
+  font-size: 0.5vw;
+  width: 100%;
+  height: 100%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+body {
+  perspective: 50rem;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: #000;
+  display: flex;
+  flex-wrap: wrap;
+}
+body *,
+body *:before,
+body *:after {
+  transform-style: preserve-3d;
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  outline: none;
+}
+
+#wall4:checked ~ label:not([for="lightswitch"]) {
+  width: calc(100% / 13);
+  height: calc(100% / 3);
+  position: relative;
+  z-index: 1;
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+#wall4:checked ~ label:not([for="lightswitch"]) label,
+#wall4:checked ~ label:not([for="lightswitch"]) a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: 0.1s 0.5s linear;
+}
+#wall4:checked ~ label:nth-of-type(1):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(1):focus ~ z > x > y {
+  transform: rotateY(-240deg);
+}
+#wall4:checked ~ label:nth-of-type(1):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(1):focus ~ z > x {
+  transform: rotateX(10deg);
+}
+#wall4:checked ~ label:nth-of-type(2):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(2):focus ~ z > x > y {
+  transform: rotateY(-230deg);
+}
+#wall4:checked ~ label:nth-of-type(2):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(2):focus ~ z > x {
+  transform: rotateX(10deg);
+}
+#wall4:checked ~ label:nth-of-type(3):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(3):focus ~ z > x > y {
+  transform: rotateY(-220deg);
+}
+#wall4:checked ~ label:nth-of-type(3):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(3):focus ~ z > x {
+  transform: rotateX(10deg);
+}
+#wall4:checked ~ label:nth-of-type(4):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(4):focus ~ z > x > y {
+  transform: rotateY(-210deg);
+}
+#wall4:checked ~ label:nth-of-type(4):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(4):focus ~ z > x {
+  transform: rotateX(10deg);
+}
+#wall4:checked ~ label:nth-of-type(5):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(5):focus ~ z > x > y {
+  transform: rotateY(-200deg);
+}
+#wall4:checked ~ label:nth-of-type(5):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(5):focus ~ z > x {
+  transform: rotateX(10deg);
+}
+#wall4:checked ~ label:nth-of-type(6):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(6):focus ~ z > x > y {
+  transform: rotateY(-190deg);
+}
+#wall4:checked ~ label:nth-of-type(6):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(6):focus ~ z > x {
+  transform: rotateX(10deg);
+}
+#wall4:checked ~ label:nth-of-type(7):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(7):focus ~ z > x > y {
+  transform: rotateY(-180deg);
+}
+#wall4:checked ~ label:nth-of-type(7):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(7):focus ~ z > x {
+  transform: rotateX(10deg);
+}
+#wall4:checked ~ label:nth-of-type(8):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(8):focus ~ z > x > y {
+  transform: rotateY(-170deg);
+}
+#wall4:checked ~ label:nth-of-type(8):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(8):focus ~ z > x {
+  transform: rotateX(10deg);
+}
+#wall4:checked ~ label:nth-of-type(9):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(9):focus ~ z > x > y {
+  transform: rotateY(-160deg);
+}
+#wall4:checked ~ label:nth-of-type(9):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(9):focus ~ z > x {
+  transform: rotateX(10deg);
+}
+#wall4:checked ~ label:nth-of-type(10):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(10):focus ~ z > x > y {
+  transform: rotateY(-150deg);
+}
+#wall4:checked ~ label:nth-of-type(10):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(10):focus ~ z > x {
+  transform: rotateX(10deg);
+}
+#wall4:checked ~ label:nth-of-type(11):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(11):focus ~ z > x > y {
+  transform: rotateY(-140deg);
+}
+#wall4:checked ~ label:nth-of-type(11):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(11):focus ~ z > x {
+  transform: rotateX(10deg);
+}
+#wall4:checked ~ label:nth-of-type(12):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(12):focus ~ z > x > y {
+  transform: rotateY(-130deg);
+}
+#wall4:checked ~ label:nth-of-type(12):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(12):focus ~ z > x {
+  transform: rotateX(10deg);
+}
+#wall4:checked ~ label:nth-of-type(13):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(13):focus ~ z > x > y {
+  transform: rotateY(-120deg);
+}
+#wall4:checked ~ label:nth-of-type(13):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(13):focus ~ z > x {
+  transform: rotateX(10deg);
+}
+#wall4:checked ~ label:nth-of-type(14):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(14):focus ~ z > x > y {
+  transform: rotateY(-240deg);
+}
+#wall4:checked ~ label:nth-of-type(15):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(15):focus ~ z > x > y {
+  transform: rotateY(-230deg);
+}
+#wall4:checked ~ label:nth-of-type(16):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(16):focus ~ z > x > y {
+  transform: rotateY(-220deg);
+}
+#wall4:checked ~ label:nth-of-type(17):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(17):focus ~ z > x > y {
+  transform: rotateY(-210deg);
+}
+#wall4:checked ~ label:nth-of-type(18):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(18):focus ~ z > x > y {
+  transform: rotateY(-200deg);
+}
+#wall4:checked ~ label:nth-of-type(19):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(19):focus ~ z > x > y {
+  transform: rotateY(-190deg);
+}
+#wall4:checked ~ label:nth-of-type(20):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(20):focus ~ z > x > y {
+  transform: rotateY(-180deg);
+}
+#wall4:checked ~ label:nth-of-type(21):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(21):focus ~ z > x > y {
+  transform: rotateY(-170deg);
+}
+#wall4:checked ~ label:nth-of-type(22):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(22):focus ~ z > x > y {
+  transform: rotateY(-160deg);
+}
+#wall4:checked ~ label:nth-of-type(23):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(23):focus ~ z > x > y {
+  transform: rotateY(-150deg);
+}
+#wall4:checked ~ label:nth-of-type(24):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(24):focus ~ z > x > y {
+  transform: rotateY(-140deg);
+}
+#wall4:checked ~ label:nth-of-type(25):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(25):focus ~ z > x > y {
+  transform: rotateY(-130deg);
+}
+#wall4:checked ~ label:nth-of-type(26):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(26):focus ~ z > x > y {
+  transform: rotateY(-120deg);
+}
+#wall4:checked ~ label:nth-of-type(27):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(27):focus ~ z > x > y {
+  transform: rotateY(-240deg);
+}
+#wall4:checked ~ label:nth-of-type(27):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(27):focus ~ z > x {
+  transform: rotateX(-10deg);
+}
+#wall4:checked ~ label:nth-of-type(28):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(28):focus ~ z > x > y {
+  transform: rotateY(-230deg);
+}
+#wall4:checked ~ label:nth-of-type(28):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(28):focus ~ z > x {
+  transform: rotateX(-10deg);
+}
+#wall4:checked ~ label:nth-of-type(29):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(29):focus ~ z > x > y {
+  transform: rotateY(-220deg);
+}
+#wall4:checked ~ label:nth-of-type(29):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(29):focus ~ z > x {
+  transform: rotateX(-10deg);
+}
+#wall4:checked ~ label:nth-of-type(30):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(30):focus ~ z > x > y {
+  transform: rotateY(-210deg);
+}
+#wall4:checked ~ label:nth-of-type(30):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(30):focus ~ z > x {
+  transform: rotateX(-10deg);
+}
+#wall4:checked ~ label:nth-of-type(31):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(31):focus ~ z > x > y {
+  transform: rotateY(-200deg);
+}
+#wall4:checked ~ label:nth-of-type(31):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(31):focus ~ z > x {
+  transform: rotateX(-10deg);
+}
+#wall4:checked ~ label:nth-of-type(32):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(32):focus ~ z > x > y {
+  transform: rotateY(-190deg);
+}
+#wall4:checked ~ label:nth-of-type(32):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(32):focus ~ z > x {
+  transform: rotateX(-10deg);
+}
+#wall4:checked ~ label:nth-of-type(33):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(33):focus ~ z > x > y {
+  transform: rotateY(-180deg);
+}
+#wall4:checked ~ label:nth-of-type(33):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(33):focus ~ z > x {
+  transform: rotateX(-10deg);
+}
+#wall4:checked ~ label:nth-of-type(34):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(34):focus ~ z > x > y {
+  transform: rotateY(-170deg);
+}
+#wall4:checked ~ label:nth-of-type(34):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(34):focus ~ z > x {
+  transform: rotateX(-10deg);
+}
+#wall4:checked ~ label:nth-of-type(35):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(35):focus ~ z > x > y {
+  transform: rotateY(-160deg);
+}
+#wall4:checked ~ label:nth-of-type(35):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(35):focus ~ z > x {
+  transform: rotateX(-10deg);
+}
+#wall4:checked ~ label:nth-of-type(36):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(36):focus ~ z > x > y {
+  transform: rotateY(-150deg);
+}
+#wall4:checked ~ label:nth-of-type(36):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(36):focus ~ z > x {
+  transform: rotateX(-10deg);
+}
+#wall4:checked ~ label:nth-of-type(37):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(37):focus ~ z > x > y {
+  transform: rotateY(-140deg);
+}
+#wall4:checked ~ label:nth-of-type(37):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(37):focus ~ z > x {
+  transform: rotateX(-10deg);
+}
+#wall4:checked ~ label:nth-of-type(38):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(38):focus ~ z > x > y {
+  transform: rotateY(-130deg);
+}
+#wall4:checked ~ label:nth-of-type(38):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(38):focus ~ z > x {
+  transform: rotateX(-10deg);
+}
+#wall4:checked ~ label:nth-of-type(39):hover ~ z > x > y,
+#wall4:checked ~ label:nth-of-type(39):focus ~ z > x > y {
+  transform: rotateY(-120deg);
+}
+#wall4:checked ~ label:nth-of-type(39):hover ~ z > x,
+#wall4:checked ~ label:nth-of-type(39):focus ~ z > x {
+  transform: rotateX(-10deg);
+}
+
+x,
+y,
+z {
+  position: absolute;
+  top: -50rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 1rem;
+  height: 1rem;
+  transition: 0.5s ease-in-out;
+}
+
+floor, floor:before, floor:after,
+ceiling,
+ceiling:before,
+ceiling:after {
+  width: 300rem;
+  height: 300rem;
+  box-shadow: 0 0 1rem #110e12;
+}
+
+floor {
+  height: 400rem;
+  transform: rotateX(90deg) translate3d(-150rem, -50rem, 0rem);
+  box-shadow: 0 0 1rem #110e12, inset 0 0 10rem 0 rgba(17, 14, 18, 0.75);
+  background: linear-gradient(#000, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), repeating-linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 12rem, rgba(17, 14, 18, 0.5) 12.5rem), radial-gradient(#d9996b, #361f0e);
+}
+floor:before, floor:after {
+  background: radial-gradient(circle at center top, #7f95a8, #110e12);
+}
+floor:before {
+  transform: rotateY(90deg) translate3d(-150rem, 100rem, -150rem);
+}
+floor:after {
+  transform: rotateY(-90deg) translate3d(150rem, 100rem, -150rem);
+}
+
+ceiling {
+  transform: rotateX(-90deg) translate3d(-150rem, 0, -200rem);
+  box-shadow: 0 0 1rem #7f95a8, inset 0 0 10rem 0 rgba(17, 14, 18, 0.2);
+  background: radial-gradient(#fff, #7f95a8);
+}
+ceiling:before {
+  display: none;
+}
+ceiling:after {
+  transform: rotateX(90deg) translate3d(0, 150rem, 150rem);
+  background: radial-gradient(circle at center top, #7f95a8, #110e12);
+}
+
+wall1 painting,
+wall2 painting,
+wall3 painting {
+  width: 120rem;
+  height: 156rem;
+  border: 2rem solid #d9996b;
+  border-top-color: #221309;
+  border-left-color: #361f0e;
+  border-right-color: #4a2b13;
+  transform: rotateY(-90deg) translate3d(0, -17rem, -89rem);
+  background: #110e12;
+  box-shadow: 0 5rem 2rem -2rem rgba(17, 14, 18, 0.5), inset 0 0 10rem #000;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+wall1 painting p,
+wall2 painting p,
+wall3 painting p {
+  color: #fff;
+  top: 96%;
+  left: 50rem;
+  font-size: 8rem;
+  transform: translate3d(0, 5rem, 0) scaleY(0);
+  width: 130rem;
+  width: 0;
+  text-shadow: 5rem 5rem 2rem #110e12;
+  transform-origin: -62rem 0;
+  transition: 0.5s ease-in-out;
+  line-height: 1.05em;
+  word-wrap: break-word;
+}
+wall1 painting p:before,
+wall2 painting p:before,
+wall3 painting p:before {
+  width: 52rem;
+  height: 22rem;
+  border-right: 0.5rem solid #fff;
+  border-top: 0.5rem solid #fff;
+  transform: translate3d(-56rem, 0rem, 0);
+  box-shadow: 2rem 0 1rem -1rem rgba(17, 14, 18, 0.5), inset 0 2rem 1rem -1rem rgba(17, 14, 18, 0.5);
+}
+wall1 painting p:after,
+wall2 painting p:after,
+wall3 painting p:after {
+  width: 6rem;
+  height: 50rem;
+  border-left: 0.5rem solid #fff;
+  border-right: 0.5rem solid #fff;
+  transform: skewY(45deg) translate3d(-62rem, 9.5rem, 0);
+  box-shadow: 2rem 0 1rem -1rem rgba(17, 14, 18, 0.5), inset 2rem 0 1rem -1rem rgba(17, 14, 18, 0.5);
+}
+wall1 painting p *,
+wall2 painting p *,
+wall3 painting p * {
+  position: relative;
+  content: normal;
+}
+
+wall2 painting {
+  width: 200rem;
+  height: 126rem;
+  transform: translate3d(-100rem, 0, 148rem) scaleX(-1);
+}
+
+wall3 painting {
+  width: 110rem;
+  height: 144rem;
+  transform: rotateY(90deg) translate3d(0, -17rem, -200rem);
+}
+
+wall4 {
+  transform: translate3d(-150rem, -50rem, -150rem);
+  background: radial-gradient(circle at 60% 80%, rgba(255, 255, 255, 0), rgba(17, 14, 18, 0.5)), linear-gradient(to right, rgba(17, 14, 18, 0.5), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(17, 14, 18, 0.5));
+  box-shadow: 0 0 1rem #110e12;
+  width: 300rem;
+  height: 250rem;
+}
+wall4:before,
+wall4 door {
+  width: 86rem;
+  height: 224rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 0 150rem #7f95a8;
+  left: -10rem;
+  right: -10rem;
+  margin: auto;
+  top: 60rem;
+  transform: translate3d(0, 0, -1rem);
+}
+wall4:after {
+  width: 10rem;
+  height: 224rem;
+  background: linear-gradient(#110e12, #9daebd, #637c91);
+  transform: translate3d(183rem, 65rem, -4.5rem) rotateY(90deg);
+}
+wall4 door {
+  border: 5rem ridge rgba(157, 174, 189, 0.65);
+  box-shadow: 1rem 0.5rem 1rem rgba(17, 14, 18, 0.5), 0 0 1rem 0.5rem rgba(17, 14, 18, 0.5), 0 0 10rem rgba(17, 14, 18, 0.2);
+  transform: translate3d(0, 0, 0.5rem);
+}
+wall4 door:before, wall4 door:after {
+  transform: translate3d(0, 0, -1rem) rotateY(10deg);
+  transform-origin: 0 0;
+  border-radius: 1rem;
+}
+wall4 door:before {
+  width: 100%;
+  height: 185rem;
+  background: radial-gradient(circle at top left, rgba(188, 199, 209, 0.2), #9daebd) #9daebd;
+  box-shadow: inset 0 0 1.5rem #000, 0 0 1.5rem #000, inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+wall4 door:after {
+  width: calc(100% / 3.5);
+  left: 14%;
+  top: 10%;
+  height: calc(100% / 3.5);
+  box-shadow: 1rem 1rem 0 #bcc7d1, -1rem -1rem 0 #7f95a8, 33rem 0 0 #9daebd, 34rem 1rem 0 #bcc7d1, 32rem -1rem 0 #7f95a8, 33rem 80rem 0 #9daebd, 34rem 81rem 0 #bcc7d1, 32rem 79rem 0 #7f95a8, 0 80rem 0 #9daebd, 1rem 81rem 0 #bcc7d1, -1rem 79rem 0 #7f95a8, 49rem 42rem 2rem -7.5rem rgba(127, 149, 168, 0.5), 49rem 42rem 0 -7.5rem #9daebd, 48.5rem 41.5rem 0 -7.5rem #bcc7d1;
+}
+wall4 door a {
+  width: 100%;
+  height: 100%;
+}
+wall4 label {
+  background: rgba(255, 255, 255, 0.5);
+  width: 8rem;
+  height: 8rem;
+  transform: translate3d(210rem, 110rem, 1rem);
+  border-radius: 1rem;
+  box-shadow: 0.5rem 1rem 2rem rgba(17, 14, 18, 0.5), inset -0.25rem -0.25rem 1rem rgba(17, 14, 18, 0.25), inset 0.25rem 0.25rem 1rem #fff;
+}
+wall4 label:after {
+  width: 1rem;
+  height: 3rem;
+  box-shadow: 0 0 0 0.15rem #110e12, 0.15rem 0.5rem 0.5rem #110e12;
+  transform: translate3d(3.5rem, 2.5rem, 0);
+  opacity: 0.2;
+  border-radius: 0.15rem;
+  background: linear-gradient(rgba(255, 255, 255, 0), #fff);
+}
+wall4 label:before {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #110e12;
+  transform: translate3d(1.5rem, 3.75rem, 0);
+  box-shadow: 4.75rem 0 0 #110e12;
+  opacity: 0.5;
+}
+
+.p1hover:hover ~ * > * > * > wall1 > * > p {
+  transform: translate3d(0, 5rem, 0) scale(1);
+  width: 130rem;
+}
+
+.p2hover:hover ~ * > * > * > wall2 > * > p {
+  transform: translate3d(0, 5rem, 0) scale(1);
+  width: 130rem;
+}
+
+.p3hover:hover ~ * > * > * > wall3 > * > p {
+  transform: translate3d(0, 5rem, 0) scale(1);
+  width: 130rem;
+}
+
+.p1hover:active ~ z {
+  transform: translate3d(0, 0, 100rem);
+}
+.p1hover:active ~ z > x > y {
+  transform: rotateY(-270deg) !important;
+}
+
+.p2hover:active ~ z {
+  transform: translate3d(0, 0, 100rem);
+}
+
+.p3hover:active ~ z {
+  transform: translate3d(0, 0, 100rem);
+}
+.p3hover:active ~ z > x > y {
+  transform: rotateY(-90deg) !important;
+}
+
+notice {
+  font-size: 5rem;
+  transform: translate3d(50rem, 120rem, 0.5rem);
+}
+notice a,
+notice a:hover,
+notice a:focus {
+  position: relative;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 1rem;
+  text-decoration: none;
+  margin-bottom: 3rem;
+  color: #000;
+  box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.5), 0 0 0 2rem rgba(255, 255, 255, 0), -0.5rem 1rem 2rem rgba(17, 14, 18, 0.5);
+  transition: all 0.25s ease-in-out;
+  display: block;
+  text-align: center;
+}
+notice a:hover,
+notice a:hover:hover,
+notice a:focus:hover {
+  box-shadow: inset 0 0 3rem 3rem rgba(255, 255, 255, 0.5), 0 0 0 0.1rem #fff, -0.5rem 1rem 2rem rgba(17, 14, 18, 0.5);
+}
+
+fireexit {
+  z-index: 99;
+  width: 50rem;
+  height: 20rem;
+  background: #008b54;
+  transform: translate3d(125rem, 30rem, 0);
+  border-radius: 1rem;
+  box-shadow: 0.5rem 1rem 2rem rgba(17, 14, 18, 0.25), inset 0 0 0 1rem #7f95a8, 0 0 50rem rgba(119, 231, 186, 0.1);
+}
+fireexit:before, fireexit:after {
+  border-bottom: 4rem solid #7f95a8;
+  border-left: 1.5rem solid #7f95a8;
+  border-top: 2rem solid rgba(255, 255, 255, 0);
+  transform: translate3d(35rem, 0.5rem, 0) skewY(-50deg);
+  width: 5rem;
+  height: 13rem;
+}
+fireexit:after {
+  transform: translate3d(30rem, 0.5rem, 0) scaleX(-1) skewY(-50deg);
+}
+fireexit i:nth-of-type(1) {
+  background: #7f95a8;
+  width: 11rem;
+  height: 13rem;
+  transform: translate3d(11rem, 3.5rem, 0);
+}
+fireexit i:nth-of-type(1):before {
+  width: 2.2rem;
+  height: 2.2rem;
+  transform: translate3d(7rem, 1.5rem, 0);
+  background: #008b54;
+  border-radius: 50%;
+}
+fireexit i:nth-of-type(1):after {
+  width: 5.5rem;
+  height: 3rem;
+  border: 1rem solid #008b54;
+  border-left-width: 1.5rem;
+  border-right-width: 2.5rem;
+  border-bottom: none;
+  transform: translate3d(2rem, 4rem, 0) skewX(-45deg);
+  border-radius: 0 1rem 0 0;
+}
+fireexit i:nth-of-type(2) {
+  border-bottom: 1.2rem solid #008b54;
+  border-right: 1.2rem solid #008b54;
+  width: 4rem;
+  height: 4rem;
+  transform: translate3d(11.3rem, 10.5rem, 0) skewX(-15deg);
+}
+fireexit i:nth-of-type(2):before {
+  width: 4rem;
+  height: 3rem;
+  border-bottom: 1rem solid #008b54;
+  border-left: 1.3rem solid #008b54;
+  transform: translate3d(7rem, -3rem, 0) skewX(45deg);
+}
+fireexit i:nth-of-type(2):after {
+  width: 1.3rem;
+  height: 7rem;
+  background: #008b54;
+  transform: translate3d(6.5rem, 0rem, 0) skewX(35deg);
+}
+
+#lightswitch:checked ~ z > x > y > floor {
+  background: radial-gradient(#110e12, #000);
+}
+#lightswitch:checked ~ z > x > y > floor:before, #lightswitch:checked ~ z > x > y > floor:after {
+  background: radial-gradient(circle at 50% top, #0d2815, #110e12, #000);
+}
+#lightswitch:checked ~ z > x > y > ceiling {
+  background: radial-gradient(circle at center bottom, #0d2815, #110e12, #110e12, #000);
+}
+#lightswitch:checked ~ z > x > y > ceiling:before, #lightswitch:checked ~ z > x > y > ceiling:after {
+  background: #110e12;
+}
+#lightswitch:checked ~ z > x > y > * > painting {
+  border: 2rem solid #110e12;
+  border-top-color: #000;
+  border-left-color: #000;
+  border-right-color: #0d2815;
+  background: #0d2815;
+  box-shadow: 5rem 4rem 2rem -2rem #000;
+}
+#lightswitch:checked ~ z > x > y > * > painting > * {
+  filter: brightness(20%) contrast(120%);
+  opacity: 0.8;
+}
+#lightswitch:checked ~ z > x > y > wall2 > painting {
+  border-left-color: #110e12;
+  border-right-color: #110e12;
+  border-bottom-color: #0d2815;
+  box-shadow: 0 3rem 2rem -2rem #000, 0 3rem 3rem #000;
+}
+#lightswitch:checked ~ z > x > y > wall3 > painting {
+  border-left-color: #0d2815;
+  border-right-color: #000;
+  box-shadow: -5rem 4rem 2rem -2rem #000;
+}
+#lightswitch:checked ~ z > x > y > wall4 {
+  background: none;
+}
+#lightswitch:checked ~ z > x > y > wall4:before {
+  box-shadow: 0 0 0 150rem #110e12;
+  transform: translate3d(0, 0, 0);
+}
+#lightswitch:checked ~ z > x > y > wall4:after {
+  background: linear-gradient(#110e12, #0d2815, #000);
+}
+#lightswitch:checked ~ z > x > y > wall4 > door {
+  border-color: #110e12;
+  box-shadow: 0 -60rem 100rem rgba(13, 40, 21, 0.5);
+}
+#lightswitch:checked ~ z > x > y > wall4 > door:before {
+  background: radial-gradient(circle at top left, rgba(13, 40, 21, 0.2), #110e12) #110e12;
+}
+#lightswitch:checked ~ z > x > y > wall4 > door:after {
+  box-shadow: 1rem 1rem 0 #0d2815, -1rem -1rem 0 #000, 33rem 0 0 #110e12, 34rem 1rem 0 #0d2815, 32rem -1rem 0 #000, 33rem 80rem 0 #110e12, 34rem 81rem 0 #0d2815, 32rem 79rem 0 #000, 0 80rem 0 #110e12, 1rem 81rem 0 #0d2815, -1rem 79rem 0 #000, 49rem 42rem 2rem -7.5rem rgba(0, 0, 0, 0.5), 49rem 42rem 0 -7.5rem #110e12, 48.5rem 41.5rem 0 -7.5rem #0d2815;
+}
+#lightswitch:checked ~ z > x > y > wall4 > notice > a {
+  background: #0d2815;
+  box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.5), 0 0 0 rgba(17, 14, 18, 0.5), 0 0 0 rgba(119, 231, 186, 0.05), inset 0 0.25rem 0.25rem 0 #77e7ba;
+}
+#lightswitch:checked ~ z > x > y > wall4 > notice > a:hover, #lightswitch:checked ~ z > x > y > wall4 > notice > a:focus {
+  color: #008b54;
+  box-shadow: -2rem 2rem 2rem rgba(0, 0, 0, 0.5), 0 0 2rem rgba(17, 14, 18, 0.5), 0 0 10rem rgba(119, 231, 186, 0.15), inset 0 0.25rem 0.25rem 0 #77e7ba;
+}
+#lightswitch:checked ~ z > x > y > wall4 > fireexit {
+  box-shadow: 0 0 1rem #000, 0.5rem 1rem 2rem rgba(17, 14, 18, 0.25), inset 0 0 0 1rem #7f95a8, 0 0 20rem rgba(119, 231, 186, 0.4), 0 0 10rem rgba(0, 139, 84, 0.4);
+}
+#lightswitch:checked ~ z > x > y > wall4 > label {
+  /*opacity: .1;*/
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 1rem 2rem 2rem #000, inset -0.25rem -0.25rem 1rem rgba(17, 14, 18, 0.25), inset 0.25rem 0.25rem 0.5rem #77e7ba;
+}
+#lightswitch:checked ~ z > x > y > wall4 > label:after {
+  opacity: 1;
+  background: linear-gradient(rgba(17, 14, 18, 0.5), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  box-shadow: 0 0 0 0.15rem #110e12, 0.75rem -0.25rem 0.5rem -0.35rem #110e12, inset 0 0.25rem 0.25rem 0 #77e7ba;
+}
+#lightswitch:checked ~ z > x > y > wall4 > label:before {
+  background: #000;
+  box-shadow: 4.75rem 0 0 #000;
+  opacity: 1;
+}
+
+.turn,
+.turnback {
+  box-shadow: inset 0 0 0 0 rgba(255, 255, 255, 0.1), 0 0 0 5rem rgba(255, 255, 255, 0);
+  transition: all 0.25s ease-in-out;
+  border-radius: 4rem 0 0 4rem;
+}
+.turn:before,
+.turnback:before {
+  transform: translate3d(0, 0, 0) rotate(45deg) scale(0);
+  border-top: 0.5rem solid rgba(255, 255, 255, 0.5);
+  border-right: 0.5rem solid rgba(255, 255, 255, 0.5);
+  bottom: 0;
+  height: 3rem;
+  width: 3rem;
+  margin: auto;
+  transition: all 0.25s ease-in-out;
+}
+.turn:hover,
+.turnback:hover {
+  box-shadow: inset 0 0 3rem 10rem rgba(255, 255, 255, 0.1), 0 0 0 rgba(255, 255, 255, 0.1);
+}
+.turn:hover:before,
+.turnback:hover:before {
+  transform: translate3d(3rem, 0, 0) rotate(45deg) scale(1);
+}
+
+.turnback {
+  width: calc(100% / 13);
+  height: calc(100% / 3);
+  z-index: 1;
+  bottom: 0;
+  cursor: pointer;
+  margin: auto;
+}
+
+#wall4:not(:checked) ~ .turnback {
+  transform: scaleX(-1);
+}
+
+#wall4:checked ~ .turnback {
+  opacity: 0;
+}
+
+@media (min-width: 600px) {
+  #wall4:checked ~ label:not([for="lightswitch"]) label:active {
+    transform: translateY(100%);
+    transition: 0.1s linear;
+  }
+}

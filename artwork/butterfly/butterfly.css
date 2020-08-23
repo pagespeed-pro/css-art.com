@@ -1,0 +1,119 @@
+html, body {
+  height: 90%;
+}
+
+body {
+  align-items: center;
+  background: #defff4;
+  display: flex;
+  justify-content: center;
+}
+
+.butterfly {
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateX(60deg) rotateY(30deg) rotateZ(-50deg);
+  width: 60px;
+}
+.butterfly::before {
+  background: orange;
+  border-radius: 40%;
+  content: '';
+  display: block;
+  margin-left: -10px;
+  position: absolute;
+  top: -15px;
+  transform: rotatey(100deg);
+  width: 30px;
+  height: 100px;
+  left: 50%;
+}
+
+.wing {
+  display: block;
+  position: absolute;
+}
+.wing:first-child {
+  animation: left 350ms infinite;
+  animation-direction: alternate;
+  animation-fill-mode: reverse;
+  z-index: 3;
+}
+.wing:last-child {
+  animation: right 350ms infinite;
+  animation-direction: alternate;
+  animation-fill-mode: reverse;
+  right: 0;
+  z-index: 1;
+}
+.wing .fly, .wing .fly::after {
+  background: #ac166f;
+  transform-origin: 100% 50%;
+  overflow: hidden;
+  position: absolute;
+  border-radius: 50%;
+  right: 0;
+  top: 0;
+}
+.wing .fly:first-child {
+  height: 80px;
+  text-align: center;
+  top: 2px;
+  transform: rotateZ(30deg);
+  width: 130px;
+}
+.wing .fly:last-child {
+  height: 80px;
+  transform: rotateZ(-30deg);
+  width: 100px;
+}
+
+@keyframes left {
+  0% {
+    transform: rotateY(-60deg);
+  }
+  100% {
+    transform: rotateY(50deg);
+  }
+}
+@keyframes right {
+  0% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(80deg);
+  }
+}
+.wave {
+  animation-name: wave-hand;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  transform-origin: 100% 100%;
+}
+
+@keyframes wave-hand {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(40deg);
+  }
+  20% {
+    transform: rotate(-20deg);
+  }
+  30% {
+    transform: rotate(40deg);
+  }
+  40% {
+    transform: rotate(-6deg);
+  }
+  50% {
+    transform: rotate(17deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

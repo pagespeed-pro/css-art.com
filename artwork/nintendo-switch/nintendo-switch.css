@@ -1,0 +1,382 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6vmin;
+  background: #8CFFDE;
+  background-size: 1300px;
+  background-repeat: no-repeat;
+  background-position: 62% 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+@media (max-width: 599px) {
+  body {
+    font-size: 4px;
+  }
+}
+body .btns_top {
+  z-index: 5;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+}
+
+.switch_body {
+  width: 104em;
+  height: 45em;
+  position: absolute;
+  background: linear-gradient(#303135 2%, #3b5052 30%, #303135 70%) 25% 1%/6em 2em;
+  background-repeat: no-repeat;
+}
+.switch_body .controller_left {
+  width: 14.3em;
+  height: 43.5em;
+  top: 50%;
+  transform: translate(0, -50%);
+  position: absolute;
+  left: .2em;
+  background: radial-gradient(115% 50% at 100% 104%, rgba(255, 0, 0, 0) 45%, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0) 60%) -1em -5em/15em 8em, radial-gradient(120% 100% at 101% 100%, #00b8de 38%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.15) 49%, rgba(0, 0, 0, 0) 50%) -5.7em -8em/15em 16em, linear-gradient(to right, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.1), #00b8de) 0.5em 8em/2em 27.8em, linear-gradient(rgba(0, 0, 0, 0.1), #00b8de) 100% 0%/4.96em 2em, linear-gradient(#00b8de, rgba(0, 0, 0, 0.15)) 100% 100%/4.95em 2em, radial-gradient(120% 100% at 101% 0%, #00b8de 38%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.15) 49%, rgba(0, 0, 0, 0) 50%) -5.7em 130%/15em 16em, radial-gradient(120% 100% at 101% 50%, #00b8de 49%, rgba(0, 0, 0, 0) 50%) -5.7em 100%/15em 16em, linear-gradient(#00b8de, #00b8de) 60% 99.6%/2em 8em, linear-gradient(#00b8de, #00b8de) 50% 50%/5em 27em, linear-gradient(#00b8de, #00b8de) 0.5em 50%/5em 27em, radial-gradient(120% 100% at 101% 50%, #00b8de 49%, rgba(0, 0, 0, 0) 50%) -5.7em 0.5em/15em 16em, radial-gradient(120% 93% at 101% 50%, #00b8de 49%, rgba(0, 0, 0, 0) 50%) -5em -0.4em/15em 15em, radial-gradient(120% 93% at 101% 50%, #00b8de 49%, rgba(0, 0, 0, 0) 50%) -6.4em -0.5em/18em 15em, radial-gradient(120% 100% at 101% 50%, #00b8de 49%, rgba(0, 0, 0, 0) 50%) -5.7em 100%/15em 16em, radial-gradient(120% 100% at 101% 50%, #00b8de 49%, rgba(0, 0, 0, 0) 50%) -5.7em 100%/15em 16em, linear-gradient(#00b8de, #00b8de) 100% 0.1em/3em 27em, linear-gradient(#00b8de, #00b8de) 100% 1em/5em 42.5em;
+  background-repeat: no-repeat;
+}
+.switch_body .controller_left .btns .top_right {
+  box-shadow: 1px 1.5px 2px rgba(0, 0, 0, 0.8);
+  width: 2.5em;
+  height: 1em;
+  position: absolute;
+  background: linear-gradient(rgba(255, 255, 255, 0.1) 10%, rgba(0, 0, 0, 0) 80%) 100% 0.1em/100% 100%, #3B5052;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+  top: 9.5%;
+  left: 76%;
+}
+.switch_body .controller_left .btns .joystick {
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  width: 6.7em;
+  height: 6.7em;
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0.5) 50%, rgba(255, 0, 0, 0) 60%) 50% 50%/100% 1em, linear-gradient(to left, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0.5) 50%, rgba(255, 0, 0, 0) 60%) 50% 0%/1em 100%, radial-gradient(100% 100% at 50% 50%, rgba(0, 0, 0, 0) 43%, #132630, transparent 50%) 50% 50%/100% 100%, #3B5052;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  left: 34%;
+  top: 18%;
+}
+.switch_body .controller_left .btns .joystick:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4.7em;
+  height: 4.7em;
+  border: 2px solid rgba(35, 35, 35, 0.7);
+  border-radius: 50%;
+  background: radial-gradient(circle at center top, rgba(168, 168, 168, 0.2) 20%, #3B5052 55%) 50% 50%/100% 100%, #3B5052;
+  background-repeat: no-repeat;
+}
+.switch_body .controller_left .btns .joystick:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(59, 80, 82, 0);
+  background-repeat: no-repeat;
+}
+.switch_body .controller_left .btns .arrows {
+  width: 11.5em;
+  height: 11em;
+  position: absolute;
+  top: 40.5%;
+  left: 55%;
+  transform: translate(-50%, 0);
+}
+.switch_body .controller_left .btns .arrows div {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  background: radial-gradient(100% 100% at 50% 90%, rgba(0, 0, 0, 0) 46%, rgba(233, 233, 231, 0.15) 50%) 50% -1.45em/110% 4em, linear-gradient(#404a4c, rgba(51, 59, 63, 0.6)) 50% 50%/100% 100%, #404A4C;
+  background-repeat: no-repeat;
+  width: 3.3em;
+  height: 3.3em;
+  position: absolute;
+  display: flex;
+  border: 2px solid rgba(35, 35, 35, 0.7);
+}
+.switch_body .controller_left .btns .arrows div i {
+  color: #1E1F1E;
+  transform: translate(-50%, 0%);
+  left: 50%;
+  position: absolute;
+  font-size: 2.4em;
+}
+.switch_body .controller_left .btns .arrows .up {
+  top: 5%;
+  left: 50.5%;
+  transform: translate(-50%, 0);
+}
+.switch_body .controller_left .btns .arrows .up i {
+  top: 3%;
+}
+.switch_body .controller_left .btns .arrows .down {
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.switch_body .controller_left .btns .arrows .down i {
+  top: 12%;
+}
+.switch_body .controller_left .btns .arrows .left {
+  top: 35%;
+  left: 22%;
+  transform: translate(-50%, 0);
+}
+.switch_body .controller_left .btns .arrows .left i {
+  top: 9%;
+  left: 40%;
+}
+.switch_body .controller_left .btns .arrows .right {
+  top: 35%;
+  left: 80%;
+  transform: translate(-50%, 0);
+}
+.switch_body .controller_left .btns .arrows .right i {
+  top: 9%;
+  left: 59%;
+}
+.switch_body .controller_left .btns .under_arrows {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  width: 2.6em;
+  height: 2.6em;
+  position: absolute;
+  background: radial-gradient(transparent, rgba(233, 233, 231, 0.1)), linear-gradient(#404a4c, #333b3f) 50% 50%/100% 100%, #3C4548;
+  left: 63%;
+  top: 69%;
+  border-radius: 2px;
+}
+.switch_body .controller_left .btns .under_arrows:after {
+  content: '';
+  width: 1.3em;
+  height: 1.3em;
+  background: radial-gradient(100% 100% at 50% 10%, rgba(0, 0, 0, 0) 57%, rgba(233, 233, 231, 0.2) 59%) 50% -1.5em/150% 4em, #333341;
+  border: 1px solid #232323;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.switch_body .controller_right {
+  top: 50%;
+  width: 14.3em;
+  height: 43.5em;
+  position: absolute;
+  left: 99.8%;
+  transform: translate(-100%, -50%);
+  background: radial-gradient(115% 50% at 0% 104%, rgba(255, 0, 0, 0) 45%, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0) 60%) 0em -5em/16em 8em, radial-gradient(120% 100% at 0% 100%, #fe6054 38%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.15) 49%, rgba(0, 0, 0, 0) 50%) 5em -7.8em/15em 16em, linear-gradient(to right, #fe6054, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.1)) 96.5% 8.2em/2em 27.6em, linear-gradient(rgba(0, 0, 0, 0.1), #fe6054) 0% 0.7%/5em 2em, linear-gradient(#fe6054, rgba(0, 0, 0, 0.15)) 0% 100%/4.95em 2em, radial-gradient(120% 100% at 0% 0%, #fe6054 38%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.15) 49%, rgba(0, 0, 0, 0) 50%) 5em 130%/15em 16em, radial-gradient(120% 100% at 0% 50%, #fe6054 49%, rgba(0, 0, 0, 0) 50%) 5em 0.9%/15em 16em, radial-gradient(120% 93% at 0% 50%, #fe6054 49%, rgba(0, 0, 0, 0) 50%) 2.6em -0.5em/18em 15em, radial-gradient(120% 100% at 0% 50%, #fe6054 49%, rgba(0, 0, 0, 0) 50%) 4.95em 100%/15em 16em, linear-gradient(#fe6054, #fe6054) 50% 50%/5em 30.3em, linear-gradient(#fe6054, #fe6054) 94.5% 50%/5em 30.3em, linear-gradient(#fe6054, #fe6054) 0% 0.1em/3em 27em, linear-gradient(#fe6054, #fe6054) 0% 1em/5em 42.5em;
+  background-repeat: no-repeat;
+}
+.switch_body .controller_right .btns .d_pad {
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  width: 2.2em;
+  height: .6em;
+  position: absolute;
+  background: linear-gradient(rgba(255, 255, 255, 0.1) 10%, rgba(0, 0, 0, 0) 80%) 100% 0.1em/100% 100%, #3B5052;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+  top: 9.5%;
+  left: 7%;
+}
+.switch_body .controller_right .btns .d_pad:after {
+  content: '';
+  box-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.5);
+  width: .7em;
+  height: 2.2em;
+  position: absolute;
+  top: -110%;
+  left: 35%;
+  background: linear-gradient(rgba(255, 255, 255, 0.1) 10%, rgba(0, 0, 0, 0) 80%) 100% 0.1em/100% 100%, #3B5052;
+  background-repeat: no-repeat;
+  border-radius: 2px;
+}
+.switch_body .controller_right .btns .joystick {
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  width: 6.7em;
+  height: 6.7em;
+  position: absolute;
+  background: linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0.5) 50%, rgba(255, 0, 0, 0) 60%) 50% 50%/100% 1em, linear-gradient(to left, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 45%, rgba(0, 0, 0, 0.5) 50%, rgba(255, 0, 0, 0) 60%) 50% 0%/1em 100%, radial-gradient(100% 100% at 50% 50%, rgba(0, 0, 0, 0) 43%, #132630, transparent 50%) 50% 50%/100% 100%, #3B5052;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  left: 20%;
+  top: 45.5%;
+}
+.switch_body .controller_right .btns .joystick:after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4.7em;
+  height: 4.7em;
+  border: 2px solid rgba(35, 35, 35, 0.7);
+  border-radius: 50%;
+  background: radial-gradient(circle at center top, rgba(168, 168, 168, 0.2) 20%, #3B5052 55%) 50% 50%/100% 100%, #3B5052;
+  background-repeat: no-repeat;
+}
+.switch_body .controller_right .btns .joystick:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(59, 80, 82, 0);
+  background-repeat: no-repeat;
+}
+.switch_body .controller_right .btns .letters {
+  width: 11.5em;
+  height: 11em;
+  position: absolute;
+  top: 12.5%;
+  left: 43%;
+  transform: translate(-50%, 0);
+}
+.switch_body .controller_right .btns .letters div {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  background: radial-gradient(100% 100% at 50% 90%, rgba(0, 0, 0, 0) 46%, rgba(233, 233, 231, 0.15) 50%) 50% -1.45em/110% 4em, linear-gradient(#404a4c, rgba(51, 59, 63, 0.6)) 50% 50%/100% 100%, #404A4C;
+  background-repeat: no-repeat;
+  width: 3.3em;
+  height: 3.3em;
+  position: absolute;
+  display: flex;
+  border: 2px solid rgba(35, 35, 35, 0.7);
+}
+.switch_body .controller_right .btns .letters div span {
+  font-family: sans-serif;
+  color: #1E1F1E;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  position: absolute;
+  font-size: 1.7em;
+  font-weight: 500;
+  color: #fff;
+}
+.switch_body .controller_right .btns .letters .x {
+  top: 5%;
+  left: 50.5%;
+  transform: translate(-50%, 0);
+}
+.switch_body .controller_right .btns .letters .b {
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.switch_body .controller_right .btns .letters .b i {
+  top: 12%;
+}
+.switch_body .controller_right .btns .letters .y {
+  top: 35%;
+  left: 22%;
+  transform: translate(-50%, 0);
+}
+.switch_body .controller_right .btns .letters .y i {
+  top: 9%;
+  left: 40%;
+}
+.switch_body .controller_right .btns .letters .a {
+  top: 35%;
+  left: 80%;
+  transform: translate(-50%, 0);
+}
+.switch_body .controller_right .btns .letters .a i {
+  top: 9%;
+  left: 59%;
+}
+.switch_body .controller_right .btns .under_letters {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  background: radial-gradient(100% 100% at 50% 90%, rgba(0, 0, 0, 0) 46%, rgba(233, 233, 231, 0.15) 50%) 50% -1.45em/110% 4em, radial-gradient(100% 100% at 50% 50%, rgba(0, 0, 0, 0) 42%, rgba(147, 142, 143, 0.5) 43%) 50% 50%/100% 100%, linear-gradient(#404a4c, rgba(51, 59, 63, 0.6)) 50% 50%/100% 100%, #404A4C;
+  background-repeat: no-repeat;
+  width: 3.3em;
+  height: 3.3em;
+  position: absolute;
+  display: flex;
+  border: 2px solid rgba(35, 35, 35, 0.7);
+  left: 17%;
+  top: 68.7%;
+}
+.switch_body .controller_right .btns .under_letters i {
+  color: #232323;
+  position: absolute;
+  font-size: 1.7em;
+  left: 17%;
+  top: 17%;
+}
+.switch_body .screen_border {
+  width: 75em;
+  height: 43.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(90% 100% at 50% 50%, #8cffde 49%, transparent 50%) 73.5em -2em/4em 4em, radial-gradient(90% 100% at 50% 50%, #8cffde 49%, transparent 50%) -2.5em -2em/4em 4em, linear-gradient(#303135 2%, rgba(255, 255, 255, 0.3) 30%, #303135 70%) 0% 0%/100% 2em, linear-gradient(to left, #303135, #303135) 0% 0%/100% 100%;
+  background-repeat: no-repeat;
+}
+.switch_body .screen_border .inner_border {
+  width: 70em;
+  height: 40.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  background: #0E0F10;
+}
+.switch_body .screen_border .inner_border .inner_screen {
+  width: 60em;
+  height: 34em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(100% 100% at 50% 50%, rgba(255, 22, 84, 0.3) 35%, transparent 50%) 30em -4em/25em 25em, radial-gradient(100% 100% at 50% 50%, rgba(128, 0, 128, 0.4) 38%, transparent 50%) 43em 2em/28em 28em, radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 0, 0.2) 38%, transparent 50%) 27em 26em/28em 28em, radial-gradient(100% 100% at 50% 50%, rgba(255, 165, 0, 0.3) 35%, transparent 50%) 43em -17em/25em 25em, radial-gradient(100% 100% at 50% 50%, rgba(2, 143, 177, 0.5) 38%, transparent 50%) -8em 6em/28em 28em, radial-gradient(100% 100% at 50% 50%, rgba(2, 77, 80, 0.5) 38%, transparent 50%) 8em 2em/28em 28em, radial-gradient(100% 100% at 50% 50%, rgba(1, 129, 153, 0.5) 38%, transparent 50%) -21em 7em/28em 28em, #060707;
+  background-repeat: no-repeat;
+}
+.switch_body .screen_border .inner_border .inner_screen .text {
+  position: absolute;
+  top: 76%;
+  left: 50%;
+  color: #fff;
+  font-family: sans-serif;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.switch_body .screen_border .inner_border .inner_screen .text h3 {
+  letter-spacing: 10px;
+  font-size: 2.2em;
+  font-weight: bold;
+}
+.switch_body .screen_border .inner_border .inner_screen .text h1 {
+  margin-top: 0px;
+  font-size: 4.5em;
+  letter-spacing: 5px;
+  font-weight: 700;
+}
+
+.bk {
+  background-image: none;
+}
+
+.opacity {
+  opacity: 0.3;
+}

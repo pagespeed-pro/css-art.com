@@ -1,0 +1,28 @@
+{
+    "name": "css-kitchenaid-mixer",
+    "version": "1.0.0",
+    "title": "CSS KitchenAid Mixer",
+    "description": "Well this took forever: HTML & CSS KitchenAid Mixer #WomenWhoCode #Webdesign #100daysofcode Day 68",
+    "author": {
+        "name": "Kassandra",
+        "avatar": "https://assets.codepen.io/2970881/internal/avatars/users/default.png?format=auto&height=512&version=1595816396&width=512",
+        "social": [{
+            "title": "Twitter",
+            "url": "https://twitter.com/KassandraSanch"
+        }, {
+            "title": "Codepen",
+            "url": "https://codepen.io/kassandrasanch"
+        }]
+    },
+    "html": "css-kitchenaid-mixer.html",
+    "css": [
+        "css-kitchenaid-mixer.css"
+    ],
+    "splash": "splash.png",
+    "thumbnail": "thumbnail.png",
+    "keywords": [
+        "KitchenAid", "WomenWhoCode", "100daysofcode"
+    ],
+    "original": "https://codepen.io/kassandrasanch/pen/VweNrRR",
+    "codepen": "https://codepen.io/kassandrasanch/pen/VweNrRR"
+}

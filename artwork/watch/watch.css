@@ -1,0 +1,330 @@
+body {
+  font-size: 10px;
+  background-size: 500px;
+  background-position: 51% -6%;
+}
+@media (max-width: 599px) {
+  body {
+    font-size: 6px;
+    background: #fff;
+  }
+}
+body .watch {
+  width: 40em;
+  height: 69em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .watch .band .top {
+  width: 26em;
+  height: 5.93em;
+  position: absolute;
+  background: transparent;
+  top: 27%;
+  left: 18%;
+  background-repeat: no-repeat;
+}
+body .watch .band .top:after {
+  content: '';
+  position: absolute;
+  top: -10em;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 18em;
+  height: 15em;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 48%, transparent 54%) 50% 17.3%/16.6em 15em, linear-gradient(92deg, #fff 48%, transparent 54%) 0% 0%/1.7em 6.8em, linear-gradient(-92deg, #fff 48%, transparent 54%) 100% 0%/1.7em 6.8em, linear-gradient(#333 48%, #333 54%) 50% 17.3%/16.6em 15em;
+  background-repeat: no-repeat;
+}
+body .watch .band .top:before {
+  width: 26em;
+  height: 5.93em;
+  content: '';
+  background: linear-gradient(-97deg, #fff 50%, rgba(51, 51, 51, 0.4) 52%, transparent 53%) 100% 17.3%/4.6em 100%, linear-gradient(97deg, #fff 50%, rgba(51, 51, 51, 0.4) 52%, transparent 53%) 0% 17.3%/4.6em 100%, linear-gradient(to right, rgba(255, 255, 255, 0.2), #EFD5B2, rgba(255, 255, 255, 0.2)) 0% 17.3%/100% 100%, linear-gradient(to bottom, #D2B394, #C7A582) 0% 17.3%/100% 100%, #edd3b0;
+  position: absolute;
+  top: -3em;
+  background-repeat: no-repeat;
+}
+body .watch .band .bottom {
+  width: 26em;
+  height: 8.3em;
+  position: absolute;
+  background: red;
+  top: 54%;
+  left: 18%;
+  background-repeat: no-repeat;
+}
+body .watch .band .bottom:after {
+  content: '';
+  position: absolute;
+  top: 10em;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 18em;
+  height: 25em;
+  background: linear-gradient(-94deg, transparent 48%, #fff 54%) 0% 100%/1.7em 18em, linear-gradient(94deg, transparent 48%, #fff 54%) 100% 100%/1.7em 18em, linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 9%, rgba(255, 255, 255, 0.05) 12%, transparent, transparent) 50% 100%/100% 85%, linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 9%, rgba(128, 128, 128, 0.1) 13%, rgba(128, 128, 128, 0.1) 60%, #000) 50% 100%/100% 85%, linear-gradient(#333 48%, #333 54%) 50% 100%/100% 85%, linear-gradient(to right, rgba(51, 51, 51, 0.2), transparent, transparent, transparent, rgba(51, 51, 51, 0.2)) 50% 12%/14em 5em, linear-gradient(to right, #8a6d5c, #8A6D5C) 50% 12%/14em 5em, linear-gradient(to bottom, white 50%, transparent 51%) 50% 12%/16.6em 10em;
+  background-repeat: no-repeat;
+}
+body .watch .band .bottom:before {
+  width: 26em;
+  height: 9.5em;
+  position: absolute;
+  top: 8em;
+  content: '';
+  background: linear-gradient(97deg, transparent 50%, rgba(51, 51, 51, 0.4) 52%, #fff 53%) 100% 17.3%/4.6em 100%, linear-gradient(-97deg, transparent 50%, rgba(51, 51, 51, 0.4) 52%, #fff 53%) 0% 17.3%/4.6em 100%, linear-gradient(to right, rgba(255, 255, 255, 0.2), #EFD5B2, rgba(255, 255, 255, 0.2)) 0% 17.3%/100% 100%, linear-gradient(to bottom, #D2B394, #C7A582) 0% 17.3%/100% 100%, #edd3b0;
+  background-repeat: no-repeat;
+}
+
+.goldring {
+  z-index: 3;
+  width: 35em;
+  height: 35em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: linear-gradient(to bottom, rgba(164, 120, 81, 0.3), rgba(174, 135, 96, 0.7)), linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(174, 135, 96, 0.3)), linear-gradient(to bottom, rgba(208, 170, 133, 0.4), rgba(174, 135, 96, 0.3)), linear-gradient(to bottom, #ECCCA5, #ECCCA5);
+  background-repeat: no-repeat;
+}
+.goldring:before {
+  content: '';
+  border-radius: 50%;
+  width: 32.5em;
+  height: 32.5em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 70% 100%, rgba(255, 255, 255, 0.04), rgba(19, 20, 25, 0.2)) 50% 50%/100% 100%, radial-gradient(circle at 50% 50%, rgba(42, 44, 52, 0.4) 50%, rgba(0, 0, 0, 0.4) 70%, transparent) 50% 50%/100% 100%, radial-gradient(circle at 50% 50%, black, #28292f, transparent) 50% 50%/100% 100%, radial-gradient(circle at 50% 50%, #191c23, #191c23, transparent) 50% 50%/100% 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+.goldring:after {
+  content: '';
+  width: 1.4em;
+  height: 5em;
+  left: 102%;
+  top: 51.4%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-repeat: no-repeat;
+}
+.goldring .time {
+  width: 32.5em;
+  height: 32.5em;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  width: 32.5em;
+  height: 32.5em;
+  border-radius: 50%;
+  padding: 0;
+  list-style: none;
+}
+.goldring .time > * {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -0.25em;
+  width: 0.5em;
+  height: 0.5em;
+}
+.goldring .time > *:nth-of-type(1) {
+  transform: rotate(0deg) translate(16.25em) rotate(0deg);
+}
+.goldring .time > *:nth-of-type(2) {
+  transform: rotate(30deg) translate(16.25em) rotate(-30deg);
+}
+.goldring .time > *:nth-of-type(3) {
+  transform: rotate(60deg) translate(16.25em) rotate(-60deg);
+}
+.goldring .time > *:nth-of-type(4) {
+  transform: rotate(90deg) translate(16.25em) rotate(-90deg);
+}
+.goldring .time > *:nth-of-type(5) {
+  transform: rotate(120deg) translate(16.25em) rotate(-120deg);
+}
+.goldring .time > *:nth-of-type(6) {
+  transform: rotate(150deg) translate(16.25em) rotate(-150deg);
+}
+.goldring .time > *:nth-of-type(7) {
+  transform: rotate(180deg) translate(16.25em) rotate(-180deg);
+}
+.goldring .time > *:nth-of-type(8) {
+  transform: rotate(210deg) translate(16.25em) rotate(-210deg);
+}
+.goldring .time > *:nth-of-type(9) {
+  transform: rotate(240deg) translate(16.25em) rotate(-240deg);
+}
+.goldring .time > *:nth-of-type(10) {
+  transform: rotate(270deg) translate(16.25em) rotate(-270deg);
+}
+.goldring .time > *:nth-of-type(11) {
+  transform: rotate(300deg) translate(16.25em) rotate(-300deg);
+}
+.goldring .time > *:nth-of-type(12) {
+  transform: rotate(330deg) translate(16.25em) rotate(-330deg);
+}
+.goldring .time .points {
+  width: .5em;
+  height: .3em;
+  border-radius: 50%;
+  background: #DCC9B1;
+  display: block;
+}
+.goldring .time_lg {
+  width: 30em;
+  height: 30em;
+  border-radius: 50%;
+  position: absolute;
+  top: -43%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  width: 28em;
+  height: 28em;
+  border-radius: 50%;
+  padding: 0;
+  list-style: none;
+}
+.goldring .time_lg > * {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -1em;
+  width: 2em;
+  height: 2em;
+}
+.goldring .time_lg > *:nth-of-type(1) {
+  transform: rotate(0deg) translate(14em) rotate(0deg);
+}
+.goldring .time_lg > *:nth-of-type(2) {
+  transform: rotate(30deg) translate(14em) rotate(-30deg);
+}
+.goldring .time_lg > *:nth-of-type(3) {
+  transform: rotate(60deg) translate(14em) rotate(-60deg);
+}
+.goldring .time_lg > *:nth-of-type(4) {
+  transform: rotate(90deg) translate(14em) rotate(-90deg);
+}
+.goldring .time_lg > *:nth-of-type(5) {
+  transform: rotate(120deg) translate(14em) rotate(-120deg);
+}
+.goldring .time_lg > *:nth-of-type(6) {
+  transform: rotate(150deg) translate(14em) rotate(-150deg);
+}
+.goldring .time_lg > *:nth-of-type(7) {
+  transform: rotate(180deg) translate(14em) rotate(-180deg);
+}
+.goldring .time_lg > *:nth-of-type(8) {
+  transform: rotate(210deg) translate(14em) rotate(-210deg);
+}
+.goldring .time_lg > *:nth-of-type(9) {
+  transform: rotate(240deg) translate(14em) rotate(-240deg);
+}
+.goldring .time_lg > *:nth-of-type(10) {
+  transform: rotate(270deg) translate(14em) rotate(-270deg);
+}
+.goldring .time_lg > *:nth-of-type(11) {
+  transform: rotate(300deg) translate(14em) rotate(-300deg);
+}
+.goldring .time_lg > *:nth-of-type(12) {
+  transform: rotate(330deg) translate(14em) rotate(-330deg);
+}
+.goldring .inner {
+  border: .3px solid #000;
+  content: '';
+  border-radius: 50%;
+  width: 25em;
+  height: 25em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 50% 90%, rgba(0, 0, 0, 0.5), rgba(255, 0, 0, 0), transparent) 50% 50%/100% 100%, -webkit-radial-gradient(50% 50%, circle, rgba(169, 169, 169, 0.1), rgba(0, 0, 0, 0.1) 51%) 50% 50%/100% 100%, radial-gradient(circle at 15% 0%, rgba(255, 255, 255, 0.1), #131419) 50% 50%/100% 100%, radial-gradient(circle at 70% 0%, rgba(255, 255, 255, 0.06), #131419) 50% 50%/100% 100%, radial-gradient(circle at 75% 0%, #24252d, #131419, transparent) 50% 50%/100% 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+.goldring .inner .handle {
+  animation: anim 8s infinite;
+  width: .8em;
+  height: 12em;
+  position: absolute;
+  top: 7em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  transform-origin: bottom;
+  background: linear-gradient(to right, #333333, #333333) 50% 100%/62% 60%, #e3c7aa;
+  box-shadow: 2px 4px 1px 2px #000;
+  background-repeat: no-repeat;
+}
+.goldring .inner .center {
+  width: 1.5em;
+  height: 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50%, #333333, #333333) 50% 50%/12% 12%, radial-gradient(circle at 50%, #d8b798, #d0a788) 50% 50%/50% 50%, radial-gradient(circle at 50%, #d8b798, #a98259) 50% 50%/70% 70%, radial-gradient(circle at 50%, #d0a788, #d0a788) 50% 50%/100% 100%;
+  background-repeat: no-repeat;
+}
+.goldring .inner .handle_short {
+  width: .8em;
+  height: 8em;
+  position: absolute;
+  top: 66%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(110deg);
+  transform-origin: top;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, #333333, #333333) 50% 0%/0.4em 90%, #e3c7aa;
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.6);
+  background-repeat: no-repeat;
+}
+.goldring .inner .handle_thin {
+  width: .2em;
+  height: 14em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: rotate(20deg);
+  transform-origin: top;
+  border-radius: 15px;
+  background: linear-gradient(to bottom, white, white) 50% 100%/0.4em 20%, #e3c7aa;
+  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.6);
+  background-repeat: no-repeat;
+}
+
+.knob {
+  top: 43.8%;
+  left: 96.5%;
+  width: 1.5em;
+  height: 5em;
+  background: linear-gradient(to bottom, rgba(51, 51, 51, 0.4) 3%, #E6CBA0 6%, rgba(252, 240, 222, 0.9) 40%, #654429, rgba(101, 68, 41, 0.4), rgba(230, 196, 153, 0.7) 50%, #D9AB78 60%, #D9AB78 63%, #E6C499, #D3A271, #977F66, rgba(51, 51, 51, 0.3)), #fdf0e0;
+  position: absolute;
+  left: 100%;
+  background-repeat: no-repeat;
+}
+.knob:before {
+  content: '';
+  width: 2em;
+  height: 5em;
+  top: 0;
+  left: -16%;
+  background: radial-gradient(50% 200% at 0% 50%, #C6A380 35%, #BE926F 50%, rgba(0, 0, 0, 0) 52%) 23.4% 18%/5em 5em;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+@keyframes anim {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

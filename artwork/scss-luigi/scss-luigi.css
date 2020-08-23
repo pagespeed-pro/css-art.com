@@ -1,0 +1,367 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 80;
+  --unit: calc((var(--size) / 489) * 1vmin);
+  --skin: hsl(16, 34%, 55%);
+  --sel: hsl(16, 100%, 93%);
+  --sm: hsl(17, 92%, 81%);
+  --sl: hsl(17, 100%, 88%);
+  --elg: hsl(125, 46%, 52%);
+  --lg: hsl(124, 53%, 38%);
+  --mg: hsl(125, 70%, 18%);
+  --dg: hsl(125, 59%, 11%);
+  --b: hsl(282, 52%, 5%);
+  --hair: rgba(85, 16, 12, 1);
+  --hd: rgba(128, 47, 43, 1);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: courier;
+  text-align: center;
+  font-size: calc(15 * var(--unit));
+}
+
+.text {
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  text-align: center;
+}
+
+.luigi {
+  height: calc(489 * var(--unit));
+  width: calc(371 * var(--unit));
+  position: fixed;
+  top: 11.5%;
+}
+.luigi * {
+  position: absolute;
+}
+.luigi .hat {
+  width: 88%;
+  height: 63%;
+  top: 0%;
+  left: 7%;
+  background: radial-gradient(circle at 50% 20%, var(--lg) 30%, var(--mg) 60%, var(--dg) 80%);
+  border-radius: 50% 50% 45% 45% / 70% 70% 35% 35%;
+  z-index: 4;
+}
+.luigi .hat .logo {
+  width: 34%;
+  height: 34%;
+  top: 10%;
+  left: 33%;
+  background: linear-gradient(180deg, white 60%, #757575 100%);
+  border-radius: 50%;
+  box-shadow: inset 1px 1px 5px #757575;
+  border: 2px solid #cccccc;
+  z-index: -2;
+}
+.luigi .hat .logo span:nth-of-type(1) {
+  width: 45%;
+  height: 77%;
+  top: 4%;
+  left: 15%;
+  background: linear-gradient(-90deg, var(--lg) 60%, var(--dg) 90%);
+  clip-path: polygon(31% 100%, 25% 10%, 70% 10%, 65% 100%);
+  -webkit-clip-path: polygon(31% 100%, 25% 10%, 70% 10%, 65% 100%);
+}
+.luigi .hat .logo span:nth-of-type(2) {
+  width: 77%;
+  height: 21%;
+  top: 60%;
+  left: 25%;
+  background: linear-gradient(180deg, var(--lg) 80%, rgba(13, 49, 16, 0.7) 100%);
+  clip-path: polygon(5% 100%, 25% 10%, 70% 10%, 68% 100%);
+  -webkit-clip-path: polygon(5% 100%, 25% 10%, 70% 10%, 68% 100%);
+}
+.luigi .peak {
+  width: 82%;
+  height: 22%;
+  top: 43%;
+  left: 9%;
+  background: radial-gradient(circle at 50% 170%, var(--lg) 20%, var(--dg) 80%);
+  border-top: solid 10px var(--lg);
+  border-radius: 50% 50% 0% 0%/ 100% 100% 0% 0%;
+}
+.luigi .peak::before {
+  position: absolute;
+  content: "";
+  width: 90%;
+  height: 100%;
+  top: -30%;
+  left: 5%;
+  background: radial-gradient(circle at 50% 90%, var(--elg) 20%, var(--mg) 100%);
+  z-index: -1;
+  border-radius: 50% 50% 0% 0% / 100% 100% 0% 0%;
+}
+.luigi .face {
+  width: 63%;
+  height: 65%;
+  top: 32%;
+  left: 19.5%;
+  background: var(--skin);
+  background: linear-gradient(276deg, var(--skin) 25%, var(--sm) 54%, var(--sl) 80%);
+  border-radius: 45% 45% 50% 50% / 17% 17% 70% 70%;
+  z-index: 5;
+  overflow: hidden;
+  box-shadow: inset 0px 2px 2px var(--skin);
+}
+.luigi .face #overlay {
+  width: 100%;
+  height: 20%;
+  background: rgba(48, 37, 33, 0.2);
+  filter: blur(3px);
+  top: 0%;
+  z-index: 20;
+}
+.luigi .face .brow, .luigi .face .brow-right {
+  width: 27%;
+  height: 13%;
+  top: 0%;
+  background: var(--b);
+  border-radius: 50% 55% 0% 0% / 100% 100% 0% 0%;
+}
+.luigi .face .brow span:nth-of-type(1), .luigi .face .brow-right span:nth-of-type(1) {
+  width: 94%;
+  height: 76%;
+  top: 67%;
+  left: 3%;
+  border-radius: 50%;
+  background: var(--skin);
+  background: linear-gradient(260deg, var(--sm) 54%, var(--sl) 100%);
+}
+.luigi .face .brow {
+  left: 12%;
+  transform: rotate(-10deg);
+}
+.luigi .face .brow-right {
+  right: 12%;
+  transform: scaleX(-1);
+  transform: rotate(10deg);
+}
+.luigi .face .brow-right span:nth-of-type(1) {
+  top: 67%;
+  right: 3%;
+  width: 94%;
+  height: 76%;
+  border-radius: 50%;
+  background: var(--skin);
+  background: linear-gradient(260deg, var(--skin) 70%, #e9ad96 100%);
+}
+.luigi .face .lip {
+  width: 36%;
+  height: 20%;
+  bottom: 23%;
+  left: 32%;
+  border-radius: 50% / 20%;
+  background: var(--skin);
+  z-index: -2;
+}
+.luigi .face .mouth {
+  width: 32%;
+  height: 27%;
+  bottom: 14%;
+  left: 34%;
+  border-radius: 0% 0% 100% 100%;
+  background: radial-gradient(circle at 49% 95%, #d87f8c 5%, #a75461 20%, #2c0718 40%);
+  z-index: -3;
+  overflow: hidden;
+}
+.luigi .face .mouth::before {
+  position: absolute;
+  content: "";
+  width: 110%;
+  height: 30%;
+  top: 34%;
+  left: -5%;
+  border-bottom: calc(10 * var(--unit)) solid #eeebeb;
+  border-radius: 50%;
+  box-shadow: 0em 0.2em 1em #2c0718;
+  background: var(--skin);
+}
+.luigi .chin {
+  width: 26%;
+  height: 10%;
+  bottom: 10%;
+  left: 37%;
+  border-radius: 0% 0% 50% 50%;
+  border-bottom: 2px rgba(136, 93, 77, 0.3) solid;
+  filter: blur(1px);
+}
+.luigi .nose {
+  width: 55%;
+  height: 39%;
+  top: 28%;
+  right: 23%;
+  border: calc(var(--unit) * 0.3) var(--sel) solid;
+  background: radial-gradient(circle at 33% 24%, var(--sel) 15%, var(--sl) 30%, var(--sm) 54%, #8c604f 80%);
+  border-radius: 88% 88% 100% 100%;
+  z-index: 10;
+}
+.luigi .tash {
+  width: 110%;
+  height: 50%;
+  top: 7%;
+  left: -5%;
+  background: linear-gradient(276deg, var(--skin) 25%, var(--sm) 54%, var(--sl) 80%);
+  z-index: -1;
+  border-radius: 50%;
+}
+.luigi #tash-l, .luigi #tash-r {
+  width: 50%;
+  height: 35%;
+  border-radius: 50% 30% 50% 50%/ 50% 50% 50% 50%;
+  z-index: -1;
+  bottom: 25%;
+  background: radial-gradient(circle at 49% 35%, var(--b) 20%, #472e32 45%, var(--b) 60%);
+  overflow: hidden;
+}
+.luigi #tash-l::before, .luigi #tash-r::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 30%;
+  top: 15%;
+  background: rgba(15, 6, 19, 0.9);
+  box-shadow: 0em 1em 2em 1em var(--b);
+}
+.luigi #tash-l {
+  left: 5%;
+}
+.luigi #tash-l::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 30%;
+  top: 15%;
+  left: 0%;
+  background: rgba(15, 6, 19, 0.9);
+  box-shadow: 1em 0em 2em 1em var(--b);
+}
+.luigi #tash-r {
+  right: 5%;
+}
+.luigi .eye-left, .luigi .eye-right {
+  width: 24%;
+  height: 28%;
+  border-radius: 50%;
+  top: 13.5%;
+  background: linear-gradient(0deg, white 77%, #757575 100%);
+  z-index: 1;
+  overflow: hidden;
+  box-shadow: -1px -1px 2px #8f5540, 1px 2px 2px #8f5540;
+}
+.luigi .eye-left *, .luigi .eye-right * {
+  border-radius: 50%;
+}
+.luigi .eye-left span:nth-of-type(1), .luigi .eye-right span:nth-of-type(1) {
+  width: 79%;
+  height: 76%;
+  top: 13%;
+  left: 25%;
+  border: calc(var(--unit) * 0.5) #5050be solid;
+  background: radial-gradient(circle at 70% 60%, #2eceff 50%, #4f38ff 80%);
+}
+.luigi .eye-left span:nth-of-type(2), .luigi .eye-right span:nth-of-type(2) {
+  width: 45%;
+  height: 46%;
+  top: 30%;
+  left: 45%;
+  background: radial-gradient(circle at 60% 60%, #2b1d95 20%, #1c1c1c 30%);
+}
+.luigi .eye-left span:nth-of-type(3), .luigi .eye-right span:nth-of-type(3) {
+  width: 12%;
+  height: 10%;
+  top: 36%;
+  left: 62%;
+  background: white;
+  filter: blur(1px);
+}
+.luigi .eye-left {
+  left: 18.5%;
+}
+.luigi .eye-right {
+  right: 18%;
+  transform: scaleX(-1);
+}
+
+#hair-left, #hair-right {
+  width: 15%;
+  height: 27%;
+  background: linear-gradient(87deg, var(--hd) 25%, var(--hair) 40%);
+  z-index: 4;
+  top: 39%;
+  border-radius: 70% 50% 0% 100% / 60% 50% 0% 100%;
+}
+
+#hair-left {
+  left: 14%;
+}
+
+#hair-right {
+  right: 13%;
+  background: linear-gradient(87deg, var(--hd) 5%, var(--hair) 28%);
+  transform: scaleX(-1);
+}
+
+.hair-back {
+  width: 13%;
+  height: 10%;
+  background: var(--hair);
+  bottom: 10%;
+  border-radius: 50%;
+}
+
+#l {
+  left: 26%;
+}
+
+#r {
+  right: 24%;
+}
+
+#ear-left, #ear-right {
+  width: 18%;
+  height: 25%;
+  background: var(--skin);
+  top: 52%;
+  z-index: -1;
+  border-radius: 50% 0% 0% 100% / 22% 0% 0% 62%;
+  background: linear-gradient(276deg, var(--skin) 5%, var(--sm) 54%);
+}
+#ear-left *, #ear-right * {
+  background: linear-gradient(-150deg, var(--skin) 25%, var(--sm) 54%, rgba(253, 143, 99, 0.1) 80%);
+  border-left: 2px rgba(143, 85, 64, 0.4) solid;
+}
+#ear-left span:nth-of-type(1), #ear-right span:nth-of-type(1) {
+  top: 17%;
+  left: 20%;
+  width: 65%;
+  height: 56%;
+  border-radius: 50% 100% 0% 100%;
+}
+#ear-left span:nth-of-type(2), #ear-right span:nth-of-type(2) {
+  top: 37%;
+  left: 50%;
+  width: 35%;
+  height: 36%;
+  border-radius: 50% 100% 0% 100%;
+}
+
+#ear-left {
+  left: 7%;
+}
+
+#ear-right {
+  right: 5%;
+  transform: scaleX(-1);
+  background: linear-gradient(276deg, var(--skin) 45%, #d89e88 100%);
+}
