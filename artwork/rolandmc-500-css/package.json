@@ -1,1 +1,31 @@
-{"name":"rolandmc-500-css","version":"1.0.0","title":"RolandMC-500.css","description":"Photorealistic illustration of a Roland MC-500. Based on the following ad: https://i.pinimg.com/564x/a2/02/a4/a202a4ab33dff87b53ba54db33518b78.jpg\n\nFor tutorials, check out my blog posts:\nhttps://fossheim.io/writing/posts/css-polaroid-camera/\nhttps://fossheim.io/writing/posts/css-macintosh/\n\nIf you like my work, consider becoming a patron or buying me a coffee:\nhttps://www.patreon.com/fossheim\nhttps://www.buymeacoffee.com/fossheim\n","author":{"name":"Sarah Fossheim","web":"https://fossheim.io/","social":[{"title":"Codepen","url":"https://codepen.io/fossheim/"},{"title":"Twitter","url":"https://twitter.com/liatrisbian"},{"title":"Github","url":"https://github.com/sarahfossheim"},{"title":"dev.to","url":"https://dev.to/fossheim"}]},"html":"rolandmc-500-css.html","css":["rolandmc-500-css.css"],"js":"","thumbnail":"thumbnail.png","splash":"splash.png","keywords":["roland","mc-500","photo realistic"],"original":"https://codepen.io/fossheim/pen/BaKQGZJ","codepen":"https://codepen.io/fossheim/pen/BaKQGZJ"}
+{
+    "name": "rolandmc-500-css",
+    "version": "1.0.0",
+    "title": "Roland MC-500",
+    "description": "Photorealistic illustration of a Roland MC-500. Based on the following ad: https://i.pinimg.com/564x/a2/02/a4/a202a4ab33dff87b53ba54db33518b78.jpg\n\nFor tutorials, check out my blog posts:\nhttps://fossheim.io/writing/posts/css-polaroid-camera/\nhttps://fossheim.io/writing/posts/css-macintosh/\n\nIf you like my work, consider becoming a patron or buying me a coffee:\nhttps://www.patreon.com/fossheim\nhttps://www.buymeacoffee.com/fossheim\n",
+    "author": {
+        "name": "Sarah Fossheim",
+        "web": "https://fossheim.io/",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/fossheim/"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/liatrisbian"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/sarahfossheim"
+        }, {
+            "title": "dev.to",
+            "url": "https://dev.to/fossheim"
+        }]
+    },
+    "html": "rolandmc-500-css.html",
+    "css": ["rolandmc-500-css.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["roland", "mc-500", "photo realistic"],
+    "original": "https://codepen.io/fossheim/pen/BaKQGZJ",
+    "codepen": "https://codepen.io/fossheim/pen/BaKQGZJ"
+}
