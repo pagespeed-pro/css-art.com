@@ -1,0 +1,32 @@
+{
+    "name": "one-div-ipad-pro-pure",
+    "version": "1.0.0",
+    "title": "One Div iPad Pro",
+    "description": "This is the first time I've ever tried to use gradients to \"draw\" something and I thought I'd make it super hard on myself by making it responsive, one div only *and* the back and front! \n\nTracked 19hrs in VSCode, but this excludes time learning and thinking about how to make it work. Thank you to Lynn Fisher for the her One Div work.",
+    "author": {
+        "name": "Annie Bombanie",
+        "web": "https://anniebombanie.com/",
+        "avatar": "https://assets.codepen.io/2558758/internal/avatars/users/default.png?format=auto&height=512&version=1590115984&width=512",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/anniebombanie/"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/anniebombanie_"
+        }, {
+            "title": "Github",
+            "url": "https://github.com/anniebombanie"
+        }, {
+            "title": "Medium.com",
+            "url": "https://medium.com/@anniebombanie"
+        }]
+    },
+    "html": "one-div-ipad-pro-pure.html",
+    "css": ["one-div-ipad-pro-pure.css"],
+    "js": "// Twitter @anniebombanie_",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["ipad", "single div"],
+    "original": "https://codepen.io/anniebombanie/pen/pojmNzN",
+    "codepen": "https://codepen.io/anniebombanie/pen/pojmNzN"
+}
