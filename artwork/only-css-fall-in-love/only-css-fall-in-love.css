@@ -1,0 +1,492 @@
+body {
+  background: #190a0f;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#ui {
+  transform: rotateZ(-4deg);
+}
+#ui .text {
+  position: absolute;
+  font-size: 8rem;
+  color: #fff;
+  line-height: 8rem;
+  font-family: 'Anton', sans-serif;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  letter-spacing: 1rem;
+  overflow: hidden;
+}
+#ui .text:nth-child(1) {
+  color: #6228e5;
+  clip-path: polygon(-1% -4%, 10% -20%, 9% 52%, -1% 65%);
+  filter: blur(-3px);
+}
+#ui .text:nth-child(1) .text_inner1 {
+  animation: vertical 823ms 76ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(1) .text_inner2 {
+  animation: horizontal 729ms 12ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(2) {
+  color: #d62838;
+  clip-path: polygon(4% -4%, 13% -5%, 11% 52%, 4% 63%);
+  filter: blur(2px);
+}
+#ui .text:nth-child(2) .text_inner1 {
+  animation: vertical 1586ms 7ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(2) .text_inner2 {
+  animation: horizontal 1058ms 45ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(3) {
+  color: #802843;
+  clip-path: polygon(8% -3%, 16% -7%, 20% 54%, 8% 58%);
+  filter: blur(7px);
+}
+#ui .text:nth-child(3) .text_inner1 {
+  animation: vertical 816ms 94ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(3) .text_inner2 {
+  animation: horizontal 1491ms 91ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(4) {
+  color: #8228a7;
+  clip-path: polygon(13% -5%, 22% -20%, 25% 52%, 13% 64%);
+  filter: blur(1px);
+}
+#ui .text:nth-child(4) .text_inner1 {
+  animation: vertical 1368ms 36ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(4) .text_inner2 {
+  animation: horizontal 1681ms 49ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(5) {
+  color: #b928cb;
+  clip-path: polygon(18% -1%, 30% -18%, 27% 55%, 19% 61%);
+  filter: blur(8px);
+}
+#ui .text:nth-child(5) .text_inner1 {
+  animation: vertical 1045ms 9ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(5) .text_inner2 {
+  animation: horizontal 1561ms 24ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(6) {
+  color: #9428e2;
+  clip-path: polygon(24% -4%, 34% -6%, 32% 52%, 24% 51%);
+  filter: blur(-5px);
+}
+#ui .text:nth-child(6) .text_inner1 {
+  animation: vertical 1470ms 72ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(6) .text_inner2 {
+  animation: horizontal 1022ms 84ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(7) {
+  color: #3a2853;
+  clip-path: polygon(28% -2%, 40% -16%, 39% 54%, 29% 61%);
+  filter: blur(10px);
+}
+#ui .text:nth-child(7) .text_inner1 {
+  animation: vertical 1687ms 42ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(7) .text_inner2 {
+  animation: horizontal 1190ms 81ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(8) {
+  color: #8f28cd;
+  clip-path: polygon(33% -1%, 42% -2%, 45% 53%, 34% 51%);
+  filter: blur(1px);
+}
+#ui .text:nth-child(8) .text_inner1 {
+  animation: vertical 1508ms 33ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(8) .text_inner2 {
+  animation: horizontal 1052ms 13ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(9) {
+  color: #9628d8;
+  clip-path: polygon(39% -5%, 47% -26%, 48% 55%, 39% 62%);
+  filter: blur(0px);
+}
+#ui .text:nth-child(9) .text_inner1 {
+  animation: vertical 1353ms 68ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(9) .text_inner2 {
+  animation: horizontal 1012ms 29ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(10) {
+  color: #ff28a7;
+  clip-path: polygon(43% -5%, 51% -14%, 51% 51%, 43% 53%);
+  filter: blur(5px);
+}
+#ui .text:nth-child(10) .text_inner1 {
+  animation: vertical 832ms 93ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(10) .text_inner2 {
+  animation: horizontal 1093ms 88ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(11) {
+  color: #f028e9;
+  clip-path: polygon(49% -2%, 58% -14%, 58% 55%, 49% 57%);
+  filter: blur(5px);
+}
+#ui .text:nth-child(11) .text_inner1 {
+  animation: vertical 1103ms 14ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(11) .text_inner2 {
+  animation: horizontal 949ms 87ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(12) {
+  color: #bc289b;
+  clip-path: polygon(54% -1%, 64% -13%, 61% 55%, 54% 79%);
+  filter: blur(-2px);
+}
+#ui .text:nth-child(12) .text_inner1 {
+  animation: vertical 1283ms 35ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(12) .text_inner2 {
+  animation: horizontal 911ms 68ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(13) {
+  color: #9128a2;
+  clip-path: polygon(59% -3%, 67% -26%, 70% 51%, 59% 78%);
+  filter: blur(4px);
+}
+#ui .text:nth-child(13) .text_inner1 {
+  animation: vertical 1136ms 93ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(13) .text_inner2 {
+  animation: horizontal 986ms 68ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(14) {
+  color: #a528a4;
+  clip-path: polygon(63% -4%, 71% -14%, 71% 55%, 64% 60%);
+  filter: blur(-7px);
+}
+#ui .text:nth-child(14) .text_inner1 {
+  animation: vertical 1013ms 31ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(14) .text_inner2 {
+  animation: horizontal 1015ms 50ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(15) {
+  color: #f328ce;
+  clip-path: polygon(68% -3%, 78% -24%, 76% 52%, 69% 59%);
+  filter: blur(-7px);
+}
+#ui .text:nth-child(15) .text_inner1 {
+  animation: vertical 1189ms 51ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(15) .text_inner2 {
+  animation: horizontal 738ms 17ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(16) {
+  color: #f428f7;
+  clip-path: polygon(74% -5%, 85% -22%, 85% 53%, 73% 57%);
+  filter: blur(-2px);
+}
+#ui .text:nth-child(16) .text_inner1 {
+  animation: vertical 1370ms 83ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(16) .text_inner2 {
+  animation: horizontal 813ms 67ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(17) {
+  color: #ff2867;
+  clip-path: polygon(79% -2%, 89% -30%, 90% 52%, 79% 56%);
+  filter: blur(-1px);
+}
+#ui .text:nth-child(17) .text_inner1 {
+  animation: vertical 1597ms 36ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(17) .text_inner2 {
+  animation: horizontal 1313ms 78ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(18) {
+  color: #5b288a;
+  clip-path: polygon(84% -4%, 93% -30%, 92% 52%, 84% 56%);
+  filter: blur(-5px);
+}
+#ui .text:nth-child(18) .text_inner1 {
+  animation: vertical 755ms 75ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(18) .text_inner2 {
+  animation: horizontal 827ms 3ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(19) {
+  color: #ad28c2;
+  clip-path: polygon(88% -2%, 96% -25%, 99% 52%, 88% 70%);
+  filter: blur(7px);
+}
+#ui .text:nth-child(19) .text_inner1 {
+  animation: vertical 1093ms 24ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(19) .text_inner2 {
+  animation: horizontal 836ms 12ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(20) {
+  color: #6228e6;
+  clip-path: polygon(94% -1%, 101% -5%, 102% 53%, 93% 70%);
+  filter: blur(10px);
+}
+#ui .text:nth-child(20) .text_inner1 {
+  animation: vertical 1472ms 25ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(20) .text_inner2 {
+  animation: horizontal 985ms 3ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(21) {
+  color: #9d2840;
+  clip-path: polygon(-1% 48%, 6% 26%, 10% 101%, -2% 115%);
+  filter: blur(-2px);
+}
+#ui .text:nth-child(21) .text_inner1 {
+  animation: vertical 977ms 54ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(21) .text_inner2 {
+  animation: horizontal 744ms 51ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(22) {
+  color: #5e28c9;
+  clip-path: polygon(4% 49%, 11% 38%, 13% 101%, 3% 109%);
+  filter: blur(-3px);
+}
+#ui .text:nth-child(22) .text_inner1 {
+  animation: vertical 1512ms 60ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(22) .text_inner2 {
+  animation: horizontal 749ms 3ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(23) {
+  color: #8828bc;
+  clip-path: polygon(8% 45%, 19% 47%, 18% 102%, 9% 102%);
+  filter: blur(10px);
+}
+#ui .text:nth-child(23) .text_inner1 {
+  animation: vertical 833ms 39ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(23) .text_inner2 {
+  animation: horizontal 927ms 30ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(24) {
+  color: #fa28cf;
+  clip-path: polygon(13% 46%, 24% 38%, 24% 101%, 14% 119%);
+  filter: blur(-1px);
+}
+#ui .text:nth-child(24) .text_inner1 {
+  animation: vertical 1273ms 15ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(24) .text_inner2 {
+  animation: horizontal 981ms 55ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(25) {
+  color: #5928af;
+  clip-path: polygon(19% 47%, 28% 32%, 28% 103%, 18% 113%);
+  filter: blur(-9px);
+}
+#ui .text:nth-child(25) .text_inner1 {
+  animation: vertical 1271ms 80ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(25) .text_inner2 {
+  animation: horizontal 1532ms 88ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(26) {
+  color: #ff283a;
+  clip-path: polygon(24% 48%, 32% 31%, 31% 103%, 23% 117%);
+  filter: blur(6px);
+}
+#ui .text:nth-child(26) .text_inner1 {
+  animation: vertical 1381ms 41ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(26) .text_inner2 {
+  animation: horizontal 879ms 79ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(27) {
+  color: #ae2868;
+  clip-path: polygon(28% 46%, 38% 23%, 38% 103%, 29% 116%);
+  filter: blur(-3px);
+}
+#ui .text:nth-child(27) .text_inner1 {
+  animation: vertical 1207ms 43ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(27) .text_inner2 {
+  animation: horizontal 1506ms 64ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(28) {
+  color: #5f28b8;
+  clip-path: polygon(34% 46%, 43% 22%, 44% 102%, 34% 106%);
+  filter: blur(2px);
+}
+#ui .text:nth-child(28) .text_inner1 {
+  animation: vertical 1262ms 41ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(28) .text_inner2 {
+  animation: horizontal 1401ms 25ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(29) {
+  color: #5c28dd;
+  clip-path: polygon(39% 47%, 50% 25%, 47% 101%, 39% 130%);
+  filter: blur(-8px);
+}
+#ui .text:nth-child(29) .text_inner1 {
+  animation: vertical 950ms 70ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(29) .text_inner2 {
+  animation: horizontal 1044ms 72ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(30) {
+  color: #b92853;
+  clip-path: polygon(44% 46%, 54% 26%, 53% 104%, 44% 108%);
+  filter: blur(-2px);
+}
+#ui .text:nth-child(30) .text_inner1 {
+  animation: vertical 1343ms 28ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(30) .text_inner2 {
+  animation: horizontal 1550ms 65ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(31) {
+  color: #6a28c7;
+  clip-path: polygon(48% 46%, 56% 35%, 57% 101%, 49% 106%);
+  filter: blur(2px);
+}
+#ui .text:nth-child(31) .text_inner1 {
+  animation: vertical 1000ms 42ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(31) .text_inner2 {
+  animation: horizontal 736ms 84ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(32) {
+  color: #6e28b0;
+  clip-path: polygon(53% 45%, 65% 24%, 65% 103%, 53% 127%);
+  filter: blur(7px);
+}
+#ui .text:nth-child(32) .text_inner1 {
+  animation: vertical 956ms 52ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(32) .text_inner2 {
+  animation: horizontal 1394ms 57ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(33) {
+  color: #f52863;
+  clip-path: polygon(58% 48%, 69% 25%, 68% 102%, 58% 121%);
+  filter: blur(-2px);
+}
+#ui .text:nth-child(33) .text_inner1 {
+  animation: vertical 1501ms 92ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(33) .text_inner2 {
+  animation: horizontal 1663ms 30ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(34) {
+  color: #5b28ad;
+  clip-path: polygon(64% 46%, 72% 29%, 75% 104%, 63% 130%);
+  filter: blur(-6px);
+}
+#ui .text:nth-child(34) .text_inner1 {
+  animation: vertical 860ms 52ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(34) .text_inner2 {
+  animation: horizontal 734ms 58ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(35) {
+  color: #54287e;
+  clip-path: polygon(69% 48%, 79% 28%, 79% 104%, 69% 115%);
+  filter: blur(-6px);
+}
+#ui .text:nth-child(35) .text_inner1 {
+  animation: vertical 1548ms 57ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(35) .text_inner2 {
+  animation: horizontal 1429ms 10ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(36) {
+  color: #852864;
+  clip-path: polygon(74% 49%, 81% 28%, 82% 103%, 73% 126%);
+  filter: blur(9px);
+}
+#ui .text:nth-child(36) .text_inner1 {
+  animation: vertical 1441ms 35ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(36) .text_inner2 {
+  animation: horizontal 1137ms 75ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(37) {
+  color: #5028e9;
+  clip-path: polygon(79% 45%, 89% 31%, 86% 101%, 78% 121%);
+  filter: blur(-9px);
+}
+#ui .text:nth-child(37) .text_inner1 {
+  animation: vertical 1461ms 79ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(37) .text_inner2 {
+  animation: horizontal 1158ms 12ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(38) {
+  color: #78289b;
+  clip-path: polygon(84% 48%, 92% 25%, 93% 102%, 83% 128%);
+  filter: blur(7px);
+}
+#ui .text:nth-child(38) .text_inner1 {
+  animation: vertical 1648ms 42ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(38) .text_inner2 {
+  animation: horizontal 1141ms 25ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(39) {
+  color: #a52888;
+  clip-path: polygon(88% 45%, 100% 33%, 99% 103%, 88% 103%);
+  filter: blur(-1px);
+}
+#ui .text:nth-child(39) .text_inner1 {
+  animation: vertical 701ms 49ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(39) .text_inner2 {
+  animation: horizontal 757ms 8ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(40) {
+  color: #6728bc;
+  clip-path: polygon(93% 47%, 102% 46%, 104% 104%, 94% 114%);
+  filter: blur(1px);
+}
+#ui .text:nth-child(40) .text_inner1 {
+  animation: vertical 1240ms 20ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(40) .text_inner2 {
+  animation: horizontal 1419ms 9ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(41) {
+  color: #622881;
+  clip-path: polygon(-2% 99%, 10% 93%, 7% 151%, -1% 165%);
+  filter: blur(10px);
+}
+#ui .text:nth-child(41) .text_inner1 {
+  animation: vertical 1271ms 52ms ease-in-out infinite alternate;
+}
+#ui .text:nth-child(41) .text_inner2 {
+  animation: horizontal 1336ms 73ms ease-in-out infinite alternate;
+}
+
+@keyframes horizontal {
+  0% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(-6px);
+  }
+}
+@keyframes vertical {
+  0% {
+    transform: translateY(3px);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}

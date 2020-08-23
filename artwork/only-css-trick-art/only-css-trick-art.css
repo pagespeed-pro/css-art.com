@@ -1,0 +1,144 @@
+body {
+  background: linear-gradient(-45deg, #eb4682 0%, #4664ff 100%);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 700px;
+}
+
+#trick_art {
+  transform-style: preserve-3d;
+  transform: rotateY(35deg);
+  animation: trickArt 4000ms 1000ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite alternate;
+}
+#trick_art::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(0deg, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+  transform: rotateX(-90deg) translateZ(100px);
+}
+#trick_art .paper {
+  width: 300px;
+  height: 350px;
+  transform-style: preserve-3d;
+  transform: rotateX(45deg);
+}
+#trick_art .paper .slice {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(0deg, #f0f0f0 0%, white 100%);
+  overflow: hidden;
+  transform-origin: 0 100%;
+}
+#trick_art .paper .slice .ladder_wrapper {
+  position: absolute;
+  left: calc(50% - 20px);
+  width: 100%;
+  height: 70%;
+  transform-origin: 0 0;
+}
+#trick_art .paper .slice .ladder_wrapper.ladder_shadow {
+  filter: blur(3px);
+}
+#trick_art .paper .slice .ladder_wrapper.ladder_shadow .ladder_left, #trick_art .paper .slice .ladder_wrapper.ladder_shadow .ladder_right {
+  background: rgba(0, 0, 0, 0.2);
+}
+#trick_art .paper .slice .ladder_wrapper.ladder_main .ladder_left, #trick_art .paper .slice .ladder_wrapper.ladder_main .ladder_right {
+  background: black;
+}
+#trick_art .paper .slice .ladder_left {
+  position: absolute;
+  width: 5px;
+  height: 100%;
+}
+#trick_art .paper .slice .ladder_right {
+  position: absolute;
+  left: 10%;
+  width: 5px;
+  height: 100%;
+}
+#trick_art .paper .slice .ladder_steps .ladder_step {
+  position: absolute;
+  width: 35px;
+  height: 5px;
+}
+#trick_art .paper .slice .ladder_steps .ladder_step:nth-child(1) {
+  top: 25px;
+}
+#trick_art .paper .slice .ladder_steps .ladder_step:nth-child(2) {
+  top: 50px;
+}
+#trick_art .paper .slice .ladder_steps .ladder_step:nth-child(3) {
+  top: 75px;
+}
+#trick_art .paper .slice .ladder_steps .ladder_step:nth-child(4) {
+  top: 100px;
+}
+#trick_art .paper .slice .ladder_steps .ladder_step:nth-child(5) {
+  top: 125px;
+}
+#trick_art .paper .slice .ladder_steps .ladder_step:nth-child(6) {
+  top: 150px;
+}
+#trick_art .paper .slice .ladder_steps .ladder_step:nth-child(7) {
+  top: 175px;
+}
+#trick_art .paper .slice .ladder_shadow .ladder_step {
+  background: rgba(0, 0, 0, 0.2);
+}
+#trick_art .paper .slice .ladder_main .ladder_step {
+  background: black;
+}
+#trick_art .paper .slice.top {
+  transform: rotateX(-90deg);
+  animation: paper 4000ms  1000ms ease-in-out infinite alternate;
+}
+#trick_art .paper .slice.top .ladder_wrapper {
+  bottom: 0;
+}
+#trick_art .paper .slice.top .ladder_wrapper.ladder_main {
+  transform: skew(30deg);
+}
+#trick_art .paper .slice.bottom .ladder_wrapper.ladder_main {
+  transform-origin: 0 100%;
+  transform: skew(-30deg);
+}
+#trick_art .paper .slice.bottom .ladder_wrapper .ladder_steps {
+  position: absolute;
+  top: -25px;
+}
+
+@keyframes trickArt {
+  0% {
+    transform: rotateY(35deg);
+  }
+  25% {
+    transform: rotateY(35deg);
+  }
+  80% {
+    transform: rotateY(360deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+@keyframes paper {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  25% {
+    transform: rotateX(-90deg);
+  }
+  95% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

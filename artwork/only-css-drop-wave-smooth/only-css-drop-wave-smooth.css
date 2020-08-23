@@ -1,0 +1,267 @@
+body {
+  background: #000;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 500px;
+}
+
+.rings .ring {
+  position: absolute;
+  animation: rotate 5000ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite alternate;
+  transform-style: preserve-3d;
+}
+.rings .ring .ring_inner {
+  border-radius: 100%;
+}
+.rings .ring:nth-child(1) .ring_inner {
+  width: 0px;
+  height: 0px;
+  border: 2px solid #1effff;
+  animation: wave 3000ms 0ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(2) .ring_inner {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #1ef5fd;
+  animation: wave 3000ms 50ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(3) .ring_inner {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #1eebfb;
+  animation: wave 3000ms 100ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(4) .ring_inner {
+  width: 90px;
+  height: 90px;
+  border: 2px solid #1ee1f9;
+  animation: wave 3000ms 150ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(5) .ring_inner {
+  width: 120px;
+  height: 120px;
+  border: 2px solid #1ed7f7;
+  animation: wave 3000ms 200ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(6) .ring_inner {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #1ecdf5;
+  animation: wave 3000ms 250ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(7) .ring_inner {
+  width: 180px;
+  height: 180px;
+  border: 2px solid #1ec3f3;
+  animation: wave 3000ms 300ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(8) .ring_inner {
+  width: 210px;
+  height: 210px;
+  border: 2px solid #1eb9f1;
+  animation: wave 3000ms 350ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(9) .ring_inner {
+  width: 240px;
+  height: 240px;
+  border: 2px solid #1eafef;
+  animation: wave 3000ms 400ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(10) .ring_inner {
+  width: 270px;
+  height: 270px;
+  border: 2px solid #1ea5ed;
+  animation: wave 3000ms 450ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(11) .ring_inner {
+  width: 300px;
+  height: 300px;
+  border: 2px solid #1e9beb;
+  animation: wave 3000ms 500ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(12) .ring_inner {
+  width: 330px;
+  height: 330px;
+  border: 2px solid #1e91e9;
+  animation: wave 3000ms 550ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(13) .ring_inner {
+  width: 360px;
+  height: 360px;
+  border: 2px solid #1e87e7;
+  animation: wave 3000ms 600ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(14) .ring_inner {
+  width: 390px;
+  height: 390px;
+  border: 2px solid #1e7de5;
+  animation: wave 3000ms 650ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(15) .ring_inner {
+  width: 420px;
+  height: 420px;
+  border: 2px solid #1e73e3;
+  animation: wave 3000ms 700ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(16) .ring_inner {
+  width: 450px;
+  height: 450px;
+  border: 2px solid #1e69e1;
+  animation: wave 3000ms 750ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(17) .ring_inner {
+  width: 480px;
+  height: 480px;
+  border: 2px solid #1e5fdf;
+  animation: wave 3000ms 800ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(18) .ring_inner {
+  width: 510px;
+  height: 510px;
+  border: 2px solid #1e55dd;
+  animation: wave 3000ms 850ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(19) .ring_inner {
+  width: 540px;
+  height: 540px;
+  border: 2px solid #1e4bdb;
+  animation: wave 3000ms 900ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(20) .ring_inner {
+  width: 570px;
+  height: 570px;
+  border: 2px solid #1e41d9;
+  animation: wave 3000ms 950ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(21) .ring_inner {
+  width: 600px;
+  height: 600px;
+  border: 2px solid #1e37d7;
+  animation: wave 3000ms 1000ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(22) .ring_inner {
+  width: 630px;
+  height: 630px;
+  border: 2px solid #1e2dd5;
+  animation: wave 3000ms 1050ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(23) .ring_inner {
+  width: 660px;
+  height: 660px;
+  border: 2px solid #1e23d3;
+  animation: wave 3000ms 1100ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(24) .ring_inner {
+  width: 690px;
+  height: 690px;
+  border: 2px solid #1e19d1;
+  animation: wave 3000ms 1150ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(25) .ring_inner {
+  width: 720px;
+  height: 720px;
+  border: 2px solid #1e0fcf;
+  animation: wave 3000ms 1200ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(26) .ring_inner {
+  width: 750px;
+  height: 750px;
+  border: 2px solid #1e05cd;
+  animation: wave 3000ms 1250ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(27) .ring_inner {
+  width: 780px;
+  height: 780px;
+  border: 2px solid #1e00cb;
+  animation: wave 3000ms 1300ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(28) .ring_inner {
+  width: 810px;
+  height: 810px;
+  border: 2px solid #1e00c9;
+  animation: wave 3000ms 1350ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(29) .ring_inner {
+  width: 840px;
+  height: 840px;
+  border: 2px solid #1e00c7;
+  animation: wave 3000ms 1400ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(30) .ring_inner {
+  width: 870px;
+  height: 870px;
+  border: 2px solid #1e00c5;
+  animation: wave 3000ms 1450ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+.rings .ring:nth-child(31) .ring_inner {
+  width: 900px;
+  height: 900px;
+  border: 2px solid #1e00c3;
+  animation: wave 3000ms 1500ms cubic-bezier(0.545, 0.08, 0.52, 0.975) infinite;
+  filter: blur(15px) brightness(400%);
+}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateX(65deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateX(80deg);
+  }
+}
+@keyframes wave {
+  0% {
+    transform: translateZ(0px);
+  }
+  8% {
+    transform: translateZ(-60px);
+  }
+  20% {
+    transform: translateZ(40px);
+  }
+  30% {
+    transform: translateZ(-20px);
+  }
+  50% {
+    transform: translateZ(10px);
+  }
+  80% {
+    transform: translateZ(-5px);
+  }
+  100% {
+    transform: translateZ(2px);
+  }
+}

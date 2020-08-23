@@ -1,0 +1,246 @@
+body {
+  background: #fff;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  font-family: 'Anton', sans-serif;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+div {
+  position: absolute;
+  transform-style: preserve-3d;
+  background: linear-gradient(45deg, #aa1299 0%, #dc44cb 100%);
+  box-sizing: border-box;
+  will-change: transform;
+}
+
+.window {
+  background: rgba(0, 100, 255, 0.3);
+}
+
+#truck {
+  animation: drive 10000ms linear infinite;
+}
+#truck .body {
+  width: 100px;
+  transform: translate(200px, -100px) translateZ(100px);
+}
+#truck .shadow {
+  width: 160px;
+  height: 210px;
+  background: #aaaaaa;
+  transform-origin: 50% 100%;
+  transform: translate(-30px, -130px) translateZ(20px) rotateX(90deg);
+  filter: blur(0px);
+  box-shadow: 0 0 35px 25px white inset;
+  backface-visibility: hidden;
+}
+#truck .cockpit {
+  animation: bounce 600ms ease-out infinite alternate;
+}
+#truck .cockpit .front {
+  width: 100px;
+  height: 50px;
+}
+#truck .cockpit .back {
+  width: 100px;
+  height: 75px;
+  transform: translate(0, -50px) translateZ(-50px);
+}
+#truck .cockpit .top {
+  width: 100px;
+  height: 25px;
+  transform-origin: 50% 100%;
+  transform: translate(0, -75px) translateZ(-25px) rotateX(90deg);
+}
+#truck .cockpit .bottom {
+  width: 100px;
+  height: 50px;
+  transform-origin: 50% 100%;
+  transform: translate(0, -25px) rotateX(90deg);
+}
+#truck .cockpit .left {
+  width: 50px;
+  height: 100px;
+  transform-origin: 0 0;
+  transform: translate(100px, -50px) rotateY(90deg);
+  clip-path: polygon(0% 50%, 50% 50%, 50% 0%, 100% 0%, 100% 75%, 60% 75%, 40% 100%, 0% 100%);
+}
+#truck .cockpit .right {
+  width: 50px;
+  height: 100px;
+  transform-origin: 100% 0;
+  transform: translate(-50px, -50px) rotateY(-90deg);
+  clip-path: polygon(101% 50%, 50% 50%, 50% 0%, 0% 0%, 0% 75%, 40% 75%, 60% 100%, 101% 100%);
+}
+#truck .cockpit .left_headlight {
+  width: 25px;
+  height: 10px;
+  background: #d0c6a2;
+  border-radius: 3px;
+  transform: translate(5px, 20px) translateZ(1px);
+}
+#truck .cockpit .right_headlight {
+  width: 25px;
+  height: 10px;
+  background: #d0c6a2;
+  border-radius: 3px;
+  transform: translate(70px, 20px) translateZ(1px);
+}
+#truck .cockpit .left_window {
+  width: 25px;
+  height: 50px;
+  transform-origin: 0 0;
+  transform: translate(100px, -50px) rotateY(90deg);
+  clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+}
+#truck .cockpit .right_window {
+  width: 25px;
+  height: 50px;
+  transform-origin: 100% 0;
+  transform: translate(-25px, -50px) rotateY(-90deg);
+  clip-path: polygon(100% 100%, 0% 0%, 0% 100%);
+}
+#truck .cockpit .front_window {
+  width: 100px;
+  height: 50px;
+  transform-origin: 50% 100%;
+  transform: translate(0, -50px) rotateX(26deg) scaleY(1.12);
+}
+#truck .cockpit .front_window::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(45deg, #aa1299 0%, #dc44cb 100%);
+}
+#truck .cockpit .front_window::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(45deg, #aa1299 0%, #dc44cb 100%);
+}
+#truck .cockpit .handle {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  background: none;
+  border: 5px solid #aa1299;
+  transform: translate(10px, -10px) translateZ(-10px) rotateX(-20deg);
+}
+#truck .cockpit .left_seat_back {
+  width: 30px;
+  height: 50px;
+  background: dimgray;
+  transform-origin: 50% 100%;
+  transform: translate(60px, -30px) translateZ(-40px) rotateX(10deg);
+  border-radius: 5px 5px 0 0;
+}
+#truck .cockpit .left_seat_bottom {
+  width: 30px;
+  height: 20px;
+  background: dimgray;
+  transform-origin: 50% 100%;
+  transform: translate(60px, 0px) translateZ(-20px) rotateX(90deg);
+}
+#truck .cockpit .right_seat_back {
+  width: 30px;
+  height: 50px;
+  background: dimgray;
+  transform-origin: 50% 100%;
+  transform: translate(10px, -30px) translateZ(-40px) rotateX(10deg);
+  border-radius: 5px 5px 0 0;
+}
+#truck .cockpit .right_seat_bottom {
+  width: 30px;
+  height: 20px;
+  background: dimgray;
+  transform-origin: 50% 100%;
+  transform: translate(10px, 0px) translateZ(-20px) rotateX(90deg);
+}
+#truck .bed {
+  animation: bounce 600ms 200ms ease-out infinite alternate;
+}
+#truck .bed .front {
+  width: 100px;
+  height: 100px;
+  transform: translate(0px, -50px) translateZ(-60px);
+}
+#truck .bed .left {
+  width: 100px;
+  height: 50px;
+  transform-origin: 0 0;
+  transform: translate(100px, 0) translateZ(-60px) rotateY(90deg);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 90% 100%, 80% 50%, 60% 50%, 50% 100%, 0% 100%);
+}
+#truck .bed .right {
+  width: 100px;
+  height: 50px;
+  transform-origin: 100% 0;
+  transform: translate(-100px, 0) translateZ(-60px) rotateY(-90deg);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 40% 50%, 20% 50%, 10% 100%, 0% 100%);
+}
+#truck .bed .back {
+  width: 100px;
+  height: 50px;
+  transform: translate(0, 0) translateZ(-160px);
+}
+#truck .bed .bottom {
+  width: 100px;
+  height: 100px;
+  transform-origin: 50% 100%;
+  transform: translate(0, -75px) translateZ(-60px) rotateX(90deg);
+}
+#truck .tire .front_tire {
+  transform: translate(0, 30px) translateZ(-35px);
+}
+#truck .tire .rear_tire {
+  transform: translate(0, 30px) translateZ(-130px);
+}
+#truck .tire .left {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #646464;
+  border: 12px solid black;
+  transform: translate(70px, 0) rotateY(90deg);
+}
+#truck .tire .right {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #646464;
+  border: 12px solid black;
+  transform: translate(-20px, 0) rotateY(-90deg);
+}
+#truck .tire .shaft {
+  width: 90px;
+  height: 10px;
+  background: #646464;
+  transform: translate(5px, 20px);
+}
+#truck .tire .shaft_b {
+  transform: translate(5px, 20px) rotateX(90deg);
+}
+
+@keyframes drive {
+  0% {
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-30deg) rotateY(-360deg);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}

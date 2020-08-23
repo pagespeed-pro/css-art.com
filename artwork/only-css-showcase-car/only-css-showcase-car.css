@@ -1,0 +1,733 @@
+body {
+  background: #fff;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  font-family: 'Anton', sans-serif;
+  justify-content: center;
+  align-items: center;
+  perspective: 800px;
+  flex-direction: column;
+}
+
+div {
+  position: absolute;
+  transform-style: preserve-3d;
+  background: linear-gradient(45deg, #0e657f 0%, #4097b1 100%);
+  box-sizing: border-box;
+  transition: 1000ms;
+  will-change: transform;
+}
+
+.window, .glass {
+  background: rgba(0, 70, 150, 0.6);
+}
+
+#field {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+#showcase {
+  pointer-events: none;
+  animation: drive 10000ms linear infinite;
+}
+#showcase .shadow {
+  width: 120px;
+  height: 200px;
+  background: none;
+  transform-origin: 50% 0%;
+  transform: translate(-60px, 25px) translateZ(100px) rotateX(-90deg);
+}
+#showcase .shadow .blur {
+  width: 100%;
+  height: 100%;
+  background: #c8c8c8;
+  filter: blur(10px);
+}
+#showcase .car {
+  transform: translate(-50px, 0px) translateZ(90px);
+}
+#showcase .car .body {
+  transition: 2000ms;
+}
+#showcase .car .body .aero {
+  transform-origin: 50px -100px;
+  transform: scale(0);
+}
+#showcase .car .body .front {
+  transform: translate(0, -20px);
+}
+#showcase .car .body .front .bumper {
+  width: 100px;
+  height: 20px;
+}
+#showcase .car .body .front .bumper::before {
+  content: '';
+  position: absolute;
+  background: orange;
+  width: 6px;
+  height: 6px;
+  border-radius: 20px;
+  transform: translate(5px, 5px);
+}
+#showcase .car .body .front .bumper::after {
+  content: '';
+  position: absolute;
+  background: orange;
+  width: 6px;
+  height: 6px;
+  border-radius: 20px;
+  transform: translate(89px, 5px);
+}
+#showcase .car .body .front .bumper .aero .parts {
+  width: 120px;
+  height: 10px;
+  transform-origin: 50% 0%;
+  transform: translate(-10px, 20px) rotateX(60deg);
+}
+#showcase .car .body .front .bonnet {
+  width: 100px;
+  height: 70px;
+  transform-origin: 50% 0%;
+  transform: translate(0px, -24px) translateZ(-66px) rotateX(70deg);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50px, 75px 50px, 75px 100%, 25px 100%, 25px 50px, 0% 50px);
+}
+#showcase .car .body .front .bonnet .aero .parts {
+  width: 40px;
+  height: 20px;
+  border-radius: 0 0 3px 3px;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.3) 70%, black 100%);
+  transform: translate(30px, 20px);
+}
+#showcase .car .body .front .headlight {
+  width: 25px;
+  height: 20px;
+  transform-origin: 50% 0%;
+  background: none;
+}
+#showcase .car .body .front .headlight_left {
+  transform: translate(1px, -7px) translateZ(-19px) rotateX(70deg);
+}
+#showcase .car .body .front .headlight_right {
+  transform: translate(74px, -7px) translateZ(-19px) rotateX(70deg);
+}
+#showcase .car .body .front .headlight_cover {
+  width: 25px;
+  height: 20px;
+}
+#showcase .car .body .front .headlight_unit {
+  width: 25px;
+  height: 20px;
+  background: #f2e4a7;
+  transform-origin: 50% 100%;
+  transform: rotateX(70deg);
+}
+#showcase .car .body .front .headlight_unit::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #0e657f 0%, #4097b1 100%);
+  transform-origin: 0% 0%;
+  transform: rotateY(-90deg);
+  clip-path: polygon(100% 60%, 0% 0%, 0% 100%);
+}
+#showcase .car .body .front .headlight_unit::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #0e657f 0%, #4097b1 100%);
+  transform-origin: 100% 0%;
+  transform: rotateY(90deg);
+  clip-path: polygon(0% 60%, 100% 0%, 100% 100%);
+}
+#showcase .car .body .front .fender {
+  width: 66px;
+  height: 44px;
+  transform-origin: 0% 0%;
+  background: none;
+}
+#showcase .car .body .front .fender .panel {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 24px, 100% 0%, 100% 100%, 60px 100%, 50px 24px, 30px 24px, 20px 100%, 0% 100%);
+}
+#showcase .car .body .front .fender_left {
+  transform: translate(100px, -24px) rotateY(90deg);
+}
+#showcase .car .body .front .fender_left .aero .parts {
+  width: 40px;
+  height: 10px;
+  transform-origin: 100% 0%;
+  transform: translate(-15px, 15px) rotateX(90deg) rotateY(-50deg);
+}
+#showcase .car .body .front .fender_left .aero .parts::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 10px;
+  background: linear-gradient(45deg, #0e657f 0%, #4097b1 100%);
+  transform-origin: 0% 0%;
+  transform: translate(40px, 0px) rotateY(35deg);
+}
+#showcase .car .body .front .fender_right {
+  transform: translate(0px, -24px) rotateY(90deg);
+}
+#showcase .car .body .front .fender_right .aero .parts {
+  width: 40px;
+  height: 10px;
+  transform-origin: 100% 0%;
+  transform: translate(-15px, 15px) translateZ(-10px) rotateX(90deg) rotateY(-50deg);
+}
+#showcase .car .body .front .fender_right .aero .parts::before {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 10px;
+  background: linear-gradient(45deg, #0e657f 0%, #4097b1 100%);
+  transform-origin: 0% 0%;
+  transform: translate(40px, 0px) rotateY(35deg);
+}
+#showcase .car .body .front .under {
+  width: 100px;
+  height: 66px;
+  transform-origin: 50% 100%;
+  transform: translate(0, -46px) rotateX(90deg);
+  clip-path: polygon(10px 0%, 90px 0%, 90px 100%, 10px 100%);
+}
+#showcase .car .body .cockpit {
+  transform: translate(0, -44px) translateZ(-66px);
+}
+#showcase .car .body .cockpit .handle {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  transform: translate(15px, -5px) translateZ(-15px) rotateX(-20deg);
+  background: none;
+  border: 5px solid #323232;
+}
+#showcase .car .body .cockpit .seat {
+  width: 30px;
+  height: 60px;
+  background: whitesmoke;
+  transform-origin: 50% 100%;
+  border-radius: 5px 5px 0 0;
+}
+#showcase .car .body .cockpit .seat::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  background: whitesmoke;
+  transform-origin: 50% 100%;
+  transform: rotateX(-100deg);
+}
+#showcase .car .body .cockpit .seat_left {
+  transform: translate(55px, -20px) translateZ(-45px) rotateX(22deg);
+}
+#showcase .car .body .cockpit .seat_right {
+  transform: translate(15px, -20px) translateZ(-45px) rotateX(22deg);
+}
+#showcase .car .body .cockpit .inner_front {
+  width: 100px;
+  height: 44px;
+  background: linear-gradient(45deg, #323232 0%, #646464 100%);
+}
+#showcase .car .body .cockpit .inner_back {
+  width: 100px;
+  height: 48px;
+  transform-origin: 50% 0%;
+  transform: translateZ(-70px) rotateX(24deg);
+  background: linear-gradient(45deg, #323232 0%, #646464 100%);
+}
+#showcase .car .body .cockpit .door {
+  width: 70px;
+  height: 44px;
+  transform-origin: 0% 0%;
+  background: none;
+}
+#showcase .car .body .cockpit .door .gull {
+  transition: 1200ms;
+}
+#showcase .car .body .cockpit .door .window {
+  width: 70px;
+  height: 30px;
+  transform-origin: 0% 0%;
+  transform: translate(0px, -30px);
+  background: none;
+  overflow: hidden;
+}
+#showcase .car .body .cockpit .door .window .glass {
+  width: 70px;
+  height: 30px;
+  clip-path: polygon(30px 0%, 100% 0%, 100% 100%, 0% 100%);
+  transition: 1500ms;
+  transition-timing-function: linear;
+}
+#showcase .car .body .cockpit .door .panel {
+  width: 70px;
+  height: 44px;
+  clip-path: polygon(0% 0%, 100% 0%, 50px 100%, 0% 100%);
+}
+#showcase .car .body .cockpit .door .mirror {
+  width: 20px;
+  height: 10px;
+  transform-origin: 0% 0%;
+}
+#showcase .car .body .cockpit .door_left {
+  transform: translate(100px, 0px) rotateY(90deg);
+}
+#showcase .car .body .cockpit .door_left .aero .parts {
+  width: 56px;
+  height: 13px;
+  transform-origin: 0% 0%;
+  transform: translate(-6px, 44px) rotateX(45deg);
+}
+#showcase .car .body .cockpit .door_left .mirror {
+  transform: translate(10px, -10px) rotateY(-60deg);
+}
+#showcase .car .body .cockpit .door_left .mirror::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  background: silver;
+  border: 2px solid #0e657f;
+  transform: translateZ(-1px);
+  box-sizing: border-box;
+}
+#showcase .car .body .cockpit .door_left .panel::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #323232 0%, #646464 100%);
+  transform: translateZ(-1px);
+  clip-path: polygon(1% 1%, 99% 1%, 50px 99%, 1% 99%);
+}
+#showcase .car .body .cockpit .door_right {
+  transform: translate(0px, 0px) rotateY(90deg);
+}
+#showcase .car .body .cockpit .door_right .aero .parts {
+  width: 56px;
+  height: 13px;
+  transform-origin: 0% 0%;
+  transform: translate(-6px, 44px) rotateX(-45deg);
+}
+#showcase .car .body .cockpit .door_right .mirror {
+  transform: translate(10px, -10px) rotateY(60deg);
+}
+#showcase .car .body .cockpit .door_right .mirror::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  background: silver;
+  border: 2px solid #0e657f;
+  transform: translateZ(1px);
+  box-sizing: border-box;
+  backface-visibility: hidden;
+}
+#showcase .car .body .cockpit .door_right .panel::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #323232 0%, #646464 100%);
+  transform: translateZ(1px);
+  clip-path: polygon(1% 1%, 99% 1%, 50px 99%, 1% 99%);
+}
+#showcase .car .body .cockpit .under {
+  width: 100px;
+  height: 50px;
+  transform-origin: 50% 100%;
+  transform: translate(0, -6px) rotateX(90deg);
+  background: linear-gradient(45deg, #323232 0%, #646464 100%);
+}
+#showcase .car .body .cockpit .roof {
+  width: 100px;
+  transform-origin: 50% 10px;
+  transform: translate(0px, -10px) translateZ(-70px) rotateX(0deg);
+  transition: 2000ms;
+}
+#showcase .car .body .cockpit .roof_top {
+  width: 100px;
+  height: 40px;
+  transform-origin: 50% 100%;
+  transform: translate(0px, -60px) rotateX(-90deg);
+}
+#showcase .car .body .cockpit .roof_back {
+  width: 100px;
+  height: 36px;
+  transform-origin: 50% 0%;
+  transform: translate(0px, -20px) rotateX(-35deg);
+  clip-path: polygon(0% 0%, 12px 100%, 88px 100%, 100% 0%);
+}
+#showcase .car .body .cockpit .roof_left {
+  width: 24px;
+  height: 30px;
+  transform-origin: 0% 0%;
+  transform: translate(100px, -20px) rotateY(120deg);
+  clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+}
+#showcase .car .body .cockpit .roof_right {
+  width: 24px;
+  height: 30px;
+  transform-origin: 0% 0%;
+  transform: translate(0px, -20px) rotateY(60deg);
+  clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+}
+#showcase .car .body .cockpit .roof_bottom {
+  width: 100px;
+  height: 20px;
+  transform-origin: 50% 100%;
+  transform: translate(0px, -10px) rotateX(90deg);
+  clip-path: polygon(0% 100%, 10px 0%, 90px 0%, 100% 100%);
+}
+#showcase .car .body .cockpit .window {
+  background: rgba(0, 70, 150, 0.6);
+}
+#showcase .car .body .cockpit .window_front {
+  width: 100px;
+  height: 42px;
+  transform-origin: 50% 100%;
+  transform: translate(0px, -42px) rotateX(45deg);
+}
+#showcase .car .body .cockpit .window_front::before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 42px;
+  background: linear-gradient(45deg, #0e657f 0%, #4097b1 100%);
+}
+#showcase .car .body .cockpit .window_front::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 5px;
+  height: 42px;
+  background: linear-gradient(45deg, #0e657f 0%, #4097b1 100%);
+}
+#showcase .car .body .cockpit .window_left {
+  width: 70px;
+  height: 30px;
+  transform-origin: 0% 0%;
+  transform: translate(100px, -30px) rotateY(90deg);
+  clip-path: polygon(30px 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+#showcase .car .body .cockpit .window_right {
+  width: 70px;
+  height: 30px;
+  transform-origin: 0% 0%;
+  transform: translate(0px, -30px) rotateY(90deg);
+  clip-path: polygon(30px 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+#showcase .car .body .rear {
+  transform: translate(0px, -44px) translateZ(-116px);
+}
+#showcase .car .body .rear .bumper {
+  width: 100px;
+  height: 44px;
+  transform: translateZ(-60px);
+}
+#showcase .car .body .rear .bumper .aero .parts .arm_right {
+  width: 10px;
+  height: 50px;
+  transform-origin: 0% 0%;
+  transform: translate(18px, -20px) rotateY(90deg);
+  border-radius: 0 0 100% 0;
+}
+#showcase .car .body .rear .bumper .aero .parts .arm_left {
+  width: 10px;
+  height: 50px;
+  transform-origin: 0% 0%;
+  transform: translate(82px, -20px) rotateY(90deg);
+  border-radius: 0 0 100% 0;
+}
+#showcase .car .body .rear .bumper .aero .parts .wing {
+  width: 120px;
+  height: 20px;
+  transform-origin: 50% 100%;
+  transform: translate(-10px, -35px) rotateX(70deg);
+}
+#showcase .car .body .rear .bumper .aero .parts .garnish {
+  width: 100px;
+  height: 10px;
+  transform: translateZ(-0.1px);
+}
+#showcase .car .body .rear .bumper .aero .parts .bottom {
+  width: 100px;
+  height: 10px;
+  transform-origin: 50% 0%;
+  transform: translate(0px, 44px) rotateX(-40deg);
+}
+#showcase .car .body .rear .bumper .taillight {
+  content: '';
+  position: absolute;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  background: #c80000;
+  border-radius: 100%;
+  transform: translateZ(-1px);
+}
+#showcase .car .body .rear .bumper .taillight_right {
+  right: 5px;
+}
+#showcase .car .body .rear .bumper .taillight_right::before {
+  content: '';
+  position: absolute;
+  right: 14px;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: #c80000;
+}
+#showcase .car .body .rear .bumper .taillight_left {
+  left: 5px;
+}
+#showcase .car .body .rear .bumper .taillight_left::before {
+  content: '';
+  position: absolute;
+  left: 14px;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: #c80000;
+}
+#showcase .car .body .rear .fender {
+  width: 60px;
+  height: 44px;
+  background: none;
+  transform-origin: 0% 0%;
+}
+#showcase .car .body .rear .fender .panel {
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 50px 100%, 40px 24px, 20px 24px, 10px 100%, 0% 100%);
+}
+#showcase .car .body .rear .fender_left {
+  transform: translate(100px, 0px) rotateY(90deg);
+}
+#showcase .car .body .rear .fender_left .aero .parts {
+  width: 47px;
+  height: 10px;
+  transform-origin: 100% 0%;
+  transform: translate(-30px, 10px) rotateX(90deg) rotateY(-65deg);
+}
+#showcase .car .body .rear .fender_left .aero .parts::before {
+  content: '';
+  position: absolute;
+  width: 42px;
+  height: 10px;
+  background: linear-gradient(45deg, #0e657f 0%, #4097b1 100%);
+  transform-origin: 100% 0%;
+  transform: translate(5px, 0px) rotateY(-115deg);
+}
+#showcase .car .body .rear .fender_right {
+  transform: rotateY(90deg);
+}
+#showcase .car .body .rear .fender_right .aero .parts {
+  width: 47px;
+  height: 10px;
+  transform-origin: 100% 0%;
+  transform: translate(-30px, 10px) rotateX(-90deg) rotateY(65deg);
+}
+#showcase .car .body .rear .fender_right .aero .parts::before {
+  content: '';
+  position: absolute;
+  width: 42px;
+  height: 10px;
+  background: linear-gradient(45deg, #0e657f 0%, #4097b1 100%);
+  transform-origin: 100% 0%;
+  transform: translate(5px, 0px) rotateY(115deg);
+}
+#showcase .car .body .rear .under {
+  width: 100px;
+  height: 60px;
+  transform-origin: 50% 100%;
+  transform: translate(0px, -16px) rotateX(90deg);
+  clip-path: polygon(10px 0%, 90px 0%, 90px 100%, 10px 100%);
+}
+#showcase .car .body .rear .luggage {
+  width: 100px;
+  height: 40px;
+  transform-origin: 50% 100%;
+  transform: translate(0px, -40px) translateZ(-20px) rotateX(90deg);
+  background: none;
+}
+#showcase .car .body .rear .luggage .panel {
+  width: 100px;
+  height: 40px;
+  transform-origin: 50% 100%;
+  clip-path: polygon(0% 0%, 0% 100%, 10px 20px, 90px 20px, 100% 100%, 100% 0%);
+  transition-delay: 500ms;
+}
+#showcase .car .wheel .tire {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background: #646464;
+  border: 8px solid black;
+  transition: 500ms;
+  transition-delay: 500ms;
+}
+#showcase .car .wheel .tire_left {
+  transform: translate(75px, -15px) rotateY(90deg);
+}
+#showcase .car .wheel .tire_right {
+  transform: translate(-15px, -15px) rotateY(90deg);
+}
+#showcase .car .wheel .shaft {
+  width: 90px;
+  height: 10px;
+  background: #646464;
+  transform: translate(5px, 0px);
+  transition: 500ms;
+  transition-delay: 500ms;
+}
+#showcase .car .wheel .shaft::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #646464;
+  transform: rotateX(90deg);
+}
+#showcase .car .wheel .front {
+  transform: translate(0px, 0px) translateZ(-40px);
+}
+#showcase .car .wheel .rear {
+  transform: translate(0px, 0px) translateZ(-145px);
+}
+
+@keyframes drive {
+  0% {
+    transform: rotateX(-30deg) rotateY(0deg);
+  }
+  100% {
+    transform: rotateX(-30deg) rotateY(-360deg);
+  }
+}
+.action {
+  position: relative;
+  z-index: 9999999;
+  display: block;
+  transform: translateX(-300px);
+  line-height: 14px;
+  margin: 5px;
+}
+.action::before {
+  content: attr(data-text);
+  font-size: 16px;
+  font-family: 'Encode Sans Condensed', sans-serif;
+  padding-left: 20px;
+  transition: 1000ms;
+  cursor: pointer;
+}
+.action:hover::before {
+  color: #0e657f;
+  transition: 300ms;
+}
+.action.bonnet[type="checkbox"]:checked ~ #showcase .bonnet {
+  transform: translate(0px, -24px) translateZ(-66px) rotateX(130deg);
+}
+.action.door[type="checkbox"]:checked ~ #showcase .door_left {
+  transform: translate(100px, 0px) rotateY(30deg);
+}
+.action.door[type="checkbox"]:checked ~ #showcase .door_right {
+  transform: translate(0px, 0px) rotateY(150deg);
+}
+.action.roof[type="checkbox"]:checked ~ #showcase .roof {
+  transform: translate(0px, -10px) translateZ(-80px) rotateX(90deg);
+  transition-delay: 300ms;
+}
+.action.roof[type="checkbox"]:checked ~ #showcase .roof_top {
+  transform: translate(0px, -60px) rotateX(-180deg);
+  transition-delay: 800ms;
+}
+.action.roof[type="checkbox"]:checked ~ #showcase .luggage .panel {
+  transform-origin: 50% 0%;
+  transform: rotateX(-40deg);
+  transition-delay: 0ms;
+}
+.action.luggage[type="checkbox"]:checked ~ #showcase .luggage .panel {
+  transform: rotateX(-40deg);
+  transition-delay: 500ms;
+}
+.action.window[type="checkbox"]:checked ~ #showcase .window .glass {
+  transform: translateY(30px);
+}
+.action.headlight[type="checkbox"]:checked ~ #showcase .headlight_left {
+  transform: translate(1px, -7px) translateZ(-19px) rotateX(110deg);
+  transition: 600ms;
+}
+.action.headlight[type="checkbox"]:checked ~ #showcase .headlight_right {
+  transform: translate(74px, -7px) translateZ(-19px) rotateX(110deg);
+  transition: 600ms;
+}
+.action.gull[type="checkbox"]:checked ~ #showcase .door_left .gull {
+  transform: rotateY(-20deg) rotateZ(-60deg);
+}
+.action.gull[type="checkbox"]:checked ~ #showcase .door_right .gull {
+  transform: rotateY(20deg) rotateZ(-60deg);
+}
+.action.night[type="checkbox"]:checked ~ #field {
+  background: #282828;
+}
+.action.night[type="checkbox"]:checked ~ #showcase .shadow .blur {
+  background: #141414;
+}
+.action.night[type="checkbox"]:checked ~ .action::before {
+  color: #fff;
+}
+.action.night[type="checkbox"]:checked::before {
+  color: #fff;
+}
+.action.neon[type="checkbox"]:checked ~ #showcase .shadow .blur {
+  background: #87936c;
+}
+.action.run[type="checkbox"]:checked ~ #showcase .car {
+  transform: translate(200px, 0px) translateZ(90px);
+}
+.action.run[type="checkbox"]:checked ~ #showcase .shadow {
+  transform: translate(190px, 25px) translateZ(100px) rotateX(-90deg);
+}
+.action.lowdown[type="checkbox"]:checked ~ #showcase .body {
+  transform: translate(0px, 16px);
+}
+.action.lowdown[type="checkbox"]:checked ~ #showcase .tire_left {
+  transform: translate(90px, -15px) rotateZ(-12deg) rotateY(90deg);
+  transition-delay: 0ms;
+}
+.action.lowdown[type="checkbox"]:checked ~ #showcase .tire_right {
+  transform: translate(-30px, -15px) rotateZ(12deg) rotateY(90deg);
+  transition-delay: 0ms;
+}
+.action.lowdown[type="checkbox"]:checked ~ #showcase .shaft {
+  width: 120px;
+  transform: translate(-10px, 0px);
+  transition-delay: 0ms;
+}
+.action.aero[type="checkbox"]:checked ~ #showcase .aero {
+  transform: scale(1);
+}
+.action.aero[type="checkbox"]:checked ~ #showcase .tire {
+  background: #5e6c6c;
+  border-width: 3px;
+}
+.action.aero[type="checkbox"]:checked ~ #showcase .shaft {
+  background: #5e6c6c;
+}
+.action.aero[type="checkbox"]:checked ~ #showcase .shaft::before {
+  background: #5e6c6c;
+}
+.action.zoom[type="checkbox"]:checked ~ #showcase .camera {
+  transform: scale3d(2, 2, 2);
+}
+.action.ride[type="checkbox"]:checked ~ #showcase .camera {
+  transform: scale3d(50, 50, 50) translate(20px, 42px) translateZ(17px);
+}
