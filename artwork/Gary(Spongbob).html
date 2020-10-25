@@ -1,0 +1,320 @@
+<html>
+<head>
+<style type="text/css">
+body{
+  background: none;
+}
+.box{
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 8%;
+  width: 600px;
+  height: 420px;
+  background:#808000;
+}
+.left-eye{
+  position:absolute;
+  top:15%;
+  left:10%;
+  width: 17.5%;
+  height: 25%;
+  background:#ffffcc;
+  border-radius:50%;
+  border:0.2px solid;
+  z-index:1;
+}
+.right-eye{
+  position:absolute;
+  top:15%;
+  left:25%;
+  width: 17.5%;
+  height: 25%;
+  background:#ffffcc;
+  border-radius:50%;
+  border:0.2px solid;
+  z-index:2;
+}
+.pupil{
+  position: absolute;
+  width: 38%;
+  height: 40%;
+  top: 35%;
+  left: 11%;
+  border-radius: 50%;
+  background: #ff8566;
+}
+.inner-pupil{
+  position: absolute;
+  width: 58%;
+  height: 60%;
+  top: 20%;
+  left: 21%;
+  border-radius: 50%;
+  background: black;
+}
+.left-hand{
+  position: absolute;
+  width: 11%;
+  height: 44%;
+  top: 40%;
+  left: 15%;
+  background:#80bfff;
+  clip-path: polygon(25% 0%, 40% 0, 75% 100%, 60% 100%);
+  z-index:0;
+}
+.right-hand{
+  position: absolute;
+  width: 11%;
+  height: 44%;
+  top: 40%;
+  left: 25%;
+  background:#80bfff;
+  clip-path: polygon(75% 0%, 90% 0, 75% 100%, 60% 100%);
+  z-index:1;
+}
+.body{
+  position: absolute;
+  width: 80%;
+  height: 14%;
+  top: 77%;
+  left: 10%;
+  border-radius:50% 50% 0% 0%;
+  background:#80bfff;
+}
+.bottom{
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  top: 65%;
+  background:#e6ffe6;
+}
+.leg-1{
+  position: absolute;
+  width: 15%;
+  height: 50%;
+  top: 70%;
+  left: 5%;
+  border-radius: 77%;
+  background:#e6ffe6;
+}
+.leg-2{
+  position: absolute;
+  width: 15%;
+  height: 50%;
+  top: 70%;
+  left: 20%;
+  border-radius: 77%;
+  background:#e6ffe6;
+}
+.leg-3{
+  position: absolute;
+  width: 15%;
+  height: 50%;
+  top: 70%;
+  left: 35%;
+  border-radius: 77%;
+  background:#e6ffe6;
+}
+.leg-4{
+  position: absolute;
+  width: 15%;
+  height: 50%;
+  top: 70%;
+  left: 50%;
+  border-radius: 77%;
+  background:#e6ffe6;
+}
+.leg-5{
+  position: absolute;
+  width: 15%;
+  height: 50%;
+  top: 70%;
+  left: 65%;
+  border-radius: 77%;
+  background:#e6ffe6;
+}
+.leg-6{
+  position: absolute;
+  width: 15%;
+  height: 50%;
+  top: 70%;
+  left: 80%;
+  border-radius: 77%;
+  background:#e6ffe6;
+}
+.leg-7{
+  position: absolute;
+  width: 11.5%;
+  height: 35%;
+  top: 80%;
+  left: 94.5%;
+  border-radius: 77%;
+  background:#e6ffe6;
+}
+.leg-0{
+  position: absolute;
+  width: 11.5%;
+  height: 35%;
+  top: 75%;
+  left: -5%;
+  border-radius: 77%;
+  background:#e6ffe6;
+}
+.tail{
+  position: absolute;
+  width: 11%;
+  left:95%;
+  height: 35%;
+  top: 65%;
+  border-radius:25% 75% 0% 25%;
+  background:#e6ffe6;
+}
+.shell{
+  position: absolute;
+  width: 55%;
+  left:35%;
+  height: 70%;
+  top: 10%;
+  border-radius: 50% 50% 45% 45%;
+  background:#ff99cc;
+  z-index:0;
+}
+.front{
+  position: absolute;
+  width: 11%;
+  left:-5%;
+  height: 35%;
+  top: 65%;
+  border-radius:75% 25% 0% 25%;
+  background:#e6ffe6;
+}
+.mark-1{
+  position: absolute;
+  width: 17.5%;
+  left:20%;
+  height: 10%;
+  top: 25%;
+  border-radius:50%;
+  background:#cc66ff;
+}
+.mark-2{
+  position: absolute;
+  width: 15%;
+  left:10%;
+  height: 10%;
+  top: 45%;
+  border-radius:50%;
+  background:#cc66ff;
+}
+.mark-3{
+  position: absolute;
+  width: 15%;
+  right:10%;
+  height: 10%;
+  top: 45%;
+  border-radius:50%;
+  background:#cc66ff;
+}
+.mark-4{
+  position: absolute;
+  width: 17.5%;
+  right:20%;
+  height: 10%;
+  top: 25%;
+  border-radius:50%;
+  background:#cc66ff;
+}
+.mark-5{
+  position: absolute;
+  width: 22.5%;
+  left: 40%;
+  height: 12.5%;
+  top: 10%;
+  border-radius:50%;
+  background:#cc66ff;
+}
+.loop-1{
+  position: absolute;
+  width: 30%;
+  left: 40%;
+  height: 40%;
+  top: 60%;
+  background:red;
+  clip-path: polygon(60% 0, 90% 0%, 40% 100%, 10% 100%);
+}
+.loop-2{
+  position: absolute;
+  width: 30%;
+  left: 49%;
+  height: 20%;
+  top: 40%;
+  background:red;
+  clip-path: polygon(0 0, 30% 0, 60% 100%, 30% 100%);
+}
+.loop-3{
+  position: absolute;
+  width: 30%;
+  left: 30%;
+  height: 20%;
+  top: 40%;
+  background:red;
+  clip-path: polygon(60% 0, 90% 0%, 40% 100%, 10% 100%);
+}
+.loop-4{
+ position: absolute;
+  width: 30%;
+  left: 33%;
+  height: 10%;
+  top: 60%;
+  background:red;
+  clip-path: polygon(0 0, 30% 0, 60% 100%, 30% 100%);
+}
+
+
+
+</style>
+</head>
+<body>
+    <body>
+        <div class="box">
+          <div class="right-eye">
+            <div class="pupil">
+              <div class="inner-pupil"></div>
+            </div>
+          </div>
+          <div class="left-eye">
+            <div class="pupil">
+              <div class="inner-pupil"></div>
+            </div>
+          </div>
+          <div class="left-hand"></div>
+          <div class="right-hand"></div>
+          <div class="body">
+            <div class="bottom"></div>
+            <div class="leg-0"></div>
+            <div class="leg-1"></div>
+            <div class="leg-2"></div>
+            <div class="leg-3"></div>
+            <div class="leg-4"></div>
+            <div class="leg-5"></div>
+            <div class="leg-6"></div>
+            <div class="leg-7"></div>
+            <div class="tail"></div>
+            <div class="front"></div>
+          </div><!--end body-->
+          <div class="shell">
+            <div class="mark-1"></div>
+            <div class="mark-2"></div>
+            <div class="mark-3"></div>
+            <div class="mark-4"></div>
+            <div class="mark-5"></div>
+            <div class="loop-1"></div>
+            <div class="loop-2"></div>
+            <div class="loop-3"></div>
+            <div class="loop-4"></div>
+          </div>
+        </div><!--end box-->
+      </body>
+</body>
+</html>
