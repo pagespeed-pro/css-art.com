@@ -1,0 +1,22 @@
+{
+    "name": "Gary-Spongebob",
+    "version": "1.0.0",
+    "title": "Gary-Spongebob",
+    "description": "",
+    "author": {
+        "name": "Amit Lavi",
+        "avatar": "https://assets.codepen.io/5203711/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1632128038&width=512",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/Amit8680"
+        }]
+    },
+    "html": "gary.html",
+    "css": ["gary.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["gary","spongbob"],
+    "original": "https://codepen.io/Amit8680/pen/dyXXZJL",
+    "codepen": "https://codepen.io/Amit8680/pen/dyXXZJL"
+}
