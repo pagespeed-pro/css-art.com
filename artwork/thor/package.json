@@ -1,0 +1,29 @@
+{
+    "name": "thor",
+    "version": "1.0.0",
+    "title": "Thor CSS",
+    "description": "Thor using Pure CSS",
+    "author": {
+        "name": "Shobhit Bhosure",
+        "avatar": "https://assets.codepen.io/6305618/internal/avatars/users/default.png",
+        "web": "",
+        "social": [{
+            "title": "Github",
+            "url": "https://github.com/shobhit99"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/nullbytes00"
+        }, {
+            "title": "Instagram",
+            "url": "https://instagram.com/shobhit.789"
+        }]
+    },
+    "html": "thor.html",
+    "css": ["thor.css"],
+    "js": "",
+    "thumbnail": "splash.png",
+    "splash": "thor.png",
+    "keywords": ["css", "thor"],
+    "original": "https://codepen.io/shobhit789/pen/ExWZpwO",
+    "codepen": "https://codepen.io/shobhit789/pen/ExWZpwO"
+}
