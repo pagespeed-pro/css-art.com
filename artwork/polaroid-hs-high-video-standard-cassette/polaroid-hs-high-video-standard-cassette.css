@@ -1,0 +1,148 @@
+:root {
+  --bg: #FCF0D9;
+  --dark: #272622;
+  --blue: #018CC5;
+  --green: #8ABB3B;
+  --yellow: #FEE800;
+  --orange: #F87621;
+  --pink: #F43E8B;
+  
+  --black: #191B16;
+  --brown: #3B3A35;
+  --gray: #272622;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  font-family: Helvetica;
+  color: var(--dark);
+}
+
+.cassette {
+  background-color: var(--bg);
+  padding: 2rem;
+  width: 30rem;
+  height: 60rem;
+  margin: 1rem auto;
+  border-radius: 3px;
+  position: relative;
+  box-shadow: 10px 10px 30px -10px #BBBCB6,
+    10px 0 3px -5px rgba(255,255,255,0.25) inset;
+}
+
+h1 {
+  font-size: 5rem;
+  letter-spacing: -0.1rem;
+}
+
+h2 {
+  font-size: 9rem;
+  letter-spacing: -0.5rem;
+  margin-left: -0.25rem;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1rem;
+  line-height: 1.25rem;
+  margin-left: 0.25rem;
+  font-weight: normal;
+}
+
+.graphics {
+  position: relative;
+  display: block; 
+  height: 35rem;
+  width: 34rem;
+  overflow: hidden;
+  margin-left: -2rem;
+  margin-top: 1rem;
+}
+
+.rainbow {
+  display: block;
+  width: 21rem;
+  height: 35rem;
+  background-image: linear-gradient(
+    var(--blue) 20%,
+    var(--green) 20% 40%,
+    var(--yellow) 40% 60%,
+    var(--orange) 60% 80%,
+    var(--pink) 80%
+  );
+  box-shadow: 10px 0 3px -5px rgba(255,255,255,0.25) inset;
+}
+
+.triangle {
+  display: block;
+  width: 13rem;
+  height: 13rem;
+  background-color: var(--dark);
+  position: absolute;
+  right: -7rem;
+  top: 50%;
+  top: calc(50% - 6rem);
+  transform: rotate(45deg);
+  border-radius: 10px;
+  background-image: linear-gradient(
+    45deg, 
+    var(--gray) 20%,
+    var(--black) 20.5%,
+    var(--brown) 21.5% 22%,
+    var(--gray) 22.5%,
+    var(--black) 23%,
+    var(--brown) 24% 24.5%,
+    
+    var(--gray) 25%,
+    var(--black) 25.5%,
+    var(--brown) 26.5% 27%,
+    var(--gray) 27.5%,
+    var(--black) 28%,
+    var(--brown) 29% 29.5%,
+    
+    var(--gray) 30%,
+    var(--black) 30.5%,
+    var(--brown) 31.5% 32%,
+    var(--gray) 32.5%,
+    var(--black) 33%,
+    var(--brown) 34% 34.5%,
+    
+    var(--gray) 35%,
+    var(--black) 35.5%,
+    var(--brown) 36.5% 37%,
+    var(--gray) 37.5%,
+    var(--black) 38%,
+    var(--brown) 39% 39.5%,
+    
+    var(--gray) 40%,
+    var(--black) 40.5%,
+    var(--brown) 41.5% 42%,
+    var(--gray) 42.5%,
+    var(--black) 43%,
+    var(--brown) 44% 44.5%,
+    
+    var(--gray) 45%,
+    var(--black) 45.5%,
+    var(--brown) 46.5% 47%,
+    var(--gray) 47.5%,
+    var(--black) 48%,
+    var(--brown) 49% 49.5%
+  );
+}
+
+footer {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  font-size: 4rem;
+  font-weight: bold;
+}

@@ -1,0 +1,33 @@
+{
+    "name": "cassette",
+    "version": "1.0.0",
+    "title": "Cassette",
+    "description": "#100daysofcode #CSSArt p2 day 4 code:  Cassette",
+    "author": {
+        "name": "Kassandra",
+        "avatar": "https://assets.codepen.io/2970881/internal/avatars/users/default.png?format=auto&height=512&version=1595816396&width=512",
+        "web": "https://www.cssartist.com/",
+        "social": [
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/KassandraSanch"
+            },
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/kassandrasanch"
+            }
+        ]
+    },
+    "html": "cassette.html",
+    "css": [
+        "cassette.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "cassette"
+    ],
+    "original": "https://codepen.io/kassandrasanch/pen/eYZwjzR",
+    "codepen": "https://codepen.io/kassandrasanch/pen/eYZwjzR"
+}

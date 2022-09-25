@@ -1,0 +1,44 @@
+{
+    "name": "puppy",
+    "version": "1.0.0",
+    "title": "Puppy",
+    "description": "Designed by: catalyst\n\t\tOriginal image: https://dribbble.com/catalystvibes",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "puppy.html",
+    "css": [
+        "puppy.css"
+    ],
+    "js": "/*\n\t\tDesigned by: catalyst\n\t\tOriginal image: https://dribbble.com/catalystvibes\n*/\n\nlet eyeR = document.querySelector(\"#eye-r\");\nlet eyeR2 = document.querySelector(\"#eye-r2\");\n\nlet toggleEyeFunc = () => {\n\teyeR.classList.toggle(\"is-eye-hidden\");\n\teyeR2.classList.toggle(\"is-eye-hidden\");\n\n\tsetTimeout(() => {\n\t\teyeR.classList.toggle(\"is-eye-hidden\");\n\t\teyeR2.classList.toggle(\"is-eye-hidden\");\n\t}, 500);\n};\n\ndocument.body.addEventListener(\"click\", toggleEyeFunc);\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "dog",
+        "puppy",
+        "cpc-cats-dogs",
+        "codepenchallenge"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/poeNxjy",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/poeNxjy"
+}

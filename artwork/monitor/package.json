@@ -1,0 +1,33 @@
+{
+    "name": "monitor",
+    "version": "1.0.0",
+    "title": "Monitor",
+    "description": "HTML & CSS Computer Monitor 🤓",
+    "author": {
+        "name": "Kassandra",
+        "avatar": "https://assets.codepen.io/2970881/internal/avatars/users/default.png?format=auto&height=512&version=1595816396&width=512",
+        "web": "https://www.cssartist.com/",
+        "social": [
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/KassandraSanch"
+            },
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/kassandrasanch"
+            }
+        ]
+    },
+    "html": "monitor.html",
+    "css": [
+        "monitor.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "monitor"
+    ],
+    "original": "https://codepen.io/kassandrasanch/pen/dyROJXo",
+    "codepen": "https://codepen.io/kassandrasanch/pen/dyROJXo"
+}

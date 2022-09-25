@@ -1,0 +1,44 @@
+{
+    "name": "3d-kitchen-pure-css",
+    "version": "1.0.0",
+    "title": "3D Kitchen - Pure CSS",
+    "description": "Designed by: Faisalhusain \n\t\tOriginal image: https://www.dreamstime.com/isometric-kitchen-interrior-d-render-i-isometric-d-kitchen-interrior-image118744404",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "3d-kitchen-pure-css.html",
+    "css": [
+        "3d-kitchen-pure-css.css"
+    ],
+    "js": "/*\n\t\tDesigned by: Faisalhusain \n\t\tOriginal image: https://www.dreamstime.com/isometric-kitchen-interrior-d-render-i-isometric-d-kitchen-interrior-image118744404\n*/\n\nconst h = document.querySelector(\"#h\")\nconst b = document.body\nconst door = document.querySelector(\"#door\")\nconst hadoor = document.querySelector(\"#hadoor\")\nconst hadool = document.querySelector(\"#hadool\")\nconst tablet = document.querySelector(\"#tablet\")\nconst heart = document.querySelector(\"#heart\")\nconst hac = document.querySelector(\"#hac\")\nconst cup = document.querySelector(\"#cup\")\nconst a1 = document.querySelector(\"#a1\")\nconst a2 = document.querySelector(\"#a2\")\nconst a3 = document.querySelector(\"#a3\")\nconst a4 = document.querySelector(\"#a4\")\nconst a5 = document.querySelector(\"#a5\")\n/*****************/\n/*****************/\nconst mouseDownFunc = () => b.addEventListener('mousemove', moveFunc);\nconst mouseUpFunc = () => b.removeEventListener('mousemove', moveFunc)\nconst moveFunc = (e) => {\n    let x = e.pageX / window.innerWidth - 0.5\n    let y = e.pageY / window.innerHeight - 0.5\n\n    h.style.transform = `\n        perspective(30000px)\n        rotateX(${ y * 20 + 65}deg)\n        rotateZ(${ -x * 360 + 35}deg)\n        translateZ(-10vw)\n    `;\n};\nconst doorFunc = () => {\n    door.classList.toggle('is-door-open')\n    playFunc(a1)\n}\nconst hadoorFunc = () => {\n    hadoor.classList.toggle('is-hadoor-open')\n    playFunc(a2)\n}\nconst hadoolFunc = () => {\n    hadool.classList.toggle('is-hadool-open')\n    playFunc(a2)\n}\nconst tabletFunc = () => {\n    heart.classList.add('is-heart-visible')\n    a3.loop = false;\n    playFunc(a3)\n\n    setTimeout(()=>{\n        heart.classList.remove('is-heart-visible')\n    },1001)\n}\nconst cupFunc = () => playFunc(a5)\nconst hacFunc = () => {\n    hac.classList.toggle('is-hac-open')\n    playFunc(a4)\n}\nconst playFunc = (au) => {\n    au.loop = false;\n    au.pause()\n    au.currentTime = 0\n    au.play()\n}\n/*****************/\n/*****************/\nh.addEventListener('mousedown', mouseDownFunc)\nb.addEventListener('mouseup', mouseUpFunc)\ndoor.addEventListener(\"click\", doorFunc)\nhadoor.addEventListener(\"click\", hadoorFunc)\nhadool.addEventListener(\"click\", hadoolFunc)\ntablet.addEventListener(\"click\", tabletFunc)\nhac.addEventListener(\"click\", hacFunc)\ncup.addEventListener(\"click\", cupFunc)\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "isometric",
+        "kitchen",
+        "cssart",
+        "animation"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/LYxMWQN",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/LYxMWQN"
+}

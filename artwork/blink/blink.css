@@ -1,0 +1,132 @@
+body {
+  background-color: #72CFBA;
+}
+
+.blink {
+  font-size: 1.6vmin;
+  width: 16em;
+  height: 49.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #7FFDD9;
+  border-radius: 5em;
+  border: 1.5px solid black;
+  background: linear-gradient(to right, #2B2B2D, #515356);
+  background-repeat: no-repeat;
+}
+.blink .top {
+  position: absolute;
+  left: 50%;
+  top: 19%;
+  transform: translate(-50%, -50%);
+  border-radius: 3.5em;
+  width: 13.5em;
+  height: 16.5em;
+  border: 1px solid yellow;
+  border: 2px solid #232323;
+  background: linear-gradient(-77deg, rgba(0, 0, 0, 0) 30%, rgba(13, 18, 18, 0.8) 50%) 100% 0%/2em 20%, linear-gradient(to right, #242424, rgba(19, 19, 19, 0.8)) 0% 100%/1em 80%, linear-gradient(to right, rgba(66, 74, 78, 0.5), rgba(117, 125, 134, 0.8)) 100% 100%/1em 100%, linear-gradient(29deg, #0F0F11 30%, #0f0f11 49%, rgba(0, 0, 0, 0) 50%) -22% 0%/60% 13%, linear-gradient(-29deg, #0F0F11 30%, #0f0f11 49%, rgba(0, 0, 0, 0) 50%) 122% 0%/60% 13%, linear-gradient(to right, rgba(49, 49, 49, 0.3), rgba(117, 125, 134, 0.5), rgba(49, 49, 49, 0.3)) 50% 0%/85% 13%, linear-gradient(to bottom, #0F0F0F, #0D1212);
+  background-repeat: no-repeat;
+}
+.blink .top .camera {
+  width: 6.5em;
+  height: 6.5em;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  background-color: #2A2A2C;
+}
+.blink .top .camera .inner_lens1 {
+  width: 4.7em;
+  height: 4.7em;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  box-shadow: inset 0em 0em 1em rgba(42, 42, 44, 0.7), inset 0.05em 0em 0em rgba(255, 255, 255, 0.3), inset -0.05em 0em 0em rgba(255, 255, 255, 0.3), inset 0.15em 0em 0em #2A2A2C, inset -0.15em 0em 0em #2A2A2C, inset 0em 0em 0.4em #000;
+  transform: translate(-50%, -50%);
+  border-radius: inherit;
+  background: radial-gradient(100% 100% at 100% 50%, #2c3c71, #111113 51%, transparent 52%) 0% 70%/1em 1em, radial-gradient(100% 100% at 50% 50%, #2c3b75, #2c3b75 30%, #2c3b75 51%, transparent 52%) 0% 70%/1em 1em, #111113;
+  background-repeat: no-repeat;
+}
+.blink .top .camera .inner_lens1 .inner_lens2 {
+  width: 3em;
+  height: 3em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: inherit;
+  border: 2px solid #3a373a;
+  background: #111113;
+}
+.blink .top .camera .inner_lens1 .inner_lens2 .inner_lens3 {
+  width: 2em;
+  height: 2em;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: inherit;
+  background: radial-gradient(100% 100% at 50% 50%, black 50%, rgba(0, 0, 255, 0) 51%) 50% 50%/0.5em 0.5em, linear-gradient(to right, rgba(215, 241, 250, 0.4), rgba(177, 149, 202, 0.9)) 150% 50%/70% 20%, linear-gradient(159deg, #111113 49%, rgba(0, 0, 0, 0) 50%) 150% 50%/70% 20%, radial-gradient(100% 100% at 50% 50%, rgba(146, 159, 176, 0.4), rgba(97, 112, 123, 0.2) 50%, rgba(0, 0, 255, 0.4) 51%) 80% 20%/1.5em 1.5em, radial-gradient(100% 100% at 50% 50%, rgba(146, 159, 176, 0.4), rgba(97, 112, 123, 0.2) 50%, rgba(0, 0, 255, 0.4) 51%) 80% 20%/1em 1em, radial-gradient(100% 100% at 50% 50%, rgba(146, 159, 176, 0.4), rgba(97, 112, 123, 0.2) 50%, rgba(0, 0, 255, 0.4) 51%) 20% 20%/1em 1em, radial-gradient(100% 100% at 50% 50%, rgba(97, 112, 123, 0.4), rgba(97, 112, 123, 0.12) 50%, rgba(0, 0, 255, 0.4) 51%) 20% 50%/0.8em 0.8em, radial-gradient(100% 100% at 50% 50%, rgba(146, 159, 176, 0.6), rgba(146, 159, 176, 0.2) 50%, rgba(0, 0, 255, 0.4) 51%) 55% 50%/0.8em 0.8em, #111113;
+  background-repeat: no-repeat;
+  box-shadow: inset 0em 0em 1em rgba(42, 42, 44, 0.7), inset 0.15em 0em 0em #2A2A2C, inset -0.15em 0em 0em #2A2A2C;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+}
+.blink .bottom {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  bottom: 0;
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+  background: radial-gradient(100% 100% at 50% 50%, #141618 50%, rgba(0, 0, 255, 0) 51%) 50% 9%/0.3em 0.3em;
+  background-repeat: no-repeat;
+}
+.blink .bottom h1 {
+  font-family: arial;
+  color: #7a7c7d;
+  font-size: 2.5em;
+  position: absolute;
+  top: 86%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.blink .bottom h1:after {
+  content: "";
+  position: absolute;
+  width: 2em;
+  height: 0.1em;
+  background: #7a7c7d;
+  top: -0.1em;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.blink .bottom .main_circle {
+  width: 10.7em;
+  height: 10.7em;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 45.5%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #4C78BD, #6195C8, #89BEE5);
+  box-shadow: 0em 0.15em 0em #5cbbec;
+}
+.blink .bottom .main_circle .main_circle_inner {
+  width: 9em;
+  height: 9em;
+  border-radius: 50%;
+  border: 1px solid #37393B;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to bottom, #393B3C, #37393B);
+  box-shadow: -0.3em 0em 0em #5cbbec, 0.3em 0em 0em #5cbbec, 0em -0.3em 0em #5cbbec;
+}

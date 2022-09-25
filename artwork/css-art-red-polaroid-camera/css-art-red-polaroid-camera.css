@@ -1,0 +1,756 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #232323;
+  font-size: 1vmin;
+}
+body .camera {
+  font-size: 1.15vmin;
+  width: 81.5em;
+  height: 67em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .camera .back {
+  border-top-left-radius: 5em;
+  border-top-right-radius: 5em;
+  width: 77em;
+  height: 67em;
+  position: absolute;
+  content: "";
+  top: -0.6em;
+  left: 50.1%;
+  transform: translate(-50%, 0%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.1)) 0% 100%/100% 100%, linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(255, 0, 0, 0)) 0% 100%/7% 100%, #E4E0E1;
+  background-repeat: no-repeat;
+}
+body .camera .top {
+  width: 76em;
+  height: 41.5em;
+  margin: auto;
+  background-color: #e8e6e6;
+  border-top-right-radius: 5em;
+  border-top-left-radius: 5em;
+  position: relative;
+}
+body .camera .top .flash_top_left_container {
+  position: absolute;
+  width: 15em;
+  height: 25em;
+  top: 2.7em;
+  left: 2.5em;
+  background-repeat: no-repeat;
+}
+body .camera .top .flash_top_left_container .flash_top_left_outer {
+  border-right: 0.3em solid #A6A89E;
+  border-bottom: 0.3em solid #A6A89E;
+  border-left: 0.3em solid #A6A89E;
+  border-top: 0.3em solid #5B5D5C;
+  box-shadow: 0 0 0 0.1em rgba(40, 40, 40, 0.7), 0 0 0 0.2em rgba(0, 0, 0, 0.5);
+  width: 13em;
+  height: 24em;
+  background: radial-gradient(150% 100% at 50% 50%, #0e0f0f, rgba(43, 48, 46, 0.3)) 50% -7em/100% 50%, radial-gradient(100% 100% at 50% 50%, #0e0f0f, rgba(43, 48, 46, 0.3)) -5em 15em/100% 50%, #262926;
+  background-repeat: no-repeat;
+  border-radius: 2.5em;
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+}
+body .camera .top .flash_top_left_container .flash_top_left_outer .flash_top_left_inner {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  width: 90%;
+  height: 95%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: inherit;
+  background: linear-gradient(to bottom, rgba(243, 243, 243, 0.7) 60%, #a5a5a5 65%) 100% 6%/100% 0.4em, #b2b2b2;
+}
+body .camera .top .flash_top_left_container .flash_top_left_outer .flash_top_left_inner:after {
+  content: "";
+  width: 62%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to bottom, rgba(80, 80, 80, 0.4), rgba(243, 243, 243, 0.3) 60%, rgba(130, 130, 130, 0.2)) 5% 100%/25% 95%, linear-gradient(to bottom, rgba(80, 80, 80, 0.4), rgba(80, 80, 80, 0.3) 60%, rgba(130, 130, 130, 0.2)) 85% 100%/0.6em 95%, linear-gradient(to right, #505050, #a5a4a4, #505050, #a5a4a4) 25% 5%/100% 0.5em, radial-gradient(100% 100% at 50% 100%, #a5a4a4 49%, rgba(0, 0, 0, 0) 50%) 56% -0.5em/3em 2em, linear-gradient(to right, rgba(165, 164, 164, 0.7) 60%, rgba(0, 0, 0, 0)) 30% 100%/0.2em 93.5%, linear-gradient(to right, rgba(165, 164, 164, 0.7) 60%, rgba(0, 0, 0, 0)) 35% 100%/0.2em 93.5%, linear-gradient(to right, rgba(165, 164, 164, 0.7) 60%, rgba(0, 0, 0, 0)) 75% 100%/0.2em 93.5%, linear-gradient(to right, rgba(165, 164, 164, 0.7) 60%, rgba(0, 0, 0, 0)) 80% 100%/0.2em 93.5%, linear-gradient(to right, rgba(165, 164, 164, 0.7) 60%, rgba(0, 0, 0, 0)) 85% 100%/0.2em 93.5%, linear-gradient(to right, rgba(130, 130, 130, 0.7) 40%, #505050, #505050, rgba(130, 130, 130, 0.7) 60%) 60% 100%/0.6em 97.5%, linear-gradient(to right, #d6d6d6, rgba(197, 197, 197, 0.3) 21%, #e6e6e6 22%, #e6e6e6 24%, #c5c5c5, rgba(197, 197, 197, 0.7) 80%, rgba(176, 175, 176, 0.8) 81%, rgba(176, 175, 176, 0.8) 90%, rgba(197, 197, 197, 0.7) 91%) 60% 100%/100% 97.5%, #dadada;
+  background-repeat: no-repeat;
+}
+body .camera .top .flash_top_left_container .flash_top_left_outer .flash_top_left_inner:before {
+  content: "";
+  width: 100%;
+  height: 66%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 54%;
+  background: linear-gradient(to bottom, rgba(84, 85, 85, 0.7) 70%, #a5a5a5) 100% 6%/100% 0.4em, #202020;
+}
+body .camera .top .flash_top_left_container .flash_top_left_outer .flash_top_left_inner .flash_top_left_gradient {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(to bottom, rgba(109, 110, 108, 0.1), rgba(255, 0, 0, 0) 60%, rgba(109, 110, 108, 0.2)) 5% 100%/100% 20%, linear-gradient(to bottom, rgba(109, 110, 108, 0.6), rgba(255, 0, 0, 0) 60%, rgba(109, 110, 108, 0.4)) 5% 100%/100% 100%;
+}
+body .camera .top .onOffbtn {
+  box-shadow: 0px 0px 0.3em rgba(63, 66, 66, 0.6), 0px 0px 0.3em rgba(63, 66, 66, 0.6);
+  border: 0.3em solid #404546;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  position: absolute;
+  left: 26%;
+  top: 9.5%;
+  background: #d9e4e6;
+  background-repeat: no-repeat;
+}
+body .camera .top .onOffbtn p {
+  font-size: 2.5em;
+  color: #e7997a;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-30deg);
+}
+body .camera .top .under_power {
+  width: 4.4em;
+  height: 4.4em;
+  position: absolute;
+  top: 30%;
+  left: 29%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+}
+body .camera .top .under_power .inner {
+  width: 4.3em;
+  height: 4.3em;
+  border-radius: inherit;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0.55) 10%, rgba(255, 255, 255, 0.1) 12%, rgba(0, 0, 0, 0) 21%) 50% 0%/100% 100%, radial-gradient(100% 100% at 50% 50%, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4) 50%, rgba(255, 0, 0, 0.8) 51%) 50% 0%/100% 100%, radial-gradient(100% 100% at 50% 50%, rgba(63, 54, 63, 0.5), #161316 50%, rgba(255, 0, 0, 0) 51%) 50% 50%/85% 85%, radial-gradient(100% 100% at 50% 50%, rgba(63, 54, 63, 0.5), #161316 50%, rgba(255, 0, 0, 0) 51%) 50% 50%/85% 85%, #4E4E50;
+  background-repeat: no-repeat;
+}
+body .camera .top .red_on_off_container {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  position: absolute;
+  top: 73.8%;
+  left: 2.8%;
+  background: linear-gradient(145deg, #f4f0f1, #cdcacb);
+}
+body .camera .top .red_on_off_container .btn_container {
+  width: 85%;
+  height: 85%;
+  background: #2e1111;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: inherit;
+}
+body .camera .top .red_on_off_container .btn_container .red_btn {
+  width: 93%;
+  height: 93%;
+  border-radius: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(100% 50% at 50% 100%, rgba(234, 143, 149, 0.6) 43%, rgba(234, 143, 149, 0.6) 50%, transparent 53%) 50% 1.5em/150% 100%, radial-gradient(100% 100% at 50% 50%, #bd1b2f 43%, rgba(234, 143, 149, 0.6) 50%, rgba(128, 128, 128, 0) 51%, transparent 65%) 50% 50%/98% 110%, #bd1b2f;
+  background-repeat: no-repeat;
+}
+body .camera .top .lens_container {
+  width: 31em;
+  height: 31em;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: 52.5%;
+  top: 41.5%;
+  background: -webkit-radial-gradient(50% 0%, 18% 50%, rgba(188, 10, 34, 0.5) 0%, rgba(188, 10, 34, 0) 100%), -webkit-radial-gradient(0% 30%, 100% 37%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(100% 70%, 10% 62%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(100% 100% at 50% 0%, transparent 45%, rgba(197, 49, 70, 0.8) 50%, #bb0b22 51%) 50% 14em/105% 100%, #bb0b1e;
+  background-repeat: no-repeat;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.53);
+}
+body .camera .top .lens_container:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: inherit;
+  background: radial-gradient(100% 100% at 50% 50%, transparent 42%, rgba(242, 242, 242, 0.02) 44%, rgba(242, 242, 242, 0.01) 47%, rgba(0, 0, 0, 0.2) 48%, rgba(0, 0, 255, 0) 51%, rgba(255, 0, 0, 0)) 50% 50%/100% 100%, radial-gradient(100% 100% at 0% 50%, transparent 42%, rgba(242, 242, 242, 0.08) 44%, rgba(242, 242, 242, 0.05) 47%, rgba(0, 0, 0, 0.2) 48%, rgba(0, 0, 255, 0) 51%, rgba(255, 0, 0, 0)) 15.6em 50%/100% 110%;
+}
+body .camera .top .lens_container .lens_inner_1 {
+  width: 86%;
+  height: 86%;
+  border-radius: inherit;
+  border: 1px solid #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 48%;
+  background: #232424;
+  background-repeat: no-repeat;
+}
+body .camera .top .lens_container .lens_inner_1:after {
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: -webkit-radial-gradient(50% 0%, 68% 50%, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(50% 100%, 42% 50%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+}
+body .camera .top .lens_container .lens_inner_1 .lens_inner_2 {
+  width: 97%;
+  height: 97%;
+  border-radius: inherit;
+  background: pink;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #474949;
+}
+body .camera .top .lens_container .lens_inner_1 .lens_inner_2:after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  background: -webkit-radial-gradient(0% 30%, 50% 37%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+}
+body .camera .top .lens_container .lens_inner_1 .lens_inner_2 .lens_inner_3 {
+  width: 95%;
+  height: 95%;
+  border-radius: inherit;
+  background: pink;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #888888;
+}
+body .camera .top .lens_container .lens_inner_1 .lens_inner_2 .lens_inner_3 .lens_inner_4 {
+  width: 95%;
+  height: 95%;
+  border-radius: inherit;
+  background: pink;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: repeating-radial-gradient(circle at 50%, #3F3F43 3px, #4b4b4b 4px, #868686 7px);
+  background-repeat: no-repeat;
+}
+body .camera .top .lens_container .lens_inner_1 .lens_inner_2 .lens_inner_3 .lens_inner_4 .inner_rings_1 {
+  width: 16.5em;
+  height: 16.5em;
+  background: radial-gradient(100% 100% at 50% 50%, #232323 10%, rgba(35, 35, 35, 0.7) 40%, rgba(35, 35, 35, 0.8) 70%) 50% 50%/100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 52%;
+  border-radius: 50%;
+  border: 5px solid #232323;
+}
+body .camera .top .lens_container .lens_inner_1 .lens_inner_2 .lens_inner_3 .lens_inner_4 .inner_rings_1 .inner_rings_2 {
+  width: 99%;
+  height: 97%;
+  border-radius: inherit;
+  background: #1C1B20;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 51%;
+}
+body .camera .top .lens_container .lens_inner_1 .lens_inner_2 .lens_inner_3 .lens_inner_4 .inner_rings_1 .inner_rings_2 .inner_rings_3 {
+  width: 95%;
+  height: 95%;
+  border: 0px solid #1C1B20;
+  border-radius: inherit;
+  border-left: 2px solid #7C897C;
+  border-right: 2px solid #7C897C;
+  background: linear-gradient(-20deg, #28272E 49%, transparent 51%) 50% 100%/100% 5.5em, radial-gradient(100% 110% at 100% 50%, rgba(57, 100, 64, 0) 49%, rgba(57, 100, 64, 0.6) 50%) -2.5em 50%/70% 95%, radial-gradient(100% 110% at 0% 50%, rgba(0, 0, 0, 0) 45%, rgba(57, 100, 64, 0.6) 47%) 6em 50%/70% 95%, #28272e;
+  background-repeat: no-repeat;
+}
+body .camera .top .lens_container .lens_inner_1 .lens_inner_2 .lens_inner_3 .lens_inner_4 .inner_rings_1 .inner_rings_2 .inner_rings_3 .inner_rings_4 {
+  width: 82%;
+  height: 82%;
+  border: 1px solid #1C1B20;
+  border-left: none;
+  border-right: none;
+  border-radius: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 51%;
+  background: radial-gradient(100% 110% at 100% 50%, rgba(57, 100, 64, 0) 49%, rgba(57, 100, 64, 0.6) 50%) -3.4em 50%/70% 95%, radial-gradient(100% 110% at 0% 50%, rgba(0, 0, 0, 0) 45%, rgba(57, 100, 64, 0.6) 47%) 7em 50%/70% 95%, #171417;
+  background-repeat: no-repeat;
+}
+body .camera .top .lens_container .lens_inner_1 .lens_inner_2 .lens_inner_3 .lens_inner_4 .inner_rings_1 .inner_rings_2 .inner_rings_3 .inner_rings_4 .inner_rings_5 {
+  width: 80%;
+  height: 80%;
+  border: 1px solid #110f10;
+  border-radius: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(100% 190% at 100% 50%, rgba(0, 0, 0, 0) 20%, #0d202a 23%, #0d202a 49%, rgba(255, 192, 203, 0.5) 51%) -2.5em 50%/50% 80%, #110f10;
+  background-repeat: no-repeat;
+}
+body .camera .top .lens_container .lens_inner_1 .lens_inner_2 .lens_inner_3 .lens_inner_4 .inner_rings_1 .inner_rings_2 .inner_rings_3 .inner_rings_4 .inner_rings_5:after {
+  border: 2px solid #000;
+  border-left: 1px solid rgba(124, 137, 124, 0.7);
+  border-right: 1px solid rgba(124, 137, 124, 0.7);
+  width: 85%;
+  height: 85%;
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(100% 100% at 50% 50%, #110f10 23%, #110f10 49%, rgba(17, 15, 16, 0.2) 51%) 50% 50%/75% 80%, linear-gradient(-30deg, transparent 40%, #110f10 41%, #110f10 61%, transparent 60%) 100% 13%/5.5em 3em, linear-gradient(30deg, transparent 40%, #110f10 41%, #110f10 61%, transparent 60%) 0% 20%/5.5em 3em, linear-gradient(to left, rgba(13, 32, 42, 0.5), rgba(76, 160, 180, 0.6) 75%) 5.5em 50%/3em 5em, linear-gradient(to right, rgba(13, 32, 42, 0.5), rgba(76, 160, 180, 0.4) 75%) -1em 50%/3em 5em, radial-gradient(120% 100% at 50% 100%, rgba(0, 0, 0, 0) 20%, #0d202a 23%, #0d202a 49%, rgba(0, 0, 0, 0) 51%) 50% -2em/120% 50%, #110f10;
+  background-repeat: no-repeat;
+}
+body .camera .top .under_lens {
+  border-radius: 50%;
+  width: 4.2em;
+  height: 4.2em;
+  border-bottom: 3px solid #323232;
+  border-right: 1px solid rgba(50, 50, 50, 0.6);
+  box-shadow: 0 0.2em 0.4em rgba(0, 0, 0, 0.16), 0 0.2em 0.4em rgba(0, 0, 0, 0.23);
+  position: absolute;
+  top: 72%;
+  left: 72%;
+  transform: translate(-50%, -50%);
+  background: #323232;
+  background-repeat: no-repeat;
+}
+body .camera .top .under_lens .inner {
+  width: 72%;
+  height: 72%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: inherit;
+  border: 2px solid #808080;
+  background: radial-gradient(100% 100% at 50% 50%, #060606 48%, rgba(181, 180, 184, 0.2) 55%) 50% 50%/90% 95%, #B5B4B8;
+  background-repeat: no-repeat;
+}
+body .camera .top .flash_right {
+  width: 16em;
+  height: 15.5em;
+  border: 1px solid black;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: 86.2%;
+  top: 24%;
+  border-radius: 3em;
+  border-top: 1px solid #858488;
+  border-left: 1px solid #858488;
+  border-right: 2px solid #181818;
+  border-bottom: 1px solid #858488;
+  box-shadow: 0px -3px 1px rgba(24, 24, 24, 0.75), inset 0px 0px 15px 0px rgba(24, 24, 24, 0.4), inset 0px 0px 6px 0px rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+}
+body .camera .top .flash_right:before {
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  background: radial-gradient(100% 100% at 50% 50%, rgba(0, 0, 0, 0.5) 48%, rgba(0, 0, 0, 0) 55%) 50% -7em/100% 95%, linear-gradient(to right, rgba(0, 0, 0, 0.4) 49%, rgba(0, 0, 0, 0.4) 51%) 100% 50%/12% 95%;
+  background-repeat: no-repeat;
+}
+body .camera .top .flash_right .flash_right_inner {
+  width: 83%;
+  height: 81%;
+  border-radius: inherit;
+  position: absolute;
+  top: 55%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #D2D2D2;
+  background: linear-gradient(-30deg, #3D3C40, #A4A4A4, #CACACA);
+}
+body .camera .top .flash_right .flash_right_inner:before {
+  content: "";
+  width: 95%;
+  height: 98%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(100% 100% at 50% 50%, #131313 50%, rgba(0, 0, 0, 0) 51%) 50% -2.4em/140% 95%, #1C1C1C;
+  background-repeat: no-repeat;
+  border-radius: inherit;
+}
+body .camera .top .flash_right .flash_right_inner .inner_2 {
+  width: 80%;
+  height: 80%;
+  border: 1px solid white;
+  border-radius: inherit;
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(-30deg, #3D3C40, #A4A4A4, #CACACA) 50% 100%/100% 100%;
+  background-repeat: no-repeat;
+}
+body .camera .top .flash_right .flash_right_inner .inner_2:before {
+  border-radius: inherit;
+  content: "";
+  width: 90%;
+  height: 90%;
+  border: 2px solid #1C1C1C;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+body .camera .top .flash_right .flash_right_inner .inner_2 .inner_3 {
+  width: 85%;
+  height: 85%;
+  border-radius: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(100% 100% at 50% 50%, #131313 50%, rgba(0, 0, 0, 0) 51%) 50% -1.3em/140% 95%, #1C1C1C;
+  background-repeat: no-repeat;
+}
+body .camera .top .flash_right .flash_right_inner .inner_2 .inner_3 .hole {
+  width: 1.7em;
+  height: 1.7em;
+  border-radius: 2px;
+  position: absolute;
+  top: 57%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  background: #DDDDDB;
+}
+body .camera .top .flash_right .flash_right_inner .inner_2 .inner_3 .hole:before {
+  z-index: 3;
+  width: 87%;
+  height: 50%;
+  content: "";
+  position: absolute;
+  top: -1.8em;
+  left: 0.15em;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1) 20%, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.1), transparent) 50% 100%/95% 100%;
+  background-repeat: no-repeat;
+}
+body .camera .top .flash_right .shadows_middle {
+  z-index: 8;
+  position: absolute;
+  width: 59%;
+  height: 30%;
+  top: 25%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(105% 80% at 50% 100%, rgba(255, 0, 0, 0) 25%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 55%) 50% -2em/105% 100%;
+  background-repeat: no-repeat;
+}
+body .camera .top .flash_right .shadows_left {
+  z-index: 8;
+  position: absolute;
+  width: 3em;
+  height: 4.5em;
+  top: 45%;
+  left: 70%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+  background: radial-gradient(100% 120% at 0% 50%, rgba(255, 0, 0, 0) 45%, #1f1f1f 47%) 2em 50%/70% 95%, radial-gradient(100% 120% at 0% 50%, rgba(31, 31, 31, 0.7) 50%, rgba(0, 0, 0, 0) 51%) -0.4em 50%/90% 95%, linear-gradient(65deg, transparent, rgba(224, 224, 224, 0.2), rgba(224, 224, 224, 0.3), rgba(224, 224, 224, 0.2), transparent) 50% 100%/100% 5.5em;
+  background-repeat: no-repeat;
+}
+body .camera .top .flash_right .shadows_left_corner {
+  z-index: 8;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 70%;
+  left: 65%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: -webkit-radial-gradient(100% 50%, 50% 15%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+}
+body .camera .top .flash_right .shadows_right_corner {
+  z-index: 8;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 72%;
+  left: 30%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  background: -webkit-radial-gradient(0% 50%, 50% 15%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+}
+body .camera .top .toggle_blocker {
+  width: 7.5em;
+  height: 3.5em;
+  position: absolute;
+  left: 81%;
+  top: 47%;
+  border: 1px solid #e8e6e6;
+  background: linear-gradient(to right, #e8e6e6 49%, #e8e6e6 51%) 100% 100%/0.2em 100%, linear-gradient(to right, #e8e6e6 49%, #e8e6e6 51%) 0% 100%/0.3em 100%, linear-gradient(to right, #e8e6e6 49%, #e8e6e6 51%) 50% 100%/100% 0.75em;
+  background-repeat: no-repeat;
+}
+body .camera .top .toggle_under_flash_container {
+  width: 13em;
+  height: 3em;
+  position: absolute;
+  left: 77.5%;
+  top: 47%;
+}
+body .camera .top .toggle_under_flash {
+  width: 7em;
+  height: 3em;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(100% 100% at 0% 50%, #bc082a 50%, #e8e6e6 51%) 5.5em 0%/3em 3em, radial-gradient(100% 100% at 100% 50%, #af0a20 50%, #e8e6e6 51%) -1.5em 0%/3em 3em, linear-gradient(to right, #af0a20 49%, #bc082a 51%) 50% 100%/15em 15em, #c8072f;
+  background-repeat: no-repeat;
+}
+body .camera .top .toggle_under_flash .toggle {
+  box-shadow: 0.2em 0px 1em 0.2em rgba(0, 0, 0, 0.25);
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top: 1px solid #cf3b55;
+  border-right: 1px solid #cf3b55;
+  border-left: 1px solid #cf3b55;
+  background: #c7072e;
+}
+body .camera .top p {
+  font-weight: 200;
+  color: #e8e6e6;
+  text-shadow: -0.04em -0.04em 0px rgba(0, 0, 0, 0.2), 0.04em 0.04em 0px rgba(0, 0, 0, 0.2);
+  font-size: 2em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body .camera .top .plus {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+body .camera .top .text {
+  width: 12em;
+  height: 7em;
+  position: absolute;
+  top: 85%;
+  left: 88.5%;
+  transform: translate(-50%, -50%);
+}
+body .camera .top .text h1 {
+  font-family: Arial;
+  font-size: 4em;
+  color: #77767B;
+  position: absolute;
+  letter-spacing: -1px;
+}
+body .camera .top .text h1:nth-of-type(1) {
+  left: 0.3em;
+}
+body .camera .top .text h1:nth-of-type(2) {
+  top: 0.7em;
+}
+body .camera .top .text h1:nth-of-type(3) {
+  top: 0;
+  color: #C14633;
+  left: 1.6em;
+  top: 0.45em;
+  font-size: 5em;
+  font-weight: bolder;
+}
+body .camera .bottom {
+  position: relative;
+  width: 100%;
+  height: 25em;
+  margin: auto;
+  background: linear-gradient(#c10927 49%, #c10927 51%) 50% 100%/50% 100%;
+  background-repeat: no-repeat;
+}
+body .camera .bottom:after {
+  content: "";
+  width: 100%;
+  height: 93.5%;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 48%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 20%, rgba(210, 108, 122, 0.75), rgba(210, 108, 122, 0.75), rgba(0, 0, 0, 0) 91%) 99.5% 50%/5em 100%, linear-gradient(to right, rgba(0, 0, 0, 0.05) 11%, rgba(210, 108, 122, 0.75), rgba(210, 108, 122, 0.75), rgba(0, 0, 0, 0) 91%) 1% 50%/3em 100%;
+  background-repeat: no-repeat;
+}
+body .camera .bottom .top_btm {
+  position: relative;
+  width: 100%;
+  height: 5em;
+}
+body .camera .bottom .top_btm .left {
+  position: absolute;
+  z-index: 1;
+  width: 37.2%;
+  height: inherit;
+  border-top-left-radius: 2em;
+  border-bottom-right-radius: 30px;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 2px -2px #f9f8f9;
+  background: linear-gradient(to right, #cbc4c4, rgba(249, 248, 249, 0.4), rgba(220, 215, 216, 0.5) 70%, transparent) 50% 0%/100% 95%, linear-gradient(-45deg, transparent 45%, rgba(249, 248, 249, 0.4) 49%, #232323 51%) 0% -2.8em/2em 5.5em, linear-gradient(to bottom, #f9f8f9, rgba(249, 248, 249, 0.4), rgba(0, 0, 0, 0.1) 70%, transparent) 50% 0%/100% 1em, #dcd7d8;
+  background-repeat: no-repeat;
+}
+body .camera .bottom .top_btm .right {
+  position: absolute;
+  z-index: 1;
+  width: 33%;
+  height: inherit;
+  right: 0;
+  border-top-right-radius: 2em;
+  border-bottom-left-radius: 30px;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 2px -2px #f9f8f9;
+  background: linear-gradient(to left, #cbc4c4, rgba(249, 248, 249, 0.4), rgba(220, 215, 216, 0.5) 70%, transparent) 100% 0%/100% 95%, linear-gradient(45deg, transparent 45%, rgba(249, 248, 249, 0.4) 49%, #232323 51%) 100% -2.8em/2em 5.5em, linear-gradient(to bottom, #f9f8f9, rgba(249, 248, 249, 0.4), rgba(0, 0, 0, 0.1) 70%, transparent) 50% 0%/100% 1em, #cbc4c4;
+  background-repeat: no-repeat;
+}
+body .camera .bottom .top_btm .middle {
+  z-index: 0;
+  width: 22em;
+  height: 6em;
+  position: absolute;
+  top: 0;
+  left: 52%;
+  transform: translate(-50%, 0%);
+  background: linear-gradient(to top, transparent, rgba(196, 10, 41, 0.4), #d05b60) 50% 0%/80% 3em, linear-gradient(to bottom, transparent, rgba(196, 10, 41, 0.4), #d05b60) 50% 100%/80% 3.7em, linear-gradient(80deg, transparent 30%, rgba(196, 10, 41, 0.5) 35%, rgba(196, 10, 41, 0.2) 72%, transparent 78%) 5.5% 0%/3.5em 95%, linear-gradient(80deg, #c40a29 40%, rgba(196, 10, 41, 0.4), rgba(255, 255, 255, 0.4) 52%, transparent 65%) 3% 100%/3em 88%, linear-gradient(-79deg, transparent 40%, rgba(214, 117, 124, 0.3), rgba(214, 117, 124, 0.3) 52%, rgba(123, 6, 26, 0.2), #c40a29 65%) 11% 100%/2.7em 88%, linear-gradient(-80deg, transparent 30%, rgba(198, 24, 47, 0.5) 35%, rgba(196, 10, 41, 0.2) 72%, transparent 78%) 94.5% 0%/3.5em 95%, linear-gradient(-80deg, #c40a29 40%, rgba(214, 117, 124, 0.4), rgba(214, 117, 124, 0.4) 52%, transparent 65%) 97.3% 100%/3em 88%, linear-gradient(79deg, transparent 40%, rgba(123, 6, 26, 0.2), rgba(214, 117, 124, 0.3), rgba(214, 117, 124, 0.3) 52%, #c40a29 65%) 91% 100%/2.7em 88%, linear-gradient(to right, transparent, rgba(208, 91, 96, 0.4), rgba(208, 91, 96, 0.2) 70%) 95% 0%/1.5em 0.7em, linear-gradient(to right, transparent, rgba(208, 91, 96, 0.4), rgba(208, 91, 96, 0.2) 70%) 5% 0%/1.5em 0.7em, linear-gradient(to bottom, rgba(214, 117, 124, 0.3), rgba(214, 117, 124, 0.4), rgba(208, 91, 96, 0.06) 90%, transparent) 50% 0%/17em 0.6em, linear-gradient(to left, rgba(214, 117, 124, 0.2), rgba(214, 117, 124, 0.5), rgba(208, 91, 96, 0.2)) 96% 0%/2em 0.5em, linear-gradient(to bottom, #9A9BA1, rgba(214, 117, 124, 0.4), rgba(208, 91, 96, 0.2) 70%, transparent) 100% 0%/1.5em 1em, linear-gradient(to right, rgba(214, 117, 124, 0), rgba(214, 117, 124, 0.3), rgba(208, 91, 96, 0.3)) 4% 0%/2em 0.6em, linear-gradient(to bottom, #9A9BA1, rgba(214, 117, 124, 0.4), rgba(208, 91, 96, 0.2) 70%, transparent) 0% 0%/2em 1em, linear-gradient(to top, rgba(214, 117, 124, 0.4) 5%, rgba(214, 117, 124, 0.1), rgba(123, 6, 26, 0.07), transparent) 50% 0%/83% 100%;
+  background-repeat: no-repeat;
+}
+body .camera .bottom .top_btm .middle .switch {
+  width: 12.7em;
+  height: 3em;
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: 54%;
+  background: linear-gradient(to right, rgba(161, 11, 27, 0.05), rgba(161, 11, 27, 0.1), rgba(161, 11, 27, 0.6)) 100% 50%/89% 2.7em, linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)) 45% 93%/90% 0.2em, linear-gradient(to bottom, #000 1%, #444348 2%, #444348 98%, #000 99%) 45% 5%/75% 0.1em, linear-gradient(to bottom, #000 1%, #cd454d 2%, #cd454d 98%, #000 99%) 43% 50%/75% 2.8em, radial-gradient(100% 100% at 50% 50%, #cd454d 46%, black 50%, rgba(0, 0, 0, 0) 51%) 100% 50%/3em 2.8em, radial-gradient(100% 100% at 50% 50%, #cd454d 43%, rgba(0, 0, 0, 0.3), black 50%, rgba(0, 0, 0, 0) 51%) 0% 50%/3em 2.8em;
+  background-repeat: no-repeat;
+}
+body .camera .bottom .top_btm .middle .switch .switch_btn {
+  width: 2.8em;
+  height: 2.8em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border-bottom: none;
+  left: 75%;
+  background: radial-gradient(100% 100% at 50% 50%, #ce4c53 44%, rgba(177, 14, 33, 0.6) 48%, rgba(0, 0, 0, 0) 55%) 50% 50%/98% 100%, #b10e21;
+  background-repeat: no-repeat;
+  box-shadow: 0 2em 4em rgba(193, 9, 37, 0.19), 0 0.3em 0.3em rgba(0, 0, 0, 0.23), -0.15em 0.2em 0 0.2em rgba(197, 9, 37, 0.4), -0.15em 0.2em 0 0.2em rgba(0, 0, 0, 0.3), 0.04em 0.1em 0 0.1em rgba(196, 9, 38, 0.5), 0 0.38em 0.28em rgba(196, 9, 38, 0.5), 0 0.8em 0.5em rgba(0, 0, 0, 0.42);
+}
+body .camera .bottom .btm {
+  width: 100%;
+  height: 80%;
+  position: relative;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  background: linear-gradient(to right, rgba(17, 18, 18, 0) 49%, #111212 50%) 10.5% 0%/0.5% 43%, linear-gradient(to right, rgba(17, 18, 18, 0) 49%, #111212 50%) 92.3% 0%/0.5% 43%, linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)) 59% 41%/81.5% 3%, linear-gradient(to bottom, #111212, #111212 69%, #2a2a2a 70%) 59% 30%/81.5% 20%, linear-gradient(to right, rgba(17, 18, 18, 0.7) 49%, #111212 50%) 10% 24%/10% 0.5%, linear-gradient(to right, rgba(216, 132, 137, 0.4), rgba(0, 128, 0, 0)) 9% 32%/3% 27%, linear-gradient(to right, rgba(216, 132, 137, 0.6) 39%, rgba(216, 132, 137, 0) 40%) 9% 32%/0.5% 27%, linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 9.5% 26%/3% 8%, linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)) 93% 26%/3% 8%, linear-gradient(to left, rgba(216, 132, 137, 0.2), rgba(0, 128, 0, 0)) 93.5% 32%/3% 27%, linear-gradient(to right, rgba(17, 18, 18, 0.7) 49%, #111212 50%) 93% 24%/10% 0.5%, linear-gradient(to right, rgba(216, 132, 137, 0.6) 39%, rgba(216, 132, 137, 0) 40%) 94% 32%/0.5% 27%, linear-gradient(to left, rgba(42, 42, 42, 0.3), rgba(0, 128, 0, 0)) 92% 32%/3% 27%, linear-gradient(to bottom, #960b1b 30%, rgba(42, 42, 42, 0.2), rgba(42, 42, 42, 0.2), rgba(150, 11, 27, 0) 65%) 59% 47%/81.5% 6%, linear-gradient(to bottom, #960b1b 25%, #680608, #680608, #960b1b 65%) 59% 47%/81.5% 6%, linear-gradient(to right, #d88489 49%, #d88489 50%) 57.8% 50.5%/85% 0.5%, #c10927;
+  background-repeat: no-repeat;
+}
+body .camera .bottom .btm h1 {
+  font-family: Arial;
+  font-size: 5.4em;
+  color: #77767B;
+  color: #e0e6e8;
+  position: absolute;
+  letter-spacing: -1px;
+  font-weight: 600;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 74%;
+  left: 53%;
+  text-shadow: 0.04em 0.04em 0px rgba(0, 0, 0, 0.3);
+}
+body .camera .bottom .btm h1:nth-of-type(2) {
+  width: 10em;
+  text-align: right;
+  left: 81.3%;
+  font-size: 2em;
+  letter-spacing: 0px;
+  top: 79%;
+}
+body .camera .bottom .btm .logo {
+  width: 6.3em;
+  height: 7.2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: 18%;
+  top: 70.5%;
+  background: linear-gradient(to bottom, #009ddc, #009ddc) 60% 5%/100% 0.7em, linear-gradient(to bottom, #009e4f, #009e4f) 60% 25%/100% 0.7em, linear-gradient(to bottom, #ffe300, #ffe300) 60% 45%/100% 0.7em, linear-gradient(to bottom, #f8aa00, #f8aa00) 60% 65%/100% 0.7em, linear-gradient(to bottom, #de231c, #de231c) 60% 100%/100% 1.28em;
+  background-repeat: no-repeat;
+}
+body .camera .bottom .btm .under_btm {
+  width: 100%;
+  height: 1.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to bottom, rgba(216, 132, 137, 0) 49%, rgba(42, 42, 42, 0.3) 50%) 50% 100%/100% 100%, #62080e;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 5em;
+  border-bottom-right-radius: 5em;
+  top: 99.5%;
+}

@@ -1,0 +1,44 @@
+{
+    "name": "divtober-07-bright",
+    "version": "1.0.0",
+    "title": "#divtober 07 - Bright",
+    "description": "Designed by: Saeed Tavoosi\n\t\tOriginal image: https://dribbble.com/shots/5888593-Damavand",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "divtober-07-bright.html",
+    "css": [
+        "divtober-07-bright.css"
+    ],
+    "js": "/*\n\t\tDesigned by: Saeed Tavoosi\n\t\tOriginal image: https://dribbble.com/shots/5888593-Damavand\n*/",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "onediv",
+        "singlediv",
+        "sun",
+        "animation"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/KKMwgMz",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/KKMwgMz"
+}

@@ -1,0 +1,43 @@
+{
+    "name": "3d-summer-house-pure-css",
+    "version": "1.0.0",
+    "title": "3D Summer House - Pure CSS",
+    "description": "Designed by: Roman Klčo\n\t\tOriginal image: https://dribbble.com/shots/14001512-Summer-House-Tutorial",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "3d-summer-house-pure-css.html",
+    "css": [
+        "3d-summer-house-pure-css.css"
+    ],
+    "js": "/*\n\t\tDesigned by: Roman Klčo\n\t\tOriginal image: https://dribbble.com/shots/14001512-Summer-House-Tutorial\n*/\n\n\nconst root = document.documentElement;\nconst b = document.body;\nconst h = document.querySelectorAll(\".h\");\nconst ch = document.querySelector(\"#ch\");\nconst off = document.querySelectorAll(\".off\");\n\n\nlet base = (e) => {\n    var x = e.pageX / window.innerWidth - 0.5;\n    var y = e.pageY / window.innerHeight - 0.5;\n\n    h.forEach((item, i) => {\n        h[i].style.transform = `\n            perspective(10000px)\n            rotateX(${ y * 4  + 60}deg)\n            rotateZ(${ -x * 4 + 45}deg)\n            translateZ(-9.5vw)\n        `;\n    });\n\n}\nlet toggle = (e) => {\n\n    if (ch.checked) {\n        root.style.setProperty('--window', '208, 226, 226');\n        root.style.setProperty('--lamp', '184, 210, 210');\n        off.forEach((item, i) => off[i].style.display = \"none\" );\n\n    }\n    else {\n        /* Colores base */\n        root.style.setProperty('--window', '185, 250, 250');\n        root.style.setProperty('--lamp', '214, 249, 249');\n        off.forEach((item, i) => off[i].style.display = \"inherit\" );\n\n    }\n}\n\nch.addEventListener(\"click\", toggle);\nb.addEventListener(\"pointermove\", base);",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "summer",
+        "house",
+        "3d"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/BazMqJx",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/BazMqJx"
+}

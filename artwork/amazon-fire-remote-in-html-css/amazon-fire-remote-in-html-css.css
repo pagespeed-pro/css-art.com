@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+
+article {
+  height: 90vmin;
+  aspect-ratio: 13 / 50;
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Ubuntu, sans-serif;
+  border-radius: 100% 100% 110% 110% / 10% 10% 15% 15%;
+  border-radius: 200% 200% 205% 205% / 14% 14% 28% 28%;
+  background: 
+    /* microphone */
+    radial-gradient(circle at 50% 3.5%, #111 0.45vmin, #0000 0),
+    radial-gradient(circle at 50% 4.5%, #1a1a1a 0.45vmin, #0000 0),
+    linear-gradient(#080808, #1a1a1a) 50% 3.5% / 1vmin 0.9vmin no-repeat,
+    /* central-button-shadow */
+    radial-gradient(circle at 47.5% 27%, #0000 7%, #0002 10%, #0000 0),
+    /* noise / texture */
+    radial-gradient(circle, #00000011 1.5%, #0000 2%) 50% 50% / 11% 2.5%,
+    radial-gradient(circle at 80% 10%, #ffffff07 1.75%, #fff0 2%) 11% 0% / 7.4% 3.33%,
+    radial-gradient(circle, #00000011 1.75%, #0000 2%) 13% 2% / 7% 6%,
+    radial-gradient(circle, #ffffff07 1.5%, #fff0 5%) 2% 5% / 7% 2%,
+    radial-gradient(circle, #00000011 1.75%, #0000 4%) 17% 13% / 8% 9%,
+    radial-gradient(circle, #ffffff06 1.5%, #fff0 3%) 21% 23% / 4% 8%,
+    radial-gradient(circle, #00000011 1.75%, #0000 3%) 23% 7% / 6% 4%,
+    radial-gradient(circle, #ffffff09 1.5%, #fff0 3%) 5% 3% / 3% 5%, 
+    radial-gradient(circle at 70% 80%, #00000011 2.28%, #fff0 3.33%) 5% 5.5% / 3% 4.5%,
+    radial-gradient(circle at 20% 20%, #ffffff03 2.66%, #fff0 3.66%) 3% 5% / 2% 3%,
+    radial-gradient(circle at 40% 70%, #00000011 2%, #fff0 3.4%) 5% 7.5% / 3% 4.5%,
+    radial-gradient(circle at 60% 30%, #ffffff05 2%, #fff0 3%) 3% 9.5% / 3.33% 4.44%,
+    /* base */
+    radial-gradient(130% 55% at 0 0%, #ccc3, #fff0),
+    radial-gradient(farthest-side at 0 5%, #fff3, #fff0 90%),
+    radial-gradient(farthest-side at 100% 95%, #0002, #0000 90%),
+    radial-gradient(200% 50% at 107% 98%, #000, #0000 12%),
+    radial-gradient(200% 50% at -7% 98%, #000, #0000 12%),
+    radial-gradient(100% 7% at 50% 100%, #0007, #0000),
+    radial-gradient(300% 100% at 50% 0, #0000, #0001 95%, #ffffff18 95.5%, #fff1 97%, #0000 99.9%),
+    linear-gradient(to top, #222 30%, #2220),
+    linear-gradient(90deg, #222, #fff2 2%, #0000 5% 92%, #000a 96%, #fff2 98%, #0008 98.5%) 0 0 / 100% 100% no-repeat,
+    linear-gradient(90deg, #0000, #1f1e1a, #1f1e1a44),
+    linear-gradient(90deg, #2a2925, #222);
+  box-shadow:
+    inset 0.2vmin -0.2vmin 0.5vmin #1a1915,
+    inset 0.3vmin 0vmin 0.8vmin #fff2,
+    inset -0.1vmin -0.2vmin 0.3vmin #1a1915,
+    inset -0.2vmin 0vmin 3vmin #fff2,
+    inset 0 0.3vmin 0.6vmin #000a,
+    inset 0vmin 0.4vmin 0.8vmin #fff8
+}
+
+article * {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #0009;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 83.5%;
+  font-size: 4.33vmin;
+  letter-spacing: -0.25vmin;
+}
+
+button {
+  --bg: #2e2c2d33; /* 1f1e1a */
+  --icon: linear-gradient(#0000 0 0);
+  --icon-color: #eee8;
+  --icon-color-solid: #eee;
+  --icon-color-solid-opacity: 0.5;
+  aspect-ratio: 1;
+  width: 21.5%;
+  border-radius: 50%;
+  border: 0 solid;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background:
+    var(--icon),
+    linear-gradient(135deg, #2e2c2d00, #1e1c1d88),
+    var(--bg);
+  box-shadow:
+    0 0 0.25vmin #000c,
+    0 0 0.1vmin 0.1vmin #0003,
+    inset 0 0 0.25vmin #0008,
+    inset 0.25vmin 0.25vmin 0.25vmin #fff1,
+    inset -0.25vmin -0.25vmin 0.25vmin #0005,
+    inset 0 -0.25vmin 0.75vmin -0.25vmin;
+}
+
+.row1 {
+  top: 43.75%;
+}
+
+.row2 {
+  top: 54.66%;
+}
+
+.col1 {
+  left: 21%;
+}
+
+.col2 {
+  left: 50%;
+}
+
+.col3 {
+  left: 79%;
+}
+
+.microphone {
+  left: 50%;
+  top: 11.75%;
+}
+
+.central {
+  width: 79%;
+  left: 50%;
+  top: 27.75%;
+  -webkit-mask: radial-gradient(#0000 41%, #000 0);
+  mask: radial-gradient(#0000 41%, #000 0);
+  background:
+    radial-gradient(at 50.1% 50.1%, #0008 40%, #0000 43%),
+    
+    /* shinny */
+    radial-gradient(50% 50% at -0.75% 105%, #1b1b1b 52%, #0000 55%) 0% 55% / 86.5% 40% no-repeat,
+    radial-gradient(50% 50% at -0.75% 105%, #2f2d2c 52%, #0000 55%) 0% 85% / 125% 35% no-repeat,
+    radial-gradient(65% 58% at 50% 43.5%, #0f0f0fcc 42%, #0000 43%),
+    radial-gradient(67% 60% at 50% 40%, #3b3b3b 41%, #0000 42%),
+    radial-gradient(75% 80% at 50% 46%, #1b1b1b 42%, #0000 43%),
+    radial-gradient(80% 85% at 48% 49%, #ccc, #afafaf 42%, #0000 43%),
+    radial-gradient(75% 80% at 54% 46%, #1b1b1b 42%, #0000 43%),
+    radial-gradient(at 20% -30%, #ccc, #afafaf 55%, #0000 56%),
+    radial-gradient(100% 100% at 80% 14%, #ccc, #afafaf 0% 11%, #0000 12%),
+    radial-gradient(100% 105% at 45% 0%, #1b1b1b 85%, #0000 86%),
+    /* shinny */
+    
+    radial-gradient(at 48% 48%, #1d1d1d88 30%, #0000 40%),
+    radial-gradient(at 52% 52%, #fff2 30%, #0000 40%),
+    linear-gradient(135deg, #2e2c2d00, #1f1f1fcc),
+    linear-gradient(135deg, #f8f8f819, #fff0),
+    linear-gradient(135deg, #2a2925, #3e3c3d)
+    #2e2c2d
+    ;
+  box-shadow:
+    0 0 0.25vmin #000c,
+    0 0 0.1vmin 0.1vmin #0003,
+    inset 0 0 0.25vmin #0008,
+    inset 0.5vmin 0.5vmin 0.5vmin #fff1,
+    inset -0.25vmin -0.25vmin 0.25vmin #0005,
+    inset 0 -0.25vmin 0.75vmin -0.25vmin,
+    inset -1vmin -0 0 -0.8vmin #fff3;
+}
+
+.playpause {
+  --icon:
+    conic-gradient(at 100% 50%, #0000 240deg, var(--icon-color) 0 300deg, #0000 0) 35.5% 49% / 20% 25% no-repeat,
+    linear-gradient(90deg, var(--icon-color) 33%, #0000 0 67%, var(--icon-color) 0) 67% 49% / 18% 22% no-repeat;
+}
+
+.forward {
+  --icon:
+    conic-gradient(at 100% 50%, #0000 240deg, var(--icon-color) 0 300deg, #0000 0) 39% 49% / 20% 25% no-repeat,
+    conic-gradient(at 100% 50%, #0000 240deg, var(--icon-color) 0 300deg, #0000 0) 71% 49% / 20% 25% no-repeat;
+}
+
+.rewind {
+  --icon:
+    conic-gradient(at 0% 50%, #0000 60deg, var(--icon-color) 0 120deg, #0000 0) 29% 49% / 20% 25% no-repeat,
+    conic-gradient(at 0% 50%, #0000 60deg, var(--icon-color) 0 120deg, #0000 0) 61% 49% / 20% 25% no-repeat;
+}
+
+.back::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: var(--icon-color-solid-opacity);
+  background:
+    radial-gradient(farthest-side at 0 50%, #0000 65%, var(--icon-color-solid) 0 99.9999%, #0000 0) 66% 52% / 11.75% 23.5% no-repeat,
+    linear-gradient( var(--icon-color-solid) 18%, #0000 0 82%,  var(--icon-color-solid) 0) 49% 52.1% / 19% 23.6% no-repeat,
+    conic-gradient(at 0 50%, #0000 60deg, var(--icon-color-solid) 0 120deg, #0000 0) 32.5% 39.25% / 12% 24% no-repeat;
+}
+
+.microphone::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background:
+    radial-gradient(circle at 50% 28%, var(--icon-color-solid) 11.375%, #0000 0),
+    radial-gradient(circle at 50% 50%, var(--icon-color-solid) 14.25%, #0000 0),
+    linear-gradient(var(--icon-color-solid) 0 0) 50% 37% / 20.25% 23% no-repeat,
+    radial-gradient(farthest-side at 50% 0, #0000 75%, var(--icon-color-solid) 0 95%, #0000 0) 50% 63% / 40% 20% no-repeat,
+    linear-gradient(var(--icon-color-solid) 0 0) 50% 75% / 4% 12% no-repeat,
+    linear-gradient(var(--icon-color-solid) 0 0) 50% 80% / 26% 4% no-repeat;
+  opacity: 0.7;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: var(--icon-color-solid-opacity);
+  background:
+    linear-gradient(var(--icon-color-solid) 0 0) 50% 61.75% / 33% 4.25% no-repeat,
+    linear-gradient(var(--icon-color-solid) 0 0) 35% 53% / 4.25% 16% no-repeat,
+    linear-gradient(var(--icon-color-solid) 0 0) 65% 53% / 4.25% 16% no-repeat,
+    linear-gradient(-33deg, #0000 35%, var(--icon-color-solid) 0 47%, #0000 0) 34.5% 37% / 24% 19% no-repeat,
+    linear-gradient(33deg, #0000 35%, var(--icon-color-solid) 0 47%, #0000 0) 65.5% 37% / 24% 19% no-repeat
+    ;
+}
+
+
+.menu {
+  --icon:
+    repeating-linear-gradient(var(--icon-color) 0 20%, #0000 0 40%) 50% 50% / 40% 29% no-repeat;
+}
+
+button span {
+  left: -10000in;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

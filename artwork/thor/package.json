@@ -21,8 +21,8 @@
     "html": "thor.html",
     "css": ["thor.css"],
     "js": "",
-    "thumbnail": "splash.png",
-    "splash": "thor.png",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
     "keywords": ["css", "thor"],
     "original": "https://codepen.io/shobhit789/pen/ExWZpwO",
     "codepen": "https://codepen.io/shobhit789/pen/ExWZpwO"

@@ -1,0 +1,45 @@
+{
+    "name": "pokecenter-have-you-found-it-yet",
+    "version": "1.0.0",
+    "title": "Pokecenter - Have you found it yet?",
+    "description": "Designed by: Vic Bell\n\t\tOriginal image: https://dribbble.com/shots/3996502-Pokecenter",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "pokecenter-have-you-found-it-yet.html",
+    "css": [
+        "pokecenter-have-you-found-it-yet.css"
+    ],
+    "js": "/*\n\t\tDesigned by: Vic Bell\n\t\tOriginal image: https://dribbble.com/shots/3996502-Pokecenter\n*/\n\n\nconst pokecenter = document.querySelector(\"#pokecenter\");\nconst colaT = document.querySelectorAll(\".cola-t\");\nconst cola = document.querySelector(\"#cola\");\nconst orejas = document.querySelector(\"#orejas\");\nconst orejaL = document.querySelector(\"#oreja-l\");\nconst orejaR = document.querySelector(\"#oreja-r\");\nconst onda = document.querySelector(\"#onda\");\nconst a = document.querySelector(\"#audio\");\nconst b = document.body;\n\nlet base = (e) => {\n    var x = e.pageX / window.innerWidth - 0.5;\n    var y = e.pageY / window.innerHeight - 0.5;\n    pokecenter.style.transform = `\n        perspective(20000px)\n        rotateX(${ y * 10  + 66}deg)\n        rotateZ(${ -x * 10  + 35}deg)\n        translateZ(-8vw)\n    `;\n}\n\nlet picaFun = (e) => {\n    pokecenter.classList.add(\"ani-pokecenter\");\n    orejas.classList.add(\"ani-orejas\");\n    orejaL.classList.add(\"ani-oreja-l\");\n    cola.classList.add(\"is-hidden\");\n    orejaR.classList.add(\"ani-oreja-r\");\n    onda.classList.add(\"ani-onda\");\n    b.removeEventListener(\"pointermove\", base);\n\n    a.loop = false;\n    if (a.paused) a.play();\n\n    setTimeout( () =>  {\n        pokecenter.classList.remove(\"ani-pokecenter\");\n        cola.classList.remove(\"is-hidden\");\n        orejas.classList.remove(\"ani-orejas\");\n        orejaL.classList.remove(\"ani-oreja-l\");\n        orejaR.classList.remove(\"ani-oreja-r\");\n        onda.classList.remove(\"ani-onda\");\n        b.addEventListener(\"pointermove\", base);\n\n        a.pause();\n        a.currentTime = 0;\n    } , 6000);\n}\n\nb.addEventListener(\"pointermove\", base);\ncolaT.forEach( c => c.addEventListener('click', picaFun) );\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "pokemon",
+        "pokecenter",
+        "3d",
+        "isometric",
+        "cssart"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/GRZbELo",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/GRZbELo"
+}

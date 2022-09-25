@@ -1,0 +1,34 @@
+{
+    "name": "css-art-polariod-camera",
+    "version": "1.0.0",
+    "title": "CSS Art Polariod Camera",
+    "description": "The CSS art that I am most proud of to date (made last yr): \n\nA black polaroid camera.",
+    "author": {
+        "name": "Kassandra",
+        "avatar": "https://assets.codepen.io/2970881/internal/avatars/users/default.png?format=auto&height=512&version=1595816396&width=512",
+        "web": "https://www.cssartist.com/",
+        "social": [
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/KassandraSanch"
+            },
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/kassandrasanch"
+            }
+        ]
+    },
+    "html": "css-art-polariod-camera.html",
+    "css": [
+        "css-art-polariod-camera.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "camera",
+        "polaroid"
+    ],
+    "original": "https://codepen.io/kassandrasanch/pen/WNxJZyz",
+    "codepen": "https://codepen.io/kassandrasanch/pen/WNxJZyz"
+}

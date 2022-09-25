@@ -1,0 +1,44 @@
+{
+    "name": "3d-player-recorder-pure-css",
+    "version": "1.0.0",
+    "title": "3D Player/Recorder - Pure CSS",
+    "description": "3D Player/Recorder - Designed by Guillaume Kurkdjian",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "3d-player-recorder-pure-css.html",
+    "css": [
+        "3d-player-recorder-pure-css.css"
+    ],
+    "js": "/*\n\tDesigned by: Guillaume Kurkdjian \n\tOriginal image: https://electronicitems.tumblr.com/\n*/\n\nconst unit = 1.75;\nconst b = document.body;\nconst h = document.querySelector(\"#h\");\nconst a = document.querySelector(\"#a\");\nconst cas = document.querySelector(\"#cas\");\nconst btn = document.querySelector(\".button:nth-of-type(1)\");\nconst tsh = document.querySelector(\"#tsh\");\nconst lgh = document.querySelector(\"#lgh\");\n\n/*****************/\nconst mouseDownFunc = () => b.addEventListener(\"mousemove\", moveFunc);\nconst mouseUpFunc = () => b.removeEventListener(\"mousemove\", moveFunc);\nconst moveFunc = (e) => {\n\tlet x = e.pageX / window.innerWidth - 0.5;\n\tlet y = e.pageY / window.innerHeight - 0.5;\n\n\th.style.transform = `\n        perspective(${400 * unit}vmin)\n        rotateX(${y * 30 + 60}deg)\n        rotateZ(${-x * 720 + 40}deg)\n        translateZ(${-6 * unit}vmin)\n    `;\n};\nconst playFunc = () => {\n\tcas.classList.toggle(\"is-radio-playing\");\n\ttsh.classList.toggle(\"is-tape-close\");\n\tbtn.classList.toggle(\"is-button-pressed\");\n\n\tsetTimeout(() => lgh.classList.toggle(\"is-wave-playing\"), 1000);\n\n\ta.loop = true;\n\tif (a.paused) {\n\t\ta.play();\n\t} else {\n\t\ta.pause();\n\t\ta.currentTime = 0;\n\t}\n};\n/*****************/\nh.addEventListener(\"mousedown\", mouseDownFunc);\nb.addEventListener(\"mouseup\", mouseUpFunc);\nbtn.addEventListener(\"click\", playFunc);\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "3d",
+        "player",
+        "music",
+        "retro"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/PoRvRmM",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/PoRvRmM"
+}

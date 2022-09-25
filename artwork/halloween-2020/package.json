@@ -1,0 +1,41 @@
+{
+    "name": "halloween-2020",
+    "version": "1.0.0",
+    "title": "Halloween 2020",
+    "description": "Designed by: Andreas Maris\nOriginal image: https://dribbble.com/shots/7864355-It-s-Halloween-season",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "halloween-2020.html",
+    "css": [
+        "halloween-2020.css"
+    ],
+    "js": "/*\nDesigned by: Andreas Maris\nOriginal image: https://dribbble.com/shots/7864355-It-s-Halloween-season\n*/\n\n\nvar x = document.getElementById(\"myAudio\");\nfunction playAudio() {\n   x.loop = true;\n   x.play();\n}\ndocument.body.addEventListener(\"click\", playAudio)\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "halloween"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/YzWQOVY",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/YzWQOVY"
+}

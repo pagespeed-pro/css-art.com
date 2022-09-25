@@ -1,0 +1,232 @@
+body {
+  font-size: 10px;
+}
+
+.monitor-container {
+  font-size: 1.5vmin;
+  width: 60.5em;
+  height: 65em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+}
+.monitor-container .main-monitor {
+  position: relative;
+  width: 100%;
+  height: 78%;
+  background: linear-gradient(to right, #c1b69f 7%, rgba(0, 0, 0, 0) 8%) 0% 0%/10% 100%, linear-gradient(to left, #c1b69f 7%, rgba(0, 0, 0, 0) 8%) 100% 0%/10% 100%, linear-gradient(to left, rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.02)) 100% 0%/10% 100%, linear-gradient(to right, rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.02)) 0% 0%/10% 100%, linear-gradient(to right, rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.02)) 0% 0%/10% 100%, linear-gradient(to left, rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.02)) 100% 0%/10% 100%, radial-gradient(220% 100% at 50% 100%, rgba(0, 0, 0, 0) 50%, white 51%) 55% -11em/100% 22em, #DAD1BE;
+  background-repeat: no-repeat;
+  border-radius: 2em;
+}
+.monitor-container .main-monitor:before {
+  width: 100%;
+  height: 77%;
+  content: "";
+  position: absolute;
+  border-radius: 2em;
+  top: -2%;
+  background: radial-gradient(250% 100% at 50% 100%, rgba(0, 0, 0, 0) 50%, white 51%) 55% -11em/100% 22em;
+  background-repeat: no-repeat;
+}
+.monitor-container .main-monitor:after {
+  width: 100%;
+  height: 77%;
+  content: "";
+  position: absolute;
+  border-radius: 2em;
+  top: -2%;
+  background: radial-gradient(250% 100% at 50% 100%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.05) 40%, white 45%) 55% -11em/100% 22em;
+  background-repeat: no-repeat;
+}
+.monitor-container .main-monitor .inner-monitor-1 {
+  width: 81%;
+  height: 73.5%;
+  background: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0.1), #41433e) 55% 50%/100% 100%, #505855;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1em;
+  background-repeat: no-repeat;
+}
+.monitor-container .main-monitor .inner-monitor-1:after {
+  width: 100%;
+  height: 102%;
+  content: "";
+  position: absolute;
+  border-radius: 1em;
+  top: -2%;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.33), rgba(255, 255, 255, 0)) 100% 100%/5% 95%, linear-gradient(to left, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0) 15%) 100% 100%/5% 95%, linear-gradient(to left, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0) 15%) 100% 100%/5% 95%, linear-gradient(to top, rgba(0, 0, 0, 0.1) 15%, rgba(255, 255, 255, 0)) 100% 100%/100% 10%, linear-gradient(to top, rgba(255, 255, 255, 0.3) 5%, rgba(255, 255, 255, 0) 10%) 100% 100%/100% 10%, linear-gradient(to right, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0) 15%) 0% 100%/5% 95%, radial-gradient(300% 100% at 50% 100%, rgba(80, 88, 85, 0) 35%, rgba(0, 0, 0, 0.6) 49%, #dad1be 51%) 55% -10em/100% 22em, linear-gradient(to right, rgba(0, 0, 0, 0.33), rgba(255, 255, 255, 0)) 0% 0%/5% 100%;
+  background-repeat: no-repeat;
+}
+.monitor-container .monitor-middle-button-container {
+  width: 83%;
+  height: 11%;
+  position: absolute;
+  top: 78.5%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.5em;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.01), rgba(255, 255, 255, 0)) 100% 0%/10% 100%, linear-gradient(to right, rgba(0, 0, 0, 0.02), rgba(255, 255, 255, 0)) 0% 0%/10% 100%, linear-gradient(to bottom, rgba(0, 0, 0, 0.03), rgba(255, 255, 255, 0)) 100% 0%/100% 10%, #b3a88e;
+  background-repeat: no-repeat;
+}
+.monitor-container .monitor-middle-button-bottom {
+  width: 84%;
+  height: 10%;
+  position: absolute;
+  top: 83%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+}
+.monitor-container .monitor-middle-button-light-part {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  width: 82%;
+  height: 10.5%;
+  position: absolute;
+  top: 79%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.5em;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), #a99c80 30%, rgba(0, 0, 0, 0) 60%) 100% 100%/100% 50%, linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.1)) 100% 0%/50% 100%, linear-gradient(to left, rgba(0, 0, 0, 0), rgba(255, 255, 255, 0.1)) 0% 0%/50% 100%, #D5CBB6;
+  background-repeat: no-repeat;
+}
+.monitor-container .monitor-middle-button-light-part .buttons-left {
+  width: 32%;
+  height: 45%;
+  border-radius: 0.4em;
+  position: absolute;
+  top: 58%;
+  left: 39.5%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1em 1.2em 0px rgba(0, 0, 0, 0.4);
+  background: #d7cdb9;
+  background-repeat: no-repeat;
+}
+.monitor-container .monitor-middle-button-light-part .buttons-left .button {
+  width: 1.7em;
+  height: 100%;
+  background: rgba(35, 35, 35, 0.7);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.monitor-container .monitor-middle-button-light-part .buttons-left .button:after {
+  width: 1.4em;
+  height: 1.4em;
+  background: radial-gradient(100% 100% at 50% 50%, rgba(222, 215, 196, 0.5), #bfb59f 50%, rgba(0, 0, 0, 0) 51%) 61% 0%/100% 100%, #BFB59F;
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+}
+.monitor-container .monitor-middle-button-light-part .buttons-left .buttons-left-container {
+  width: 50%;
+  height: 55%;
+  position: absolute;
+  top: 29%;
+  left: 39.5%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+}
+.monitor-container .monitor-middle-button-light-part .buttons-left .buttons-right-container {
+  width: 23%;
+  height: 55%;
+  position: absolute;
+  top: 29%;
+  left: 84%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+}
+.monitor-container .monitor-middle-button-light-part .buttons-middle-container {
+  position: absolute;
+  top: 50%;
+  left: 61%;
+  width: 9em;
+  height: 1.1em;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.monitor-container .monitor-middle-button-light-part .buttons-middle-container:after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  content: "";
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), #b7aa8e) 0% 0%/100% 50%;
+  background-repeat: no-repeat;
+}
+.monitor-container .monitor-middle-button-light-part .buttons-middle-container .button {
+  width: 3.5em;
+  height: 3em;
+  border-radius: 50%;
+  margin-top: -2em;
+  position: relative;
+  background: radial-gradient(100% 100% at 50% 50%, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) 60%, black 61%) 61% 0%/100% 100%;
+  background-repeat: no-repeat;
+}
+.monitor-container .monitor-middle-button-light-part .buttons-middle-container .button:after {
+  margin-top: -0.25em;
+  content: "";
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  border-radius: inherit;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #d7cebc;
+}
+.monitor-container .monitor-powerbutton-container {
+  width: 3.3em;
+  height: 4em;
+  position: absolute;
+  top: 77%;
+  left: 82.5%;
+  transform: translate(-50%, -50%);
+}
+.monitor-container .monitor-powerbutton-container .power {
+  width: 3.2em;
+  height: 3.2em;
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+  background-color: #D6CAB0;
+  background: #575248;
+}
+.monitor-container .monitor-powerbutton-container .power:after {
+  width: 2.9em;
+  height: 2.9em;
+  border-radius: inherit;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(100% 100% at 50% 50%, rgba(222, 215, 196, 0.7), rgba(191, 181, 159, 0.7) 50%, rgba(0, 0, 0, 0) 51%) 61% 0%/100% 100%, #D7CCB7;
+  background-repeat: no-repeat;
+}
+.monitor-container .monitor-powerbutton-container .light {
+  width: 0.75em;
+  height: 1em;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, rgba(247, 0, 0, 0.7), rgba(131, 56, 40, 0.7)) 0% 0%/10% 100%;
+}
+.monitor-container .under-monitor {
+  width: 20em;
+  height: 6.2em;
+  position: absolute;
+  top: 88.5%;
+  left: 51.3%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(150% 100% at 50% 0%, transparent 45%, rgba(0, 0, 0, 0.5) 50%, rgba(255, 255, 255, 0) 51%) 55% 0.5em/100% 100%, radial-gradient(110% 100% at 50% 0%, rgba(0, 0, 0, 0) 46%, rgba(0, 0, 0, 0.65) 48%, white 50%) 55% 3em/100% 100%, linear-gradient(to right, rgba(0, 0, 0, 0), rgba(115, 107, 87, 0.3)) 100% 0em/50% 7em, linear-gradient(to left, rgba(0, 0, 0, 0), rgba(115, 107, 87, 0.3)) 0% 0em/50% 7em, linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)) 0% 0em/70% 7em, linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)) 100% 0em/70% 7em, #E2D8C3;
+  background-repeat: no-repeat;
+}

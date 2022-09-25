@@ -1,0 +1,41 @@
+{
+    "name": "swag",
+    "version": "1.0.0",
+    "title": "Swag",
+    "description": "Designed by: Patswerk\n\t\tOriginal image: https://dribbble.com/shots/3349886-36-Days-of-Type-P",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "swag.html",
+    "css": [
+        "swag.css"
+    ],
+    "js": "/*\n\t\tDesigned by: Patswerk\n\t\tOriginal image: https://dribbble.com/shots/3349886-36-Days-of-Type-P\n*/\n\nlet b = document.body;\nlet a = document.querySelector(\"#audio\");\nlet son = document.querySelector(\"#son\");\nlet soff = document.querySelector(\"#soff\");\n\n/*******************/\nlet playAudio = () => {\n    a.loop = true;\n\n    if (a.paused) a.play();\n    else {\n        a.pause();\n        a.currentTime = 0;\n    }\n\n    son.classList.toggle(\"s\")\n    soff.classList.toggle(\"s\")\n}\n/*******************/\nb.addEventListener(\"click\", playAudio)\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "swag"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/bGgEQLL",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/bGgEQLL"
+}

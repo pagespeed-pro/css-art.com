@@ -1,0 +1,42 @@
+{
+    "name": "3d-css-bedroom",
+    "version": "1.0.0",
+    "title": "3D  CSS Bedroom",
+    "description": "Designed by: Allen·Z \n\t\tOriginal image: https://dribbble.com/shots/6377158-My-Home-1-4",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "3d-css-bedroom.html",
+    "css": [
+        "3d-css-bedroom.css"
+    ],
+    "js": "/*\n\t\tDesigned by: Allen·Z \n\t\tOriginal image: https://dribbble.com/shots/6377158-My-Home-1-4\n*/\nlet bocina = document.querySelector(\"#bocina\");\nlet bocinaA = document.querySelectorAll(\".bocina-a\");\nlet librero = document.querySelector(\"#librero\");\nlet libreroPuerta = document.querySelector(\".librero-r1\");\nlet repisa = document.querySelector(\"#repisa\");\nlet repisaPuerta = document.querySelector(\".repisa-p\");\nlet buro = document.querySelector(\"#buro\");\nlet a = document.querySelector(\"#audio\");\nlet a2 = document.querySelector(\"#audio2\");\nlet a3 = document.querySelector(\"#audio3\");\nlet a4 = document.querySelector(\"#audio4\");\n\n/*******************/\nlet radioTocando = () => {\n    bocinaA[0].classList.toggle('is-bocina-active')\n    bocinaA[1].classList.toggle('is-bocina-active')\n\n    a.loop = true;\n\n    if (a.paused) a.play();\n    else {\n        a.pause();\n        a.currentTime = 0;\n    }\n}\n\nlet libreroAbiero = () => {\n    libreroPuerta.classList.toggle('is-librero-open')\n\n    a2.loop = false;\n\n    if (a2.paused) a2.play();\n    else {\n        a2.pause();\n        a2.currentTime = 0;\n    }\n}\nlet repisaAbierto = () => {\n    repisaPuerta.classList.toggle('is-repisa-open')\n\n    a3.loop = false;\n\n    if (a3.paused) a3.play();\n    else {\n        a3.pause();\n        a3.currentTime = 0;\n    }\n}\nlet buroAbierto = () => {\n\n    a4.loop = false;\n\n    if (a4.paused) a4.play();\n    else {\n        a4.pause();\n        a4.currentTime = 0;\n    }\n}\n\n/*******************/\nbocina.addEventListener(\"click\", radioTocando)\nlibrero.addEventListener(\"click\", libreroAbiero)\nrepisa.addEventListener(\"click\", repisaAbierto)\nburo.addEventListener(\"click\", buroAbierto)",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "bedroom",
+        "3d"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/yLVYqpP",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/yLVYqpP"
+}

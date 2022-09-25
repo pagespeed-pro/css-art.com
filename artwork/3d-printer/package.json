@@ -1,0 +1,39 @@
+{
+    "name": "3d-printer",
+    "version": "1.0.0",
+    "title": "3D Printer",
+    "description": "Designed by: Guillaume Kurkdjian \n\t\tOriginal image: https://electronicitems.tumblr.com/page/2",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "3d-printer.html",
+    "css": [
+        "3d-printer.css"
+    ],
+    "js": "/*\n\t\tDesigned by: Guillaume Kurkdjian \n\t\tOriginal image: https://electronicitems.tumblr.com/page/2\n*/\n\nlet b = document.body;\nlet printer = document.querySelector(\"#printer\");\nlet shadows = document.querySelector(\"#shadows\");\nlet paper = document.querySelector(\"#paper\");\nlet paperShadow = document.querySelector(\"#paper-shadow\");\nlet text = document.querySelector(\"#text\");\nlet a = document.querySelector(\"#audio\");\n\n\n\n/*******************/\nlet printerFunction = () => {\n    printer.classList.toggle('is-printer-animated')\n    shadows.classList.toggle('is-shadows-animated')\n    paper.classList.toggle('is-paper-animated')\n    paperShadow.classList.toggle('is-paper-shadow-animated')\n    text.classList.toggle('is-text-animated')\n\n    a.loop = true;\n\n    if (a.paused) a.play();\n    else {\n        a.pause();\n        a.currentTime = 0;\n    }\n}\n\n/*******************/\nprinter.addEventListener(\"click\", printerFunction)\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/zYrgJzz",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/zYrgJzz"
+}

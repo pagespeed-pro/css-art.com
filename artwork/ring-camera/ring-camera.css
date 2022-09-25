@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4vmin;
+  background-size: 750px;
+  background-position: 50% 8.5%;
+  background-repeat: no-repeat;
+  background: #0baedd;
+}
+
+.ring {
+  width: 26.5em;
+  height: 55em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 5%, transparent 12%, transparent 89%, rgba(0, 0, 0, 0.3) 95%, rgba(0, 0, 0, 0.8) 100%) 50% 0%/100% 23.1em, linear-gradient(to right, #303030, #303030) 50% 0%/100% 23.1em, linear-gradient(to right, rgba(167, 170, 169, 0.8) 0%, rgba(167, 170, 169, 0.3) 5%, #DEDEDE 12%, #DEDEDE 89%, rgba(167, 170, 169, 0.3) 95%, rgba(167, 170, 169, 0.8) 100%) 50% 100%/100% 32em, linear-gradient(to right, rgba(167, 170, 169, 0.8) 0%, rgba(167, 170, 169, 0.3) 5%, #DEDEDE 12%, #DEDEDE 89%, rgba(167, 170, 169, 0.3) 95%, rgba(167, 170, 169, 0.8) 100%) 50% 100%/100% 32em, linear-gradient(#DEDEDE 49%, #DEDEDE 51%) 50% 100%/100% 32em, radial-gradient(100% 100% at 50% 50%, rgba(255, 0, 0, 0.5) 50%, blue 51%) 55% 0%/22em 22em;
+  background-repeat: no-repeat;
+}
+.ring .top {
+  width: 100%;
+  height: 23.3em;
+  position: relative;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), #171717) 50% 82%/100% 0.04em, linear-gradient(to top, rgba(23, 23, 23, 0), #171717) 50% 84%/100% 0.04em, linear-gradient(to top, rgba(0, 0, 0, 0), #171717) 50% 40%/100% 0.04em, linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 7%, rgba(107, 107, 107, 0.6) 8%, rgba(107, 107, 107, 0.6) 14%, transparent 16%, transparent 89%, rgba(0, 0, 0, 0.3) 95%, rgba(0, 0, 0, 0.8) 100%) 50% 0%/100% 23.1em, linear-gradient(to left, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.5) 7%, rgba(107, 107, 107, 0.6) 8%, rgba(107, 107, 107, 0.6) 13%, transparent 16%, transparent 89%, rgba(0, 0, 0, 0.3) 95%, rgba(0, 0, 0, 0.8) 100%) 50% 0%/100% 23.1em;
+  background-repeat: no-repeat;
+}
+.ring .top .camera {
+  width: 50%;
+  height: 9.5em;
+  position: absolute;
+  top: 62%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.ring .top .camera:before {
+  content: "";
+  width: 12.5em;
+  height: 12.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ring .top .camera:after {
+  content: "";
+  width: 10em;
+  height: 1em;
+  background: #303030;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 0;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+}
+.ring .top .camera .inner_circle {
+  width: 12.5em;
+  height: 12.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #414141;
+}
+.ring .top .camera .inner_circle:before {
+  content: "";
+  width: 10em;
+  height: 0.5em;
+  background: #303030;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 86.6%;
+  box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+}
+.ring .top .camera .inner_circle:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  box-shadow: inset 0 0 52px rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+}
+.ring .top .camera .inner_circle .black_circle {
+  width: 6em;
+  height: 6em;
+  border: 0.3em solid #2A2A2A;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(40deg);
+  border-radius: 50%;
+  top: 48%;
+  box-shadow: inset 0 0px 0.6em 0.6em rgba(0, 0, 0, 0.2);
+  background: -webkit-radial-gradient(0% 50%, 50% 22%, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(0% 100%, 80% 82%, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.ring .top .camera .inner_circle .black_circle .camera_circle {
+  width: 4em;
+  height: 4em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: -webkit-radial-gradient(0% 50%, 50% 32%, #323c34 0%, rgba(255, 255, 255, 0) 100%), #2A2728;
+  background-repeat: no-repeat;
+}
+.ring .top .camera .inner_circle .black_circle .camera_circle .camera_inner {
+  width: 2.1em;
+  height: 2.1em;
+  border-radius: 50%;
+  position: absolute;
+  background: rgba(255, 192, 203, 0.2);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #48494A;
+}
+.ring .top .camera .inner_circle .black_circle .camera_circle .camera_inner:after {
+  content: "";
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: inherit;
+  background: -webkit-radial-gradient(0% 50%, 50% 82%, rgba(255, 255, 255, 0.06) 0%, rgba(255, 255, 255, 0) 100%), #494949;
+  box-shadow: 0 0 0.6em rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ring .top .camera .inner_circle .black_circle .camera_circle .camera_inner .smallest_circle {
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: inherit;
+  background: radial-gradient(100% 100% at 50% 50%, rgba(78, 96, 90, 0.5) 50%, rgba(0, 0, 255, 0) 51%) 55% 0%/100% 100%, #4E605A;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.ring .bottom {
+  width: 100%;
+  height: 31.7em;
+  position: absolute;
+  bottom: 0;
+}
+.ring .bottom .circle {
+  width: 13em;
+  height: 13em;
+  border: 1px solid #CACCCE;
+  border-radius: 50%;
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to bottom, rgba(228, 228, 228, 0.7) 10%, #F8FCF9 26%, #F8FCF9, #DEDEDE, #B2B4B6) 50% 100%/100% 100%, #E4E4E4;
+  background-repeat: no-repeat;
+}
+.ring .bottom .circle .inner_blue {
+  width: 10em;
+  height: 10em;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.5);
+  background: #39BEEE;
+  background-repeat: no-repeat;
+}
+.ring .bottom .circle .inner_blue .inner_silver {
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #D7DBDC;
+}
+.ring .bottom .circle .inner_blue .inner_silver .inner_inner {
+  width: 6em;
+  height: 6em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid green;
+  border-radius: 50%;
+  border: 1px solid #f3f3f3;
+  border-right: #f3f3f3;
+}
+.ring .bottom .circle .inner_blue .inner_silver .inner_inner:after {
+  border-radius: 50%;
+  content: "";
+  width: 6em;
+  height: 6em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top: 2px solid #BDC1C4;
+  border-bottom: 2px solid #DFE4E5;
+}
+.ring .bottom:after {
+  content: "";
+  width: 71%;
+  height: 99%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border: 1px solid #CDCDCD;
+  border: 1px solid #CDCDCD;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.1);
+  background-repeat: no-repeat;
+}
+.ring .bottom:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to right, transparent 6%, rgba(255, 255, 255, 0.2) 7%, rgba(255, 255, 255, 0.3), transparent 15%, transparent 85%, rgba(255, 255, 255, 0.5) 88%, rgba(255, 255, 255, 0.3) 90%, transparent) 50% 100%/100% 100%;
+  background-repeat: no-repeat;
+}

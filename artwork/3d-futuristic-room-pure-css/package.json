@@ -1,0 +1,45 @@
+{
+    "name": "3d-futuristic-room-pure-css",
+    "version": "1.0.0",
+    "title": "3D Futuristic Room - Pure CSS",
+    "description": "Designed by: Alex Harris \n\tOriginal Image: https://www.artstation.com/artwork/vBYdY",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "3d-futuristic-room-pure-css.html",
+    "css": [
+        "3d-futuristic-room-pure-css.css"
+    ],
+    "js": "/*\n\tDesigned by: Alex Harris \n\tOriginal Image: https://www.artstation.com/artwork/vBYdY\n*/\n\nconst b = document.body;\nconst h = document.querySelector(\"#h\");\nconst a = document.querySelector(\"#a\");\nconst block = document.querySelector(\"#block\");\nconst s1 = document.querySelector(\".s1\");\nconst s2 = document.querySelector(\".s2\");\nconst unit = 1.75;\n/*****************/\nconst mouseDownFunc = () => b.addEventListener(\"mousemove\", moveFunc);\nconst mouseUpFunc = () => b.removeEventListener(\"mousemove\", moveFunc);\nconst moveFunc = (e) => {\n\tlet x = e.pageX / window.innerWidth - 0.5;\n\tlet y = e.pageY / window.innerHeight - 0.5;\n\n\th.style.transform = `\n        perspective(${400 * unit}vmin)\n        rotateX(${y * 30 + 66}deg)\n        rotateZ(${-x * 420 + 40}deg)\n        translateZ(${-14 * unit}vmin)\n    `;\n};\nconst playFunc = () => {\n\ts1.classList.toggle(\"is-screen-hidden\");\n\ts2.classList.toggle(\"is-screen-hidden\");\n\th.classList.toggle(\"is-main-active\");\n\n\ta.loop = true;\n\tif (a.paused) {\n\t\ta.play();\n\t} else {\n\t\ta.pause();\n\t\ta.currentTime = 0;\n\t}\n};\n/*****************/\nh.addEventListener(\"mousedown\", mouseDownFunc);\nb.addEventListener(\"mouseup\", mouseUpFunc);\nblock.addEventListener(\"click\", playFunc);\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "cssart",
+        "3d",
+        "room",
+        "cyberpunk",
+        "futuristic"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/LYzwGyW",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/LYzwGyW"
+}

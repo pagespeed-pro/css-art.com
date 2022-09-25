@@ -1,0 +1,247 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+}
+
+:focus {
+  outline: 1px dashed;
+  outline-offset: 2px;
+}
+
+body > * {
+  height: 45vh;
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+body > .full {
+  grid-column-end: span 2;
+}
+
+body > .tall {
+  height: 90vh;
+  grid-row-end: span 2;
+}
+
+body > .grand {
+  height: 90vh;
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+}
+
+body > .interactive::after {
+  content: "Interactive";
+  display: inline-block;
+  padding-left: 1.5rem;
+  z-index: 1;
+  margin: 0.25rem 0;
+  position: relative;
+  float: left;
+  clear: both;
+  background: radial-gradient(farthest-side circle, currentColor 40%, #0000 0 55%, currentColor 0 70%, #0000 0 85%, currentColor 0 99.9%, #0000 0) 0.125rem 50% / 1rem 1rem;
+  background-repeat: no-repeat;
+}
+
+a, a:link, a:visited {
+  color: currentColor;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+.youtube-link {
+  display: inline-block;
+  padding-left: 1.5rem;
+  z-index: 1;
+  margin: 0.25rem 0;
+  position: relative;
+  float: left;
+  clear: both;
+}
+
+.youtube-link::before {
+  content: "";
+  width: 1.125rem;
+  height: 0.9rem;
+  aspect-ratio: 1.25;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: 
+    conic-gradient(from 240deg at 100% 50%, #fff 60deg, #0000 0) 55% 50% / 30% 40% no-repeat,
+    radial-gradient(70% 50%, red 99%, #0000 0),
+    #0002;
+  border-radius: 30% / 100%;
+}
+
+header, footer {
+  height: auto;
+  min-height: 3rem;
+  background: #444;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+header > div {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  /* font-family: 'Courier New', Courier, monospace, monospace; */
+}
+
+header > div:last-child a {
+  margin-left: 0.5rem;
+  color: #ccc;
+}
+
+h1 {
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 500;
+  color: #fff;
+}
+
+h1 + span {
+  color: #ccc;
+}
+
+.cartoon {
+  position: relative;
+}
+
+.cartoon::before,
+.cartoon::after {
+  position: absolute;
+}
+
+.animated {
+  position: absolute;
+  left: -10000in;
+  z-index: 1;
+}
+
+.animated:not(:checked) ~ *,
+.animated:not(:checked) ~ *::before,
+.animated:not(:checked) ~ *::after {
+  animation: none !important;
+}
+
+label {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  margin: 0.25rem 0;
+  display: inline-block;
+  float: left;
+  clear: both;
+}
+
+.animated:focus + label {
+  outline: 1px dashed;
+  outline-offset: 2px;
+}
+
+label::before {
+  --active: 30%;
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 0.66rem;
+  aspect-ratio: 1.75;
+  border: 1px solid;
+  vertical-align: baseline;
+  margin-right: 0.3rem;
+  border-radius: 100px;
+  background: radial-gradient(closest-side circle at var(--active) 50%, currentColor 85%, #0000 0);
+}
+
+.animated:checked + label::before {
+  --active: 70%;
+}
+
+label::after {
+  content: " off";
+}
+
+.animated:checked + label::after {
+  content: " on";
+}
+
+.tweet-icon {
+  display: inline-block;
+  position: relative;
+  height: 1.75rem;
+  width: 1.75rem;
+  text-indent: -1000in;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 69% 30%, #1DA1F2 19%, #0000 0),
+    conic-gradient(at 100% 40%, #0000 230deg, #1DA1F2 0 260deg, #0000 0) 100% 18% / 30% 30%, 
+    conic-gradient(at 100% 50%, #0000 240deg, #1DA1F2 0 280deg, #0000 0) 100% 28% / 30% 30%;
+  background-repeat: no-repeat;
+}
+
+.tweet-icon::before {
+  content: "";
+  position: absolute;
+   bottom: 3%;
+  left: 0;
+  border-radius: 50%;
+  width: 90%;
+  height: 70%;
+  background: 
+    radial-gradient(120% 100% at 40% 0, #0000 50%, #1DA1F2 0);
+  transform: rotate(-30deg);
+}
+
+.tweet-icon::after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 4%;
+  border-radius: 50%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(150% 100% at 60% 0, #0000 50%, #1DA1F2 0);;
+  transform: rotate(25deg);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 40% 100%, 60% 90%, 0% 100%, 35% 88%, 0% 90%);
+}
+
+.coffee-icon {
+  display: inline-block;
+  height: 1.75rem;
+  width: 1.75rem;
+  text-indent: -1000in;
+  overflow: hidden;
+  background: 
+    conic-gradient(from 0.47turn at 50% -1500%, #fff 0.06turn, #0000 0) 50% 7.5% / 90% 15%,
+    linear-gradient(#ccc 0 0) 50% 0% / 75% 10%,
+    conic-gradient(from -0.02turn at 50% 350%, orange 0.04turn, #0000 0) 50% 100% / 100% 90%;
+  background-repeat: no-repeat;
+}
+
+
+@media all and (min-width: 1000px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  body > * {
+    min-height: auto;
+  }
+}

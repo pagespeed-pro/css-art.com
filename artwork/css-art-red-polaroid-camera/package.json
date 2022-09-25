@@ -1,0 +1,35 @@
+{
+    "name": "css-art-red-polaroid-camera",
+    "version": "1.0.0",
+    "title": "CSS Art Red Polaroid Camera",
+    "description": "",
+    "author": {
+        "name": "Kassandra",
+        "avatar": "https://assets.codepen.io/2970881/internal/avatars/users/default.png?format=auto&height=512&version=1595816396&width=512",
+        "web": "https://www.cssartist.com/",
+        "social": [
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/KassandraSanch"
+            },
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/kassandrasanch"
+            }
+        ]
+    },
+    "html": "css-art-red-polaroid-camera.html",
+    "css": [
+        "css-art-red-polaroid-camera.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "camera",
+        "polaroid",
+        "red"
+    ],
+    "original": "https://codepen.io/kassandrasanch/pen/dyRGKVB",
+    "codepen": "https://codepen.io/kassandrasanch/pen/dyRGKVB"
+}

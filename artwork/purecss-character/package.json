@@ -1,0 +1,29 @@
+{
+    "name": "purecss-character",
+    "version": "1.0.0",
+    "title": "Pure CSS Character",
+    "description": "Pure HTML/CSS drawing - game character creation scene style. Hand-coded entirely in HTML & CSS.",
+    "author": {
+        "name": "Diana Smith",
+        "avatar": "https://avatars3.githubusercontent.com/u/8030961?s=460&v=4",
+        "web": "http://diana-adrianne.com/",
+        "social": [{
+            "title": "Github",
+            "url": "https://github.com/cyanharlow"
+        }, {
+            "title": "Instagram",
+            "url": "https://www.instagram.com/cyanharlow"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/cyanharlow"
+        }]
+    },
+    "html": "purecss-character.html",
+    "css": ["purecss-character.css", "purecss-character-font.css"],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["oil painting", "character", "game"],
+    "original": "https://diana-adrianne.com/purecss-character/",
+    "github": "https://github.com/cyanharlow/purecss-character"
+}

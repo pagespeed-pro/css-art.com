@@ -1,0 +1,45 @@
+{
+    "name": "3d-modern-house-pure-css",
+    "version": "1.0.0",
+    "title": "3D Modern House - Pure CSS",
+    "description": "Designed by: Joanna Ngai\n\t\tOriginal image: https://dribbble.com/shots/14118297-Villa",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "3d-modern-house-pure-css.html",
+    "css": [
+        "3d-modern-house-pure-css.css"
+    ],
+    "js": "/*\n\t\tDesigned by: Joanna Ngai\n\t\tOriginal image: https://dribbble.com/shots/14118297-Villa\n*/\n\n\nconst h = document.querySelector(\"#h\");\nconst b = document.body;\n\nlet base = (e) => {\n    var x = e.pageX / window.innerWidth - 0.5;\n    var y = e.pageY / window.innerHeight - 0.5;\n    h.style.transform = `\n        perspective(20000px)\n        rotateX(${ y * 10  + 75}deg)\n        rotateZ(${ -x * 10  + 35}deg)\n        translateZ(-9vw)\n    `;\n}\n\nb.addEventListener(\"pointermove\", base);\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "3d",
+        "house",
+        "animation",
+        "isometric",
+        "voxelart"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/yLOpNdZ",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/yLOpNdZ"
+}

@@ -1,0 +1,41 @@
+{
+    "name": "pokemon-battle-pure-css",
+    "version": "1.0.0",
+    "title": "Pokemon Battle (Pure CSS)  🎮✨",
+    "description": "Hello world, I return with my first animation of the new year! I've been inspired by the 3D pens on here lately, I figured why not give it a shot! What I had originally planned to draw for practice proliferated into this animation. It was fun to try new techniques, including mixins for building 3D shapes, and box shadows to enhance details. I hope you all are having a wonderful new year.\n\nInspiration: https://www.instagram.com/p/Bq2DKclA7JB/",
+    "author": {
+        "name": "Tee",
+        "avatar": "https://assets.codepen.io/2792757/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1628361801&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/acupoftee/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/elisabethdiang"
+            },
+            {
+                "title": "dev.to",
+                "url": "https://dev.to/elisabethdiang"
+            }
+        ]
+    },
+    "html": "pokemon-battle-pure-css-.html",
+    "css": [
+        "pokemon-battle-pure-css-.css"
+    ],
+    "js": "// Inspiration: https://www.instagram.com/p/Bq2DKclA7JB/\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "pokemon",
+        "nintendo-switch",
+        "3d",
+        "css",
+        "animation"
+    ],
+    "original": "https://codepen.io/acupoftee/pen/PoGvPjr",
+    "codepen": "https://codepen.io/acupoftee/pen/PoGvPjr"
+}

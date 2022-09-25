@@ -1,0 +1,42 @@
+{
+    "name": "happy-sushi",
+    "version": "1.0.0",
+    "title": "Happy Sushi",
+    "description": "Designed by: Miguel E.\n\t\tOriginal image: https://dribbble.com/shots/5819150-",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "happy-sushi.html",
+    "css": [
+        "happy-sushi.css"
+    ],
+    "js": "/*\n\t\tDesigned by: Miguel E.\n\t\tOriginal image: https://dribbble.com/shots/5819150-\n*/",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "happy",
+        "sushi"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/VwmoaNG",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/VwmoaNG"
+}

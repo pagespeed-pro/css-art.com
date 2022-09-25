@@ -1,0 +1,45 @@
+{
+    "name": "3d-picade-css-art",
+    "version": "1.0.0",
+    "title": "3D Picade - CSS ART",
+    "description": "Hice esta pequeña PICADE, para mi colección de CSS Art. Lo más interesante fue hacer una esfera (no es perfecta pero funciona 😅)",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "3d-picade-css-art.html",
+    "css": [
+        "3d-picade-css-art.css"
+    ],
+    "js": "const b = document.body;\nconst h = document.querySelector(\"#h\");\nconst unit = 1.75;\n\n/*****************/\nconst mouseDownFunc = () => b.addEventListener(\"mousemove\", moveFunc);\nconst mouseUpFunc = () => b.removeEventListener(\"mousemove\", moveFunc);\nconst moveFunc = (e) => {\n\tlet x = e.pageX / window.innerWidth - 0.5;\n\tlet y = e.pageY / window.innerHeight - 0.5;\n\n\th.style.transform = `\n        perspective(${400 * unit}vmin)\n        rotateX(${y * 30 + 70}deg)\n        rotateZ(${-x * 720 + 40}deg)\n        translateZ(${-17 * unit}vmin)\n    `;\n};\n\n/*****************/\nh.addEventListener(\"mousedown\", mouseDownFunc);\nb.addEventListener(\"mouseup\", mouseUpFunc);\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "picade",
+        "arcade",
+        "3d",
+        "nintendo",
+        "mariobross"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/oNEbrKL",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/oNEbrKL"
+}

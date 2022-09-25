@@ -1,0 +1,611 @@
+/*********************/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  outline: none;
+  appearance: none;
+  transform-style: preserve-3d;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/***********************/
+/***********************/
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Molle", cursive;
+  background-color: #7e8181;
+  color: #ffffff;
+}
+
+/**/
+.svgs {
+  position: absolute;
+  left: 50%;
+  bottom: 6vmin;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.svg-icon {
+  width: 30px;
+  height: 30px;
+}
+.svg-icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.svg-icon path,
+.svg-icon polygon,
+.svg-icon rect {
+  fill: white;
+}
+
+.svg-icon circle {
+  stroke: white;
+  stroke-width: 1;
+}
+
+.s {
+  display: none;
+}
+
+.main-title {
+  position: absolute;
+  top: 6vmin;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12vmin;
+  line-height: 1;
+}
+
+/**/
+.main {
+  width: 107vmin;
+  height: 80vmin;
+  z-index: 10;
+}
+
+.cup {
+  position: absolute;
+  left: 36.5%;
+  top: 22%;
+  width: 27.75vmin;
+  height: 36vmin;
+  /*======================*/
+}
+.cup__smoke-1, .cup__smoke-2, .cup__smoke-3 {
+  position: absolute;
+  width: 100%;
+  height: 20vmin;
+  opacity: 0;
+  background-image: radial-gradient(circle, #ffffff 50%, transparent);
+  border-radius: 50%;
+  filter: blur(1.75vmin);
+}
+.cup__smoke-2 {
+  animation-delay: 125ms;
+}
+.cup__smoke-3 {
+  animation-delay: 250ms;
+}
+.cup__handle {
+  position: absolute;
+  top: 28%;
+  left: 56%;
+  width: 18vmin;
+  height: 20vmin;
+  border: 0.65vmin solid #161616;
+  border-radius: 8vmin;
+  background-color: #ffffff;
+}
+.cup__handle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 10vmin;
+  height: 12vmin;
+  border: 0.65vmin solid #161616;
+  border-radius: 8vmin;
+  background-color: #7e8181;
+}
+.cup__center {
+  position: absolute;
+  top: 14%;
+  width: 100%;
+  height: 26vmin;
+  overflow: hidden;
+  border-left: 0.9vmin solid #161616;
+  border-right: 0.9vmin solid #161616;
+  background-color: #ffffff;
+}
+.cup__top, .cup__bottom {
+  position: absolute;
+  width: 100%;
+  height: 10vmin;
+  border-radius: 50%;
+  border: 0.9vmin solid #161616;
+  background-color: #ffffff;
+}
+.cup__top {
+  top: 0;
+  border-bottom-color: transparent;
+}
+.cup__bottom {
+  bottom: 0;
+  border-top-color: transparent;
+}
+.cup .eyes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+}
+.cup .eye-l {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 2.75vmin;
+  height: 4.75vmin;
+  border-radius: 3vmin;
+  background-color: #161616;
+  overflow: hidden;
+}
+.cup .eye-l::before {
+  content: "";
+  position: absolute;
+  right: 0.25vmin;
+  top: 0.95vmin;
+  width: 2vmin;
+  height: 2vmin;
+  border: 1vmin solid transparent;
+  border-right: 1.5vmin solid #ffffff;
+  border-radius: 35%;
+}
+.cup .eye-r {
+  position: absolute;
+  top: 14%;
+  left: 28%;
+  width: 4vmin;
+  height: 6vmin;
+  border-radius: 2vmin;
+  background-color: #161616;
+  overflow: hidden;
+}
+.cup .eye-r::before {
+  content: "";
+  position: absolute;
+  right: 0.25vmin;
+  top: 1.25vmin;
+  width: 2vmin;
+  height: 2vmin;
+  border: 1.25vmin solid transparent;
+  border-right: 1.65vmin solid #ffffff;
+  border-radius: 35%;
+}
+.cup .nose {
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  width: 4.65vmin;
+  height: 4.25vmin;
+  border-radius: 1.75vmin;
+  background-color: #090909;
+}
+
+.shadow {
+  position: absolute;
+  width: 36vmin;
+  height: 0.75vmin;
+  background-color: #161616;
+  left: 50%;
+  top: 86.75%;
+  transform: translateX(-57%);
+}
+
+.leg-l,
+.leg-r {
+  position: absolute;
+  width: 14vmin;
+  height: 19vmin;
+}
+.leg-l__top,
+.leg-r__top {
+  position: absolute;
+  right: 1.2vmin;
+  width: 3vmin;
+  height: 9vmin;
+  background-color: #161616;
+  border-bottom-left-radius: 0.45vmin;
+}
+.leg-l__bottom,
+.leg-r__bottom {
+  position: absolute;
+  top: 92%;
+  width: 100%;
+  height: 8vmin;
+  background-color: #161616;
+  border-bottom-right-radius: 2vmin;
+}
+.leg-l__bottom::after,
+.leg-r__bottom::after {
+  content: "";
+  position: absolute;
+  left: -10%;
+  bottom: 1.5vmin;
+  width: 120%;
+  height: 5vmin;
+  border-radius: 50%;
+  background-color: #161616;
+}
+.leg-l__shoes,
+.leg-r__shoes {
+  position: absolute;
+  top: 60%;
+  right: -1vmin;
+  width: 6vmin;
+  height: 5.4vmin;
+  transform-origin: bottom right;
+  transform: skewX(5deg);
+  border-top-left-radius: 3vmin;
+  border-top-right-radius: 1vmin;
+  background-color: #ffffff;
+  border: 0.5vmin solid #161616;
+}
+.leg-l__shoes::before,
+.leg-r__shoes::before {
+  content: "";
+  position: absolute;
+  bottom: -0.5vmin;
+  right: 3.5vmin;
+  width: 6vmin;
+  height: 4vmin;
+  transform: skewX(-5deg);
+  border-bottom-left-radius: 1vmin;
+  border-top-left-radius: 6vmin;
+  border-top-right-radius: 3vmin;
+  background-color: #ffffff;
+  border: 0.5vmin solid #161616;
+  border-right-color: transparent;
+}
+
+.leg-l {
+  top: 64%;
+  left: 32%;
+  transform-origin: top;
+}
+.leg-l__top, .leg-l__bottom {
+  background-color: #090909;
+}
+.leg-l__bottom {
+  transform-origin: top;
+}
+.leg-l__bottom::after {
+  background-color: #090909;
+}
+.leg-l__shoes {
+  transform-origin: top;
+  background-color: #e6e6e6;
+}
+.leg-l__shoes::before {
+  background-color: #e6e6e6;
+}
+
+.leg-r {
+  top: 64%;
+  left: 45%;
+  transform-origin: top;
+  animation-delay: 625ms;
+}
+.leg-r__bottom {
+  transform-origin: top;
+  animation-delay: 625ms;
+}
+.leg-r__shoes {
+  transform-origin: top;
+  animation-delay: 625ms;
+}
+
+.screen,
+.screen-1,
+.screen-2,
+.screen-3,
+.screen-4 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+}
+
+.screen {
+  background-image: radial-gradient(ellipse, transparent 30%, transparent 50%, rgba(22, 22, 22, 0.35), rgba(22, 22, 22, 0.85) 90%);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  animation: screen 150ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite;
+}
+
+.screen-1 {
+  animation: screen-1 200ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite;
+  background-image: radial-gradient(circle, rgba(22, 22, 22, 0.15) 30%, transparent 50%), radial-gradient(circle, rgba(22, 22, 22, 0.17) 30%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.2) 20%, transparent 65%), radial-gradient(circle, rgba(22, 22, 22, 0.1) 40%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.27) 30%, transparent 70%), radial-gradient(circle, rgba(22, 22, 22, 0.12) 36%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.17) 36%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.22) 36%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.15) 36%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.19) 36%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.15) 30%, transparent 50%), radial-gradient(circle, rgba(22, 22, 22, 0.17) 30%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.1) 20%, transparent 65%);
+  background-repeat: no-repeat;
+  background-size: 10vmin 10vmin, 5vmin 5vmin, 3vmin 3vmin, 0.5vmin 100vmin, 1vmin 1vmin, 5vmin 5vmin, 2vmin 2vmin, 7vmin 6vmin, 5vmin 3vmin, 2vmin 2vmin, 7vmin 6vmin, 5vmin 3vmin, 2vmin 2vmin;
+  background-position: 10vmin 10vmin, 40vmin 20vmin, 30vmin 5vmin, 60vmin 0vmin, 100vmin 70vmin, 180vmin 90vmin, 70vmin 10vmin, 30vmin 90vmin, 190vmin 30vmin, 90vmin 50vmin, 140vmin 10vmin, 120vmin 20vmin, 190vmin 5vmin;
+}
+
+.screen-2 {
+  animation: screen-2 200ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite;
+  background-image: radial-gradient(circle, rgba(22, 22, 22, 0.15) 30%, transparent 50%), radial-gradient(circle, rgba(22, 22, 22, 0.1) 30%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.1) 20%, transparent 65%), radial-gradient(circle, rgba(22, 22, 22, 0.15) 10%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.27) 20%, transparent 70%), radial-gradient(circle, rgba(22, 22, 22, 0.12) 36%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.27) 36%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.22) 36%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.25) 36%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.2) 36%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.15) 30%, transparent 50%), radial-gradient(circle, rgba(22, 22, 22, 0.2) 30%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.1) 20%, transparent 65%);
+  background-repeat: no-repeat;
+  background-size: 1vmin 1vmin, 0.5vmin 100vmin, 2vmin 200vmin, 7vmin 7vmin, 20vmin 20vmin, 2vmin 2vmin, 1vmin 1vmin, 4vmin 4vmin, 0.5vmin 100vmin, 2vmin 1vmin, 3vmin 3vmin, 1vmin 1vmin, 4vmin 4vmin;
+  background-position: 10vmin 40vmin, 180vmin 0vmin, 30vmin 0vmin, 40vmin 20vmin, 80vmin 80vmin, 140vmin 80vmin, 170vmin 30vmin, 130vmin 50vmin, 190vmin 35vmin, 180vmin 15vmin, 32vmin 12vmin, 23vmin 23vmin, 10vmin 57vmin;
+}
+
+.screen-3 {
+  animation: screen-3 200ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite;
+  background-image: radial-gradient(circle, rgba(22, 22, 22, 0.3) 30%, transparent 70%), radial-gradient(circle, rgba(22, 22, 22, 0.23) 30%, transparent 70%), radial-gradient(circle, rgba(22, 22, 22, 0.15) 30%, transparent 75%), radial-gradient(circle, rgba(22, 22, 22, 0.14) 30%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.12) 20%, transparent 70%), radial-gradient(circle, rgba(22, 22, 22, 0.2) 36%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.13) 36%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.18) 36%, transparent 70%), radial-gradient(circle, rgba(22, 22, 22, 0.15) 36%, transparent 70%), radial-gradient(circle, rgba(22, 22, 22, 0.19) 36%, transparent 70%), radial-gradient(circle, rgba(22, 22, 22, 0.1) 30%, transparent 50%), radial-gradient(circle, rgba(22, 22, 22, 0.1) 30%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.15) 20%, transparent 65%);
+  background-repeat: no-repeat;
+  background-size: 1vmin 1vmin, 0.35vmin 100vmin, 2vmin 20vmin, 3vmin 3vmin, 5vmin 5vmin, 2vmin 2vmin, 3vmin 1vmin, 3vmin 4vmin, 0.35vmin 200vmin, 0.5vmin 100vmin, 7vmin 7vmin, 4vmin 4vmin, 14vmin 4vmin;
+  background-position: 30vmin 40vmin, 180vmin 10vmin, 130vmin 80vmin, 160vmin 20vmin, 80vmin 60vmin, 140vmin 50vmin, 170vmin 32vmin, 30vmin 55vmin, 150vmin 52vmin, 60vmin 34vmin, 132vmin 12vmin, 123vmin 23vmin, 110vmin 57vmin;
+}
+
+.screen-4 {
+  animation: screen-4 250ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite;
+  background-image: radial-gradient(circle, rgba(22, 22, 22, 0.8) 40%, transparent 70%), radial-gradient(circle, rgba(22, 22, 22, 0.3) 34%, transparent 70%), radial-gradient(circle, rgba(22, 22, 22, 0.25) 30%, transparent 75%), radial-gradient(circle, rgba(22, 22, 22, 0.1) 30%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.2) 20%, transparent 70%), radial-gradient(circle, rgba(22, 22, 22, 0.18) 30%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.8) 30%, transparent 60%), radial-gradient(circle, rgba(22, 22, 22, 0.3) 36%, transparent 70%), radial-gradient(circle, rgba(22, 22, 22, 0.15) 36%, transparent 70%), radial-gradient(circle, rgba(22, 22, 22, 0.19) 36%, transparent 70%);
+  background-repeat: no-repeat;
+  background-size: 1vmin 5vmin, 0.5vmin 10vmin, 2vmin 20vmin, 0.35vmin 100vmin, 20vmin 20vmin, 4vmin 4vmin, 1vmin 1vmin, 2vmin 4vmin, 0.25vmin 200vmin, 1vmin 1vmin;
+  background-position: 10vmin 80vmin, 80vmin 5vmin, 50vmin 85vmin, 20vmin 50vmin, 100vmin 40vmin, 120vmin 40vmin, 160vmin 32vmin, 70vmin 55vmin, 50vmin 45vmin, 80vmin 60vmin;
+}
+
+/* https://lukeroberts.tv/walk-cycles.php?pn=2 */
+/*************************/
+.is-title-active {
+  animation: main-title 150ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite;
+}
+
+@keyframes main-title {
+  0%, 45%, 90% {
+    top: 6vmin;
+    left: 49.9%;
+    opacity: 0.8;
+  }
+  55%, 60% {
+    top: 6.4vmin;
+    left: 50.1%;
+    opacity: 1;
+  }
+}
+.is-main-active {
+  animation: main 200ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite;
+}
+
+@keyframes main {
+  0%, 10%, 50%, 60% {
+    transform: translateX(0);
+  }
+  25%, 35%, 75%, 85% {
+    transform: translateX(0.5vmin);
+  }
+}
+.is-cup-active {
+  animation: cup 1250ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite;
+}
+
+@keyframes cup {
+  0%, 10%, 50%, 60% {
+    top: 22%;
+    transform: scale(1);
+  }
+  25%, 35%, 75%, 85% {
+    top: 26.25%;
+    transform: scale(0.985);
+  }
+}
+.is-handle-active {
+  animation: handle 1250ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite;
+}
+
+@keyframes handle {
+  0%, 10%, 50%, 60% {
+    left: 56%;
+    width: 18vmin;
+    height: 20vmin;
+  }
+  25%, 35%, 75%, 85% {
+    left: 54.5%;
+    width: 17.75vmin;
+    height: 19.75vmin;
+  }
+}
+.is-smoke-active {
+  animation: smoke 8000ms linear infinite;
+}
+
+@keyframes smoke {
+  0%, 20% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-100vh);
+  }
+  90%, 100% {
+    opacity: 0;
+    transform: translateY(-110vh);
+  }
+}
+.is-eyes-active {
+  animation: eyes 1250ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite;
+}
+
+@keyframes eyes {
+  0%, 10%, 50%, 60% {
+    left: -1.5%;
+  }
+  25%, 35%, 75%, 85% {
+    left: 0;
+  }
+}
+.is-nose-active {
+  animation: nose 1250ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite;
+}
+
+@keyframes nose {
+  0%, 10%, 50%, 60% {
+    left: 6.5%;
+  }
+  25%, 35%, 75%, 85% {
+    left: 9%;
+  }
+}
+.is-shadow-active {
+  animation: shadow 1250ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite;
+}
+
+@keyframes shadow {
+  0%, 40%, 80% {
+    width: 42vmin;
+  }
+  20%, 60% {
+    width: 35vmin;
+  }
+}
+.is-legl-active {
+  animation: leg 1250ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite;
+}
+
+.is-legr-active {
+  animation: leg 1250ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite 625ms;
+}
+
+@keyframes leg {
+  0%, 10% {
+    transform: translateX(0) scale(1) rotateZ(0deg);
+  }
+  25%, 35% {
+    transform: translateX(-1vmin) scale(0.975) rotateZ(-18.5deg);
+  }
+  50%, 60% {
+    transform: translateX(-2.75vmin) scale(0.95) rotateZ(-28.5deg);
+  }
+  75%, 85% {
+    transform: translateX(0) scale(0.975) rotateZ(10deg);
+  }
+}
+.is-legbl-active {
+  animation: leg__bottom 1250ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite;
+}
+
+.is-legbr-active {
+  animation: leg__bottom 1250ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite 625ms;
+}
+
+@keyframes leg__bottom {
+  0%, 10%, 100% {
+    transform: rotateZ(0deg);
+  }
+  25%, 35% {
+    transform: rotateZ(-25deg);
+  }
+  50%, 60% {
+    transform: rotateZ(-40deg);
+  }
+  75%, 85% {
+    transform: rotateZ(0deg);
+  }
+}
+.is-shoesl-active {
+  animation: leg__shoes 1250ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite;
+}
+
+.is-shoesr-active {
+  animation: leg__shoes 1250ms cubic-bezier(0.07, 0.87, 1, 0.2) infinite 625ms;
+}
+
+@keyframes leg__shoes {
+  0%, 10%, 100% {
+    top: 60%;
+    right: -0.5vmin;
+    transform: scale(1) rotateZ(0deg);
+  }
+  25%, 35% {
+    top: 60%;
+    right: -1.5vmin;
+    transform: scale(0.975) rotateZ(35deg);
+  }
+  50%, 60% {
+    top: 57%;
+    right: -2.15vmin;
+    transform: scale(0.925) rotateZ(50deg);
+  }
+  75%, 85% {
+    top: 60%;
+    right: -0.5vmin;
+    transform: scale(0.975) rotateZ(-10deg);
+  }
+}
+@keyframes screen {
+  0%, 45%, 90%, 100% {
+    background-image: radial-gradient(ellipse, transparent 30%, transparent 50%, rgba(22, 22, 22, 0.35), rgba(22, 22, 22, 0.85) 90%);
+  }
+  55%, 60% {
+    background-image: radial-gradient(ellipse, transparent 30%, transparent 49%, rgba(22, 22, 22, 0.35), rgba(22, 22, 22, 0.85) 87.5%);
+  }
+}
+@keyframes screen-1 {
+  0%, 45%, 90%, 100% {
+    top: -1vmin;
+    left: -1;
+    opacity: 0;
+  }
+  55%, 60% {
+    top: 1vmin;
+    left: 1vmin;
+    opacity: 0.6;
+  }
+}
+@keyframes screen-2 {
+  0%, 45%, 90%, 100% {
+    left: 0;
+    opacity: 0;
+  }
+  55%, 60% {
+    left: -10vmin;
+    opacity: 1;
+  }
+}
+@keyframes screen-3 {
+  0%, 45%, 90%, 100% {
+    top: 0;
+    left: 10vmin;
+    opacity: 0;
+  }
+  55%, 60% {
+    top: 2vmin;
+    left: 20vmin;
+    opacity: 0.7;
+  }
+}
+@keyframes screen-4 {
+  0%, 45%, 90%, 100% {
+    top: 1vmin;
+    left: 0vmin;
+    opacity: 0.2;
+  }
+  55%, 60% {
+    top: 1vmin;
+    left: 1vmin;
+    opacity: 0.7;
+  }
+}

@@ -1,0 +1,470 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.2vmin;
+  background: #F5F26E;
+  background-repeat: no-repeat;
+  background-size: 1000px;
+  background-position: 52% 12.8%;
+}
+
+.camera {
+  width: 88em;
+  height: 49.5em;
+  position: absolute;
+  top: 50%;
+  left: 49.4%;
+  transform: translate(-50%, -50%);
+  background-repeat: no-repeat;
+}
+.camera .top {
+  width: 93.7%;
+  height: 14em;
+  border-bottom: 0.5px solid #232323;
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(rgba(255, 255, 255, 0.6), #E3E3E5, #E4E4E4) 89% 0%/43em 0.6em, linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.3), #E4E4E4) 15% 86%/40em 1em, linear-gradient(to right, #F5F26E, #F5F26E 99.3%, #B0B0B0) 0% 0%/34.8em 3em, linear-gradient(to right, #E4E4E4, #E4E4E4) 0% 0%/95.4% 14em, linear-gradient(to right, #E8E7ED, #DFDFDF) 100% 100%/4em 9em;
+  background-repeat: no-repeat;
+}
+.camera .top:after {
+  content: "";
+  width: 5.8em;
+  height: 5.8em;
+  position: absolute;
+  border-radius: 50%;
+  top: 47.3%;
+  left: 57.3%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 50% 50%, #B8160D, #E21F1B 90%), radial-gradient(circle at 50% 50%, #B8160D, #E21F1B);
+  background: url(data:image/png;base64,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);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.camera .top .viewbox {
+  border-radius: 50%;
+  width: 3em;
+  height: 3em;
+  position: absolute;
+  top: 16%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.4) 70%, #444442 73%) 50% 38%/0.4em 0.4em, radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.4) 70%, #444442 73%) 50% 65%/0.4em 0.4em, radial-gradient(50% 50% at 50% 50%, #232323 70%, #444442 73%) 50% 50%/3.1em 3.1em, radial-gradient(50% 50% at 50% 50%, #444442 70%, #232325 73%) 50% 50%/2em 2em, #444442;
+  border: 2px solid #232323;
+  background-repeat: no-repeat;
+}
+.camera .top .knob_left_one {
+  width: 10.5em;
+  height: 4em;
+  position: absolute;
+  z-index: 5;
+  left: 11.4%;
+  top: -6.7%;
+  border-radius: 10px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background: linear-gradient(to right, #6b6a66, rgba(171, 170, 167, 0.7), #6b6a66) 0% 14.5%/100% 0.2em, linear-gradient(to right, #141313, #141313) 0% 100%/100% 0.2em, linear-gradient(to right, #fff 5%, #6D6C67 6%, #6D6C67 95%, #fff 96%) 0% 64%/100% 0.1em, linear-gradient(to right, #A8A8A8 3%, #E5E7E6, #A6A7A2, #8F8E8A 70%, #898884) 0% 100%/100% 3.3em;
+  background-repeat: no-repeat;
+}
+.camera .top .knob_left_one:before {
+  box-shadow: 0px 0px 3px 3px rgba(35, 35, 35, 0.4);
+  width: 3.3em;
+  height: 2.5em;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  position: absolute;
+  border-radius: 3px;
+  border-top: 0.5px solid silver;
+  border-bottom: 0.5px solid silver;
+  background: repeating-linear-gradient(90deg, transparent, transparent 3px, #C9C8C4 3px, #C9C8C4 5px), linear-gradient(to right, #6b6a66, rgba(171, 170, 167, 0.7), #6b6a66) 0% 100%/100% 0.2em;
+}
+.camera .top .knob_left_one:after {
+  width: 4.3em;
+  height: 0.4em;
+  top: 11%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  position: absolute;
+  border-radius: 2px;
+  border: 0.5px solid darkgray;
+  border-top: 0.5px solid silver;
+  border-bottom: 0.5px solid silver;
+  background: linear-gradient(to right, #E4E4E4, #92918F, #FBFBFB, #92918F, #E4E4E4);
+}
+.camera .top .knob_left_two {
+  width: 13em;
+  height: 3.2em;
+  position: absolute;
+  z-index: 5;
+  left: 25.5%;
+  border-radius: 10px;
+  background: linear-gradient(to right, #6b6a66, rgba(171, 170, 167, 0.7), #6b6a66) 0% 0%/100% 0.2em, linear-gradient(to right, #929292, transparent, #929292) 0% 50%/100% 90%, linear-gradient(to right, #141313, #141313, #929292) 0% 100%/100% 0.2em, #fff;
+  background-repeat: no-repeat;
+}
+.camera .top .knob_left_two:after {
+  width: 12.8em;
+  height: 2.5em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  position: absolute;
+  border-radius: 10px;
+  border-top: 0.5px solid silver;
+  border-bottom: 0.5px solid silver;
+  background: repeating-linear-gradient(90deg, transparent, transparent 3px, #C9C8C4 3px, #C9C8C4 5px), linear-gradient(to right, rgba(107, 106, 102, 0.7), rgba(171, 170, 167, 0.7), rgba(107, 106, 102, 0.7)) 0% 100%/100% 0.2em;
+}
+.camera .top .rect {
+  border-radius: 3px;
+  width: 6.3em;
+  height: 4.2em;
+  position: absolute;
+  top: 54.2%;
+  left: 34%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(50% 50% at 50% 50%, #E4E4E4 50%, #232325 53%) 50% 50%/5em 5em, linear-gradient(to right, transparent, transparent, #272624) 0% 50%/18% 70%, #0B0A06;
+  border: 2px solid #232323;
+  background-repeat: no-repeat;
+}
+.camera .lens {
+  z-index: 2;
+  box-shadow: 6px 16px 18px rgba(0, 0, 0, 0.7);
+  width: 33em;
+  height: 33em;
+  border: 0.5px solid #000;
+  position: absolute;
+  top: 58.4%;
+  left: 56%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: #e6e6e6;
+  background-repeat: no-repeat;
+}
+.camera .lens:after {
+  border-radius: 50%;
+  width: 33em;
+  height: 33em;
+  content: "";
+  position: absolute;
+  background: -webkit-radial-gradient(50% 0%, 30% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+}
+.camera .lens .lens_inner {
+  width: 32em;
+  height: 32em;
+  border: 6px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #e6e6e6;
+}
+.camera .lens .lens_inner:before {
+  content: "";
+  width: 28.4em;
+  height: 28.4em;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 50% 50%, #cfcfcf, #929292), radial-gradient(circle, red, #fdfdfd), #929292;
+  background-repeat: no-repeat;
+}
+.camera .lens .lens_inner:after {
+  content: "";
+  width: 27.6em;
+  height: 27.6em;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2), black), #000;
+}
+.camera .lens .lens_inner .lens_inner_inner {
+  width: 24em;
+  height: 24em;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #e6e6e6;
+  background: #232321;
+  background: #414141;
+  background: radial-gradient(circle at 50% 50%, #2B2B2B, #545452);
+  z-index: 1;
+}
+.camera .lens .lens_inner .lens_inner_inner:before {
+  content: "";
+  width: 23em;
+  height: 23em;
+  border-left: 1px solid #232321;
+  border-right: 1px solid #232321;
+  border-bottom: 1px solid #232321;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #414141;
+  background: #232321;
+}
+.camera .lens .lens_inner .lens_inner_inner:after {
+  content: "";
+  width: 22.5em;
+  height: 22.5em;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 50% 50%, #2B2B2B, #545452);
+}
+.camera .lens .lens_inner .lens_inner_inner .lens_inner_inner_inner {
+  width: 21em;
+  height: 21em;
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+  background: radial-gradient(circle at 50% 50%, rgba(173, 195, 207, 0.7), rgba(173, 195, 207, 0.8), rgba(173, 195, 207, 0.8), 70%, transparent 71%) 50% 50%/9em 9em, #232323;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+.camera .lens .lens_inner .lens_inner_inner .lens_inner_inner_inner .circle {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.camera .lens .lens_inner .lens_inner_inner .lens_inner_inner_inner .c1 {
+  width: 18em;
+  height: 18em;
+  background: radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), rgba(122, 53, 65, 0.5), rgba(178, 111, 120, 0.5), #924356, #833B47) 50% 0%/100% 50%, radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), #B66E75, red, #924356, #833B47) 50% 0%/100% 50%, radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), #6e8954, #6D944F, #6D944F) 50% 100%/100% 50%;
+  background-repeat: no-repeat;
+}
+.camera .lens .lens_inner .lens_inner_inner .lens_inner_inner_inner .c2 {
+  width: 15em;
+  height: 15em;
+  background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8), #6e8954, rgba(149, 214, 99, 0.4), #fff) 50% 100%/100% 50%, radial-gradient(circle at 50% 50%, rgba(91, 125, 134, 0.8), #99B7C4, rgba(84, 112, 126, 0.7));
+  background-repeat: no-repeat;
+}
+.camera .lens .lens_inner .lens_inner_inner .lens_inner_inner_inner .c3 {
+  width: 10em;
+  height: 10em;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3), #6e8954, rgba(109, 148, 79, 0.4), #fff) 50% 50%/100% 100%, radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3), #6e8954, #a2b09f, #fff) 50% 100%/100% 50%, radial-gradient(circle at 50% 50%, #9ab3bd, rgba(91, 125, 134, 0.8), #395434, rgba(84, 112, 126, 0.7));
+  background-repeat: no-repeat;
+}
+.camera .lens .lens_inner .lens_inner_inner .lens_inner_inner_inner .c4 {
+  position: absolute;
+  width: 20em;
+  height: 20em;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4), transparent) 50% 50%/100% 5em, -webkit-radial-gradient(50% 50%, 20% 50%, rgba(97, 133, 143, 0.8) 0%, rgba(0, 0, 0, 0) 100%) 30% 0.1883%/100% 51%, -webkit-radial-gradient(50% 50%, 30% 50%, rgba(0, 255, 0, 0.2) 0%, rgba(0, 0, 0, 0.9) 100%) 30% 0.1883%/100% 51%, -webkit-radial-gradient(50% 50%, 30% 50%, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0) 100%) 30% 10em/100% 100%, -webkit-radial-gradient(50% 50%, 40% 50%, rgba(0, 255, 0, 0.2) 0%, rgba(0, 0, 0, 0.9) 100%) 30% 10em/100% 100%, radial-gradient(50% 50% at 50% 50%, white 40%, transparent) 50% 50%/8em 8em;
+  background-repeat: no-repeat;
+}
+.camera .texture {
+  width: 93.7%;
+  height: 30.3em;
+  top: 61.8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background: linear-gradient(27deg, #F5F5F5 5px, transparent 5px) 0 5px, linear-gradient(207deg, #F5F5F5 5px, transparent 5px) 10px 0px, linear-gradient(27deg, #F8F8F8 5px, transparent 5px) 0px 10px, linear-gradient(207deg, #F8F8F8 5px, transparent 5px) 10px 5px, linear-gradient(#FFFAFA 25%, #F5F5F5 25%, #F5F5F5 50%, transparent 50%, transparent 75%, #F0F0F0 75%, #F0F0F0);
+  background-color: #E8E8E8;
+  background-size: 20px 20px;
+}
+.camera .texture .metal_one {
+  box-shadow: -2px 4px 7px rgba(0, 0, 0, 0.9);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  width: 6em;
+  height: 6.5em;
+  position: absolute;
+  top: 46%;
+  left: 34%;
+  transform: translate(-50%, -50%);
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.4) 70%, #b1b0ac 73%, rgba(159, 158, 154, 0.2) 98%) 50% 38%/6em 100%, #BFBEBC;
+  background-repeat: no-repeat;
+}
+.camera .texture .metal_one:before {
+  width: 4.5em;
+  height: 4.5em;
+  content: "";
+  border-radius: 50%;
+  border: 2px solid #201F1B;
+  position: absolute;
+  top: 14%;
+  left: 16%;
+  background: radial-gradient(50% 50% at 50% 50%, #9F9E9A 40%, rgba(162, 162, 160, 0.7), rgba(255, 255, 255, 0.4)) 50% 50%/100% 100%, #9F9F9D;
+  background-repeat: no-repeat;
+}
+.camera .texture .metal_one:after {
+  width: 3.5em;
+  height: 3.5em;
+  content: "";
+  border-radius: 50%;
+  border: 2px solid #989896;
+  position: absolute;
+  top: 22%;
+  left: 24%;
+  background: radial-gradient(50% 50% at 50% 50%, #9F9E9A 40%, rgba(162, 162, 160, 0.7), rgba(255, 255, 255, 0.2)) 50% 50%/100% 100%, #9F9E9A;
+  background-repeat: no-repeat;
+}
+.camera .texture .metal_two {
+  box-shadow: -2px 2px 2px rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  width: 6.5em;
+  height: 6.5em;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  position: absolute;
+  top: 2em;
+  left: 26.5%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.4) 70%, #b1b0ac 73%, rgba(159, 158, 154, 0.2) 98%) 50% 38%/6em 100%, #D8D8D8;
+  background-repeat: no-repeat;
+}
+.camera .texture .metal_two:before {
+  width: 4.3em;
+  height: 4.3em;
+  content: "";
+  border-radius: 50%;
+  border: 2px solid #201F1B;
+  border: 2px solid #201F1B;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, #9F9E9A 40%, rgba(162, 162, 160, 0.7), rgba(255, 255, 255, 0.4), #8A8985) 50% 50%/100% 100%, #9F9F9D;
+  background-repeat: no-repeat;
+}
+.camera .texture .metal_two:after {
+  width: 3.5em;
+  height: 3.5em;
+  content: "";
+  border-radius: 50%;
+  border: 2px solid #989896;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(50% 50% at 50% 50%, #9F9E9A, rgba(162, 162, 160, 0.7), rgba(255, 255, 255, 0.3)) 50% 50%/100% 100%, #9F9E9A;
+  background-repeat: no-repeat;
+}
+.camera .bottom {
+  border-top: 0.5px solid #232323;
+  position: absolute;
+  top: 96%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 93.7%;
+  height: 3.5em;
+  background: linear-gradient(transparent, rgba(149, 150, 152, 0.8), #3E3F41) 50% 100%/100% 1em, #DCDDDF;
+  background-repeat: no-repeat;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.camera:after {
+  width: 82.4em;
+  height: 49.5em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  position: absolute;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0.3%, transparent 1.5%, rgba(255, 255, 255, 0.5) 3%, rgba(255, 255, 255, 0.5) 3%, transparent 8%, rgba(149, 150, 152, 0)) 50% 92%/100% 90%, linear-gradient(to right, rgba(0, 0, 0, 0) 0.3%, transparent 60%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), transparent 95%, rgba(149, 150, 152, 0.3)) 100% 15%/20% 19.3%, linear-gradient(to right, rgba(0, 0, 0, 0) 0.3%, transparent 60%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2), transparent 95%, rgba(149, 150, 152, 0.3)) 100% 96%/20% 68%;
+  background-repeat: no-repeat;
+}
+.camera .flash_holder {
+  box-shadow: 10px 7px 5px -4px rgba(0, 0, 0, 0.2), 2px 4px 3px 0px rgba(128, 128, 128, 0.2), 0 5px 2px -2px gray;
+  z-index: 3;
+  border-bottom-right-radius: 5px;
+  width: 23em;
+  height: 14em;
+  border-right: 2px solid rgba(255, 255, 255, 0.7);
+  position: absolute;
+  left: 65.9%;
+  top: 2.5%;
+}
+.camera .flash_holder .flash {
+  box-shadow: inset 0px 0px 7px 4px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  width: 15.8em;
+  height: 11em;
+  border: 2px solid #000;
+  position: absolute;
+  top: 50%;
+  left: 59%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, #C1C3D2, #C1C3D2 99.3%, #B0B0B0) 0% 0%/100% 1.6em, linear-gradient(to right, #C1C3D2, #C1C3D2 99.3%, #B0B0B0) 0% 100%/100% 1.5em, linear-gradient(to right, #121210, #121210, #4D4D4D, #4D4D4D, #282828 60%, #282828) 0% 100%/1.5em 100%, linear-gradient(to left, #121210, #121210, #4D4D4D, #4D4D4D, #282828 60%, #282828) 100% 100%/1.5em 100%, radial-gradient(50% 50% at 50% 50%, transparent 50%, #232325 51%) 50% 50%/150% 170%, linear-gradient(to right, rgba(255, 255, 255, 0.4), #1f1e24, #1f1e24, #45444A 30%, rgba(255, 255, 255, 0.2), #1f1e24 31%) 20% 50%/3em 100%, linear-gradient(to right, #45444A, #1f1e24, #1f1e24, #45444A 30%, #1f1e24 31%) 20% 50%/3em 100%, linear-gradient(to left, #1f1e24, #1f1e24, #1f1e24 31%) 77% 50%/3em 100%, linear-gradient(to left, rgba(67, 67, 69, 0.8), rgba(67, 67, 69, 0.8)) 0 100%/3.5em 100%, linear-gradient(to left, rgba(67, 67, 69, 0.8), rgba(67, 67, 69, 0.8)) 100% 100%/3.5em 100%, radial-gradient(50% 50% at 50% 50%, transparent 50%, #1f1e24 51%) 50% 70%/80% 80%;
+  background-repeat: no-repeat;
+}
+.camera .flash_holder .flash:after {
+  content: "";
+  width: 15.3em;
+  height: 10.5em;
+  position: absolute;
+  border-radius: 5px;
+  background: -webkit-radial-gradient(50% 0%, 15% 50%, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(50% 0%, 40% 50%, rgba(255, 255, 255, 0.23) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(50% 100%, 10% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+}
+.camera .knob_right {
+  width: 7em;
+  height: 5.3em;
+  position: absolute;
+  z-index: -2;
+  left: 89.5%;
+  top: 2%;
+  border-radius: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: linear-gradient(to bottom, rgba(179, 178, 176, 0.3), rgba(173, 174, 168, 0.3)) 0% 53%/95% 4.4em, linear-gradient(to bottom, #8A8985, #565553) 0% 100%/95% 0.3em, linear-gradient(to right, #8E8986 30%, #a6a5a1, #e8e8e8, rgba(137, 136, 132, 0.3), #dcdedd 95%, rgba(137, 136, 132, 0.7)) 0% 100%/95% 2.9em, linear-gradient(to right, #fff, #fff) 0% 100%/95% 2.9em;
+  background-repeat: no-repeat;
+}
+.camera .knob_right:before {
+  width: 5em;
+  height: 2.2em;
+  top: 25%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  content: "";
+  position: absolute;
+  border-radius: 3px;
+  border: 2px solid darkgray;
+  border-top: 1px solid silver;
+  border-bottom: 2px solid #908B88;
+  background: repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(201, 200, 196, 0.7) 3px, rgba(201, 200, 196, 0.7) 5px), linear-gradient(to right, #6b6a66, rgba(171, 170, 167, 0.7), #6b6a66) 0% 100%/100% 0.2em, #fff;
+}
+.camera .knob_right:after {
+  width: 96%;
+  height: 0.2em;
+  top: 5%;
+  left: 90%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  content: "";
+  position: absolute;
+  border-radius: 5px;
+  border: 1px solid rgba(169, 169, 169, 0.7);
+  background: linear-gradient(to right, #D9D9D9, #444341);
+}

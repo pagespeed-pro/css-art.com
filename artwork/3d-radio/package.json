@@ -1,0 +1,39 @@
+{
+    "name": "3d-radio",
+    "version": "1.0.0",
+    "title": "3D Radio",
+    "description": "Designed by: liukui\n\t\tOriginal image: https://dribbble.com/shots/3029443-Radio-Gif",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "3d-radio.html",
+    "css": [
+        "3d-radio.css"
+    ],
+    "js": "/*\n\t\tDesigned by: liukui\n\t\tOriginal image: https://dribbble.com/shots/3029443-Radio-Gif\n*/\n\n\nlet b = document.body;\nlet radio = document.querySelector(\"#radio\");\nlet shadow= document.querySelector(\"#shadow\");\nlet buttonCta = document.querySelector(\"#button-cta\");\nlet cover = document.querySelector(\"#cover\");\nlet circles = document.querySelector(\"#circles\");\n\nlet a = document.querySelector(\"#audio\");\nlet son = document.querySelector(\"#son\");\nlet soff = document.querySelector(\"#soff\");\n\n\n/*******************/\nlet radioPlaying = () => {\n    radio.classList.toggle('is-radio-active')\n    shadow.classList.toggle('is-shadow-active')\n    buttonCta.classList.toggle('is-button-active')\n    cover.classList.toggle('is-cover-active')\n    // circles.classList.toggle('is-circle-active')\n\n    a.loop = true;\n\n    if (a.paused) a.play();\n    else {\n        a.pause();\n        a.currentTime = 0;\n    }\n\n    son.classList.toggle(\"s\");\n    soff.classList.toggle(\"s\");\n}\n\n/*******************/\nbuttonCta.addEventListener(\"click\", radioPlaying)\nsoff.addEventListener(\"click\", radioPlaying)\nson.addEventListener(\"click\", radioPlaying)\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/ExPpgqG",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/ExPpgqG"
+}

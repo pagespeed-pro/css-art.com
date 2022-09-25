@@ -1,0 +1,45 @@
+{
+    "name": "swag-2-0",
+    "version": "1.0.0",
+    "title": "Swag 2.0",
+    "description": "Original Image: https://lukeroberts.tv/walk-cycles.php?pn=2\n\tDesigned by: lukeroberts",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "swag-2-0.html",
+    "css": [
+        "swag-2-0.css"
+    ],
+    "js": "/*\n\tOriginal Image: https://lukeroberts.tv/walk-cycles.php?pn=2\n\tDesigned by: lukeroberts\n*/\n\nlet b = document.body;\nlet a = document.querySelector(\"#audio\");\nlet son = document.querySelector(\"#son\");\nlet soff = document.querySelector(\"#soff\");\n\nlet title = document.querySelector(\"#title\");\nlet main = document.querySelector(\"#main\");\nlet cup = document.querySelector(\"#cup\");\nlet handle = document.querySelector(\"#handle\");\nlet smoke = document.querySelectorAll(\".smoke\");\nlet eyes = document.querySelector(\"#eyes\");\nlet nose = document.querySelector(\"#nose\");\nlet shadow = document.querySelector(\"#shadow\");\nlet legL = document.querySelector(\"#legl\");\nlet legBottomL = document.querySelector(\"#legbl\");\nlet shoesL = document.querySelector(\"#shoesl\");\nlet legB = document.querySelector(\"#legr\");\nlet legBottomB = document.querySelector(\"#legbr\");\nlet shoesB = document.querySelector(\"#shoesr\");\n/*******************/\n/*******************/\nlet addAnimation = () => {\n\ttitle.classList.toggle(\"is-title-active\");\n\tmain.classList.toggle(\"is-main-active\");\n\tcup.classList.toggle(\"is-cup-active\");\n\thandle.classList.toggle(\"is-handle-active\");\n\tsmoke.forEach((s) => s.classList.toggle(\"is-smoke-active\"));\n\teyes.classList.toggle(\"is-eyes-active\");\n\tnose.classList.toggle(\"is-nose-active\");\n\tshadow.classList.toggle(\"is-shadow-active\");\n\n\tlegL.classList.toggle(\"is-legl-active\");\n\tlegBottomL.classList.toggle(\"is-legbl-active\");\n\tshoesL.classList.toggle(\"is-shoesl-active\");\n\tlegB.classList.toggle(\"is-legr-active\");\n\tlegBottomB.classList.toggle(\"is-legbr-active\");\n\tshoesB.classList.toggle(\"is-shoesr-active\");\n\n\tson.classList.toggle(\"s\");\n\tsoff.classList.toggle(\"s\");\n};\nlet playAudio = () => {\n\taddAnimation();\n\ta.loop = true;\n\tif (a.paused) {\n\t\tsetTimeout(() => {\n\t\t\ta.play();\n\t\t}, 100);\n\t} else {\n\t\ta.pause();\n\t\ta.currentTime = 0;\n\t}\n};\n/*******************/\nb.addEventListener(\"click\", playAudio);\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "swag",
+        "cup",
+        "vintage",
+        "cartoon",
+        "walk"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/JjJKJRV",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/JjJKJRV"
+}

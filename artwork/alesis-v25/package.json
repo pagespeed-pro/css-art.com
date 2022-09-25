@@ -1,0 +1,44 @@
+{
+    "name": "alesis-v25",
+    "version": "1.0.0",
+    "title": "Alesis V25",
+    "description": "",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "alesis-v25.html",
+    "css": [
+        "alesis-v25.css"
+    ],
+    "js": "const h = document.querySelector(\"#h\");\nconst b = document.body;\nconst keyWhite = document.querySelectorAll('.key-w')\nconst audioSound = document.querySelectorAll('.audio')\nconst text = document.querySelector('#g')\n\n/*****************/\n/*****************/\nconst base = (e) => {\n    var x = e.pageX / window.innerWidth - 0.5;\n    var y = e.pageY / window.innerHeight - 0.5;\n    h.style.transform = `\n        perspective(20000px)\n        rotateX(${ y * 55  + 60}deg)\n        rotateZ(${ -x * 360  + 35}deg)\n        translateZ(-6vw)\n    `;\n}\n\nconst playPianoFunc = (e) => {\n    let kc = event.keyCode;\n\n    if(kc==77){\n\n        b.removeEventListener(\"pointermove\", base);\n        window.removeEventListener(\"keydown\", playNoteFunc);\n        window.removeEventListener(\"keyup\", pauseNoteFunc);\n        h.classList.add('is-main-playing')\n\n        audioSound[15].play()\n        text.classList.add('is-text-visible')\n        keyWhite.forEach( (k, i) => { k.style.animation = `key-w 500ms ease infinite ${i/10}s` })\n\n        setTimeout(()=>{\n            h.classList.remove('is-main-playing')\n            b.addEventListener(\"pointermove\", base);\n            window.addEventListener(\"keydown\", playNoteFunc);\n            window.addEventListener(\"keyup\", pauseNoteFunc);\n\n            audioSound[15].pause()\n            audioSound[15].currentTime = 0\n            text.classList.remove('is-text-visible')\n            keyWhite.forEach( (k, i) => { k.style.animation = `none` })\n\n        }, 8000)\n\n    }\n}\n\nconst playNoteFunc = (e) => {\n    let kc = event.keyCode;\n    console.log(kc)\n    \n    switch (kc) {\n        case 81:\n            keyWhite[0].classList.add('is-key-down')\n            audioSound[0].play()\n            break;\n        case 87:\n            keyWhite[1].classList.add('is-key-down')\n            audioSound[1].play()\n            break;\n        case 69:\n            keyWhite[2].classList.add('is-key-down')\n            audioSound[2].play()\n            break;\n        case 82:\n            keyWhite[3].classList.add('is-key-down')\n            audioSound[3].play()\n            break;\n        case 84:\n            keyWhite[4].classList.add('is-key-down')\n            audioSound[4].play()\n            break;\n        case 89:\n            keyWhite[5].classList.add('is-key-down')\n            audioSound[5].play()\n            break;\n        case 85:\n            keyWhite[6].classList.add('is-key-down')\n            audioSound[6].play()\n            break;\n        case 73:\n            keyWhite[7].classList.add('is-key-down')\n            audioSound[7].play()\n            break;\n        case 79:\n            keyWhite[8].classList.add('is-key-down')\n            audioSound[8].play()\n            break;\n        case 80:\n            keyWhite[9].classList.add('is-key-down')\n            audioSound[9].play()\n            break;\n        case 65:\n            keyWhite[10].classList.add('is-key-down')\n            audioSound[10].play()\n            break;\n        case 83:\n            keyWhite[11].classList.add('is-key-down')\n            audioSound[11].play()\n            break;\n        case 68:\n            keyWhite[12].classList.add('is-key-down')\n            audioSound[12].play()\n            break;\n        case 70:\n            keyWhite[13].classList.add('is-key-down')\n            audioSound[13].play()\n            break;\n        case 71:\n            keyWhite[14].classList.add('is-key-down')\n            audioSound[14].play()\n            break;\n        default:\n            break;\n    }\n\n}\nconst pauseNoteFunc = (e) => {\n    let kc = event.keyCode;\n    \n    switch (kc) {\n        case 81:\n            keyWhite[0].classList.remove('is-key-down')\n            break;\n        case 87:\n            keyWhite[1].classList.remove('is-key-down')\n            break;\n        case 69:\n            keyWhite[2].classList.remove('is-key-down')\n            break;\n        case 82:\n            keyWhite[3].classList.remove('is-key-down')\n            break;\n        case 84:\n            keyWhite[4].classList.remove('is-key-down')\n            break;\n        case 89:\n            keyWhite[5].classList.remove('is-key-down')\n            break;\n        case 85:\n            keyWhite[6].classList.remove('is-key-down')\n            break;\n        case 73:\n            keyWhite[7].classList.remove('is-key-down')\n            break;\n        case 79:\n            keyWhite[8].classList.remove('is-key-down')\n            break;\n        case 80:\n            keyWhite[9].classList.remove('is-key-down')\n            break;\n        case 65:\n            keyWhite[10].classList.remove('is-key-down')\n            break;\n        case 83:\n            keyWhite[11].classList.remove('is-key-down')\n            break;\n        case 68:\n            keyWhite[12].classList.remove('is-key-down')\n            break;\n        case 70:\n            keyWhite[13].classList.remove('is-key-down')\n            break;\n        case 71:\n            keyWhite[14].classList.remove('is-key-down')\n            break;\n        default:\n            break;\n    }\n\n}\n/*****************/\n/*****************/\nb.addEventListener(\"pointermove\", base);\nwindow.addEventListener(\"keydown\", playNoteFunc);\nwindow.addEventListener(\"keyup\", pauseNoteFunc);\nwindow.addEventListener(\"keydown\", playPianoFunc);\n\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "piano",
+        "keyboard",
+        "music",
+        "song"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/RwKyeEg",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/RwKyeEg"
+}

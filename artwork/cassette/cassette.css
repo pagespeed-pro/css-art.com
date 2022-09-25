@@ -1,0 +1,241 @@
+body {
+  font-size: 1.5vmin;
+  background: #ffc700;
+  width: 100vw;
+  height: 100vh;
+}
+
+.cassette {
+  width: 46em;
+  height: 28.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 13px;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.7), #DCDBD2) 0% 88%/3em 8em, linear-gradient(#DCDBD2 49%, #DCDBD2 51%) 0% 88%/3em 8em, linear-gradient(to right, white, #fff) 100% 88%/1em 8em, linear-gradient(#fff 49%, #fff 51%) 100% 88%/3em 8em;
+  background-repeat: no-repeat;
+}
+.cassette:after {
+  box-shadow: -10px 0 15px -2px rgba(35, 35, 35, 0.2), -10px 0 25px 12px rgba(61, 61, 61, 0.5), -45px 0 15px -2px rgba(35, 35, 35, 0.3), 15px 0 25px 15px rgba(35, 35, 35, 0.2), 0 0 85px 30px rgba(61, 61, 61, 0.2), 0 0 5px 5px rgba(35, 35, 35, 0.1);
+  content: "";
+  width: 45em;
+  height: 28.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 13px;
+  background: linear-gradient(#fff 49%, #F5F5F5 51%) 50% 100%/100% 0.5em;
+}
+.cassette .yellow {
+  z-index: 4;
+  box-shadow: inset 0px 0px 1px 0 white, inset 0px 0px 5px 0 #cd9e00;
+  width: 40em;
+  height: 18em;
+  border-radius: 7px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background: #fede00;
+}
+.cassette .yellow h1 {
+  font-family: "Indie Flower", cursive;
+  font-size: 4em;
+  text-align: center;
+  margin-top: 15px;
+}
+.cassette .yellow .middle {
+  width: 26em;
+  height: 6em;
+  position: absolute;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to left, transparent, #F4F5F0, rgba(207, 206, 202, 0.2)) 26% 50%/1em 5em, linear-gradient(#F4F5F0 49%, #F4F5F0 51%) 26% 0%/2em 6em, linear-gradient(#fff 20%, #CFCECA) 19% 7%/4em 0.5em, linear-gradient(to right, transparent, #F4F5F0, rgba(207, 206, 202, 0.2)) 77% 50%/1em 5em, linear-gradient(#F4F5F0 49%, #F4F5F0 51%) 74% 0%/2em 6em, linear-gradient(#fff 20%, #CFCECA) 87% 7%/4em 0.5em, radial-gradient(100% 100% at 50% 50%, rgba(35, 35, 35, 0.6), rgba(35, 35, 35, 0.3) 50%, rgba(0, 0, 0, 0) 53%) 4% 56%/4.5em 4.5em, radial-gradient(100% 100% at 50% 50%, #ffc700 50%, rgba(0, 0, 0, 0) 51%) 3.5% 50%/4.7em 4.7em, radial-gradient(100% 100% at 70% 50%, rgba(35, 35, 35, 0.6), rgba(35, 35, 35, 0.3) 50%, rgba(0, 0, 0, 0) 53%) 92% 54%/4.5em 4.5em, radial-gradient(100% 100% at 50% 50%, #ffc700 50%, rgba(0, 0, 0, 0) 51%) 94% 50%/4.7em 4.7em, linear-gradient(#F4F5F0 49%, #F4F5F0 51%) 74% 0%/2em 6em, linear-gradient(#F4F5F0 49%, #F4F5F0 51%) 50% 0%/10em 0.5em, linear-gradient(#F4F5F0 49%, #F4F5F0 51%) 50% 100%/10em 0.5em, linear-gradient(#F4F5F0 49%, #F4F5F0 51%) 26% 0%/2em 6em, radial-gradient(100% 100% at 0% 50%, #d3ceca 50%, rgba(0, 0, 0, 0) 53%) 32% 50%/3em 4.5em, radial-gradient(100% 100% at 100% 50%, #d3ceca 50%, rgba(0, 0, 0, 0) 53%) 68% 50%/3em 4.5em, radial-gradient(100% 100% at 100% 50%, #232323 50%, rgba(0, 0, 0, 0) 51%) 48% 50%/10em 10em, linear-gradient(to right, rgba(35, 35, 35, 0.4) 19%, rgba(35, 35, 35, 0.8) 51%) 50% 50%/9.5em 5em, linear-gradient(#FFC700 49%, #FFC700 51%) 50% 50%/9.5em 5em, linear-gradient(#F4F5F0 49%, #F4F5F0 51%) 50% 0%/19em 6em, radial-gradient(100% 100% at 50% 50%, #f4f5f0 50%, rgba(0, 0, 0, 0) 51%) 1% 0%/6em 6em, radial-gradient(100% 100% at 50% 50%, #f4f5f0 50%, rgba(0, 0, 0, 0) 51%) 99% 0%/6em 6em;
+  background-repeat: no-repeat;
+}
+.cassette .yellow .middle .l {
+  width: 4.5em;
+  height: 4.5em;
+  border: 1px solid #F4F5F0;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px 10px rgba(35, 35, 35, 0.9);
+  left: 2%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  position: relative;
+  width: 4.7em;
+  height: 4.7em;
+  border-radius: 50%;
+  padding: 0;
+  list-style: none;
+}
+.cassette .yellow .middle .l > * {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -0.3em;
+  width: 0.6em;
+  height: 0.6em;
+}
+.cassette .yellow .middle .l > *:nth-of-type(1) {
+  transform: rotate(0deg) translate(2.35em) rotate(0deg);
+}
+.cassette .yellow .middle .l > *:nth-of-type(2) {
+  transform: rotate(60deg) translate(2.35em) rotate(-60deg);
+}
+.cassette .yellow .middle .l > *:nth-of-type(3) {
+  transform: rotate(120deg) translate(2.35em) rotate(-120deg);
+}
+.cassette .yellow .middle .l > *:nth-of-type(4) {
+  transform: rotate(180deg) translate(2.35em) rotate(-180deg);
+}
+.cassette .yellow .middle .l > *:nth-of-type(5) {
+  transform: rotate(240deg) translate(2.35em) rotate(-240deg);
+}
+.cassette .yellow .middle .l > *:nth-of-type(6) {
+  transform: rotate(300deg) translate(2.35em) rotate(-300deg);
+}
+.cassette .yellow .middle .l .dot {
+  width: 0.4em;
+  height: 0.7em;
+  background: #F4F5F0;
+}
+.cassette .yellow .middle .l:after {
+  content: "";
+  width: 4em;
+  height: 4em;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: -1%;
+  transform: translate(0%, -50%);
+}
+.cassette .yellow .middle .r {
+  width: 4.5em;
+  height: 4.5em;
+  border: 1px solid #F4F5F0;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  box-shadow: inset 0 0 10px 10px rgba(35, 35, 35, 0.9);
+  left: 67%;
+  top: -30%;
+  transform: translate(50%, -50%);
+  position: relative;
+  width: 4.7em;
+  height: 4.7em;
+  border-radius: 50%;
+  padding: 0;
+  list-style: none;
+}
+.cassette .yellow .middle .r > * {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -0.3em;
+  width: 0.6em;
+  height: 0.6em;
+}
+.cassette .yellow .middle .r > *:nth-of-type(1) {
+  transform: rotate(0deg) translate(2.35em) rotate(0deg);
+}
+.cassette .yellow .middle .r > *:nth-of-type(2) {
+  transform: rotate(60deg) translate(2.35em) rotate(-60deg);
+}
+.cassette .yellow .middle .r > *:nth-of-type(3) {
+  transform: rotate(120deg) translate(2.35em) rotate(-120deg);
+}
+.cassette .yellow .middle .r > *:nth-of-type(4) {
+  transform: rotate(180deg) translate(2.35em) rotate(-180deg);
+}
+.cassette .yellow .middle .r > *:nth-of-type(5) {
+  transform: rotate(240deg) translate(2.35em) rotate(-240deg);
+}
+.cassette .yellow .middle .r > *:nth-of-type(6) {
+  transform: rotate(300deg) translate(2.35em) rotate(-300deg);
+}
+.cassette .yellow .middle .r .dot {
+  width: 0.4em;
+  height: 0.7em;
+  background: #F4F5F0;
+}
+.cassette .yellow .middle .r:after {
+  content: "";
+  width: 4em;
+  height: 4em;
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: -1%;
+  transform: translate(0%, -50%);
+}
+.cassette .bottom {
+  z-index: 4;
+  width: 32.2em;
+  height: 7.5em;
+  position: absolute;
+  top: 87%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cassette .bottom:after {
+  content: "";
+  position: absolute;
+  width: 29em;
+  height: 7.5em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(100% 100% at 50% 50%, rgba(35, 35, 35, 0.5), rgba(35, 35, 35, 0.8) 50%, rgba(0, 0, 0, 0) 53%) 26% 80%/1.5em 1.5em, radial-gradient(100% 100% at 50% 50%, #ffc700, #ffc700 50%, rgba(0, 0, 0, 0) 53%) 26% 80%/1.5em 1.5em, radial-gradient(100% 100% at 50% 50%, rgba(35, 35, 35, 0.5), rgba(35, 35, 35, 0.8) 50%, rgba(0, 0, 0, 0) 53%) 74.5% 80%/1.5em 1.5em, radial-gradient(100% 100% at 50% 50%, #ffc700, #ffc700 50%, rgba(0, 0, 0, 0) 53%) 74.5% 80%/1.5em 1.5em, radial-gradient(100% 100% at 50% 50%, rgba(35, 35, 35, 0.5), rgba(35, 35, 35, 0.8) 50%, rgba(0, 0, 0, 0) 53%) 93% 88%/2em 2em, radial-gradient(100% 100% at 50% 50%, #ffc700, #ffc700 50%, rgba(0, 0, 0, 0) 53%) 93% 88%/2em 2em, radial-gradient(100% 100% at 50% 50%, rgba(35, 35, 35, 0.5), rgba(35, 35, 35, 0.8) 50%, rgba(0, 0, 0, 0) 53%) 7% 88%/2em 2em, radial-gradient(100% 100% at 50% 50%, #ffc700, #ffc700 50%, rgba(0, 0, 0, 0) 53%) 7% 88%/2em 2em;
+  background-repeat: no-repeat;
+}
+.cassette .bottom .middle {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 28.5em;
+  height: 100%;
+  position: absolute;
+  position: absolute;
+  background: #F6F7F2;
+  box-shadow: 0px 0 10px rgba(136, 136, 136, 0.3);
+}
+.cassette .bottom .middle:after {
+  width: 29em;
+  height: 7.5em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  position: absolute;
+}
+.cassette .bottom .sides {
+  width: 33.3%;
+  height: 100%;
+  position: absolute;
+}
+.cassette .bottom .l {
+  border-top-left-radius: 5px;
+  box-shadow: -5px 2px 5px -1px rgba(136, 136, 136, 0.3);
+  position: absolute;
+  transform: skew(-11deg) translate(-50%, -50%);
+  top: 50%;
+  left: 17%;
+  background: #F6F7F2;
+}
+.cassette .bottom .r {
+  border-top-right-radius: 5px;
+  box-shadow: 5px 2px 5px -1px rgba(136, 136, 136, 0.3);
+  position: absolute;
+  transform: skew(11deg) translate(-50%, -50%);
+  top: 50%;
+  left: 83%;
+  background: #F6F7F2;
+}

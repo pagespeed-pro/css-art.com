@@ -1,0 +1,592 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 10px;
+  font-family: arial;
+  background: #BBF1F1;
+}
+body #kass {
+  position: absolute;
+  bottom: 0;
+  font-size: 2em;
+  padding: 0.5em;
+  right: 0;
+}
+body #kass a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+.mpkMini {
+  font-size: 1vmin;
+  width: 93.5em;
+  height: 52em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 1em 3.5em -3.5em red;
+  box-shadow: 0px 2.4em 1em -1.5em rgba(0, 0, 0, 0.7);
+  background: linear-gradient(to bottom, #9E0219, #DA4040) 0% 0%/100% 0.5em, linear-gradient(to left, #1c1c1c 79%, rgba(255, 255, 255, 0.5)) 100% 50%/0.8em 100%, linear-gradient(to right, #1c1c1c 79%, rgba(255, 255, 255, 0.5)) 0% 50%/0.8em 100%, #DA4040;
+  background-repeat: no-repeat;
+}
+@media (min-width: 1200px) {
+  .mpkMini {
+    font-size: 1.4vmin;
+  }
+}
+@media (max-width: 599px) {
+  .mpkMini {
+    font-size: 1vmin;
+  }
+}
+@media (min-width: 600px) {
+  .mpkMini {
+    font-size: 1vmin;
+  }
+}
+.mpkMini:after {
+  content: "";
+  width: 0.8em;
+  height: 101%;
+  background: linear-gradient(to right, #1c1c1c 79%, rgba(255, 255, 255, 0.5)) 0% 50%/0.8em 100%;
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+}
+.mpkMini:before {
+  content: "";
+  width: 0.8em;
+  height: 101%;
+  background: linear-gradient(to left, #1c1c1c 79%, rgba(255, 255, 255, 0.5)) 0% 50%/0.8em 100%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translatey(-50%);
+}
+.mpkMini .logo_main {
+  position: absolute;
+  width: 9em;
+  height: 4em;
+  top: 42%;
+  left: 4%;
+  background-image: url(https://assets.codepen.io/2970881/logowh.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.mpkMini .logo_second {
+  width: 15em;
+  height: 3em;
+  background: url("https://assets.codepen.io/2970881/mpk.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 42.8%;
+  left: 14.5%;
+}
+.mpkMini .top_left_knob {
+  width: 8em;
+  height: 8em;
+  position: absolute;
+  top: 3%;
+  left: 3.8%;
+  border-radius: 50%;
+  box-shadow: inset -1.5em 1.5em 2.8em rgba(0, 0, 0, 0.2), inset 1.5em -1.5em 3.8em #ff5151;
+  background: #DA4040;
+  background-repeat: no-repeat;
+}
+.mpkMini .top_left_knob .knob {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 90%, transparent, transparent 50%, rgba(255, 255, 255, 0.1) 70%, rgba(0, 0, 0, 0.1) 85%), radial-gradient(circle at 30%, transparent, transparent 50%, rgba(255, 255, 255, 0.2) 80%, #635B4A 85%), radial-gradient(circle at 100%, rgba(255, 255, 255, 0.02) 15%, #39383B 40%, #2A2528 75%), -webkit-radial-gradient(80% 100%, 38% 50%, rgba(0, 0, 0, 0.69) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(20% 0%, 18% 50%, rgba(0, 0, 0, 0.69) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(100% 25%, 60% 25%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(0% 75%, 60% 25%, rgba(255, 255, 255, 0.35) 0%, rgba(255, 255, 255, 0) 100%), radial-gradient(100% 100% at 50% 50%, rgba(37, 37, 37, 0.7) 50%, rgba(187, 241, 241, 0) 51%) 50% 50%/5.8em 5.8em, radial-gradient(100% 100% at 50% 50%, #625c4f 50%, rgba(98, 92, 79, 0) 51%) 5% 50%/4em 6em, radial-gradient(100% 100% at 50% 50%, blue 50%, rgba(0, 0, 255, 0) 51%) 0% 50%/4em 6em, #625C4F;
+  background-repeat: no-repeat;
+  box-shadow: inset 0.4em 0em 0.4em #261914, inset 0.5em 0em 0.5em rgba(255, 255, 255, 0.4), -1.7em 0.9em 1em rgba(0, 0, 0, 0.5), 1em -0.1em 1em rgba(0, 0, 0, 0.35);
+}
+.mpkMini .top_left_knob .knob .inner_knob {
+  width: 3.5em;
+  height: 3.5em;
+  border: 0.1em solid #000;
+  border-radius: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0.4em 0.4em 0.5em rgba(0, 0, 0, 0.3), inset 0px 0px 0.8em rgba(0, 0, 0, 0.35);
+  background: radial-gradient(circle at 100%, #646968, #39383B 40%, #2A2528 75%), linear-gradient(45deg, #2A2428, #474c4f);
+}
+.mpkMini .left_btns {
+  width: 10.7em;
+  height: 11.3em;
+  position: absolute;
+  left: 2.7%;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.mpkMini .left_btns > p {
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  background: #DA4040;
+  width: 100%;
+  height: 0.9em;
+}
+.mpkMini .left_btns > p:before {
+  font-size: 0.7em;
+  content: "";
+  font-weight: normal;
+  width: 95%;
+  height: 5em;
+  position: absolute;
+  border: 0.1em solid white;
+  top: 0.3em;
+  border-radius: 0.5em;
+  left: 50%;
+  transform: translatex(-50%);
+}
+.mpkMini .left_btns > p:after {
+  font-size: 0.75em;
+  content: "ARPEGGIATOR";
+  font-weight: normal;
+  width: 55%;
+  height: 5em;
+  position: absolute;
+  top: 0em;
+  border-radius: 0.3em;
+  left: 50%;
+  transform: translatex(-50%);
+  background: #DA4040;
+}
+.mpkMini .left_btns .btn_row {
+  width: 100%;
+  display: flex;
+  height: 2.7em;
+  justify-content: space-around;
+}
+.mpkMini .left_btns .btn_row:nth-of-type(1) {
+  margin-top: 0.5em;
+}
+.mpkMini .left_btns .btn {
+  width: 4.2em;
+  height: 100%;
+  border-radius: 0.3em;
+  border: 0.2em solid #370807;
+  border-left: 0.2em solid #370807;
+  border-bottom: 0.3em solid #370807;
+  box-shadow: 0 0em 0.2em #591D21, inset 0em 0.1em rgba(255, 255, 255, 0.4), -0.3em 0.2em rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+  background: linear-gradient(to bottom, #3f3838 70%, rgba(255, 255, 255, 0.5)) 100% 98%/100% 0.3em, linear-gradient(rgba(255, 255, 255, 0.4) 49%, rgba(255, 255, 255, 0.4) 51%) 100% 42%/0.1em 100%, #4B4946;
+  background-repeat: no-repeat;
+}
+.mpkMini .left_btns .btn p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.7em;
+  color: #EB9EA8;
+  font-weight: bold;
+}
+.mpkMini .screen {
+  position: absolute;
+  top: 5.3%;
+  width: 10.5em;
+  height: 4.5em;
+  left: 61.5%;
+  border-radius: 0.4em;
+  border: 0.2em solid #A03030;
+  background: #271D19;
+  background-repeat: no-repeat;
+}
+.mpkMini .screen:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: inherit;
+  background: linear-gradient(50deg, rgba(0, 0, 0, 0) 49%, rgba(111, 102, 100, 0.8) 51%) 1em 100%/100% 100%;
+  background-repeat: no-repeat;
+}
+.mpkMini .screen .inner_screen {
+  width: 70%;
+  height: 57%;
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, #C43840, #8E5555);
+}
+.mpkMini .screen .inner_screen .inner_inner_screen {
+  width: 93%;
+  height: 85%;
+  background: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0.15), rgba(0, 0, 255, 0) 51%) 5% 0%/4em 100%, linear-gradient(to right, #3A474A 40%, #3C322F);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+.mpkMini .screen .inner_screen .inner_inner_screen .ch_text {
+  font-size: 0.6em;
+  position: absolute;
+  top: 50%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+}
+.mpkMini .screen .inner_screen .inner_inner_screen .text {
+  padding-left: 0.4em;
+}
+.mpkMini .screen .inner_screen .inner_inner_screen p {
+  font-size: 0.6em;
+}
+.mpkMini .screen .inner_screen .inner_inner_screen p:first-of-type {
+  padding-top: 0.5vh;
+  font-size: 0.5em;
+}
+.mpkMini .pad_controls {
+  position: absolute;
+  top: 5.3%;
+  width: 20.3em;
+  height: 3.9em;
+  left: 75%;
+  color: #fff;
+}
+.mpkMini .pad_controls > p {
+  font-size: 0.75em;
+  position: absolute;
+  top: 0;
+  left: 22%;
+}
+.mpkMini .pad_controls .pad_controls_btns {
+  width: 100%;
+  height: 73%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(white 49%, white 51%) 20% 50%/50% 0.1em;
+  background-repeat: no-repeat;
+}
+.mpkMini .pad_controls .pad_controls_btns .btn {
+  width: 4.2em;
+  height: 100%;
+  border-radius: 0.3em;
+  border: 0.2em solid #370807;
+  border-left: 0.4em solid #370807;
+  border-bottom: 0.3em solid #370807;
+  box-shadow: 0 0em 0.2em #591D21, inset 0em 0.1em rgba(255, 255, 255, 0.4);
+  position: relative;
+  text-align: center;
+  background: linear-gradient(to bottom, #3f3838 70%, rgba(255, 255, 255, 0.5)) 100% 98%/100% 0.3em, linear-gradient(rgba(255, 255, 255, 0.4) 49%, rgba(255, 255, 255, 0.4) 51%) 100% 42%/0.1em 100%, #4B4946;
+  background-repeat: no-repeat;
+}
+.mpkMini .pad_controls .pad_controls_btns .btn p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 0.7em;
+  color: #EB9EA8;
+  font-weight: bold;
+}
+.mpkMini .k_knobs {
+  width: 32.5em;
+  height: 15.7em;
+  position: absolute;
+  top: 16.5%;
+  z-index: 2;
+  left: 62%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mpkMini .k_knobs .knob_row {
+  width: 100%;
+  height: 48%;
+  display: flex;
+  justify-content: space-between;
+}
+.mpkMini .k_knobs .knob_row .knob_container {
+  width: 18%;
+  height: 100%;
+  position: relative;
+}
+.mpkMini .k_knobs .knob_row .knob_container > p {
+  color: #fff;
+  font-size: 0.9em;
+}
+.mpkMini .k_knobs .knob_row .knob_container .title_btm {
+  text-align: center;
+  width: 75%;
+  font-size: 0.75em;
+  border: 0.1em solid #fff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translatex(-50%);
+  padding: 0 0.4em;
+  border-radius: 0.3em;
+}
+.mpkMini .k_knobs .knob_row .knob_container .knob_main_container {
+  width: 5.7em;
+  height: 5.7em;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0em 0em 0.5em inset rgba(0, 0, 0, 0.2), inset 0 0 0.7em #880516, inset 0 0 0.7em rgba(0, 0, 0, 0.5), 0.5em 0em 1.5em rgba(238, 98, 93, 0.7);
+  background-repeat: no-repeat;
+}
+.mpkMini .k_knobs .knob_row .knob_container .knob_main_container .knob_inner_container {
+  width: 4.6em;
+  height: 4.6em;
+  border: 0.2em solid rgba(147, 9, 25, 0.5);
+  border-radius: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: inset 0 0 0.7em rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%);
+}
+.mpkMini .k_knobs .knob_row .knob_container .knob_main_container .knob_inner_container .knob {
+  width: 4.5em;
+  height: 4.5em;
+  border-radius: inherit;
+  position: absolute;
+  top: 45%;
+  left: 59%;
+  transform: translate(-50%, -50%);
+  background-image: conic-gradient(from 20deg, rgba(96, 95, 98, 0.6), rgba(0, 0, 0, 0.5), rgba(96, 95, 98, 0.6), rgba(0, 0, 0, 0.5), rgba(96, 95, 98, 0.6)), -webkit-repeating-radial-gradient(50% 50%, 100% 100%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 16%, rgba(163, 159, 159, 0.2) 17.5%), -webkit-repeating-radial-gradient(50% 50%, 100% 100%, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 2.2%, rgba(204, 204, 204, 0.2) 5.2%), -webkit-radial-gradient(50% 50%, 200% 50%, #373435 5%, #40403f 100%);
+  box-shadow: -1.2em 1.5em 0.5em rgba(0, 0, 0, 0.6), 0 0 1em 0 #222, inset 0 0 0.2em rgba(211, 211, 211, 0.5), inset 0 0 0.4em rgba(35, 35, 35, 0.8);
+}
+.mpkMini .k_knobs .knob_row .knob_container .knob_main_container .knob_inner_container .knob .knob_ring {
+  box-shadow: inset 0 0 0.5em rgba(0, 0, 0, 0.13);
+  width: 4em;
+  height: 4em;
+  border-radius: inherit;
+  border: 0.1em solid rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.mpkMini .pads {
+  width: 41.5%;
+  height: 36%;
+  position: absolute;
+  left: 38%;
+  top: 5.3%;
+  transform: translatex(-50%);
+}
+.mpkMini .pads .text-block {
+  width: 100%;
+  height: 1em;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+.mpkMini .pads .text-block .text {
+  width: 21%;
+  height: 100%;
+  font-family: arial;
+  font-size: 0.9em;
+  color: #fff;
+  margin-left: 0.3em;
+}
+.mpkMini .pads .text-top {
+  top: -1.2em;
+}
+.mpkMini .pads .text-btm {
+  margin-top: 0.8em;
+}
+.mpkMini .pads .top_row {
+  height: 45%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.mpkMini .pads .btm_row {
+  height: 45%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+}
+.mpkMini .pads .pad {
+  box-shadow: -0.5em 0.7em 0.7em #832626, 0.1em -0.1em 2em #832626;
+  width: 21%;
+  height: 100%;
+  border-radius: 0.4em;
+  position: relative;
+}
+.mpkMini .pads .pad.gray {
+  background: linear-gradient(-95deg, #8A9AA4, #C0CBC7);
+}
+.mpkMini .pads .pad.red {
+  background: linear-gradient(-95deg, #E31826, #F4223D);
+}
+.mpkMini .pads .pad:after {
+  border-radius: 0.4em;
+  content: "";
+  width: 92%;
+  height: 92%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-bottom: 0.2em solid #000;
+  border-left: 0.3em solid #000;
+  border-radius: 0.4em;
+  position: absolute;
+  background: #1E2021;
+}
+.mpkMini .keys_top_text {
+  width: 92.3%;
+  height: 1.7em;
+  position: absolute;
+  top: 48.1%;
+  left: 50.5%;
+  transform: translatex(-50%);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+.mpkMini .keys_top_text .text {
+  width: 4.2em;
+  font-size: 0.7em;
+  position: relative;
+}
+.mpkMini .keys_top_text .text p {
+  text-align: center;
+  left: 50%;
+  transform: translatex(-50%);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.mpkMini .keys_sides_left {
+  width: 0.7em;
+  height: 47.5%;
+  position: absolute;
+  bottom: 0;
+  left: 3.5em;
+  border-left: 0.3em solid #CE282D;
+  background: linear-gradient(to right, #300405, #300405);
+}
+.mpkMini .keys_sides_right {
+  width: 0.9em;
+  height: 47.5%;
+  position: absolute;
+  bottom: 0;
+  right: 2.4em;
+  border-right: 0.3em solid #CE282D;
+  background: linear-gradient(to left, #300405, #300405);
+}
+.mpkMini .keys {
+  width: 92.3%;
+  height: 47.5%;
+  border-top: 0.2em solid #D43336;
+  position: absolute;
+  bottom: 0px;
+  left: 50.5%;
+  transform: translatex(-50%);
+  background: linear-gradient(to right, #000, #000) 0% 0%/100% 0.2em, linear-gradient(to bottom, #000 85%, #DA4040) 0% 0%/100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-between;
+}
+.mpkMini .keys .key {
+  width: 5.25em;
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+  height: 100%;
+  position: relative;
+  background: linear-gradient(to bottom, #010101, #181a1c);
+}
+.mpkMini .keys .key:after {
+  content: "";
+  width: 0.09em;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to bottom, #574748, #747678, #867879);
+}
+.mpkMini .keys .keys_shadows {
+  width: 45%;
+  height: 100%;
+  background: orange;
+  position: absolute;
+  right: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 54% 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(44, 47, 48, 0.01)), linear-gradient(70deg, rgba(132, 134, 136, 0.3), rgba(59, 58, 59, 0.4), rgba(132, 134, 136, 0.6));
+}
+.mpkMini .keys .fs_key_group {
+  height: 60%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+}
+.mpkMini .keys .fs_key_group_one {
+  width: 10.8em;
+  left: 3.5%;
+}
+.mpkMini .keys .fs_key_group_two {
+  width: 17em;
+  left: 20em;
+}
+.mpkMini .keys .fs_key_group_three {
+  width: 10.8em;
+  left: 43.5em;
+}
+.mpkMini .keys .fs_key_group_four {
+  width: 17em;
+  left: 60em;
+}
+.mpkMini .fs_key {
+  position: relative;
+  width: 3.8em;
+  height: 100%;
+  border: 0.1em solid rgba(255, 255, 255, 0.2);
+  border-left: 0.1em solid rgba(255, 255, 255, 0.2);
+  background-color: #020000;
+  overflow: hidden;
+}
+.mpkMini .fs_key:after {
+  content: "";
+  width: 0.07em;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to bottom, #574748, #747678, #867879);
+}
+.mpkMini .fs_key .light_part {
+  width: 70%;
+  height: 95%;
+  position: absolute;
+  left: 14%;
+  top: 3%;
+}
+.mpkMini .fs_key .light_part .light_part_top {
+  width: 100%;
+  height: 90%;
+  border-top: 0.15em solid rgba(255, 255, 255, 0.3);
+  border-bottom: 0.1em solid rgba(255, 255, 255, 0.3);
+  background: linear-gradient(#444648, #444648) 100% 50%/0.1em 100%, linear-gradient(to right, #252A28, #2C2E30);
+  background-repeat: no-repeat;
+}
+.mpkMini .fs_key .light_part .light_part_btm {
+  width: 100%;
+  height: 10%;
+  background: linear-gradient(#181A1C, #121416);
+}

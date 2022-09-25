@@ -1,0 +1,45 @@
+{
+    "name": "muson-css",
+    "version": "1.0.0",
+    "title": "muson.css",
+    "description": "Muson toy synth drawn entirely in HTML & CSS.\n\n Tutorials: https://fossheim.io\n Patreon: https://patreon.com/fossheim\n Buy Me A Coffee: https://buymeacoffee.com/fossheim\n \n Inspired by the Muson toy synth.",
+    "author": {
+        "name": "Sarah Fossheim",
+        "avatar": "https://assets.codepen.io/3445183/internal/avatars/users/default.png?format=auto&height=512&version=1573597468&width=512",
+        "web": "https://fossheim.io/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/fossheim/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/SarahFossheim"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/sarahfossheim"
+            },
+            {
+                "title": "dev.to",
+                "url": "https://dev.to/fossheim"
+            }
+        ]
+    },
+    "html": "muson-css.html",
+    "css": [
+        "muson-css.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "drawing",
+        "muson",
+        "cssart",
+        "html"
+    ],
+    "original": "https://codepen.io/fossheim/pen/BapZQjK",
+    "codepen": "https://codepen.io/fossheim/pen/BapZQjK"
+}

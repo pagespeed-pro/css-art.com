@@ -1,0 +1,35 @@
+{
+    "name": "css-art-keyboard",
+    "version": "1.0.0",
+    "title": "CSS Art Keyboard",
+    "description": "css art! HTML & CSS only",
+    "author": {
+        "name": "Kassandra",
+        "avatar": "https://assets.codepen.io/2970881/internal/avatars/users/default.png?format=auto&height=512&version=1595816396&width=512",
+        "web": "https://www.cssartist.com/",
+        "social": [
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/KassandraSanch"
+            },
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/kassandrasanch"
+            }
+        ]
+    },
+    "html": "css-art-keyboard.html",
+    "css": [
+        "css-art-keyboard.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "keyboard",
+        "microlab",
+        "midi"
+    ],
+    "original": "https://codepen.io/kassandrasanch/pen/ExyrGKR",
+    "codepen": "https://codepen.io/kassandrasanch/pen/ExyrGKR"
+}

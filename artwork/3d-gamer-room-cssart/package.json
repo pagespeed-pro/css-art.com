@@ -1,0 +1,45 @@
+{
+    "name": "3d-gamer-room-cssart",
+    "version": "1.0.0",
+    "title": "3D Gamer Room - CSSArt",
+    "description": "",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "3d-gamer-room-cssart.html",
+    "css": [
+        "3d-gamer-room-cssart.css"
+    ],
+    "js": "const b = document.body;\nconst h = document.querySelector(\"#h\");\nconst a = document.querySelector(\"#a\");\nconst unit = 1.7;\n\nconst bioshock = document.querySelector(\"#bioshock\");\nconst img = document.querySelector(\"#img\");\nconst video = document.querySelector(\"#video\");\nconst tv = document.querySelector(\"#screen\");\n\nconst playFunc = () => {\n\tb.removeEventListener(\"pointermove\", base);\n\tbioshock.removeEventListener(\"click\", playFunc);\n\n\timg.classList.add(\"is-element-hidden\");\n\tvideo.classList.remove(\"is-element-hidden\");\n\th.classList.add(\"is-main-active\");\n\n\tvideo.load();\n\ta.currentTime = 0;\n\ta.play();\n};\nconst stopFunc = () => {\n\tb.addEventListener(\"pointermove\", base);\n\tbioshock.addEventListener(\"click\", playFunc);\n\n\timg.classList.remove(\"is-element-hidden\");\n\tvideo.classList.add(\"is-element-hidden\");\n\th.classList.remove(\"is-main-active\");\n\n\ta.pause();\n\ta.currentTime = 0;\n};\n\nconst base = (e) => {\n\tvar x = e.pageX / window.innerWidth - 0.5;\n\tvar y = e.pageY / window.innerHeight - 0.5;\n\th.style.transform = `\n        perspective(${400 * unit}vmin)\n        rotateX(${y * 4 + 66}deg)\n        rotateZ(${-x * 12 + 35}deg)\n        translateZ(${-14 * unit}vmin)\n    `;\n};\n\nb.addEventListener(\"pointermove\", base);\nbioshock.addEventListener(\"click\", playFunc);\ntv.addEventListener(\"click\", stopFunc);\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "3d",
+        "gamer",
+        "room",
+        "cssart",
+        "isometric"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/poLzvYJ",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/poLzvYJ"
+}

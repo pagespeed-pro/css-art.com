@@ -1,0 +1,45 @@
+{
+    "name": "3d-room-pure-css",
+    "version": "1.0.0",
+    "title": "3D Room - Pure CSS",
+    "description": "Designed by: Jarlan Perez\n\t\tOriginal image: https://www.artstation.com/artwork/VdBllN",
+    "author": {
+        "name": "Ricardo Oliva Alonso",
+        "avatar": "https://assets.codepen.io/2821450/internal/avatars/users/default.png?format=auto&height=512&version=1590273033&width=512",
+        "web": "http://ricardoolivaalonso.appspot.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/ricardoolivaalonso/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/rolivaalonso"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/ricardoolivaalonso"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/ricardo_oliva_alonso"
+            }
+        ]
+    },
+    "html": "3d-room-pure-css.html",
+    "css": [
+        "3d-room-pure-css.css"
+    ],
+    "js": "/*\n\t\tDesigned by: Jarlan Perez\n\t\tOriginal image: https://www.artstation.com/artwork/VdBllN\n\n*/\n\n\nconst h = document.querySelector(\"#h\");\nconst b = document.body;\n\nlet base = (e) => {\n    var x = e.pageX / window.innerWidth - 0.5;\n    var y = e.pageY / window.innerHeight - 0.5;\n    h.style.transform = `\n        perspective(90vw)\n        rotateX(${ y * 4  + 75}deg)\n        rotateZ(${ -x * 12  + 45}deg)\n        translateZ(-9vw)\n    `;\n}\n\nb.addEventListener(\"pointermove\", base);\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "room",
+        "isometric",
+        "3d",
+        "house",
+        "gamer"
+    ],
+    "original": "https://codepen.io/ricardoolivaalonso/pen/mdPzrpe",
+    "codepen": "https://codepen.io/ricardoolivaalonso/pen/mdPzrpe"
+}

@@ -1,0 +1,34 @@
+{
+    "name": "ring-camera",
+    "version": "1.0.0",
+    "title": "Ring Camera",
+    "description": "Some of my past css work 😁😁",
+    "author": {
+        "name": "Kassandra",
+        "avatar": "https://assets.codepen.io/2970881/internal/avatars/users/default.png?format=auto&height=512&version=1595816396&width=512",
+        "web": "https://www.cssartist.com/",
+        "social": [
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/KassandraSanch"
+            },
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/kassandrasanch"
+            }
+        ]
+    },
+    "html": "ring-camera.html",
+    "css": [
+        "ring-camera.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "camera",
+        "ring"
+    ],
+    "original": "https://codepen.io/kassandrasanch/pen/oNzzMjr",
+    "codepen": "https://codepen.io/kassandrasanch/pen/oNzzMjr"
+}

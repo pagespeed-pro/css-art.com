@@ -1,0 +1,641 @@
+body {
+  font-family: arial;
+  font-size: 1.5vmin;
+  background-size: 1100px;
+  background-size: 117em;
+  background-position: 55% -4%;
+  background-repeat: no-repeat;
+  background-color: #685BC6;
+}
+
+.camera {
+  border-top-right-radius: 1em;
+  border-top-left-radius: 1em;
+  width: 57.5em;
+  height: 54.5em;
+  position: absolute;
+  top: 49.6%;
+  left: 50%;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(#DAD2CC 49%, #DAD2CC 51%) 100% 0%/100% 100%, radial-gradient(100% 100% at 50% 50%, rgba(255, 0, 0, 0.5) 50%, blue 51%) 55% 0%/22em 22em;
+  background-repeat: no-repeat;
+}
+.camera:after {
+  border-radius: 1em;
+  content: "";
+  position: absolute;
+  width: 81%;
+  left: 59%;
+  transform: translate(-50%, 0%);
+  height: 0.7em;
+  background: linear-gradient(to top, rgba(98, 98, 98, 0.8), rgba(0, 0, 0, 0));
+  bottom: 0%;
+  border-radius: 0.5em;
+}
+.camera:before {
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.9em;
+  top: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(98, 98, 98, 0.14), rgba(0, 0, 0, 0));
+  bottom: 0;
+}
+.camera h1 {
+  color: #BFB6B0;
+  letter-spacing: -2px;
+  font-size: 4em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 7.5%;
+  left: 56%;
+  font-weight: bold;
+}
+.camera h1:after {
+  content: "instax";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #D4CCC8;
+  top: 54%;
+  left: 50%;
+}
+.camera h1:before {
+  content: "instax";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #E0D8D2;
+  color: rgba(255, 255, 255, 0.6);
+  top: 56%;
+  left: 50%;
+  font-size: 1.8;
+}
+.camera .square_top {
+  width: 3.3em;
+  height: 3.3em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 15%;
+  left: 56%;
+  background: #D4CCC8;
+  border-radius: 0.23em;
+  box-shadow: inset 2px 2px 2px rgba(180, 173, 170, 0.8), inset -2px -2px 2px rgba(244, 235, 230, 0.6);
+}
+.camera .square_top h2 {
+  color: rgba(0, 0, 0, 0.1);
+  font-family: "Oxygen", sans-serif;
+  font-size: 1.9em;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 40%;
+}
+.camera .square_top h2:after {
+  content: "SQ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #EFE7E1;
+  color: #DED6CF;
+  top: 49%;
+  left: 50%;
+}
+.camera .square_top h2:before {
+  content: "SQ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.5);
+  top: 58%;
+  left: 50%;
+}
+.camera #one {
+  font-weight: bold;
+  content: "instax";
+  color: #BFB6B0;
+  font-size: 2.8em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 15%;
+  left: 61%;
+}
+.camera #one:before {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.7);
+  top: 55%;
+  left: 45%;
+}
+.camera #one:after {
+  content: "1";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #D4CCC8;
+  top: 51%;
+  left: 45%;
+}
+.camera .lens_left {
+  width: 7.5em;
+  height: 7.4em;
+  border-radius: 1em;
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0), rgba(255, 255, 255, 0.3)) 0% 100%/100% 50%, linear-gradient(to right, rgba(255, 0, 0, 0), rgba(255, 255, 255, 0.2)) 0% 0%/100% 100%, linear-gradient(120deg, rgba(0, 0, 0, 0) 35%, rgba(77, 77, 77, 0.2), rgba(0, 0, 0, 0) 65%) 2em 0%/100% 50%, linear-gradient(45deg, rgba(218, 210, 204, 0) 35%, rgba(77, 77, 77, 0.1), rgba(218, 210, 204, 0) 65%) -2em 0%/100% 50%, linear-gradient(-45deg, rgba(218, 210, 204, 0) 35%, rgba(77, 77, 77, 0.25), rgba(218, 210, 204, 0) 65%) -2em 100%/100% 50%, linear-gradient(to right, rgba(77, 77, 77, 0.35), rgba(0, 0, 0, 0)) 0% 0%/30% 100%, linear-gradient(rgba(0, 0, 0, 0.25), #DAD2CC 45%) 0% 0%/97.5% 100%;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: 11%;
+  top: 12%;
+}
+.camera .lens_left .inner_square {
+  width: 4em;
+  height: 4em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(to right, rgba(17, 17, 22, 0), rgba(255, 255, 255, 0.1) 15%, rgba(17, 17, 22, 0) 20%) 100% 0%/97.5% 100%, linear-gradient(to left, rgba(50, 51, 57, 0.8) 15%, rgba(17, 17, 22, 0) 45%) 100% 0%/97.5% 100%, linear-gradient(-20deg, rgba(41, 40, 47, 0.8), #111116 45%) 100% 0%/97.5% 100%;
+  top: 54%;
+  left: 47%;
+  border-radius: 0.7em;
+  background-repeat: no-repeat;
+}
+.camera .lens_left .inner_square .white_inner_square {
+  width: 0.6em;
+  height: 0.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: 51%;
+  border-radius: 0.15em;
+  background: #f3f3f3;
+  border-bottom: 0.3em solid #000;
+  border-top: 0.2em solid #000;
+}
+.camera .lens_left .inner_square .white_inner_square:before {
+  content: "";
+  position: absolute;
+  width: 1.8em;
+  height: 1.8em;
+  background: radial-gradient(100% 100% at 50% 50%, rgba(210, 210, 210, 0.1), rgba(233, 225, 220, 0.2) 50%) 50% -1.4em/200% 4em;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: 48%;
+  border-radius: 3em;
+}
+.camera .black_thing {
+  position: absolute;
+  width: 5.5em;
+  height: 2.4em;
+  top: 12.5%;
+  left: 22.5%;
+  transform: translate(-50%, -50%) scale(0.7);
+  transform: translate(-50%, -50%) rotate(90deg) scale(0.7);
+  background: linear-gradient(to right, rgba(50, 51, 57, 0.5) 49%, rgba(50, 51, 57, 0.7) 51%, rgba(50, 51, 57, 0.5)) 50% 5%/3.5em 0.1em, linear-gradient(to right, #323339 49%, #323339 51%) 50% 100%/2.7em 2.2em, radial-gradient(100% 100% at 50% 50%, #323339 50%, rgba(0, 0, 0, 0) 51%) 0.7% 50%/2.2em 2.2em, radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0) 51%) 0% 50%/2.2em 2.2em, radial-gradient(100% 100% at 50% 50%, #323339 50%, rgba(0, 0, 0, 0) 51%) 98% 50%/2.2em 2.2em, radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0.2) 50%, rgba(0, 0, 0, 0) 51%) 100% 50%/2.2em 2.2em;
+  background-repeat: no-repeat;
+}
+.camera .flash {
+  width: 14em;
+  height: 7.4em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 8.5%;
+  left: 87.5%;
+  background: radial-gradient(100% 100% at 0% 50%, rgba(0, 0, 0, 0) 50%, #dacfcb 51%) 156% 0%/7.5em 7.4em, radial-gradient(100% 100% at 100% 50%, rgba(0, 0, 0, 0) 50%, #dacfcb 51%) -57% 0%/7.5em 7.4em, #7F8477;
+  background-repeat: no-repeat;
+}
+.camera .flash .flash_shape_middle {
+  height: 7.6em;
+  width: 8em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  background: linear-gradient(to right, transparent 10%, #444841, #444841, transparent 90%) 50% 3%/2.4em 0.6em, linear-gradient(to right, #444841 10%, transparent 12%, transparent 22%, #444841 23%, #444841 77%, transparent 78%, transparent 88%, #444841 90%) 10% 97%/1.8em 0.6em, linear-gradient(to right, #444841 10%, transparent 12%, transparent 22%, #444841 23%, #444841 77%, transparent 78%, transparent 88%, #444841 90%) 85% 97%/1.8em 0.6em, linear-gradient(to bottom, rgba(51, 52, 58, 0.2) 1%, #bfbbb3 4%, #bfbbb3, rgba(51, 52, 58, 0.2) 5%, #bfbbb3 6%, transparent 9%, transparent 93%, #bfbbb3 90%, rgba(51, 52, 58, 0.2) 93%, #bfbbb3 95%, rgba(51, 52, 58, 0.2) 100%), #83877C;
+  background-repeat: no-repeat;
+}
+.camera .flash .flash_middle {
+  width: 9.5em;
+  height: 5.7em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.6em;
+  background: #D7D7D4;
+  z-index: 2;
+}
+.camera .flash .flash_middle .flash_lines {
+  width: 9.4em;
+  height: 4.2em;
+  position: absolute;
+  border-left: 2px solid #D7D7D4;
+  display: flex;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: 46%;
+  top: 47%;
+}
+.camera .flash .flash_middle .flash_lines:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to right, transparent, rgba(196, 200, 190, 0.3) 10%, rgba(113, 120, 121, 0.3) 12%, rgba(113, 120, 121, 0.3) 14%, transparent 17%, rgba(189, 181, 176, 0.3) 40%, rgba(101, 107, 111, 0.3) 45%, rgba(120, 120, 120, 0.55), rgba(113, 120, 121, 0.3), rgba(113, 120, 121, 0.3), rgba(242, 242, 242, 0.3) 80%, rgba(242, 242, 242, 0.3) 83%, transparent 85%, rgba(101, 107, 111, 0.5));
+}
+.camera .flash .flash_middle .flash_lines .flash_lines_left {
+  width: 50%;
+  height: 100%;
+  background: repeating-linear-gradient(rgba(0, 0, 0, 0.12) 0.2em, transparent 0.4em, rgba(0, 0, 0, 0.12) 0.4em);
+}
+.camera .flash .flash_middle .flash_lines .flash_lines_right {
+  width: 50%;
+  height: 100%;
+  background: repeating-linear-gradient(rgba(0, 0, 0, 0.4) 0.1em, transparent 0.2em, rgba(0, 0, 0, 0.4) 0.3em);
+}
+.camera .flash .flash_left {
+  width: 7.4em;
+  height: 7.4em;
+  border: 1px solid yellow;
+  border: 1px solid #ABA5A0;
+  border-radius: 50%;
+  position: absolute;
+  border-right: 0;
+  box-shadow: -2px -2px 0px #B0B0B0;
+  background: radial-gradient(100% 100% at 50% 50%, #83877c 42%, rgba(51, 52, 58, 0.2) 43%, #bfbbb3, #bfbbb3 48%, rgba(51, 52, 58, 0.2) 50%);
+}
+.camera .flash .flash_left:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: inherit;
+  background: linear-gradient(#7E816E 49%, #7E816E 51%) 0% 50%/0.4em 2em;
+  background-repeat: no-repeat;
+}
+.camera .flash .flash_right {
+  left: 47%;
+  position: absolute;
+  width: 7.4em;
+  height: 7.4em;
+  border: 1px solid yellow;
+  border: 1px solid #ABA5A0;
+  border-left: 0;
+  border-radius: 50%;
+  background: radial-gradient(100% 100% at 50% 50%, #83877c 42%, rgba(51, 52, 58, 0.2) 43%, #bfbbb3, #bfbbb3 48%, rgba(51, 52, 58, 0.2) 50%);
+}
+.camera .flash .flash_right:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: inherit;
+  background: linear-gradient(#7E816E 49%, #7E816E 51%) 100% 50%/0.4em 2em;
+  background-repeat: no-repeat;
+}
+.camera .lens_ring {
+  position: absolute;
+  width: 42em;
+  height: 42em;
+  background: #E0D8D2;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 60%;
+  left: 56%;
+  box-shadow: inset 2px 2px 5px 0px rgba(255, 255, 255, 0.7), inset -1px 0px 5px 0px rgba(35, 35, 35, 0.5), 2px 2px 5px 0px rgba(35, 35, 35, 0.2), -2px -2px 5px 0px rgba(241, 233, 227, 0.5), 5px 10px 55px 5px rgba(0, 0, 0, 0.3);
+}
+.camera .lens_ring .ring_one {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 37em;
+  height: 37em;
+  border: 0.2em solid #2D251F;
+}
+.camera .lens_ring .ring_one .ring_two {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 33em;
+  height: 33em;
+  position: absolute;
+  border: 0.1em solid #2D251F;
+}
+.camera .lens_ring .ring_one .ring_two .ring_three {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 29em;
+  height: 29em;
+  position: absolute;
+  background: #323339;
+}
+.camera .lens_ring .ring_one .ring_two .ring_three .circles {
+  width: 3em;
+  height: 6em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: 14%;
+  top: 50.5%;
+  background: radial-gradient(100% 100% at 50% 50%, #0d0c0f 50%, rgba(0, 0, 0, 0) 51%) 50% 85%/2.3em 2.3em;
+  background-repeat: no-repeat;
+}
+.camera .lens_ring .ring_one .ring_two .ring_three .circles .circle_top {
+  width: 2.3em;
+  height: 2.3em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 25%;
+  box-shadow: inset 1px 2px 3px #26232b;
+  background: radial-gradient(100% 100% at 50% 50%, #312f37 50%, rgba(0, 0, 0, 0) 51%) 50% 85%/2em 2em, #222325;
+  background-repeat: no-repeat;
+}
+.camera .lens_ring .ring_one .ring_two .ring_three .circles .circle_btm {
+  width: 2.3em;
+  height: 2.3em;
+  background: #0D0C0F;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 73%;
+  box-shadow: inset 1px 2px 3px #26232b;
+}
+.camera .lens_ring .ring_one .ring_two .ring_three .right_clear_circle {
+  width: 5em;
+  height: 5em;
+  border-radius: 1.5em;
+  background: linear-gradient(-45deg, rgba(65, 68, 73, 0.8), rgba(65, 68, 73, 0.4), rgba(165, 165, 165, 0.15) 60%) 120% 120%/100% 100%, linear-gradient(#DAD2CC 49%, #DAD2CC 51%) 100% 0%/97.5% 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  left: 87%;
+}
+.camera .lens_ring .ring_one .ring_two .ring_three .right_clear_circle:after {
+  width: 4.95em;
+  height: 4.7em;
+  border-radius: 1.5em;
+  border: 1px solid #000;
+  border-left: 0.1em solid #000;
+  border-top: 0.2em solid #000;
+  border-right: 0.15em solid #000;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: 51%;
+  background: rgba(35, 35, 35, 0);
+}
+.camera .lens_ring .ring_one .ring_two .ring_three .center_circle {
+  width: 13.5em;
+  height: 13.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: 51%;
+  top: 50.5%;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #212327, #353539 75%, rgba(110, 109, 114, 0.5)) 100% 0%/97.5% 100%, #212327;
+}
+.camera .lens_ring .ring_one .ring_two .ring_three .center_circle:after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  position: absolute;
+  @inlcude abs;
+  border-radius: inherit;
+  background: -webkit-radial-gradient(50% 0%, 48% 50%, rgba(0, 0, 0, 0.2) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(50% 100%, 52% 50%, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(50% 100%, 82% 50%, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.camera .lens_ring .ring_one .ring_two .ring_three .center_circle .center_circle_border {
+  width: 10em;
+  height: 10em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.3em solid #222428;
+  border-radius: 50%;
+  background: radial-gradient(100% 100% at 50% 50%, rgba(0, 0, 0, 0) 30%, rgba(47, 49, 53, 0.05) 50%) 50% 50%/105% 110%, radial-gradient(100% 100% at 50% 50%, rgba(0, 0, 0, 0) 30%, rgba(29, 28, 33, 0.45) 50%) 50% 50%/105% 110%, #2F3135;
+}
+.camera .lens_ring .ring_one .ring_two .ring_three .center_circle .center_circle_border .square {
+  width: 7.7em;
+  height: 7.7em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20%;
+  background: -webkit-radial-gradient(50% 110%, 53% 50%, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(50% 0%, 57% 50%, rgba(0, 0, 0, 0.354) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(0% 50%, 25% 50%, rgba(50, 49, 53, 0.5) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(100% 50%, 45% 50%, rgba(75, 76, 80, 0.4) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(50% 100%, 52% 50%, rgba(35, 35, 35, 0.02) 0%, rgba(255, 255, 255, 0) 100%), -webkit-radial-gradient(50% 100%, 82% 50%, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(to right, rgba(255, 255, 255, 0.02), rgba(51, 50, 53, 0), rgba(51, 50, 53, 0), rgba(255, 255, 255, 0.02)) 0% 0%/100% 100%, linear-gradient(to right, rgba(51, 50, 55, 0.8), rgba(51, 50, 53, 0.8), rgba(51, 50, 53, 0.8), rgba(58, 62, 65, 0.8)) 0% 0%/100% 100%, #212327;
+  background-repeat: no-repeat;
+}
+.camera .lens_ring .ring_one .ring_two .ring_three .center_circle .center_circle_border .square:after {
+  width: 100%;
+  content: "";
+  height: 100%;
+  position: absolute;
+  border-radius: inherit;
+  background: -webkit-radial-gradient(50% 0%, 80% 60%, rgba(0, 0, 0, 0.45) 0%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+}
+.camera .lens_ring .ring_one .ring_two .ring_three .center_circle .center_circle_border .square .inner_square {
+  width: 5.8em;
+  height: 5.8em;
+  border-radius: 10%;
+  position: absolute;
+  border: 1px solid #38383A;
+  border-top: 0;
+  background: radial-gradient(100% 100% at 50% 50%, rgba(0, 0, 0, 0) 40%, rgba(29, 28, 33, 0.8) 50%) 50% 50%/125% 110%, radial-gradient(100% 100% at 50% 50%, rgba(0, 0, 0, 0) 40%, rgba(29, 28, 33, 0.8) 50%) 50% 50%/125% 110%, #2E2E32;
+  background-repeat: no-repeat;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.camera .lens_ring .ring_one .ring_two .ring_three .center_circle .center_circle_border .square .inner_square .sq_circle {
+  border: 3px solid #0D0D0F;
+  width: 5em;
+  height: 5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(100% 100% at 50% 50%, rgba(12, 11, 14, 0.5) 49%, rgba(12, 11, 14, 0.85) 50%) 50% 50%/105% 110%, #0D0D0F;
+}
+.camera .lens_ring .ring_one .ring_two .ring_three .center_circle .center_circle_border .square .inner_square .sq_circle:before {
+  content: "";
+  width: 4.7em;
+  height: 4.7em;
+  position: absolute;
+  border-radius: inherit;
+  border: 1px solid transparent;
+  border-bottom: 0.3em solid #292A2E;
+  transform: rotate(-50deg);
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.08), rgba(51, 50, 53, 0), rgba(51, 50, 53, 0), rgba(255, 255, 255, 0.02)) 0% 0%/100% 100%, #0C0C0E;
+}
+.camera .lens_ring .ring_one .ring_two .ring_three .center_circle .center_circle_border .square .inner_square .sq_circle .reflection {
+  width: 3em;
+  height: 3em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20%;
+  background: radial-gradient(50% 150% at 50% 50%, rgba(0, 0, 0, 0.3) 40%, rgba(242, 242, 242, 0.05) 55%) 50% 20%/100% 100%, linear-gradient(-10deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1) 85%, rgba(255, 255, 255, 0.2)) 0% 0%/100% 100%, transparent;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.camera .lens_ring .ring_one .ring_two .ring_three .center_circle .center_circle_border .square .inner_square .sq_circle .reflection:before {
+  content: "";
+  width: 3em;
+  height: 3em;
+  position: absolute;
+  border-radius: inherit;
+  transform: rotate(4deg);
+  background: linear-gradient(-10deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2) 85%, rgba(255, 255, 255, 0.4)) -0.2em 0%/1.2em 100%;
+  background-repeat: no-repeat;
+}
+.camera .shutter_btn_holder {
+  z-index: 20;
+  width: 12.3em;
+  height: 42em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  left: 8%;
+  top: 61.5%;
+  border-top-left-radius: 0.8em;
+  border-top-right-radius: 1em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 4em;
+  bottom: 0;
+  background: radial-gradient(100% 100% at 50% 90%, rgba(0, 0, 0, 0) 40%, #e9e1dc 50%) 50% -1.4em/200% 4em, #DED6CF;
+  background-repeat: no-repeat;
+}
+.camera .shutter_btn_holder:before {
+  border-top-left-radius: 0.8em;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(35, 35, 35, 0.1));
+}
+.camera .shutter_btn_holder .line_circle {
+  width: 6.5em;
+  height: 6.5em;
+  border: 1px solid rgba(35, 35, 35, 0.6);
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 21%;
+  left: 55%;
+}
+.camera .shutter_btn_holder:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  height: 0.7em;
+  background: linear-gradient(to top, rgba(98, 98, 98, 0.8), rgba(0, 0, 0, 0));
+  bottom: 0;
+  border-radius: 0.5em;
+}
+.camera .shutter_btn_holder .lines {
+  width: 12.3em;
+  height: 81%;
+  border-top: 2px solid rgba(242, 242, 242, 0.6);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 49%;
+  left: 49%;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  background: repeating-linear-gradient(90deg, #E0D7D1 3px, rgba(35, 35, 35, 0.05) 1px, #E0D7D1 1em);
+}
+.camera .shutter_btn_holder .lines:before {
+  content: "";
+  width: 100%;
+  height: 0.3em;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  background: repeating-linear-gradient(90deg, #E0D7D1 3px, rgba(35, 35, 35, 0.07) 1px, #E0D7D1 1em);
+  position: absolute;
+  bottom: 0;
+}
+.camera .shutter_btn_holder .lines:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(114, 114, 114, 0.1) 5%, transparent 15%), linear-gradient(to left, rgba(35, 35, 35, 0.1), rgba(255, 255, 255, 0));
+  position: absolute;
+  bottom: 0;
+}
+
+.flash_block {
+  width: 15em;
+  height: 8.5em;
+  border-top-right-radius: 1em;
+  position: absolute;
+  top: 0.4em;
+  right: 0;
+  background: linear-gradient(to right, #D6CEC8 49%, #D6CEC8 51%) 100% 0%/2.5em 0.7em, linear-gradient(to right, #D6CEC8 49%, #D6CEC8 51%) 0% 0%/2.6em 0.7em, linear-gradient(to right, #D6CEC8 49%, #D6CEC8 51%) 0% 0%/1em 2.4em, linear-gradient(to right, #D6CEC8 49%, #D6CEC8 51%) 0% 100%/1em 2.7em, linear-gradient(to right, #D6CEC8 49%, #D6CEC8 51%) 100% 100%/2.7em 0.7em, linear-gradient(to right, #D6CEC8 49%, #D6CEC8 51%) 0% 100%/3.4em 0.7em;
+  background-repeat: no-repeat;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.bk {
+  background-image: none;
+}
+
+.opacity {
+  opacity: 0.5;
+}

@@ -1,0 +1,33 @@
+{
+    "name": "mpk-mini-css-art",
+    "version": "1.0.0",
+    "title": "MPK Mini CSS Art",
+    "description": "New CSS Art! \n\nMPK Mini made with CSS (minus the logo)",
+    "author": {
+        "name": "Kassandra",
+        "avatar": "https://assets.codepen.io/2970881/internal/avatars/users/default.png?format=auto&height=512&version=1595816396&width=512",
+        "web": "https://www.cssartist.com/",
+        "social": [
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/KassandraSanch"
+            },
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/kassandrasanch"
+            }
+        ]
+    },
+    "html": "mpk-mini-css-art.html",
+    "css": [
+        "mpk-mini-css-art.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "mpk mini"
+    ],
+    "original": "https://codepen.io/kassandrasanch/pen/eYeBjZy",
+    "codepen": "https://codepen.io/kassandrasanch/pen/eYeBjZy"
+}

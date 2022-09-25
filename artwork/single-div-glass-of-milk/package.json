@@ -1,0 +1,34 @@
+{
+    "name": "single-div-glass-of-milk",
+    "version": "1.0.0",
+    "title": "Single Div Glass of Milk",
+    "description": "Trying to improve upon what I learned in my first round of  #100daysofcode p2 day 2 code: https://codepen.io/kassandrasanch/pen/abNrEbe Glass of MIlk",
+    "author": {
+        "name": "Kassandra",
+        "avatar": "https://assets.codepen.io/2970881/internal/avatars/users/default.png?format=auto&height=512&version=1595816396&width=512",
+        "web": "https://www.cssartist.com/",
+        "social": [
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/KassandraSanch"
+            },
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/kassandrasanch"
+            }
+        ]
+    },
+    "html": "single-div-glass-of-milk.html",
+    "css": [
+        "single-div-glass-of-milk.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "glass",
+        "milk"
+    ],
+    "original": "https://codepen.io/kassandrasanch/pen/abNrEbe",
+    "codepen": "https://codepen.io/kassandrasanch/pen/abNrEbe"
+}

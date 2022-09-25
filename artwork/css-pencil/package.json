@@ -1,0 +1,33 @@
+{
+    "name": "css-pencil",
+    "version": "1.0.0",
+    "title": "CSS Pencil",
+    "description": "#CSSArt Single Div Pencil.\n\nWorking on making a time-lapse video on how this was made. Stay tuned. ",
+    "author": {
+        "name": "Kassandra",
+        "avatar": "https://assets.codepen.io/2970881/internal/avatars/users/default.png?format=auto&height=512&version=1595816396&width=512",
+        "web": "https://www.cssartist.com/",
+        "social": [
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/KassandraSanch"
+            },
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/kassandrasanch"
+            }
+        ]
+    },
+    "html": "css-pencil.html",
+    "css": [
+        "css-pencil.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "pencil"
+    ],
+    "original": "https://codepen.io/kassandrasanch/pen/JjNVwKN",
+    "codepen": "https://codepen.io/kassandrasanch/pen/JjNVwKN"
+}
