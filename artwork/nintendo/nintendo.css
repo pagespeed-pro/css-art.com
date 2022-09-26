@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+  background: #f2f2f2;
+}
+
+#center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  width: 850px;
+}
+
+#line1{
+  left: 430px;
+  top: 520px;
+  position: absolute;
+  z-index: -1;
+  width: 20px;
+  height: 10px;
+  background-color: black;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0px -6px 20px rgba(255, 255, 255, 0.7), 0px 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+#line2 {
+  border-radius: 5px;
+  left: 400px;
+  top: 520px;
+  position: absolute;
+  z-index: -1;
+  width: 20px;
+  height: 10px;
+  background-color: black;
+  z-index: 1000;
+  box-shadow: 0px -6px 20px rgba(255, 255, 255, 0.7), 0px 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+#battery {
+  left: 555px;
+  top: 120px;
+  position: absolute;
+  z-index: -1;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border-radius: 50px;
+  z-index: 10000;
+  box-shadow: 0px -6px 20px rgba(255, 255, 255, 0.8), 0px 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+#circle1 {
+  left: 540px;
+  top: 420px;
+  position: absolute;
+  z-index: -1;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50px;
+  z-index: 1000;
+  box-shadow: 0px -6px 20px rgba(255, 255, 255, 0.6), 0px 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+#circle2 {
+  left: 470px;
+  top: 450px;
+  position: absolute;
+  z-index: -1;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50px;
+  z-index: 1000;
+  box-shadow: 0px -6px 20px rgba(255, 255, 255, 0.6), 0px 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+#rectangle1 {
+  left: 320px;
+  top: 420px;
+  position: absolute;
+  z-index: -1;
+  width: 30px;
+  height: 80px;
+  background-color: black;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0px -6px 20px rgba(255, 255, 255, 0.6), 0px 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+#rectangle2 {
+  left: 295px;
+  top: 445px;
+  position: absolute;
+  z-index: -1;
+  width: 80px;
+  height: 30px;
+  background-color: black;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0px -6px 10px rgba(255, 255, 255, 0.1), 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#screen {
+  position: absolute;
+  z-index: -1;
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  border-radius: 10px;
+}
+
+#screen2 {
+  position: absolute;
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+#screen3 {
+  position: absolute;
+  z-index: -100000;
+  top: 70px;
+  width: 350px;
+  height: 500px;
+  background-color: limegreen;
+  border-radius: 10px;
+  box-shadow: 0px -6px 20px rgba(255, 255, 255, 1), 0px 4px 20px rgba(0, 0, 0, 0.8);
+}
+
+#gameboy {
+  width: 500px;
+  white-space: nowrap;
+  font-family: 'Asap', sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  font-style: italic;
+  letter-spacing: -1px;
+  text-align: center;
+  opacity: 0;
+  transform: skew(-4deg);
+  overflow: hidden;
+  background: -webkit-linear-gradient(0deg, blue 40%, green 50%, purple 60%, deeppink 70%, yellow 80%, white 100%);
+  background-position: 150px;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: anime 9s infinite linear;
+  z-index: 100000;
+}
+
+#nintendo {
+  position: absolute;
+  font-family: monospace;
+  font-size: 20px;
+  font-weight: 600;
+  top: 300px;
+  text-align: center;
+  z-index: 10000;
+  color: black;
+}
+
+#gameboytext {
+  position: absolute;
+  font-family: 'Asap', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  top: 375px;
+  left: 350px;
+  text-align: center;
+  z-index: 10000;
+  color: grey;
+  transform: skew(-10deg);
+}
+
+#gameboytextc {
+  position: absolute;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 25px;
+  font-weight: 600;
+  top: 368px;
+  left: 455px;
+  text-align: center;
+  z-index: 10000;
+  color: deeppink;
+  transform: skew(-10deg);
+}
+
+#gameboytexto {
+  position: absolute;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 25px;
+  font-weight: 600;
+  top: 368px;
+  left: 466px;
+  text-align: center;
+  z-index: 10000;
+  color: purple;
+  transform: skew(-10deg);
+}
+
+#gameboytextl {
+  position: absolute;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 25px;
+  font-weight: 600;
+  top: 368px;
+  left: 479px;
+  text-align: center;
+  z-index: 10000;
+  color: lime;
+  transform: skew(-10deg);
+}
+
+#gameboytexty {
+  position: absolute;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 25px;
+  font-weight: 600;
+  top: 368px;
+  left: 487px;
+  text-align: center;
+  z-index: 10000;
+  color: yellow;
+  transform: skew(-10deg);
+}
+
+#gameboytextr {
+  position: absolute;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 25px;
+  font-weight: 600;
+  top: 368px;
+  left: 500px;
+  text-align: center;
+  z-index: 10000;
+  color: #0892D0;
+  transform: skew(-10deg);
+}
+
+@keyframes anime {
+  65% {
+    color: blue;
+    background-position: -150px;
+    opacity: 1;
+  }
+  66% {
+    color: blue;
+  }
+  67% {
+    color: green;
+  }
+  68% {
+    color: green;
+  }
+  70% {
+    color: purple;
+  }
+  72% {
+    color: purple;
+  }
+  74% {
+    color: deeppink;
+  }
+  76% {
+    color: deeppink;
+  }
+  77% {
+    color: white;
+  }
+  78% {
+    background-position: 150px;
+  }
+  85% {
+    opacity: 1;
+  }
+}

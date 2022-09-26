@@ -1,0 +1,271 @@
+body {
+  background: beige;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fixposition {
+  position: absolute;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  display: block;
+  margin: auto;
+  height: 30rem;
+  width: 30rem;
+}
+
+.head {
+  margin: 12% 25%;
+  height: 75%;
+  width: 45%;
+  background: limegreen;
+  border: 0.5rem solid black;
+  border-radius: 10% 10% 30% 30%;
+}
+
+.bolts {
+  height: 6%;
+  width: 60%;
+  margin-top: 70%;
+  margin-left: 17%;
+  background: black;
+  border-radius: 0;
+}
+
+.hair {
+  height: 30%;
+  background: linear-gradient(black 50%, transparent 49%), linear-gradient(-45deg, limegreen 33%, transparent 33%) 0 50%, limegreen linear-gradient(45deg, limegreen 33%, black 33%) 0 50%;
+  background-repeat: repeat-x;
+  background-size: 1% 50%, 40% 50%, 40% 50%;
+}
+
+.hair:hover {
+  animation: hairy 2s linear infinite;
+  height: 30%;
+  background: linear-gradient(black 50%, transparent 49%), linear-gradient(-45deg, limegreen 33%, transparent 33%) 0 50%, limegreen linear-gradient(45deg, limegreen 33%, black 33%) 0 50%;
+  background-repeat: repeat-x;
+  background-size: 1% 50%, 40% 50%, 40% 50%;
+}
+
+.eye1 {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  top: 150px;
+  left: 20px;
+  background-color: white;
+}
+
+.eye1a {
+  animation: roll 2s ease-in-out infinite alternate;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  left: 20px;
+  background-color: black;
+}
+
+.eye2 {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  top: 150px;
+  left: 120px;
+  background-color: white;
+}
+
+.eye2a {
+  animation: roll 2s ease-in-out infinite alternate;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  left: 20px;
+  background-color: black;
+}
+
+.nose, .nose-skin {
+  height: 5%;
+  width: 20%;
+  margin-top: 120%;
+  margin-left: 42%;
+  background: black;
+  border-radius: 50%;
+  transform: rotate(-10deg);
+}
+
+.nose-skin {
+  height: 100%;
+  width: 120%;
+  margin: 15% 3% 3%;
+  background: limegreen;
+}
+
+.mouth {
+  height: 10%;
+  width: 50%;
+  margin-top: 130%;
+  margin-left: 10%;
+  background: black;
+  transform: rotate(230deg);
+  border-radius: 50%;
+}
+
+.stitch1 {
+  height: 10%;
+  width: 2%;
+  margin-top: 40%;
+  margin-left: 80%;
+  background: black;
+  transform: rotate(50deg);
+  border-radius: 50%;
+}
+
+.stitch2 {
+  height: 10%;
+  width: 2%;
+  margin-top: 40%;
+  margin-left: 70%;
+  background: black;
+  transform: rotate(50deg);
+  border-radius: 50%;
+}
+
+.stitch3 {
+  height: 10%;
+  width: 2%;
+  margin-top: 40%;
+  margin-left: 70%;
+  background: black;
+  transform: rotate(-50deg);
+  border-radius: 50%;
+}
+
+.stitch4 {
+  height: 10%;
+  width: 2%;
+  margin-top: 35%;
+  margin-left: 80%;
+  background: black;
+  transform: rotate(-50deg);
+  border-radius: 50%;
+}
+
+@keyframes roll {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: none;
+  }
+  75% {
+    transform: translateX(-10px) rotate(-16deg);
+  }
+  100% {
+    transform: translateX(-10px) rotate(-16deg);
+  }
+}
+.eyebrow1 {
+  width: 60px;
+  height: 10px;
+  top: 130px;
+  left: 120px;
+  background-color: black;
+  transform: rotate(20deg);
+  border-bottom-left-radius: 50%;
+}
+
+.eyebrow2 {
+  width: 60px;
+  height: 10px;
+  top: 130px;
+  left: 20px;
+  background-color: black;
+  transform: rotate(-20deg);
+  border-bottom-left-radius: 50%;
+}
+
+.side1 {
+  width: 30px;
+  height: 50px;
+  top: 260px;
+  left: 220px;
+  background-color: black;
+}
+
+.side2 {
+  width: 30px;
+  height: 50px;
+  top: 260px;
+  left: -50px;
+  background-color: black;
+}
+
+@keyframes hairy {
+  0%, 10%, 100% {
+    height: 20%;
+  }
+  15% {
+    height: 10%;
+  }
+  20% {
+    height: 20%;
+  }
+  25% {
+    height: 30%;
+  }
+  30% {
+    height: 40%;
+  }
+  35% {
+    height: 30%;
+  }
+  40% {
+    height: 20%;
+  }
+  45% {
+    height: 10%;
+  }
+  50% {
+    height: 20%;
+  }
+  55% {
+    height: 30%;
+  }
+  60% {
+    height: 40%;
+  }
+  65% {
+    height: 30%;
+  }
+  70% {
+    height: 20%;
+  }
+  75% {
+    height: 10%;
+  }
+  80% {
+    height: 20%;
+  }
+  85% {
+    height: 20%;
+  }
+  85% {
+    height: 30%;
+  }
+  90% {
+    height: 40%;
+  }
+  95% {
+    height: 30%;
+  }
+}

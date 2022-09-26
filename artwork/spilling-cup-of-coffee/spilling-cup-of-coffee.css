@@ -1,0 +1,211 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  background: #FFBEC0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mug {
+  background: #FF8D3F;
+  height: 30vmin;
+  width: 27vmin;
+  border-radius: 5% 5% 5% 5%;
+}
+.border {
+  position: relative;
+  background: #E77c33;
+  height: 3vmin;
+  width: 23vmin;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: #FF8D3F;
+  border-width: 2vmin;
+  top: -2vmin;
+}
+#bottom {
+  top: 13vmin;
+  background: #FF8D3F;
+}
+#bottom::after {
+  content: '';
+  position: absolute;
+  background: #E77c33;
+  top: -25.5vmin;
+  left: 2vmin;
+  height: 50%;
+  width: 80%;
+  border-radius: 50%;
+  animation: fill 0.5s ease-out 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+.handle {
+  position: relative;
+  border-style: solid;
+  border-width: 4vmin;
+  border-color: #FF8D3F;
+  border-radius: 10%;
+  height: 12vmin;
+  width: 5vmin;
+  left: -4vmin;
+}
+.coffee {
+  position: relative;
+  background: #573F30;
+  width: 6vmin;
+  height: 2vmin;
+  top: -50vmin;
+  left: -29vmin;
+  animation: pour 0.5s ease-in 1;
+  animation-fill-mode: forwards;
+}
+.drip {
+  position: relative;
+  background: transparent;
+  width: 3vmin;
+  height: 1vmin;
+  top: -13.5vmin;
+  left: -43vmin;
+  animation: dripping 0.5s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.drip::before {
+  content: '';
+  position: absolute;
+  background: transparent;
+  width: 1.5vmin;
+  height: 1vmin;
+  top: -2mvin;
+  left: 5vmin;
+  animation: dripping 0.5s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1.2s;
+}
+.drip::after {
+  content: '';
+  position: absolute;
+  background: transparent;
+  width: 3vmin;
+  height: 1vmin;
+  top: -2mvin;
+  left: 15vmin;
+  animation: dripping 0.5s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1.3s;
+}
+.puddle {
+  position: relative;
+  background: #FFBEC0;
+  width: 20vmin;
+  height: 5vmin;
+  top: 24vmin;
+  left: 0vmin;
+  border-radius: 50%;
+  animation: extend 1s ease-in 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1.4s;
+}
+.puddle::before {
+  position: absolute;
+  content: '';
+  background: transparent;
+  width: 10vmin;
+  height: 3vmin;
+  top: 1.5vmin;
+  left: 11vmin;
+  border-radius: 50%;
+  animation: extend 0.5s ease-in 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+.puddle::after {
+  position: absolute;
+  content: '';
+  background: transparent;
+  width: 20vmin;
+  height: 15vmin;
+  top: 5vmin;
+  left: 4vmin;
+  border-radius: 50%;
+  animation: extend 0.5 ease-in 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+.full {
+  position: relative;
+  background: transparent;
+  left: -10vmax;
+  top: 36vmin;
+  height: 1vmin;
+  width: 200vw;
+  animation: cover 5s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 2.3s;
+}
+@keyframes pour {
+  100% {
+    height: 75.5vmin;
+  }
+}
+@keyframes fill {
+  0% {
+    background: #573F30;
+  }
+  100% {
+    background: #573F30;
+    height: 100%;
+    width: 100%;
+    left: 0vmin;
+    top: -27vmin;
+  }
+}
+@keyframes dripping {
+  0% {
+    background: #573F30;
+  }
+  100% {
+    background: #573F30;
+    height: 31.7vmin;
+    top: 1.7vmin;
+  }
+}
+@keyframes extend {
+  0% {
+    background: #573F30;
+  }
+  100% {
+    background: #573F30;
+    transform: scale(7.5, 2);
+  }
+}
+@keyframes cover {
+  0% {
+    background: #573F30;
+    transform: scale(2, 1);
+  }
+  50% {
+    background: #573F30;
+    transform: scale(2, 1.7);
+    height: 50vmin;
+    top: 30vmin;
+  }
+  75% {
+    background: #573F30;
+    width: 200vw;
+    left: -50vmax;
+    top: -10vmin;
+  }
+  100% {
+    background: #573F30;
+    height: 150vh;
+    width: 150vw;
+    left: -50vmax;
+    top: -40vmin;
+  }
+}

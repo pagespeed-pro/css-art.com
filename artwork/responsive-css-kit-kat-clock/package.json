@@ -1,0 +1,41 @@
+{
+    "name": "responsive-css-kit-kat-clock",
+    "version": "1.0.0",
+    "title": "Responsive CSS Kit Kat Clock 😸🕰",
+    "description": "Been meaning to create a cat-related pen since kittens moved in at home 😅\n\nHere's a CSS Kit Kat clock where JavaScript is used to set the time and change bowtie color on each load 😎\n\nPowered by CSS variables! 💪 Inspired by this [Dribbble shot](https://dribbble.com/shots/1616260-Kit-Cat-Clock).\n\nEnjoy!",
+    "author": {
+        "name": "Jhey",
+        "avatar": "https://assets.codepen.io/605876/internal/avatars/users/default.png?format=auto&height=512&version=1529079380&width=512",
+        "web": "https://jhey.dev/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/jh3y/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/jh3yy"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/jh3y"
+            }
+        ]
+    },
+    "html": "responsive-css-kit-kat-clock.html",
+    "css": [
+        "responsive-css-kit-kat-clock.css"
+    ],
+    "js": "const CLOCK = document.querySelector('.clock')\nconst DATE = new Date()\nconst MINUTES = DATE.getMinutes()\nconst HOURS = DATE.getHours() % 12\n\nCLOCK.style.setProperty('--hue', Math.random() * 360)\nCLOCK.style.setProperty('--minutes-delay', (3600 / 60) * MINUTES)\nCLOCK.style.setProperty(\n  '--hours-delay',\n  (43200 / 12) * HOURS + (43200 / 12 / 60) * MINUTES\n)\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "animation",
+        "cat",
+        "clock",
+        "css",
+        "design"
+    ],
+    "original": "https://codepen.io/jh3y/pen/LYpNyvm",
+    "codepen": "https://codepen.io/jh3y/pen/LYpNyvm"
+}

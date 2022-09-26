@@ -1,0 +1,41 @@
+{
+    "name": "sun-reflection",
+    "version": "1.0.0",
+    "title": "Sun Reflection",
+    "description": "",
+    "author": {
+        "name": "Ale Thomas",
+        "avatar": "https://pbs.twimg.com/profile_images/1557016919873576960/PwC7V0eZ_200x200.jpg",
+        "web": "https://bio.link/pokecoder",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/pokecoder/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/pokecoder"
+            },
+            {
+                "title": "Hashnode",
+                "url": "https://hashnode.com/@pokecoder"
+            }
+        ]
+    },
+    "html": "sun-reflection.html",
+    "css": [
+        "sun-reflection.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "codepenchallenge",
+        "css-only",
+        "css-art",
+        "animation",
+        "cpc-reflections"
+    ],
+    "original": "https://codepen.io/pokecoder/pen/JjJxXbJ",
+    "codepen": "https://codepen.io/pokecoder/pen/JjJxXbJ"
+}

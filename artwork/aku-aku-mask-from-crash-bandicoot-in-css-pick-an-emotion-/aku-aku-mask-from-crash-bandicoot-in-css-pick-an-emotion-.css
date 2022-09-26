@@ -1,0 +1,475 @@
+@charset "UTF-8";
+:root {
+  --lip: .01em;
+  --brow-offset: .035em;
+  --mouth-basis: .111em;
+  --mouth: var(--mouth-basis);
+  --bg1: #001195;
+  --bg2: #0c0c39;
+  --wood: #572f1c;
+  --feather1: #55428d;
+  --feather2: #d6b644;
+  --feather3: #cb8138;
+  --feather4: #b8346e;
+  --brows: #c94225;
+  --eyes: #d6b644;
+  --eyelids: #4aa759;
+  --teeth: #e5d2cf;
+  --goatee: #4aa85a;
+  --rotate-mask: 0deg;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-image: radial-gradient(circle at center, var(--bg1), var(--bg2));
+}
+
+/* Here's where the magic starts */
+.aku-aku {
+  position: relative;
+  width: 0.589em;
+  height: 1em;
+  font-size: 80vmin;
+  perspective: 1em;
+  animation: maskFloat 2s ease-in-out alternate infinite;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.aku-aku div {
+  position: absolute;
+}
+
+.mask-wrapper {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: 43.4% 50%;
+  transform: rotateY(var(--rotate-mask));
+  will-change: transform;
+  transition-property: transform;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-in-out;
+}
+
+.feathers {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0.5em;
+}
+
+.feather {
+  bottom: 0;
+  width: 0.1417em;
+  clip-path: polygon(50% 0, 100% 30%, 50% 100%, 0 32%);
+  transform-origin: center bottom;
+  transform: rotate(var(--feather-angle, 0deg));
+  animation: feather 2s ease-in-out alternate infinite;
+  will-change: background-color;
+  transition-property: background-color;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-in-out;
+}
+.feather:nth-child(1) {
+  --feather-angle: -30deg;
+  left: 0.122em;
+  height: 0.375em;
+  background-color: var(--feather1);
+  animation-delay: -1.5s;
+}
+.feather:nth-child(2) {
+  --feather-angle: 0deg;
+  left: 0.16em;
+  height: 0.5em;
+  background-color: var(--feather2);
+  animation-delay: -0.5s;
+}
+.feather:nth-child(3) {
+  --feather-angle: 23deg;
+  left: 0.21em;
+  height: 0.41em;
+  background-color: var(--feather3);
+}
+.feather:nth-child(4) {
+  --feather-angle: 50deg;
+  left: 0.278em;
+  height: 0.319em;
+  background-color: var(--feather4);
+  animation-delay: -1s;
+}
+
+.mask {
+  left: 0.0833em;
+  top: 0.433em;
+  width: 0.336em;
+  height: 0.4027em;
+}
+.mask::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--wood);
+  clip-path: polygon(0 0, 100% 10%, 90% 95%, 10% 100%);
+  will-change: background-color;
+  transition-property: background-color;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-in-out;
+}
+
+.nose {
+  left: 0.117em;
+  top: 0.181em;
+  width: 0.106em;
+  height: 0.15em;
+  background-color: var(--feather3);
+  clip-path: polygon(50% 0, 100% 71%, 50% 100%, 0 74%);
+  will-change: background-color;
+  transition-property: background-color;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-in-out;
+}
+
+.eye {
+  top: 0.0917em;
+  width: 0.156em;
+  height: 0.156em;
+}
+.eye::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--eyes);
+  clip-path: polygon(0 10%, 100% 10%, 100% 100%, 0 100%);
+  transform-origin: 50% 12.5%;
+  animation: blink 3s ease-in-out alternate infinite;
+  will-change: background-color, transform, box-shadow;
+  transition-property: background-color, transform, box-shadow;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-in-out;
+}
+.eye--left {
+  left: -0.002em;
+}
+.eye--left::before {
+  border-radius: 50% 25% 50% 50%;
+  box-shadow: inset 0.0125em -0.025em 0 var(--eyelids);
+}
+.eye--right {
+  right: -0.008em;
+}
+.eye--right::before {
+  border-radius: 25% 50% 50% 50%;
+  box-shadow: inset -0.0125em -0.025em 0 var(--eyelids);
+}
+
+.brow {
+  width: 120%;
+  height: 50%;
+  background-color: var(--brows);
+  will-change: transform, background-color;
+  transition-property: transform, background-color;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-in-out;
+}
+.brow--left {
+  left: -15%;
+  top: -8%;
+  transform-origin: calc(50% + var(--brow-offset)) 125%;
+  clip-path: polygon(0 0.002em, calc(100% - .002em) 0, 100% 70%, 0.002em 100%);
+}
+.brow--right {
+  right: -15%;
+  top: -4%;
+  transform-origin: calc(50% - var(--brow-offset)) 125%;
+  clip-path: polygon(0.002em 0, calc(100% - .002em) 0.002em, 100% 100%, 0 70%);
+}
+
+.mouth {
+  left: -0.008em;
+  top: 0.328em;
+  width: 0.353em;
+  height: var(--mouth);
+  background-color: var(--brows);
+  clip-path: polygon(0.035em 0, calc(50% + .001em) 0.02em, calc(100% - .037em) 0, 100% 100%, 0 100%);
+  will-change: height, background-color;
+  transition-property: height, background-color;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-in-out;
+}
+
+.teeth {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: calc(100% - var(--lip) * 9);
+  height: calc(100% - var(--lip) * 9);
+  margin: auto;
+  background-color: var(--teeth);
+  clip-path: polygon(var(--lip) 0, calc(50% + .001em) var(--lip), calc(100% - var(--lip)) 0, 100% 100%, 0 100%);
+  will-change: background-color;
+  transition-property: background-color;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-in-out;
+}
+
+.goatee {
+  top: 0.42em;
+  left: 0;
+  right: 0;
+  width: 0.156em;
+  height: 0.111em;
+  margin: 0 auto;
+}
+.goatee::before, .goatee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border-style: solid;
+  border-color: var(--goatee) transparent transparent;
+  will-change: border-color;
+  transition-property: border-color;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-in-out;
+}
+.goatee::before {
+  left: calc(45% - .063em);
+  border-width: 0.11em 0.063em 0 0.063em;
+  filter: brightness(0.95);
+}
+.goatee::after {
+  left: calc(65% - .047em);
+  border-width: 0.092em 0.047em 0 0.047em;
+}
+
+@keyframes maskFloat {
+  from {
+    transform: translateY(-0.025em) rotate(-1deg);
+  }
+  to {
+    transform: translateY(0.025em) rotate(1deg);
+  }
+}
+@keyframes blink {
+  0% {
+    transform: scaleY(1);
+  }
+  5% {
+    transform: scaleY(0.25);
+  }
+  10% {
+    transform: scaleY(1);
+  }
+}
+@keyframes feather {
+  from {
+    transform: rotate(calc(var(--feather-angle) - 2deg));
+  }
+  to {
+    transform: rotate(calc(var(--feather-angle) + 2deg));
+  }
+}
+@keyframes talking {
+  0% {
+    height: var(--mouth);
+  }
+  10% {
+    height: calc(var(--mouth) * .9);
+  }
+  20% {
+    height: calc(var(--mouth) * 1.1);
+  }
+  30% {
+    height: var(--mouth);
+  }
+  40% {
+    height: calc(var(--mouth) * 1.2);
+  }
+  50% {
+    height: var(--mouth);
+  }
+  60% {
+    height: calc(var(--mouth) * .8);
+  }
+  70% {
+    height: calc(var(--mouth) * 1.15);
+  }
+  80% {
+    height: var(--mouth);
+  }
+  90% {
+    height: calc(var(--mouth) * .9);
+  }
+  100% {
+    height: var(--mouth);
+  }
+}
+@keyframes stars {
+  from {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.special-mask:checked ~ .aku-aku {
+  --wood: #92572d;
+  --feather1: #d97937;
+  --feather2: #d6b644;
+  --feather3: #d97937;
+  --feather4: #d6b644;
+  --brows: #c74a26;
+  --eyes: #eaba58;
+  --eyelids: #4aa85a;
+  --teeth: #f7c06e;
+  --goatee: #cb8138;
+  --rotate-mask: 360deg;
+}
+.special-mask:checked ~ .aku-aku::before, .special-mask:checked ~ .aku-aku::after,
+.special-mask:checked ~ .aku-aku > .star::before,
+.special-mask:checked ~ .aku-aku > .star::after {
+  content: "✨";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 2rem;
+  height: 2rem;
+  margin: auto;
+  font-size: 2rem;
+  opacity: 0;
+  animation: stars 0.75s ease-out infinite forwards;
+  z-index: -1;
+}
+.special-mask:checked ~ .aku-aku::before {
+  transform: translate(-60vmin, 88vmin);
+}
+.special-mask:checked ~ .aku-aku::after {
+  transform: translate(100vmin, -64vmin);
+  animation-delay: -0.75s;
+}
+.special-mask:checked ~ .aku-aku > .star::before {
+  transform: translate(-90vmin, -72vmin);
+  animation-delay: -0.5s;
+}
+.special-mask:checked ~ .aku-aku > .star::after {
+  transform: translate(60vmin, 96vmin);
+  animation-delay: -0.25s;
+}
+
+.talking-mask:checked ~ .aku-aku {
+  will-change: --mouth;
+  transition-property: --mouth;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-in-out;
+}
+.talking-mask:checked ~ .aku-aku .mouth {
+  animation: talking 2s ease-in-out infinite none;
+}
+
+.mask-emotions--angry:checked ~ .aku-aku {
+  --mouth: calc(var(--mouth-basis) * .9);
+}
+.mask-emotions--angry:checked ~ .aku-aku .brow--left {
+  transform: rotate(10deg);
+}
+.mask-emotions--angry:checked ~ .aku-aku .brow--right {
+  transform: rotate(-10deg);
+}
+
+.mask-emotions--sad:checked ~ .aku-aku {
+  --mouth: calc(var(--mouth-basis) * 1.1);
+}
+.mask-emotions--sad:checked ~ .aku-aku .brow--left {
+  transform: translateX(calc(var(--brow-offset) * .5)) rotate(-10deg);
+}
+.mask-emotions--sad:checked ~ .aku-aku .brow--right {
+  transform: translateX(calc(var(--brow-offset) * -.5)) rotate(10deg);
+}
+
+.mask-emotions--shocked:checked ~ .aku-aku {
+  --mouth: calc(var(--mouth-basis) * 1.5);
+}
+.mask-emotions--shocked:checked ~ .aku-aku .brow--left {
+  transform: translateY(calc(var(--brow-offset) * -.5)) rotate(-7deg);
+}
+.mask-emotions--shocked:checked ~ .aku-aku .brow--right {
+  transform: translateY(calc(var(--brow-offset) * -.5)) rotate(7deg);
+}
+
+.mask-emotions--confused:checked ~ .aku-aku {
+  --mouth: calc(var(--mouth-basis) * 1.05);
+}
+.mask-emotions--confused:checked ~ .aku-aku .brow--left {
+  transform: translateY(calc(var(--brow-offset) * -.5)) rotate(-7deg);
+}
+.mask-emotions--confused:checked ~ .aku-aku .brow--right {
+  transform: translateX(calc(var(--brow-offset) * -.5)) rotate(10deg);
+}
+
+/* And here's where the magic ends */
+input,
+label {
+  position: fixed;
+  top: 0.5rem;
+  color: #fff;
+}
+
+input {
+  left: 0.5rem;
+}
+
+label {
+  left: 2rem;
+  text-transform: capitalize;
+}
+
+.option:nth-of-type(1) {
+  top: 0.5rem;
+}
+
+.option:nth-of-type(2) {
+  top: 2.5rem;
+}
+
+.option:nth-of-type(3) {
+  top: 4.5rem;
+}
+
+.option:nth-of-type(4) {
+  top: 6.5rem;
+}
+
+.option:nth-of-type(5) {
+  top: 8.5rem;
+}
+
+.option:nth-of-type(6) {
+  top: 10.5rem;
+}
+
+.option:nth-of-type(7) {
+  top: 12.5rem;
+}

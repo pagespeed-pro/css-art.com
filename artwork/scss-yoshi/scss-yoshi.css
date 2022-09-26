@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 100;
+  --unit: calc((var(--size) / 890) * 1vmin);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: courier;
+  text-align: center;
+  font-size: calc(15 * var(--unit));
+}
+
+.yoshi {
+  height: calc(816 * var(--unit));
+  width: calc(890 * var(--unit));
+  position: fixed;
+  z-index: 1;
+  overflow: hidden;
+  filter: blur(0.5px);
+}
+.yoshi * {
+  position: absolute;
+}
+.yoshi .eye-r, .yoshi .eye-l {
+  width: 21%;
+  height: 32%;
+  background: #75f461;
+  border-radius: 78% 96% 60% 0%/78% 80% 100% 0%;
+  transform: rotate(5deg);
+}
+.yoshi .eye-ball-l {
+  width: 60%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 0%, white 40%, #b9b9b9 80%);
+  border-radius: 50%/50%;
+  transform: rotate(19deg);
+  z-index: 10;
+  right: 59%;
+  top: 11%;
+  box-shadow: calc(-1 * var(--unit)) 0 calc(3 * var(--unit)) #d8d8d8;
+}
+.yoshi .eye-ball-l::after {
+  content: "";
+  position: absolute;
+  height: 47%;
+  width: 55%;
+  right: 20%;
+  top: 25%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 15%, white 6%, transparent 11%), radial-gradient(ellipse, #3e48df 10%, #141c88 31%, #0b0b0b 60%, #4e6780 63%, black 68%);
+}
+.yoshi .eye-l {
+  right: 25.5%;
+  top: 7%;
+  z-index: -1;
+  background: radial-gradient(ellipse at 23% 34%, #349c20 23%, #75f461 30%, black);
+}
+.yoshi .eye-r {
+  right: 17%;
+  top: 10%;
+  background: linear-gradient(-260deg, transparent 40%, #135e04), radial-gradient(ellipse at 25% 34%, #349c20 23%, #75f461 30%);
+}
+.yoshi .eye-r::after {
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 70%;
+  background: rgba(25, 128, 25, 0.685);
+  bottom: -20%;
+  left: 10%;
+  filter: blur(calc(20 * var(--unit)));
+}
+.yoshi .eye-ball-r {
+  overflow: hidden;
+  background: transparent;
+  border-radius: 100% 100% 60% 50%/100% 100% 60% 50%;
+  height: 88%;
+  right: 52%;
+  top: 12%;
+  z-index: 5;
+  width: 63%;
+  transform: rotate(13deg);
+  box-shadow: calc(2 * var(--unit)) calc(-7 * var(--unit)) calc(5 * var(--unit)) rgba(9, 100, 6, 0.74), calc(8 * var(--unit)) calc(-8 * var(--unit)) calc(4 * var(--unit)) rgba(115, 248, 110, 0.616);
+}
+.yoshi .eye-ball-r::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 160%;
+  top: -7%;
+  right: -40%;
+  background: radial-gradient(circle at 50% 0%, white 40%, #b9b9b9 80%);
+  border-radius: 0% 0% 100% 90%/0 0 100% 90%;
+  box-shadow: 0 calc(10 * var(--unit)) calc(5 * var(--unit)) #75f461;
+}
+.yoshi .eye-ball-r::after {
+  content: "";
+  position: absolute;
+  height: 47%;
+  width: 55%;
+  right: -4%;
+  top: 33%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 15%, white 6%, transparent 11%), radial-gradient(ellipse, #3e48df 10%, #141c88 31%, #0b0b0b 60%, #4e6780 63%, black 68%);
+}
+.yoshi .face {
+  width: 22%;
+  height: 30%;
+  background: linear-gradient(100deg, #75f461 40%, #23611f);
+  z-index: -1;
+  right: 21.5%;
+  top: 31%;
+  border-radius: 30%;
+}
+.yoshi .face::before {
+  content: "";
+  position: absolute;
+  height: 47%;
+  width: 130%;
+  right: 20%;
+  bottom: -73%;
+  border-radius: 50%;
+  background: #868686;
+  z-index: 5;
+}
+.yoshi .jaw {
+  width: 28%;
+  height: 36%;
+  background: radial-gradient(circle at 60% 10%, white, #868686 80%);
+  z-index: 5;
+  right: 20%;
+  top: 46%;
+  border-radius: 50%;
+}
+.yoshi .lip {
+  width: 25%;
+  height: 36%;
+  overflow: hidden;
+  background: linear-gradient(90deg, #b4b4b4, #858484);
+  z-index: 2;
+  left: 33%;
+  top: 51%;
+  border-radius: 0% 0% 94% 37%/0% 0% 70% 70%;
+  transform: rotate(30deg);
+}
+.yoshi .lip::after {
+  content: "";
+  position: absolute;
+  height: 95%;
+  width: 60%;
+  right: 30%;
+  bottom: -27%;
+  transform: rotate(60deg);
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 55% 51%, rgba(250, 249, 249, 0.719) 30%, rgba(155, 154, 154, 0.075) 60%);
+  z-index: 5;
+}
+.yoshi .mouth {
+  width: 17%;
+  height: 25%;
+  left: 36%;
+  top: 55%;
+  background: #300f0f;
+  z-index: 4;
+  transform: rotate(10deg);
+  border-radius: 0% 0% 100% 10%/0% 0% 100% 10%;
+  overflow: hidden;
+}
+.yoshi .mouth::after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 110%;
+  transform: rotate(-40deg);
+  right: -18%;
+  bottom: 5%;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #831a1a, #411515);
+  z-index: 5;
+}
+.yoshi .nose {
+  left: 5%;
+  top: 10%;
+  width: 54%;
+  height: 59%;
+  background: radial-gradient(circle at 20% 20%, transparent 20%, rgba(33, 119, 33, 0.295) 75%, #75f461), radial-gradient(circle at 30% 10%, #75f461 31%, #349c20 85%, #75f461 100%);
+  border-radius: 50%;
+  z-index: 7;
+}
+.yoshi .nose .nostril {
+  width: 8%;
+  height: 3%;
+  top: 10%;
+  left: 27%;
+  background: linear-gradient(180deg, green, #111f03);
+  box-shadow: calc(3 * var(--unit)) calc(-2 * var(--unit)) calc(3 * var(--unit)) rgba(255, 255, 255, 0.61);
+  border-radius: 50%;
+  transform: rotate(-40deg);
+}
+.yoshi .nose .nostril::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  right: -40%;
+  bottom: -220%;
+  background: inherit;
+  box-shadow: inherit;
+  border-radius: inherit;
+  transform: rotate(10deg);
+}
+.yoshi .shadow {
+  width: 15%;
+  height: 45%;
+  bottom: 19%;
+  left: 49%;
+  background: rgba(99, 98, 98, 0.178);
+  filter: blur(calc(11 * var(--unit)));
+  z-index: 5;
+  transform: rotate(-10deg);
+}
+.yoshi .back {
+  width: 20%;
+  height: 17%;
+  background: linear-gradient(90deg, #7e1907 70%, #e74e16);
+  right: 15%;
+  bottom: 29%;
+  border-radius: 50%;
+  z-index: -10;
+}
+.yoshi .back::before {
+  content: "";
+  position: absolute;
+  height: 110%;
+  width: 100%;
+  top: -125%;
+  left: 0%;
+  background: inherit;
+  border-radius: inherit;
+}
+.yoshi .back::after {
+  content: "";
+  position: absolute;
+  height: 65%;
+  width: 70%;
+  bottom: -80%;
+  left: -15%;
+  background: inherit;
+  border-radius: inherit;
+}

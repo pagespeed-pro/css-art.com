@@ -1,0 +1,209 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coffee {
+  background-color: #A38C6B;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 0px;
+  margin-left: 6px;
+  width: 30px;
+  height: 20px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;  
+  transform: translate(-50%,-50%);
+}
+
+.drop {
+  background-color: #5E3F32;
+  width: 3px;
+  height: 18px;
+  top: 21px;
+  left: 13.8px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px; 
+  position: absolute;
+  animation: espresso 8s ease 0s infinite normal none;
+}
+
+.little_base {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  position: absolute;
+  width: 13px;
+  height: 3px;
+  background-color: #5E3F32;
+  margin-left: 9px;
+  margin-top: 18px;
+  z-index: -1;
+}
+
+.cup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 22px;
+  margin-left: -5px;
+  width: 25px;
+  height: 24px;
+  background-color: darkgray;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.cup_handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: darkgray;
+  transform: rotate(90deg);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.coffee_machine {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 125px;
+  height: 160px;
+  transform: translate(-50%,-50%);
+}
+
+.decor {
+  width: 50px;
+  height: 30px;
+  position: absolute;
+  background: black;
+  border-radius: 5px;
+  margin-top: 40px;
+  margin-left: 44px;
+}
+
+.base {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 34px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.top_decor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -90px;
+  margin-left:-30px;
+  width: 100px;
+  height: 10px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.on {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: 45px;
+  width: 5px;
+  height: 5px;
+  background-color: red;
+  border-radius: 5px;
+}
+
+.water {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -57px;
+  margin-left: -100px;
+  width: 50px;
+  height: 130px;
+  border: 3px solid black;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.water_bottom {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 56px;
+  margin-left: -100px;
+  width: 50px;
+  height: 20px;
+  background-color: black;
+  border-radius: 5px;
+}
+
+.off {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -70px;
+  margin-left: 45px;
+  width: 5px;
+  height: 5px;
+  background-color: limegreen;
+  border-radius: 5px;
+}
+
+.side {
+  position: absolute;
+  bottom: 25px;
+  border-left: 20px solid black;
+  height: 100px;
+}
+
+.top {
+  position: absolute;
+  background: black;
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+}
+
+@keyframes espresso {
+  100% { 
+    height: 0px; 
+    margin-top: 12px;
+  } 
+  75% {
+    height: 0px; 
+    margin-top: 12px;
+  } 
+  65% { 
+    height: 12px; 
+    margin-top: 0px;
+  } 
+  55% { 
+    height: 12px; 
+    margin-top: 0px;
+  } 
+  50% { 
+    height: 0px; 
+    margin-top: 0px;
+  } 
+  0% { 
+    height: 0px; 
+    margin-top: 0px;
+  } 
+}

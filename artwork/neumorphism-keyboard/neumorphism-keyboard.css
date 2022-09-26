@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap');
+
+body {
+  background-color: #f2f2f2;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+.keys {
+  display: flex;
+  list-style: none;
+}
+
+li {
+  box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.15);
+  transition: 0.5s;
+  height: 2.5em;
+  font-size: 1em;
+  width: 3em;
+  margin: 0.3em;
+  background-color: #f2f2f2;
+  border-radius: 0.5em;
+  line-height: 2.5em;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+li:hover {
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  top: 3px;
+}
+
+#red {
+  background-color: #a3f7bf;
+  width: 5em;
+}
+
+#blue {
+  background-color: #9aebed;
+  width: 6em;
+}
+
+#rebeca {
+  background-color: #fecd1a;
+  width: 8em;
+}
+
+#green {
+  background-color: #fa86be;
+  width: 6em;
+}
+
+#up {
+  background-color: #8594e4;
+  width: 8em;
+}
+
+#yellow {
+  background-color: #fffcab;
+  width: 5em;
+}
+
+#grey {
+  background-color: #fd3a69;
+  width: 3.3em;
+}
+
+#one {
+  background-color: #faafff;
+  width: 5em;
+}
+
+#two {
+  width: 24.5em;
+}

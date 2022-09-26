@@ -1,0 +1,41 @@
+{
+    "name": "aku-aku-mask-from-crash-bandicoot-in-css-pick-an-emotion-",
+    "version": "1.0.0",
+    "title": "Aku-Aku mask from Crash Bandicoot in CSS (pick-an-emotion!)",
+    "description": "On my never-ending quest of things to remake in CSS, I couldn't not take a stab at Aku-Aku, the friendly mask from the Crash Bandicoot franchise. I used clip-path which can be seen as \"cheating\", closer to SVG that pure CSS shapes, but it's still CSS, right?\n\nInspired by the beautiful work by Elio Qoshi: https://dribbble.com/shots/4127881-Aku-Aku-Emotions",
+    "author": {
+        "name": "Christopher Kirk-Nielsen",
+        "avatar": "https://assets.codepen.io/209459/internal/avatars/users/default.png?format=auto&height=512&version=1566172924&width=512",
+        "web": "https://chriskirknielsen.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/chriskirknielsen/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/ckirknielsen"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/chriskirknielsen"
+            }
+        ]
+    },
+    "html": "aku-aku-mask-from-crash-bandicoot-in-css-pick-an-emotion-.html",
+    "css": [
+        "aku-aku-mask-from-crash-bandicoot-in-css-pick-an-emotion-.css"
+    ],
+    "js": "// Inspired by the wonderful masks by Elio Qoshi: https://dribbble.com/shots/4127868-Minimal-Aku-Aku-Illustration\n\nCSS.registerProperty({\n\t'name': '--mouth', \n\t'syntax': '<length>', \n\t'initialValue': '.111em'\n});",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css-art",
+        "aku-aku",
+        "crash bandicoot",
+        "cpc-masks",
+        "codepenchallenge"
+    ],
+    "original": "https://codepen.io/chriskirknielsen/pen/RMYGpq",
+    "codepen": "https://codepen.io/chriskirknielsen/pen/RMYGpq"
+}

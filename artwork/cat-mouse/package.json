@@ -1,0 +1,41 @@
+{
+    "name": "cat-mouse",
+    "version": "1.0.0",
+    "title": "cat🐱 & mouse🐭",
+    "description": "",
+    "author": {
+        "name": "Louise Flanagan",
+        "avatar": "https://assets.codepen.io/3879263/internal/avatars/users/default.png?format=auto&height=512&version=1584488369&width=512",
+        "web": "https://lou-flan.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/louflan/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/flangerhanger"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/Lou-Flan"
+            },
+            {
+                "title": "dev.to",
+                "url": "https://dev.to/flangerhanger"
+            }
+        ]
+    },
+    "html": "cat-mouse.html",
+    "css": [
+        "cat-mouse.css"
+    ],
+    "js": "const pupil = document.getElementsByClassName(\"pupil\");\ndocument.onmousemove = () => {\n\tconst x = `${(event.clientX * 6) / window.innerWidth}%`;\n\tconst y = `${(event.clientY * 8) / window.innerHeight}%`;\n\n\tfor (let i = 0; i < 2; i++) {\n\t\tpupil[i].style.left = x;\n\t\tpupil[i].style.top = y;\n\t\tpupil[i].style.transform = `translate(${x},${y})`;\n\t}\n};\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "cat"
+    ],
+    "original": "https://codepen.io/louflan/pen/LYpggXQ",
+    "codepen": "https://codepen.io/louflan/pen/LYpggXQ"
+}

@@ -1,0 +1,41 @@
+{
+    "name": "pure-css-mario-64-3d-no-javascript-",
+    "version": "1.0.0",
+    "title": "Pure CSS Mario 64 - 3D - No JavaScript!",
+    "description": "It's a-me, a pure CSS Mario!\n\nA homage to the Super Mario 64 intro screen.\n\nNo images, no JavaScript, just a lot of transform3d.\n\nUnfortunately iOS Safari can’t quite manage it.\n\nLet's-a go!\n\nhttps://instagram.com/ivorjetski\n\nhttps://twitter.com/ivorjetski\n\nhttps://youtube.com/c/ivorjetski\n\nAlso here's a video of the process:\n\nhttps://youtu.be/GWyod2tkTxI\n\nMama Mia!\n",
+    "author": {
+        "name": "Ben Evans",
+        "avatar": "https://avatars3.githubusercontent.com/u/4320251?s=460&v=4",
+        "web": "https://www.tinydesign.co.uk/",
+        "social": [
+            {
+                "title": "Github",
+                "url": "https://github.com/ivorjetski"
+            },
+            {
+                "title": "Instagram",
+                "url": "https://www.instagram.com/benevansdesign"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/ivorjetski"
+            }
+        ]
+    },
+    "html": "pure-css-mario-64-3d-no-javascript-.html",
+    "css": [
+        "pure-css-mario-64-3d-no-javascript-.css"
+    ],
+    "js": "// A Pure CSS Mario 64\n\n// No images, No JavaScript, just CSS\n\n// iOS Safari doesn't like it\n\n// instagram.com/ivorjetski\n// twitter.com/ivorjetski\n// youtube.com/c/ivorjetski\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "purecss",
+        "cssonly",
+        "cssart",
+        "3dcss",
+        "nojs"
+    ],
+    "original": "https://codepen.io/ivorjetski/pen/abEBjKN",
+    "codepen": "https://codepen.io/ivorjetski/pen/abEBjKN"
+}

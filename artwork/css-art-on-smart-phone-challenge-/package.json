@@ -1,0 +1,39 @@
+{
+    "name": "css-art-on-smart-phone-challenge-",
+    "version": "1.0.0",
+    "title": "CSS Art on Smart Phone Challenge ",
+    "description": "",
+    "author": {
+        "name": "Shunya Koide",
+        "avatar": "https://gravatar.com/avatar/ff9e2ef303b0b34363306f94ffbbf744?d=https%3A%2F%2Fassets.codepen.io%2Finternal%2Favatars%2Fusers%2Fdefault.png&format=auto&height=512&version=0&width=512",
+        "web": "http://13creativ.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/shunyadezain/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/shunyadezain"
+            },
+            {
+                "title": "Instagram",
+                "url": "https://www.instagram.com/shunyadezain/?hl=ja"
+            },
+            {
+                "title": "Dribbble",
+                "url": "https://dribbble.com/shunyakoide"
+            }
+        ]
+    },
+    "html": "css-art-on-smart-phone-challenge-.html",
+    "css": [
+        "css-art-on-smart-phone-challenge-.css"
+    ],
+    "js": "//made on my smartphone\n//it was kinda fun :)\n//follow me on twitter @shunyadezain\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [],
+    "original": "https://codepen.io/shunyadezain/pen/RwooYVq",
+    "codepen": "https://codepen.io/shunyadezain/pen/RwooYVq"
+}

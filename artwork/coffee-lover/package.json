@@ -1,0 +1,40 @@
+{
+    "name": "coffee-lover",
+    "version": "1.0.0",
+    "title": "Coffee Lover",
+    "description": "",
+    "author": {
+        "name": "Antonia Symeonidou",
+        "avatar": "https://assets.codepen.io/4569060/internal/avatars/users/default.png?format=auto&height=512&version=1593698484&width=512",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/antoniasymeonidou/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/NanouuSymeon"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/antoniasymeonidou"
+            },
+            {
+                "title": "Youtube",
+                "url": "https://www.youtube.com/channel/UCO3Pbj9gUxRX1p_fFM8Nt7w?view_as=subscriber"
+            }
+        ]
+    },
+    "html": "coffee-lover.html",
+    "css": [
+        "coffee-lover.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "coffee"
+    ],
+    "original": "https://codepen.io/antoniasymeonidou/pen/bGrdojX",
+    "codepen": "https://codepen.io/antoniasymeonidou/pen/bGrdojX"
+}

@@ -1,0 +1,452 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fffce0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* head */
+.pikachu-top {
+  position: relative;
+  background: radial-gradient(circle, rgba(249,237,124,1) 59%, rgba(247,230,75,1) 99%);
+  height: 20vmin;
+  width: 27vmin;
+  border-radius: 47% 53% 51% 49% / 70% 70% 40% 40%; 
+  
+  display: flex;
+  margin-top: 10vmin;
+}
+/* left ear */
+.pikachu-top::after {
+  content: '';
+  position: absolute;
+  background: #f9ed7c;
+  height: 12vmin;
+  width: 7vmin;
+  border-radius: 40% 80% 20% 20%; 
+  transform: rotate(-25deg);
+  top: -6vmin;
+}
+
+.pikachu-top::before {
+  content: '';
+  position: absolute;
+  background: #f9ed7c;
+  height: 13vmin;
+  width: 7vmin;
+  border-radius: 80% 40% 20% 20%; 
+  left: 21vmin;
+  top: -3vmin;
+  transform: rotate(60deg);
+}
+
+.pikachu-eyes {
+  position: relative;
+  background: #444444;
+  height: 4.5vmin;
+  width: 4.5vmin;
+  border-radius: 50%;
+  
+  box-shadow: 12vmin 0 #444444;
+  
+  top: 9vmin;
+  left: 5.3vmin;
+}
+
+.pikachu-eyes::after {
+  content: '';
+  position: absolute;
+  background: white;
+  height: 1vmin;
+  width: 1vmin;
+  border-radius: 50%;
+  
+  left: 2.5vmin;
+  top: 1vmin;
+  
+  box-shadow: 10.3vmin 0 white;
+}
+/* nose */
+.pikachu-eyes::before {
+  content: '';
+  position: absolute;
+  background: #444444;
+  height: 0.5vmin;
+  width: 1vmin;
+  border-radius: 49% 51% 52% 48% / 30% 30% 70% 70%;
+  
+  top: 4vmin;
+  left: 7.8vmin;
+}
+
+.pikachu-mouth {
+  position: relative;
+  background: #ffacb1;
+  height: 1.5vmin;
+  width: 2vmin;
+  border-radius: 0 0 3vmin 3vmin;
+  
+  top: 14.5vmin;
+  left: 8.2vmin;
+}
+
+.pikachu-mouth::after {
+  content: '';
+  position: absolute;
+  background: #f9ed7c;
+  height: 1vmin;
+  width: 1.5vmin;
+  border-radius: 50%;
+  border-bottom: 0.1vmin solid #444444;
+    
+  left: -0.5vmin;
+  top: -0.6vmin;  
+}
+
+.pikachu-mouth::before {
+  content: '';
+  position: absolute;
+  background: #f9ed7c;
+  height: 1vmin;
+  width: 1.5vmin;
+  border-radius: 50%;
+  border-bottom: 0.1vmin solid #444444;
+    
+  left: 1vmin;
+  top: -0.6vmin;  
+}
+
+.pikachu-cheeks {
+  position: relative;
+  background: #e65a41;
+  height: 5vmin;
+  width: 4vmin;
+  border-radius: 3vmin 5vmin 5vmin 3vmin;
+  transform: rotate(-43deg);
+  
+  top: 12.2vmin;
+  left: -5.7vmin;
+}
+
+.pikachu-cheeks::after {
+  content: '';
+  position: absolute;
+  background: #e65a41;
+  height: 5vmin;
+  width: 4vmin;
+  border-radius: 5vmin 3vmin 3vmin 5vmin;
+  transform: rotate(86deg);
+  
+  left: 15.6vmin;
+  top: 14.5vmin;
+}
+
+.pikachu-ears {
+  position: relative;
+  background: transparent;
+  height: 3vmin;
+  width: 7vmin;
+  border-radius: 40% 80% 10% 10%;
+  border-top: 5vmin solid #444444;
+  
+  top: -5.7vmin;
+  left: -11.5vmin;
+  
+  transform: rotate(-25deg);
+  
+  z-index: 1;
+}
+
+.pikachu-ears::after {
+  content: '';
+  position: absolute;
+  background: transparent;
+  height: 3vmin;
+  width: 6.5vmin;
+  border-radius: 80% 40% 20% 20%; 
+  border-top: 4vmin solid #444444;
+  
+  top: 9.5vmin;
+  left: 21vmin;
+  
+  transform: rotate(85deg);
+  
+  z-index: 1;
+}
+
+
+.pikachu-bottom {
+  position: relative;
+  background: #f9ed7c;
+  height: 12vmin;
+  width: 18vmin;
+  border-radius: 70% 70% 40% 40%;
+  top: -4vmin;
+  
+  display: flex;
+  
+  z-index: 1;
+}
+
+.pikachu-bottom::after {
+  content: '';
+  position: absolute;
+  background: linear-gradient(36deg, rgba(249,237,124,1) 23%, rgba(247,230,75,1) 58%);
+  height: 7vmin;
+  width: 5vmin;
+  border-radius: 50%;
+  transform: rotate(30deg);
+
+  top: 1.5vmin;
+  left: -0.5vmin;  
+}
+/* bag strap */
+.pikachu-bottom::before {
+  content: '';
+  position: absolute;
+  background: transparent;
+  width: 3vmin;
+  height: 14vmin;
+  border-radius: 50%;
+  transform: rotate(-65deg);
+  
+  border-left: 2.5vmin solid #2f2b2b;
+  opacity: 0.9;
+  
+  left: 7vmin;
+  top: -2vmin;
+}
+
+/* THIS IS PIKACHU'S RIGHT ARM */
+.wailmer-bag {
+  position: relative;
+  background: rgba(247,230,75,1);
+  height: 7vmin;
+  width: 10vmin;
+  border-radius: 50%;
+  
+  left: 15.5vmin;
+  top: 2vmin;
+  
+  display: flex;
+  
+  z-index: 1;
+}
+
+.wailmer-bag::before {
+  content: '';
+  position: absolute;
+  background: #388eff;
+  height: 8vmin;
+  width: 8vmin;
+  border-radius: 50%;
+  
+  left: -3.5vmin;
+  top: 3.5vmin;
+}
+
+.wailmer-bag::after {
+  content: '';
+  position: absolute;
+  background: #F9F2CB;
+  height: 2vmin;
+  width: 5vmin;
+  border-radius: 0% 0% 80% 80%;
+  transform: rotate(-20deg);
+  
+  top: 9.4vmin;
+  left: -1vmin;
+}
+
+.wailmer-details {
+  position: relative;
+  background: transparent;
+  height: 1vmin;
+  width: 1vmin;
+  border-radius: 50%;
+  
+  box-shadow: 
+    -0.1vmin 1.5vmin #444444,
+    3.5vmin 0.3vmin #444444;
+  
+  top: 6.3vmin;
+  left: -1.7vmin;
+  
+  z-index: 1;
+}
+.wailmer-details::after {
+  content: '';
+  position: absolute;
+  background: #F9F2CB;
+  width: 6.3vmin;
+  height: 2.6vmin;
+  border-radius: 50% 50% 80% 80%;
+  
+  transform: rotate(-20deg);
+  left: -0.1vmin;
+  top: 2.2vmin;  
+}
+
+.wailmer-details::before {
+  content: '';
+  position: absolute;
+  background: white;
+  height: 1vmin;
+  width: 4vmin;
+  border-radius: 0 0 18vmin 18vmin;
+  border-bottom: 0.2vmin solid white;
+  transform: rotate(-20deg);
+  top: 2.3vmin;
+  left: 0.9vmin;
+  
+  z-index: 1;
+}
+
+.wailmer-fins {
+  position: relative;
+  height: 3vmin;
+  width: 3vmin;
+  background: #388eff;
+  border-radius: 40% 40% 80% 20%;
+  
+  top: 5vmin;
+  left: 1.5vmin;
+  transform: rotate(-20deg);
+  
+  display: flex;
+}
+
+.wailmer-fins::before {
+  content: '';
+  position: absolute;
+  height: 3vmin;
+  width: 3vmin;
+  background: #388eff;
+  border-radius: 40% 80% 20% 80%;
+  
+  left: -7.2vmin;
+}
+
+.wailmer-fins::after {
+  content: '';
+  position: absolute;
+  background: grey;
+  height: 1vmin;
+  width: 1.5vmin;
+  border-radius: 30%;
+  top: -3.2vmin;
+  left: -3vmin;
+}
+
+.fin-stripes {
+  position: relative;
+  background: #377edc;
+  width: 1vmin;
+  height: 0.2vmin;
+  box-shadow: 
+    -0.2vmin 0.8vmin #377edc,
+    -9.1vmin -0.2vmin #377edc,
+    -9.1vmin 0.5vmin #377edc;
+  
+  top: 1vmin;
+  left: 2vmin;
+}
+
+.pikachu-feet {
+  position: relative;
+  background: linear-gradient(118deg, rgba(249,237,124,1) 44%, rgba(247,230,75,1) 64%);
+  height: 4vmin;
+  width: 8vmin;
+  border-radius: 50%;
+  
+  box-shadow: 9.5vmin 0 rgba(247,230,75,1);
+    
+  left: -1.5vmin;
+  top: 9vmin;
+}
+
+.hat {
+  position: relative;
+  background: #388eff;
+  height: 7vmin;
+  width: 26vmin;
+  border-radius: 50%;
+  
+  top: -17.5vmin;
+  left: -2.5vmin;
+  
+  transform: rotate(10deg);
+  
+  display: flex;
+}
+
+.hat::before {
+  content: '';
+  position: absolute;
+  background: #377edc;
+  height: 7vmin;
+  width: 9vmin;
+  border-radius: 47% 53% 51% 49% / 70% 70% 40% 40%;
+  
+  left: 0.8vmin;
+  top: -1.5vmin;
+}
+
+.hat::after {
+  content:'';
+  position: absolute;
+  height: 1vmin;
+  width: 2vmin;
+  border-radius: 50%;
+  background: #388eff;
+  top: -2vmin;
+  left: 4vmin;
+}
+
+.stripes {
+  position: relative;
+  background: transparent;
+  height: 6vmin;
+  width: 2vmin;
+  border-radius: 50%;
+  border-left: 0.5vmin solid #388eff;
+  
+  top: -1vmin;
+  left: 2.5vmin;
+  
+  transform: rotate(15deg);
+}
+
+.stripes::after {
+  content: '';
+  position: absolute;
+  background: transparent;
+  height: 6vmin;
+  width: 2vmin;
+  border-radius: 50%;
+  border-right: 0.5vmin solid #388eff;
+  
+  transform: rotate(-30deg);
+  left: 2vmin;
+  top: -0.6vmin;
+}
+
+.shadow {
+  position: relative;
+  background: #e7df97;
+  width: 25vmin;
+  height: 5vmin;
+  top: -6.5vmin;
+  left: 1vmin;
+  border-radius: 50%;
+  
+  opacity: 0.5;
+}

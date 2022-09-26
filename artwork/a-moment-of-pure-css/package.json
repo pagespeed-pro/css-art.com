@@ -1,0 +1,38 @@
+{
+    "name": "a-moment-of-pure-css",
+    "version": "1.0.0",
+    "title": "A moment of pure CSS",
+    "description": "An attempt at video-realism with just CSS (& HTML) \n\nNo JavaScript - No Images - No Videos\n\nYou can edit the colour of the sun for different themes and also adjust the contrast and colour saturation - You can also mess around with all the 3D rotation too, if you can find it :)\n\nA video of the creation process:\nyoutube.com/watch?v=mr_Oxr0JqAQ\n\nFull screen version can be found here:\ntinydesign.co.uk/css-field",
+    "author": {
+        "name": "Ben Evans",
+        "avatar": "https://avatars3.githubusercontent.com/u/4320251?s=460&v=4",
+        "web": "https://www.tinydesign.co.uk/",
+        "social": [
+            {
+                "title": "Github",
+                "url": "https://github.com/ivorjetski"
+            },
+            {
+                "title": "Instagram",
+                "url": "https://www.instagram.com/benevansdesign"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/ivorjetski"
+            }
+        ]
+    },
+    "html": "a-moment-of-pure-css.html",
+    "css": [
+        "a-moment-of-pure-css.css"
+    ],
+    "js": "// A moment of pure CSS\n\n// No images - No JavaScript - No Videos - Just CSS (& HTML)\n\n// How it was made:\n// youtube.com/watch?v=mr_Oxr0JqAQ\n\n// linktr.ee/ivorjetski for more\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "video",
+        "realism"
+    ],
+    "original": "https://codepen.io/ivorjetski/pen/yLjeqgb",
+    "codepen": "https://codepen.io/ivorjetski/pen/yLjeqgb"
+}

@@ -1,0 +1,41 @@
+{
+    "name": "boo-mario-ghost-",
+    "version": "1.0.0",
+    "title": "Boo, Mario Ghost 🔉",
+    "description": "",
+    "author": {
+        "name": "Ale Thomas",
+        "avatar": "https://pbs.twimg.com/profile_images/1557016919873576960/PwC7V0eZ_200x200.jpg",
+        "web": "https://bio.link/pokecoder",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/pokecoder/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/pokecoder"
+            },
+            {
+                "title": "Hashnode",
+                "url": "https://hashnode.com/@pokecoder"
+            }
+        ]
+    },
+    "html": "boo-mario-ghost-.html",
+    "css": [
+        "boo-mario-ghost-.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "mario",
+        "pure-css",
+        "html",
+        "halloween",
+        "animation"
+    ],
+    "original": "https://codepen.io/pokecoder/pen/ZEyZdyO",
+    "codepen": "https://codepen.io/pokecoder/pen/ZEyZdyO"
+}

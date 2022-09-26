@@ -1,0 +1,40 @@
+{
+    "name": "neumorphism-keyboard",
+    "version": "1.0.0",
+    "title": "Neumorphism Keyboard",
+    "description": "Neumorphism Minimal Keyboard!\nPure CSS!",
+    "author": {
+        "name": "Antonia Symeonidou",
+        "avatar": "https://assets.codepen.io/4569060/internal/avatars/users/default.png?format=auto&height=512&version=1593698484&width=512",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/antoniasymeonidou/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/NanouuSymeon"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/antoniasymeonidou"
+            },
+            {
+                "title": "Youtube",
+                "url": "https://www.youtube.com/channel/UCO3Pbj9gUxRX1p_fFM8Nt7w?view_as=subscriber"
+            }
+        ]
+    },
+    "html": "neumorphism-keyboard.html",
+    "css": [
+        "neumorphism-keyboard.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "keyboard"
+    ],
+    "original": "https://codepen.io/antoniasymeonidou/pen/dyRoMJX",
+    "codepen": "https://codepen.io/antoniasymeonidou/pen/dyRoMJX"
+}

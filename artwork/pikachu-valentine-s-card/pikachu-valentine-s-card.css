@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #FFE3EC;
+  font-family: 'Pangolin', cursive;
+  font-size: 1vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  position: relative;
+  top: 0vmin;
+}
+
+.envelope {
+  position: relative;
+  background: #eb7885;
+  height: 30vmin;
+  width: 48vmin;
+}
+
+.card {
+  position: absolute;
+  background: white;
+  height: 25vmin;
+  width: 43vmin;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 2.5vmin;
+  top: 0vmin;
+  
+  animation: slide-rev 0.2s ease-out;
+}
+
+.message {
+  position: absolute;
+  top: 5vmin;
+}
+
+.pikachu {
+  position: absolute;
+  background: #f9ebaa;
+  height: 8vmin;
+  width: 10vmin;
+  border-radius: 40%;
+  top: 15vmin;
+  display: flex;
+}
+.pikachu::before {
+  content: '';
+  position: absolute;
+  background: #f9ebaa;
+  height: 6vmin;
+  width: 9vmin;
+  border-radius: 90% 90% 60% 60%;
+  top: -4vmin;
+  left: 0.5vmin;
+}
+.pikachu::after {
+  content: '';
+  position: absolute;
+  background: transparent;
+  height: 1vmin;
+  width: 1vmin;
+  top: 2vmin;
+  left: -1.5vmin;
+  color: #4a4947;
+  border-radius: 50%;
+  box-shadow:
+    4vmin -3.5vmin, 8vmin -3.5vmin,
+    2vmin -2vmin #fad598, 10vmin -2vmin #fad598,
+    3vmin 5vmin #f9ebaa, 9.3vmin 5vmin #f9ebaa;
+}
+
+.smile {
+  position: relative;
+  background: transparent;
+  height: 1vmin;
+  width: 1vmin;
+  border-radius: 50%;
+  border-bottom: 0.3vmin solid #4a4947;
+  left: -5vmin;
+  top: -1.3vmin;
+}
+
+.smile::before {
+  position: absolute;
+  content: '';
+  background: transparent;
+  height: 1vmin;
+  width: 1vmin;
+  border-radius: 50%;
+  border-bottom: 0.3vmin solid #4a4947;
+  left: 0.7vmin;
+}
+
+.limbs {
+  position: relative;
+  width: 0; 
+  height: 0; 
+  border-left: 1vmin solid transparent;
+  border-right: 1vmin solid transparent;  
+  border-bottom: 6vmin solid #f9ebaa;
+  border-radius: 80%;
+  top: -6vmin;
+  left: 1vmin;
+  transform: rotate(-20deg);
+}
+
+.limbs::before {
+  content: '';
+  position: absolute;
+  background: #f9ebaa;
+  width: 5vmin;
+  height: 2vmin;
+  border-radius: 40%;
+  top: 10vmin;
+  left: 4vmin;
+  box-shadow: 
+    -1vmin 1.5vmin #f9ebaa;
+}
+
+.limbs::after {
+  content: '';
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-left: 1vmin solid transparent;
+  border-right: 1vmin solid transparent;  
+  border-bottom: 6vmin solid #f9ebaa;
+  border-radius: 80%;
+  top: 3vmin;
+  left: 5vmin;
+  transform: rotate(40deg);
+}
+
+.heart {
+  position: relative;
+  width: 5vmin;
+  height: 4vmin;
+  top: 2vmin;
+  left: 0.6vmin;
+}
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+  left: 2.5vmin;
+  top: 0;
+  width: 2.5vmin;
+  height: 4vmin;
+  background: #fc978b;
+  border-radius: 2.5vmin 2.5vmin 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.arms {
+  position: relative;
+  background: #f9ebaa;
+  width: 4.2vmin; 
+  height: 2vmin; 
+  border-radius: 60% 60% 90% 60% / 50% 50% 90% 90%;
+  top: 3vmin;
+  left: -5vmin;
+}
+.arms::after {
+  content: '';
+  position: absolute;
+  background: #f9ebaa;
+  width: 4vmin; 
+  height: 2vmin; 
+  border-radius: 60% 60% 90% 60% / 50% 50% 90% 90%;
+  left: 5vmin;
+  top: 0vmin;
+}
+
+.cover {
+  position: absolute;
+  height: 0;
+  width: 0;
+  
+  border-bottom: 15vmin solid #f5b5bb;
+  border-left: 24vmin solid transparent;
+  border-right: 24vmin solid transparent;
+  top: 15vmin;
+  z-index: 3;
+}
+
+.cover::after { /*left triangle*/
+  position: absolute;
+  content: '';
+  border-left: 24.5vmin solid #ffbbc1;
+  border-bottom: 15vmin solid transparent;
+  border-top: 15vmin solid transparent;
+  top: -15vmin;
+  left: -24vmin;
+}
+
+.cover::before {
+  position: absolute;
+  content: '';
+  border-right: 24.5vmin solid #ffbbc1;
+  border-bottom: 15vmin solid transparent;
+  border-top: 15vmin solid transparent;
+  top: -15vmin;
+  left: -0.5vmin;
+}
+
+.lid {
+  position: absolute;
+  height: 0;
+  width: 0;
+  
+  border-top: 15vmin solid #ff8896;
+  border-left: 24vmin solid transparent;
+  border-right: 24vmin solid transparent;
+
+  top: 0;
+  transform-origin: top;
+  animation: open-rev 2s;
+}
+
+.container:hover .lid {
+  animation: open 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.container:hover .card {
+  animation: slide 0.2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.shadow {
+  position: relative;
+  top: 3vmin;
+  border-radius: 50%; 
+  opacity: 0.7;
+  height: 2vmin;
+  width: 48vmin;
+  background: #e8c5d0;
+}
+
+@keyframes open {
+  100% {
+    transform: rotatex(180deg);
+  }
+}
+
+@keyframes slide {
+  100% {
+    transform: translatey(-15vmin);
+    z-index: 2;
+  }
+}
+
+@keyframes open-rev {
+  from {
+    transform: rotatex(-180deg);
+
+  }
+}
+
+@keyframes slide-rev {
+  from {
+    transform: translatey(-15vmin);
+  }
+}

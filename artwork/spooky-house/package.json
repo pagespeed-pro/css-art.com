@@ -1,0 +1,42 @@
+{
+    "name": "spooky-house",
+    "version": "1.0.0",
+    "title": "spooky-house ",
+    "description": "",
+    "author": {
+        "name": "Louise Flanagan",
+        "avatar": "https://assets.codepen.io/3879263/internal/avatars/users/default.png?format=auto&height=512&version=1584488369&width=512",
+        "web": "https://lou-flan.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/louflan/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/flangerhanger"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/Lou-Flan"
+            },
+            {
+                "title": "dev.to",
+                "url": "https://dev.to/flangerhanger"
+            }
+        ]
+    },
+    "html": "spooky-house.html",
+    "css": [
+        "spooky-house.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "spooky house",
+        "animation"
+    ],
+    "original": "https://codepen.io/louflan/pen/BaoGqZP",
+    "codepen": "https://codepen.io/louflan/pen/BaoGqZP"
+}

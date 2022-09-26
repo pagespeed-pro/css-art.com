@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  background: #d5fded;
+  font-family: fredoka one, arial;
+  font-size: 1.1em;
+}
+
+.box {
+  width: 460px;
+  height: 350px;
+  position: absolute;
+  background: transparent;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+}
+
+.head {
+  position: absolute;
+  background: #ffc720;
+  width: 50%;
+  height: 67%;
+  top: 16.5%;
+  left: 25%;
+  background: transparent;
+  border-radius: 50%;
+}
+.head .head-top {
+  position: absolute;
+  background: #ffc720;
+  width: 90%;
+  height: 100%;
+  left: 5%;
+  border-radius: 43%;
+  z-index: 2;
+}
+.head .eyelids {
+  position: absolute;
+  background: #ffc720;
+  width: 70%;
+  height: 30%;
+  top: 30%;
+  left: 15%;
+  visibility: hidden;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.right-lid, .left-lid {
+  position: absolute;
+  background: #ffc720;
+  width: 30%;
+  height: 10%;
+  background: black;
+  border-radius: 30% 30% 50% 50%;
+  bottom: 25%;
+}
+
+.left-lid {
+  left: 4%;
+}
+
+.right-lid {
+  right: 4%;
+}
+
+.head-top:hover ~ .eyelids,
+head-top:active {
+  visibility: visible;
+  transition: visibility 2s ease;
+}
+
+.head-top:hover ~ .mouth-cover,
+head-top:active {
+  visibility: visible;
+}
+
+.head-bottom {
+  position: absolute;
+  background: #ffc720;
+  width: 100%;
+  height: 70%;
+  top: 40%;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.ear-right, .ear-left {
+  position: absolute;
+  background: #ffc720;
+  width: 30%;
+  height: 70%;
+  border-radius: 0% 100% 0% 100%/0% 100% 0% 100%;
+  bottom: 70%;
+  z-index: 1;
+}
+
+.ear-left {
+  left: -20%;
+  transform: rotate(-25deg);
+}
+
+.ear-right {
+  right: -20%;
+  transform: rotate(70deg);
+}
+
+.inner-ear {
+  position: absolute;
+  background: #ffc720;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  -webkit-clip-path: polygon(0 0, 80% 0%, 0% 60%);
+  clip-path: polygon(0 0, 80% 0%, 0% 60%);
+  border-radius: 0% 100% 0% 100%/0% 100% 0% 100%;
+  background: black;
+}
+
+.eye-right, .eye-left {
+  position: absolute;
+  background: #ffc720;
+  width: 20%;
+  height: 23%;
+  top: 35%;
+  background: black;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.eye-left {
+  left: 15%;
+}
+
+.eye-right {
+  right: 15%;
+}
+
+.pupil {
+  position: absolute;
+  background: #ffc720;
+  width: 38%;
+  height: 38%;
+  top: 15%;
+  left: 46%;
+  border-radius: 50%;
+  background: white;
+}
+
+.nose {
+  position: absolute;
+  background: #ffc720;
+  width: 5%;
+  height: 5%;
+  top: 60%;
+  left: 47%;
+  background: black;
+  border-radius: 30% 30% 50% 50%;
+  z-index: 4;
+}
+
+.cheek-left {
+  position: absolute;
+  background: #ffc720;
+  width: 15%;
+  height: 40%;
+  top: 30%;
+  -webkit-clip-path: ellipse(100% 50% at left);
+  clip-path: ellipse(100% 50% at left);
+  border-radius: 48%;
+  background: red;
+  z-index: 5;
+}
+
+.cheek-right {
+  position: absolute;
+  background: #ffc720;
+  width: 15%;
+  height: 40%;
+  top: 30%;
+  right: 0%;
+  -webkit-clip-path: ellipse(100% 50% at right);
+  clip-path: ellipse(100% 50% at right);
+  border-radius: 48%;
+  background: red;
+  z-index: 5;
+}
+
+.mouth {
+  position: absolute;
+  background: #ffc720;
+  width: 30%;
+  height: 40%;
+  top: 45%;
+  left: 34%;
+  background: #a6150c;
+  border-radius: 50% 50% 51% 49%/25% 24% 76% 75%;
+}
+
+.tongue {
+  position: absolute;
+  background: #ffc720;
+  width: 87%;
+  height: 60%;
+  left: 6%;
+  background: #eb9099;
+  bottom: 0%;
+  border-radius: 50% 50% 51% 49%/25% 24% 76% 75%;
+}
+
+#left, #right {
+  position: absolute;
+  background: #ffc720;
+  width: 60%;
+  height: 30%;
+  top: -10%;
+  background: #ffc720;
+  border-radius: 0% 30% 50% 30%;
+}
+
+#right {
+  right: 0%;
+}
+
+.pikachu-body {
+  position: absolute;
+  background: #ffc720;
+  width: 80%;
+  height: 35%;
+  left: 20%;
+  bottom: -10%;
+  border-radius: 50% 50% 0% 0%/100% 100% 0 0;
+}
+
+.rings {
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  background: white;
+  border-radius: 50%;
+  z-index: -1;
+  border: 1em solid white;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+.tail {
+  position: absolute;
+  background: #ffc720;
+  width: 40%;
+  height: 35%;
+  top: 45%;
+  right: -20%;
+  clip-path: polygon(30% 64%, 0 37%, 100% 0, 100% 58%);
+  -webkit-clip-path: polygon(30% 64%, 0 37%, 100% 0, 100% 58%);
+}
+
+li:nth-child(1) {
+  position: absolute;
+  background: #ffc720;
+  width: 30%;
+  height: 35%;
+  top: 44%;
+  right: -9%;
+  clip-path: polygon(35% 100%, 0 39%, 30% 33%, 60% 100%);
+  -webkit-clip-path: polygon(35% 100%, 0 39%, 30% 33%, 60% 100%);
+}
+
+li:nth-child(2) {
+  position: absolute;
+  background: #ffc720;
+  width: 25%;
+  height: 20%;
+  top: 69%;
+  right: 3%;
+  clip-path: polygon(30% 64%, 20% 20%, 80% 10%, 100% 50%);
+  -webkit-clip-path: polygon(30% 64%, 20% 20%, 80% 10%, 100% 50%);
+}
+
+li:nth-child(3) {
+  position: absolute;
+  background: #ffc720;
+  width: 10%;
+  height: 50%;
+  top: 69%;
+  right: 12%;
+  clip-path: polygon(62% 54%, 10% 22%, 86% 11%, 100% 43%);
+  -webkit-clip-path: polygon(62% 54%, 10% 22%, 86% 11%, 100% 43%);
+}
+
+.mouth-cover {
+  visibility: hidden;
+  position: absolute;
+  background: #ffc720;
+  width: 50%;
+  height: 50%;
+  top: 65%;
+  right: 16%;
+  z-index: 10;
+}
+.mouth-cover span {
+  position: absolute;
+  background: #ffc720;
+  width: 20%;
+  height: 20%;
+  top: 30%;
+  right: 56%;
+  z-index: 12;
+  background: black;
+  border-radius: 50%;
+}
+.mouth-cover #top-z {
+  position: absolute;
+  background: #ffc720;
+  width: 50%;
+  height: 50%;
+  top: -60%;
+  left: -150%;
+  background: transparent;
+  animation: zzz 4s infinite;
+}
+.mouth-cover #middle-z {
+  position: absolute;
+  background: #ffc720;
+  width: 50%;
+  height: 50%;
+  top: 0%;
+  left: -100%;
+  background: transparent;
+  animation: zzz 3s infinite;
+}
+.mouth-cover #bottom-z {
+  position: absolute;
+  background: #ffc720;
+  width: 50%;
+  height: 50%;
+  top: 15%;
+  background: transparent;
+  animation: zzz 2s infinite;
+}
+
+@keyframes zzz {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) translate(-200%, -3em);
+  }
+}

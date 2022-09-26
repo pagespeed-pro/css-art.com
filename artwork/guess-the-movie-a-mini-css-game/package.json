@@ -1,0 +1,35 @@
+{
+    "name": "guess-the-movie-a-mini-css-game",
+    "version": "1.0.0",
+    "title": "Guess The Movie - a mini CSS game",
+    "description": "",
+    "author": {
+        "name": "Inès",
+        "avatar": "https://assets.codepen.io/4763128/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1602236121&width=512",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/inescodes/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/inescodes"
+            }
+        ]
+    },
+    "html": "guess-the-movie-a-mini-css-game.html",
+    "css": [
+        "guess-the-movie-a-mini-css-game.css"
+    ],
+    "js": "/* if you want to see the answers, scroll down here */\n\n\n\n\n\n\n\n\n\n\n\n\n/* \n   1. Harry Potter\n        2. Star Wars\n        3. Night at the museum\n        4. Curious Case of Benjamin Button\n        5. The princess and the frog\n        6. Ratatouille\n        7. Kung Fu Panda\n        8. The Devil Wears Prada\n        9. 27 Dresses\n        10. Edward Scissor Hands\n        11. Puss in Boots\n        12. silence of the Lambs\n        13. Twilight\n   */\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "purecss",
+        "game",
+        "cssgame"
+    ],
+    "original": "https://codepen.io/inescodes/pen/BaKxdVG",
+    "codepen": "https://codepen.io/inescodes/pen/BaKxdVG"
+}

@@ -1,0 +1,32 @@
+{
+    "name": "hannibal-lecter-funko-pop-version-pure-css-",
+    "version": "1.0.0",
+    "title": "Hannibal Lecter Funko Pop! version (pure CSS)",
+    "description": "Thanks to Jhey Tompkins for the responsive unit technique\nhttps://css-tricks.com/advice-for-complex-css-illustrations/",
+    "author": {
+        "name": "Inès",
+        "avatar": "https://assets.codepen.io/4763128/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1602236121&width=512",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/inescodes/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/inescodes"
+            }
+        ]
+    },
+    "html": "hannibal-lecter-funko-pop-version-pure-css-.html",
+    "css": [
+        "hannibal-lecter-funko-pop-version-pure-css-.css"
+    ],
+    "js": "/* Thanks to Jhey Tompkins for the responsive unit technique\nhttps://css-tricks.com/advice-for-complex-css-illustrations/ \n*/",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "hannibal lecter"
+    ],
+    "original": "https://codepen.io/inescodes/pen/BazWzOM",
+    "codepen": "https://codepen.io/inescodes/pen/BazWzOM"
+}

@@ -1,0 +1,37 @@
+{
+    "name": "spirited-away-css-illustration",
+    "version": "1.0.0",
+    "title": "Spirited Away CSS Illustration",
+    "description": "The responsive unit technique is taken from Jhey Tompkins's article \nhttps://css-tricks.com/advice-for-complex-css-illustrations/ \n*/\n\n/* The clouds were created with the help of Beau Jackson's article\nhttps://css-tricks.com/drawing-realistic-clouds-with-svg-and-css/",
+    "author": {
+        "name": "Inès",
+        "avatar": "https://assets.codepen.io/4763128/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1602236121&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/inescodes/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/inescodes"
+            }
+        ]
+    },
+    "html": "spirited-away-css-illustration.html",
+    "css": [
+        "spirited-away-css-illustration.css"
+    ],
+    "js": "/* \nThe responsive unit technique is taken from Jhey Tompkins's article \nhttps://css-tricks.com/advice-for-complex-css-illustrations/ \n*/\n\n/* The clouds were created with the help of Beau Jackson's article\nhttps://css-tricks.com/drawing-realistic-clouds-with-svg-and-css/ \n*/",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "cssart",
+        "cssillustration",
+        "spiritedaway",
+        "ghibli",
+        "anime"
+    ],
+    "original": "https://codepen.io/inescodes/pen/VwapRLO",
+    "codepen": "https://codepen.io/inescodes/pen/VwapRLO"
+}

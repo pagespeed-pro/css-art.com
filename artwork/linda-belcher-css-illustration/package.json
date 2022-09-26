@@ -1,0 +1,30 @@
+{
+    "name": "linda-belcher-css-illustration",
+    "version": "1.0.0",
+    "title": "Linda Belcher CSS illustration",
+    "description": "The responsive unit technique is taken from Jhey Tompkins's article \nhttps://css-tricks.com/advice-for-complex-css-illustrations/",
+    "author": {
+        "name": "Inès",
+        "avatar": "https://assets.codepen.io/4763128/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1602236121&width=512",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/inescodes/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/inescodes"
+            }
+        ]
+    },
+    "html": "linda-belcher-css-illustration.html",
+    "css": [
+        "linda-belcher-css-illustration.css"
+    ],
+    "js": "/* \nThe responsive unit technique is taken from Jhey Tompkins's article \nhttps://css-tricks.com/advice-for-complex-css-illustrations/ \n*/",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [],
+    "original": "https://codepen.io/inescodes/pen/RwabWop",
+    "codepen": "https://codepen.io/inescodes/pen/RwabWop"
+}

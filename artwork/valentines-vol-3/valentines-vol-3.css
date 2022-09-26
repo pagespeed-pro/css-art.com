@@ -1,0 +1,153 @@
+@import url(https://fonts.googleapis.com/css?family=Loved+by+the+King);
+#center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-family: "Loved by the King", cursive;
+  text-align: center;
+  font-size: 2em;
+  color: white;
+}
+
+em {
+  color: #E72650;
+}
+
+#letter {
+  background-color: #f2f2f2;
+  width: 300px;
+  height: 200px;
+}
+
+#letter-top {
+  position: absolute;
+  background-color: #dbdbdb;
+  width: 210px;
+  height: 215px;
+  top: -107px;
+  left: 45px;
+  border-top-left-radius: 20px;
+  transform: scale(1, 0.5) rotate(45deg);
+  z-index: 1;
+}
+
+#letter-top-triangle {
+  position: absolute;
+  top: -12px;
+  width: 0;
+  height: 0;
+  left: 130px;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 180px solid #f2f2f2;
+  transform: rotate(-90deg);
+  z-index: 3;
+}
+
+#letter-top-triangle2 {
+  position: absolute;
+  top: -5px;
+  width: 0;
+  height: 0;
+  left: 12px;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 180px solid #f2f2f2;
+  transform: rotate(90deg);
+  z-index: 3;
+}
+
+#letter-inside {
+  background: black;
+  top: -95px;
+  height: 170px;
+  width: 250px;
+  left: 20px;
+  box-shadow: 2px -2px 2px rgba(0, 0, 0, 0.1), -2px 2px 2px rgba(0, 0, 0, 0.1), 4px -4px 2px rgba(0, 0, 0, 0.1), -4px -4px 2px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  transform: rotate(-8deg);
+  z-index: 2;
+}
+
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heart:before,
+.heart:after {
+  position: absolute;
+  content: "";
+  left: 18px;
+  top: 0px;
+  width: 18px;
+  height: 30px;
+  background: #E72650;
+  border-radius: 30px 30px 0 0;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+}
+
+.heart:after {
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+}
+
+.one {
+  transform: scale(0.8);
+  opacity: 0.6;
+  animation: up 15s linear infinite, side 6s ease-in-out infinite alternate;
+}
+
+.two {
+  transform: scale(0.6);
+  opacity: 0.9;
+  animation: up 25s linear infinite, side 5s ease-in-out infinite alternate;
+}
+
+.three {
+  transform: scale(0.8);
+  opacity: 0.8;
+  animation: up 20s linear infinite, side 4s ease-in-out infinite alternate;
+}
+
+.four {
+  transform: scale(0.7);
+  opacity: 0.9;
+  animation: up 18s linear infinite, side 2s ease-in-out infinite alternate;
+}
+
+.five {
+  transform: scale(0.6);
+  opacity: 0.3;
+  animation: up 7s linear infinite, side 1s ease-in-out infinite alternate;
+}
+
+.six {
+  opacity: 0.8;
+  animation: up 10s linear infinite, side 7s ease-in-out infinite alternate;
+}
+
+@keyframes up {
+  0% {
+    top: 300px;
+  }
+  100% {
+    top: -500px;
+  }
+}
+@keyframes side {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 50px;
+  }
+}

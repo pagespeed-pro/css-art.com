@@ -1,0 +1,1947 @@
+html {
+  font-size: 10px;
+  font-size: clamp(0.55rem, 1.2vh, 0.9vw);
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background: #1f140a;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+body div,
+body x,
+body y,
+body z,
+body sig {
+  width: 185rem;
+}
+body div,
+body div *,
+body div *:before,
+body div *:after, body div:before, body div:after,
+body x,
+body x *,
+body x *:before,
+body x *:after,
+body x:before,
+body x:after,
+body y,
+body y *,
+body y *:before,
+body y *:after,
+body y:before,
+body y:after,
+body z,
+body z *,
+body z *:before,
+body z *:after,
+body z:before,
+body z:after,
+body sig,
+body sig *,
+body sig *:before,
+body sig *:after,
+body sig:before,
+body sig:after {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+}
+body > div {
+  background: linear-gradient(185deg, #7a7cb8, #bdbddb, #9b714b 60%, #9b714b);
+  border-radius: 4rem;
+  width: 170rem;
+  max-width: 98%;
+  height: 80rem;
+  max-height: 98%;
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  bottom: -100%;
+  right: -100%;
+}
+body > div:after {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(31, 20, 10, 0.5));
+  box-shadow: inset 0 0 2rem #1f140a, inset 0 0 1rem #1f140a, inset 0 0 1rem #1f140a;
+  border-radius: 4rem;
+}
+body > div > #main {
+  position: absolute;
+  right: -300%;
+  left: -300%;
+  margin: auto;
+  filter: contrast(1.1) saturate(1.1);
+  width: 170rem;
+  height: 80rem;
+  top: -300%;
+  bottom: -300%;
+}
+body > div > #main > div {
+  display: block;
+  transform-style: preserve-3d;
+  perspective: 500rem;
+  transform: translate3d(-3rem, -18rem, 0);
+}
+
+input,
+embed,
+button {
+  display: none;
+}
+
+#graphics {
+  position: absolute;
+  left: auto;
+  right: 4rem;
+  font-size: 1.2rem;
+  z-index: 99999;
+  line-height: 1.5em;
+  max-height: calc(1.5em + 1rem);
+  overflow: hidden;
+  background: #1f140a;
+  text-decoration: none;
+  border-radius: 0 0 1em 1em;
+  padding: 0.3rem;
+  color: #fff;
+  transform: translate3d(0, 0, 500rem);
+  transition: all 0.2s ease-in-out;
+}
+#graphics label {
+  display: block;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+  padding: 0.3rem 1rem;
+  border-radius: 1em;
+  margin-bottom: 0.25rem;
+  position: static;
+}
+#graphics label:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+#graphics label:nth-of-type(1) {
+  display: flex;
+  align-items: center;
+}
+#graphics label:nth-of-type(1):after {
+  content: "^";
+  margin-left: auto;
+  transform: scaleY(-1) scaleX(1.5) translate3d(0, 0.25rem, 0);
+  display: inline-block;
+  position: static;
+}
+#graphics label:nth-of-type(1):hover:after {
+  font-weight: bold;
+}
+
+#gfxmenu:checked ~ div > #graphics {
+  max-height: 20em;
+}
+#gfxmenu:checked ~ div > #graphics > label:nth-of-type(1):after {
+  transform: scaleY(1) scaleX(1.5) translate3d(0, 0.25rem, 0);
+}
+
+#sound:checked ~ embed {
+  display: block;
+  z-index: 999999999999999;
+  transform: translate3d(0, 0, 500rem);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -100px;
+  margin: auto;
+  border-radius: 25px;
+}
+
+#graphics label.sfxoff {
+  display: none;
+}
+
+#sound:checked ~ div > #graphics > .sfxon {
+  display: none;
+}
+
+#sound:checked ~ div > #graphics > .sfxoff {
+  display: block;
+}
+
+#graphics .mb-1 {
+  margin-bottom: 1rem;
+}
+
+y {
+  transform: rotateX(11deg);
+}
+
+distant {
+  transform: translate3d(0, -2rem, 0) rotateX(-1deg);
+}
+
+sig {
+  left: auto !important;
+  top: auto !important;
+  right: 1rem;
+  bottom: 1rem;
+  font-size: 0.5rem;
+  color: #000;
+  width: 10em !important;
+  transform: skewX(10deg) scaleY(0.45) rotate(2deg);
+}
+sig,
+sig * {
+  height: 9.25em;
+  overflow: hidden;
+  border-radius: 0.5em;
+}
+sig:before,
+sig *:before {
+  width: 5em;
+  height: 5em;
+  background: currentColor;
+  transform: translate3d(-2.5em, 0, 0) rotate(-45deg);
+  box-shadow: -3em 3em 0 0 currentColor;
+  border-radius: 0.5em 2em 0.5em 2em;
+  content: "";
+}
+sig * {
+  width: 5em;
+  transform: translate3d(3.75em, 0, 0) scaleY(0.95);
+  display: block !important;
+}
+sig *:before {
+  transform: translate3d(-3em, -2em, 0) rotate(-45deg);
+  box-shadow: -3em 3em 0 0 currentColor, -6em 6em 0 0 currentColor;
+  border-radius: 0.5em;
+}
+
+distant:before {
+  width: 10rem;
+  height: 10rem;
+  background: radial-gradient(rgba(255, 255, 255, 0), #ff9b66);
+  transform: translate3d(70rem, 70rem, 428rem);
+  border-radius: 50%;
+  opacity: 0.075;
+}
+distant:after {
+  width: 10rem;
+  height: 10rem;
+  background: radial-gradient(rgba(255, 255, 255, 0), orange);
+  transform: translate3d(70rem, 70rem, 300rem);
+  border-radius: 50%;
+  opacity: 0.075;
+}
+
+sky {
+  width: 200rem;
+  height: 65rem;
+  transform: translate3d(5rem, -38rem, -500rem) scale(2.1);
+}
+sky:before {
+  width: 190rem;
+  height: 120rem;
+  background: conic-gradient(from -80deg, rgba(255, 255, 255, 0) 8deg, rgba(255, 215, 179, 0.2) 10deg, rgba(255, 255, 255, 0) 20deg, #ffd7b3 30deg, #fff, #ffd7b3, #ffd7b3, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), #ffb066, #ffb066 350deg, rgba(255, 255, 255, 0));
+  -webkit-mask-image: radial-gradient(#000, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0));
+  opacity: 0.9;
+  transform: translate3d(13rem, 0, 0) rotate(5deg);
+}
+sky:after {
+  width: 80rem;
+  height: 80rem;
+  border-radius: 50%;
+  background: radial-gradient(#fff, rgba(255, 215, 179, 0.75), rgba(255, 192, 77, 0.2), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+  transform: translate3d(69rem, 20rem, 0);
+}
+sky u:nth-of-type(1) {
+  width: 100%;
+  height: 70%;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 176, 102, 0.5) 35%, rgba(161, 122, 103, 0.5) 40%, #796367);
+  transform: translate3d(0, 42rem, 0);
+}
+sky u:nth-of-type(1):before {
+  width: 6rem;
+  background: #a17a67;
+  height: 20rem;
+  transform: translate3d(180rem, 5rem, 0);
+  border-radius: 2.5rem;
+  filter: drop-shadow(0 -0.1rem 0 #ffd7b3) blur(0.1rem);
+  opacity: 0.9;
+  box-shadow: 5.5rem 0.4rem 0 #a17a67, 1.5rem 0.75rem 0 #a17a67, 10.5rem 0.2rem 0 #a17a67, 7.5rem 0.5rem 0 #a17a67, 15rem -0.2rem 0 #a17a67;
+}
+sky u:nth-of-type(2) {
+  opacity: 0.9;
+  filter: blur(0.1rem);
+  width: 20rem;
+  height: 15rem;
+  background: linear-gradient(#a17a67, #796367);
+  transform: translate3d(162rem, 48rem, 0) skewX(-20deg);
+  border-radius: 60% 40%;
+  box-shadow: -0.2rem -0.2rem 0.1rem -0.1rem #ffd7b3, -13rem 2rem 0 -1rem #a17a67, -12.5rem 1.8rem 0 -1rem #ffd7b3, -18rem 3rem 0 -1rem #a17a67, -18.1rem 2.9rem 0 -1rem #ffd7b3;
+}
+sky u:nth-of-type(2):before {
+  width: 10rem;
+  height: 10rem;
+  background: #ffb066;
+  border-radius: 1rem;
+  transform: translate3d(-14rem, 5.5rem, 0) skewX(50deg);
+  filter: blur(0.2rem);
+  box-shadow: 9rem 1.5rem 0 #ffb066, -9rem 0 0 rgba(255, 176, 102, 0.5), 30rem 1rem 0 rgba(255, 176, 102, 0.5), 39rem 0.5rem 0 rgba(255, 176, 102, 0.5), 48rem 0.25rem 0 rgba(255, 176, 102, 0.5);
+}
+sky u:nth-of-type(2):after {
+  width: 2rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  box-shadow: 41rem 2rem 0   #a17a67 , 24rem 2rem 0 0.2666666667rem   #6b575b , 53rem 1rem 0 0.1666666667rem   #6b575b , 26rem 2rem 0 0.1333333333rem   #6b575b , 75rem 5rem 0 0.2666666667rem   #6b575b , 76rem 3rem 0 0.2rem   #a17a67 , 49rem 2rem 0 0.2666666667rem   #a17a67 , 46rem 1rem 0 0.1333333333rem   #a17a67 , 21rem 6rem 0 0.0333333333rem   #6b575b , 55rem 7rem 0 0.1rem   #a17a67 , 52rem 7rem 0 0.1666666667rem   #a17a67 , 62rem 3rem 0 0.2rem   #6b575b , 53rem 3rem 0 0.1333333333rem   #a17a67 , 48rem 2rem 0 0.3rem   #a17a67 , 6rem 3rem 0 0.1rem   #a17a67 , 42rem 3rem 0 0.1666666667rem   #a17a67 , 43rem 5rem 0 0.2666666667rem   #a17a67 , 26rem 4rem 0 0.2333333333rem   #a17a67 , 53rem 5rem 0 0.1333333333rem   #a17a67 , 18rem 3rem 0 0.2rem   #6b575b , 35rem 2rem 0 0.0333333333rem   #6b575b , 55rem 1rem 0 0.2666666667rem   #6b575b , 18rem 2rem 0 0.3333333333rem   #a17a67 , 31rem 6rem 0 0.3333333333rem   #6b575b , 47rem 1rem 0 0.3333333333rem   #6b575b , 15rem 1rem 0 0.3333333333rem   #6b575b , 54rem 5rem 0 0.3rem   #a17a67 , 25rem 6rem 0 0.1rem   #a17a67 , 67rem 5rem 0 0.1333333333rem   #6b575b , 60rem 7rem 0 0.1333333333rem   #6b575b , 14rem 1rem 0 0.2666666667rem   #6b575b , 3rem 2rem 0 0.2666666667rem   #6b575b , 24rem 6rem 0 0.0333333333rem   #a17a67 , 5rem 4rem 0 0.2333333333rem   #6b575b , 10rem 5rem 0 0.1666666667rem   #a17a67 , 59rem 4rem 0 0.1rem   #a17a67 , 74rem 1rem 0 0.1333333333rem   #a17a67 , 75rem 7rem 0 0.1333333333rem   #a17a67 , 51rem 1rem 0 0.1333333333rem   #a17a67 , 8rem 4rem 0 0.3333333333rem   #a17a67 , 11rem 4rem 0 0.1rem   #6b575b , 15rem 7rem 0 0.0666666667rem   #6b575b , 14rem 2rem 0 0.1333333333rem   #a17a67 , 60rem 4rem 0 0.0666666667rem   #6b575b , 64rem 4rem 0 0.3rem   #6b575b , 40rem 4rem 0 0.2666666667rem   #6b575b , 9rem 6rem 0 0.3333333333rem   #a17a67 , 10rem 4rem 0 0.0666666667rem   #6b575b , 32rem 3rem 0 0.3rem   #6b575b , 22rem 7rem 0 0.1666666667rem   #6b575b , 76rem 6rem 0 0.0666666667rem   #6b575b , 20rem 7rem 0 0.3rem   #6b575b , 11rem 3rem 0 0.3rem   #a17a67 , 32rem 3rem 0 0.0666666667rem   #a17a67 , 33rem 1rem 0 0.0666666667rem   #6b575b , 40rem 5rem 0 0.0333333333rem   #a17a67 , 61rem 1rem 0 0.2rem   #6b575b , 17rem 2rem 0 0.1666666667rem   #6b575b , 36rem 6rem 0 0.3333333333rem   #a17a67 , 10rem 7rem 0 0.3333333333rem   #a17a67 , 65rem 7rem 0 0.0666666667rem   #6b575b , 55rem 4rem 0 0.2666666667rem   #a17a67 , 40rem 3rem 0 0.1333333333rem   #6b575b , 74rem 7rem 0 0.2333333333rem   #a17a67 , 6rem 6rem 0 0.0333333333rem   #a17a67 , 9rem 3rem 0 0.1333333333rem   #a17a67 , 42rem 5rem 0 0.3rem   #6b575b , 52rem 3rem 0 0.0333333333rem   #6b575b , 67rem 6rem 0 0.2666666667rem   #6b575b , 27rem 3rem 0 0.3333333333rem   #6b575b , 42rem 6rem 0 0.1666666667rem   #a17a67 , 2rem 5rem 0 0.3333333333rem   #a17a67 , 26rem 5rem 0 0.2333333333rem   #6b575b , 47rem 4rem 0 0.2rem   #6b575b , 58rem 4rem 0 0.2666666667rem   #a17a67 , 67rem 3rem 0 0.2666666667rem   #6b575b , 64rem 3rem 0 0.3333333333rem   #6b575b , 38rem 6rem 0 0.2666666667rem   #6b575b , 29rem 2rem 0 0.1333333333rem   #6b575b , 29rem 7rem 0 0.1666666667rem   #a17a67 , 65rem 3rem 0 0.2333333333rem   #a17a67 , 65rem 1rem 0 0.1333333333rem   #a17a67 , 77rem 4rem 0 0.1333333333rem   #a17a67 , 48rem 5rem 0 0.0333333333rem   #6b575b , 50rem 3rem 0 0.1666666667rem   #a17a67 , 29rem 5rem 0 0.2333333333rem   #6b575b , 30rem 2rem 0 0.1666666667rem   #a17a67 , 35rem 3rem 0 0.1rem   #a17a67 , 72rem 3rem 0 0.0666666667rem   #6b575b , 42rem 5rem 0 0.0666666667rem   #6b575b , 32rem 6rem 0 0.2333333333rem   #a17a67 , 46rem 1rem 0 0.2666666667rem   #a17a67 , 7rem 3rem 0 0.1rem   #a17a67 , 1rem 7rem 0 0.0333333333rem   #a17a67 , 61rem 3rem 0 0.2333333333rem   #a17a67 , 37rem 2rem 0 0.2333333333rem   #a17a67 , 76rem 6rem 0 0.3333333333rem   #6b575b , 10rem 5rem 0 0.3rem   #a17a67 , 33rem 7rem 0 0.3333333333rem   #a17a67 , 14rem 3rem 0 0.2666666667rem   #a17a67 , 42rem 6rem 0 0.0333333333rem   #a17a67 , 23rem 7rem 0 0.3rem   #6b575b , 10rem 2rem 0 0.1rem   #a17a67 , 79rem 2rem 0 0.1666666667rem   #a17a67 , 72rem 1rem 0 0.3rem   #6b575b , 35rem 4rem 0 0.2666666667rem   #6b575b , 27rem 2rem 0 0.0333333333rem   #6b575b , 15rem 4rem 0 0.2rem   #a17a67 , 37rem 2rem 0 0.0666666667rem   #a17a67 , 41rem 7rem 0 0.3rem   #a17a67 , 19rem 3rem 0 0.3rem   #6b575b , 58rem 1rem 0 0.1rem   #6b575b , 79rem 3rem 0 0.2333333333rem   #6b575b , 69rem 1rem 0 0.2333333333rem   #a17a67 , 74rem 5rem 0 0.1666666667rem   #6b575b , 54rem 5rem 0 0.0666666667rem   #a17a67 , 27rem 1rem 0 0.3rem   #6b575b , 19rem 7rem 0 0.1666666667rem   #a17a67 , 50rem 4rem 0 0.0666666667rem   #6b575b , 43rem 3rem 0 0.2333333333rem   #6b575b , 9rem 6rem 0 0.3333333333rem   #6b575b , 11rem 3rem 0 0.2666666667rem   #6b575b , 52rem 7rem 0 0.0333333333rem   #6b575b , 80rem 7rem 0 0.3rem   #6b575b , 54rem 6rem 0 0.0666666667rem   #6b575b , 1rem 7rem 0 0.0333333333rem   #6b575b , 35rem 3rem 0 0.1666666667rem   #6b575b , 50rem 4rem 0 0.1rem   #6b575b , 41rem 4rem 0 0.1333333333rem   #6b575b , 14rem 6rem 0 0.3rem   #6b575b , 19rem 7rem 0 0.2rem   #6b575b , 64rem 6rem 0 0.2rem   #a17a67 , 38rem 7rem 0 0.1rem   #a17a67 , 51rem 3rem 0 0.0666666667rem   #a17a67 , 21rem 7rem 0 0.2666666667rem   #a17a67 , 61rem 7rem 0 0.2333333333rem   #a17a67 , 52rem 1rem 0 0.3rem   #6b575b , 80rem 7rem 0 0.1rem   #a17a67 , 60rem 6rem 0 0.2333333333rem   #6b575b , 12rem 6rem 0 0.3rem   #6b575b , 66rem 6rem 0 0.1rem   #a17a67 , 19rem 2rem 0 0.1333333333rem   #6b575b , 64rem 5rem 0 0.1rem   #a17a67 , 63rem 6rem 0 0.2333333333rem   #6b575b , 55rem 1rem 0 0.2333333333rem   #6b575b , 17rem 6rem 0 0.1333333333rem   #6b575b , 26rem 5rem 0 0.3333333333rem   #6b575b , 50rem 1rem 0 0.3333333333rem   #6b575b , 9rem 6rem 0 0.2333333333rem   #a17a67 , 28rem 6rem 0 0.2666666667rem   #a17a67 , 48rem 1rem 0 0.1rem   #6b575b , 18rem 6rem 0 0.3rem   #a17a67 , 21rem 2rem 0 0.1666666667rem   #a17a67 , 20rem 3rem 0 0.3rem   #6b575b , 23rem 7rem 0 0.1rem   #6b575b , 1rem 2rem 0 0.2333333333rem   #a17a67 , 49rem 6rem 0 0.1rem   #6b575b , 54rem 1rem 0 0.3rem   #6b575b , 5rem 1rem 0 0.1rem   #a17a67 , 38rem 5rem 0 0.1rem   #a17a67 , 77rem 6rem 0 0.2666666667rem   #a17a67 , 23rem 6rem 0 0.0666666667rem   #a17a67 , 43rem 3rem 0 0.3rem   #6b575b , 18rem 3rem 0 0.0666666667rem   #a17a67 , 13rem 3rem 0 0.0666666667rem   #6b575b , 37rem 6rem 0 0.1rem   #a17a67 , 16rem 4rem 0 0.1333333333rem   #6b575b , 30rem 2rem 0 0.2333333333rem   #6b575b , 45rem 2rem 0 0.2666666667rem   #6b575b , 57rem 2rem 0 0.2rem   #6b575b , 49rem 1rem 0 0.3rem   #6b575b , 17rem 2rem 0 0.2333333333rem   #6b575b , 45rem 3rem 0 0.3333333333rem   #6b575b , 18rem 5rem 0 0.3rem   #6b575b , 52rem 3rem 0 0.3333333333rem   #6b575b , 36rem 4rem 0 0.3rem   #a17a67 , 66rem 1rem 0 0.3rem   #6b575b , 46rem 2rem 0 0.3rem   #a17a67 , 24rem 5rem 0 0.0333333333rem   #6b575b , 80rem 7rem 0 0.1rem   #6b575b , 59rem 7rem 0 0.2666666667rem   #6b575b , 62rem 4rem 0 0.3333333333rem   #6b575b , 14rem 7rem 0 0.1666666667rem   #a17a67 , 52rem 1rem 0 0.1333333333rem   #6b575b , 26rem 2rem 0 0.0333333333rem   #a17a67 , 35rem 6rem 0 0.0666666667rem   #6b575b , 80rem 2rem 0 0.1333333333rem   #6b575b , 55rem 1rem 0 0.0333333333rem   #6b575b , 65rem 2rem 0 0.3333333333rem   #6b575b , 23rem 2rem 0 0.0333333333rem   #6b575b , 43rem 3rem 0 0.1333333333rem   #6b575b , 77rem 5rem 0 0.2333333333rem   #a17a67 , 50rem 4rem 0 0.2666666667rem   #6b575b , 34rem 6rem 0 0.3333333333rem   #6b575b , 37rem 2rem 0 0.2666666667rem   #6b575b , 28rem 1rem 0 0.2333333333rem   #a17a67 , 70rem 2rem 0 0.3333333333rem   #6b575b , 37rem 4rem 0 0.2rem   #6b575b , 30rem 1rem 0 0.2666666667rem   #6b575b , 44rem 1rem 0 0.2666666667rem   #a17a67;
+  transform: translate3d(-45rem, 5rem, 0);
+  filter: blur(0.2rem);
+  opacity: 0.5;
+}
+sky u:nth-of-type(3) {
+  opacity: 0.9;
+  filter: blur(0.1rem);
+  width: 1rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #a17a67;
+  transform: translate3d(151rem, 53rem, 0) skewX(-20deg) rotate(-10deg);
+  box-shadow: -0.2rem -0.2rem 0.2rem #ffd7b3, 1.2rem -0.3rem 0 #a17a67, 1rem -0.5rem 0.2rem #ffd7b3, 3.2rem -0.5rem 0 #a17a67, 3.1rem -0.7rem 0.2rem #ffd7b3, 5.5rem -0.3rem 0 0.5rem #a17a67, 5.5rem -0.5rem 0.2rem 0.5rem #ffd7b3, 7.2rem -0.3rem 0 0.2rem #a17a67, 7.1rem -0.5rem 0.2rem 0.2rem #ffd7b3, 13rem 1.5rem 0 0.8rem #a17a67, 13.2rem 1.9rem 0.2rem 0.8rem #a17a67, 12.9rem 1.8rem 0.2rem 0.8rem #ffd7b3, 15rem 2rem 0 0.7rem rgba(161, 122, 103, 0.5);
+}
+sky u:nth-of-type(3):after {
+  width: 1rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #a17a67;
+  transform: translate3d(14.5rem, 0.3rem, 0);
+  box-shadow: -0.7rem -0.5rem 0 #a17a67, 1.2rem -0.5rem 0 #a17a67, 1rem -0.7rem 0 #ffd7b3, 2.9rem -0.8rem 0 0.6rem #a17a67, 2.8rem -1rem 0 0.6rem #ffd7b3, 6rem -1.5rem 0 0.4rem #a17a67, 6rem -1.7rem 0 0.4rem #ffd7b3, 5rem -1.3rem 0 0.2rem #a17a67, 5rem -1.5rem 0 0.2rem #ffd7b3;
+}
+sky u:nth-of-type(3):before {
+  width: 1rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: #ffb066;
+  transform: translate3d(15.5rem, -1rem, 0);
+  box-shadow: -0.7rem 0.3rem 0 rgba(255, 176, 102, 0.5), -0.7rem 0.3rem 0 rgba(255, 215, 179, 0.5), -1.2rem 0.4rem 0 rgba(255, 176, 102, 0.5), -1.5rem 0.3rem 0 rgba(255, 215, 179, 0.5), 6rem -0.5rem 0 0.1rem rgba(255, 176, 102, 0.5), 11rem -0.2rem 0 0.2rem #ffb066, 10.8rem -0.3rem 0.2rem 0.2rem rgba(121, 99, 103, 0.5), 10.25rem -0.4rem 0 0.2rem rgba(255, 215, 179, 0.5), 3rem -0.4rem 0 0.2rem rgba(255, 215, 179, 0.5);
+}
+sky u:nth-of-type(4) {
+  width: 90rem;
+  height: 10rem;
+  background: #796367;
+  transform: translate3d(114rem, 57.5rem, 0) rotate(-1deg);
+  filter: blur(0.5rem);
+}
+sky u:nth-of-type(4):before {
+  width: 10rem;
+  height: 2rem;
+  background: #796367;
+  border-radius: 50%;
+  transform: translate3d(0, -1rem, 0);
+  box-shadow: 9rem 0 0 #796367, 18rem 0 0 0.5rem #796367, 28rem 0 0 0.7rem #796367, 38rem 0 0 0.2rem #796367, 50rem 1rem 0 2rem #796367, 60rem 1.5rem 0 2rem #796367, 70rem 2rem 0 3rem #796367, 80rem 3rem 0 4rem #796367;
+  /*      filter: drop-shadow(-.5rem -1rem 1rem $cloud2);*/
+}
+sky u:nth-of-type(4):after {
+  width: 10rem;
+  height: 1rem;
+  background: #ffb066;
+  transform: translate3d(63rem, -4rem, 0);
+  border-radius: 50%;
+  box-shadow: -20rem 0 0 -0.1rem #ffb066, -10rem -1rem 0 1rem rgba(255, 176, 102, 0.1), -10rem -1rem 0 0 rgba(121, 99, 103, 0.5), -1rem -2rem 0 0 rgba(121, 99, 103, 0.5), -5rem -4rem 0 0 rgba(121, 99, 103, 0.5), 5rem -4rem 0 0 #796367, 3rem -5rem 0 0 #796367, 4rem 0rem 0 0 #796367, 10rem -2rem 0 0 #796367, 10rem 0rem 0 2rem rgba(255, 215, 179, 0.2), 5rem 0.5rem 0 2rem rgba(255, 215, 179, 0.2), 17rem -0.5rem 0 2rem rgba(255, 215, 179, 0.2);
+}
+sky u:nth-of-type(5) {
+  width: 90rem;
+  height: 10rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), #796367, rgba(255, 255, 255, 0));
+  transform: translate3d(14rem, 58rem, 0) rotate(2deg);
+  /*  filter: blur(.5rem);*/
+}
+sky u:nth-of-type(5):before {
+  width: 3rem;
+  height: 1rem;
+  background: #796367;
+  border-radius: 50%;
+  transform: translate3d(60rem, -0.5rem, 0) skewX(5deg);
+  box-shadow: -2rem 0 0 -0.2rem #796367, -4rem 0 0 -0.3rem #796367, 2.5rem 0 0 -0.3rem #796367, 4rem 0 0 -0.2rem #796367;
+}
+sky u:nth-of-type(5):after {
+  width: 5rem;
+  height: 3rem;
+  background: #796367;
+  border-radius: 50%;
+  transform: translate3d(44.5rem, -1.6rem, 0) skewX(36deg);
+  box-shadow: -3rem 0 0 -0.2rem #796367, -6rem 0 0 -0.3rem #796367, 2.5rem 0 0 -0.3rem #796367, 4rem 0 0 -0.1rem #796367;
+  opacity: 0.5;
+  filter: drop-shadow(0.3rem -0.2rem 0 #ffb066);
+}
+sky u:nth-of-type(6) {
+  width: 2.5rem;
+  height: 1.3rem;
+  background: #a17a67;
+  transform: translate3d(68rem, 56.5rem, 0) rotate(-10deg);
+  border-radius: 20% 80%;
+  box-shadow: 2rem 0.3rem 0.1rem -0.2rem #a17a67, 3rem 0.25rem 0.1rem -0.3rem #a17a67, 4.5rem 0.7rem 0 -0.3rem #a17a67, 0.7rem -0.1rem 0.1rem #ffb066, 2.7rem 0.25rem 0.1rem -0.1rem #ffb066, 3.7rem 0.2rem 0.1rem -0.3rem #ffb066, 5.5rem 0.6rem 0.2rem -0.3rem #ffb066;
+}
+sky u:nth-of-type(6):before {
+  width: 5rem;
+  height: 2rem;
+  background: #796367;
+  transform: translate3d(-5rem, 0.5rem, 0) rotate(0deg);
+  border-radius: 20% 80%;
+  box-shadow: -2rem 0.3rem 0.1rem -0.2rem #796367, -3rem 0.25rem 0.1rem -0.4rem #796367, -5.5rem 0.7rem 0.3rem -0.6rem #796367;
+  opacity: 0.7;
+  filter: blur(0.2);
+}
+sky u:nth-of-type(6):after {
+  width: 5rem;
+  height: 2rem;
+  background: #796367;
+  transform: translate3d(-11.5rem, -1rem, 0) rotate(0deg);
+  border-radius: 20% 80%;
+  opacity: 0.8;
+  box-shadow: -3rem 0.5rem 0.1rem -0.2rem #796367, -4rem 0.5rem 0.1rem -0.4rem #796367, -7rem 0.5rem 0.3rem -0.6rem #796367;
+  filter: blur(0.2);
+}
+sky u:nth-of-type(7) {
+  width: 5rem;
+  height: 1.5rem;
+  background: #796367;
+  transform: translate3d(51.5rem, 57.25rem, 0) skewX(10deg);
+  border-radius: 60% 40%;
+  opacity: 0.6;
+  box-shadow: -2rem 0.5rem 0.1rem -0.2rem #796367, -4rem 1.5rem 0.4rem -0.4rem #796367, -7rem 1.7rem 0 -0.5rem #796367;
+}
+sky u:nth-of-type(7):before {
+  width: 2.5rem;
+  height: 1.1rem;
+  background: #846251;
+  transform: translate3d(-2rem, -0.75rem, 0) rotate(-17deg);
+  border-radius: 20% 80%;
+  box-shadow: -2rem -0.6rem 0.1rem -0.2rem #8a6755, -5.5rem -1.75rem 0.1rem 0.1rem #906b59, -4rem -1rem 0.1rem -0.3rem #906b59, -7.8rem -2.5rem 0 #936e5b;
+  filter: drop-shadow(0.5rem -0.1rem 0.2rem #ffbd80);
+  opacity: 0.75;
+}
+sky u:nth-of-type(7):after {
+  width: 5rem;
+  height: 2rem;
+  background: #796367;
+  transform: translate3d(-12rem, 1rem, 0) rotate(0deg);
+  border-radius: 20% 80%;
+  opacity: 0.8;
+  box-shadow: 3rem 0.5rem 0.1rem -0.2rem #796367, 4rem 0.5rem 0.1rem -0.4rem #796367, 7rem 0.5rem 0 -0.6rem #796367, -3rem 0.5rem 0.1rem -0.2rem #796367, -4rem 0.5rem 0.1rem -0.4rem #796367, -7rem 0.5rem 0 -0.6rem #796367;
+  filter: drop-shadow(0.5rem -0.2rem 0.2rem rgba(255, 189, 128, 0.5));
+}
+sky u:nth-of-type(8),
+sky u:nth-of-type(9) {
+  opacity: 0.5;
+}
+sky u:nth-of-type(8), sky u:nth-of-type(8):before, sky u:nth-of-type(8):after,
+sky u:nth-of-type(9),
+sky u:nth-of-type(9):before,
+sky u:nth-of-type(9):after {
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 60% 40%;
+  transform: translate3d(55rem, 58rem, 0) rotate(-1deg) scale(0.5);
+  background: #796367;
+  box-shadow: 1rem 0.5rem 0 0 #796367, 3.5rem 2rem 0.2rem #796367, 5rem 3rem 0 #a17a67, 6.5rem 3rem 0.2rem #796367, 9rem 3rem 0 #a17a67, 9rem 3rem 0 #796367;
+}
+sky u:nth-of-type(8):before,
+sky u:nth-of-type(9):before {
+  transform: translate3d(-10rem, 2rem, 0);
+}
+sky u:nth-of-type(8):after,
+sky u:nth-of-type(9):after {
+  transform: translate3d(-20rem, 1rem, 0);
+}
+sky u:nth-of-type(9) {
+  transform: translate3d(40rem, 58rem, 0) rotate(-1deg) scale(0.5);
+}
+sky u:nth-of-type(10) {
+  width: 5rem;
+  height: 1.5rem;
+  background: linear-gradient(#a17a67, #a17a67, #ffb066);
+  transform: translate3d(35rem, 45rem, 0) skewX(-20deg) scale(0.9);
+  border-radius: 60% 40%;
+  opacity: 0.8;
+  box-shadow: 0.5rem 0.4rem 0.3rem -0.2rem #ffb066, 4rem 0.6rem 0.3rem -0.5rem #ffb066, -3rem 0.9rem 0.3rem -0.5rem #ffb066, 3rem 0.4rem 0.2rem -0.2rem #a17a67, 2rem -0.5rem 0.2rem -0.6rem #a17a67, 4rem 0.3rem 0.2rem -0.4rem #a17a67, 7rem 0.3rem 0.2rem -0.6rem #ffb066, -3rem 0.7rem 0.1rem -0.2rem #a17a67, -4rem 0.9rem 0.1rem -0.4rem #a17a67, -7rem 1rem 0 -0.6rem #a17a67;
+  filter: drop-shadow(0.1rem 0.2rem 0.2rem #ffb066) blur(0.15rem);
+}
+sky u:nth-of-type(11) {
+  width: 100%;
+  height: 70%;
+  transform: translate3d(0, 56rem, 0);
+}
+sky u:nth-of-type(11):before {
+  width: 2.5rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  box-shadow: 65rem 6rem 0   #6b575b , 91rem 6rem 0 0.1rem   #a17a67 , 95rem 5rem 0 0.1rem   #6b575b , 51rem 6rem 0 0.1rem   #a17a67 , 119rem 4rem 0 0.1rem   #6b575b , 150rem 2rem 0 0.1rem   #6b575b , 107rem 6rem 0 0.1rem   #a17a67 , 110rem 7rem 0 0.1rem   #a17a67 , 90rem 6rem 0 0.1rem   #a17a67 , 54rem 7rem 0 0.1rem   #6b575b , 130rem 3rem 0 0.1rem   #a17a67 , 141rem 1rem 0 0.1rem   #a17a67 , 67rem 6rem 0 0.1rem   #6b575b , 117rem 5rem 0 0.1rem   #6b575b , 86rem 7rem 0 0.1rem   #6b575b , 68rem 7rem 0 0.1rem   #a17a67 , 120rem 5rem 0 0.1rem   #a17a67 , 122rem 5rem 0 0.1rem   #6b575b , 101rem 2rem 0 0.1rem   #a17a67 , 7rem 5rem 0 0.1rem   #6b575b , 42rem 3rem 0 0.1rem   #a17a67 , 21rem 2rem 0 0.1rem   #a17a67 , 130rem 4rem 0 0.1rem   #a17a67 , 88rem 6rem 0 0.1rem   #6b575b , 55rem 7rem 0 0.1rem   #6b575b , 19rem 3rem 0 0.1rem   #6b575b , 27rem 7rem 0 0.1rem   #6b575b , 14rem 4rem 0 0.1rem   #6b575b , 98rem 6rem 0 0.1rem   #a17a67 , 126rem 3rem 0 0.1rem   #6b575b , 66rem 1rem 0 0.1rem   #a17a67 , 80rem 1rem 0 0.1rem   #a17a67 , 150rem 2rem 0 0.1rem   #6b575b , 102rem 4rem 0 0.1rem   #6b575b , 122rem 3rem 0 0.1rem   #a17a67 , 38rem 7rem 0 0.1rem   #6b575b , 106rem 6rem 0 0.1rem   #a17a67 , 17rem 7rem 0 0.1rem   #a17a67 , 1rem 2rem 0 0.1rem   #a17a67 , 71rem 1rem 0 0.1rem   #6b575b , 19rem 5rem 0 0.1rem   #a17a67 , 19rem 5rem 0 0.1rem   #a17a67 , 91rem 2rem 0 0.1rem   #a17a67 , 93rem 3rem 0 0.1rem   #6b575b , 93rem 5rem 0 0.1rem   #6b575b , 12rem 7rem 0 0.1rem   #6b575b , 28rem 5rem 0 0.1rem   #a17a67 , 115rem 3rem 0 0.1rem   #6b575b , 7rem 6rem 0 0.1rem   #a17a67 , 29rem 2rem 0 0.1rem   #6b575b , 102rem 2rem 0 0.1rem   #a17a67 , 3rem 4rem 0 0.1rem   #6b575b , 142rem 7rem 0 0.1rem   #6b575b , 96rem 1rem 0 0.1rem   #6b575b , 81rem 3rem 0 0.1rem   #a17a67 , 18rem 6rem 0 0.1rem   #a17a67 , 43rem 2rem 0 0.1rem   #a17a67 , 114rem 2rem 0 0.1rem   #6b575b , 62rem 6rem 0 0.1rem   #6b575b , 64rem 3rem 0 0.1rem   #a17a67 , 19rem 7rem 0 0.1rem   #6b575b , 6rem 7rem 0 0.1rem   #6b575b , 90rem 7rem 0 0.1rem   #a17a67 , 63rem 2rem 0 0.1rem   #a17a67 , 146rem 5rem 0 0.1rem   #a17a67 , 99rem 2rem 0 0.1rem   #6b575b , 59rem 6rem 0 0.1rem   #6b575b , 34rem 6rem 0 0.1rem   #6b575b , 71rem 6rem 0 0.1rem   #6b575b , 102rem 1rem 0 0.1rem   #6b575b , 141rem 2rem 0 0.1rem   #a17a67 , 130rem 2rem 0 0.1rem   #6b575b , 9rem 3rem 0 0.1rem   #a17a67 , 91rem 2rem 0 0.1rem   #6b575b , 115rem 7rem 0 0.1rem   #6b575b , 106rem 6rem 0 0.1rem   #a17a67 , 82rem 5rem 0 0.1rem   #a17a67 , 53rem 1rem 0 0.1rem   #a17a67 , 133rem 1rem 0 0.1rem   #a17a67 , 78rem 4rem 0 0.1rem   #a17a67 , 72rem 1rem 0 0.1rem   #6b575b , 74rem 7rem 0 0.1rem   #6b575b , 104rem 3rem 0 0.1rem   #6b575b , 59rem 3rem 0 0.1rem   #a17a67 , 144rem 3rem 0 0.1rem   #6b575b , 16rem 7rem 0 0.1rem   #a17a67 , 97rem 6rem 0 0.1rem   #a17a67 , 36rem 6rem 0 0.1rem   #6b575b , 139rem 5rem 0 0.1rem   #6b575b , 119rem 2rem 0 0.1rem   #a17a67 , 52rem 2rem 0 0.1rem   #6b575b , 44rem 4rem 0 0.1rem   #6b575b , 140rem 6rem 0 0.1rem   #a17a67 , 42rem 5rem 0 0.1rem   #6b575b , 34rem 3rem 0 0.1rem   #a17a67 , 80rem 3rem 0 0.1rem   #a17a67 , 131rem 4rem 0 0.1rem   #a17a67 , 113rem 2rem 0 0.1rem   #a17a67 , 105rem 4rem 0 0.1rem   #a17a67 , 91rem 5rem 0 0.1rem   #a17a67 , 141rem 3rem 0 0.1rem   #a17a67 , 40rem 1rem 0 0.1rem   #a17a67 , 44rem 7rem 0 0.1rem   #a17a67 , 98rem 2rem 0 0.1rem   #a17a67 , 137rem 7rem 0 0.1rem   #6b575b , 104rem 3rem 0 0.1rem   #6b575b , 22rem 5rem 0 0.1rem   #a17a67 , 99rem 2rem 0 0.1rem   #6b575b , 9rem 3rem 0 0.1rem   #a17a67 , 6rem 2rem 0 0.1rem   #6b575b , 124rem 6rem 0 0.1rem   #6b575b , 42rem 3rem 0 0.1rem   #a17a67 , 14rem 5rem 0 0.1rem   #6b575b , 97rem 6rem 0 0.1rem   #6b575b , 114rem 4rem 0 0.1rem   #a17a67 , 38rem 4rem 0 0.1rem   #6b575b , 57rem 2rem 0 0.1rem   #6b575b , 50rem 6rem 0 0.1rem   #6b575b , 140rem 3rem 0 0.1rem   #6b575b , 45rem 2rem 0 0.1rem   #a17a67 , 77rem 1rem 0 0.1rem   #6b575b , 78rem 6rem 0 0.1rem   #6b575b , 117rem 7rem 0 0.1rem   #6b575b , 37rem 4rem 0 0.1rem   #6b575b , 148rem 6rem 0 0.1rem   #6b575b , 132rem 7rem 0 0.1rem   #a17a67 , 129rem 1rem 0 0.1rem   #a17a67 , 117rem 2rem 0 0.1rem   #a17a67 , 106rem 7rem 0 0.1rem   #a17a67 , 31rem 4rem 0 0.1rem   #6b575b , 120rem 6rem 0 0.1rem   #a17a67 , 42rem 1rem 0 0.1rem   #a17a67 , 150rem 7rem 0 0.1rem   #6b575b , 106rem 5rem 0 0.1rem   #a17a67 , 43rem 3rem 0 0.1rem   #6b575b , 43rem 1rem 0 0.1rem   #6b575b , 143rem 4rem 0 0.1rem   #a17a67 , 121rem 6rem 0 0.1rem   #6b575b , 136rem 4rem 0 0.1rem   #6b575b , 68rem 3rem 0 0.1rem   #a17a67 , 38rem 4rem 0 0.1rem   #a17a67 , 89rem 4rem 0 0.1rem   #6b575b , 123rem 6rem 0 0.1rem   #6b575b , 132rem 7rem 0 0.1rem   #a17a67 , 119rem 4rem 0 0.1rem   #6b575b , 66rem 7rem 0 0.1rem   #a17a67 , 149rem 1rem 0 0.1rem   #a17a67 , 8rem 3rem 0 0.1rem   #6b575b , 18rem 5rem 0 0.1rem   #a17a67 , 95rem 5rem 0 0.1rem   #6b575b , 124rem 3rem 0 0.1rem   #a17a67 , 88rem 2rem 0 0.1rem   #a17a67 , 22rem 1rem 0 0.1rem   #a17a67 , 58rem 7rem 0 0.1rem   #a17a67 , 74rem 6rem 0 0.1rem   #6b575b , 26rem 3rem 0 0.1rem   #6b575b , 70rem 2rem 0 0.1rem   #a17a67 , 22rem 2rem 0 0.1rem   #a17a67 , 119rem 1rem 0 0.1rem   #6b575b , 93rem 4rem 0 0.1rem   #6b575b , 103rem 4rem 0 0.1rem   #a17a67 , 143rem 2rem 0 0.1rem   #a17a67 , 21rem 7rem 0 0.1rem   #6b575b , 86rem 6rem 0 0.1rem   #a17a67 , 50rem 5rem 0 0.1rem   #6b575b , 104rem 6rem 0 0.1rem   #a17a67 , 19rem 5rem 0 0.1rem   #a17a67 , 115rem 6rem 0 0.1rem   #a17a67 , 106rem 7rem 0 0.1rem   #6b575b , 65rem 5rem 0 0.1rem   #a17a67 , 119rem 7rem 0 0.1rem   #6b575b , 100rem 6rem 0 0.1rem   #a17a67 , 145rem 2rem 0 0.1rem   #6b575b , 90rem 6rem 0 0.1rem   #a17a67 , 98rem 7rem 0 0.1rem   #6b575b , 14rem 1rem 0 0.1rem   #6b575b , 59rem 2rem 0 0.1rem   #6b575b , 100rem 2rem 0 0.1rem   #a17a67 , 126rem 7rem 0 0.1rem   #a17a67 , 45rem 1rem 0 0.1rem   #a17a67 , 64rem 4rem 0 0.1rem   #6b575b , 63rem 4rem 0 0.1rem   #6b575b , 133rem 1rem 0 0.1rem   #6b575b , 148rem 6rem 0 0.1rem   #a17a67 , 72rem 6rem 0 0.1rem   #6b575b , 14rem 7rem 0 0.1rem   #a17a67 , 41rem 2rem 0 0.1rem   #6b575b , 54rem 1rem 0 0.1rem   #6b575b , 16rem 2rem 0 0.1rem   #a17a67 , 59rem 1rem 0 0.1rem   #6b575b , 13rem 1rem 0 0.1rem   #a17a67 , 106rem 7rem 0 0.1rem   #a17a67 , 76rem 7rem 0 0.1rem   #6b575b , 3rem 3rem 0 0.1rem   #6b575b , 26rem 6rem 0 0.1rem   #6b575b , 64rem 3rem 0 0.1rem   #6b575b , 2rem 2rem 0 0.1rem   #6b575b , 49rem 3rem 0 0.1rem   #a17a67 , 28rem 6rem 0 0.1rem   #a17a67 , 29rem 2rem 0 0.1rem   #6b575b , 99rem 2rem 0 0.1rem   #a17a67 , 80rem 1rem 0 0.1rem   #6b575b , 92rem 4rem 0 0.1rem   #6b575b , 119rem 5rem 0 0.1rem   #6b575b , 67rem 1rem 0 0.1rem   #6b575b , 57rem 7rem 0 0.1rem   #6b575b , 149rem 1rem 0 0.1rem   #a17a67 , 32rem 6rem 0 0.1rem   #a17a67 , 96rem 6rem 0 0.1rem   #a17a67 , 123rem 7rem 0 0.1rem   #a17a67 , 69rem 6rem 0 0.1rem   #6b575b , 59rem 7rem 0 0.1rem   #6b575b , 45rem 4rem 0 0.1rem   #6b575b , 81rem 5rem 0 0.1rem   #6b575b , 40rem 7rem 0 0.1rem   #a17a67 , 78rem 7rem 0 0.1rem   #6b575b , 24rem 2rem 0 0.1rem   #a17a67 , 9rem 3rem 0 0.1rem   #a17a67 , 139rem 2rem 0 0.1rem   #a17a67 , 118rem 4rem 0 0.1rem   #a17a67 , 78rem 6rem 0 0.1rem   #6b575b , 56rem 5rem 0 0.1rem   #a17a67 , 27rem 1rem 0 0.1rem   #a17a67 , 13rem 1rem 0 0.1rem   #6b575b , 37rem 2rem 0 0.1rem   #a17a67 , 62rem 5rem 0 0.1rem   #a17a67 , 41rem 2rem 0 0.1rem   #a17a67 , 16rem 7rem 0 0.1rem   #6b575b , 108rem 3rem 0 0.1rem   #a17a67 , 99rem 4rem 0 0.1rem   #6b575b , 79rem 2rem 0 0.1rem   #a17a67 , 111rem 5rem 0 0.1rem   #6b575b , 89rem 5rem 0 0.1rem   #6b575b , 43rem 6rem 0 0.1rem   #6b575b , 139rem 4rem 0 0.1rem   #6b575b , 32rem 7rem 0 0.1rem   #a17a67 , 148rem 6rem 0 0.1rem   #a17a67 , 52rem 2rem 0 0.1rem   #6b575b , 56rem 6rem 0 0.1rem   #a17a67 , 33rem 5rem 0 0.1rem   #a17a67 , 36rem 2rem 0 0.1rem   #6b575b , 65rem 4rem 0 0.1rem   #6b575b , 80rem 7rem 0 0.1rem   #a17a67 , 68rem 4rem 0 0.1rem   #6b575b , 44rem 5rem 0 0.1rem   #6b575b , 123rem 4rem 0 0.1rem   #a17a67 , 121rem 2rem 0 0.1rem   #a17a67 , 50rem 5rem 0 0.1rem   #6b575b , 131rem 3rem 0 0.1rem   #a17a67 , 55rem 6rem 0 0.1rem   #6b575b , 135rem 1rem 0 0.1rem   #6b575b , 130rem 7rem 0 0.1rem   #a17a67 , 123rem 4rem 0 0.1rem   #a17a67 , 4rem 6rem 0 0.1rem   #6b575b , 6rem 7rem 0 0.1rem   #6b575b , 126rem 3rem 0 0.1rem   #6b575b , 5rem 5rem 0 0.1rem   #6b575b , 82rem 1rem 0 0.1rem   #6b575b , 17rem 3rem 0 0.1rem   #6b575b , 44rem 4rem 0 0.1rem   #a17a67 , 11rem 1rem 0 0.1rem   #a17a67 , 131rem 4rem 0 0.1rem   #6b575b , 80rem 6rem 0 0.1rem   #a17a67 , 50rem 2rem 0 0.1rem   #6b575b , 114rem 1rem 0 0.1rem   #a17a67 , 49rem 4rem 0 0.1rem   #a17a67 , 70rem 4rem 0 0.1rem   #6b575b , 61rem 1rem 0 0.1rem   #6b575b , 76rem 1rem 0 0.1rem   #a17a67 , 53rem 7rem 0 0.1rem   #6b575b , 94rem 5rem 0 0.1rem   #a17a67 , 48rem 1rem 0 0.1rem   #6b575b , 22rem 6rem 0 0.1rem   #6b575b , 75rem 7rem 0 0.1rem   #6b575b , 8rem 7rem 0 0.1rem   #a17a67 , 147rem 4rem 0 0.1rem   #a17a67 , 31rem 1rem 0 0.1rem   #6b575b , 42rem 6rem 0 0.1rem   #a17a67 , 5rem 1rem 0 0.1rem   #a17a67 , 134rem 4rem 0 0.1rem   #a17a67 , 70rem 3rem 0 0.1rem   #a17a67 , 91rem 3rem 0 0.1rem   #a17a67 , 4rem 3rem 0 0.1rem   #6b575b , 21rem 1rem 0 0.1rem   #a17a67 , 144rem 7rem 0 0.1rem   #a17a67 , 41rem 2rem 0 0.1rem   #6b575b , 15rem 1rem 0 0.1rem   #a17a67 , 98rem 6rem 0 0.1rem   #6b575b , 43rem 3rem 0 0.1rem   #6b575b , 143rem 6rem 0 0.1rem   #6b575b , 33rem 6rem 0 0.1rem   #6b575b , 132rem 1rem 0 0.1rem   #6b575b , 16rem 3rem 0 0.1rem   #a17a67 , 148rem 5rem 0 0.1rem   #a17a67 , 112rem 3rem 0 0.1rem   #6b575b , 47rem 1rem 0 0.1rem   #a17a67 , 34rem 6rem 0 0.1rem   #a17a67 , 116rem 3rem 0 0.1rem   #6b575b , 140rem 4rem 0 0.1rem   #6b575b , 74rem 6rem 0 0.1rem   #a17a67 , 119rem 7rem 0 0.1rem   #6b575b , 11rem 3rem 0 0.1rem   #a17a67 , 135rem 5rem 0 0.1rem   #6b575b , 126rem 4rem 0 0.1rem   #6b575b , 129rem 1rem 0 0.1rem   #6b575b , 41rem 7rem 0 0.1rem   #6b575b , 117rem 1rem 0 0.1rem   #a17a67 , 41rem 7rem 0 0.1rem   #6b575b , 86rem 7rem 0 0.1rem   #6b575b , 107rem 5rem 0 0.1rem   #a17a67 , 147rem 3rem 0 0.1rem   #a17a67 , 53rem 1rem 0 0.1rem   #a17a67 , 89rem 4rem 0 0.1rem   #a17a67 , 141rem 3rem 0 0.1rem   #6b575b , 100rem 4rem 0 0.1rem   #6b575b , 7rem 6rem 0 0.1rem   #6b575b , 144rem 5rem 0 0.1rem   #a17a67 , 17rem 7rem 0 0.1rem   #a17a67 , 107rem 6rem 0 0.1rem   #a17a67 , 34rem 5rem 0 0.1rem   #6b575b , 50rem 7rem 0 0.1rem   #6b575b , 96rem 7rem 0 0.1rem   #a17a67 , 55rem 7rem 0 0.1rem   #a17a67 , 111rem 2rem 0 0.1rem   #a17a67 , 73rem 2rem 0 0.1rem   #6b575b , 50rem 6rem 0 0.1rem   #6b575b , 9rem 4rem 0 0.1rem   #6b575b , 64rem 4rem 0 0.1rem   #a17a67 , 7rem 4rem 0 0.1rem   #a17a67 , 115rem 2rem 0 0.1rem   #a17a67 , 9rem 4rem 0 0.1rem   #6b575b , 112rem 5rem 0 0.1rem   #a17a67 , 122rem 2rem 0 0.1rem   #6b575b , 150rem 7rem 0 0.1rem   #6b575b , 29rem 3rem 0 0.1rem   #a17a67 , 126rem 4rem 0 0.1rem   #a17a67 , 30rem 7rem 0 0.1rem   #6b575b , 49rem 1rem 0 0.1rem   #6b575b , 41rem 5rem 0 0.1rem   #6b575b , 29rem 4rem 0 0.1rem   #a17a67 , 133rem 2rem 0 0.1rem   #6b575b , 84rem 4rem 0 0.1rem   #6b575b , 73rem 1rem 0 0.1rem   #a17a67 , 25rem 3rem 0 0.1rem   #a17a67 , 8rem 5rem 0 0.1rem   #a17a67 , 40rem 7rem 0 0.1rem   #6b575b , 33rem 7rem 0 0.1rem   #6b575b , 136rem 6rem 0 0.1rem   #a17a67 , 93rem 7rem 0 0.1rem   #6b575b , 62rem 1rem 0 0.1rem   #6b575b , 57rem 4rem 0 0.1rem   #a17a67 , 76rem 6rem 0 0.1rem   #6b575b , 130rem 2rem 0 0.1rem   #6b575b , 120rem 5rem 0 0.1rem   #6b575b , 123rem 1rem 0 0.1rem   #a17a67 , 2rem 5rem 0 0.1rem   #6b575b , 103rem 6rem 0 0.1rem   #6b575b , 19rem 4rem 0 0.1rem   #6b575b , 51rem 4rem 0 0.1rem   #6b575b , 141rem 1rem 0 0.1rem   #a17a67 , 93rem 5rem 0 0.1rem   #6b575b , 109rem 7rem 0 0.1rem   #a17a67 , 133rem 4rem 0 0.1rem   #a17a67 , 83rem 7rem 0 0.1rem   #a17a67 , 32rem 4rem 0 0.1rem   #a17a67 , 77rem 2rem 0 0.1rem   #a17a67 , 75rem 7rem 0 0.1rem   #6b575b , 141rem 5rem 0 0.1rem   #6b575b , 56rem 2rem 0 0.1rem   #6b575b , 68rem 4rem 0 0.1rem   #6b575b , 107rem 3rem 0 0.1rem   #6b575b , 150rem 2rem 0 0.1rem   #6b575b , 123rem 4rem 0 0.1rem   #a17a67 , 92rem 7rem 0 0.1rem   #a17a67 , 64rem 7rem 0 0.1rem   #6b575b , 67rem 5rem 0 0.1rem   #a17a67 , 101rem 7rem 0 0.1rem   #a17a67 , 19rem 4rem 0 0.1rem   #6b575b , 108rem 2rem 0 0.1rem   #6b575b , 112rem 2rem 0 0.1rem   #6b575b , 57rem 6rem 0 0.1rem   #a17a67 , 44rem 6rem 0 0.1rem   #a17a67 , 95rem 6rem 0 0.1rem   #6b575b , 143rem 2rem 0 0.1rem   #6b575b , 108rem 6rem 0 0.1rem   #6b575b , 11rem 2rem 0 0.1rem   #6b575b , 89rem 1rem 0 0.1rem   #6b575b , 86rem 6rem 0 0.1rem   #6b575b , 21rem 3rem 0 0.1rem   #6b575b , 101rem 7rem 0 0.1rem   #6b575b , 6rem 3rem 0 0.1rem   #6b575b , 19rem 6rem 0 0.1rem   #a17a67 , 3rem 7rem 0 0.1rem   #a17a67 , 49rem 3rem 0 0.1rem   #a17a67 , 117rem 2rem 0 0.1rem   #6b575b , 114rem 2rem 0 0.1rem   #6b575b , 54rem 7rem 0 0.1rem   #6b575b , 62rem 7rem 0 0.1rem   #a17a67 , 98rem 5rem 0 0.1rem   #a17a67 , 129rem 4rem 0 0.1rem   #a17a67 , 115rem 7rem 0 0.1rem   #6b575b , 71rem 4rem 0 0.1rem   #6b575b , 70rem 7rem 0 0.1rem   #6b575b , 61rem 5rem 0 0.1rem   #6b575b , 79rem 3rem 0 0.1rem   #a17a67 , 76rem 5rem 0 0.1rem   #a17a67 , 1rem 3rem 0 0.1rem   #6b575b , 56rem 7rem 0 0.1rem   #6b575b , 21rem 2rem 0 0.1rem   #6b575b , 64rem 5rem 0 0.1rem   #6b575b , 40rem 1rem 0 0.1rem   #6b575b , 45rem 4rem 0 0.1rem   #a17a67 , 148rem 7rem 0 0.1rem   #6b575b , 41rem 7rem 0 0.1rem   #a17a67 , 112rem 5rem 0 0.1rem   #6b575b , 123rem 4rem 0 0.1rem   #6b575b , 95rem 7rem 0 0.1rem   #6b575b , 79rem 7rem 0 0.1rem   #6b575b , 91rem 1rem 0 0.1rem   #6b575b , 15rem 1rem 0 0.1rem   #6b575b , 13rem 4rem 0 0.1rem   #6b575b , 16rem 1rem 0 0.1rem   #6b575b , 134rem 3rem 0 0.1rem   #a17a67 , 89rem 5rem 0 0.1rem   #a17a67 , 53rem 4rem 0 0.1rem   #6b575b , 1rem 3rem 0 0.1rem   #a17a67 , 133rem 3rem 0 0.1rem   #a17a67 , 12rem 6rem 0 0.1rem   #6b575b , 51rem 3rem 0 0.1rem   #6b575b , 9rem 5rem 0 0.1rem   #a17a67 , 128rem 7rem 0 0.1rem   #6b575b , 12rem 1rem 0 0.1rem   #6b575b , 29rem 5rem 0 0.1rem   #6b575b , 102rem 7rem 0 0.1rem   #a17a67 , 23rem 5rem 0 0.1rem   #6b575b , 62rem 2rem 0 0.1rem   #6b575b , 127rem 4rem 0 0.1rem   #6b575b , 73rem 7rem 0 0.1rem   #6b575b , 64rem 5rem 0 0.1rem   #a17a67 , 124rem 4rem 0 0.1rem   #a17a67 , 126rem 1rem 0 0.1rem   #a17a67 , 114rem 2rem 0 0.1rem   #6b575b , 61rem 7rem 0 0.1rem   #a17a67 , 58rem 4rem 0 0.1rem   #6b575b , 101rem 6rem 0 0.1rem   #6b575b , 27rem 2rem 0 0.1rem   #6b575b , 76rem 5rem 0 0.1rem   #6b575b , 62rem 7rem 0 0.1rem   #6b575b , 54rem 5rem 0 0.1rem   #a17a67 , 107rem 2rem 0 0.1rem   #a17a67 , 62rem 2rem 0 0.1rem   #6b575b , 6rem 7rem 0 0.1rem   #a17a67 , 97rem 7rem 0 0.1rem   #6b575b , 53rem 5rem 0 0.1rem   #6b575b , 21rem 2rem 0 0.1rem   #6b575b , 24rem 7rem 0 0.1rem   #a17a67 , 100rem 2rem 0 0.1rem   #6b575b , 85rem 3rem 0 0.1rem   #6b575b , 98rem 1rem 0 0.1rem   #6b575b , 107rem 7rem 0 0.1rem   #6b575b , 131rem 3rem 0 0.1rem   #6b575b , 142rem 1rem 0 0.1rem   #6b575b , 97rem 7rem 0 0.1rem   #a17a67 , 84rem 1rem 0 0.1rem   #6b575b , 130rem 3rem 0 0.1rem   #6b575b , 99rem 3rem 0 0.1rem   #a17a67 , 100rem 7rem 0 0.1rem   #a17a67 , 123rem 1rem 0 0.1rem   #6b575b , 130rem 4rem 0 0.1rem   #a17a67 , 40rem 2rem 0 0.1rem   #6b575b , 38rem 2rem 0 0.1rem   #6b575b , 10rem 2rem 0 0.1rem   #a17a67 , 66rem 2rem 0 0.1rem   #6b575b , 107rem 2rem 0 0.1rem   #6b575b , 99rem 1rem 0 0.1rem   #a17a67 , 86rem 5rem 0 0.1rem   #a17a67 , 125rem 2rem 0 0.1rem   #6b575b , 119rem 2rem 0 0.1rem   #a17a67 , 16rem 7rem 0 0.1rem   #6b575b , 1rem 2rem 0 0.1rem   #a17a67 , 41rem 4rem 0 0.1rem   #a17a67 , 129rem 4rem 0 0.1rem   #a17a67 , 99rem 2rem 0 0.1rem   #6b575b , 29rem 5rem 0 0.1rem   #6b575b , 135rem 3rem 0 0.1rem   #a17a67 , 134rem 1rem 0 0.1rem   #a17a67 , 64rem 7rem 0 0.1rem   #6b575b , 66rem 1rem 0 0.1rem   #a17a67 , 138rem 4rem 0 0.1rem   #a17a67 , 137rem 7rem 0 0.1rem   #a17a67 , 95rem 4rem 0 0.1rem   #a17a67 , 28rem 4rem 0 0.1rem   #a17a67 , 34rem 3rem 0 0.1rem   #a17a67 , 143rem 5rem 0 0.1rem   #6b575b , 68rem 4rem 0 0.1rem   #a17a67 , 125rem 5rem 0 0.1rem   #6b575b , 63rem 4rem 0 0.1rem   #a17a67 , 40rem 1rem 0 0.1rem   #6b575b , 149rem 2rem 0 0.1rem   #6b575b , 7rem 7rem 0 0.1rem   #6b575b;
+  transform: translate3d(0, 0, 0);
+  filter: blur(0.2rem);
+}
+sky u:nth-of-type(12) {
+  height: 1rem;
+  width: 25rem;
+  background: #fff;
+  transform: translate3d(103rem, 44rem, 0) skew(92deg, -5deg);
+  border-radius: 50%;
+  box-shadow: 0 0 1rem #ffae1a, 0 0 1rem #ffd7b3, 0 0 1rem #ffd7b3, -116rem -4rem 0.5rem #ffd7b3, -116rem -4rem 0.1rem -0.1rem #ffd7b3, -89rem -2.5rem 0.1rem -0.1rem #ffd7b3;
+}
+sky u:nth-of-type(12):after {
+  height: 2rem;
+  width: 30rem;
+  background: #fff;
+  transform: translate3d(-78rem, -3rem, 0);
+  border-radius: 50%;
+  box-shadow: 0 0 1rem #ffae1a, 0 0 1rem #ffd7b3, 0 0 1rem #ffd7b3, 0 -1rem 1rem -0.75rem #ffd7b3, 0 -2rem 1rem -0.75rem #ffd7b3;
+}
+sky u:nth-of-type(12):before {
+  height: 1rem;
+  width: 10rem;
+  background: #ffd7b3;
+  transform: translate3d(-35rem, -2rem, 0);
+  border-radius: 50%;
+  box-shadow: 18rem 1rem 0 #ffd7b3, 16rem 1.5rem 0 #ffd7b3;
+}
+
+sky2 {
+  transform: translate3d(-108.5rem, -73rem, -499rem) scale(2.1);
+}
+sky2:after, sky2:before {
+  width: 3rem;
+  background: linear-gradient(#ffec99, rgba(255, 255, 255, 0));
+  height: 1000rem;
+  transform: translate3d(105rem, 63rem, 264rem) rotateX(88.7deg) rotateY(29deg) skewX(-1deg);
+  transform-origin: top;
+  filter: blur(0.5rem);
+  backface-visibility: visible;
+  border-radius: 50%;
+  box-shadow: 0 0 1rem #ff5900;
+  opacity: 0.2;
+}
+sky2:after {
+  transform: translate3d(106rem, 63rem, 264rem) rotateX(89deg) rotateY(-29deg) skewX(-0.2deg);
+}
+sky2 u:nth-of-type(2) {
+  transform: translate3d(84rem, 54rem, 0) rotate(-8deg);
+  background: #a17a67;
+  width: 1rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  filter: drop-shadow(0.4rem -0.2rem 0.1rem #fff) drop-shadow(0.2rem -0.2rem 2rem rgba(121, 99, 103, 0.5)) blur(0.05rem);
+  box-shadow: 0.7rem -0.1rem 0 #a17a67, 1.4rem -0.1rem 0 #a17a67, 2rem -0.2rem 0 #a17a67, 2.3rem -0.45rem 0 -0.2rem #a17a67, 2.7rem 0 0 #a17a67, 3.2rem -0.5rem 0 -0.2rem #a17a67, 3.7rem -0.2rem 0 #a17a67, 4.3rem -0.1rem 0 #a17a67, 5rem -0.1rem 0 #a17a67, 5.7rem 0.2rem 0 #a17a67, 6.6rem 0.2rem 0 0.1rem #a17a67, 7.3rem 0.1rem 0 0.1rem #a17a67, 8rem 0.05rem 0 0.1rem #a17a67, 8.7rem -0.4rem 0 -0.1rem #a17a67, 9.2rem 0.2rem 0 0.1rem #a17a67, 10rem 0.3rem 0 0.1rem #a17a67, 11rem 0.4rem 0 0.1rem #a17a67, 11.2rem 0.4rem 0 0.1rem #a17a67, 12rem 0.3rem 0 0.1rem #a17a67, 12.5rem 0.2rem 0 0.1rem #a17a67, 13rem 0.25rem 0 0.1rem #a17a67, 12.5rem 0.5rem 0 0.1rem #a17a67, 13.5rem 0.6rem 0 0.1rem #a17a67, 14.3rem 1.3rem 0 0.2rem #a17a67, 15.3rem 1.5rem 0 0.1rem #a17a67, 16.3rem 2.1rem 0 0.2rem #a17a67, 17rem 2.5rem 0 0.1rem #a17a67, -0.5rem 0.8rem 0 #a17a67, -1.2rem 1.8rem 0 #a17a67;
+}
+sky2 u:nth-of-type(2):before {
+  width: 40rem;
+  height: 10rem;
+  background: radial-gradient(#fff, #ffec99, orange);
+  box-shadow: inset 0 0 2rem orange, 0 0 2rem orange;
+  transform: translate3d(4rem, 1rem, 0) rotate(8deg);
+  border-radius: 50%;
+  filter: blur(2rem);
+}
+sky2 u:nth-of-type(2):after {
+  width: 54rem;
+  height: 52rem;
+  transform: translate3d(-3.5rem, -17rem, 0);
+  background: conic-gradient(from -98deg, #ffc04d, #ffc04d, rgba(255, 255, 255, 0) 7%, rgba(255, 89, 0, 0.5) 10%, #ffc04d 12%, #ffc04d 15%, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0));
+  -webkit-mask-image: radial-gradient(rgba(255, 255, 255, 0), #000, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0));
+  opacity: 0.8;
+}
+sky2 u:nth-of-type(3) {
+  width: 2rem;
+  height: 1.5rem;
+  background: #a17a67;
+  border-radius: 0.75rem 0.75rem 0.2rem 1.5rem/1rem 1rem 0.2rem 0.5rem;
+  transform: translate3d(106rem, 56rem, 0) skewX(-17deg) rotate(-8deg);
+  box-shadow: inset 0 -1rem 1rem rgba(255, 176, 102, 0.5), -1.3rem 0.2rem 0.1rem -0.6rem rgba(255, 176, 102, 0.5), -1rem 0.3rem 0.1rem -0.6rem rgba(255, 176, 102, 0.5), -1.8rem 0.2rem 0.1rem -0.67rem rgba(255, 176, 102, 0.5), 1.5rem 0.5rem 1rem rgba(255, 176, 102, 0.5), 0.2rem 0.3rem 1rem -0.2rem rgba(255, 176, 102, 0.5), 2.5rem 0.7rem 1rem -0.2rem rgba(255, 176, 102, 0.5), 3.5rem 1rem 1rem -0.3rem rgba(255, 176, 102, 0.5), -1.3rem 0.1rem 0.1rem -0.6rem #a17a67, -1rem 0.2rem 0.1rem -0.6rem #a17a67, -1.8rem 0.1rem 0.1rem -0.67rem #a17a67, 1.5rem 0.2rem 0 #a17a67, 0.2rem -0.3rem 0 -0.2rem #a17a67, 2.5rem 0.5rem 0 -0.2rem #a17a67, 3.5rem 0.7rem 0 -0.3rem #a17a67;
+  filter: drop-shadow(6rem 1rem 0 #a17a67) blur(0.05rem);
+}
+sky2 u:nth-of-type(3):before {
+  width: 2.4rem;
+  height: 1.6rem;
+  background: #a17a67;
+  border-radius: 20% 60% 0.2rem 1.5rem/1rem 1rem 0.2rem 0.5rem;
+  transform: translate3d(4rem, -1rem, 0) scaleY(0.7) scaleX(-1) rotate(-17deg);
+  box-shadow: inset 0 -1rem 1rem rgba(255, 176, 102, 0.5), -1.3rem 0.2rem 0.1rem -0.6rem rgba(255, 176, 102, 0.5), -1rem 0.3rem 0.1rem -0.6rem rgba(255, 176, 102, 0.5), -1.8rem 0.2rem 0.1rem -0.67rem rgba(255, 176, 102, 0.5), 1.5rem 0.5rem 1rem rgba(255, 176, 102, 0.5), 0.2rem 0.3rem 1rem -0.2rem rgba(255, 176, 102, 0.5), 2.5rem 0.7rem 1rem -0.2rem rgba(255, 176, 102, 0.5), 3.5rem 1rem 1rem -0.3rem rgba(255, 176, 102, 0.5), -1.3rem 0.1rem 0.1rem -0.6rem #a17a67, -1rem 0.2rem 0.1rem -0.6rem #a17a67, -1.8rem 0.1rem 0.1rem -0.67rem #a17a67, 1.5rem 0.2rem 0 #a17a67, 0.2rem -0.3rem 0 -0.2rem #a17a67, 2.5rem 0.5rem 0 -0.2rem #a17a67, 3.5rem 0.7rem 0 -0.3rem #a17a67;
+  filter: drop-shadow(-5rem 3rem 0 #a17a67) drop-shadow(-10rem 2rem 0 #a17a67) drop-shadow(-14rem -3rem 0 #a17a67) drop-shadow(-16rem -3rem 0 #a17a67) blur(0.05rem);
+}
+sky2 u:nth-of-type(4) {
+  width: 4rem;
+  height: 4rem;
+  background: #fff;
+  box-shadow: inset 0 0 1rem #ffc04d;
+  transform: translate3d(106.5rem, 58rem, 0);
+  border-radius: 50%;
+  filter: blur(0.3rem);
+}
+sky2 u:nth-of-type(4):after, sky2 u:nth-of-type(4):before {
+  width: 70rem;
+  background: linear-gradient(#fff, #ffec99, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0));
+  height: 1000rem;
+  transform: translate3d(-32rem, -4rem, 264rem) rotateX(93deg) rotate(-1deg);
+  transform-origin: top;
+  backface-visibility: visible;
+  border-radius: 50% 50% 0% 100%/100% 100% 0% 0%;
+  filter: blur(2rem);
+  opacity: 0.5;
+}
+sky2 u:nth-of-type(4):after {
+  transform: translate3d(-10rem, -6rem, 264rem) rotateX(95deg) rotate(-1deg);
+  width: 27rem;
+  height: 451rem;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+sky2 u:nth-of-type(5):after {
+  width: 4rem;
+  height: 0.5rem;
+  border-radius: 75% 25% 100% 0/100% 100% 0 0;
+  box-shadow: 49rem 12rem 0   #6b575b , 6rem 4rem 0 0.2rem   #936e5b , 13rem 11rem 0 0.1rem   #936e5b , 9rem 9rem 0 0.2rem   #a17a67 , 10rem 1rem 0 0.1rem   #936e5b , 12rem 3rem 0 0.2rem   #a17a67 , 13rem 7rem 0 0.2rem   #a17a67 , 6rem 1rem 0 0.2rem   #936e5b , 12rem 14rem 0 0.1rem   #936e5b , 9rem 3rem 0 0.2rem   #936e5b , 15rem 12rem 0 0.2rem   #a17a67 , 13rem 10rem 0 0.2rem   #a17a67 , 4rem 12rem 0 0.2rem   #936e5b , 9rem 5rem 0 0.1rem   #a17a67 , 11rem 14rem 0 0.2rem   #936e5b , 8rem 12rem 0 0.2rem   #a17a67 , 7rem 12rem 0 0.2rem   #a17a67 , 10rem 2rem 0 0.2rem   #a17a67 , 12rem 3rem 0 0.1rem   #a17a67 , 8rem 10rem 0 0.1rem   #a17a67;
+  transform: translate3d(85rem, 54rem, 0) scaleY(0.3);
+  filter: drop-shadow(30rem 0 0 #a17a67) blur(0.5rem);
+}
+sky2 u:nth-of-type(5):before {
+  width: 1000rem;
+  height: 3rem;
+  background: linear-gradient(-90deg, #ffec99, rgba(255, 255, 255, 0));
+  transform: translate3d(-892.5rem, 61.5rem, 0rem) rotateY(89deg) rotate(-0.7deg);
+  transform-origin: right;
+  border-radius: 50%;
+  backface-visibility: visible;
+  filter: blur(0.5rem);
+  box-shadow: 0 0 1rem #ff5900;
+  opacity: 0.2;
+}
+sky2 u:nth-of-type(6) {
+  width: 2.5rem;
+  height: 1.3rem;
+  color: #ffb066;
+  background: currentColor;
+  border-radius: 66% 34% 51% 49%/91% 92% 8% 9%;
+  transform: translate3d(103rem, 51rem, 0);
+  box-shadow: 1rem 0 0 -0.1rem currentColor, 2rem 0.15rem 0 -0.3rem currentColor, 4rem 0.25rem 0 -0.5rem currentColor, 5rem 0.4rem 0 -0.6rem currentColor, -1rem 0.25rem 0 -0.4rem currentColor, -2rem 0.25rem 0 -0.4rem currentColor;
+  filter: drop-shadow(0 0 0.2rem #ffec99) drop-shadow(-8rem 5rem 0 #796367) drop-shadow(-12rem 4.5rem 0 #796367) drop-shadow(-14rem 5rem 0 #796367) drop-shadow(-20rem 5rem 0 #796367) blur(0.05rem);
+}
+sky2 u:nth-of-type(6):before {
+  width: 2.5rem;
+  height: 1.1rem;
+  color: #ffec99;
+  background: currentColor;
+  border-radius: 66% 34% 51% 49%/91% 92% 8% 9%;
+  transform: translate3d(-1rem, 0.5rem, 0);
+  box-shadow: 1rem 0 0 -0.1rem currentColor, 2rem 0.15rem 0 -0.3rem currentColor, 4rem 0.25rem 0 -0.5rem currentColor, 5rem 0.4rem 0 -0.6rem currentColor, -1rem 0.25rem 0 -0.4rem currentColor, -2rem 0.25rem 0 -0.4rem currentColor;
+  filter: drop-shadow(0 0 0.2rem #ffec99) drop-shadow(-8rem 5rem 0 #a17a67) drop-shadow(-12rem 4.5rem 0 #a17a67) drop-shadow(-14rem 5rem 0 #a17a67) drop-shadow(-20rem 5rem 0 #a17a67) blur(0.3rem);
+}
+sky2 u:nth-of-type(6):after {
+  width: 2.5rem;
+  height: 1.1rem;
+  color: #796367;
+  background: currentColor;
+  border-radius: 66% 34% 51% 49%/91% 92% 8% 9%;
+  transform: translate3d(-21rem, 7.2rem, 0) scale(1.5);
+  box-shadow: 1rem 0 0 -0.1rem currentColor, 2rem 0.15rem 0 -0.3rem currentColor, 4rem 0.25rem 0 -0.5rem currentColor, 5rem 0.4rem 0 -0.6rem currentColor, -1rem 0.25rem 0 -0.4rem currentColor, -2rem 0.25rem 0 -0.4rem currentColor;
+  filter: blur(0.1rem);
+}
+sky2 u:nth-of-type(1):after {
+  width: 8rem;
+  height: 8rem;
+  background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), #ff5900, rgba(255, 255, 255, 0));
+  transform: translate3d(101.5rem, 59rem, 305rem) scale(1.2);
+  border-radius: 50%;
+  filter: blur(1rem);
+  opacity: 0.6;
+}
+sky2 u:nth-of-type(1):before {
+  width: 20rem;
+  height: 13rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 1rem #ffec99, 0 0 3rem #ffec99;
+  transform: translate3d(98rem, 42rem, 0rem);
+  filter: blur(2rem);
+}
+
+trees l {
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 65%, #1f140a 70%);
+}
+trees l:nth-of-type(1) {
+  width: 200rem;
+  height: 10rem;
+  transform: translate3d(6rem, 61rem, -360rem) scale(1.9);
+}
+trees l:nth-of-type(1) u {
+  color: #5f5062;
+  width: 26rem;
+  height: 10rem;
+  background: currentColor;
+  border-radius: 50%;
+  transform: translate3d(72rem, -1rem, 0) rotate(-2deg) skewY(-3deg);
+}
+trees l:nth-of-type(1) u:before {
+  transform: translate3d(10em, -0.4em, 0) rotate(1deg);
+  border-radius: 50%;
+  width: 0.75em;
+  height: 1.5em;
+  background: currentColor;
+  box-shadow: 1em 0 0 currentColor, 3em 0em 0 currentColor, 4em 0em 0 currentColor, 6em 0.3em 0 currentColor, 6em 0.3em 0 0.5rem currentColor, 9em 0.5em 0 currentColor;
+  filter: drop-shadow(2em 0.1rem 0 currentColor) drop-shadow(2em 0.7rem 0 currentColor) drop-shadow(1em 0.3rem 0 currentColor);
+}
+trees l:nth-of-type(1) u:after {
+  transform: translate3d(8em, 0, 0) rotate(-13deg);
+  border-radius: 50%;
+  width: 1em;
+  height: 1.5em;
+  background: currentColor;
+  box-shadow: 1em 0 0 currentColor, -1em 0em 0 currentColor, -2em 0em 0 currentColor, -3em 0.3em 0 currentColor, -4em 0.3em 0 0.2rem currentColor, -6em 1.5em 0 currentColor;
+  filter: drop-shadow(-4em 0.2rem 0 currentColor) drop-shadow(1em 0.7rem 0 currentColor) drop-shadow(3em 0.5rem 0 currentColor);
+}
+trees l:nth-of-type(1) u:nth-of-type(2) {
+  transform: translate3d(84rem, 0rem, 0) rotate(2deg) skewY(3deg);
+}
+trees l:nth-of-type(1) u:nth-of-type(3) {
+  transform: translate3d(104rem, -1.5rem, 0) rotate(-4deg) skewX(-27deg);
+}
+trees l:nth-of-type(1) u:nth-of-type(3):before {
+  transform: translate3d(10em, -0.5em, 0) rotate(1deg) skewX(25deg);
+}
+trees l:nth-of-type(1) u:nth-of-type(3):after {
+  transform: translate3d(8em, -0.1em, 0) rotate(-9deg) skewX(16deg);
+}
+trees l:nth-of-type(1) u:nth-of-type(4) {
+  transform: translate3d(114rem, -1.6rem, 0) rotate(-4deg) skewX(-7deg) scaleX(-1.1);
+}
+trees l:nth-of-type(1) u:nth-of-type(5) {
+  transform: translate3d(140rem, -1rem, 0) scale(1.2);
+  filter: drop-shadow(-26rem 1.5rem 0 rgba(22, 26, 0, 0.5));
+}
+trees l:nth-of-type(1) u:nth-of-type(5), trees l:nth-of-type(1) u:nth-of-type(5):before, trees l:nth-of-type(1) u:nth-of-type(5):after {
+  color: #161a00;
+}
+trees l:nth-of-type(1) u:nth-of-type(6) {
+  transform: translate3d(160rem, 0rem, 0) scaleX(-1.2) scaleY(1.3);
+  filter: drop-shadow(67rem 1.5rem 0 rgba(22, 26, 0, 0.5));
+}
+trees l:nth-of-type(1) u:nth-of-type(6), trees l:nth-of-type(1) u:nth-of-type(6):before, trees l:nth-of-type(1) u:nth-of-type(6):after {
+  color: #161a00;
+}
+trees l:nth-of-type(1) u:nth-of-type(7) {
+  transform: translate3d(120rem, 0rem, 0) scale(1.2);
+  filter: drop-shadow(-1rem -0.5rem 0 rgba(22, 26, 0, 0.5));
+}
+trees l:nth-of-type(1) u:nth-of-type(7), trees l:nth-of-type(1) u:nth-of-type(7):before, trees l:nth-of-type(1) u:nth-of-type(7):after {
+  color: #161a00;
+}
+trees l:nth-of-type(1) u:nth-of-type(8) {
+  transform: translate3d(180rem, 1rem, 0) scaleX(-1.2) scaleY(1.3);
+}
+trees l:nth-of-type(1) u:nth-of-type(8), trees l:nth-of-type(1) u:nth-of-type(8):before, trees l:nth-of-type(1) u:nth-of-type(8):after {
+  color: #161a00;
+}
+trees l:nth-of-type(1) s {
+  width: 40rem;
+  height: 40rem;
+  border-radius: 50%;
+  background: radial-gradient(rgba(255, 255, 255, 0), #ffc04d 5%, #ffae1a 10%, rgba(175, 255, 0, 0.5) 20%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0));
+  transform: translate3d(89rem, -22rem, 0);
+  opacity: 0.3;
+  display: none;
+}
+trees l:nth-of-type(2) {
+  width: 200rem;
+  height: 10rem;
+  transform: translate3d(3rem, 61rem, -360rem) scale(1.9);
+  filter: drop-shadow(3em 2em 0 rgba(9, 10, 0, 0.5)) drop-shadow(2em 4em 0 rgba(9, 10, 0, 0.5));
+}
+trees l:nth-of-type(2) u {
+  font-size: 0.3rem;
+  width: 40em;
+  aspect-ratio: 1.1/1;
+  border-radius: 50%;
+  transform: translate3d(64rem, 0, 0) rotate(-12deg) skewY(-10deg);
+  background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 20%, rgba(0, 0, 0, 0.9) 50%, rgba(9, 10, 0, 0.8) 60%, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+}
+trees l:nth-of-type(2) u:before {
+  transform: translate3d(20em, -1.3em, 0) rotate(4deg) skew(10deg);
+  border-radius: 79% 21% 100% 0%/100% 22% 78% 0%;
+  width: 4em;
+  height: 2em;
+  background: rgba(9, 10, 0, 0.8);
+  box-shadow: 4em 0 0 rgba(9, 10, 0, 0.8), 11em 4em 0 rgba(0, 0, 0, 0.9), 9em 5em 0 rgba(9, 10, 0, 0.8), 15em 7em 0 rgba(0, 0, 0, 0.9), 14em 11em 0 rgba(9, 10, 0, 0.8), 16em 14em 0 rgba(9, 10, 0, 0.8);
+  filter: drop-shadow(-2em 2em 0 rgba(9, 10, 0, 0.8)) drop-shadow(2em 3em 0 rgba(0, 0, 0, 0.9)) drop-shadow(1em 4em 0 rgba(9, 10, 0, 0.8));
+}
+trees l:nth-of-type(2) u:after {
+  transform: translate3d(22em, 0rem, 0) rotate(34deg) skew(2deg);
+  border-radius: 79% 21% 100% 0%/100% 22% 78% 0%;
+  width: 4em;
+  height: 2em;
+  background: rgba(9, 10, 0, 0.8);
+  box-shadow: -4em 0 0 rgba(9, 10, 0, 0.8), -5em 2em 0 rgba(0, 0, 0, 0.9), -3em 6em 0 rgba(9, 10, 0, 0.8), -10em 6em 0 rgba(0, 0, 0, 0.9), -10em 11em 0 rgba(9, 10, 0, 0.8), -11em 13em 0 rgba(9, 10, 0, 0.8);
+  filter: drop-shadow(2em 2em 0 rgba(9, 10, 0, 0.8)) drop-shadow(-5em 2em 0 rgba(0, 0, 0, 0.9)) drop-shadow(5em -2em 0 rgba(9, 10, 0, 0.8));
+}
+trees l:nth-of-type(2) u:nth-of-type(2) {
+  font-size: 0.4rem;
+  transform: translate3d(14rem, -6rem, 0) rotate(-12deg) skewY(-10deg);
+}
+trees l:nth-of-type(2) u:nth-of-type(3) {
+  font-size: 0.4rem;
+  transform: translate3d(125rem, 0rem, 0) rotate(-12deg) skewY(-10deg);
+}
+trees l:nth-of-type(2) u:nth-of-type(4) {
+  font-size: 0.45rem;
+  transform: translate3d(185rem, -1rem, 0) rotate(1deg) skewY(-13deg);
+}
+trees l:nth-of-type(3) {
+  width: 200rem;
+  height: 10rem;
+  transform: translate3d(0, 56rem, -340rem) scale(1.7);
+  filter: drop-shadow(3em 2em 0 rgba(9, 10, 0, 0.5)) drop-shadow(2em 4em 0 rgba(9, 10, 0, 0.5));
+}
+trees l:nth-of-type(3) u {
+  font-size: 0.5rem;
+  width: 40em;
+  aspect-ratio: 1/1;
+  border-radius: 60% 40%;
+  transform: translate3d(10rem, -2rem, 0) rotate(-1deg);
+  background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 5%, rgba(9, 10, 0, 0.8) 20%, rgba(0, 0, 0, 0.9));
+  background: radial-gradient(rgba(0, 0, 0, 0.9), rgba(9, 10, 0, 0.8) 50%, rgba(255, 255, 255, 0));
+  box-shadow: 1rem -24em 0 -19.5em rgba(9, 10, 0, 0.8), 10em -20em 0 -19em rgba(0, 0, 0, 0.9), 10em -20em 0 -19em rgba(9, 10, 0, 0.8), 13em -18em 0 -19em rgba(0, 0, 0, 0.9), 17em -17em 0 -19em rgba(9, 10, 0, 0.8), 21em -15em 0 -19em rgba(9, 10, 0, 0.8);
+}
+trees l:nth-of-type(3) u:before {
+  transform: translate3d(20em, -4em, 0) rotate(4deg) skew(10deg);
+  border-radius: 79% 21% 100% 0%/100% 22% 78% 0%;
+  width: 1em;
+  height: 11em;
+  background: rgba(9, 10, 0, 0.8);
+  box-shadow: 4em 0 0 rgba(9, 10, 0, 0.8), 9em 4em 0 rgba(0, 0, 0, 0.9), 8em 2em 0 rgba(9, 10, 0, 0.8), 15em 3em 0 rgba(0, 0, 0, 0.9), 17em 4em 0 rgba(9, 10, 0, 0.8), 20em 7em 0 rgba(9, 10, 0, 0.8);
+  filter: drop-shadow(2em 2em 0 rgba(9, 10, 0, 0.5)) drop-shadow(-5em -1em 0 rgba(9, 10, 0, 0.5));
+}
+trees l:nth-of-type(3) u:after {
+  transform: translate3d(19em, -4em, 0) rotate(-8deg) skew(-66deg);
+  border-radius: 0 70%;
+  width: 2em;
+  height: 4em;
+  background: rgba(9, 10, 0, 0.8);
+  box-shadow: 4em 0 0 rgba(0, 0, 0, 0.9), 9em 4em 0 rgba(9, 10, 0, 0.8), 9em 3em 0 rgba(9, 10, 0, 0.8), 15em 3em 0 rgba(9, 10, 0, 0.8), 18em 5em 0 rgba(0, 0, 0, 0.9), 21em 5em 0 rgba(9, 10, 0, 0.8);
+  filter: drop-shadow(23em 6em 0 rgba(9, 10, 0, 0.5)) drop-shadow(-8em -1em 0 rgba(9, 10, 0, 0.5));
+}
+trees l:nth-of-type(3) u:nth-of-type(2) {
+  font-size: 0.5rem;
+  transform: translate3d(0rem, -7rem, 0) rotate(10deg);
+}
+trees l:nth-of-type(3) u:nth-of-type(3) {
+  font-size: 0.4rem;
+  transform: translate3d(20rem, -2rem, 0) rotate(10deg);
+}
+trees l:nth-of-type(3) u:nth-of-type(4) {
+  font-size: 0.4rem;
+  transform: translate3d(28rem, 2em, 0) rotate(-26deg);
+}
+trees l:nth-of-type(3) u:nth-of-type(5) {
+  font-size: 0.5rem;
+  transform: translate3d(-1rem, -6rem, 0) rotate(10deg) scaleX(-1);
+}
+trees l:nth-of-type(3) u:nth-of-type(6) {
+  font-size: 0.4rem;
+  transform: translate3d(-3rem, -6rem, 0) rotate(10deg) scaleX(-1);
+}
+trees l:nth-of-type(3) u:nth-of-type(7) {
+  font-size: 0.3rem;
+  transform: translate3d(80rem, -1rem, 0) rotate(-5deg) scaleX(-1);
+}
+trees l:nth-of-type(3) u:nth-of-type(8) {
+  font-size: 0.4rem;
+  transform: translate3d(77rem, -1rem, 0) rotate(8deg) skew(-9deg, -7deg);
+}
+trees l:nth-of-type(3) u:nth-of-type(9) {
+  font-size: 0.4rem;
+  transform: translate3d(139rem, -3rem, 0) rotate(26deg) skew(-9deg, -7deg) scaleX(-1);
+}
+trees l:nth-of-type(3) u:nth-of-type(10) {
+  font-size: 0.4rem;
+  transform: translate3d(136rem, -2.5rem, 0) rotate(-56deg) skew(17deg, 4deg);
+}
+trees l:nth-of-type(3) u:nth-of-type(11) {
+  font-size: 0.3rem;
+  transform: translate3d(145rem, -1rem, 0);
+}
+trees l:nth-of-type(3) u:nth-of-type(12) {
+  font-size: 0.3rem;
+  transform: translate3d(168rem, 1rem, 0) rotate(-20deg);
+}
+trees l:nth-of-type(3) u:nth-of-type(13) {
+  font-size: 0.2rem;
+  transform: translate3d(168rem, 1rem, 0) rotate(-20deg);
+}
+trees l:nth-of-type(4) {
+  width: 200rem;
+  height: 10rem;
+  transform: translate3d(0, 62rem, -320rem) scale(1.7);
+  color: rgba(9, 10, 0, 0.8);
+}
+trees l:nth-of-type(4):before {
+  width: 6rem;
+  height: 5rem;
+  border-radius: 3rem 2rem;
+  transform: translate3d(43rem, -0.7rem, 0) rotate(-1deg);
+  box-shadow: -1.2rem 0.5rem 0 rgba(9, 10, 0, 0.8), 1.6rem 0.7rem 0 -0.1rem rgba(13, 15, 0, 0.8);
+  background-image: radial-gradient(currentColor 80%, rgba(255, 255, 255, 0) 80%);
+  background-position: 0 0;
+  background-size: 1.5rem 3rem;
+}
+trees l:nth-of-type(4):after {
+  width: 8rem;
+  height: 5rem;
+  border-radius: 3rem 2rem;
+  transform: translate3d(48rem, 0, 0) rotate(-1deg);
+  box-shadow: -2.2rem 0.5rem 0 rgba(9, 10, 0, 0.8), 1.6rem 0.7rem 0 -0.1rem rgba(13, 15, 0, 0.8);
+  background-image: radial-gradient(currentColor 80%, rgba(255, 255, 255, 0) 80%);
+  background-position: 0 0;
+  background-size: 2.5rem 4rem;
+}
+trees l:nth-of-type(4) u {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 3rem 2rem;
+  transform: translate3d(7rem, -1rem, 0) rotate(-2deg);
+  box-shadow: 0.5rem 1rem 0 rgba(9, 10, 0, 0.8), -2rem 1rem 0 -0.2rem rgba(0, 0, 0, 0.9);
+  background-image: radial-gradient(currentColor 80%, rgba(255, 255, 255, 0) 80%);
+  background-position: 0 0;
+  background-size: 2rem 4rem;
+  filter: contrast(1.2);
+}
+trees l:nth-of-type(4) u:before {
+  width: 6rem;
+  height: 5rem;
+  border-radius: 3rem 2rem;
+  transform: translate3d(48rem, 3rem, 0) rotate(-1deg);
+  box-shadow: -1.2rem 0.5rem 0 rgba(22, 26, 0, 0.9), 1.6rem 0.7rem 0 -0.1rem rgba(30, 36, 0, 0.9);
+  background-image: radial-gradient(currentColor 80%, rgba(255, 255, 255, 0) 80%);
+  background-position: 0 0;
+  background-size: 1.8rem 4rem;
+}
+trees l:nth-of-type(4) u:after {
+  width: 6rem;
+  height: 5rem;
+  border-radius: 50%;
+  transform: translate3d(54rem, 2.5rem, 0) rotate(-1deg);
+  box-shadow: -2rem 0.5rem 0 rgba(22, 26, 0, 0.9), 3rem 1rem 0 -0.1rem rgba(30, 36, 0, 0.9);
+  background-image: radial-gradient(currentColor 80%, rgba(255, 255, 255, 0) 80%);
+  background-position: 0 0;
+  background-size: 2.5rem 4rem;
+}
+trees l:nth-of-type(4) u:nth-of-type(2) {
+  transform: translate3d(125rem, -1rem, 0) rotate(2deg) scaleX(-1);
+}
+trees l:nth-of-type(4) u:nth-of-type(3) {
+  transform: translate3d(89rem, -0.5rem, 0) rotate(-3deg) scaleX(1.2);
+}
+trees l:nth-of-type(5) {
+  width: 200rem;
+  height: 10rem;
+  transform: translate3d(0, 63rem, -300rem) scale(1.4);
+  color: rgba(22, 26, 0, 0.9);
+}
+trees l:nth-of-type(5):before {
+  width: 6rem;
+  height: 5rem;
+  border-radius: 3rem 2rem;
+  transform: translate3d(184rem, -0.7rem, 0) rotate(-1deg);
+  box-shadow: -1.2rem 0.5rem 0 rgba(22, 26, 0, 0.9), 1.6rem 0.7rem 0 -0.1rem rgba(30, 36, 0, 0.9);
+  background-image: radial-gradient(currentColor 80%, rgba(255, 255, 255, 0) 80%);
+  background-position: 0 0;
+  background-size: 1.5rem 3rem;
+}
+trees l:nth-of-type(5):after {
+  width: 8rem;
+  height: 5rem;
+  border-radius: 3rem 2rem;
+  transform: translate3d(100rem, 0, 0) rotate(-1deg);
+  box-shadow: -2.2rem 0.5rem 0 rgba(22, 26, 0, 0.9), 1.6rem 0.7rem 0 -0.1rem rgba(30, 36, 0, 0.9);
+  background-image: radial-gradient(currentColor 80%, rgba(255, 255, 255, 0) 80%);
+  background-position: 0 0;
+  background-size: 2.5rem 4rem;
+  filter: brightness(0.2);
+}
+trees l:nth-of-type(5) u {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 3rem 2rem;
+  transform: translate3d(7rem, -1.5rem, 0) rotate(-2deg);
+  box-shadow: 0.5rem 1rem 0 rgba(26, 31, 0, 0.9), -2rem 1rem 0 -0.2rem rgba(17, 20, 0, 0.9);
+  background-image: radial-gradient(currentColor 80%, rgba(255, 255, 255, 0) 80%);
+  background-position: 0 0;
+  background-size: 2rem 4rem;
+}
+trees l:nth-of-type(5) u:before {
+  width: 6rem;
+  height: 5rem;
+  border-radius: 3rem 2rem;
+  transform: translate3d(56rem, 3.3rem, 0) rotate(-1deg);
+  box-shadow: -1.2rem 0.5rem 0 rgba(22, 26, 0, 0.9), 1.6rem 0.7rem 0 -0.1rem rgba(30, 36, 0, 0.9);
+  background-image: radial-gradient(currentColor 80%, rgba(255, 255, 255, 0) 80%);
+  background-position: 0 0;
+  background-size: 1.8rem 4rem;
+}
+trees l:nth-of-type(5) u:after {
+  width: 6rem;
+  height: 5rem;
+  border-radius: 50%;
+  transform: translate3d(135rem, 5rem, 0) rotate(-1deg);
+  box-shadow: -2rem 0.5rem 0 rgba(22, 26, 0, 0.9), 3rem 2rem 0 -0.1rem rgba(30, 36, 0, 0.9);
+  background-image: radial-gradient(currentColor 80%, rgba(255, 255, 255, 0) 80%);
+  background-position: 0 0;
+  background-size: 2.5rem 4rem;
+}
+trees l:nth-of-type(6) {
+  background: linear-gradient(rgba(255, 255, 255, 0), #161a00 20%, #161a00);
+  width: 300rem;
+  height: 5rem;
+  transform: translate3d(17rem, 63.5rem, -260rem) scaleX(1.5);
+}
+trees l:nth-of-type(6) u {
+  width: 2rem;
+  height: 1.5rem;
+  background: rgba(22, 26, 0, 0.9);
+  border-radius: 0.5rem 0.75rem;
+  transform: translate3d(0, -0.5rem, 0) rotate(-10deg);
+  box-shadow: 1.2rem 0.3rem 0 rgba(26, 31, 0, 0.9), 4.6rem 0.7rem 0 -0.2rem rgba(22, 26, 0, 0.9), 8rem 1.1rem 0 rgba(17, 20, 0, 0.9);
+}
+trees l:nth-of-type(6) u:before {
+  width: 2rem;
+  height: 1.5rem;
+  background: rgba(22, 26, 0, 0.9);
+  border-radius: 0.75rem 0.5rem;
+  transform: translate3d(4rem, 1rem, 0) rotate(-10deg);
+  box-shadow: -1.2rem -0.5rem 0 rgba(17, 20, 0, 0.9), 1.6rem 0.7rem 0 -0.1rem rgba(26, 31, 0, 0.9), 3rem 1.1rem 0 rgba(22, 26, 0, 0.9);
+}
+trees l:nth-of-type(6) u:after {
+  width: 2rem;
+  height: 1.5rem;
+  background: rgba(22, 26, 0, 0.9);
+  border-radius: 0.75rem 0.5rem;
+  transform: translate3d(10rem, 2rem, 0) rotate(5deg);
+  box-shadow: -1.2rem -0.5rem 0 -0.2rem rgba(26, 31, 0, 0.9), 4rem 0.7rem 0 rgba(17, 20, 0, 0.9), 10rem 1.1rem 0 rgba(26, 31, 0, 0.9);
+}
+trees l:nth-of-type(6) u:nth-of-type(2) {
+  transform: translate3d(10rem, -0.5rem, 0) rotate(-10deg);
+}
+trees l:nth-of-type(6) u:nth-of-type(3) {
+  transform: translate3d(20rem, -0.25rem, 0) rotate(12deg) scaleY(-1);
+}
+trees l:nth-of-type(6) u:nth-of-type(4) {
+  transform: translate3d(32rem, -0.5rem, 0) rotate(-10deg);
+}
+trees l:nth-of-type(6) u:nth-of-type(5) {
+  transform: translate3d(45rem, -0.25rem, 0) rotate(12deg) scaleY(-1);
+}
+trees l:nth-of-type(6) u:nth-of-type(6) {
+  transform: translate3d(57rem, -0.25rem, 0) rotate(-11deg);
+}
+trees l:nth-of-type(6) u:nth-of-type(7) {
+  transform: translate3d(69rem, 0, 0) rotate(10deg) scaleY(-1);
+}
+trees l:nth-of-type(6) u:nth-of-type(8) {
+  transform: translate3d(81rem, 0, 0) rotate(12deg) scaleY(-1);
+}
+trees l:nth-of-type(6) u:nth-of-type(9) {
+  transform: translate3d(93rem, 0.25rem, 0) rotate(-12deg);
+}
+trees l:nth-of-type(6) u:nth-of-type(10) {
+  transform: translate3d(105rem, 0, 0) rotate(-10deg);
+  filter: brightness(1.3) hue-rotate(-20deg);
+}
+trees l:nth-of-type(6) u:nth-of-type(11) {
+  transform: translate3d(117rem, 0, 0) rotate(12deg) scaleY(-1);
+}
+trees l:nth-of-type(6) u:nth-of-type(11), trees l:nth-of-type(6) u:nth-of-type(11):before, trees l:nth-of-type(6) u:nth-of-type(11):after {
+  border-radius: 1rem 0.75rem;
+}
+trees l:nth-of-type(6) u:nth-of-type(12) {
+  transform: translate3d(129rem, 0, 0) rotate(12deg) scaleY(-1);
+}
+trees l:nth-of-type(6) u:nth-of-type(12), trees l:nth-of-type(6) u:nth-of-type(12):before, trees l:nth-of-type(6) u:nth-of-type(12):after {
+  border-radius: 50%;
+}
+trees l:nth-of-type(6) u:nth-of-type(13) {
+  transform: translate3d(141rem, 0, 0) rotate(-10deg);
+}
+trees l:nth-of-type(6) u:nth-of-type(14) {
+  transform: translate3d(153rem, 0, 0) rotate(12deg) scaleY(-1);
+}
+trees l:nth-of-type(6) u:nth-of-type(15) {
+  transform: translate3d(165rem, 0, 0) rotate(-12deg);
+}
+trees l:nth-of-type(6) u:nth-of-type(16) {
+  transform: translate3d(175rem, 0, 0) rotate(-10deg);
+}
+trees l:nth-of-type(6) u:nth-of-type(17) {
+  transform: translate3d(185rem, 0, 0) rotate(12deg) scaleY(-1);
+}
+trees l:nth-of-type(6) u:nth-of-type(17):after {
+  width: 2rem;
+  height: 1.5rem;
+  background: rgba(22, 26, 0, 0.9);
+  border-radius: 0.75rem 0.5rem;
+  transform: translate3d(10rem, 2rem, 0) rotate(5deg);
+  box-shadow: -1.2rem -0.5rem 0 -0.2rem rgba(26, 31, 0, 0.9), 1rem 0.7rem 0 rgba(17, 20, 0, 0.9), 3rem 0.5rem 0 rgba(26, 31, 0, 0.9);
+}
+trees l:nth-of-type(6) u:nth-of-type(18),
+trees l:nth-of-type(6) u:nth-of-type(19) {
+  height: 0.25rem;
+  background: rgba(150, 117, 42, 0.95);
+  border-radius: 50%;
+  transform: translate3d(90rem, 0, 0) rotate(-2deg) scaleX(1.1);
+  box-shadow: 1.2rem 0.3rem 0 rgba(150, 117, 42, 0.95), 4.6rem 0.7rem 0 0.2rem rgba(150, 117, 42, 0.95), 8rem 0.2rem 0 rgba(150, 117, 42, 0.95);
+  opacity: 0.4;
+  filter: blur(0.2rem);
+}
+trees l:nth-of-type(6) u:nth-of-type(18):before,
+trees l:nth-of-type(6) u:nth-of-type(19):before {
+  height: 0.5rem;
+  background: rgba(150, 117, 42, 0.95);
+  border-radius: 50%;
+  transform: translate3d(8rem, 0.1rem, 0) rotate(-2deg);
+  box-shadow: -1.2rem 0.5rem 0 rgba(150, 117, 42, 0.95), 1.6rem 0.7rem 0 rgba(150, 117, 42, 0.95), 3rem 0.5rem 0 rgba(150, 117, 42, 0.95);
+}
+trees l:nth-of-type(6) u:nth-of-type(18):after,
+trees l:nth-of-type(6) u:nth-of-type(19):after {
+  height: 0.5rem;
+  background: rgba(150, 117, 42, 0.95);
+  border-radius: 50%;
+  transform: translate3d(14rem, 0.6rem, 0);
+  box-shadow: -1.2rem 0.5rem 0 rgba(150, 117, 42, 0.95), 4rem 0.3rem 0 rgba(150, 117, 42, 0.95), 10rem 0.1rem 0 rgba(150, 117, 42, 0.95);
+}
+trees l:nth-of-type(6) u:nth-of-type(19) {
+  transform: translate3d(110rem, 0.7rem, 0) scaleY(-1);
+}
+
+tree {
+  height: 5rem;
+  width: 7rem;
+  border-left: 1rem solid #161a00;
+  transform: translate3d(103.5rem, -1.5rem, 0);
+  border-radius: 50%;
+}
+tree:before {
+  width: 2rem;
+  height: 0.2rem;
+  border-radius: 100% 0 100% 0/100% 0 100% 0;
+  background: rgba(9, 10, 0, 0.8);
+  box-shadow: 1rem 0.1rem 0 0 rgba(9, 10, 0, 0.8), 2rem -0.1rem 0 0 rgba(9, 10, 0, 0.8), 1.2rem -1rem 0 -0.1rem rgba(9, 10, 0, 0.8), 0 -0.9rem 0 rgba(9, 10, 0, 0.8), 0 -0.1rem 0 #161a00, 0.2rem -0.3rem 0 #161a00, -1rem -0.1rem 0 rgba(9, 10, 0, 0.8), -1.1rem -1.1rem 0 rgba(9, 10, 0, 0.8), -1.9rem -0.9rem 0 rgba(9, 10, 0, 0.8), -1.8rem 0 0 rgba(9, 10, 0, 0.8), -3rem 0.2rem 0 rgba(9, 10, 0, 0.8), -2.5rem -0.8rem 0 rgba(9, 10, 0, 0.8);
+  filter: drop-shadow(1em 0.1rem 0 rgba(9, 10, 0, 0.8)) drop-shadow(3em 0.4rem 0 rgba(9, 10, 0, 0.8)) drop-shadow(0.5em 0.2rem 0.1rem rgba(9, 10, 0, 0.8));
+}
+
+field {
+  background: linear-gradient(#634121, #1f140a 10%, #1f140a);
+  width: 300rem;
+  height: 300rem;
+  transform: translate3d(-52rem, 58.5rem, -250rem) rotateX(-5deg);
+  border: 0.25rem dotted #634121;
+}
+field:after {
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(#9b714b 20%, rgba(255, 255, 255, 0) 20%), radial-gradient(#9b714b 20%, rgba(255, 255, 255, 0) 20%);
+  background-position: 0 0, 0.5rem 0.5rem;
+  background-size: 1rem 1rem;
+  opacity: 0.1;
+}
+field:before {
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(90deg, #ffd7b3, #ffd7b3 0.2rem, rgba(255, 255, 255, 0) 0.2rem, rgba(255, 255, 255, 0) 0.6rem);
+  opacity: 0.05;
+}
+field l {
+  transform: translate3d(-1rem, -0.5rem, 0) skewX(-2deg);
+  filter: drop-shadow(1rem -0.2rem 0 rgba(22, 26, 0, 0.9));
+}
+field l, field l:before, field l:after {
+  width: 0.3rem;
+  height: 5rem;
+  box-shadow: 1rem 0 0 #452d17 , 81rem 0 0 #452d17 , 191rem 0 0 #452d17 , 209rem 0 0 #452d17 , 107rem 0 0 #634121 , 74rem 0 0 #634121 , 183rem 0 0 #452d17 , 28rem 0 0 #634121 , 241rem 0 0 #452d17 , 50rem 0 0 #634121 , 245rem 0 0 #634121 , 147rem 0 0 #452d17 , 272rem 0 0 #634121 , 117rem 0 0 #634121 , 233rem 0 0 #452d17 , 220rem 0 0 #634121 , 46rem 0 0 #452d17 , 156rem 0 0 #634121 , 51rem 0 0 #634121 , 293rem 0 0 #452d17 , 277rem 0 0 #452d17 , 142rem 0 0 #634121 , 155rem 0 0 #452d17 , 290rem 0 0 #634121 , 35rem 0 0 #634121 , 11rem 0 0 #634121 , 234rem 0 0 #634121 , 267rem 0 0 #452d17 , 171rem 0 0 #452d17 , 151rem 0 0 #634121 , 51rem 0 0 #634121 , 149rem 0 0 #452d17 , 272rem 0 0 #634121 , 251rem 0 0 #452d17 , 110rem 0 0 #634121 , 150rem 0 0 #634121 , 137rem 0 0 #634121 , 67rem 0 0 #452d17 , 60rem 0 0 #634121 , 287rem 0 0 #634121 , 42rem 0 0 #452d17 , 36rem 0 0 #452d17 , 21rem 0 0 #452d17 , 179rem 0 0 #452d17 , 215rem 0 0 #452d17 , 206rem 0 0 #634121 , 75rem 0 0 #634121 , 252rem 0 0 #634121 , 178rem 0 0 #452d17 , 44rem 0 0 #634121 , 266rem 0 0 #634121 , 170rem 0 0 #634121 , 1rem 0 0 #452d17 , 104rem 0 0 #634121 , 82rem 0 0 #452d17 , 164rem 0 0 #452d17 , 206rem 0 0 #452d17 , 48rem 0 0 #634121 , 114rem 0 0 #452d17 , 51rem 0 0 #634121 , 263rem 0 0 #634121 , 23rem 0 0 #452d17 , 26rem 0 0 #452d17 , 22rem 0 0 #634121 , 156rem 0 0 #634121 , 279rem 0 0 #634121 , 18rem 0 0 #634121 , 104rem 0 0 #452d17 , 132rem 0 0 #452d17 , 31rem 0 0 #634121 , 224rem 0 0 #634121 , 269rem 0 0 #634121 , 68rem 0 0 #634121 , 273rem 0 0 #452d17 , 244rem 0 0 #634121 , 84rem 0 0 #634121 , 9rem 0 0 #452d17 , 36rem 0 0 #452d17 , 61rem 0 0 #634121 , 103rem 0 0 #452d17 , 22rem 0 0 #634121 , 292rem 0 0 #452d17 , 233rem 0 0 #634121 , 13rem 0 0 #452d17 , 297rem 0 0 #452d17 , 225rem 0 0 #634121 , 38rem 0 0 #634121 , 186rem 0 0 #452d17 , 92rem 0 0 #634121 , 190rem 0 0 #634121 , 42rem 0 0 #634121 , 94rem 0 0 #634121 , 146rem 0 0 #634121 , 111rem 0 0 #634121 , 142rem 0 0 #634121 , 228rem 0 0 #634121 , 233rem 0 0 #634121 , 79rem 0 0 #452d17 , 276rem 0 0 #452d17 , 225rem 0 0 #634121 , 183rem 0 0 #452d17 , 121rem 0 0 #452d17 , 168rem 0 0 #634121 , 83rem 0 0 #452d17 , 281rem 0 0 #634121 , 49rem 0 0 #452d17 , 140rem 0 0 #452d17 , 148rem 0 0 #452d17 , 164rem 0 0 #452d17 , 42rem 0 0 #452d17 , 12rem 0 0 #452d17 , 242rem 0 0 #452d17 , 263rem 0 0 #634121 , 191rem 0 0 #452d17 , 75rem 0 0 #452d17 , 257rem 0 0 #634121 , 250rem 0 0 #452d17 , 55rem 0 0 #634121 , 276rem 0 0 #452d17 , 38rem 0 0 #452d17 , 83rem 0 0 #634121 , 266rem 0 0 #634121 , 225rem 0 0 #634121 , 84rem 0 0 #452d17 , 253rem 0 0 #634121 , 102rem 0 0 #452d17 , 88rem 0 0 #634121 , 108rem 0 0 #634121 , 135rem 0 0 #452d17 , 104rem 0 0 #634121 , 149rem 0 0 #634121 , 51rem 0 0 #452d17 , 148rem 0 0 #634121 , 15rem 0 0 #634121 , 10rem 0 0 #634121 , 173rem 0 0 #452d17 , 144rem 0 0 #452d17 , 78rem 0 0 #634121 , 223rem 0 0 #634121 , 219rem 0 0 #452d17 , 14rem 0 0 #452d17 , 299rem 0 0 #452d17 , 155rem 0 0 #634121 , 73rem 0 0 #452d17 , 250rem 0 0 #452d17 , 289rem 0 0 #634121 , 163rem 0 0 #452d17 , 25rem 0 0 #634121 , 38rem 0 0 #634121 , 74rem 0 0 #634121 , 104rem 0 0 #634121 , 40rem 0 0 #452d17 , 173rem 0 0 #452d17 , 258rem 0 0 #634121 , 59rem 0 0 #452d17 , 276rem 0 0 #634121 , 197rem 0 0 #452d17 , 30rem 0 0 #634121 , 125rem 0 0 #452d17 , 186rem 0 0 #634121 , 110rem 0 0 #452d17 , 169rem 0 0 #452d17 , 118rem 0 0 #634121 , 185rem 0 0 #452d17 , 121rem 0 0 #452d17 , 298rem 0 0 #452d17 , 239rem 0 0 #452d17 , 128rem 0 0 #452d17 , 283rem 0 0 #634121 , 175rem 0 0 #634121 , 108rem 0 0 #452d17 , 122rem 0 0 #634121 , 4rem 0 0 #634121 , 210rem 0 0 #634121 , 193rem 0 0 #634121 , 228rem 0 0 #452d17 , 210rem 0 0 #452d17 , 91rem 0 0 #634121 , 66rem 0 0 #634121 , 88rem 0 0 #452d17 , 113rem 0 0 #634121 , 198rem 0 0 #452d17 , 29rem 0 0 #452d17 , 204rem 0 0 #452d17 , 4rem 0 0 #452d17 , 293rem 0 0 #452d17 , 135rem 0 0 #452d17 , 299rem 0 0 #452d17 , 276rem 0 0 #452d17 , 40rem 0 0 #452d17 , 136rem 0 0 #634121 , 57rem 0 0 #452d17 , 151rem 0 0 #452d17 , 25rem 0 0 #634121 , 233rem 0 0 #634121 , 140rem 0 0 #634121 , 125rem 0 0 #634121 , 194rem 0 0 #634121 , 11rem 0 0 #452d17 , 218rem 0 0 #634121;
+  border-radius: 100% 0 100% 0/100% 0 100% 0;
+}
+field l:before {
+  transform: translate3d(0, 0, 8rem) scaleX(1.033) scaleY(1.1) skewX(2deg);
+  box-shadow: 1rem 0 0 #452d17 , 52rem 0 0 #452d17 , 228rem 0 0 #634121 , 125rem 0 0 #634121 , 183rem 0 0 #452d17 , 73rem 0 0 #452d17 , 222rem 0 0 #452d17 , 91rem 0 0 #452d17 , 201rem 0 0 #634121 , 44rem 0 0 #634121 , 58rem 0 0 #452d17 , 117rem 0 0 #452d17 , 241rem 0 0 #452d17 , 106rem 0 0 #634121 , 89rem 0 0 #634121 , 15rem 0 0 #634121 , 256rem 0 0 #634121 , 76rem 0 0 #452d17 , 269rem 0 0 #452d17 , 188rem 0 0 #452d17 , 242rem 0 0 #452d17 , 117rem 0 0 #634121 , 154rem 0 0 #634121 , 283rem 0 0 #634121 , 144rem 0 0 #634121 , 41rem 0 0 #634121 , 18rem 0 0 #452d17 , 77rem 0 0 #452d17 , 223rem 0 0 #452d17 , 229rem 0 0 #452d17 , 276rem 0 0 #634121 , 55rem 0 0 #452d17 , 28rem 0 0 #452d17 , 299rem 0 0 #634121 , 96rem 0 0 #634121 , 255rem 0 0 #634121 , 252rem 0 0 #634121 , 167rem 0 0 #634121 , 211rem 0 0 #452d17 , 44rem 0 0 #634121 , 288rem 0 0 #634121 , 24rem 0 0 #634121 , 236rem 0 0 #634121 , 260rem 0 0 #634121 , 149rem 0 0 #634121 , 172rem 0 0 #452d17 , 51rem 0 0 #634121 , 243rem 0 0 #634121 , 108rem 0 0 #634121 , 49rem 0 0 #634121 , 138rem 0 0 #452d17 , 265rem 0 0 #452d17 , 217rem 0 0 #634121 , 73rem 0 0 #634121 , 134rem 0 0 #634121 , 136rem 0 0 #634121 , 145rem 0 0 #634121 , 290rem 0 0 #452d17 , 32rem 0 0 #634121 , 234rem 0 0 #452d17 , 144rem 0 0 #452d17 , 250rem 0 0 #452d17 , 133rem 0 0 #634121 , 64rem 0 0 #452d17 , 172rem 0 0 #634121 , 178rem 0 0 #634121 , 271rem 0 0 #634121 , 212rem 0 0 #634121 , 286rem 0 0 #452d17 , 250rem 0 0 #634121 , 63rem 0 0 #634121 , 34rem 0 0 #452d17 , 145rem 0 0 #452d17 , 128rem 0 0 #634121 , 282rem 0 0 #634121 , 225rem 0 0 #452d17 , 92rem 0 0 #634121 , 207rem 0 0 #634121 , 157rem 0 0 #634121 , 217rem 0 0 #452d17 , 177rem 0 0 #634121 , 211rem 0 0 #452d17 , 240rem 0 0 #452d17 , 127rem 0 0 #634121 , 249rem 0 0 #452d17 , 180rem 0 0 #452d17 , 231rem 0 0 #452d17 , 80rem 0 0 #452d17 , 254rem 0 0 #634121 , 292rem 0 0 #634121 , 279rem 0 0 #452d17 , 187rem 0 0 #634121 , 211rem 0 0 #452d17 , 130rem 0 0 #634121 , 141rem 0 0 #452d17 , 47rem 0 0 #634121 , 3rem 0 0 #452d17 , 29rem 0 0 #634121 , 118rem 0 0 #452d17 , 6rem 0 0 #634121 , 83rem 0 0 #634121 , 136rem 0 0 #634121 , 222rem 0 0 #452d17 , 290rem 0 0 #634121 , 71rem 0 0 #452d17 , 148rem 0 0 #452d17 , 248rem 0 0 #634121 , 252rem 0 0 #452d17 , 106rem 0 0 #634121 , 224rem 0 0 #452d17 , 9rem 0 0 #634121 , 56rem 0 0 #634121 , 34rem 0 0 #452d17 , 131rem 0 0 #634121 , 270rem 0 0 #634121 , 98rem 0 0 #634121 , 114rem 0 0 #452d17 , 278rem 0 0 #634121 , 199rem 0 0 #634121 , 118rem 0 0 #452d17 , 2rem 0 0 #452d17 , 241rem 0 0 #452d17 , 132rem 0 0 #452d17 , 166rem 0 0 #452d17 , 127rem 0 0 #634121 , 153rem 0 0 #634121 , 276rem 0 0 #634121 , 139rem 0 0 #634121 , 103rem 0 0 #634121 , 43rem 0 0 #634121 , 295rem 0 0 #452d17 , 40rem 0 0 #634121 , 208rem 0 0 #634121 , 10rem 0 0 #634121 , 74rem 0 0 #634121 , 201rem 0 0 #452d17 , 8rem 0 0 #634121 , 163rem 0 0 #634121 , 292rem 0 0 #634121 , 243rem 0 0 #634121 , 44rem 0 0 #452d17 , 122rem 0 0 #634121 , 287rem 0 0 #452d17 , 96rem 0 0 #452d17 , 98rem 0 0 #452d17 , 236rem 0 0 #452d17 , 148rem 0 0 #634121 , 54rem 0 0 #634121 , 107rem 0 0 #634121 , 222rem 0 0 #452d17 , 194rem 0 0 #634121 , 213rem 0 0 #452d17 , 115rem 0 0 #634121 , 123rem 0 0 #452d17 , 216rem 0 0 #452d17 , 72rem 0 0 #634121 , 199rem 0 0 #452d17 , 215rem 0 0 #452d17 , 191rem 0 0 #634121 , 140rem 0 0 #452d17 , 151rem 0 0 #452d17 , 41rem 0 0 #452d17 , 71rem 0 0 #452d17 , 290rem 0 0 #452d17 , 291rem 0 0 #452d17 , 42rem 0 0 #452d17 , 257rem 0 0 #452d17 , 38rem 0 0 #452d17 , 26rem 0 0 #452d17 , 40rem 0 0 #634121 , 126rem 0 0 #452d17 , 88rem 0 0 #634121 , 139rem 0 0 #452d17 , 61rem 0 0 #452d17 , 116rem 0 0 #634121 , 202rem 0 0 #634121 , 80rem 0 0 #452d17 , 286rem 0 0 #452d17 , 36rem 0 0 #452d17 , 214rem 0 0 #634121 , 233rem 0 0 #452d17 , 36rem 0 0 #634121 , 127rem 0 0 #452d17 , 72rem 0 0 #634121 , 198rem 0 0 #634121 , 7rem 0 0 #452d17 , 252rem 0 0 #634121 , 248rem 0 0 #452d17 , 284rem 0 0 #634121 , 264rem 0 0 #452d17 , 110rem 0 0 #452d17 , 272rem 0 0 #452d17 , 52rem 0 0 #634121 , 33rem 0 0 #452d17 , 128rem 0 0 #634121 , 67rem 0 0 #452d17 , 93rem 0 0 #634121 , 207rem 0 0 #452d17 , 181rem 0 0 #452d17 , 272rem 0 0 #452d17;
+}
+field l:after {
+  transform: translate3d(0, 0, 16rem) scaleX(1.066) scaleY(1.2) skewX(-5deg);
+  box-shadow: 1rem 0 0 #634121 , 64rem 0 0 #452d17 , 35rem 0 0 #452d17 , 298rem 0 0 #452d17 , 141rem 0 0 #634121 , 77rem 0 0 #452d17 , 279rem 0 0 #634121 , 52rem 0 0 #452d17 , 170rem 0 0 #634121 , 50rem 0 0 #634121 , 272rem 0 0 #452d17 , 126rem 0 0 #634121 , 231rem 0 0 #634121 , 171rem 0 0 #452d17 , 93rem 0 0 #634121 , 101rem 0 0 #452d17 , 51rem 0 0 #634121 , 92rem 0 0 #452d17 , 198rem 0 0 #452d17 , 104rem 0 0 #634121 , 52rem 0 0 #452d17 , 220rem 0 0 #634121 , 261rem 0 0 #452d17 , 120rem 0 0 #634121 , 193rem 0 0 #452d17 , 292rem 0 0 #452d17 , 163rem 0 0 #452d17 , 146rem 0 0 #634121 , 103rem 0 0 #452d17 , 222rem 0 0 #452d17 , 94rem 0 0 #634121 , 84rem 0 0 #452d17 , 14rem 0 0 #634121 , 220rem 0 0 #452d17 , 116rem 0 0 #634121 , 153rem 0 0 #634121 , 237rem 0 0 #634121 , 105rem 0 0 #452d17 , 266rem 0 0 #452d17 , 53rem 0 0 #634121 , 194rem 0 0 #452d17 , 21rem 0 0 #452d17 , 42rem 0 0 #452d17 , 268rem 0 0 #634121 , 272rem 0 0 #452d17 , 94rem 0 0 #452d17 , 165rem 0 0 #634121 , 26rem 0 0 #452d17 , 182rem 0 0 #452d17 , 118rem 0 0 #634121 , 237rem 0 0 #452d17 , 166rem 0 0 #452d17 , 175rem 0 0 #452d17 , 286rem 0 0 #452d17 , 190rem 0 0 #452d17 , 278rem 0 0 #634121 , 109rem 0 0 #634121 , 257rem 0 0 #452d17 , 298rem 0 0 #634121 , 3rem 0 0 #452d17 , 15rem 0 0 #452d17 , 163rem 0 0 #452d17 , 206rem 0 0 #634121 , 69rem 0 0 #634121 , 102rem 0 0 #634121 , 222rem 0 0 #452d17 , 208rem 0 0 #452d17 , 107rem 0 0 #452d17 , 1rem 0 0 #452d17 , 15rem 0 0 #452d17 , 126rem 0 0 #634121 , 129rem 0 0 #452d17 , 232rem 0 0 #452d17 , 2rem 0 0 #452d17 , 203rem 0 0 #634121 , 271rem 0 0 #452d17 , 41rem 0 0 #634121 , 210rem 0 0 #634121 , 279rem 0 0 #452d17 , 251rem 0 0 #634121 , 42rem 0 0 #634121 , 96rem 0 0 #452d17 , 139rem 0 0 #634121 , 111rem 0 0 #452d17 , 245rem 0 0 #452d17 , 4rem 0 0 #452d17 , 290rem 0 0 #634121 , 37rem 0 0 #634121 , 75rem 0 0 #452d17 , 24rem 0 0 #452d17 , 24rem 0 0 #634121 , 33rem 0 0 #634121 , 247rem 0 0 #634121 , 73rem 0 0 #452d17 , 186rem 0 0 #452d17 , 222rem 0 0 #452d17 , 120rem 0 0 #452d17 , 289rem 0 0 #452d17 , 34rem 0 0 #634121 , 12rem 0 0 #634121 , 232rem 0 0 #634121 , 185rem 0 0 #634121 , 169rem 0 0 #634121 , 227rem 0 0 #634121 , 267rem 0 0 #452d17 , 184rem 0 0 #634121 , 68rem 0 0 #452d17 , 234rem 0 0 #452d17 , 29rem 0 0 #634121 , 63rem 0 0 #452d17 , 113rem 0 0 #634121 , 145rem 0 0 #634121 , 218rem 0 0 #452d17 , 86rem 0 0 #452d17 , 40rem 0 0 #452d17 , 66rem 0 0 #452d17 , 220rem 0 0 #452d17 , 212rem 0 0 #634121 , 127rem 0 0 #452d17 , 165rem 0 0 #634121 , 36rem 0 0 #634121 , 222rem 0 0 #452d17 , 11rem 0 0 #634121 , 135rem 0 0 #634121 , 144rem 0 0 #452d17 , 195rem 0 0 #634121 , 265rem 0 0 #452d17 , 13rem 0 0 #452d17 , 109rem 0 0 #634121 , 68rem 0 0 #634121 , 68rem 0 0 #452d17 , 24rem 0 0 #634121 , 297rem 0 0 #634121 , 127rem 0 0 #634121 , 134rem 0 0 #452d17 , 136rem 0 0 #634121 , 169rem 0 0 #634121 , 148rem 0 0 #634121 , 77rem 0 0 #452d17 , 78rem 0 0 #452d17 , 124rem 0 0 #452d17 , 63rem 0 0 #634121 , 82rem 0 0 #634121 , 236rem 0 0 #634121 , 57rem 0 0 #634121 , 3rem 0 0 #452d17 , 259rem 0 0 #452d17 , 11rem 0 0 #634121 , 108rem 0 0 #452d17 , 133rem 0 0 #452d17 , 163rem 0 0 #634121 , 61rem 0 0 #452d17 , 10rem 0 0 #634121 , 241rem 0 0 #634121 , 128rem 0 0 #634121 , 198rem 0 0 #634121 , 214rem 0 0 #634121 , 88rem 0 0 #634121 , 196rem 0 0 #634121 , 270rem 0 0 #634121 , 231rem 0 0 #634121 , 184rem 0 0 #634121 , 287rem 0 0 #452d17 , 118rem 0 0 #634121 , 98rem 0 0 #634121 , 149rem 0 0 #634121 , 169rem 0 0 #452d17 , 123rem 0 0 #452d17 , 95rem 0 0 #634121 , 64rem 0 0 #452d17 , 121rem 0 0 #452d17 , 21rem 0 0 #452d17 , 125rem 0 0 #452d17 , 58rem 0 0 #452d17 , 243rem 0 0 #452d17 , 38rem 0 0 #634121 , 187rem 0 0 #452d17 , 68rem 0 0 #634121 , 233rem 0 0 #634121 , 292rem 0 0 #634121 , 206rem 0 0 #452d17 , 243rem 0 0 #452d17 , 265rem 0 0 #634121 , 165rem 0 0 #452d17 , 243rem 0 0 #634121 , 184rem 0 0 #452d17 , 86rem 0 0 #634121 , 66rem 0 0 #634121 , 286rem 0 0 #634121 , 256rem 0 0 #634121 , 82rem 0 0 #452d17 , 263rem 0 0 #634121 , 24rem 0 0 #452d17 , 285rem 0 0 #634121 , 36rem 0 0 #634121 , 87rem 0 0 #634121 , 87rem 0 0 #452d17 , 164rem 0 0 #452d17 , 296rem 0 0 #634121 , 6rem 0 0 #452d17;
+}
+field l:nth-of-type(2) {
+  filter: brightness(0.95) drop-shadow(-1rem -0.5rem 0 rgba(22, 26, 0, 0.9));
+  transform: translate3d(-3rem, 2rem, 24rem) scaleX(1.1) scaleY(1.3);
+}
+field l:nth-of-type(3) {
+  filter: brightness(0.9) drop-shadow(2rem 1rem 0 rgba(22, 26, 0, 0.9));
+  transform: translate3d(-6rem, 5rem, 48rem) scaleX(1.2) scaleY(1.6);
+}
+field l:nth-of-type(3), field l:nth-of-type(3):before, field l:nth-of-type(3):after {
+  width: 0.2rem;
+}
+field l:nth-of-type(4) {
+  filter: brightness(0.85) drop-shadow(-2rem -0.5rem 0 rgba(22, 26, 0, 0.9));
+  transform: translate3d(-9rem, 8rem, 72rem) scaleX(1.3) scaleY(1.9);
+}
+field l:nth-of-type(4), field l:nth-of-type(4):before, field l:nth-of-type(4):after {
+  width: 0.15rem;
+}
+field l:nth-of-type(5) {
+  filter: brightness(0.8) drop-shadow(-4rem 0.2rem 0 rgba(22, 26, 0, 0.9));
+  transform: translate3d(-12rem, 10rem, 96rem) scaleX(1.4) scaleY(2.2);
+}
+field l:nth-of-type(5), field l:nth-of-type(5):before, field l:nth-of-type(5):after {
+  width: 0.1rem;
+}
+field l:nth-of-type(6) {
+  filter: brightness(0.75) drop-shadow(-8rem -0.2rem 0 #452d17);
+  transform: translate3d(-20rem, 13rem, 120rem) scaleX(1.5) scaleY(3);
+}
+field l:nth-of-type(6), field l:nth-of-type(6):before, field l:nth-of-type(6):after {
+  width: 0.1rem;
+}
+field l:nth-of-type(7) {
+  filter: brightness(0.7) drop-shadow(-1rem 1rem 0 #634121);
+  transform: translate3d(-10rem, 16rem, 144rem) scaleX(1.6) scaleY(4);
+}
+field l:nth-of-type(7), field l:nth-of-type(7):before, field l:nth-of-type(7):after {
+  width: 0.1rem;
+}
+field plain {
+  width: 100%;
+  height: 400rem;
+  background: repeating-linear-gradient(90deg, #ffd7b3, #ffd7b3 0.2rem, rgba(255, 255, 255, 0) 0.2rem, rgba(255, 255, 255, 0) 0.6rem);
+  transform: rotateX(85deg);
+  transform-origin: top;
+  opacity: 0.1;
+  -webkit-mask-image: linear-gradient(rgba(255, 255, 255, 0), #fff);
+}
+
+grass {
+  transform: translate3d(11rem, -8rem, 180rem) scaleX(0.78) rotateX(0deg);
+  width: 360rem;
+  height: 50rem;
+}
+
+g u:nth-of-type(1),
+g u:nth-of-type(3),
+g u:nth-of-type(4),
+g u:nth-of-type(5) {
+  transform: skewX(1deg);
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-name: wind2;
+  animation-iteration-count: infinite;
+  animation-delay: 1s;
+  will-change: transform;
+}
+g u:nth-of-type(3) {
+  animation-delay: 0.5s;
+  animation-duration: 9s;
+}
+g u:nth-of-type(4) {
+  animation-duration: 11s;
+  animation-timing-function: linear;
+}
+g u:nth-of-type(5) {
+  animation-duration: 9s;
+  animation-timing-function: linear;
+}
+
+g:nth-of-type(4) u:nth-of-type(2),
+g:nth-of-type(5) u:nth-of-type(2),
+g:nth-of-type(6) u:nth-of-type(2) {
+  animation-delay: 2s;
+  animation-direction: reverse;
+}
+g:nth-of-type(4) u:nth-of-type(3),
+g:nth-of-type(5) u:nth-of-type(3),
+g:nth-of-type(6) u:nth-of-type(3) {
+  animation-delay: 0.5s;
+  animation-duration: 10.5s;
+  animation-direction: reverse;
+}
+
+g {
+  transform: translate3d(95rem, 5rem, 8rem);
+  width: 100rem;
+  height: 20rem;
+}
+g u {
+  will-change: transform;
+  transform-origin: bottom;
+}
+g u:nth-of-type(1),
+g u:nth-of-type(2),
+g u:nth-of-type(3) {
+  height: 20rem;
+  color: #ffd7b3;
+  filter: drop-shadow(149rem 0 0 currentColor) drop-shadow(-46rem 0 0 currentColor);
+}
+g u:nth-of-type(1):before,
+g u:nth-of-type(2):before,
+g u:nth-of-type(3):before {
+  width: 0.3rem;
+  height: 0.2rem;
+  border-radius: 50%;
+  background: currentColor;
+  transform: translate3d(3.25rem, 0, 0) rotate(20deg);
+  box-shadow: -0.25rem 0.75rem 0 currentColor, -0.5rem 1.5rem 0 currentColor, 0.5rem 0.1rem 0 currentColor, 0.6rem 0.6rem 0 currentColor, 0.68rem 1rem 0 currentColor, 0.75rem 1.6rem 0 currentColor;
+}
+g u:nth-of-type(1):after,
+g u:nth-of-type(2):after,
+g u:nth-of-type(3):after {
+  width: 3rem;
+  height: 20rem;
+  border-left: 0.3rem solid currentColor;
+  border-radius: 50%;
+  transform: rotate(15deg);
+  opacity: 0.5;
+}
+g u:nth-of-type(2) {
+  color: #ab8877;
+  height: 25rem;
+}
+g u:nth-of-type(2):before {
+  transform: translate3d(-8.3rem, 1rem, 0) rotate(-35deg);
+}
+g u:nth-of-type(2):after {
+  width: 2rem;
+  height: 25rem;
+  border-right: 0.3rem solid currentColor;
+  border-left: none;
+  transform: translate3d(-7rem, 0, 0) rotate(-10deg);
+}
+g u:nth-of-type(3) {
+  color: #ffd7b3;
+  height: 30rem;
+}
+g u:nth-of-type(3):before {
+  transform: translate3d(9.75rem, -2rem, 0) rotate(40deg) scaleY(1.3);
+}
+g u:nth-of-type(3):after {
+  width: 3rem;
+  height: 30rem;
+  border-left: 0.3rem solid currentColor;
+  transform: translate3d(3rem, -2rem, 0) rotate(20deg);
+}
+g u:nth-of-type(4),
+g u:nth-of-type(5),
+g u:nth-of-type(6) {
+  height: 20rem;
+  color: #ab8877;
+  transform: skewX(-5deg);
+  filter: drop-shadow(88rem 0 0 currentColor) drop-shadow(-59rem 0 0 currentColor);
+}
+g u:nth-of-type(4):before,
+g u:nth-of-type(5):before,
+g u:nth-of-type(6):before {
+  width: 0.3rem;
+  height: 0.1rem;
+  border-radius: 0 50%;
+  background: currentColor;
+  transform: translate3d(-8rem, 2rem, 0) rotate(10deg);
+  box-shadow: -0.1rem 0.5rem 0 currentColor, -0.2rem 1rem 0 currentColor, -0.3rem 1.5rem 0 currentColor, -0.4rem 2rem 0 currentColor, -0.5rem 2.5rem 0 currentColor, 0.3rem 0 0 currentColor, 0.4rem 0.5rem 0 currentColor, 0.5rem 1rem 0 currentColor, 0.6rem 1.5rem 0 currentColor, 0.7rem 2rem 0 currentColor, 0.8rem 2.5rem 0 currentColor;
+}
+g u:nth-of-type(4):after,
+g u:nth-of-type(5):after,
+g u:nth-of-type(6):after {
+  width: 3rem;
+  height: 20rem;
+  border-left: 0.2rem solid currentColor;
+  border-radius: 50%;
+  transform: translate3d(-10rem, 2rem, 0) rotate(10deg);
+  opacity: 0.5;
+}
+g u:nth-of-type(5) {
+  color: #ab8877;
+}
+g u:nth-of-type(5):before {
+  transform: translate3d(-5.5rem, 5rem, 0) rotate(-10deg);
+}
+g u:nth-of-type(5):after {
+  transform: translate3d(-4rem, 5rem, 0) rotate(-10deg);
+}
+g u:nth-of-type(6) {
+  color: #ab8877;
+}
+g u:nth-of-type(6):before {
+  transform: translate3d(11.5rem, 5rem, 0) rotate(10deg);
+}
+g u:nth-of-type(6):after {
+  transform: translate3d(10rem, 5rem, 0) rotate(5deg);
+}
+
+g:nth-of-type(2) {
+  transform: translate3d(55rem, 10rem, 16rem);
+}
+
+g:nth-of-type(3),
+g:nth-of-type(4) {
+  transform: translate3d(133rem, 15rem, 24rem) scale(1.2);
+}
+g:nth-of-type(3) u:nth-of-type(1),
+g:nth-of-type(3) u:nth-of-type(2),
+g:nth-of-type(3) u:nth-of-type(3),
+g:nth-of-type(4) u:nth-of-type(1),
+g:nth-of-type(4) u:nth-of-type(2),
+g:nth-of-type(4) u:nth-of-type(3) {
+  color: #ab8877;
+  transform: skewX(-5deg);
+  filter: drop-shadow(84rem 0 0 currentColor) drop-shadow(-46rem 0 0 currentColor);
+  height: 25rem;
+}
+g:nth-of-type(3) u:nth-of-type(1):before,
+g:nth-of-type(3) u:nth-of-type(2):before,
+g:nth-of-type(3) u:nth-of-type(3):before,
+g:nth-of-type(4) u:nth-of-type(1):before,
+g:nth-of-type(4) u:nth-of-type(2):before,
+g:nth-of-type(4) u:nth-of-type(3):before {
+  width: 0.3rem;
+  height: 0.18rem;
+  transform: translate3d(3.5rem, 0, 0) rotate(20deg);
+  box-shadow: -0.25rem 0.5rem 0 currentColor, -0.5rem 0.9rem 0 currentColor, -0.5rem 1.4rem 0 currentColor, 0.5rem -0.1rem 0 currentColor, 0.6rem 0.6rem 0 currentColor, 0.75rem 1.1rem 0 currentColor, 0.75rem 1.8rem 0 currentColor;
+}
+g:nth-of-type(3) u:nth-of-type(1):after,
+g:nth-of-type(3) u:nth-of-type(2):after,
+g:nth-of-type(3) u:nth-of-type(3):after,
+g:nth-of-type(4) u:nth-of-type(1):after,
+g:nth-of-type(4) u:nth-of-type(2):after,
+g:nth-of-type(4) u:nth-of-type(3):after {
+  width: 5rem;
+  height: 25rem;
+  border-left: 0.25rem solid currentColor;
+  transform: rotate(10deg);
+}
+g:nth-of-type(3) u:nth-of-type(2),
+g:nth-of-type(4) u:nth-of-type(2) {
+  color: #ffd7b3;
+  height: 20rem;
+}
+g:nth-of-type(3) u:nth-of-type(2):before,
+g:nth-of-type(4) u:nth-of-type(2):before {
+  transform: translate3d(-11rem, 0rem, 0) rotate(-45deg);
+}
+g:nth-of-type(3) u:nth-of-type(2):after,
+g:nth-of-type(4) u:nth-of-type(2):after {
+  transform: translate3d(-10rem, 0rem, 0) rotate(-20deg);
+  width: 5rem;
+  height: 20rem;
+  border-right: 0.25rem solid currentColor;
+  border-left: none;
+}
+g:nth-of-type(3) u:nth-of-type(3),
+g:nth-of-type(4) u:nth-of-type(3) {
+  color: #ab8877;
+}
+g:nth-of-type(3) u:nth-of-type(3):before,
+g:nth-of-type(4) u:nth-of-type(3):before {
+  transform: translate3d(12.5rem, -1rem, 0) rotate(-50deg);
+}
+g:nth-of-type(3) u:nth-of-type(3):after,
+g:nth-of-type(4) u:nth-of-type(3):after {
+  width: 6rem;
+  border-left: 0.2rem solid currentColor;
+  transform: translate3d(13rem, -2rem, 0) rotate(-20deg);
+  border-right: 0.25rem solid currentColor;
+  border-left: none;
+}
+
+g:nth-of-type(4) {
+  transform: translate3d(105rem, 20rem, 32rem) scale(1.5);
+}
+
+g2 {
+  transform: translate3d(75rem, 4rem, 0rem);
+  width: 100rem;
+  height: 20rem;
+}
+g2 u {
+  transform: skewX(-1deg);
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-name: wind2;
+  animation-iteration-count: infinite;
+  height: 15rem;
+  will-change: tranfrom;
+  transform-origin: bottom;
+}
+g2 u:nth-of-type(1),
+g2 u:nth-of-type(2),
+g2 u:nth-of-type(3) {
+  color: #ab8877;
+  filter: drop-shadow(-50rem 0 0 currentColor) drop-shadow(70rem 0 0 currentColor);
+  filter: drop-shadow(-70rem 0 0 currentColor) drop-shadow(90rem 0 0 currentColor);
+}
+g2 u:nth-of-type(1):before,
+g2 u:nth-of-type(2):before,
+g2 u:nth-of-type(3):before {
+  width: 0.15rem;
+  height: 0.1rem;
+  border-radius: 0 50%;
+  background: currentColor;
+  transform: translate3d(2.5rem, 0, 0) rotate(17deg);
+  box-shadow: -0.2rem 0.5rem 0 currentColor, -0.4rem 1rem 0 currentColor, 0.4rem 0.1rem 0 currentColor, 0.5rem 0.6rem 0 currentColor, 0.6rem 1.2rem 0 currentColor;
+}
+g2 u:nth-of-type(1):after,
+g2 u:nth-of-type(2):after,
+g2 u:nth-of-type(3):after {
+  width: 3rem;
+  height: 15rem;
+  border-left: 0.3rem solid currentColor;
+  border-radius: 50%;
+  transform: rotate(15deg);
+  opacity: 0.3;
+}
+g2 u:nth-of-type(2):before {
+  transform: translate3d(-4.5rem, 2rem, 0) rotate(-27deg);
+}
+g2 u:nth-of-type(2):after {
+  width: 2rem;
+  height: 15rem;
+  border-right: 0.3rem solid currentColor;
+  border-left: none;
+  border-radius: 50%;
+  transform: translate3d(-4rem, 2rem, 0) rotate(-10deg);
+  opacity: 0.3;
+}
+g2 u:nth-of-type(3):before {
+  transform: translate3d(-1rem, 1rem, 0) rotate(17deg);
+  box-shadow: none;
+  width: 0.5rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+g2 u:nth-of-type(3):after {
+  width: 1rem;
+  height: 15rem;
+  border-left: 0.3rem solid currentColor;
+  border-radius: 50%;
+  transform: translate3d(-2rem, 2rem, 0) rotate(5deg);
+  opacity: 0.3;
+}
+g2 u:nth-of-type(4),
+g2 u:nth-of-type(5),
+g2 u:nth-of-type(6) {
+  color: #c9925e;
+  filter: drop-shadow(-58rem 0 0 currentColor) drop-shadow(34rem 0 0 currentColor);
+}
+g2 u:nth-of-type(4):before,
+g2 u:nth-of-type(5):before,
+g2 u:nth-of-type(6):before {
+  width: 0.15rem;
+  height: 0.1rem;
+  border-radius: 0 50%;
+  background: currentColor;
+  transform: translate3d(12rem, 0, 0) rotate(17deg);
+  box-shadow: -0.1rem 0.5rem 0 currentColor, -0.2rem 1rem 0 currentColor, -0.3rem 1.5rem 0 currentColor, 0.4rem 0.1rem 0 currentColor, 0.5rem 0.6rem 0 currentColor, 0.6rem 1.2rem 0 currentColor, 0.7rem 1.8rem 0 currentColor;
+}
+g2 u:nth-of-type(4):after,
+g2 u:nth-of-type(5):after,
+g2 u:nth-of-type(6):after {
+  width: 2rem;
+  height: 15rem;
+  border-left: 0.2rem solid currentColor;
+  border-radius: 50%;
+  transform: translate3d(10rem, 0, 0) rotate(15deg);
+  opacity: 0.3;
+}
+g2 u:nth-of-type(5):before {
+  width: 0.1rem;
+  height: 0.2rem;
+  border-radius: 50%;
+  background: currentColor;
+  transform: translate3d(7rem, -1rem, 0) rotate(-10deg) scaleY(1.5) scaleX(0.7);
+}
+g2 u:nth-of-type(5):after {
+  width: 1rem;
+  height: 18rem;
+  border-left: 0.2rem solid currentColor;
+  border-radius: 50%;
+  transform: translate3d(8rem, 0, 0) rotate(-5deg);
+  opacity: 0.3;
+}
+g2 u:nth-of-type(6):before {
+  width: 0.1rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: currentColor;
+  transform: translate3d(-9.25rem, 2.5rem, 0) rotate(-53deg) scaleY(1.3) scaleX(0.7);
+}
+g2 u:nth-of-type(6):after {
+  width: 3rem;
+  height: 13rem;
+  border-right: 0.3rem solid currentColor;
+  border-left: none;
+  border-radius: 50%;
+  transform: translate3d(-8rem, 3rem, 0) rotate(-15deg);
+  opacity: 0.3;
+}
+
+g2:nth-of-type(2) {
+  transform: translate3d(40rem, 5rem, -8rem) scaleX(-1);
+}
+
+g2:nth-of-type(3) {
+  transform: translate3d(92rem, 6rem, -16rem);
+}
+g2:nth-of-type(3) u {
+  filter: drop-shadow(-39rem 0 0 currentColor) drop-shadow(93rem 0 0 currentColor);
+}
+
+text {
+  font-size: clamp(1rem, 34vh, 16vw);
+  line-height: 1;
+  padding: 0.3em;
+  transform: translate3d(0, 0, 500rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  gap: 0.1em 0.4em;
+  height: 100%;
+  width: 100%;
+  letter-spacing: -0.04em;
+  z-index: 9999;
+  mix-blend-mode: color-dodge;
+}
+text q {
+  opacity: 0;
+  animation: letters 80s linear infinite;
+  position: relative;
+  display: inline-block;
+  transform-origin: top;
+  animation-delay: 10s;
+  background: -webkit-linear-gradient(#fff, #1f140a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke: 0.3rem #fff;
+}
+text q:nth-of-type(2) {
+  animation-delay: 12s;
+}
+text q:nth-of-type(3) {
+  animation-delay: 14s;
+}
+text q:nth-of-type(4) {
+  animation-delay: 15s;
+}
+text q:nth-of-type(5) {
+  animation-delay: 17s;
+}
+text q:nth-of-type(5) q:nth-of-type(1) {
+  animation-delay: 18s;
+}
+text q:nth-of-type(5) q:nth-of-type(2) {
+  animation-delay: 20s;
+}
+text q:nth-of-type(5) q:nth-of-type(3) {
+  animation-delay: 21s;
+}
+@keyframes letters {
+  10%, 30% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  32% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes bg {
+  10%, 40% {
+    background: rgba(83, 0, 102, 0.2);
+  }
+  50% {
+    background: rgba(83, 0, 102, 0);
+  }
+}
+
+@media (orientation: portrait) {
+  text {
+    font-size: clamp(1rem, 15vh, 23vw);
+    gap: 0.2em 0.4em;
+  }
+
+  body > div {
+    height: 80rem;
+  }
+}
+*,
+*:before,
+*:after {
+  will-change: transfrom;
+}
+
+x {
+  animation: shake 45s ease-in-out infinite;
+}
+
+@keyframes shake {
+  30% {
+    transform: translate3d(-3rem, 1rem, 0) rotateY(-1deg) rotate(0.3deg);
+  }
+  40% {
+    transform: translate3d(2rem, 0, 0) rotateX(4deg) rotate(-0.2deg);
+  }
+  70% {
+    transform: translate3d(-1rem, -1rem, 0) rotateY(0.5deg);
+  }
+}
+@keyframes tv {
+  100% {
+    background: linear-gradient(rgba(0, 5, 255, 0.3), rgba(175, 255, 0, 0.1), rgba(83, 0, 102, 0.2)), repeating-linear-gradient(-0.1deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 0.2rem, rgba(0, 0, 0, 0.01) 0.4rem, rgba(0, 0, 0, 0.01) 0.8rem);
+  }
+}
+#cover {
+  background: linear-gradient(rgba(0, 5, 255, 0.3), rgba(175, 255, 0, 0.1), rgba(83, 0, 102, 0.2)), repeating-linear-gradient(-1deg, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01) 0.4rem, rgba(255, 255, 255, 0) 0.4rem, rgba(255, 255, 255, 0) 0.8rem);
+  width: 100%;
+  height: 100%;
+  animation: tv 0.1s linear infinite;
+}
+
+@keyframes pan3 {
+  50% {
+    transform: translate3d(0, 0, -100rem);
+  }
+}
+div > #main {
+  animation: shake2 2s ease-in-out infinite;
+}
+
+@keyframes shake2 {
+  90% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-0.05rem, -0.03rem, 0);
+  }
+  75% {
+    transform: translate3d(0.05rem, 0.01rem, 0);
+  }
+}
+y {
+  animation: pan2 40s ease-in-out infinite;
+}
+
+@keyframes pan2 {
+  50% {
+    transform: rotateX(6deg);
+  }
+}
+@media (orientation: portrait) {
+  y {
+    animation: panmob 40s ease-in-out infinite;
+  }
+
+  @keyframes panmob {
+    20%, 80% {
+      transform: rotateX(8deg);
+    }
+    50% {
+      transform: rotateX(13deg);
+    }
+  }
+}
+z {
+  animation: pan3 45s 5s ease-in-out infinite;
+}
+
+@keyframes x {
+  50% {
+    transform: rotateX(-1deg);
+  }
+  80% {
+    transform: rotateX(2deg);
+  }
+}
+@keyframes wind {
+  10% {
+    transform: skewX(5deg);
+  }
+  50% {
+    transform: skewX(-5deg);
+  }
+  80% {
+    transform: skewX(5deg);
+  }
+}
+@keyframes wind2 {
+  10% {
+    transform: skewX(2deg);
+  }
+  50% {
+    transform: skewX(-2deg);
+  }
+  80% {
+    transform: skewX(2deg);
+  }
+}
+bugs u {
+  width: 1rem;
+  height: 0.25rem;
+  background: #1f140a;
+  transform: translate3d(107rem, 0, -16rem) scaleX(-1);
+  border-radius: 50%;
+  animation: bug1 30s 5s ease-in-out infinite;
+}
+bugs u:nth-of-type(2) {
+  animation: bug1 20s 10s ease-in-out infinite;
+  background: #796367;
+  transform: translate3d(200rem, 5rem, 100rem) scaleX(-1);
+}
+bugs u:nth-of-type(3) {
+  animation: bug2 40s 20s ease-in-out infinite;
+  background: #1f140a;
+  transform: translate3d(-50rem, -50rem, 1000rem);
+}
+
+@keyframes bug1 {
+  5% {
+    transform: translate3d(50rem, -50rem, 100rem);
+  }
+  10% {
+    transform: translate3d(-50rem, -200rem, 200rem);
+  }
+  70% {
+    transform: translate3d(500rem, -200rem, -100rem);
+  }
+  80% {
+    transform: translate3d(107rem, 0, -16rem);
+  }
+}
+@keyframes bug2 {
+  1% {
+    transform: translate3d(50rem, -40rem, 0);
+  }
+  2% {
+    transform: translate3d(100rem, -20rem, -50rem);
+  }
+  10% {
+    transform: translate3d(500rem, 0, -100rem);
+  }
+  20% {
+    transform: translate3d(-50rem, -50rem, 1000rem);
+  }
+}
+@media (orientation: landscape) {
+  #graphics .gfxdq {
+    display: none;
+  }
+
+  #okay:checked ~ div > #main > div > x > y > z > field > grass,
+#mobile:checked ~ div > #main > div > x > y > z > field > grass {
+    display: none;
+  }
+  #okay:checked ~ div > #cover,
+#mobile:checked ~ div > #cover {
+    background: linear-gradient(rgba(0, 5, 255, 0.3), rgba(175, 255, 0, 0.1), rgba(83, 0, 102, 0.2));
+    animation: none;
+  }
+
+  #okay:checked ~ div > #graphics > .gfxless,
+#good:checked ~ div > #graphics > .gfxmore {
+    display: none;
+  }
+
+  #mobile:checked ~ div > #graphics > .gfxmobile, #mobile:checked ~ div > #graphics > .gfxless {
+    display: none;
+  }
+  #mobile:checked ~ div > #main > div > x > y > z > field > plain {
+    display: none;
+  }
+  #mobile:checked ~ div > #graphics {
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 9.5em;
+    top: 1rem;
+    border-radius: 2rem;
+  }
+  #mobile:checked ~ sky2 u:nth-of-type(5):before, #mobile:checked ~ sky2:before, #mobile:checked ~ sky2:after {
+    display: none;
+  }
+  #mobile:checked ~ div:after {
+    display: none;
+  }
+  #mobile:checked ~ trees l:nth-of-type(1) u {
+    filter: none !important;
+  }
+  #mobile:checked ~ div > #main {
+    animation: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  plain,
+grass {
+    display: none;
+  }
+
+  #cover {
+    background: linear-gradient(rgba(0, 5, 255, 0.3), rgba(175, 255, 0, 0.1), rgba(83, 0, 102, 0.2));
+    animation: none;
+  }
+}
+@media (orientation: portrait) {
+  body {
+    /*----------------*/
+  }
+  body div > #graphics > .gfxless, body div > #graphics > .gfxmore {
+    display: none;
+  }
+  body > div > #main > div {
+    transform: translate3d(-15rem, -15rem, 0);
+  }
+  body div > #graphics {
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 8em;
+    top: 0.5rem;
+    border-radius: 1.5rem;
+  }
+  body sky2 u:nth-of-type(5):before, body sky2:before, body sky2:after {
+    display: none;
+  }
+  body div:after {
+    display: none;
+  }
+  body trees l:nth-of-type(1) u {
+    filter: none !important;
+  }
+  body div > #main {
+    animation: none;
+  }
+  body x {
+    animation: xmob 45s ease-in-out infinite;
+  }
+  @keyframes xmob {
+    50% {
+      transform: rotateY(8deg);
+    }
+    80% {
+      transform: rotateY(-10deg);
+    }
+  }
+  body #dq:checked ~ sky2 u:nth-of-type(5):before, body #dq:checked ~ sky2:before, body #dq:checked ~ sky2:after {
+    display: block;
+  }
+  body #dq:checked ~ div:after, body #dq:checked ~ div > #main > div > x > y > z > field > plain, body #dq:checked ~ div > #main > div > x > y > z > field > grass {
+    display: block;
+  }
+
+  #gfxmenu:checked ~ div > #graphics {
+    width: 20em;
+  }
+}

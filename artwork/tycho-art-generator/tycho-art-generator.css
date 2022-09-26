@@ -1,0 +1,79 @@
+body {
+  --accent: #157fd5;
+  --comp: #dbdac8;
+  --edge: #1e223b;
+  --canvas: #f2e6da;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-size: clamp(12px, 0.5rem + 5vw, 20px);
+  background-color: var(--comp);
+}
+
+.canvas {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: max(280px, calc(70vmin - 2*5em));
+  aspect-ratio: 3/4;
+  margin: 0 auto;
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background: var(--bg, white);
+  box-shadow: 0 1em 2em -0.25em rgba(0, 0, 0, 0.25);
+  outline: clamp(0.5rem, 1vmin, 1rem) solid var(--canvas);
+}
+
+html.hide-text .tycho-text {
+  display: none !important;
+}
+
+p {
+  margin: 2em;
+  text-align: center;
+  font-family: Helvetica, Roboto, system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: 200;
+  font-size: 1em;
+}
+
+label {
+  cursor: pointer;
+}
+
+[type=checkbox] {
+  width: 1em;
+  height: 1em;
+  accent-color: var(--accent);
+}
+
+button {
+  --btn-border: transparent;
+  --btn-bg: var(--edge);
+  --btn-fill: var(--comp);
+  padding: 0.5em 1em;
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  line-height: 1;
+  color: var(--btn-fill);
+  background: var(--btn-bg) linear-gradient(-45deg, var(--btn-bg) 49.9%, var(--accent) 50.1%) repeat-x 100% 50%/240% 100%;
+  border: 0;
+  border-radius: 0;
+  transition: background-position 300ms ease-in-out;
+  cursor: pointer;
+}
+button:hover {
+  background-position: 0% 50%;
+}
+button:focus {
+  outline: 2px dotted var(--btn-border);
+}
+button:focus:not(:focus-visible) {
+  outline: none;
+}

@@ -1,0 +1,1142 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #eff0f3;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+}
+
+:root {
+  --size: 75;
+  --unit: calc((var(--size) / 447) * 1vmin);
+}
+
+.mulan {
+  width: calc(var(--unit) * 301);
+  height: calc(var(--unit) * 447);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+.head {
+  width: 91%;
+  height: 49.5%;
+  top: 1.5%;
+  left: 7%;
+}
+
+.bun {
+  width: 27%;
+  height: 18%;
+  background-color: #2a2829;
+  border-radius: 50%;
+  left: 36%;
+}
+
+.bun::after {
+  content: "";
+  top: 23%;
+  left: 0;
+  width: 100%;
+  height: 60%;
+  border-radius: 50%;
+  background-color: #2b4239;
+  box-shadow: calc(var(--unit) * -5) calc(var(--unit) * 1) calc(var(--unit) * 1)
+    inset #3b5349;
+}
+
+.hair {
+  width: 92%;
+  height: 63%;
+  background-color: #292929;
+  background-image: radial-gradient(
+    circle at bottom,
+    rgba(255, 255, 255, 0.2) 42%,
+    rgba(255, 255, 255, 0) 55%
+  );
+  background-size: 200% 100%;
+  background-position: bottom center;
+  top: 6%;
+  left: 4%;
+  border-radius: 30% 30% 10% 10% / 60% 60% 10% 10%;
+  box-shadow: 0 calc(var(--unit) * 10) calc(var(--unit) * 15) rgba(0, 0, 0, 0.4)
+    inset;
+}
+
+.hair::before {
+  z-index: -2;
+  content: "";
+  width: 100%;
+  height: 84%;
+  top: 54%;
+  border-radius: 40%;
+  background-color: #292929;
+}
+
+.face {
+  width: 90%;
+  height: 82%;
+  top: 18%;
+  left: 5%;
+  border-radius: 0% 0% 20% 20% / 50% 50% 30% 30%;
+  overflow: hidden;
+}
+
+.face-left {
+  width: 55%;
+  height: 100%;
+  background-color: #f1c69a;
+  border-radius: 50% 40% 0% 20% / 50% 34% 0% 30%;
+  top: 2.5%;
+  box-shadow: calc(var(--unit) * 15) calc(var(--unit) * -20)
+      calc(var(--unit) * 15) rgba(132, 103, 76, 0.3) inset,
+    calc(var(--unit) * 25) calc(var(--unit) * -30) calc(var(--unit) * 15)
+      rgba(132, 103, 76, 0.2) inset;
+}
+
+.face-right {
+  width: 55%;
+  height: 100%;
+  background-color: #f1c69a;
+  border-radius: 55% 50% 20% 0% / 19% 50% 30% 0%;
+  right: 0;
+  top: 2%;
+  box-shadow: calc(var(--unit) * -15) calc(var(--unit) * -20)
+      calc(var(--unit) * 15) rgba(132, 103, 76, 0.3) inset,
+    calc(var(--unit) * -25) calc(var(--unit) * -30) calc(var(--unit) * 15)
+      rgba(132, 103, 76, 0.2) inset;
+}
+
+.eye {
+  width: calc(var(--unit) * 45);
+  height: calc(var(--unit) * 45);
+  background-color: #292929;
+  top: 40.5%;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: calc(var(--unit) * 1) 0 calc(var(--unit) * 5) #171815 inset;
+}
+
+.eye-left {
+  left: 11%;
+}
+
+.eye-right {
+  right: 11%;
+}
+
+.eye::after,
+.eye::before {
+  content: "";
+  width: 36%;
+  height: 35%;
+}
+
+.eye::after {
+  background-color: #1f1e1e;
+  bottom: 0;
+  right: 0%;
+  box-shadow: calc(var(--unit) * -5) calc(var(--unit) * -5)
+    calc(var(--unit) * 5) calc(var(--unit) * 3) #1f1e1e;
+  border-radius: 50% 5% 5% 5%;
+}
+
+.eye::before {
+  background-color: #504e4e;
+  top: -5%;
+  left: -5%;
+  box-shadow: calc(var(--unit) * 5) calc(var(--unit) * 5) calc(var(--unit) * 5)
+    calc(var(--unit) * 3) #504e4e;
+  border-radius: 5% 35% 5% 5%;
+}
+
+.nose {
+  width: 7.5%;
+  height: 15%;
+  background-color: #d5a77e6c;
+  top: 58%;
+  left: 46%;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%, 50% 0);
+  -webkit-clip-path: polygon(50% 0, 100% 100%, 0 100%, 50% 0);
+}
+
+.nose::before {
+  content: "";
+  width: 9%;
+  height: 100%;
+  background-color: #f8cea49d;
+  left: 45%;
+}
+
+.nose::after {
+  content: "";
+  width: 100%;
+  height: 21%;
+  background-color: #b28968a1;
+  top: 81%;
+  -webkit-clip-path: polygon(50% 0, 100% 100%, 0 100%, 50% 0);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%, 50% 0);
+}
+
+.ear {
+  z-index: -1;
+  width: 20%;
+  height: 23%;
+  background-color: #a68263;
+  top: 51%;
+}
+
+.ear-left {
+  left: 0%;
+  border-radius: 30% / 30% 0 0 50%;
+}
+
+.ear-right {
+  right: 0.5%;
+  border-radius: 30% / 0 30% 50% 0;
+}
+
+.eyebrow {
+  width: 19.5%;
+  height: 21%;
+  top: 25%;
+  background-image: radial-gradient(
+    circle at bottom var(--direction),
+    rgba(23, 22, 23, 0) 68%,
+    rgb(23, 22, 23, 0.9) 69.5%
+  );
+  background-size: 105% 146%;
+}
+
+.eyebrow-left {
+  --direction: right;
+  left: 9.5%;
+  transform: rotate(40deg);
+  border-radius: 50% 10% 10% 10%;
+}
+
+.eyebrow-right {
+  --direction: left;
+  right: 9.5%;
+  transform: rotate(-40deg);
+  border-radius: 10% 50% 10% 10%;
+}
+
+.body {
+  width: 63.5%;
+  height: 47.5%;
+  top: 51%;
+  left: 25%;
+  overflow: hidden;
+}
+
+.neck {
+  width: 18%;
+  height: 10%;
+  background-color: #634b37;
+  border-radius: 50%;
+  top: -8%;
+  left: 36%;
+}
+
+.chest {
+  width: 41%;
+  height: 42%;
+  top: -2%;
+  left: 22.8%;
+  border-radius: 50% / 15% 15% 4% 15%;
+  overflow: hidden;
+}
+
+.collar {
+  width: 100%;
+  height: 50%;
+  top: -32%;
+  background-color: #2b3327;
+  border-radius: 50%;
+  box-shadow: calc(var(--unit) * 0) calc(var(--unit) * -2) calc(var(--unit) * 1)
+      rgba(255, 255, 225, 0.25) inset,
+    calc(var(--unit) * 2) calc(var(--unit) * -5) calc(var(--unit) * 1) #2b3327
+      inset,
+    calc(var(--unit) * 2) calc(var(--unit) * -6) calc(var(--unit) * 1)
+      rgba(255, 255, 225, 0.15) inset;
+}
+
+.bow {
+  z-index: 5;
+  width: 52%;
+  height: 30%;
+  top: 8%;
+  left: 41%;
+  border-radius: 45%;
+  overflow: hidden;
+}
+
+.bow::after {
+  content: "";
+  width: 37%;
+  height: 55%;
+  border-radius: 50% / 50% 50% 30% 60%;
+  background-color: #30332f;
+  top: -3%;
+  left: 26%;
+}
+
+.bow::before {
+  content: "";
+  width: 102%;
+  height: 228%;
+  top: 2%;
+  right: 4%;
+  border-radius: 50% / 70% 50% 0% 0%;
+  box-shadow: calc(var(--unit) * 5) calc(var(--unit) * 11)
+      calc(var(--unit) * 0.1) #394b3a inset,
+    calc(var(--unit) * -5) calc(var(--unit) * 11) calc(var(--unit) * 0.1)
+      #394b3a inset;
+}
+
+.chest::before {
+  content: "";
+  width: 74%;
+  height: 100%;
+  background-color: #111;
+  top: 4%;
+  left: 22%;
+  border-radius: 30%;
+  border: calc(var(--unit) * 8.5) solid #383838;
+  border-right: 0;
+}
+
+.chest::after {
+  z-index: 3;
+  content: "";
+  width: 48%;
+  height: 80%;
+  background-image: linear-gradient(
+    to left,
+    transparent,
+    rgba(255, 255, 255, 0.15) 51.5% 52%,
+    transparent
+  );
+  top: 25%;
+  left: 12%;
+  border-radius: 61% / 100% 0 0 0;
+}
+
+.waist-cloth {
+  width: 101%;
+  height: 80%;
+  top: 24%;
+  left: 0%;
+}
+
+.waist-cloth::after {
+  content: "";
+  width: 80%;
+  height: 68%;
+  background-color: #39533e;
+  top: 0%;
+  left: 18%;
+  border-radius: 36% 50% 35% 80% / 56% 15% 87% 18%;
+}
+
+.waist-cloth::before {
+  content: "";
+  width: 98%;
+  height: 125%;
+  background-color: #39533e;
+  top: 32%;
+  left: 4%;
+  border-radius: 44% 25% 0% 0% / 55% 82% 0 0%;
+}
+
+.belt {
+  z-index: 2;
+  width: 106%;
+  height: 40%;
+  top: 41%;
+  left: 3%;
+  border-radius: 50%;
+  box-shadow: 0px calc(var(--unit) * -15) calc(var(--unit) * 0.1) #454545 inset;
+  clip-path: polygon(85% 0, 90% 100%, 3% 100%, 23% 0);
+  -webkit-clip-path: polygon(85% 0, 90% 100%, 3% 100%, 23% 0);
+  overflow: hidden;
+}
+
+.belt::after {
+  content: "";
+  width: 151%;
+  height: 100%;
+  top: -26%;
+  transform: rotate(-11deg);
+  border-radius: 50%;
+  box-shadow: 0px calc(var(--unit) * -1) calc(var(--unit) * 0.2) #3a3a3a inset;
+}
+
+.armoured-skirt {
+  width: 51%;
+  height: 22%;
+  background-color: #bfad9a;
+  top: 36%;
+  left: 17%;
+  border-radius: 0 0 10% 50% / 0 0 9% 21%;
+  -webkit-clip-path: polygon(16% 0, 90% 0, 100% 100%, 0 100%);
+  clip-path: polygon(16% 0, 90% 0, 100% 100%, 0 100%);
+  box-shadow: calc(var(--unit) * -11) calc(var(--unit) * -9)
+      calc(var(--unit) * 9) inset #9b8a76,
+    calc(var(--unit) * 11) 0 calc(var(--unit) * 9) inset #9b8a76;
+}
+
+.corset {
+  width: 54.5%;
+  height: 22%;
+  top: 36%;
+  left: 15.5%;
+}
+
+.corset-left {
+  width: 51%;
+  height: 82%;
+  background-color: #0e0d0d;
+  border-radius: 0 0 30% 50% / 0 0 53% 33%;
+  -webkit-clip-path: polygon(
+    30% 0,
+    100% 0,
+    100% 100%,
+    0 100%,
+    21% 37%,
+    19% 32%
+  );
+  clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%, 21% 37%, 19% 32%);
+  left: 2%;
+  box-shadow: calc(var(--unit) * -8) calc(var(--unit) * -9)
+    calc(var(--unit) * 1) #333333 inset;
+  overflow: hidden;
+}
+
+.corset-left::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    102deg,
+    rgba(255, 255, 255, 0) 25%,
+    rgba(255, 255, 255, 0.25) 65%
+  );
+}
+
+.corset-left::before {
+  content: "";
+  width: 81%;
+  height: 44%;
+  left: 0%;
+  border-radius: 61% / 0 0 0 72%;
+  border-bottom: calc(var(--unit) * 2) solid #000;
+}
+
+.corset-right {
+  width: 20%;
+  height: 85%;
+  background-color: #1c1c1a;
+  border-radius: 0 0 50% 70% / 0 0 10% 55%;
+  right: 1.5%;
+  -webkit-clip-path: polygon(0 0, 47% 0, 70% 46%, 64% 47%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 47% 0, 70% 46%, 64% 47%, 100% 100%, 0 100%);
+  box-shadow: calc(var(--unit) * 6) calc(var(--unit) * -9) calc(var(--unit) * 1)
+    inset #4e4f4e;
+}
+
+.corset-right::before {
+  content: "";
+  width: 68%;
+  height: 44%;
+  right: 0%;
+  border-radius: 61% / 0 0 0 50%;
+  border-bottom: calc(var(--unit) * 2) solid rgb(20, 20, 20);
+}
+
+.corset-middle {
+  width: 34%;
+  height: 52%;
+  background-color: #1f1f1f;
+  left: 49%;
+  border-radius: 50% 35% 35% 35% / 50% 50% 35% 35%;
+  border: calc(var(--unit) * 7) solid #585858;
+  border-top: 0;
+}
+
+.legs {
+  width: 80%;
+  height: 45%;
+  top: 55%;
+  left: 13%;
+}
+
+.leg-left {
+  width: 34%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.upper-leg-left {
+  width: 88%;
+  height: 40%;
+  background-color: #9f887b;
+  top: -14%;
+  left: 22.5%;
+  border-radius: 0 0 33% 53% / 0 0 100% 29%;
+  -webkit-clip-path: polygon(0 0, 106% 0, 70% 100%, 0 100%);
+  clip-path: polygon(0 0, 106% 0, 70% 100%, 0 100%);
+  box-shadow: calc(var(--unit) * -2) 0 calc(var(--unit) * 8) #493f36 inset,
+    calc(var(--unit) * 2) 0 calc(var(--unit) * 8) #493f36 inset,
+    0 calc(var(--unit) * 20) calc(var(--unit) * 8) #493f36 inset;
+}
+
+.bottom-leg-left {
+  width: 69%;
+  height: 57%;
+  background-color: #212121;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.35) 17%,
+      transparent 42%
+    ),
+    linear-gradient(
+      to right,
+      rgba(21, 21, 21, 0) 47%,
+      rgb(21, 21, 21) 50% 51%,
+      rgba(21, 21, 21, 0) 54%
+    );
+  top: 15%;
+  left: 13%;
+  transform: rotate(6deg);
+  border-radius: 30% 0 45% 30% / 33% 0 20% 20%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 83% 100%, 11% 100%, 7% 84%, 0% 55%);
+  clip-path: polygon(0 0, 100% 0, 83% 100%, 11% 100%, 7% 84%, 0% 55%);
+  border-bottom: calc(var(--unit) * 10) solid #565756;
+  overflow: hidden;
+}
+
+.bottom-leg-left::before {
+  content: "";
+  width: 43%;
+  height: 38%;
+  background-color: #565756;
+  top: 20%;
+  left: 30%;
+  border-radius: 50%;
+}
+
+.bottom-leg-left::after {
+  content: "";
+  width: 150%;
+  height: 38%;
+  background-color: #565756;
+  top: 1%;
+  left: -7%;
+  border-radius: 50%;
+}
+
+.shoe-left {
+  width: 74%;
+  height: 32%;
+  background-color: #ccc;
+  background-image: linear-gradient(
+    rgba(37, 37, 37, 0) 35%,
+    rgb(37, 37, 37) 36%
+  );
+  top: 68%;
+  left: 0%;
+  border-radius: 50% / 0 0 20% 20%;
+  -webkit-clip-path: polygon(26% 0, 84% 0, 86% 42%, 100% 100%, 0 100%, 20% 35%);
+  clip-path: polygon(26% 0, 84% 0, 86% 42%, 100% 100%, 0 100%, 20% 35%);
+  box-shadow: calc(var(--unit) * 10) calc(var(--unit) * 10)
+    calc(var(--unit) * 5) #898989 inset;
+  overflow: hidden;
+  border-bottom: calc(var(--unit) * 3) solid #3c3c3c;
+}
+
+.shoe-left::after {
+  content: "";
+  width: 100%;
+  height: 65%;
+  bottom: 0;
+  background: rgb(37, 37, 37)
+    radial-gradient(rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0) 80%)
+    calc(var(--unit) * 18) calc(var(--unit) * 12) / calc(var(--unit) * 4)
+    calc(var(--unit) * 4);
+  background-repeat: no-repeat;
+}
+
+.sock-left {
+  z-index: 5;
+  width: 46%;
+  height: 20%;
+  background-color: #ccc;
+  border-radius: 50%;
+  top: 70%;
+  left: 15%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 42%, 50% 65%, 0 42%);
+  clip-path: polygon(0 0, 100% 0, 100% 42%, 50% 65%, 0 42%);
+  box-shadow: 0 calc(var(--unit) * 2) calc(var(--unit) * 5) #898989 inset;
+}
+
+.leg-right {
+  width: 62%;
+  height: 96%;
+  top: 0%;
+  left: 39%;
+  overflow: hidden;
+}
+
+.upper-leg-right {
+  width: 42%;
+  height: 21%;
+  top: 0%;
+  left: 2%;
+  background-color: #9f887b;
+  transform: rotate(-14deg);
+  border-radius: 0 0 20% 20% / 0 0 45% 40%;
+  box-shadow: calc(var(--unit) * -2) 0 calc(var(--unit) * 12) #493f36 inset,
+    calc(var(--unit) * 2) 0 calc(var(--unit) * 8) #493f36 inset;
+}
+
+.bottom-leg-right {
+  z-index: 3;
+  width: 39.5%;
+  height: 56%;
+  top: 15.5%;
+  left: 11%;
+  background-color: #212121;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+  transform: rotate(-17deg);
+  border-radius: 10% 5% / 50%;
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    83% 79%,
+    84% 99%,
+    15% 99%,
+    14% 86%,
+    0% 39%
+  );
+  clip-path: polygon(0 0, 100% 0, 83% 79%, 84% 99%, 15% 99%, 14% 86%, 0% 39%);
+  border-bottom: calc(var(--unit) * 10) solid #565756;
+  overflow: hidden;
+}
+
+.bottom-leg-right::before {
+  content: "";
+  width: 43%;
+  height: 38%;
+  background-color: #565756;
+  top: 10%;
+  left: 84%;
+  border-radius: 50%;
+}
+
+.bottom-leg-right::after {
+  content: "";
+  width: 150%;
+  height: 38%;
+  background-color: #565756;
+  top: -7%;
+  left: -7%;
+  border-radius: 50%;
+}
+
+.shoe-right {
+  width: 79%;
+  height: 20%;
+  background-color: rgb(37, 37, 37);
+  background-image: radial-gradient(
+    circle at bottom,
+    rgba(255, 255, 255, 0.15) 1%,
+    rgba(255, 255, 255, 0) 62%
+  );
+  top: 80%;
+  left: 20%;
+  border-radius: 0 47% 20% 9% / 0 76% 13% 30%;
+  -webkit-clip-path: polygon(7% 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(7% 0, 100% 0, 100% 100%, 0 100%);
+  box-shadow: calc(var(--unit) * 15) 0 calc(var(--unit) * 7) rgba(0, 0, 0, 0.25)
+      inset,
+    calc(var(--unit) * -24) 0 calc(var(--unit) * 7) rgba(0, 0, 0, 0.25) inset;
+  border-bottom: calc(var(--unit) * 3) solid #3c3c3c;
+}
+
+.sock-right {
+  z-index: 2;
+  width: 60%;
+  height: 17%;
+  background-color: #ccc;
+  top: 66%;
+  left: 24%;
+  border-radius: 50% / 30%;
+  -webkit-clip-path: polygon(0% 0, 43% 0, 91% 102%, 100% 100%, 0 100%, 5% 64%);
+  clip-path: polygon(0% 0, 43% 0, 91% 102%, 100% 100%, 0 100%, 5% 64%);
+  box-shadow: calc(var(--unit) * 3) 0 calc(var(--unit) * 3) rgba(0, 0, 0, 0.3)
+      inset,
+    0 calc(var(--unit) * -3) calc(var(--unit) * 12) rgba(0, 0, 0, 0.5) inset;
+}
+
+.leg-right::after {
+  z-index: 5;
+  content: "";
+  height: 69%;
+  width: 9%;
+  top: 7%;
+  left: 54%;
+  transform: rotate(-15deg);
+  box-shadow: calc(var(--unit) * -23) 0 calc(var(--unit) * 7)
+    rgba(255, 255, 255, 0.15);
+  border-radius: 20%;
+}
+
+.arm-right {
+  width: 42%;
+  height: 37%;
+  left: 58%;
+}
+
+.spaulder-right {
+  width: 55%;
+  height: 17%;
+  background-color: #151515;
+  transform: rotate(49deg);
+  top: 15%;
+  left: -8%;
+  border-radius: 50% 50% 25% 25%;
+  -webkit-clip-path: polygon(
+    0 0,
+    30% 0%,
+    32% 16%,
+    54% 3%,
+    60% 20%,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+  clip-path: polygon(
+    0 0,
+    30% 0%,
+    32% 16%,
+    54% 3%,
+    60% 20%,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+  border-bottom: calc(var(--unit) * 7) solid #363636;
+  border-right: calc(var(--unit) * 7) solid #363636;
+}
+
+.sleeve-right {
+  width: 49%;
+  height: 39%;
+  background-color: #bfad9a;
+  transform: rotate(42deg);
+  top: 35%;
+  left: -8%;
+  border-radius: 0% 28% 9% 0 / 0 82% 20% 0;
+  box-shadow: 0 calc(var(--unit) * -6) calc(var(--unit) * 8) inset #9b8a76,
+    0 calc(var(--unit) * 9) calc(var(--unit) * 8) inset #9b8a76;
+  -webkit-clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 100%);
+}
+
+.wrist-right {
+  width: 41%;
+  height: 34%;
+  background-color: #1a1a1a;
+  border-radius: 50% / 25%;
+  transform: rotate(32deg);
+  top: 59%;
+  left: 18%;
+  -webkit-clip-path: polygon(
+    0 0,
+    54% 3%,
+    57% 7%,
+    100% 10%,
+    100% 93%,
+    56% 91%,
+    46% 100%,
+    0 100%
+  );
+  clip-path: polygon(
+    0 0,
+    54% 3%,
+    57% 7%,
+    100% 10%,
+    100% 93%,
+    56% 91%,
+    46% 100%,
+    0 100%
+  );
+  border-left: calc(var(--unit) * 18.5) solid #4a4a4a;
+  border-right: calc(var(--unit) * 6) solid #4a4a4a;
+}
+
+.hand-right {
+  width: 49%;
+  height: 32%;
+  top: 67%;
+  left: 51%;
+}
+
+.hand-right::after {
+  content: "";
+  width: 60%;
+  height: 29%;
+  top: 12%;
+  left: 4%;
+  background-color: #1a1a1a;
+  transform: rotate(-30deg);
+  border-radius: 50% / 50% 15% 50% 50%;
+  border-bottom: calc(var(--unit) * 5) solid #4a4a4a;
+  border-right: calc(var(--unit) * 5) solid #4a4a4a;
+}
+
+.hand-right::before {
+  content: "";
+  width: 34%;
+  height: 29%;
+  top: 43%;
+  left: 14%;
+  background-color: #d7ac87;
+}
+
+.thumb-right {
+  width: 76%;
+  height: 32%;
+  background-color: #dbb08a;
+  top: 67%;
+  left: 0%;
+  border-radius: 50% / 30% 40% 40% 30%;
+  box-shadow: calc(var(--unit) * -1) calc(var(--unit) * -1)
+    calc(var(--unit) * 3) #a57f62 inset;
+}
+
+.index-right {
+  width: 103%;
+  height: 35%;
+  background-color: #dbb08a;
+  top: 20%;
+  left: 0%;
+  border-radius: 50% / 30% 40% 40% 30%;
+  transform: rotate(-22deg);
+  box-shadow: calc(var(--unit) * -4) calc(var(--unit) * 3) calc(var(--unit) * 5)
+    #a57f62 inset;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 22% 100%, 0 62%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 22% 100%, 0 62%);
+}
+
+.middle-finger-right,
+.ring-finger-right,
+.pinky-right {
+  width: 20%;
+  height: 29%;
+  background-color: #9f7c5d;
+  border-radius: 50%;
+}
+
+.pinky-right {
+  left: 50.5%;
+  top: 27%;
+}
+
+.ring-finger-right {
+  left: 67%;
+  top: 18.25%;
+}
+.middle-finger-right {
+  left: 76%;
+  top: 9%;
+}
+
+.arm-left {
+  width: 34%;
+  height: 47%;
+}
+
+.spaulder-left {
+  width: 49%;
+  height: 41%;
+  background-color: #191919;
+  top: 2%;
+  left: 48%;
+  transform: rotate(36deg);
+  border-radius: 50% 0 83% 0/ 15% 0 30% 0%;
+  -webkit-clip-path: polygon(
+    3% 0%,
+    100% 0,
+    100% 100%,
+    -19% 134%,
+    5% 89%,
+    9% 70%,
+    5% 70%,
+    11% 44%,
+    6% 44%,
+    11% 22%,
+    18% 2%
+  );
+  clip-path: polygon(
+    3% 0%,
+    100% 0,
+    100% 100%,
+    -19% 134%,
+    5% 89%,
+    9% 70%,
+    5% 70%,
+    11% 44%,
+    6% 44%,
+    11% 22%,
+    18% 2%
+  );
+  border-right: calc(var(--unit) * 10) solid #565656;
+  border-bottom: calc(var(--unit) * 7) solid #565656;
+  box-shadow: calc(var(--unit) * 2) calc(var(--unit) * 6) calc(var(--unit) * 1)
+    rgba(0, 0, 0, 0.15);
+}
+
+.sleeve-left {
+  width: 50%;
+  height: 54%;
+  background-color: #bfad9a;
+  transform: rotate(31deg);
+  top: 8%;
+  left: 45%;
+  -webkit-clip-path: polygon(-3% 0, 115% 0, 87% 100%, 10% 100%);
+  clip-path: polygon(-3% 0, 115% 0, 87% 100%, 10% 100%);
+  box-shadow: 0 calc(var(--unit) * -6) calc(var(--unit) * 8) inset #9b8a76,
+    0 calc(var(--unit) * 9) calc(var(--unit) * 8) inset #9b8a76;
+}
+
+.arm-left::before {
+  content: "";
+  width: 32%;
+  height: 16%;
+  background-color: #393939;
+  top: 26%;
+  left: 31%;
+  border-radius: 80% 0 50% 50% / 40% 0 50% 60%;
+}
+
+.wrist-left {
+  width: 44%;
+  height: 30%;
+  background-color: #323231;
+  top: 49%;
+  left: 22%;
+  z-index: 5;
+  transform: rotate(23deg);
+  border-radius: 30% 70% 0 0 / 30% 42% 0 0;
+  box-shadow: 0 calc(var(--unit) * 8) calc(var(--unit) * 1) #323231 inset,
+    0 calc(var(--unit) * 16) calc(var(--unit) * 1) #202222 inset;
+  -webkit-clip-path: polygon(
+    0 0,
+    100% 0,
+    88% 64%,
+    81% 71%,
+    73% 100%,
+    4% 100%,
+    6% 40%,
+    5% 0%
+  );
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    88% 64%,
+    81% 71%,
+    73% 100%,
+    4% 100%,
+    6% 40%,
+    5% 0%
+  );
+}
+
+.hand-left {
+  z-index: 10;
+  width: 43%;
+  height: 34%;
+  top: 66%;
+  left: 5%;
+  border-radius: 20% 50% 25% 75%;
+  overflow: hidden;
+}
+
+.thumb-left {
+  width: 23%;
+  height: 53%;
+  background-color: #e2b48d;
+  border-radius: 40%;
+  top: -2%;
+  left: 53%;
+  transform: rotate(-34deg);
+  box-shadow: calc(var(--unit) * -2) 0 calc(var(--unit) * 3) rgba(0, 0, 0, 0.25)
+      inset,
+    calc(var(--unit) * 1) 0 calc(var(--unit) * 3) rgba(255, 255, 255, 0.25)
+      inset;
+}
+
+.index-left,
+.middle-finger-left,
+.pinky-left,
+.ring-finger-left {
+  width: 22%;
+  height: 71%;
+  background-color: #e2b48d;
+  transform: rotate(53deg);
+  border-radius: 45% 45% 40% 40%;
+  box-shadow: calc(var(--unit) * -2) 0 calc(var(--unit) * 3) rgba(0, 0, 0, 0.25)
+      inset,
+    calc(var(--unit) * 1) 0 calc(var(--unit) * 3) rgba(255, 255, 255, 0.25)
+      inset;
+}
+
+.index-left {
+  top: 7%;
+  left: 26%;
+}
+
+.middle-finger-left {
+  top: 23%;
+  left: 35%;
+}
+
+.ring-finger-left {
+  top: 40%;
+  left: 44%;
+  transform: rotate(45deg);
+}
+
+.pinky-left {
+  top: 58%;
+  left: 53%;
+  transform: rotate(39deg);
+}
+
+.hand-left::before {
+  content: "";
+  width: 87%;
+  height: 101%;
+  background-color: #d3a580;
+  left: 6%;
+  top: 0;
+  border-radius: 55% 45% 40% 40%;
+}
+
+.hand-left::after {
+  z-index: 50;
+  content: "";
+  width: 87%;
+  height: 101%;
+
+  left: 6%;
+  top: 0;
+  border-radius: 45% 45% 40% 40%;
+  box-shadow: calc(var(--unit) * 5) calc(var(--unit) * -5) calc(var(--unit) * 4)
+    rgba(0, 0, 0, 0.25) inset;
+}
+
+.sword {
+  z-index: 20;
+  width: 12%;
+  height: 38%;
+  top: 41.5%;
+  left: 14%;
+  transform: rotate(-37deg);
+}
+
+.guard {
+  width: 100%;
+  height: 11%;
+  background-color: #947346;
+  background-image: linear-gradient(
+    45deg,
+    rgb(218, 173, 113) 14%,
+    rgba(218, 173, 113, 0) 50%
+  );
+  top: 67%;
+  border-radius: 0% 50% 0 0 / 0 45% 0 0;
+  -webkit-clip-path: polygon(
+    30% -2%,
+    100% 11%,
+    100% 41%,
+    86% 56%,
+    64% 100%,
+    22% 92%,
+    19% 93%,
+    -10% 102%,
+    19% 34%
+  );
+  clip-path: polygon(
+    30% -2%,
+    100% 11%,
+    100% 41%,
+    86% 56%,
+    64% 100%,
+    22% 92%,
+    19% 93%,
+    -10% 102%,
+    19% 34%
+  );
+  box-shadow: calc(var(--unit) * -5) calc(var(--unit) * 1) calc(var(--unit) * 5)
+    #514222 inset;
+}
+
+.blade {
+  width: 47%;
+  height: 71%;
+  background-color: #b0aaa5;
+  background-image: linear-gradient(
+    rgba(141, 141, 141, 0) 35%,
+    rgb(141, 141, 141) 50%
+  );
+  left: 27%;
+  border-radius: 0 0 80% 20% / 5%;
+  -webkit-clip-path: polygon(0 14%, 34% 0, 68% 2%, 100% 10%, 100% 100%, 0 100%);
+  clip-path: polygon(0 14%, 34% 0, 68% 2%, 100% 10%, 100% 100%, 0 100%);
+  box-shadow: calc(var(--unit) * 4) 0 calc(var(--unit) * 0.5) #838383 inset,
+    calc(var(--unit) * 11) 0 calc(var(--unit) * 0.5) #8d8d8d inset,
+    calc(var(--unit) * 12) 0 calc(var(--unit) * 0.5) rgba(255, 255, 255, 0.2)
+      inset;
+}
+
+.blade::after {
+  content: "";
+  width: 100%;
+  height: 12%;
+  background-color: #a2a3a2;
+  -webkit-clip-path: polygon(0 0, 73% 0, 20% 100%, 0 100%);
+  clip-path: polygon(0 0, 73% 0, 20% 100%, 0 100%);
+}
+
+.pommel {
+  content: "";
+  width: 35%;
+  height: 7%;
+  top: 88%;
+  left: 37%;
+  border-radius: 50%;
+  background-image: radial-gradient(transparent 20%, #5d4b26 22%);
+  box-shadow: calc(var(--unit) * 2) calc(var(--unit) * -1) calc(var(--unit) * 2)
+    rgb(218, 173, 113) inset;
+  -webkit-clip-path: polygon(0 39%, 100% 1%, 100% 100%, 0 100%);
+  clip-path: polygon(0 39%, 100% 1%, 100% 100%, 0 100%);
+}

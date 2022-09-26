@@ -1,0 +1,171 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.back {
+  width: 100vw;
+  height: 100vh;
+  background: #E8E8E8;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  display: flex;
+  position: relative;
+}
+.base {
+  width: 60vmin;
+  height: 30vmin;
+  color: #A1A1A1;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#two {
+  width: 63vmin;
+  height: 27vmin;
+}
+#three {
+  background: #575757;
+  width: 59vmin;
+  height: 25vmin;
+}
+#four {
+  width: 61vmin;
+  height: 22vmin;
+  box-shadow: 0 -2vmin black;
+}
+#five {
+  background: #999999;
+  width: 55vmin;
+  height: 18vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  box-shadow: 
+    0 -2vmin #999999,
+    -2vmin 0 white,
+    2vmin 0 white,
+    -2vmin -4vmin white,
+    2vmin -4vmin white
+}
+#dialogue {
+  position: absolute;
+  background: white;
+  top: 70vmin;
+  height: 25vmin;
+  width: 90vmin;
+  color: black;
+  box-shadow:
+    -1.5vmin 1.5vmin, 1.5vmin -1.5vmin,
+    -2.5vmin 2.5vmin white, -2.5vmin -2.5vmin white,
+    -1.5vmin -1.5vmin, 1.5vmin 1.5vmin  
+}
+h1 {
+  font-family: VT323;
+  font-size: 12vmin;
+  text-align: left;
+}
+.fwd {
+  position: relative;
+  left: 35vmin;
+  top: 1vmin;
+  background: transparent;
+  height: 1vmin;
+  width: 1vmin;
+  color: black;
+  box-shadow:
+    1vmin 0, 2vmin 0, 3vmin 0, 4vmin 0, 5vmin 0, 6vmin 0,
+    2vmin 1vmin, 3vmin 1vmin, 4vmin 1vmin, 5vmin 1vmin,
+    3vmin 2vmin, 4vmin 2vmin;
+  animation: int 1s infinite;
+}
+.pokeball {
+  position: relative;
+  height: 1vmin;
+  width: 1vmin;
+  background: transparent;
+  color: white;
+  box-shadow:
+    5vmin 0 black, 6vmin 0 black, 7vmin 0 black, 8vmin 0 black,
+    3vmin 1vmin black, 4vmin 1vmin black, 5vmin 1vmin red, 6vmin 1vmin red, 7vmin 1vmin red, 8vmin 1vmin red, 9vmin 1vmin black, 10vmin 1vmin black,
+    2vmin 2vmin black, 3vmin 2vmin red, 4vmin 2vmin red, 5vmin 2vmin red, 6vmin 2vmin, 7vmin 2vmin, 8vmin 2vmin red, 9vmin 2vmin red, 10vmin 2vmin red, 11vmin 2vmin black,
+    2vmin 3vmin black, 3vmin 3vmin red, 4vmin 3vmin red, 5vmin 3vmin red, 6vmin 3vmin, 7vmin 3vmin, 8vmin 3vmin red, 9vmin 3vmin red, 10vmin 3vmin red, 11vmin 3vmin black,
+    1vmin 4vmin black, 2vmin 4vmin red, 3vmin 4vmin red, 4vmin 4vmin red, 5vmin 4vmin red, 6vmin 4vmin red, 7vmin 4vmin red, 8vmin 4vmin red, 9vmin 4vmin red, 10vmin 4vmin red, 11vmin 4vmin red, 12vmin 4vmin black,
+    1vmin 5vmin black, 2vmin 5vmin red, 3vmin 5vmin red, 4vmin 5vmin red, 5vmin 5vmin red, 6vmin 5vmin red, 7vmin 5vmin red, 8vmin 5vmin red, 9vmin 5vmin red, 10vmin 5vmin red, 11vmin 5vmin red, 12vmin 5vmin black,
+    1vmin 6vmin black, 2vmin 6vmin, 3vmin 6vmin, 4vmin 6vmin red, 5vmin 6vmin red, 6vmin 6vmin red, 7vmin 6vmin red, 8vmin 6vmin red, 9vmin 6vmin red, 10vmin 6vmin, 11vmin 6vmin, 12vmin 6vmin black,
+    1vmin 7vmin black, 2vmin 7vmin, 3vmin 7vmin, 4vmin 7vmin, 5vmin 7vmin, 6vmin 7vmin, 7vmin 7vmin, 8vmin 7vmin, 9vmin 7vmin, 10vmin 7vmin, 11vmin 7vmin, 12vmin 7vmin black,
+    2vmin 8vmin black, 3vmin 8vmin, 4vmin 8vmin, 5vmin 8vmin, 6vmin 8vmin, 7vmin 8vmin, 8vmin 8vmin, 9vmin 8vmin, 10vmin 8vmin, 11vmin 8vmin black,
+    2vmin 9vmin black, 3vmin 9vmin, 4vmin 9vmin, 5vmin 9vmin, 6vmin 9vmin, 7vmin 9vmin, 8vmin 9vmin, 9vmin 9vmin, 10vmin 9vmin, 11vmin 9vmin black,
+    3vmin 10vmin black, 4vmin 10vmin black, 5vmin 10vmin, 6vmin 10vmin, 7vmin 10vmin, 8vmin 10vmin, 9vmin 10vmin black, 10vmin 10vmin black,
+    5vmin 11vmin black, 6vmin 11vmin black, 7vmin 11vmin black, 8vmin 11vmin black;
+}
+.pokeball::after {
+  content: '';
+  position: absolute;
+  width: 1250%;
+  height: 1250%;
+}
+.pokeball:hover {
+  animation-name: shake;
+  animation-duration: 2s;
+}
+#first {
+  top: -18vmin;
+  left: -28vmin;
+  transform: scale(1.3, 1.3);
+}
+#second {
+  top: -19vmin;
+  left: -9vmin;
+  transform: scale(1.3, 1.3);
+}
+#third {
+  top: -20vmin;
+  left: 11vmin;
+  transform: scale(1.3, 1.3);
+}
+.ash {
+  position: relative;
+  height: 1vmin;
+  width: 1vmin;
+  background: transparent;
+  color: black;
+  top: -56vmin;
+  left: -10vmin;
+  transform: scale(1.3, 1.3);
+  box-shadow:
+    5vmin 0, 6vmin 0, 7vmin 0, 8vmin 0, 9vmin 0, 10vmin 0,
+    3vmin 1vmin, 4vmin 1vmin, 5vmin 1vmin #999999, 6vmin 1vmin #999999, 7vmin 1vmin #999999, 8vmin 1vmin #999999, 9vmin 1vmin #999999, 10vmin 1vmin #999999, 11vmin 1vmin, 12vmin 1vmin,
+    3vmin 2vmin, 4vmin 2vmin #999999, 5vmin 2vmin #999999, 6vmin 2vmin #999999, 7vmin 2vmin #999999, 8vmin 2vmin #999999, 9vmin 2vmin #999999, 10vmin 2vmin #999999, 11vmin 2vmin #999999, 12vmin 2vmin,
+    3vmin 3vmin, 4vmin 3vmin #999999, 5vmin 3vmin #999999, 6vmin 3vmin #999999, 7vmin 3vmin #999999, 8vmin 3vmin #999999, 9vmin 3vmin #999999, 10vmin 3vmin #999999, 11vmin 3vmin #999999, 12vmin 3vmin,
+    2vmin 4vmin, 3vmin 4vmin, 4vmin 4vmin, 5vmin 4vmin #999999, 6vmin 4vmin white, 7vmin 4vmin white, 8vmin 4vmin white, 9vmin 4vmin white, 10vmin 4vmin #999999, 11vmin 4vmin, 12vmin 4vmin, 13vmin 4vmin,
+    2vmin 5vmin, 3vmin 5vmin, 4vmin 5vmin white, 5vmin 5vmin, 6vmin 5vmin, 7vmin 5vmin, 8vmin 5vmin, 9vmin 5vmin, 10vmin 5vmin, 11vmin 5vmin white, 12vmin 5vmin, 13vmin 5vmin,
+    1vmin 6vmin, 2vmin 6vmin white, 3vmin 6vmin, 4vmin 6vmin white, 5vmin 6vmin white, 6vmin 6vmin white, 7vmin 6vmin white, 8vmin 6vmin white, 9vmin 6vmin white, 10vmin 6vmin white, 11vmin 6vmin white, 12vmin 6vmin, 13vmin 6vmin white, 14vmin 6vmin,
+    1vmin 7vmin, 2vmin 7vmin white, 3vmin 7vmin white, 4vmin 7vmin white, 5vmin 7vmin white, 6vmin 7vmin, 7vmin 7vmin white, 8vmin 7vmin white, 9vmin 7vmin, 10vmin 7vmin white, 11vmin 7vmin white, 12vmin 7vmin white, 13vmin 7vmin white, 14vmin 7vmin,
+    2vmin 8vmin, 3vmin 8vmin, 4vmin 8vmin white, 5vmin 8vmin white, 6vmin 8vmin, 7vmin 8vmin white, 8vmin 8vmin white, 9vmin 8vmin, 10vmin 8vmin white, 11vmin 8vmin white, 12vmin 8vmin, 13vmin 8vmin,
+    2vmin 9vmin, 3vmin 9vmin, 4vmin 9vmin, 5vmin 9vmin white, 6vmin 9vmin white, 7vmin 9vmin #999999, 8vmin 9vmin #999999, 9vmin 9vmin white, 10vmin 9vmin white, 11vmin 9vmin, 12vmin 9vmin, 13vmin 9vmin,
+    1vmin 10vmin, 2vmin 10vmin white, 3vmin 10vmin white, 4vmin 10vmin, 5vmin 10vmin, 6vmin 10vmin, 7vmin 10vmin, 8vmin 10vmin, 9vmin 10vmin, 10vmin 10vmin, 11vmin 10vmin, 12vmin 10vmin white, 13vmin 10vmin white, 14vmin 10vmin,
+    1vmin 11vmin, 2vmin 11vmin white, 3vmin 11vmin white, 4vmin 11vmin, 5vmin 11vmin, 6vmin 11vmin, 7vmin 11vmin, 8vmin 11vmin, 9vmin 11vmin, 10vmin 11vmin, 11vmin 11vmin, 12vmin 11vmin white, 13vmin 11vmin white, 14vmin 11vmin,
+    2vmin 12vmin, 3vmin 12vmin, 4vmin 12vmin, 5vmin 12vmin #999999, 6vmin 12vmin #999999, 7vmin 12vmin, 8vmin 12vmin, 9vmin 12vmin #999999, 10vmin 12vmin #999999, 11vmin 12vmin, 12vmin 12vmin, 13vmin 12vmin,
+    3vmin 13vmin, 4vmin 13vmin #999999, 5vmin 13vmin, 6vmin 13vmin, 7vmin 13vmin #999999, 8vmin 13vmin #999999, 9vmin 13vmin, 10vmin 13vmin, 11vmin 13vmin #999999, 12vmin 13vmin,
+    3vmin 14vmin, 4vmin 14vmin #999999, 5vmin 14vmin #999999, 6vmin 14vmin #999999, 7vmin 14vmin, 8vmin 14vmin, 9vmin 14vmin #999999, 10vmin 14vmin #999999, 11vmin 14vmin #999999, 12vmin 14vmin,
+    4vmin 15vmin, 5vmin 15vmin, 6vmin 15vmin, 7vmin 15vmin #6E6E6E, 8vmin 15vmin #6E6E6E, 9vmin 15vmin, 10vmin 15vmin, 11vmin 15vmin
+}
+@keyframes shake {
+  25% {
+    transform: rotate(-90deg);
+    transform: scale(1.3, 1.3);
+    transform-origin: 6vmin 6vmin;
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+}
+@keyframes int {
+  25% {
+    top: 2vmin;
+  }
+}

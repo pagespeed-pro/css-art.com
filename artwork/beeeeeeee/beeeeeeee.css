@@ -1,0 +1,158 @@
+body {
+  background-color: #5cc5f3;
+}
+
+.bee {
+  position: relative;
+  top: 200px;
+  width: 100px;
+  height: 80px;
+  margin: auto;
+  box-shadow: 20px 100px 30px -10px whitesmoke;
+}
+.bee .body {
+  top: 35px;
+  left: 15px;
+  position: relative;
+  background-color: #ffcf40;
+  width: 100px;
+  height: 70px;
+  border-radius: 50%;
+  border: 3px solid black;
+  animation: body 0.5s linear infinite alternate;
+}
+.bee .line {
+  position: absolute;
+  top: 1px;
+  right: 20px;
+  background-color: transparent;
+  width: 33px;
+  height: 70px;
+  border-radius: 50%;
+  box-shadow: inset 4px 0px 0px 2px black;
+  transform: rotate(17deg);
+}
+.bee .line--2 {
+  right: inherit;
+  top: -3px;
+  left: 12px;
+  width: 45px;
+  height: 70px;
+  transform: rotate(19deg);
+  box-shadow: inset 5px 1px 0px 0px black;
+}
+
+.eye {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 20%;
+  left: 130%;
+}
+
+.left {
+  left: 70%;
+}
+
+.eye:after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 55%;
+  height: 4px;
+  width: 4px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.mouth {
+  width: 15px;
+  height: 8px;
+  background-color: #f06292;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: absolute;
+  top: 100%;
+  left: 100%;
+}
+
+.wings {
+  position: relative;
+  width: 60px;
+  height: 50px;
+  top: -75px;
+  left: 25px;
+}
+.wings .wing {
+  position: absolute;
+  width: 32px;
+  height: 50px;
+  top: 20px;
+  left: 7px;
+  border-radius: 50%;
+  box-shadow: 0px -10px 0px 0 pink;
+  animation: wing-1 1s infinite alternate ease-in-out;
+}
+.wings .wing-2 {
+  position: absolute;
+  width: 32px;
+  height: 60px;
+  top: -10px;
+  left: 25px;
+  border-radius: 50%;
+  box-shadow: 0px -10px 0 0 pink;
+  animation: wing-2 1s infinite alternate ease-in-out;
+}
+
+.face {
+  position: absolute;
+  top: 3rem;
+  right: 0.7rem;
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
+@keyframes wing-1 {
+  0% {
+    transform: rotate(-24deg) scale(1.1, 1.2);
+    top: 2px;
+  }
+  100% {
+    background-color: red;
+    transform: rotate(-63deg);
+    top: 4px;
+  }
+}
+@keyframes wing-2 {
+  0% {
+    transform: rotate(24deg);
+    top: -5px;
+  }
+  100% {
+    background-color: red;
+    transform: rotate(63deg) scale(0.8, 0.8);
+    top: 2px;
+  }
+}
+@keyframes body {
+  0% {
+    top: 32px;
+  }
+  100% {
+    top: 37px;
+  }
+}
+.wave {
+  animation-name: wave-hand;
+  animation-duration: 3s;
+  animation-iteration-count: infinite linear;
+  transform-origin: 50% 50%;
+}
+
+@keyframes wave-hand {
+  50% {
+    transform: translate(-5px);
+  }
+}

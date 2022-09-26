@@ -1,0 +1,75 @@
+body {
+  background: #b793e6;
+}
+
+.center {
+  position:absolute;
+  top:50%;
+  left:40%;
+  transform: translate(-50%,-50%);
+}
+
+.petal {
+  position: absolute;
+  width: 140px;
+  height: 70px;
+  background: radial-gradient(ellipse at right, grey, white 50%);
+  border-radius: 50%;
+  border: 1px solid grey;
+}
+
+.petal.one {
+  transform: rotate(30deg);
+  transform-origin: center right;
+}
+
+.petal.two {
+  transform: rotate(60deg);
+  transform-origin: center right;
+}
+
+.petal.three {
+  transform: rotate(90deg);
+  transform-origin: center right;
+}
+
+.petal.four {
+  transform: rotate(120deg);
+  transform-origin: center right;
+}
+
+.petal.five {
+  transform: rotate(150deg);
+  transform-origin: center right;
+}
+
+.petal.six {
+  transform: rotate(180deg);
+  transform-origin: center right;
+}
+
+.petal.seven {
+  transform: rotate(210deg);
+  transform-origin: center right;
+}
+
+.petal.eight {
+  transform: rotate(250deg);
+  transform-origin: center right;
+}
+
+.petal.nine {
+  transform: rotate(280deg);
+  transform-origin: center right;
+}
+
+.petal.ten {
+  transform: rotate(310deg);
+  transform-origin: center right;
+}
+
+.petal.eleven {
+  z-index:-1;
+  transform: rotate(330deg);
+  transform-origin: center right;
+}

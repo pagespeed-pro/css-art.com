@@ -1,0 +1,120 @@
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.box {
+  position: relative;
+}
+.box .vent {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: gray;
+  border: 10px solid black;
+  border-radius: 5px;
+  transform-origin: bottom;
+  transform: skewX(50deg) scaleY(0.4);
+}
+.box .vent .holes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 80%;
+  height: 70%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.box .vent .holes .hole {
+  width: 100%;
+  height: 10px;
+  background: #a70f0e;
+}
+.box .vent-btm {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: black;
+  border: 10px solid black;
+  border-radius: 5px;
+  transform-origin: top;
+  transform: skewX(-50deg) scaleY(0.4);
+}
+.box .imposter-container {
+  clip-path: polygon(3.34% -145%, 90.83% 10%, 50% 107.5%, -35.83% 107.5%);
+}
+.box .imposter-container .imposter-body {
+  position: absolute;
+  left: -10px;
+  top: 100px;
+  border: 5px solid black;
+  width: 80px;
+  height: 100px;
+  border-radius: 50% 40% 0 0;
+  background: #6a0625;
+  overflow: hidden;
+}
+.box .imposter-container .imposter-body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #a70f0e;
+  border-radius: 0% 0% 30% 30%/0% 0% 50% 50%;
+}
+.box .imposter-container .glass {
+  width: 60px;
+  height: 30px;
+  border-radius: 50% 40% 40% 40%;
+  border: 5px solid black;
+  background: #49626c;
+  position: relative;
+  top: 0px;
+  left: -20px;
+  overflow: hidden;
+}
+.box .imposter-container .glass .glass_ref {
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  background: #93c7d7;
+}
+.box .imposter-container .glass .glass_ref::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  width: 60%;
+  height: 60%;
+  border-radius: inherit;
+  background: #eff6f7;
+}
+.box .imposter-container .bag {
+  position: absolute;
+  left: 60px;
+  top: 130px;
+  width: 30px;
+  height: 70px;
+  background: #6a0625;
+  border: 5px solid black;
+  border-radius: 25% 36% 48% 100%/0% 30% 46% 0%;
+  overflow: hidden;
+}
+.box .imposter-container .bag::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 20%;
+  background: #a70f0e;
+}

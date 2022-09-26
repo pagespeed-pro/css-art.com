@@ -1,0 +1,33 @@
+{
+    "name": "-codepenchallenge-spooky-avatar-dropdown",
+    "version": "1.0.0",
+    "title": "#CodepenChallenge: Spooky Avatar Dropdown",
+    "description": "",
+    "author": {
+        "name": "Inès",
+        "avatar": "https://assets.codepen.io/4763128/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1602236121&width=512",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/inescodes/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/inescodes"
+            }
+        ]
+    },
+    "html": "-codepenchallenge-spooky-avatar-dropdown.html",
+    "css": [
+        "-codepenchallenge-spooky-avatar-dropdown.css"
+    ],
+    "js": "const dropdown = document.querySelector(\"select\");\nconst avatar = document.querySelector(\".avatar-container\");\n\ndropdown.addEventListener(\"change\", () => {\n\tlet currentIndex = getComputedStyle(avatar).getPropertyValue(\"--Y\").trim();\n\tlet selectedIndex = dropdown.selectedIndex;\n\tlet indexDiff = Math.abs(selectedIndex - currentIndex);\n\tavatar.style.setProperty(\"--Y\", selectedIndex);\n\tavatar.style.setProperty(\"--index-diff\", indexDiff);\n});\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "codepenchallenge",
+        "cpc-dreadful-dropdowns"
+    ],
+    "original": "https://codepen.io/inescodes/pen/LYLwBBx",
+    "codepen": "https://codepen.io/inescodes/pen/LYLwBBx"
+}

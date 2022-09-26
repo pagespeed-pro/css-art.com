@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #BFFBFF;
+  height: 100vh;
+  width: 100wh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvas {
+  background: transparent;
+  height: 50vmin;
+  width: 50vmin;
+  border-radius: 50%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.psyduck {
+  position: relative;
+  background: #FAF16E;
+  height: 15vmin;
+  width: 20vmin;
+  border-radius: 50%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.psyduck::before {
+  content: '';
+  position: absolute;
+  background: #FAF16E;
+  height: 20vmin;
+  width: 22vmin;
+  border-radius: 50% 50% 50% 50% / 70% 70% 40% 40%;
+  top: 7vmin;
+  left: -1vmin;
+  border-bottom: 1vmin solid #ded995;
+}
+
+.beak {
+  position: relative;
+  background: #F8F2CB;
+  height: 12vmin;
+  width: 13vmin;
+  border-radius: 50%;
+  top: 8vmin;
+  border-bottom: 0.7vmin solid #e0dcc1;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.beak::before {
+  content: '';
+  position: absolute;
+  background: #F8F2CB;
+  width: 16vmin;
+  height: 6vmin;
+  border-radius: 50%;
+  top: 0.5vmin;
+  left: -1.5vmin;
+}
+
+.beak::after {
+  content: '';
+  position: absolute;
+  background: #F8F2CB;
+  height: 8vmin;
+  width: 8vmin;
+  border-radius: 50%;
+  top: -1vmin;
+  left: 2.3vmin;
+}
+
+.nostrils {
+  position: relative;
+  background: #615F4E;
+  height: 0.8vmin;
+  width: 0.8vmin;
+  border-radius: 0.8vmin 0;
+  top: -3vmin;
+  left: 1vmin;
+  z-index: 1;
+}
+
+.nostrils::after {
+  content: '';
+  position: absolute;
+  background: #615F4E;
+  height: 0.8vmin;
+  width: 0.8vmin;
+  border-radius: 0.8vmin 0;
+  left: -2.5vmin;
+  transform: scaleX(-1);
+}
+
+.blush {
+  position: relative;
+  background: #FFC5A5;
+  height: 3vmin;
+  width: 3vmin;
+  border-radius: 50%;
+  top: -2.5vmin;
+  left: -8vmin;
+  box-shadow: 16vmin 0 #FFC5A5;
+}
+
+.eyes {
+  position: relative;
+  background: white;
+  height: 5vmin;
+  width: 4.5vmin;
+  border-radius: 49% 51% 51% 49% / 58% 60% 40% 42%; 
+  top: -6.5vmin;
+  left: -6vmin;
+  box-shadow: 12vmin 0 white;
+  
+  animation: blink 6s infinite;
+}
+
+.eyes::after {
+  content: '';
+  position: absolute;
+  background: #615F4E;
+  height: 0.8vmin;
+  width: 0.8vmin;
+  border-radius: 50%;
+  top: 1.5vmin;
+  left: 2vmin;
+  box-shadow: 11.5vmin 0 #615F4E;
+  
+  animation: lookup 3s infinite;
+}
+
+.arm {
+  position: relative;
+  background: #FAF16E;
+  height: 10vmin;
+  width: 5vmin;
+  border-radius: 50% 50% 20% 20%;
+  border-right: 0.5vmin solid #FAF16E;
+  border-bottom: 0.3vmin solid #ebe26a;
+  left: -8.5vmin;
+  top: -2vmin;
+  
+  animation: raise 3s infinite;
+}
+
+.arm::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 1vmin solid transparent;
+  border-right: 2vmin solid transparent;
+  border-top: 1vmin solid #ebe26a;
+  top: 10.1vmin;
+  left: 0.5vmin;
+}
+
+.arm::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 2vmin solid transparent;
+  border-right: 1vmin solid transparent;
+  border-top: 1vmin solid #ebe26a;
+  top: 10.1vmin;
+  left: 1.5vmin;
+}
+
+.right {
+  position: relative;
+  left: 8.5vmin;
+  top: -12.5vmin;
+  border-left: 0.5vmin solid #FAF16E;
+  border-right: 0vmin;
+  
+  animation: raise-inv 3s infinite;
+}
+
+.foot {
+  position: relative;
+  background: #F8F2CB;
+  height: 5vmin;
+  width: 5vmin;
+  border-radius: 50%;
+  top: 36.5vmin;
+  left: -6vmin;
+  
+  animation: footsie 0.5s infinite;
+}
+
+.foot::before {
+  content: '';
+  position: absolute;
+  background: #F8F2CB;
+  height: 3vmin;
+  width: 8vmin;
+  border-radius: 50%;
+  top: 2vmin;
+  left: -1.4vmin;
+  border-bottom: 0.5vmin solid #e0dbb6;
+  
+  box-shadow: 0 0.5vmin 0.5vmin #7cbfc4;
+}
+
+.foot::after {
+  content: '';
+  position: absolute;
+  background: #F8F2CB;
+  height: 3vmin;
+  width: 4vmin;
+  border-radius: 50%;
+  top: 3vmin;
+  left: 0.5vmin;
+  border-bottom: 0.5vmin solid #e0dbb6;
+  
+  box-shadow: 0 0.5vmin 0.5vmin #7cbfc4;
+}
+
+.hair {
+  position: relative;
+  background: #615F4E;
+  height: 4vmin;
+  width: 1.5vmin;
+  border-radius: 10%;
+  top: 0.5vmin;
+}
+
+.hair::after {
+  content: '';
+  position: absolute;
+  background: #615F4E;
+  height: 4vmin;
+  width: 1.5vmin;
+  border-radius: 10%;
+  top: 1.3vmin;
+  left: -1.3vmin;
+  transform: rotate(-20deg);
+}
+
+.hair::before {
+  content: '';
+  position: absolute;
+  background: #615F4E;
+  height: 4vmin;
+  width: 1.5vmin;
+  border-radius: 10%;
+  top: 0.7vmin;
+  left: 1.3vmin;
+  transform: rotate(20deg);
+}
+
+#right {
+  transform: translatey(-5.5vmin);
+  left: 6vmin;
+  
+  animation: right-footsie 0.5s infinite;
+  animation-delay: 0.25s;
+}
+
+.shadow {
+  position: relative;
+  background: #8ecfd4;
+  height: 8vmin;
+  width: 26vmin;
+  border-radius: 50%;
+  top: -11.5vmin;
+  z-index: -1;
+  
+  opacity: 0.5;
+}
+
+@keyframes blink {
+  0%, 9%, 11%, 19%, 21%, 69%, 71%, 100% { 
+    transform: scaleY(1);
+  }
+  10%, 20%, 70% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes raise {
+  25% {
+    transform: rotate(170deg) translate(2vmin, -3vmin);
+    transform-origin: top;
+  }
+  50% {
+    transform: rotate(150deg) translate(3vmin, -3vmin);
+    transform-origin: top;
+  }
+  60% {
+    transform: rotate(170deg) translate(2vmin, -3vmin);
+    transform-origin: top;
+  }
+}
+
+@keyframes raise-inv {
+  25% {
+    transform: rotate(-170deg) translate(-2vmin, -3vmin);
+    transform-origin: top;
+  }
+  50% {
+    transform: rotate(-150deg) translate(-3vmin, -3vmin);
+    transform-origin: top;
+  }
+  60% {
+    transform: rotate(-170deg) translate(-2vmin, -3vmin);
+    transform-origin: top;
+  }
+}
+
+@keyframes lookup {
+  50% {
+    top: 0.3vmin;
+  }
+}
+
+@keyframes footsie {
+  50% {
+    transform: translatey(1vmin);
+  }
+}
+
+@keyframes right-footsie {
+  50% {
+    top: 38vmin;
+  }
+}

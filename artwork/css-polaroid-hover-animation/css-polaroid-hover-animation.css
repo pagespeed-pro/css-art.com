@@ -1,0 +1,274 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dfe4ea;
+  overflow: hidden;
+}
+
+.polaroid {
+  width: 100px;
+  height: 100px;
+  transform-origin: bottom;
+  position: relative;
+}
+.polaroid .pola--body {
+  position: absolute;
+  width: 100%;
+  height: 85%;
+  background: #f1f2f6;
+  border-radius: 5px;
+}
+.polaroid .pola--body .lines {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 15%;
+  height: 60%;
+  background: linear-gradient(to right, #ff6b6b, #ff9f43, #feca57, #1dd1a1, #54a0ff, #222f3e);
+}
+.polaroid .pola--body__btm {
+  position: absolute;
+  left: 50%;
+  bottom: 0%;
+  transform: translate(-50%);
+  width: 100%;
+  height: 30%;
+  background: #222f3e;
+  border-radius: 0 0 5px 5px;
+}
+.polaroid .pola--body__btm__box {
+  position: absolute;
+  left: 50%;
+  bottom: 30%;
+  transform: translate(-50%);
+  width: 90%;
+  height: 30%;
+  background: #10161d;
+  border-radius: 2px;
+}
+.polaroid .pola--lens {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 40%;
+  height: 40%;
+  background: #222f3e;
+  border-radius: 50%;
+}
+.polaroid .pola--lens__line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: 85%;
+  border: 1px #f1f2f6 solid;
+  border-radius: 50%;
+}
+.polaroid .pola--lens__lens {
+  opacity: 0.4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
+  background: #f1f2f6;
+  border-radius: 50%;
+}
+.polaroid .pola--lens__lens .lens__inner {
+  opacity: 0.4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  height: 40%;
+  background: #222f3e;
+  border-radius: 50%;
+}
+.polaroid .pola--lensR {
+  position: absolute;
+  top: 2%;
+  left: 85%;
+  transform: translate(-50%);
+  width: 25%;
+  height: 25%;
+  background: #222f3e;
+  border-radius: 10px;
+}
+.polaroid .pola--lensR .lens {
+  opacity: 0.4;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  background: #f1f2f6;
+  border-radius: 30%;
+}
+.polaroid .pola--label {
+  position: absolute;
+  top: 12%;
+  left: 15%;
+  transform: translate(-50%);
+  width: 25%;
+  height: 13%;
+  background: #222f3e;
+  border-radius: 3px;
+}
+.polaroid .pola--dial {
+  position: absolute;
+  top: 30%;
+  left: 80%;
+  transform: translate(-50%);
+  width: 15%;
+  height: 15%;
+  background: #222f3e;
+  border-radius: 10px;
+}
+.polaroid .pola--btn {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  transform: translate(-50%);
+  width: 15%;
+  height: 15%;
+  background: #ff6b6b;
+  border-radius: 10px;
+}
+.polaroid .flash {
+  position: absolute;
+  top: -20%;
+  left: 65%;
+  transform: translate(-50%);
+  width: 30%;
+  height: 30%;
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+.polaroid .flash .flash__line {
+  position: absolute;
+  width: 5%;
+  height: 40%;
+  background: #222f3e;
+  border-radius: 3px;
+  transform-origin: 50% 130%;
+  transform: rotate(-45deg);
+}
+.polaroid .flash .flash__line:nth-child(2) {
+  transform: rotate(0deg);
+}
+.polaroid .flash .flash__line:nth-child(3) {
+  transform: rotate(45deg);
+}
+.polaroid .photo {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+}
+.polaroid .photo__base {
+  top: -80%;
+  width: 100%;
+  height: 80%;
+  background: #f1f2f6;
+  position: relative;
+  box-shadow: 1px -10px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease-in-out;
+}
+.polaroid .photo__base .photo--inner {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 80%;
+  height: 70%;
+  background: #54a0ff;
+  overflow: hidden;
+}
+.polaroid .photo__base .photo--inner .sun {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  width: 60%;
+  height: 85%;
+  background: #ff6b6b;
+  border-radius: 50%;
+  transition: all 0.7s ease-in-out;
+}
+.polaroid .photo__base .photo--inner .mountain {
+  position: absolute;
+  top: 60%;
+  left: -10%;
+  width: 70%;
+  height: 100%;
+  background: #1dd1a1;
+  border-radius: 5px;
+  transform: rotate(45deg);
+}
+.polaroid .photo__base .photo--inner .mountain:nth-child(2) {
+  top: 80%;
+  left: 40%;
+  background: #27e1af;
+}
+.polaroid:hover {
+  animation: shot 0.3s 1;
+}
+.polaroid:hover .pola--lens .pola--lens__lens .lens__inner {
+  animation: lens 0.3s 1;
+}
+.polaroid:hover .flash {
+  animation: flash 1s 1;
+}
+.polaroid:hover .photo__base {
+  top: 0%;
+}
+.polaroid:hover .photo__base .photo--inner .sun {
+  top: 0%;
+  left: 30%;
+}
+
+@keyframes shot {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(0.9);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes lens {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

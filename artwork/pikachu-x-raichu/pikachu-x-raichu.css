@@ -1,0 +1,86 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background: #F9E5E5;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.raichu {
+  position: relative;
+  left: 0vmin;
+  top: -15vmin;
+  height: 1vmin;
+  width: 1vmin;
+  background: transparent;
+  color: #f6AC29;
+  transform: scale(3, 3);
+  box-shadow:
+    1vmin 0 #5A4321, 2vmin 0 #5A4321, 12vmin 0 #5A4321, 13vmin 0 #5A4321, 14vmin 0 #5A4321, 15vmin 0 #5A4321,
+    2vmin 1vmin, 3vmin 1vmin #5A4321, 11vmin 1vmin #5A4321, 12vmin 1vmin, 13vmin 1vmin, 17vmin 1vmin #D6A359,
+    2vmin 2vmin, 3vmin 2vmin #5A4321, 6vmin 2vmin #D6A359, 7vmin 2vmin #D6A359, 8vmin 2vmin #D6A359, 9vmin 2vmin #D6A359, 11vmin 2vmin #5A4321, 12vmin 2vmin, 17vmin 2vmin #D6A359, 18vmin 2vmin,
+    3vmin 3vmin, 4vmin 3vmin #5A4321, 5vmin 3vmin #D6A359, 6vmin 3vmin #D6A359, 7vmin 3vmin, 8vmin 3vmin, 9vmin 3vmin, 10vmin 3vmin #5A4321, 11vmin 3vmin #D6A359, 12vmin 3vmin , 18vmin 3vmin #D6A359,
+    3vmin 4vmin #5A4321, 4vmin 4vmin #D6A359, 5vmin 4vmin #D6A359, 6vmin 4vmin, 7vmin 4vmin, 8vmin 4vmin, 9vmin 4vmin, 10vmin 4vmin, 11vmin 4vmin #5A4321, 12vmin 4vmin #5A4321, 16vmin 4vmin #D6A359, 18vmin 4vmin #D6A359,
+    4vmin 5vmin #D6A359, 5vmin 5vmin, 6vmin 5vmin, 7vmin 5vmin, 8vmin 5vmin, 9vmin 5vmin, 10vmin 5vmin, 11vmin 5vmin, 16vmin 5vmin #D6A359, 17vmin 5vmin #D6A359, 18vmin 5vmin, 19vmin 5vmin,
+    4vmin 6vmin #D6A359, 5vmin 6vmin black, 6vmin 6vmin, 7vmin 6vmin, 8vmin 6vmin, 9vmin 6vmin black, 10vmin 6vmin, 11vmin 6vmin, 16vmin 6vmin #D6A359, 17vmin 6vmin, 18vmin 6vmin, 19vmin 6vmin,
+    4vmin 7vmin #FEDD9A, 5vmin 7vmin, 6vmin 7vmin, 7vmin 7vmin, 8vmin 7vmin, 9vmin 7vmin, 10vmin 7vmin #FEDD9A, 11vmin 7vmin, 16vmin 7vmin #D6A359, 18vmin 7vmin,
+    4vmin 8vmin #D6A359, 5vmin 8vmin, 6vmin 8vmin #FEDD9A, 7vmin 8vmin #FEDD9A, 8vmin 8vmin #FEDD9A, 9vmin 8vmin, 10vmin 8vmin, 11vmin 8vmin #D6A359, 15vmin 8vmin #D6A359,
+    3vmin 9vmin #5A4321, 4vmin 9vmin #D6A359, 5vmin 9vmin #FEDD9A, 6vmin 9vmin #FEDD9A, 7vmin 9vmin #FEDD9A, 8vmin 9vmin #FEDD9A, 9vmin 9vmin #FEDD9A, 10vmin 9vmin, 11vmin 9vmin, 12vmin 9vmin #5A4321, 15vmin 9vmin #5A4321,
+    4vmin 10vmin #D6A359, 5vmin 10vmin #FEDD9A, 6vmin 10vmin #FEDD9A, 7vmin 10vmin #FEDD9A, 8vmin 10vmin #FEDD9A, 9vmin 10vmin #FEDD9A, 10vmin 10vmin, 11vmin 10vmin #D6A359, 14vmin 10vmin #5A4321,
+    4vmin 11vmin #D6A359, 5vmin 11vmin #FEDD9A, 6vmin 11vmin #FEDD9A, 7vmin 11vmin #FEDD9A, 8vmin 11vmin #FEDD9A, 9vmin 11vmin #FEDD9A, 10vmin 11vmin, 11vmin 11vmin, 12vmin 11vmin #5A4321, 13vmin 11vmin #5A4321,
+    5vmin 12vmin #D6A359, 6vmin 12vmin #FEDD9A, 7vmin 12vmin #FEDD9A, 8vmin 12vmin #FEDD9A, 9vmin 12vmin, 10vmin 12vmin,
+    3vmin 13vmin #5A4321, 4vmin 13vmin #5A4321, 10vmin 13vmin #5A4321, 11vmin 13vmin #5A4321, 12vmin 13vmin #5A4321;
+  animation: bounce 1s infinite;
+}
+
+.pikachu {
+  position: relative;
+  left: -60vmin;
+  top: -15vmin;
+  height: 1vmin;
+  width: 1vmin;
+  background: transparent;
+  color: #FECB32;
+  transform: scale(3, 3);
+  box-shadow:
+    7vmin 0 black,
+    7vmin 1vmin black, 8vmin 1vmin black,
+    8vmin 2vmin, 9vmin 2vmin #E7A709, 19vmin 2vmin black, 20vmin 2vmin black,
+    8vmin 3vmin, 9vmin 3vmin #E7A709, 11vmin 3vmin #E7A709, 12vmin 3vmin #E7A709, 13vmin 3vmin #E7A709, 14vmin 3vmin #E7A709, 17vmin 3vmin, 18vmin 3vmin, 19vmin 3vmin black,
+    0 4vmin, 1vmin 4vmin, 2vmin 4vmin, 3vmin 4vmin, 4vmin 4vmin, 9vmin 4vmin, 10vmin 4vmin #E7A709, 11vmin 4vmin, 12vmin 4vmin, 13vmin 4vmin, 14vmin 4vmin, 15vmin 4vmin #E7A709, 16vmin 4vmin, 17vmin 4vmin, 18vmin 4vmin,
+    0 5vmin, 1vmin 5vmin, 2vmin 5vmin, 3vmin 5vmin, 4vmin 5vmin, 9vmin 5vmin #E7A709, 10vmin 5vmin, 11vmin 5vmin, 12vmin 5vmin, 13vmin 5vmin, 14vmin 5vmin, 15vmin 5vmin, 16vmin 5vmin #E7A709,
+    0 6vmin, 1vmin 6vmin, 2vmin 6vmin, 3vmin 6vmin, 4vmin 6vmin, 9vmin 6vmin #E7A709, 10vmin 6vmin, 11vmin 6vmin, 12vmin 6vmin, 13vmin 6vmin, 14vmin 6vmin, 15vmin 6vmin, 16vmin 6vmin #E7A709,
+    2vmin 7vmin, 3vmin 7vmin, 4vmin 7vmin, 5vmin 7vmin #E7A709, 9vmin 7vmin, 10vmin 7vmin, 11vmin 7vmin black, 12vmin 7vmin, 13vmin 7vmin, 14vmin 7vmin, 15vmin 7vmin black, 16vmin 7vmin #E7A709,
+    4vmin 8vmin, 5vmin 8vmin #E7A709, 9vmin 8vmin, 10vmin 8vmin red, 11vmin 8vmin, 12vmin 8vmin, 13vmin 8vmin, 14vmin 8vmin, 15vmin 8vmin, 16vmin 8vmin red,
+    4vmin 9vmin #E7A709, 5vmin 9vmin #E7A709, 9vmin 9vmin #86602B, 10vmin 9vmin, 11vmin 9vmin, 12vmin 9vmin, 13vmin 9vmin, 14vmin 9vmin, 15vmin 9vmin, 16vmin 9vmin #E7A709,
+    5vmin 10vmin #E7A709, 8vmin 10vmin #E7A709, 9vmin 10vmin, 10vmin 10vmin, 11vmin 10vmin #FFDD7D, 12vmin 10vmin #FFDD7D, 13vmin 10vmin #FFDD7D, 14vmin 10vmin #FFDD7D, 15vmin 10vmin, 16vmin 10vmin #E7A709, 17vmin 10vmin #E7A709,
+    5vmin 11vmin #86602B, 6vmin 11vmin #86602B, 7vmin 11vmin #86602B, 9vmin 11vmin #86602B, 10vmin 11vmin, 11vmin 11vmin #FFDD7D, 12vmin 11vmin #FFDD7D, 13vmin 11vmin #FFDD7D, 14vmin 11vmin #FFDD7D, 15vmin 11vmin, 16vmin 11vmin #E7A709,
+    6vmin 12vmin #86602B, 7vmin 12vmin #86602B, 8vmin 12vmin, 9vmin 12vmin, 10vmin 12vmin, 11vmin 12vmin #FFDD7D, 12vmin 12vmin #FFDD7D, 13vmin 12vmin #FFDD7D, 14vmin 12vmin #FFDD7D, 15vmin 12vmin, 16vmin 12vmin #E7A709,
+    10vmin 13vmin #E7A709, 11vmin 13vmin #E7A709, 14vmin 13vmin #E7A709, 15vmin 13vmin #E7A709;
+  animation: bounce 1s infinite;
+}
+.heart {
+  position: relative;
+  left: -6vmin;
+  top: -30vmin;
+  height: 1vmin;
+  width: 1vmin;
+  transform: scale(2.5 , 2.5);
+  background: transparent;
+  box-shadow:
+    1vmin 0, 3vmin 0,
+    0vmin 1vmin, 1vmin 1vmin red, 2vmin 1vmin, 3vmin 1vmin red, 4vmin 1vmin,
+    1vmin 2vmin, 2vmin 2vmin red, 3vmin 2vmin,
+    2vmin 3vmin;
+}
+@keyframes bounce {
+  25% {
+    top: -16vmin;
+  }
+}

@@ -1,0 +1,124 @@
+body {
+  background: #EEEEEE;
+  height: 100h;
+  width: 100w;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 15vmin;
+  transform: scale(0.8, 0.8);
+}
+.circle {
+  positon: relative;
+  background: #BEABEA;
+  width: 60vmin;
+  height: 60vmin;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  box-shadow:
+    1vmin 1vmin 0.5vmin #BEABEA,
+    -1vmin 1vmin 0.5vmin #BEABEA;
+}
+.cat {
+  position: relative;
+  background: black;
+  height: 20vmin;
+  width: 18vmin;
+  border-radius: 90% 90% 60% 60%;
+  top: 15vmin;
+}
+.cat::after {
+  content: '';
+  position: absolute;
+  background: black;
+  height: 14vmin;
+  width: 14vmin;
+  border-radius: 80% 80% 70% 70%;
+  top: -11vmin;
+  left: 2vmin;
+}
+.cat::before {
+  content: '';
+  position: absolute;
+  background: black;
+  height: 23vmin;
+  width: 24vmin;
+  border-radius: 60% 60% 80% 80%;
+  top: 7vmin;
+  left: -2.6vmin;
+  z-index: 1;
+}
+.ears {
+  position: relative;
+  height: 0;
+  width: 0;
+  top: -15vmin;
+  left: 0.6vmin;
+  transform: rotate(-20deg);
+  border-left: 4vmin solid transparent;
+  border-right: 4vmin solid transparent;
+  border-bottom: 8vmin solid black;
+}
+.ears::after {
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+  top: 3vmin;
+  left: 4vmin;
+  transform: rotate(40deg);
+  border-left: 4vmin solid transparent;
+  border-right: 4vmin solid transparent;
+  border-bottom: 8vmin solid black;
+}
+.tail {
+  position: relative;
+  background: black;
+  height: 20vmin;
+  width: 3vmin;
+  top: 20vmin;
+  left: 9vmin;
+  animation: sway 3s ease-in-out infinite;
+  z-index: 1;
+}
+.tail::before {
+  content: '';
+  position: absolute;
+  background: transparent;
+  height: 10vmin;
+  width: 6vmin;
+  top: 14vmin;
+  border-left: 3vmin solid black;
+  transform: rotate(-15deg);
+  border-radius: 80%;
+}
+.shadow {
+  position: relative;
+  height: 10vmin;
+  width: 28vmin;
+  background: #777777;
+  border-radius: 50%;
+  opacity: 0.2;
+  top: -4vmin;
+  left: -4vmin;
+}
+@keyframes sway {
+  25% {
+    transform: rotate(0deg) translatex(0vmin);
+    transform-origin: 0 0;
+  }
+  50% {
+    transform: rotate(-45deg) translatex(2vmin);
+    transform-origin: 0 0;
+  }
+  75% {
+    transform: rotate(45deg) translatex(-2vmin);
+    transform-origin: 0 0;
+  }
+  100% {
+    transform: rotate(0deg) translatex(0vmin);
+    transform-origin: 0 0;
+  }
+}

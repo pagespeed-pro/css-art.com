@@ -1,0 +1,35 @@
+{
+    "name": "css-piplup",
+    "version": "1.0.0",
+    "title": "CSS Piplup",
+    "description": "",
+    "author": {
+        "name": "Ale Thomas",
+        "avatar": "https://pbs.twimg.com/profile_images/1557016919873576960/PwC7V0eZ_200x200.jpg",
+        "web": "https://bio.link/pokecoder",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/pokecoder/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/pokecoder"
+            },
+            {
+                "title": "Hashnode",
+                "url": "https://hashnode.com/@pokecoder"
+            }
+        ]
+    },
+    "html": "css-piplup.html",
+    "css": [
+        "css-piplup.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [],
+    "original": "https://codepen.io/pokecoder/pen/zYdXWPy",
+    "codepen": "https://codepen.io/pokecoder/pen/zYdXWPy"
+}

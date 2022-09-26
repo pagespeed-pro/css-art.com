@@ -1,0 +1,440 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+:root {
+  --hue: 320;
+  --white: #f2f2f2;
+  --black: #404040;
+  --aspect-ratio: calc(300 / 800);
+  --unit: calc((80 / 800) * 1vmin);
+  --width: calc(300 * var(--unit));
+  --height: calc(800 * var(--unit));
+}
+svg {
+  width: 30vmin;
+  height: 80vmin;
+  position: fixed;
+  top: 50%;
+}
+svg:nth-of-type(1) {
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.15;
+}
+svg:nth-of-type(2) {
+  right: 0;
+  height: 800px;
+  width: 300px;
+  transform: translate(0, -50%);
+}
+body {
+  min-height: 100vh;
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: top center;
+}
+.clock {
+  height: calc(var(--height));
+  width: calc(var(--width));
+  position: relative;
+}
+.clock__eye {
+  --size: 134;
+  height: calc(var(--size) * var(--unit));
+  width: calc(var(--size) * var(--unit));
+  background: var(--white);
+  position: absolute;
+  top: calc(17 * var(--unit));
+  border-radius: 50%;
+  border: calc(6 * var(--unit)) solid var(--black);
+  left: 50%;
+}
+.clock__eye:after {
+  content: '';
+  height: 110%;
+  width: 110%;
+  border: calc(4 * var(--unit)) solid var(--white);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-clip-path: polygon(50% 50%, 94% 0, 6% 0);
+  clip-path: polygon(50% 50%, 94% 0, 6% 0);
+}
+.clock__eye--left {
+  transform: translate(-100%, 0%);
+}
+.clock__eye--left:after {
+  transform: translate(-50%, -60%);
+}
+.clock__eye--right {
+  transform: translate(0%, 0%);
+}
+.clock__eye--right:after {
+  transform: translate(-50%, -60%);
+}
+.clock__body {
+  --size: 200;
+  background: var(--white);
+  height: calc(var(--size) * var(--unit));
+  width: calc(var(--size) * var(--unit));
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.clock__body:after {
+  --size: calc(25 * var(--unit));
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  background: var(--black);
+  height: var(--size);
+  width: var(--size);
+  transform: translate(-50%, -50%);
+}
+.clock__dot {
+  --size: 10;
+  --radius: 90;
+  height: calc(var(--size) * var(--unit));
+  width: calc(var(--size) * var(--unit));
+  background: var(--black);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(calc(((360 / 12) * var(--index)) * 1deg)) translate(0, calc(var(--radius) * var(--unit)));
+}
+.clock__paw {
+  --height: 70;
+  --width: 80;
+  position: absolute;
+  height: calc(var(--height) * var(--unit));
+  width: calc(var(--width) * var(--unit));
+}
+.clock__paw--top-left {
+  top: calc(238 * var(--unit));
+  left: 0;
+}
+.clock__paw--bottom-left {
+  top: calc(448 * var(--unit));
+  left: 0;
+}
+.clock__paw--top-right {
+  top: calc(238 * var(--unit));
+  right: 0;
+}
+.clock__paw--bottom-right {
+  top: calc(448 * var(--unit));
+  right: 0;
+}
+.clock__pad {
+  --size: calc(20 * var(--unit));
+  height: var(--size);
+  width: var(--size);
+  background: var(--white);
+  position: absolute;
+  border-radius: 50%;
+}
+.clock__pad:nth-of-type(1) {
+  left: 0%;
+  top: 20%;
+}
+.clock__pad:nth-of-type(2) {
+  left: 24%;
+  top: 0%;
+}
+.clock__pad:nth-of-type(3) {
+  left: 52%;
+  top: 0%;
+}
+.clock__pad:nth-of-type(4) {
+  right: 0%;
+  top: 20%;
+}
+.clock__pad:nth-of-type(5) {
+  --size: calc(50 * var(--unit));
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.clock__face {
+  background: var(--white);
+  position: absolute;
+  top: calc(136 * var(--unit));
+  left: calc(20 * var(--unit));
+  height: calc(90 * var(--unit));
+  width: calc(260 * var(--unit));
+  border-radius: 0 0 50% 50%/0 0 100% 100%;
+}
+.clock__nose {
+  background: var(--black);
+  position: absolute;
+  height: calc(45 * var(--unit));
+  width: calc(70 * var(--unit));
+  top: calc(115 * var(--unit));
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.clock__mouth {
+  position: absolute;
+  height: calc(60 * var(--unit));
+  width: calc(110 * var(--unit));
+  background: var(--black);
+  border-radius: 50%;
+  bottom: calc(5 * var(--unit));
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.clock__mouth:before,
+.clock__mouth:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 50%;
+  width: 55%;
+  background: var(--white);
+}
+.clock__mouth:before {
+  right: 49%;
+  border-radius: 0 0 40% 35%;
+}
+.clock__mouth:after {
+  left: 49%;
+  border-radius: 0 0 35% 40%;
+}
+.clock__tongue {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;
+}
+.clock__tongue:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 40%;
+  width: 50%;
+  background: #f42525;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-45%, 50%);
+}
+.clock__whiskers {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.clock__whisker {
+  background: var(--black);
+  height: calc(5 * var(--unit));
+  width: calc(70 * var(--unit));
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.clock__whisker:nth-of-type(1) {
+  transform-origin: right;
+  transform: translate(-160%, -550%) rotate(-5deg);
+}
+.clock__whisker:nth-of-type(2) {
+  transform-origin: right;
+  width: calc(56 * var(--unit));
+  transform: translate(-160%, -350%) rotate(-15deg);
+}
+.clock__whisker:nth-of-type(3) {
+  transform-origin: left;
+  transform: translate(60%, -550%) rotate(5deg);
+}
+.clock__whisker:nth-of-type(4) {
+  transform-origin: left;
+  width: calc(56 * var(--unit));
+  transform: translate(60%, -350%) rotate(15deg);
+}
+.clock__tail {
+  --swing: 38;
+  width: calc(140 * var(--unit));
+  height: calc(280 * var(--unit));
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transform-origin: top center;
+  -webkit-animation: swing 1s infinite alternate ease-in-out;
+          animation: swing 1s infinite alternate ease-in-out;
+}
+.clock__tail:after {
+  content: '';
+  background: var(--white);
+  position: absolute;
+  height: calc(70 * var(--unit));
+  width: calc(50 * var(--unit));
+  bottom: 0;
+  left: 50%;
+  transform-origin: bottom left;
+  transform: translate(-18%, 0) rotate(-30deg);
+  border-radius: 0 0 50% 50%/0 0 50% 50%;
+  -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+}
+@-webkit-keyframes swing {
+  from {
+    transform: translate(-50%, 0) rotate(calc(var(--swing) * -1deg));
+  }
+  to {
+    transform: translate(-50%, 0) rotate(calc(var(--swing) * 1deg));
+  }
+}
+@keyframes swing {
+  from {
+    transform: translate(-50%, 0) rotate(calc(var(--swing) * -1deg));
+  }
+  to {
+    transform: translate(-50%, 0) rotate(calc(var(--swing) * 1deg));
+  }
+}
+.clock__pupil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 92%;
+  width: 15%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: shift 1s infinite alternate ease-in-out;
+          animation: shift 1s infinite alternate ease-in-out;
+}
+.clock__pupil:before {
+  content: '';
+  height: 100%;
+  width: 100%;
+  background: var(--black);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation: scale 0.5s infinite ease-in-out alternate;
+          animation: scale 0.5s infinite ease-in-out alternate;
+}
+@-webkit-keyframes scale {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes scale {
+  0% {
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@-webkit-keyframes shift {
+  0% {
+    transform: translate(-50%, -50%) translate(-250%, 0);
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(250%, 0);
+  }
+}
+@keyframes shift {
+  0% {
+    transform: translate(-50%, -50%) translate(-250%, 0);
+  }
+  100% {
+    transform: translate(-50%, -50%) translate(250%, 0);
+  }
+}
+.clock__bowtie {
+  --size: calc(20 * var(--unit));
+  border-radius: 50%;
+  position: absolute;
+  background: hsl(var(--hue), 60%, 60%);
+  left: 50%;
+  top: calc(236 * var(--unit));
+  transform: translate(-50%, 0);
+  height: var(--size);
+  width: var(--size);
+}
+.clock__bowtie:after,
+.clock__bowtie:before {
+  content: '';
+  position: absolute;
+  height: 160%;
+  width: 160%;
+  background: hsl(var(--hue), 60%, 60%);
+  top: 50%;
+  transform: translate(0, -50%) rotate(calc(var(--rotate, 0) * 1deg));
+  -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+.clock__bowtie:after {
+  --rotate: 180;
+  left: 15%;
+}
+.clock__bowtie:before {
+  right: 15%;
+}
+.clock__hand {
+  position: absolute;
+  width: calc(5 * var(--unit));
+  background: var(--black);
+  border-radius: calc(2 * var(--unit)) calc(2 * var(--unit)) 0 0;
+  top: 50%;
+  left: 50%;
+  transform-origin: bottom center;
+}
+.clock__hand:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: calc(12 * var(--unit));
+  height: 80%;
+  background: var(--black);
+  -webkit-clip-path: polygon(50% 0, 100% 20%, 75% 100%, 25% 100%, 0 20%);
+  clip-path: polygon(50% 0, 100% 20%, 75% 100%, 25% 100%, 0 20%);
+}
+.clock__hand--minutes {
+  --seconds: 3600;
+  height: 40%;
+  transform: translate(-50%, -100%) rotate(0deg);
+  -webkit-animation: time calc(var(--seconds) * 1s) calc(var(--minutes-delay, 0) * -1s) infinite linear;
+          animation: time calc(var(--seconds) * 1s) calc(var(--minutes-delay, 0) * -1s) infinite linear;
+}
+.clock__hand--hours {
+  --seconds: 43200;
+  height: 35%;
+  transform: translate(-50%, -100%) rotate(270deg);
+  -webkit-animation: time calc(var(--seconds) * 1s) calc(var(--hours-delay) * -1s) infinite linear;
+          animation: time calc(var(--seconds) * 1s) calc(var(--hours-delay) * -1s) infinite linear;
+}
+@-webkit-keyframes time {
+  0% {
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -100%) rotate(360deg);
+  }
+}
+@keyframes time {
+  0% {
+    transform: translate(-50%, -100%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -100%) rotate(360deg);
+  }
+}

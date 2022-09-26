@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="background">
+    <div class="water"></div>
+    <div class="sky">
+      <div class="clouds">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+      </div>
+    </div>
+    <div class="reflection">
+      <div class="clouds">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="train">
+    <div class="handle handle1"></div>
+    <div class="handle handle2"></div>
+    <div class="handle handle3"></div>
+    <div class="handle handle4"></div>
+    <div class="handle handle5"></div>
+    <div class="windows"></div>
+    <div class="seats"></div>
+    <div class="chihiro">
+      <div class="hair-top"></div>
+      <div class="ponytail"></div>
+      <div class="face">
+        <div class="eyebrow eyebrow-left"></div>
+        <div class="eyebrow eyebrow-right"></div>
+        <div class="eye eye-left"></div>
+        <div class="eye eye-right"></div>
+        <div class="nose"></div>
+        <div class="mouth"></div>
+      </div>
+      <div class="body">
+        <div class="neck"></div>
+        <div class="collar"></div>
+        <div class="chest"></div>
+        <div class="sleeve sleeve-right"></div>
+        <div class="sleeve sleeve-left"></div>
+        <div class="arm arm-left"></div>
+        <div class="arm arm-right"></div>
+        <div class="shorts"></div>
+        <div class="leg leg-left"></div>
+        <div class="leg leg-right"></div>
+      </div>
+    </div>
+    <div class="noface">
+      <div class="mask">
+        <div class="eye eye-left"></div>
+        <div class="eye eye-right"></div>
+        <div class="mouth"></div>
+        <div class="stripe-top stripe-top-left"></div>
+        <div class="stripe-bottom stripe-bottom-left"></div>
+        <div class="stripe-top stripe-top-right"></div>
+        <div class="stripe-bottom stripe-bottom-right"></div>
+      </div>
+      <div class="arm arm-left"></div>
+      <div class="arm arm-right"></div>
+    </div>
+  </div>
+</div>
+<!-- clouds filter -->
+<svg width="0" height="0">
+  <filter id="filter">
+    <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="15" seed="700" />
+    <feDisplacementMap in="SourceGraphic" scale="120" />
+  </filter>
+</svg>

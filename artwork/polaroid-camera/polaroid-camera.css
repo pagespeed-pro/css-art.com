@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300&family=Press+Start+2P&family=Rock+3D&family=Wendy+One&display=swap');
+
+body {
+  background-color: white;
+}
+
+.camera {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.camera .top { 
+  margin-top: -20px;
+  margin-left: 15px;
+  width: 450px;
+  height: 250px;
+  border-radius: 35px 35px 0 0;
+  background: linear-gradient(#2d2c2e, #2e2e29, #3b3738);
+  box-shadow: -1px 1px 2px 5px rgba(255,255,255, 0.80) inset;
+}
+
+.camera .bottom {
+  width: 480px;
+  height: 160px;
+  border-radius: 10px 10px 30px 30px;
+  background: linear-gradient(#2d2c2e, #2e2e29, #3b3738);
+  box-shadow: -2px 5px 2px 0px rgba(255,255,255, 0.60) inset;
+}
+
+.camera .red {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: 180px;
+  margin-left: 15px;
+  background-image: radial-gradient(red 50%, #e0605c 60%);
+  border: 2px solid #2d2c2e;
+  box-shadow:  13px 13px 26px #262527,
+    -13px -13px 26px #343335;
+}
+
+.camera .bottom1 {
+  display: block;
+  position: absolute;
+  width: 150px;
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 325px;
+  border-radius: 5px;
+  background: linear-gradient(#2d2c2e, #2e2e29, #3b3738);
+  box-shadow: -2px -1px 2px 0px rgba(255,255,255, 0.20),
+    2px -1px 2px 0px rgba(255,255,255, 0.20);
+}
+
+.camera .middle {
+  display: block;
+  position: absolute;
+  width: 140px;
+  height: 40px;
+  margin-top: 5px;
+  margin-left: 165px;
+  border-radius: 5px;
+  background: linear-gradient(#2d2c2e, #2e2e29, #3b3738);
+  box-shadow: inset -2px -1px 2px 0px rgba(0,0,0, 0.60),
+    inset 2px -1px 2px 0px rgba(0,0,0, 0.60);
+}
+
+.camera .middle_1 {
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 20px;
+  margin-top: 15px;
+  margin-left: 170px;
+  border-radius: 50px;
+  background: linear-gradient(#2d2c2e, #2e2e29, #3b3738);
+  box-shadow: -2px -1px 2px 0px rgba(0,0,0, 0.60),
+    2px 1px 2px 0px rgba(0,0,0, 0.60);
+}
+
+.camera .middle_2 {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: 15px;
+  margin-left: 270px;
+  border-radius: 50%;
+  background: linear-gradient(#2d2c2e, #2e2e29, #3b3738);
+  box-shadow: -2px -1px 4px 0px rgba(0,0,0, 0.60),
+    2px 1px 4px 0px rgba(0,0,0, 0.60);
+}
+
+.camera .bottom2 {
+  display: block;
+  position: absolute;
+  width: 150px;
+  height: 40px;
+  margin-top: 5px;
+  border-radius: 5px;
+  background: linear-gradient(#2d2c2e, #2e2e29, #3b3738);
+  box-shadow: -2px -1px 2px 0px rgba(255,255,255, 0.20),
+    2px -1px 2px 0px rgba(255,255,255, 0.20);
+}
+
+.camera .print {
+  display: block;
+  position: absolute;
+  width: 400px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 3px;
+  margin-left: 35px;
+  margin-top: 60px;
+  background: linear-gradient(black, #2e2e29, black);
+  box-shadow: 2px 0px 2px 0px rgba(255,255,255, 0.60) inset,
+    -2px 0px 2px 0px rgba(255,255,255, 0.60) inset;
+}
+
+.camera .polaroid {
+  font-family: 'Hind', sans-serif;
+  font-weight: 600;
+  position: absolute;
+  font-size: 24px;
+  letter-spacing: 3px;
+  color:#D3D3D3;
+  margin-top: 120px;
+  margin-left: 180px;
+}
+
+.camera .grey {
+  position: absolute;
+  width: 45px;
+  height: 55px;
+  margin-top: 100px;
+  margin-left: 70px;
+  background-image: repeating-linear-gradient(
+  grey,
+  black 10px,
+  grey 10px,
+  black 20px
+)
+}
+
+.camera .rainbow {
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  margin-top: 190px;
+  margin-left: 195px;
+  transform: rotate(90deg);
+  background-image: linear-gradient(
+    #08a1e2 20% 20%,
+    #0bbd2f 40%, 40%,
+    #f0e035 60%, 60%,
+    #f0a535 80%, 80%,
+    #df118f 80% 
+  );
+}
+
+.camera .circle1 {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  margin-top: 70px;
+  margin-left: 95px;
+  border-radius: 50%;
+  background: black;
+  box-shadow: inset 0px 1px 1px 1px rgba(255,255,255,0.3), 0 -1px 1px rgba(255,255,255,0.5);
+}
+
+.camera .circle2 {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  margin-top: 170px;
+  margin-left: 290px;
+  border-radius: 50%;
+  background: black;
+  box-shadow: inset 0px 1px 1px 1px rgba(255,255,255,0.2), inset 0 -1px 1px rgba(255,255,255,0.5);
+}
+
+.camera .square {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  margin-top: 30px;
+  margin-left: 95px;
+  background: black;
+  box-shadow: inset 0px 1px 1px 1px rgba(255,255,255,0.3), 0 -1px 1px rgba(255,255,255,0.5);
+}
+
+.camera .middle_len {
+  position: absolute;
+  display: block;
+  width: 180px;
+  height: 180px;
+  margin-top: 20px;
+  margin-left: 130px;
+  border-radius: 50%;
+  z-index: 1;
+  background-image: radial-gradient(transparent, black),
+    radial-gradient(
+      black 0% 27%, 
+      black 20% 20%, 
+      grey 21% 21%, 
+      black 21% 22%, 
+      grey 23% 23%, 
+      black 24% 24%, 
+      grey 25% 25%, 
+      black 26% 26%, 
+      grey 27% 27%, 
+      black 28% 28%, 
+      grey 29% 29%,
+      black 30% 30%, 
+      grey 31% 31%, 
+      black 32% 32%, 
+      grey 33% 33%,
+      black 34% 34%, 
+      grey 35% 35%, 
+      black 36% 36%, 
+      grey 37% 37%, 
+      black 38% 38%, 
+      grey 39% 39%, 
+      black 40% 40%, 
+      grey 41% 41%, 
+      black 42% 42%, 
+      grey 43% 43%,
+      black 44% 44%,
+      grey 45% 45%, 
+      black 46% 46%,
+      grey 47% 47%, 
+      black 50% 50% 
+    );
+  box-shadow: 10px 10px 50px 5px rgba(0,0,0,0.5);
+}
+
+.camera .flash {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  margin-top: 20px;
+  margin-left: 340px;
+  border-radius: 20px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(rgba(255, 255, 255, 0.3), transparent 60%),
+    radial-gradient(rgba(0,0,0,0.9) 70%, #f2f2f2 90%, black);
+  box-shadow: 0px 0px 1px 0px #010000 inset,
+    0 0 1px 1px grey inset,
+    0 0 2px 2px black inset,
+    0 0 3px 5px black inset,
+    -1px -1px 1px #f2f2f2;
+}
+
+.camera .white {
+  position: absolute;
+  display: block;
+  width: 70px;
+  height: 140px;
+  margin-top: 20px;
+  margin-left: 15px;
+  border-radius: 10px;
+  z-index: 1;
+  box-shadow: 0px 0px 1px 0px #010000 inset,
+    0 0 1px 1px grey inset,
+    0 0 2px 2px black inset,
+    0 0 3px 5px black inset,
+    -1px -1px 1px #f2f2f2;
+  background-image: 
+    linear-gradient(
+      white 2% 2%, 
+      black 4% 4%, 
+      white 6% 6%, 
+      black 8% 8%,
+      black 10% 10%, 
+      white 12% 12%, 
+      black 14% 14%, 
+      white 16% 16%, 
+      black 18% 18%, 
+      white 20% 20%, 
+      black 22% 22%, 
+      white 24% 24%, 
+      black 26% 26%, 
+      white 28% 28%,
+      black 30% 30%, 
+      white 32% 32%, 
+      black 34% 34%, 
+      white 36% 36%,
+      black 38% 38%, 
+      white 40% 40%, 
+      black 42% 42%, 
+      white 44% 44%,
+      black 46% 46%, 
+      white 48% 48%, 
+      black 50% 50%, 
+      white 52% 52%,
+      black 54% 54%, 
+      white 56% 56%, 
+      black 58% 58%, 
+      white 60% 60%, 
+      black 62% 62%, 
+      white 64% 64%, 
+      black 66% 66%, 
+      black 68% 68%, 
+      white 70% 70%,
+      black 72% 72%, 
+      white 74% 74%, 
+      black 76% 76%, 
+      white 78% 78%, 
+      black 80% 80%, 
+      white 82% 82%,
+      black 84% 84%, 
+      white 86% 86%, 
+      black 88% 88%, 
+      white 90% 90%, 
+      black 92% 92%, 
+      white 94% 94%,
+      black 96% 96%, 
+      white 98% 98%
+    );
+}
+
+.camera .white1 {
+  position: absolute;
+  display: block;
+  width: 35px;
+  height: 140px;
+  margin-top: 20px;
+  margin-left: 32px;
+  z-index: 1;
+  background-image: 
+    linear-gradient(
+      90deg,
+      black 1% 2%, 
+      white 2% 3%, 
+      black 4% 5%, 
+      white 6% 7%, 
+      black 8% 8%,
+      black 10% 12%, 
+      white 12% 14%, 
+      black 14% 16%, 
+      white 16% 18%, 
+      black 18% 20%, 
+      white 20% 22%, 
+      black 22% 24%, 
+      white 24% 26%, 
+      black 26% 28%, 
+      white 28% 28%,
+      black 30% 30%, 
+      white 32% 32%, 
+      black 34% 34%, 
+      white 36% 36%,
+      black 38% 38%, 
+      white 40% 40%, 
+      black 42% 42%, 
+      white 44% 44%,
+      black 46% 46%, 
+      white 48% 48%, 
+      black 50% 50%, 
+      white 52% 52%,
+      black 54% 54%, 
+      white 56% 56%, 
+      black 58% 58%, 
+      white 60% 60%, 
+      black 62% 62%, 
+      white 64% 64%, 
+      black 66% 66%, 
+      black 68% 68%, 
+      white 70% 70%,
+      black 72% 72%, 
+      white 74% 74%, 
+      black 76% 76%, 
+      white 78% 78%, 
+      black 80% 80%, 
+      white 82% 82%,
+      black 84% 84%, 
+      white 86% 86%, 
+      black 88% 88%, 
+      white 90% 90%, 
+      black 92% 92%, 
+      white 94% 94%,
+      black 96% 96%, 
+      white 98% 98%
+    );
+}
+
+.picture {
+  position: absolute;
+  margin-top: 70px;
+  width: 100%;
+  overflow: hidden;
+  animation: photo 8s infinite;
+}
+
+.picture::before {
+  content: '';
+  bottom: 0;
+  position: absolute;
+  background: rgba(0,0,0,0.8);
+  width: 17em;
+  height: 17em;
+  margin-left: 80px;
+  border: solid blanchedalmond;
+  z-index: 1;
+  border-width: 0 1.5em 2em 1.5em;
+}
+
+@keyframes photo {
+  0% {
+    height: 10px;
+  }
+  50%, 100% {
+    height: 200px;
+  }
+}
+
+

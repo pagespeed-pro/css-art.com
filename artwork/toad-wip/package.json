@@ -1,0 +1,41 @@
+{
+    "name": "toad-wip",
+    "version": "1.0.0",
+    "title": "toad-WIP 🍄🍄",
+    "description": "",
+    "author": {
+        "name": "Louise Flanagan",
+        "avatar": "https://assets.codepen.io/3879263/internal/avatars/users/default.png?format=auto&height=512&version=1584488369&width=512",
+        "web": "https://lou-flan.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/louflan/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/flangerhanger"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/Lou-Flan"
+            },
+            {
+                "title": "dev.to",
+                "url": "https://dev.to/flangerhanger"
+            }
+        ]
+    },
+    "html": "toad-wip.html",
+    "css": [
+        "toad-wip.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "toad"
+    ],
+    "original": "https://codepen.io/louflan/pen/MWpmpJq",
+    "codepen": "https://codepen.io/louflan/pen/MWpmpJq"
+}

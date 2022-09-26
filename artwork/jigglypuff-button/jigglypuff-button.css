@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background: #fee8b8;
+}
+
+.jigglypuff {
+  position: relative;
+  height: 50vmin;
+  width: 50vmin;
+  background: #FFD2DA;
+  border: none;
+  border-radius: 10%;
+  border-bottom: 2vmin solid #CCA8AE;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/*eye balls*/
+.jigglypuff::before {
+  content: '';
+  position: absolute;
+  background: white;
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 50%;
+  left: 3vmin;
+  top: 16vmin;
+  
+  box-shadow: 26vmin 0 white;
+}
+
+.jigglypuff::after {
+  content: '';
+  position: absolute;
+  background: #008393;
+  height: 15vmin;
+  width: 15vmin;
+  border-radius: 50%;
+  left: 4.5vmin;
+  top: 17.5vmin;
+  
+  box-shadow: 26vmin 0 #008393;
+}
+
+.face-details {
+  position: relative;
+  background: white;
+  height: 7vmin;
+  width: 7vmin;
+  border-radius: 50%;
+  left: -15vmin;
+  top: 9vmin;
+  
+  box-shadow: 26vmin 0 white;
+  
+  z-index: 1;
+}
+/* mouth */
+.face-details::before {
+  content: '';
+  position: absolute;
+  height: 3vmin;
+  width: 5vmin;
+  background: #E3ABB5;
+  border-radius: 0 0 18vmin 18vmin;
+  
+  
+  top: 15vmin;  
+  left: 16vmin;
+}
+
+.face-details::after {
+  content: '';
+  position: absolute;
+  background: #F6E5E8;
+  height: 5vmin;
+  width: 26vmin;
+  border-radius: 0 0 18vmin 0;
+  left: 6.5vmin;
+  top: -20vmin;
+}
+
+.hair {
+  position: relative;
+  background: #F6E5E8;
+  height: 15.5vmin;
+  width: 26vmin;
+  border-radius: 0 8vmin 15vmin 25vmin;
+  
+  top: -16.2vmin;
+  left: -1vmin;
+  transform: rotate(8deg);
+  
+  z-index: 2;
+}
+
+.hair::after {
+  content: '';
+  position: absolute;
+  background: transparent;
+  height: 8vmin;
+  width: 12vmin;
+  border-radius: 50% 60% 50% 60% / 60% 60% 50% 50%;
+  border-bottom: 0.8vmin solid #FFD2DA;
+  border-left: 0.8vmin solid #FFD2DA;
+  border-top: 0.5vmin solid #FFD2DA;
+  border-right: 0.8vmin solid transparent;
+  top: 2vmin;
+  left: 11vmin;
+  
+  transform: rotate(-25deg); 
+}
+
+.ears {
+  position: relative;
+  background: #312D2E;
+  height: 6vmin;
+  width: 13vmin;
+  border-radius: 15vmin 15vmin 0 0;
+  top: -32vmin;
+  left: -20vmin;
+  transform: rotate(-40deg);
+}
+
+.ears::after {
+  content: '';
+  position: absolute;
+  background: #312D2E;
+  height: 6vmin;
+  width: 13vmin;
+  border-radius: 15vmin 15vmin 0 0;
+  transform: rotate(80deg);
+  left: 31vmin;
+  top: 26vmin;
+}
+
+.jigglypuff:hover {
+  border: none;
+  transform: translatey(1vmin);
+  cursor: pointer;
+}

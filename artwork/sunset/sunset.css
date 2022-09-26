@@ -1,0 +1,57 @@
+body {
+  background-color: black;
+  width: 50em;
+  height: 35em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.picture {
+  background: radial-gradient(circle, orange, brown);
+  position: absolute;
+  overflow: hidden;
+  border-radius: 50px;
+  z-index: 2;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.picture::before, .picture::after {
+  background-color: rgba(102, 170, 204, 0.8);
+  border-radius: 30%;
+  animation: sea 10s linear infinite;
+  content: "";
+  position: absolute;
+}
+.picture::before {
+  top: 70%;
+  left: -40%;
+  width: 150%;
+  height: 150%;
+}
+.picture::after {
+  top: 75%;
+  left: -50%;
+  width: 180%;
+  height: 180%;
+  animation-delay: 0.1s;
+}
+
+.sun {
+  width: 150px;
+  height: 150px;
+  z-index: -1;
+  background: radial-gradient(circle, yellow, orange);
+  border-radius: 50%;
+  position: relative;
+}
+
+@keyframes sea {
+  to {
+    transform: rotate(3turn);
+  }
+}

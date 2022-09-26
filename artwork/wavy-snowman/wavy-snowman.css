@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #b3d3c3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.snowman {
+  position: relative;
+  background: linear-gradient(
+    166deg,
+    rgba(255, 255, 255, 1) 78%,
+    rgba(248, 244, 238, 1) 88%
+  );
+  height: 23vmin;
+  width: 25vmin;
+  border-radius: 48% 52% 51% 49% / 53% 53% 47% 47%;
+  top: 9vmin;
+}
+
+.snowman::after {
+  position: absolute;
+  content: "";
+  background: linear-gradient(
+    166deg,
+    rgba(255, 255, 255, 1) 78%,
+    rgba(248, 244, 238, 1) 88%
+  );
+  height: 20vmin;
+  width: 25vmin;
+  border-radius: 48% 52% 51% 49% / 58% 59% 41% 42%;
+  top: -13vmin;
+}
+
+.snowman::before {
+  position: absolute;
+  content: "";
+  background: #f4e8e1;
+  height: 10vmin;
+  width: 16vmin;
+  border-radius: 48% 52% 51% 49% / 58% 59% 41% 42%;
+  left: 4.5vmin;
+  top: -2vmin;
+}
+
+.snowman-face {
+  position: relative;
+  background: #20313d;
+  height: 2vmin;
+  width: 2vmin;
+  border-radius: 50%;
+  top: -2vmin;
+  left: 7vmin;
+
+  box-shadow: 9vmin 0 #20313d;
+  z-index: 1;
+
+  animation: blink 6s infinite;
+}
+
+.snowman-face::after {
+  position: absolute;
+  content: "";
+  background: white;
+  height: 0.4vmin;
+  width: 0.4vmin;
+  border-radius: 50%;
+  left: 1.1vmin;
+  top: 0.4vmin;
+
+  box-shadow: 9vmin 0 white;
+}
+
+.snowman-nose {
+  position: relative;
+  background: #fa9b7d;
+  height: 2.5vmin;
+  width: 1.5vmin;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  left: 12.5vmin;
+  top: -3vmin;
+  transform: rotate(90deg);
+  z-index: 1;
+}
+
+.snowman-nose::after {
+  position: absolute;
+  content: "";
+  border-top: 0.7vmin solid transparent;
+  border-left: 2vmin solid #fa9b7d;
+  border-bottom: 0.7vmin solid transparent;
+  left: -0.25vmin;
+  top: -0.9vmin;
+  transform: rotate(-90deg);
+}
+
+.snowman-nose::before {
+  position: absolute;
+  content: "";
+  background: transparent;
+  height: 1.5vmin;
+  width: 1vmin;
+  border-radius: 50% 60% 70% 40% / 50% 50% 60% 20%;
+  border-right: 0.3vmin solid #d1b4ae;
+  border-bottom: 0.3vmin solid #d1b4ae;
+
+  top: 2.8vmin;
+  left: 2vmin;
+
+  transform: rotate(-10deg);
+}
+
+.buttons {
+  position: relative;
+  background: #ec7671;
+  height: 2vmin;
+  width: 2vmin;
+  border-radius: 50%;
+  top: 6vmin;
+  left: 11.7vmin;
+  box-shadow: 0 3vmin #ec7671;
+}
+
+.buttons::after {
+  position: absolute;
+  content: "";
+  background: white;
+  color: white;
+  height: 0.3vmin;
+  width: 0.3vmin;
+  border-radius: 50%;
+  left: 0.9vmin;
+  top: 0.3vmin;
+  box-shadow: -0.5vmin 0.5vmin, 0.5vmin 0.5vmin, 0 1vmin, 0 3vmin,
+    -0.5vmin 3.5vmin, 0.5vmin 3.5vmin, 0 4vmin;
+}
+
+.buttons::before {
+  position: absolute;
+  content: "";
+  background: #f7d6d8;
+  height: 2vmin;
+  width: 3vmin;
+  border-radius: 50%;
+
+  left: -7vmin;
+  top: -11.1vmin;
+
+  box-shadow: 12.5vmin 0 #f7d6d8;
+  animation: fix 6s infinite;
+  z-index: 1;
+}
+
+.arm {
+  position: relative;
+  background: #f09f7f;
+  height: 9vmin;
+  width: 0.4vmin;
+  top: -5vmin;
+  left: 26.5vmin;
+  transform: rotate(50deg);
+}
+
+.arm::after {
+  position: absolute;
+  content: "";
+  background: #f09f7f;
+  height: 2.5vmin;
+  width: 0.4vmin;
+  left: 0.7vmin;
+  top: 0vmin;
+  transform: rotate(35deg);
+}
+
+.arm::before {
+  position: absolute;
+  content: "";
+  background: #f09f7f;
+  height: 2.5vmin;
+  width: 0.4vmin;
+  left: -0.8vmin;
+  top: 0.2vmin;
+  transform: rotate(-45deg);
+}
+
+.left {
+  transform: scaleX(-1) rotate(50deg);
+  left: -2vmin;
+  top: -13vmin;
+}
+
+.right {
+  animation: wave 2s infinite;
+}
+
+.shadow {
+  position: relative;
+  background: #91beaf;
+  height: 3vmin;
+  width: 22vmin;
+  border-radius: 50%;
+  top: 7.5vmin;
+  z-index: -1;
+}
+
+@keyframes blink {
+  0%,
+  9%,
+  11%,
+  19%,
+  21%,
+  69%,
+  71%,
+  100% {
+    transform: scaleY(1);
+  }
+  10%,
+  20%,
+  70% {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes wave {
+  50% {
+    transform-origin: 10%;
+    transform: rotate(75deg) translate(2vmin, -1vmin);
+  }
+}

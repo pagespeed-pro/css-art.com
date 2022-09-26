@@ -1,0 +1,215 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background: linear-gradient(#99ccff, #eee);
+  box-shadow:  7px 7px 19px #d3d3d3,
+    -7px -7px 19px #ffffff;
+  height: 62vmin;
+  width: 70vmin;
+}
+
+
+.body::after, .tail, .hand, .eye, .blush, .water, .puff1 .puff2, .puff3 {
+  animation: waves 3s infinite forwards;
+}
+
+.body {
+  position: relative;
+}
+
+.body::after {
+  position: absolute;
+  content: '';  
+  background: #89CFF0;
+  height: 25vmin;
+  width: 33vmin; 
+  border-bottom-left-radius: 150px;
+  border-top-left-radius: 300px;
+  border-bottom-right-radius: 100px;
+  border-top-right-radius: 700px;
+  top: 18vmin;
+  left: -13vmin;
+  z-index: 1;
+}
+
+.tail {
+  position: relative;
+  top: 35vmin;
+  left:18vmin;
+  background-color: #89CFF0;
+  width: 10vmin;
+  height: 8vmin;
+  border-radius: 10% 80%;
+  border-top-left-radius: 0;
+  z-index: 1;
+}
+
+.tail::before {
+  content: '';
+  position: absolute;
+  background-color: #89CFF0;
+  width: 10vmin;
+  height: 8vmin;
+  top: -5vmin;
+  left: -1vmin;
+  border-radius: 80% 10%;
+  margin: 0 0 -130px 0;
+  border-bottom-left-radius: 0;
+}
+
+.hand {
+  position: relative;
+  top: 30vmin;
+  left: -5vmin;
+  background-color: #89CFF0;
+  width: 10vmin;
+  height: 8vmin;
+  border-radius: 10% 80%;
+  border-top-left-radius: 0;
+}
+
+.eye {
+  z-index: 2;
+  position: relative;
+  top: 18vmin;
+  left: -10vmin;
+  background-color: white;
+  width: 4vmin;
+  height: 4vmin;
+  border-radius: 50%;
+}
+
+.eye::before {
+  content: '';
+  position: absolute;
+  background-color: black;
+  width: 2vmin;
+  height: 2vmin;
+  top: 2vmin;
+  left: 1vmin;
+  border-radius: 50%;
+}
+
+.blush {
+  position: relative;
+  top: 18vmin;
+  left:-5vmin;
+  background-color: pink;
+  width: 3vmin;
+  height: 3vmin;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.water {
+  border-top: 7vmin solid #004466;
+  border-left: 4vmin solid transparent;
+  opacity:0.7;
+  border-right: 4vmin solid transparent;
+  height: 0;
+  width: 3vmin;
+  border-radius: 14px;
+  top: -10vmin;
+  position: relative;
+  left: -9vmin;
+  z-index: 1;
+}
+
+.puff1,
+.puff2,
+.puff3{
+  position: relative;
+  background: #004466;
+  box-shadow: 0 10px 10px rgba(255,255,255,.2);
+  height: 4vmin;
+  width: 4vmin;
+  border-radius: 50%;
+}
+.puff1 {
+  top: -18vmin;
+  left: -8vmin;
+  opacity: 0.5;
+  animation: move .7s .10s infinite;
+}
+.puff2 {
+  top: -22vmin;
+  left: -5vmin;
+  opacity: 0.6;
+  animation: move .8s .5s infinite;
+}
+.puff3 {
+  top: -26vmin;
+  left: -2.5vmin;
+  opacity: 0.4;
+  animation: move .6s infinite;
+}
+
+.drop {
+  height: 1vmin;
+  width: 1vmin;
+  border-radius: 50%;
+  background-color: #004466;
+  position: absolute;
+  top: 18vmin;
+  left: -5vmin;
+  opacity: 0.6;
+  animation: up 3s ease-out infinite;
+}
+
+.drop::before {
+  content: "";
+  height: 1.5vmin;
+  width: 1vmin;
+  border-radius: 50%;
+  background-color: #004466;
+  position: absolute;
+  top: 5vmin;
+  left: 2vmin;
+  animation: up 3s 0.5s ease-out infinite;
+}
+
+.drop::after {
+  content: "";
+ height: 2vmin;
+  width: 2vmin;
+  border-radius: 50%;
+  background-color: #004466;
+  position: absolute;
+  top: 5vmin;
+  left: 2vmin;
+  animation: up 3s 0.7s ease-out infinite;
+}
+
+@keyframes up {
+  0% {transform: translateY(0);}
+  30% {transform: translateY(-150px);}
+  60% {transform: translateY(0);}
+}
+
+@keyframes waves {
+  0% { transform: translate(0, 0); }
+  20%  { transform: translate(-7px, 5px) rotate(-2deg); }
+  40%  { transform: translate(7px, -5px) rotate(2deg); }
+  60%  { transform: translate(-7px, 5px) rotate(-2deg); }
+  80%  { transform: translate(7px, -5px) rotate(2deg); }
+  100% { transform: translate(0, 0); }
+}
+
+@keyframes move {
+  0% { margin-top: 0; }
+  50% { margin-top: -5px;}
+  100% { margin-top: 0px;}
+}

@@ -1,0 +1,116 @@
+body, html {
+  height: 100vh;
+  display: grid;
+  background-color: #FBAB7E;
+background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  z-index:-1000;
+  overflow: hidden;
+
+}
+
+.container {
+  position: absolute;
+  left: 15%;
+}
+
+.top-in {
+  background: linear-gradient(90deg, rgb(194, 89, 100) 60%, rgb(194, 89, 100) 70%, #B5616A 40% rgb(194, 89, 100) 60%);
+  position: absolute;
+  width: 17px;
+  left: 357px;
+  top: 60px;
+  z-index: 1000;
+  padding: 29px 22px 43px 15px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  transform: rotate(-30deg);
+  box-shadow: 0px 7px 8px 0px rgba(252, 252, 252, 0.2);
+  animation: up 5s infinite alternate;
+}
+
+.lipstick-middle {
+  background: linear-gradient(90deg, rgb(255,215,0) 0%, rgb(212, 175, 55) 5%, rgb(164, 125, 14) 20%, rgb(255,215,0) 15%, rgb(164, 125, 14) 20%, rgb(164, 125, 14) 23%, rgb(255,215,0) 25%, rgba(254,218,184,1) 32%, rgba(254,218,184,1) 22%, rgba(254,218,184,1) 35%, rgb(255,215,0) 25%, rgb(164, 125, 14) 40%, rgb(212, 175, 55) 44%, rgba(211,155,132,1) 47%, rgb(255,215,0) 50%, rgba(255,235,221,1) 53%, rgb(255,215,0) 57%, rgb(164, 125, 14) 58%, rgb(164, 125, 14) 65%, rgb(255,215,0) 70%, rgba(248,207,177,1) 68%, rgb(255,215,0) 71%, rgb(164, 125, 14) 76%, rgb(164, 125, 14) 80%, rgb(177, 152, 89) 85%, rgb(164, 125, 14) 90%);
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  left: 300px;
+  top: 360px;
+  border-left: 2px solid rgb(177, 152, 89);
+  border-bottom: 6px solid rgb(177, 152, 89);
+  border-radius: 5px;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+}
+
+.lipstick-spin {
+  background: linear-gradient(90deg, rgb(255,215,0) 0%, rgb(212, 175, 55) 5%, rgb(164, 125, 14) 20%, rgb(255,215,0) 15%, rgb(164, 125, 14) 20%, rgb(164, 125, 14) 23%, rgb(255,215,0) 25%, rgb(254,218,184,1) 52%, rgba(254,218,184,1) 35%, rgb(255,215,0) 25%, rgba(254,218,184,1) 44%, rgb(211,155,132,1) 60%, rgb(255,215,0) 70%, rgb(255,215,0) 71%, rgb(164, 125, 14) 80%, rgb(177, 152, 89) 85%, rgb(164, 125, 14) 90%);
+  width: 133px;
+  height: 140px;
+  position: absolute;
+  left: 309px;
+  top: 232px;
+  z-index: -1;
+  border-radius: 10%;
+  border-left: 2px solid rgb(177, 152, 89);
+  border-top: 2px solid rgb(177, 152, 89);
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+}
+
+.lipstick-cover {
+  background: linear-gradient(90deg, rgb(255,215,0) 0%, rgb(212, 175, 55) 5%, rgb(164, 125, 14) 20%, rgb(255,215,0) 15%, rgb(164, 125, 14) 20%, rgb(164, 125, 14) 23%, rgb(255,215,0) 25%, rgba(254,218,184,1) 52%, rgba(254,218,184,1) 35%, rgb(255,215,0) 25%, rgb(254,218,184,1) 44%, rgb(211,155,132,1) 60%, rgb(255,215,0) 70%, rgb(255,215,0) 71%, rgb(164, 125, 14) 80%, rgb(177, 152, 89) 85%, rgb(164, 125, 14) 90%);
+  width: 138px;
+  height: 35px;
+  position: absolute;
+  left: 307px;
+  top: 218px;
+  border-radius: 10%;
+  z-index: 2;
+  border-left: 2px solid rgb(177, 152, 89);
+  border-top: 5px solid rgb(177, 152, 89);
+  border-bottom: 5px solid rgb(177, 152, 89);
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+}
+
+.lipstick-bottomup {
+  background: linear-gradient(90deg, rgb(255,215,0) 0%, rgb(212, 175, 55) 5%, rgb(164, 125, 14) 20%, rgb(255,215,0) 15%, rgb(164, 125, 14) 20%, rgb(164, 125, 14) 23%, rgb(255,215,0) 25%, rgba(254,218,184,1) 52%, rgb(254,218,184,1) 35%, rgb(255,215,0) 25%, rgb(254,218,184,1) 44%, rgb(211,155,132,1) 60%, rgb(255,215,0) 70%, rgb(255,215,0) 71%, rgb(164, 125, 14) 80%, rgb(177, 152, 89) 85%, rgb(164, 125, 14) 90%);rgba(97,26,0,1) 100%);
+  position: absolute;
+  width: 155px;
+  height: 18px;
+  border-radius: 10%;
+  left: 298px;
+  top: 350px;
+  z-index: 2;
+  border-top: 3px solid rgb(177, 152, 89);
+  border-bottom: 3px solid rgb(177, 152, 89);
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+}
+
+.top {
+  width: 100px;
+  height: 220px;
+  background: linear-gradient(90deg, rgb(194, 89, 100) 10%, rgb(194, 89, 100) 10%, #B5616A 30%, #B5616A 50%, #B5616A 65%, #B5616A 75%, rgb(194, 89, 100) 90%, rgb(194, 89, 100) 100%);
+  position: absolute;
+  left: 327px;
+  top: 60px;
+  border-radius: 50% 50% 50% 50% / 50% 50% 30% 30%;
+  box-shadow: inset 0px 20px 19px 0px rgba(0,0,0,0.4);
+  z-index: -10000;
+  animation: up 5s infinite alternate;
+}
+
+
+@keyframes up {
+  0% {
+    top: 240px;
+    transform: rotate(0deg);
+    transform: rotate(3deg);
+    transform: rotate(6deg);
+    transform: rotate(9deg);
+    transform: rotate(11deg);
+    transform: rotate(14deg);
+  }
+  100% {
+    bottom: -140px;
+  }
+}

@@ -1,0 +1,422 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: blueviolet;
+  text-align: center;
+}
+
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform:translate(-50%,-50%);
+}
+
+.face {
+  width: 250px;
+  height: 200px;
+  background: blanchedalmond;
+  top: 40%;
+  border-radius: 50%;
+}
+
+.eye1 {
+  width: 15px;
+  height: 30px;
+  background: black;
+  top: 35%;
+  left: 40%;
+  border-radius: 50%;
+}
+
+.eye2 {
+  width: 15px;
+  height: 30px;
+  background: black;
+  top: 35%;
+  left: 60%;
+  border-radius: 50%;
+}
+
+.blush1 {
+  width: 15px;
+  height: 30px;
+  background: pink;
+  top: 40%;
+  left: 70%;
+  border-radius: 50%;
+  transform: rotate(90deg);
+}
+
+.blush2 {
+  width: 15px;
+  height: 30px;
+  background: pink;
+  top: 40%;
+  left: 25%;
+  border-radius: 50%;
+  transform: rotate(90deg);
+}
+
+.nose {
+  width: 50px;
+  height: 35px;
+  background: blanchedalmond;
+  top: 50%;
+  left: 51%;
+  box-shadow: -2px 1px 1px black;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.teeth1 {
+  width: 30px;
+  height: 30px;
+  background: white;
+  top: 125%;
+  left: 30%;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.teeth2 {
+  width: 30px;
+  height: 30px;
+  background: white;
+  top: 125%;
+  left: 70%;
+  z-index: -1;
+  border-radius: 5px;
+}
+
+.body {
+  width: 250px;
+  height: 250px;
+  background: red;
+  top: 120%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.hand1 {
+  width: 50px;
+  height: 100px;
+  background: red;
+  top: 100%;
+  left: 5%;
+  transform: rotate(-50deg);
+  border-radius: 50px;
+  z-index: -1;
+  box-shadow: 2px 1px 2px black;
+}
+
+.hand2 {
+  width: 50px;
+  height: 100px;
+  background: red;
+  top: 103%;
+  left: 75%;
+  transform: rotate(50deg);
+  border-radius: 50px;
+  z-index: -1;
+  box-shadow: -2px -1px 2px black;
+}
+
+.feet1 {
+  width: 70px;
+  height: 80px;
+  background: red;
+  top: 150%;
+  transform: rotate(30deg);
+  left: 10%;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.feet2 {
+  width: 70px;
+  height: 80px;
+  background: red;
+  top: 150%;
+  transform: rotate(-30deg);
+  left: 60%;
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.dot1 {
+  width: 60px;
+  height: 60px;
+  background: white;
+  top: 20%;
+  left: 10%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.dot2 {
+  width: 60px;
+  height: 60px;
+  background: white;
+  top: 10%;
+  left: 25%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.dot3 {
+  width: 60px;
+  height: 60px;
+  background: white;
+  top: 5%;
+  left: 40%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.dot4 {
+  width: 60px;
+  height: 60px;
+  background: white;
+  top: 5%;
+  left: 55%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.dot5 {
+  width: 60px;
+  height: 60px;
+  background: white;
+  top:10%;
+  left: 70%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.dot6 {
+  width: 60px;
+  height: 60px;
+  background: white;
+  top: 18%;
+  left: 85%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.hat {
+  width: 200px;
+  height: 150px;
+  background: red;
+  border-radius: 100% 20% 0 0;
+  top: -120px;
+  left:125px;
+  transform: translate(-50%, 0) rotate(1deg);
+  z-index:-1;
+}
+
+.dot7 {
+  width: 60px;
+  height: 60px;
+  background: white;
+  top: -60%;
+  left: 90%;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.mustache {
+  width: 100px;
+  height: 80px;
+  background: white;
+  border-radius: 100% 20% 100% 0;
+  top: 120px;
+  left: 51%;
+  transform-origin: top right;
+  transform: translate(-100%, 0) rotate(25deg);
+}
+
+.mustache + .mustache {
+  left: 120px;
+  border-radius: 20% 100% 0 100%;
+  transform-origin: top left;
+  transform: rotate(-25deg);
+}
+
+.beard {
+  width: 200px;
+  height: 150px;
+  background: white;
+  border-radius: 50%;
+  top: 180px;
+  left: 51%;
+}
+
+.mouth {
+  width: 35px;
+  height: 20px;
+  border: 3px solid black;
+  border-radius: 50%;
+  top: 120px;
+  left: 125px;
+  z-index: 1;
+  clip-path: polygon(0% 55%, 100% 55%, 100% 100%, 0% 100%);
+}
+
+.glove1 {
+  width: 40px;
+  height: 50px;
+  background: black;
+  top: 125%;
+  left: 20%;
+  transform: rotate(-50deg);
+  border-radius: 50px;
+  z-index: -1;
+  box-shadow: 2px 1px 2px black;
+}
+
+.glove2 {
+  width: 40px;
+  height: 50px;
+  background: black;
+  top: 125%;
+  left: 65%;
+  transform: rotate(50deg);
+  border-radius: 50px;
+  z-index: -1;
+  box-shadow: 2px 1px 2px black;
+}
+
+.finger1 {
+  width: 40px;
+  height: 20px;
+  background: black;
+  top: 126%;
+  left: 24%;
+  transform: rotate(-10deg);
+  border-radius: 50px;
+  z-index: -1;
+  box-shadow: 2px 1px 2px black;
+}
+
+.finger2 {
+  width: 40px;
+  height: 20px;
+  background: black;
+  top: 126%;
+  left: 62%;
+  transform: rotate(10deg);
+  border-radius: 50px;
+  z-index: -1;
+  box-shadow: 2px 1px 2px black;
+}
+
+.cover1 {
+  width: 50px;
+  height: 23px;
+  background: white;
+  top: 125%;
+  left: 13%;
+  transform: rotate(-50deg);
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.cover2 {
+  width: 50px;
+  height: 23px;
+  background: white;
+  top: 125%;
+  left: 69%;
+  transform: rotate(50deg);
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.cover3 {
+  width: 60px;
+  height: 23px;
+  background: white;
+  top: 180%;
+  left: 5%;
+  transform: rotate(30deg);
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.cover4 {
+  width: 60px;
+  height: 23px;
+  background: white;
+  top: 180%;
+  left: 70%;
+  transform: rotate(-30deg);
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.shoe1 {
+  width: 70px;
+  height: 30px;
+  background: black;
+  top: 188%;
+  left: -5%;
+  transform: rotate(30deg);
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.shoe2 {
+  width: 70px;
+  height: 30px;
+  background: black;
+  top: 187%;
+  left: 77%;
+  transform: rotate(-30deg);
+  border-radius: 50px;
+  z-index: -1;
+}
+
+.ear1 {
+  width: 50px;
+  height: 40px;
+  background: blanchedalmond;
+  top: 30%;
+  left: 85%;
+  transform: rotate(-30deg);
+  border-radius: 50px;;
+  z-index: -1;
+}
+
+.ear2 {
+  width: 50px;
+  height: 40px;
+  background: blanchedalmond;
+  top: 35%;
+  left: -6%;
+  transform: rotate(30deg);
+  border-radius: 50px;;
+  z-index: -1;
+}
+
+.b1 {
+  width: 270px;
+  height: 100px;
+  border: 20px solid black;
+  border-radius: 50%;
+  top: 250px;
+  left: 125px;
+  z-index: 1;
+  clip-path: polygon(0% 85%, 100% 85%, 100% 100%, 0% 100%);
+}
+
+.b2 {
+  width: 30px;
+  height: 20px;
+  border: 7px solid gold;
+  top: 309px;
+  left: 125px;
+  z-index: 1;
+}
+

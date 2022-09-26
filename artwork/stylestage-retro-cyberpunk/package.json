@@ -1,0 +1,33 @@
+{
+    "name": "stylestage-retro-cyberpunk",
+    "version": "1.0.0",
+    "title": "StyleStage - Retro Cyberpunk",
+    "description": "",
+    "author": {
+        "name": "Inès",
+        "avatar": "https://assets.codepen.io/4763128/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1602236121&width=512",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/inescodes/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/inescodes"
+            }
+        ]
+    },
+    "html": "stylestage-retro-cyberpunk.html",
+    "css": [
+        "stylestage-retro-cyberpunk.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "retro",
+        "cyberpunk"
+    ],
+    "original": "https://codepen.io/inescodes/pen/ExKEpxG",
+    "codepen": "https://codepen.io/inescodes/pen/ExKEpxG"
+}

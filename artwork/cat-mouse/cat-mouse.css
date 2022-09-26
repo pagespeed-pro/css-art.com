@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --size: 150;
+  --unit: calc((var(--size) / 470) * 1vmin);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffefef;
+}
+
+svg {
+  position: fixed;
+  bottom: 0%;
+  width: calc(100 * var(--unit));
+  height: calc(100 * var(--unit));
+}
