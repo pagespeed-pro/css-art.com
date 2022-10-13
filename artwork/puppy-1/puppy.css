@@ -1,0 +1,251 @@
+#desc {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  left: -1000in;
+}
+
+#youtube {
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.cartoon {
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 60vmin;
+  height: 60vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+html, body {
+  overflow: hidden;
+  background: #ca55;
+}
+.cartoon {
+  --nose: #222;
+  --light: #eee;
+  --skin: #ca5;
+  --fur: #654;
+}
+
+.nose {
+  background: var(--nose);
+  width: 17%;
+  height: 12%;
+  transform: rotate(25deg);
+  top:50%;
+  left: 1%;
+}
+
+.mouth {
+  width: 60%;
+  height: 30%;
+  background: var(--skin);
+  top: 50%;
+  left: 5%;
+  transform: rotate(10deg);
+}
+
+.mouth::before {
+  width: 70%;
+  height: 90%;
+  background: var(--skin);
+  border-radius: 50%;
+  transform: rotate(-30deg);
+  right: -13%;
+  top: -3%;
+}
+
+.mouth::after {
+  width: 70%;
+  height: 60%;
+  border-radius: 50%;
+  border: 0.5vmin solid transparent;
+  border-left-width: 0.125vmin;
+  border-right-width: 1vmin;
+  border-bottom: 0.5vmin solid var(--nose);
+  right: 0%;
+  top: 15%;
+  transform: rotate(-20deg);
+}
+
+.eye {
+  width: 20%;
+  height: 40%;
+  background: var(--light);
+  top: 20%;
+  left: 18%;
+  box-shadow: 12vmin 1vmin 0 2vmin var(--light), 0 0 0 3vmin var(--fur), 12vmin 1vmin 0 5vmin var(--fur), 1vmin 0 0.5vmin 3vmin #0003, 19vmin 3vmin 0 2vmin var(--fur), 12vmin 0.5vmin 0.5vmin 5vmin #0003;
+}
+
+.eye::after {
+  width: 1.5vmin;
+  height: 1.5vmin;
+  background: var(--light);
+  border-radius: 50%;
+  top: 50%;
+  left: 55%;
+  box-shadow: -1vmin 1vmin 0 2vmin var(--nose), 14vmin 0 var(--light), 13vmin 1vmin 0 2vmin var(--nose)
+}
+
+.head {
+  width: 80%;
+  height: 80%;
+  background: var(--fur);
+  left: 15%;
+}
+
+.ear {
+  width: 40%;
+  height: 75%;
+  background: #f007;
+  border-radius: 100% / 120% 120% 80% 80%;
+  top: 5%;
+  left: 63%;
+  background: var(--fur);
+  box-shadow: inset 0 0 0 15in #0004;
+  transform: rotate(-12deg);
+}
+
+.ear-back {
+  transform: scaleX(-1) rotate(-5deg);
+  left: 10%;
+}
+
+.body {
+  width: 80%;
+  height: 40%;
+  top: 75%;
+  left: 30%;
+  background: var(--fur);
+  transform: rotate(3deg);
+  border-radius: 40% /100%;
+  box-shadow: inset -3vmin 4vmin var(--fur), inset -2vmin -2vmin var(--skin);
+}
+
+@keyframes wagTail {
+  0%, 100% { transform: rotate(0) }
+  50% { transform: rotate(20deg)}
+}
+
+.body::after {
+  width: 40%;
+  height: 80%;
+  border-radius: 50%;
+  right: -15%;
+  top:-40%;
+  box-shadow: inset -2vmin -1vmin var(--fur);
+  transform-origin: bottom center;
+}
+
+.cartoon:hover .body::after {
+  animation: wagTail 0.5s infinite;
+}
+
+.body::before {
+  width: 27%;
+  height: 25%;
+  background: var(--skin);
+  bottom: 5%;
+  left: 5.5%;
+  border-radius: 100% 100% 0 100%;
+}
+
+.leg {
+  width: 18%;
+  height: 30%;
+  background: var(--fur);
+  left: 55%;
+  top: 100%;
+  box-shadow: 22vmin 0 var(--fur);
+}
+
+.leg::after {
+  width: 125%;
+  height: 25%;
+  background: var(--fur);
+  right: 0;
+  bottom: 0;
+  border-radius: 10vmin 0 0 0;
+  box-shadow: 22vmin 0 var(--fur);
+}
+
+.leg-back {
+  width: 17%;
+  left: 32%;
+  box-shadow:  25vmin 0 #0004, 25vmin 0 var(--fur);
+}
+
+.leg-back::after {
+  box-shadow:  25vmin 0 #0004, 25vmin 0 var(--fur);
+}

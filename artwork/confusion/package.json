@@ -1,0 +1,41 @@
+{
+    "name": "confusion",
+    "version": "1.0.0",
+    "title": "Confusion",
+    "description": "CSS only Psyduck, deciding on its summer plans",
+    "author": {
+        "name": "Tiffany Choong",
+        "avatar": "https://assets.codepen.io/765377/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1516941279&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/tiffachoo/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/tiffachooo"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/tiffachoo"
+            }
+        ]
+    },
+    "html": "confusion.html",
+    "css": [
+        "confusion.css"
+    ],
+    "js": "// 🦆",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css-animation",
+        "css-image",
+        "css-only",
+        "scss",
+        "psyduck"
+    ],
+    "original": "https://codepen.io/tiffachoo/pen/abdLKaP",
+    "codepen": "https://codepen.io/tiffachoo/pen/abdLKaP"
+}

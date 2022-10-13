@@ -1,0 +1,122 @@
+html, body {
+  background: #4a13;
+}
+
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 1vmin solid black;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+.pot {
+  width: 70%;
+  height: 66%;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: #f8f8f8;
+  box-shadow: inset 0.5vmin -1vmin 2vmin rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.pot::after {
+  width: 66%;
+  height: 40%;
+  border: 0.5vmin solid;
+  border-radius: 50%;
+  left: 50%;
+  top: 22%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0 5vmin #ccc, inset 0 5vmin 0 0.5vmin, inset 0 0 0 15vmin rgba(100, 60, 30, 0.75), 0 0 2vmin 5vmin #fff;
+  background-image:
+    radial-gradient(rgba(0,0,0,0.2) 0.25vmin, transparent 0.25vmin),
+    radial-gradient(rgba(0,0,0,0.2) 0.25vmin, transparent 0.25vmin),
+    radial-gradient(rgba(0,0,0,0.2) 0.125vmin, transparent 0.25vmin),
+    radial-gradient(rgba(0,0,0,0.2) 0.25vmin, transparent 0.25vmin),
+    radial-gradient(rgba(0,0,0,0.2) 0.125vmin, transparent 0.25vmin),
+    radial-gradient(rgba(0,0,0,0.2) 0.25vmin, transparent 0.25vmin);
+    background-size: 15% 13%, 10% 10%, 20% 20%, 30% 30%, 40% 40%, 50% 50%;
+    background-position: 15% 13%, 10% 10%, -18% 20%, 38% 30%, 40% 40%, 50% 50%;
+}
+
+.shadow {
+  width: 60%;
+  height: 30%;
+  background: rgba(0,0,0,0.2);
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  filter: blur(0.5vmin);
+}
+
+.plant-shadow {
+  width: 20%;
+  height: 8%;
+  top: 43.5%;
+  opacity: 0.4;
+}
+
+.plant {
+  width: 30%;
+  height: 50%;
+  left: 50%;
+  top: 5%;
+  transform: translate(-93%, 1%);
+  box-shadow: 2vmin 0 0 -1vmin, 3.5vmin 0 0 -1vmin green, 4.5vmin 0 0 -1vmin;
+  clip-path: polygon(0% 5%, 75% 5%, 75% 0%, 150% 0%, 150% 80%, 95% 85.5%, 0% 70%);
+}
+
+.plant::after {
+  width: 12%;
+  height: 5%;
+  border-radius: 50%;
+  top: 78.5%;
+  left: 89.5%;
+  box-shadow: -0.6vmin 1vmin 0 -0.25vmin
+}
+
+.leave {
+  width: 20%;
+  height: 18%;
+  backgorund: green;
+  border-radius: 100% 0% 100%;
+  top: 10%;
+  left: 54.75%;
+  background: green;
+  background-image: radial-gradient(at 110% -10%, #ff04, green 60%);
+  border-right-width: 0.6vmin;
+  border-top-width: 0.6vmin;
+}
+
+.leave-2 {
+  top: 3.25%;
+  left: 23%;
+  transform: rotate(20deg);
+  border-right-width: 0.5vmin;
+  border-top-width: 0.33vmin;
+  background-image: radial-gradient(at -10% 110%, #ff04, green 60%);
+}

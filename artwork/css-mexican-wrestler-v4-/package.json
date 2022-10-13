@@ -1,0 +1,41 @@
+{
+    "name": "css-mexican-wrestler-v4-",
+    "version": "1.0.0",
+    "title": "CSS Mexican Wrestler (v4)",
+    "description": "A CSS only cartoon inspired by [Mexican Wrestler](https://www.vecteezy.com/vector-art/173173-mexican-wrestler-cartoon-vector) by OrangeReebok. \n\nAnd a time-lapse video of how it was coded: https://www.youtube.com/watch?v=AOFV9XpAaFU",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "css-mexican-wrestler-v4-.html",
+    "css": [
+        "css-mexican-wrestler-v4-.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "html",
+        "cartoon",
+        "luchador",
+        "cssart"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/MWmZEbL",
+    "codepen": "https://codepen.io/alvaromontoro/pen/MWmZEbL"
+}

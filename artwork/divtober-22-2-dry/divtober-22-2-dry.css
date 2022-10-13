@@ -1,0 +1,47 @@
+.dry {
+  --rain: #fff8;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: 
+    conic-gradient(at 0.5vmin 3vmin, #0000 270deg, var(--rain) 0) 17% 17% / 33% 33%,
+    conic-gradient(at 0.5vmin 2vmin, #0000 270deg, var(--rain) 0) 21% 21% / 23% 37%,
+    conic-gradient(at 0.5vmin 2.5vmin, #0000 270deg, var(--rain) 0) 3% -24% / 17% 23%,
+    conic-gradient(at 0.5vmin 3vmin, #0000 270deg, var(--rain) 0) 47% 27% / 30% 28%,
+    conic-gradient(at 0.5vmin 2vmin, #0000 270deg, var(--rain) 0) 39% 33% / 19% 31%,
+    conic-gradient(at 0.5vmin 2.5vmin, #0000 270deg, var(--rain) 0) -10% -14% / 18% 24%,
+    conic-gradient(at 0.5vmin 3vmin, #0000 270deg, var(--rain) 0) 17% 1% / 31% 17%,
+    conic-gradient(at 0.5vmin 2vmin, #0000 270deg, var(--rain) 0) 51% 5% / 23% 20%,
+    conic-gradient(at 0.5vmin 2.5vmin, #0000 270deg, var(--rain) 0) 69% 10% / 17% 29%,
+    conic-gradient(at 0.5vmin 3vmin, #0000 270deg, var(--rain) 0) 84% -7% / 21% 19%,
+    lightslategray;
+}
+
+.dry::after {
+  --handle: #630;
+  --umbrella: #922;
+  --bar: #666;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 40vmin;
+  height: 70vmin;
+  border-radius: 40vmin 40vmin 0 0;
+  box-shadow: 0 -21vmin 0 -19.66vmin var(--bar);
+  background:
+    radial-gradient(230% 80% at 50% 0, var(--umbrella) 40%, #0000 40.2%),
+    linear-gradient(var(--handle) 0 0) 50% 60% / 3.5% 7%,
+    radial-gradient(farthest-side at 50% 0, #0000 55%, var(--handle) 61.5% 98.5%, #0000 99.99%) 58.75% 66% / 18% 5%,
+    linear-gradient(var(--bar) 0 0) 50% 0 / 2.5% 60%,
+    white;
+  background-repeat: no-repeat;
+}
+
+.dry.bn {
+  --rain: #6a6a6a;
+  filter: contrast(400%) grayscale(100%);
+}

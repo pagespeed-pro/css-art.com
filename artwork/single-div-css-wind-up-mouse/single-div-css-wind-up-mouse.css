@@ -1,0 +1,61 @@
+body {
+  min-height: 220px;
+  height: 100vh;
+  position: relative;
+  background-color: #deb887;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div:before,
+div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+@media (max-width: 400px) {
+  div:not(.no-scale) {
+    transform: scale(0.8);
+  }
+}
+#winding {
+  width: 15.5em;
+  height: 8em;
+  margin-left: -7.25em;
+  margin-top: -4em;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, rgba(255,250,205,0) 25%, #fffacd 25.5%, #fffacd 50.5%, rgba(255,250,205,0) 51%), radial-gradient(circle, rgba(240,230,140,0) 25%, #f0e68c 25.5%, #f0e68c 50%, rgba(240,230,140,0) 50.5%), radial-gradient(circle, #552a0c 50%, rgba(139,69,19,0) 51%);
+  background-size: 4em 4em, 4em 4em, 3.4em 3.4em;
+  background-position: 30% 0, 55% 0, left -0.45em bottom 0.8em;
+  border-radius: 0 4em 6em 0;
+  border-top: 0.1em solid transparent;
+  border-right: 0.7em solid #8b4513;
+  border-bottom: 0.7em solid #8b4513;
+}
+#winding:before {
+  width: 13.5em;
+  height: 5em;
+  bottom: -1em;
+  right: 2.6em;
+  background-color: #d2691e;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, #311807 50%, rgba(139,69,19,0) 51%);
+  background-size: 4.5em 4.5em;
+  background-position: right 0.3em bottom -1.3em;
+  border-top-left-radius: 10em 5em;
+  border-top-right-radius: 4em;
+  border-bottom-right-radius: 1em;
+  box-shadow: inset -1.8em 1.2em 0 rgba(0,0,0,0.15);
+}
+#winding:after {
+  width: 14em;
+  height: 10em;
+  right: 2.5em;
+  bottom: -1.5em;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle at 50% 70%, #7e3e11 40%, rgba(139,69,19,0) 41%), radial-gradient(circle, #311807 50%, rgba(139,69,19,0) 51%), radial-gradient(circle at 70% 50%, #48240a 40%, rgba(139,69,19,0) 41%), radial-gradient(circle, black 20%, #555 20%, #555 50%, rgba(0,0,0,0) 51%), linear-gradient(to right, #fffacd 50%, #f0e68c 50%), radial-gradient(circle at 50% -0.4em, #444 40%, rgba(0,0,0,0) 41%);
+  background-size: 3.4em 3.4em, 0.5em 0.5em, 1em 1em, 3.5em 3.5em, 1em 2.6em, 2em 1em;
+  background-position: left 1.9em bottom 3.1em, left 1.7em bottom 2em, left -0.3em bottom 0.35em, right 0.9em bottom -0.3em, 56.5% 2.6em, left 2em bottom -0.5em;
+}

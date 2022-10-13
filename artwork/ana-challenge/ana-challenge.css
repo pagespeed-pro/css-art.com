@@ -1,0 +1,28 @@
+body,html {
+  background:#000;
+}
+body {
+  filter: blur(3px) contrast(9.5) hue-rotate(310deg);
+  height: calc(100vh - 16px);
+}
+body,.tri {
+  display:grid;
+}
+.tri {
+  margin:auto;
+  width:100px;
+  height:86px;
+}
+.tri,
+.tri > * {
+  background:conic-gradient(from 150deg at top,#f00 60deg,#0000 0);
+}
+
+.tri > * {
+  grid-area:1/1;
+  transform:rotate(60deg);
+  animation:a infinite 1.5s;
+}
+@keyframes a {
+  to {transform:rotate(300deg)}
+}

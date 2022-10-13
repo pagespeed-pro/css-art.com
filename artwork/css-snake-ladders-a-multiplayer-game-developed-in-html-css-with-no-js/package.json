@@ -1,0 +1,41 @@
+{
+    "name": "css-snake-ladders-a-multiplayer-game-developed-in-html-css-with-no-js",
+    "version": "1.0.0",
+    "title": "CSS Snake & Ladders: a multiplayer game developed in HTML+CSS with no JS",
+    "description": "Snakes and Ladders is an ancient Indian board game regarded today as a worldwide classic.\n\nThis is a multiplayer version (1-4 players) developed using HTML and CSS without any JavaScript. It is based on the idea of using radio-buttons, and labels to activate the radios, making the pieces move only using CSS positioning.\n\nOlder versions:\n- One-player version: https://codepen.io/alvaromontoro/pen/ejzJBJ\n- Simplified two-player version: https://codepen.io/alvaromontoro/details/zLNdZQ/",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "css-snake-ladders-a-multiplayer-game-developed-in-html-css-with-no-js.html",
+    "css": [
+        "css-snake-ladders-a-multiplayer-game-developed-in-html-css-with-no-js.css"
+    ],
+    "js": "// no JavaScript",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "html",
+        "css",
+        "no-javascript",
+        "game",
+        "css3"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/gjWPNW",
+    "codepen": "https://codepen.io/alvaromontoro/pen/gjWPNW"
+}

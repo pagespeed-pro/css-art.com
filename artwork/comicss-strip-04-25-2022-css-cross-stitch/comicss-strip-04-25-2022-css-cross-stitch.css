@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+body {
+  perspective: 1000px;
+  margin: 0;
+  height: 100vh;
+}
+
+article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(0);
+}
+
+.box {
+   background:
+    radial-gradient(#0001 15%, #0000 0) 0 0 / 2vmin 2vmin
+    ;
+  background-color: #fff;
+  width: 96vmin;
+  height: 48vmin;
+  border: 0.5vmin solid;
+  border-radius: 0.5vmin;
+  overflow: hidden;
+}
+
+.box *,
+.box *::before,
+.box *::after {
+  position: absolute;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+}
+
+.stitch,
+.stitch::before {
+  left: calc(var(--x) * 2vmin);
+  top: calc(var(--y) * 2vmin);
+  width: 3vmin;
+  height: 0.75vmin;
+  background:
+    linear-gradient(90deg, var(--c), #0000 10% 25%, #0006 50%, #0000 75% 90%, var(--c)),
+    repeating-linear-gradient(#0000 0 20%, #0003 0 25%),
+    repeating-linear-gradient(#0000 0 15%, #fff4 0 20%, #0000 0 25%),
+    var(--c);
+  border-radius: 100vmin;
+  transform: translate(-33.333%, 0.133333%) rotate(45deg);
+}
+
+.stitch::before {
+  content: "";
+  top: 50%;
+  left: 50%;
+  background:
+    linear-gradient(90deg, var(--c), #0000 20% 80%, var(--c)),
+    repeating-linear-gradient(#0000 0 20%, #0003 0 25%),
+    repeating-linear-gradient(#0000 0 15%, #fff4 0 20%, #0000 0 25%),
+    var(--c)
+    ;
+  transform: translate(-50%, -50%) rotate(90deg);
+  filter: brightness(1.2);
+}
+
+.needle {
+  width: 35%;
+  height: 1.5%;
+  background: 
+    radial-gradient( 30% 200% at 95% 50%, white 10%, #0000 0),
+    linear-gradient(90deg, #0000 90%, #fc58)
+    silver;
+  border-radius: 170% 2vmin 2vmin 170% / 100%;
+  top: 31.125vmin;
+  left: 51.25vmin;
+  transform: rotate(-20deg);
+  -webkit-mask:
+    radial-gradient(circle at 0 50%, #000 16%, #0000 0),
+    radial-gradient(circle at 100% 50%, #000 33.5%, #0000 0);
+}
+
+.needle::before {
+  content: "";
+  width: 60%;
+  height: 30vmin;
+  background: #f004;
+  overflow: visible;
+  left: 100%;
+}
+
+input:checked ~ article {
+  transform: translate(-50%, -50%) rotateY(180deg);
+}
+
+input:checked ~ article .needle {
+  -webkit-mask:
+    radial-gradient(circle at 41% 50%, #000 43%, #0000 0)
+}
+
+input:checked ~ article .stitch {
+  width: 2.125vmin;
+  height: 0.55vmin;
+  transform: translate(-33.333%, -133.33%);
+  background:
+    linear-gradient(90deg, var(--c), #0000 20% 80%, var(--c)),
+    repeating-linear-gradient(#0000 0 20%, #0003 0 30%),
+    repeating-linear-gradient(#0000 0 15%, #fff4 0 24%, #0000 0 25%),
+    var(--c)
+    ;
+}
+
+input:checked ~ article .stitch::before {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width:100%;
+  transform-origin: 0% 50%;
+  transform: rotate(90deg); translate(-0.5vmin, -0.4vmin);
+  filter: brightness(1.2);
+  display: none;
+}
+
+input:checked ~ article .stitch:nth-child(5n)::before {
+  display: block;
+}
+
+input:checked ~ article .stitch:nth-child(9n)::before {
+  width: 70%;
+  aspect-ratio: 1.1;
+  border-radius: 80% 50% 120% 38%;
+  height: auto;
+  display: block;
+  box-shadow: inset -0.1vmin 0.1vmin 0.1vmin #0004;
+  transform: translate(-50%, -20%);
+}
+
+input:checked ~ article .stitch:nth-child(20n)::before {
+  width: 300%;
+  aspect-ratio:2.5;
+  height: auto;
+  border-radius: 10% 130% 100% 120%;
+  background: #0000;
+  box-shadow: 
+    -0.25vmin -0.25vmin var(--c),
+    0.25vmin -0.25vmin var(--c),
+    -0.25vmin 0.25vmin 0 0.1vmin #0004,
+    -0.25vmin 0.25vmin 0 0.1vmin var(--c);
+  display: block;
+  transform: translate(0, 0.4vmin)  rotate(calc((var(--x) + var(--y)) * -60deg)) skew(30deg);
+  transform-origin: top left;
+  filter: drop-shadow(0.4vmin 0 var(--c))
+}
+
+input:checked ~ article .stitch:nth-child(40n)::before {
+  transform: translate(0, 0.4vmin) rotate(calc((var(--x) + var(--y)) * -30deg)) skew(40deg);
+  filter: drop-shadow(0.4vmin 0 var(--c)) drop-shadow(-0.3vmin 0.4vmin var(--c))
+    
+}
+input:checked ~ article .stitch:nth-child(40n)::after {
+  content: "";
+  width: 1vmin;
+  height: 1vmin;
+  background: var(--c);
+  border-radius: 50%;
+  transform: translate(-0.5vmin, 0.2vmin);
+}
+
+input:checked ~ article .stitch:nth-child(15n)::after {
+  content: "";
+  width: 320%;
+  height: 0.5vmin;
+  background: var(--c);
+  border-radius: 50%;
+  transform-origin: top left;
+  transform: translate(-0.5vmin, 0.2vmin) rotate(calc((var(--x) + var(--y)) * -93deg));
+}
+
+input:checked ~ article .stitch:nth-child(15n)::before {
+  content: "";
+  width: 320%;
+  height: 0.5vmin;
+  background: var(--c);
+  border-radius: 50%;
+  atransform-origin: top left;
+  transform: translate(-0.5vmin, 0.2vmin) rotate(calc((var(--x) + var(--y)) * -93deg + 3deg) );
+}
+
+.text {
+  top: auto;
+  bottom: 0;
+  left: 0;
+  padding: 2vmin;
+  font-family: 'Comic Neue', Helvetica,Arial, sans-serif;
+  font-size: 3vmin;
+  background: #ffd;
+  border: 0.5vmin solid;
+  padding-right: 4vmin;
+}
+
+.text::before {
+  position: relative;
+  top: auto;
+  left: auto;
+  content: "How the web page looks like 😎"
+}
+
+input:checked ~ article .text {
+  transform: scaleX(-1);
+  right: 0;
+  left: auto;
+}
+
+input:checked ~ article .text::before {
+  content: "...how the CSS code actually looks like 😰"
+}
+
+input {
+  position: absolute;
+  left: -1000px;
+}
+
+label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-48.5vmin, -30vmin) rotateY(0deg);
+  line-height: 2vmin;
+  font-family: Helvetica, Arial, sans-serif;
+  background: #def8;
+  display: inline-block;
+  padding: 1vmin;
+  border: 0.5vmin solid;
+  border-radius: 0.5vmin;
+  cursor: pointer;
+  font-size: 2vmin;
+  transition: transform 0.5s;
+}
+
+input:checked + label {
+  transform: translate(-48.5vmin, -30vmin) rotateY(360deg);
+}

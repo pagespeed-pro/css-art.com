@@ -1,0 +1,335 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    --background: #432680;
+    --shadow: #351c6bbd;
+    --ring-light: #00b7ff;
+    --ring-dark: #008dc5;
+}
+
+.canvas {
+    width: 50vw;
+    min-width: 620px;
+    max-width: 1500px;
+    aspect-ratio: 4/3;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+}
+
+.canvas * {
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.saturn-container {
+    height: 60%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+
+.saturn-shadow {
+    width: 46%;
+    aspect-ratio: 4/1;
+    background-color: var(--shadow);
+    border-radius: 100%;
+    top: 250px;
+    filter: blur(12px);
+    animation: moveShadow 0.5s linear alternate-reverse infinite;
+}
+
+@keyframes moveShadow {
+    to {
+        transform: scaleY(1.2) scaleX(1.2);
+    }
+}
+
+.saturn-ball {
+    height: 30%;
+    aspect-ratio: 1/1;
+    background-color: #e9e9e9;
+    border-radius: 100%;
+    box-shadow: inset -15px -15px 20px #16003f88;
+    z-index: 1;
+    z-index: 4;
+    animation: moveBall linear 0.5s infinite alternate-reverse;
+    transform: scale(0.85) translate(-10px);
+    overflow: hidden;
+}
+
+@keyframes moveBall {
+    to {
+        transform: scale(1) translate(10px);
+    }
+}
+
+.ring {
+    aspect-ratio: 1;
+    width: 46%;
+    background-color: transparent;
+    border-radius: 100%;
+    border: 30px solid var(--ring-light);
+    transform: rotatex(70deg) translateX(10px) rotateY(-10deg);
+    top: 19%;
+    animation: moveRing linear 0.5s infinite alternate-reverse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px var(--ring-dark);
+}
+
+@keyframes moveRing {
+    to {
+        transform: rotatex(80deg) translateX(-10px) rotateY(10deg);
+    }
+}
+
+.ring::after {
+    aspect-ratio: 1;
+    width: 165%;
+    content: "";
+    position: absolute;
+    border: 4px solid #fff;
+    border-color: var(--ring-dark) transparent transparent transparent;
+    border-radius: 100%;
+    transform: rotate(0deg);
+    animation: moveOuter 0.6s linear infinite;
+}
+
+@keyframes moveOuter {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.face {
+    height: 40%;
+    width: 50%;
+    top: 36px;
+    left: 23px;
+    transform: translate(-69px);
+    animation: moveFace 2s linear infinite;
+}
+
+@keyframes moveFace {
+    to {
+        transform: translate(129px);
+    }
+}
+
+.left-eye {
+    height: 14%;
+    width: 12%;
+    background-color: #000;
+    border-radius: 100%;
+    filter: blur(1.5px);
+    animation: blink 0.5s linear infinite alternate-reverse;
+    transform: scaleY(0.8) scalex(0.8);
+}
+
+.right-eye {
+    height: 14%;
+    width: 12%;
+    background-color: #000;
+    border-radius: 100%;
+    filter: blur(1.5px);
+    right: 0;
+    animation: blink 0.5s linear infinite alternate-reverse;
+    transform: scaleY(0.8) scalex(0.8);
+}
+
+@keyframes blink {
+    to {
+        transform: scaleY(0.5) scalex(0.5);
+    }
+}
+
+.mouth {
+    height: 30%;
+    width: 20%;
+    top: 17px;
+    left: 18px;
+    filter: blur(1.5px);
+    transform: scaleX(1.2);
+}
+
+.mouth::after {
+    height: 100%;
+    width: 100%;
+    clip-path: circle(50% at 50% 0);
+    position: absolute;
+    content: "";
+    background-color: red;
+    bottom: -5px;
+}
+
+.mouth::before {
+    width: 100%;
+    position: absolute;
+    content: "";
+    height: 21%;
+    background-color: #000;
+    z-index: 1;
+    top: 4px;
+}
+
+.uranus {
+    height: 11%;
+    aspect-ratio: 1;
+    background-color: #e8f5ff;
+    border-radius: 100%;
+    top: 10%;
+    box-shadow: inset -15px -15px 20px #0039d693, 0px 250px 30px -5px var(--shadow);
+    left: 15%;
+    animation: moveUranus 3s linear infinite;
+}
+
+@keyframes moveUranus {
+    0% {
+        transform: translate(0%);
+    }
+    10% {
+        transform: translate(0%);
+    }
+    20% {
+        transform: translate(0%);
+    }
+    30% {
+        transform: translate(0%);
+    }
+    40% {
+        transform: translate(0%);
+    }
+    50% {
+        transform: translate(750%);
+    }
+    60% {
+        transform: translate(750%);
+    }
+    70% {
+        transform: translate(750%);
+    }
+    80% {
+        transform: translate(750%);
+    }
+    90% {
+        transform: translate(750%);
+    }
+    100% {
+        transform: translate(0%);
+    }
+}
+
+.eyes {
+    height: 30%;
+    width: 45%;
+    /* top: 71%; */
+    /* right: 40%; */
+    filter: blur(0.6px);
+    transform: rotate(-15deg) translatex(60%) translateY(250%);
+    /* transform: rotate(15deg) translatex(70%) translateY(200%); */
+    animation: moveEyes 3s linear infinite;
+}
+
+@keyframes moveEyes {
+    0% {
+        transform: rotate(-15deg) translatex(60%) translateY(250%);
+    }
+    10% {
+        transform: rotate(-15deg) translatex(60%) translateY(235%);
+    }
+    20% {
+        transform: rotate(-15deg) translatex(60%) translateY(220%);
+    }
+    30% {
+        transform: rotate(-15deg) translatex(60%) translateY(220%);
+    }
+    40% {
+        transform: rotate(-15deg) translatex(60%) translateY(225%);
+    }
+    50% {
+        transform: rotate(15deg) translatex(70%) translateY(200%);
+    }
+    60% {
+        transform: rotate(15deg) translatex(70%) translateY(185%);
+    }
+    70% {
+        transform: rotate(15deg) translatex(70%) translateY(170%);
+    }
+    80% {
+        transform: rotate(15deg) translatex(70%) translateY(170%);
+    }
+    90% {
+        transform: rotate(15deg) translatex(70%) translateY(175%);
+    }
+    100% {
+        transform: rotate(-15deg) translatex(60%) translateY(250%);
+    }
+}
+
+.eyes::after,
+.eyes::before {
+    content: "";
+    position: absolute;
+    height: 25%;
+    aspect-ratio: 1;
+    background-color: #000;
+    border-radius: 100%;
+    animation: uranusBlink 3s linear alternate-reverse infinite;
+}
+
+@keyframes uranusBlink {
+    0% {
+        transform: scale(0.2);
+    }
+    10% {
+        transform: scale(1);
+    }
+    20% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.2);
+    }
+    60% {
+        transform: scale(1);
+    }
+    70% {
+        transform: scale(1);
+    }
+    80% {
+        transform: scale(1);
+    }
+    90% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.eyes::after {
+    right: 0;
+}
+
+.eyes::before {
+    left: 0;
+}

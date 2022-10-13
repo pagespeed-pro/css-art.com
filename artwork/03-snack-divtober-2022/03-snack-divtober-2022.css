@@ -1,0 +1,66 @@
+/* Presets */
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --dark-brown: #1A1004;
+  --brown: #36240C;
+  --tan: #DBBDA8;
+  --white: #FFFFFF;
+  --gray: #D9D9D9;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: var(--tan);
+}
+
+div:before, div:after {
+  display: block;
+  contnet: "";
+  position: absolute;
+}
+
+div.snack {
+  width: 100%;
+  max-width: 130vh;
+  height: 70vh;
+  margin: 15vh 0;
+  overflow: visible;
+  margin: 0 auto;
+  --brownie1:
+    /* brownie top SW */ linear-gradient(-160deg, var(--brown) 40%, transparent 40%) 25vh 10vh / 46vh 20vh no-repeat,
+    /* brownie top SE */ linear-gradient(150deg, var(--brown) 40%, transparent 40%) 70vh 10vh / 30vh 20vh no-repeat,
+    /* brownie top NE */ linear-gradient(13deg, var(--brown) 40%, transparent 40%) 57vh -4vh / 38.5vh 15vh no-repeat,
+    /* brownie top NW */ linear-gradient(-18deg, var(--brown) 40%, transparent 40%) 28vh -2.5vh / 30vh 13vh no-repeat,
+    /* brownie side SW */ linear-gradient(-160deg, var(--dark-brown) 40%, transparent 40%) 31vh 10vh / 41vh 50vh no-repeat,
+    /* brownie side SE */ linear-gradient(145deg, var(--dark-brown) 40%, transparent 40%) 70vh 10.5vh / 25.5vh 46vh no-repeat;
+  --brownie2:
+  /* brownie top Sw */ linear-gradient(-150deg, var(--brown) 40%, transparent 40%) 9vh 20vh / 46vh 20vh no-repeat,
+  /* brownie top SE */ linear-gradient(160deg, var(--brown) 40%, transparent 40%) 55vh 25vh / 40vh 20vh no-repeat,
+  /* brownie top NE */ linear-gradient(20deg, var(--brown) 40%, transparent 40%) 53vh 5vh / 45vh 20vh no-repeat,
+  /* brownie top NW */ linear-gradient(-18deg, var(--brown) 40%, transparent 40%) 9vh 10vh / 44vh 10vh no-repeat,
+  /* brownie side SW */ linear-gradient(-147deg, var(--dark-brown) 40%, transparent 40%) 23vh 20vh / 32vh 54vh no-repeat,
+  /* brownie side SE */ linear-gradient(155deg, var(--dark-brown) 40%, transparent 40%) 55vh 25vh / 38vh 45vh no-repeat;
+  --brownie3:
+    /* brownie top Sw */ linear-gradient(-160deg, var(--brown) 40%, transparent 40%) 19vh 40vh / 46.5vh 20vh no-repeat,
+    /* brownie top SE */ linear-gradient(150deg, var(--brown) 40%, transparent 40%) 65vh 40vh / 30vh 20vh no-repeat,
+    /* brownie top NE */ linear-gradient(19deg, var(--brown) 40%, transparent 40%) 54vh 20vh / 37vh 20vh no-repeat,
+    /* brownie top NW */ linear-gradient(-24deg, var(--brown) 40%, transparent 40%) 24vh 20vh / 30vh 20vh no-repeat,
+    /* brownie side SW */ linear-gradient(-160deg, var(--dark-brown) 40%, transparent 40%) 24vh 40vh / 42vh 50vh no-repeat,
+    /* brownie side SE */ linear-gradient(145deg, var(--dark-brown) 40%, transparent 40%) 65.5vh 40vh / 25.5vh 48vh no-repeat;
+  --napkin:
+    /* brownie top Sw */ linear-gradient(-160deg, var(--white) 40%, transparent 40%) 10vh 50vh / 66.5vh 40vh no-repeat,
+    /* brownie top SE */ linear-gradient(150deg, var(--white) 40%, transparent 40%) 64vh 50vh / 50vh 40vh no-repeat,
+    /* brownie top NE */ linear-gradient(19deg, var(--white) 40%, transparent 40%) 55vh 10vh / 57vh 40vh no-repeat,
+    /* brownie top NW */ linear-gradient(-24deg, var(--white) 40%, transparent 40%) 10vh 10vh / 50vh 40vh no-repeat;
+  background: var(--brownie1), var(--brownie2), var(--brownie3), var(--napkin);
+}

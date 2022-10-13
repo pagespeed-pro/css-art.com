@@ -1,0 +1,50 @@
+.loader {
+  --s: 200px;
+  display: grid;
+  place-items: center;
+  transform-origin: 50% 66.6%;
+  animation: r 2s infinite reverse;
+}
+.loader:before,
+.loader:after {
+  content: "";
+  grid-area: 1/1;
+  aspect-ratio: 1.154;
+  width: var(--s);
+  transform-origin: inherit;
+  clip-path: polygon(50% 0,100% 100%,0 100%);
+  background: #79BD9A;
+  --_g:#000 calc(var(--s)*.433),#0000 calc(var(--s)*.44);
+  -webkit-mask:
+    var(--_m, )
+    linear-gradient(180deg,var(--_g)),
+    linear-gradient( 60deg,var(--_g)),
+    linear-gradient(-60deg,var(--_g));
+}
+.loader:after {
+   -webkit-mask-composite: xor;
+           mask-composite: exclude;
+  --_m:linear-gradient(#000 0 0),;
+  animation: r 2s infinite cubic-bezier(.5,.2,.5,.75);
+}
+.loader:before {
+  animation: l 2s infinite linear;
+}
+@keyframes l {
+  50% {
+    width:calc(1.25*var(--s));
+    transform:translateY(calc(-0.038*var(--s)))
+  }
+}
+@keyframes r{
+  100% {transform:rotate(120deg)}
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+  background: #0B486B;
+}

@@ -1,0 +1,40 @@
+{
+    "name": "single-div-css-cross-stitch",
+    "version": "1.0.0",
+    "title": "Single div CSS cross stitch",
+    "description": "Single div CSS cross-stitch illustration. I wrote some mixins to produce this, but it broke the pre-processor, so had to use the compiled CSS here. 😅",
+    "author": {
+        "name": "Lynn Fisher",
+        "avatar": "https://s.cdpn.io/profiles/user/1025350/512.jpg?1",
+        "web": "https://lynnandtonic.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/lynnandtonic"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/lynnandtonic"
+            },
+            {
+                "title": "Medium.com",
+                "url": "https://medium.com/@lynnandtonic"
+            }
+        ]
+    },
+    "html": "single-div-css-cross-stitch.html",
+    "css": [
+        "single-div-css-cross-stitch.css"
+    ],
+    "js": "// @lynnandtonic\n// a.singlediv.com",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "illustration",
+        "thread",
+        "lettering"
+    ],
+    "original": "https://codepen.io/lynnandtonic/pen/VweJKbg",
+    "codepen": "https://codepen.io/lynnandtonic/pen/VweJKbg"
+}

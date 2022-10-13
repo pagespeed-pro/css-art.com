@@ -1,0 +1,258 @@
+body {
+  background: white;
+}
+.car-down {
+  position: relative;
+  height: 75px;
+  width: 300px;
+  border-radius: 20px;
+
+  top: 50px;
+  border-top-right-radius: 40px;
+  background: #ee4643;
+}
+.car-down-down {
+  position: relative;
+  height: 45px;
+  width: 300px;
+  top: 25px;
+  background: #ee2e26;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-top-right-radius: 7px;
+  border-bottom: 7px solid #d3262a;
+}
+.wheel-left {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: #4d4a4e;
+
+  top: 20px;
+  position: relative;
+  left: -85px;
+}
+.wheel-right {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background: #4d4a4e;
+
+  top: -40px;
+  position: relative;
+  left: 85px;
+}
+.inside {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #9d9d9d;
+  top: 10px;
+  position: relative;
+  border: 3px solid #d1cfd0;
+}
+.car-up {
+  clip-path: polygon(15% 0, 85% 0, 100% 40%, 0 40%);
+  width: 180px;
+  height: 180px;
+  background: #5a5a5a;
+  top: 190px;
+  position: relative;
+  left: -45px;
+}
+.window-a {
+  clip-path: polygon(15% 0, 50% 0, 50% 40%, 0 40%);
+  background: #70b6ba;
+  width: 130px;
+  height: 130px;
+  top: 10px;
+  position: absolute;
+  left: 25px;
+}
+.window-b {
+  clip-path: polygon(85% 0, 50% 0, 50% 40%, 100% 40%);
+  background: #70b6ba;
+  width: 130px;
+  height: 130px;
+  top: 10px;
+  position: absolute;
+  left: 35px;
+}
+.roof {
+  width: 125px;
+  height: 7px;
+  border-radius: 25px;
+  background: linear-gradient(to bottom, #e2d3dc, #b5aaad);
+  position: relative;
+  top: -225px;
+  left: -45px;
+}
+.hold {
+  position: relative;
+  height: 10px;
+  width: 15px;
+  background: linear-gradient(to bottom, #e2d3dc, #b5aaad);
+}
+.a {
+  left: 45px;
+  top: 15px;
+}
+.b {
+  left: -45px;
+  top: 5px;
+}
+.c {
+  top: -5px;
+}
+.rod {
+  width: 8px;
+  height: 10px;
+  background: linear-gradient(to right, #e2d3dc, #b5aaad);
+  top: -10px;
+  position: relative;
+}
+.suitcase {
+  height: 30px;
+  width: 100px;
+  background: #585a5a;
+  border-radius: 25px;
+  position: relative;
+  top: -60px;
+}
+.rope {
+  height: 30px;
+  width: 0px;
+
+  border: solid 1px #494949;
+  position: relative;
+  top: -2px;
+  border-radius: 25px;
+}
+.d {
+  left: 25px;
+}
+.e {
+  left: -25px;
+  top: -34px;
+}
+.scratch {
+  width: 2px;
+  height: 30px;
+  background: #7ccbcc;
+  position: relative;
+  border-radius: 25px;
+
+  transform: rotate(35deg);
+}
+.f {
+  top: 10px;
+  left: -20px;
+}
+.g {
+  top: -20px;
+  left: -35px;
+}
+.h {
+  top: 10px;
+  left: 20px;
+}
+.i {
+  top: -20px;
+  left: 35px;
+}
+.section {
+  height: 72px;
+  width: 0px;
+  z-index: 2;
+  border: solid 1px #d3262a;
+  position: relative;
+}
+.j {
+  top: -25px;
+  left: -33px;
+}
+.k {
+  top: -98px;
+  left: 40px;
+}
+.door {
+  height: 4px;
+  width: 15px;
+  background: #d3262a;
+  border-radius: 25px;
+  top: 50px;
+  position: relative;
+}
+.l {
+  top: -150px;
+  left: -55px;
+}
+.m {
+  top: -154px;
+  left: -12px;
+}
+.light-head {
+  width: 7px;
+  height: 20px;
+  background: #d2cdcf;
+  position: relative;
+  top: -157px;
+  left: 149px;
+}
+.light1 {
+  width: 5px;
+  height: 0px;
+  border: 10px solid #f5a721;
+
+  position: relative;
+  top: 94px;
+  left: 147px;
+  border-radius: 50%;
+}
+.light2 {
+  width: 15px;
+  height: 15px;
+  border-bottom: solid 8px #dd4d50;
+  background: #f5a721;
+  border-radius: 10px;
+  position: relative;
+  margin-top: -20px;
+  margin-left: -300px;
+}
+.extra {
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(to bottom, #e2d3dc, #b5aaad);
+  position: relative;
+  top: -138px;
+  left: 140px;
+  border-left: solid 5px #b5aaad;
+}
+.extra1 {
+  width: 120px;
+  height: 5px;
+  background: linear-gradient(to bottom, #e2d3dc, #b5aaad);
+  position: relative;
+  top: -140px;
+}
+.extra2 {
+  width: 15px;
+  height: 15px;
+  background: linear-gradient(to bottom, #e2d3dc, #b5aaad);
+  position: relative;
+  top: -159px;
+  left: -143px;
+  border-left: solid 5px #b5aaad;
+}
+.ground {
+  position: relative;
+}
+.blue {
+  width: 1000px;
+  height: 10px;
+  background: #9799a8;
+  border-radius: 25px;
+  top: 360px;
+  left: -0px;
+  position: relative;
+}

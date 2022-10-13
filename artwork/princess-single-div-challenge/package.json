@@ -1,0 +1,35 @@
+{
+    "name": "princess-single-div-challenge",
+    "version": "1.0.0",
+    "title": "Princess - Single Div Challenge",
+    "description": "",
+    "author": {
+        "name": "Greg Robleto",
+        "avatar": "https://assets.codepen.io/28337/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1641427924&width=512",
+        "web": "http://www.robleto.com",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/robleto/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/robleto"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/robleto"
+            }
+        ]
+    },
+    "html": "princess-single-div-challenge.html",
+    "css": [
+        "princess-single-div-challenge.css"
+    ],
+    "js": "/* This one is actually of my own creation, loosly inspired by a design of Disney princesses I saw on an ad on Facebook.  It was built first in Figma to determine the right shapes that will be required and then rebuilt in CSS using primarily linear and radial gradients and box shadows */",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [],
+    "original": "https://codepen.io/robleto/pen/gOxwGym",
+    "codepen": "https://codepen.io/robleto/pen/gOxwGym"
+}

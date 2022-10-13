@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+
+html {
+  --bg: #181818;
+  background: var(--bg);
+}
+
+body {
+  --color: #282828;
+  --medium: #222;
+  --light: #4448;
+  --dark: #1118;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  white-space: pre;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    repeating-radial-gradient(circle, var(--light) 0, var(--dark) 10vmin),
+    var(--medium)
+    ;
+  
+/*     
+  width: 90vmin;
+  height: 90vmin;
+   border-radius: 50%;
+  background: var(--medium);
+  box-shadow:
+    0 0 6vmin var(--light),
+    0 0 6vmin 10vmin var(--medium),
+    inset 0 0 4vmin 4vmin var(--dark),
+    inset 0 0 6vmin 10vmin var(--color),
+    inset 0 0 0 12vmin var(--light),
+    inset 0 0 4vmin 16vmin var(--dark),
+    inset 0 0 6vmin 22vmin var(--color),
+    inset 0 0 0 24vmin var(--light),
+    inset 0 0 4vmin 28vmin var(--dark),
+    inset 0 0 6vmin 32vmin var(--color),
+    inset 0 0 0 36vmin var(--light),
+    inset 0 0 4vmin 38vmin var(--dark); */
+}
+
+body::after {
+  content: "The End";
+  font-family: Parisienne, serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #eee;
+  font-size: 13vmin;
+  text-shadow: 2vmin 1vmin black;
+  transform: translate(-50%, -50%) rotate(-10deg)
+}

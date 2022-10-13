@@ -1,0 +1,90 @@
+body {
+  background:lightblue;
+  height:100vh;
+  margin:0;
+  display:grid;
+  place-content:center;
+  perspective:400px;
+}
+.plane {
+  width:250px;
+  height:150px;
+  display:grid;
+  transform-style:preserve-3d;
+  transform:rotateX(0deg) rotate(0deg);
+  animation:n4 1.4s linear both 3s;
+}
+.plane i {
+  display:inherit;
+  grid-area:1/1;
+  animation:n2 1s linear both 2s;
+  transform-style:preserve-3d;
+}
+.plane i:last-child {
+  grid-area:1/2;
+}
+*:before,
+*:after{
+  content:"";
+  grid-area:1/1;
+  transform-origin:inherit;
+}
+
+.plane:before,
+.plane:after {
+  background:#eee;
+  clip-path:polygon(0 0,100% 0,0 100%);
+  animation:n1 1s linear forwards 1s;
+}
+.plane:after {
+  clip-path:polygon(0 0,100% 0,100% 100%);
+  grid-area:1/2;
+}
+
+.plane i:first-child {
+  transform: rotate(-20deg);
+  transform-origin:100% 0;
+}
+.plane i:first-child:after{
+  background:#eee;
+  clip-path:polygon(100% 0,0 100%,50% 100%);
+}
+.plane i:first-child:before{
+  background:#aaa;
+  clip-path:polygon(100% 0,50% 100%,100% 100%);
+  transform: rotate3d(-11, 26, 0, 83deg);
+  animation:n3 1s linear both 2s;
+}
+
+.plane i:last-child {
+  transform: rotate(20deg);
+  transform-origin:0 0;
+}
+.plane i:last-child:after {
+  background:#eee;
+  clip-path:polygon(0 0,100% 100%,50% 100%);
+}
+
+.plane i:last-child:before{
+  background: #bbb;
+  clip-path: polygon(0 0,50% 100%,0 100%);
+  transform: rotate3d(-11, -26, 0, 83deg);
+  animation: n33 1s linear both 2s;
+}
+
+@keyframes n1 {
+  to{opacity:0;transform:translateY(-50px)}
+}
+@keyframes n2 {
+  from{transform:rotate(0deg)}
+}
+@keyframes n3 {
+  from{transform:rotate3d(-11, 26, 0, 0deg);background:#eee}
+}
+@keyframes n33 {
+  from{transform:rotate3d(-11, -26, 0, 0deg);background:#eee}
+}
+@keyframes n4 {
+  40%,60%{transform:rotateX(71deg) rotate(20deg) translate(0)}
+  100%{transform:rotateX(71deg) rotate(20deg) translateY(-4000px)}
+}  

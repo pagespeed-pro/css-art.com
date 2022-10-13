@@ -1,0 +1,41 @@
+{
+    "name": "12-shadow-divtober-2022",
+    "version": "1.0.0",
+    "title": "12. Shadow - Divtober 2022",
+    "description": "This entry was an attempt to refine a few things I've learned along the way this #divtober month:  blur, repeat-linear-gradient, perspective and color animation. There is a time-lapse video of making this piece at https://youtu.be/8Ps5XXnb1x4",
+    "author": {
+        "name": "Greg Robleto",
+        "avatar": "https://assets.codepen.io/28337/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1641427924&width=512",
+        "web": "http://www.robleto.com",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/robleto/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/robleto"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/robleto"
+            }
+        ]
+    },
+    "html": "12-shadow-divtober-2022.html",
+    "css": [
+        "12-shadow-divtober-2022.css"
+    ],
+    "js": "/* This entry was an attempt to refine a few things I've learned along the way this #divtober month:  blur, repeat-linear-gradient, perspective and color animation. There is a time-lapse video of making this piece at https://youtu.be/8Ps5XXnb1x4 */",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "cssart",
+        "divtober",
+        "animation",
+        "perspective"
+    ],
+    "original": "https://codepen.io/robleto/pen/mdLzxQd",
+    "codepen": "https://codepen.io/robleto/pen/mdLzxQd"
+}

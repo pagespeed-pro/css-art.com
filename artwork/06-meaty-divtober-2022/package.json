@@ -1,0 +1,40 @@
+{
+    "name": "06-meaty-divtober-2022",
+    "version": "1.0.0",
+    "title": "06. Meaty - Divtober 2022",
+    "description": "This entry for #Divtober 2022 was the first I did'nt create a Figma design for first, but rather just tried to recreate an image I found online: https://www.dreamstime.com/stock-illustration-bakery-shop-building-facade-signboard-flat-style-illustration-icon-eps-vector-image65609639.",
+    "author": {
+        "name": "Greg Robleto",
+        "avatar": "https://assets.codepen.io/28337/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1641427924&width=512",
+        "web": "http://www.robleto.com",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/robleto/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/robleto"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/robleto"
+            }
+        ]
+    },
+    "html": "06-meaty-divtober-2022.html",
+    "css": [
+        "06-meaty-divtober-2022.css"
+    ],
+    "js": "/* This entry was the first I did'nt create a Figma design for first, but rather just tried to recreate an image I found online: https://www.dreamstime.com/stock-illustration-bakery-shop-building-facade-signboard-flat-style-illustration-icon-eps-vector-image65609639. There is a time-lapse video of making this piece at https://youtu.be/4gwGGbgoK_4 */",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "cssart",
+        "divtober",
+        "singediv"
+    ],
+    "original": "https://codepen.io/robleto/pen/vYjaGwq",
+    "codepen": "https://codepen.io/robleto/pen/vYjaGwq"
+}

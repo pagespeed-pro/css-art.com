@@ -1,0 +1,113 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.tiny-robot {
+  background: #cedbdd;
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  border: 8px solid #195272;
+  position: absolute;
+  top: 100px;
+  left: 40%;
+}
+.tiny-robot:after {
+  content: "";
+  height: 55px;
+  width: 100px;
+  border: 8px solid #195272;
+  background: #ffffff;
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 25px 25px 35% 35%;
+}
+.tiny-robot:before {
+  content: "";
+  position: absolute;
+  height: 100px;
+  width: 270px;
+  border-radius: 65px;
+  background: #ffffff;
+  border: 8px solid #195272;
+  z-index: 3;
+  top: 30px;
+  left: -20px;
+}
+
+.robot-head {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+  border: 8px solid #195272;
+  border-radius: 85px/60px;
+  background: #ffffff;
+  z-index: 4;
+}
+.robot-head:after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  height: 30px;
+  width: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #195272;
+}
+.robot-head:before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 32px;
+  width: 32px;
+  background: #cedbdd;
+  border: 8px solid #195272;
+  border-radius: 100%;
+}
+
+.robot-face {
+  height: 120px;
+  width: 160px;
+  background: #e1f4f0;
+  position: absolute;
+  top: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid #195272;
+  border-radius: 45px;
+  z-index: 10;
+}
+.robot-face:before {
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: #195272;
+  border-radius: 100%;
+  position: absolute;
+  top: 40px;
+  left: 30px;
+  box-shadow: 60px 0 0 #195272;
+}
+.robot-face:after {
+  content: "";
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+  border: 8px solid transparent;
+  border-bottom-color: #195272;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50px;
+}

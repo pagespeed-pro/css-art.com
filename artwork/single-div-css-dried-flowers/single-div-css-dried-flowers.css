@@ -1,0 +1,52 @@
+body {
+  min-height: 400px;
+  height: 100vh;
+  position: relative;
+  background-color: #ffdab9;
+  text-align: center;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div::before,
+div::after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+@media (max-width: 400px) {
+  div:not(.no-scale) {
+    transform: scale(0.8);
+  }
+}
+#dry {
+  box-sizing: border-box;
+  width: 300px;
+  height: 320px;
+  margin-left: -150px;
+  margin-top: -160px;
+  background: repeating-linear-gradient(to bottom, white, white 10%, #d2691e 10%, #d2691e 20%) 48.5% 71%/1em 1em, linear-gradient(to right, rgba(210,105,30,0.2) 60%, rgba(210,105,30,0)) 50% 71%/1em 1em, linear-gradient(120deg, rgba(205,133,63,0) 10%, #cd853f 11%, #cd853f 89%, rgba(205,133,63,0) 90%) 50% 100%/0.2em 100%, linear-gradient(70deg, rgba(210,105,30,0) 10%, #d2691e 11%, #d2691e 89%, rgba(210,105,30,0) 90%) 48% 110%/0.2em 86%, linear-gradient(80deg, rgba(205,133,63,0) 45%, #cd853f 45.5%, #cd853f 48%, rgba(205,133,63,0) 48.5%) 48% 90%/4em 60%, linear-gradient(96deg, rgba(205,133,63,0) 45%, #cd853f 45.5%, #cd853f 48%, rgba(205,133,63,0) 48.5%) 50% 70%/4em 70%, linear-gradient(104deg, rgba(210,105,30,0) 45%, #d2691e 45.5%, #d2691e 48%, rgba(210,105,30,0) 48.5%) 51% 90%/4em 70%, linear-gradient(90deg, rgba(210,105,30,0), rgba(210,105,30,0.2) 1%, rgba(210,105,30,0.2) 10%, rgba(210,105,30,0) 15%) 56% 50%/2em 80%, linear-gradient(90deg, rgba(210,105,30,0), rgba(210,105,30,0.2) 1%, rgba(210,105,30,0.2) 10%, rgba(210,105,30,0) 15%) 54% 81%/2em 72%, linear-gradient(80deg, rgba(210,105,30,0) 45%, rgba(210,105,30,0.2) 46%, rgba(210,105,30,0.2) 49%, rgba(210,105,30,0) 53%) 48% 90%/4em 60%, linear-gradient(96deg, rgba(210,105,30,0) 45%, rgba(210,105,30,0.25) 46%, rgba(210,105,30,0.25) 48%, rgba(210,105,30,0) 51%) 51% 70%/4em 70%, linear-gradient(104deg, rgba(210,105,30,0) 45%, rgba(210,105,30,0.25) 46%, rgba(210,105,30,0.25) 46.5%, rgba(210,105,30,0) 50%) 52% 90%/4em 70%, radial-gradient(circle, #4682b4 50%, rgba(70,130,180,0) 51%) 66% 26%/1em 1em, radial-gradient(circle, #5f9ea0 50%, rgba(95,158,160,0) 51%) 70% 22%/1em 1em, radial-gradient(circle, #5f9ea0 50%, rgba(95,158,160,0) 51%) 70% 19%/0.5em 0.5em, radial-gradient(circle, #5f9ea0 50%, rgba(95,158,160,0) 51%) 75% 19%/1em 1em, radial-gradient(circle, #4682b4 50%, rgba(70,130,180,0) 51%) 72.5% 22%/0.5em 0.5em, radial-gradient(circle, #5f9ea0 50%, rgba(95,158,160,0) 51%) 74.5% 24%/1em 1em, radial-gradient(circle, #5f9ea0 50%, rgba(95,158,160,0) 51%) 70.5% 26%/1em 1em, radial-gradient(circle, #5f9ea0 50%, rgba(95,158,160,0) 51%) 77.5% 23%/0.5em 0.5em, radial-gradient(circle, #4682b4 50%, rgba(70,130,180,0) 51%) 74.5% 28%/1em 1em, radial-gradient(circle, #5f9ea0 50%, rgba(95,158,160,0) 51%) 70.5% 31%/1em 1em, radial-gradient(circle, rgba(210,105,30,0.2) 20%, rgba(210,105,30,0) 55%) 67% 27%/1em 1em, radial-gradient(circle, rgba(210,105,30,0.2) 20%, rgba(210,105,30,0) 55%) 71% 23%/1em 1em, radial-gradient(circle, rgba(210,105,30,0.2) 10%, rgba(210,105,30,0) 55%) 71% 20%/0.5em 0.5em, radial-gradient(circle, rgba(210,105,30,0.2) 20%, rgba(210,105,30,0) 55%) 76% 20%/1em 1em, radial-gradient(circle, rgba(210,105,30,0.2) 10%, rgba(210,105,30,0) 55%) 71.5% 23%/0.5em 0.5em, radial-gradient(circle, rgba(210,105,30,0.2) 20%, rgba(210,105,30,0) 55%) 75.5% 24%/1em 1em, radial-gradient(circle, rgba(210,105,30,0.2) 20%, rgba(210,105,30,0) 55%) 71.5% 27%/1em 1em, radial-gradient(circle, rgba(210,105,30,0.2) 10%, rgba(210,105,30,0) 55%) 78.5% 24%/0.5em 0.5em, radial-gradient(circle, rgba(210,105,30,0.2) 20%, rgba(210,105,30,0) 55%) 75.5% 29%/1em 1em, radial-gradient(circle, rgba(210,105,30,0.2) 20%, rgba(210,105,30,0) 55%) 71.5% 32%/1em 1em, linear-gradient(115deg, rgba(95,158,160,0) 45%, #5f9ea0 45.5%, #5f9ea0 46.5%, rgba(95,158,160,0) 47%) 54% 130%/6em 80%, linear-gradient(115deg, rgba(210,105,30,0) 45%, rgba(210,105,30,0.25) 46%, rgba(210,105,30,0.2) 46.5%, rgba(210,105,30,0) 49%) 54% 130%/6em 80%, radial-gradient(circle, #5f9ea0 50%, rgba(95,158,160,0) 51%) 23% 28%/1em 1em, radial-gradient(circle, #5f9ea0 50%, rgba(95,158,160,0) 51%) 26.5% 25%/1em 1em, radial-gradient(circle, #4682b4 50%, rgba(70,130,180,0) 51%) 31% 28%/1em 1em, radial-gradient(circle, #5f9ea0 50%, rgba(95,158,160,0) 51%) 24% 21%/1em 1em, radial-gradient(circle, #5f9ea0 50%, rgba(95,158,160,0) 51%) 27% 32%/1em 1em, radial-gradient(circle, #4682b4 50%, rgba(70,130,180,0) 51%) 23.5% 25%/0.5em 0.5em, radial-gradient(circle, #5f9ea0 50%, rgba(95,158,160,0) 51%) 28.5% 22%/0.5em 0.5em, radial-gradient(circle, #5f9ea0 50%, rgba(95,158,160,0) 51%) 31.5% 24.5%/0.5em 0.5em, radial-gradient(circle, #4682b4 50%, rgba(70,130,180,0) 51%) 23.5% 33.5%/0.5em 0.5em, radial-gradient(circle, rgba(210,105,30,0.2) 20%, rgba(210,105,30,0) 55%) 24% 29%/1em 1em, radial-gradient(circle, rgba(210,105,30,0.2) 20%, rgba(210,105,30,0) 55%) 27.5% 26%/1em 1em, radial-gradient(circle, rgba(210,105,30,0.2) 20%, rgba(210,105,30,0) 55%) 32% 29%/1em 1em, radial-gradient(circle, rgba(210,105,30,0.2) 20%, rgba(210,105,30,0) 55%) 25% 22%/1em 1em, radial-gradient(circle, rgba(210,105,30,0.2) 20%, rgba(210,105,30,0) 55%) 28% 33%/1em 1em, radial-gradient(circle, rgba(210,105,30,0.2) 10%, rgba(210,105,30,0) 55%) 24.5% 26%/0.5em 0.5em, radial-gradient(circle, rgba(210,105,30,0.2) 10%, rgba(210,105,30,0) 55%) 29.5% 23%/0.5em 0.5em, radial-gradient(circle, rgba(210,105,30,0.2) 10%, rgba(210,105,30,0) 55%) 32.5% 25.5%/0.5em 0.5em, radial-gradient(circle, rgba(210,105,30,0.2) 10%, rgba(210,105,30,0) 55%) 24.5% 34.5%/0.5em 0.5em, linear-gradient(65deg, rgba(95,158,160,0) 55%, #5f9ea0 55.5%, #5f9ea0 56.5%, rgba(95,158,160,0) 57%) 40% 140%/6em 80%, linear-gradient(65deg, rgba(210,105,30,0) 55%, rgba(210,105,30,0.25) 56%, rgba(210,105,30,0.25) 56.5%, rgba(210,105,30,0) 58.5%) 40% 140%/6em 80%, linear-gradient(75deg, rgba(255,255,255,0) 55%, white 55.5%, white 56.5%, rgba(255,255,255,0) 57%) 40% 90%/6em 80%, linear-gradient(75deg, rgba(210,105,30,0) 55%, rgba(210,105,30,0.2) 56%, rgba(210,105,30,0.2) 56.5%, rgba(210,105,30,0) 59.5%) 40% 90%/6em 80%, linear-gradient(81deg, rgba(255,255,255,0) 55%, white 55.5%, white 56.5%, rgba(255,255,255,0) 57%) 40% 70%/6em 90%, linear-gradient(81deg, rgba(210,105,30,0) 55%, rgba(210,105,30,0.2) 56%, rgba(210,105,30,0.2) 56.5%, rgba(210,105,30,0) 61.5%) 40% 70%/6em 90%, linear-gradient(106deg, rgba(255,255,255,0) 45%, white 45.5%, white 46.5%, rgba(255,255,255,0) 47%) 55% 90%/6em 85%, linear-gradient(106deg, rgba(210,105,30,0) 45%, rgba(210,105,30,0.2) 46%, rgba(210,105,30,0.2) 46.5%, rgba(210,105,30,0) 49.5%) 55% 90%/6em 85%, linear-gradient(100deg, rgba(255,255,255,0) 45%, white 45.5%, white 46.5%, rgba(255,255,255,0) 47%) 55% 70%/6em 90%, linear-gradient(100deg, rgba(210,105,30,0) 45%, rgba(210,105,30,0.2) 46%, rgba(210,105,30,0.2) 46.5%, rgba(210,105,30,0) 49.5%) 55% 70%/6em 90%;
+  background-repeat: no-repeat;
+}
+#dry::before {
+  width: 5%;
+  height: 6%;
+  left: 50%;
+  top: 5%;
+  background-color: #a52a2a;
+  border-top-left-radius: 60%;
+  border-bottom-right-radius: 60%;
+  box-shadow: 0.3em 0.4em 0.2em rgba(210,105,30,0.19), -0.2em 1.4em 0 -0.23em #e9967a, 0 1.6em 0.18em -0.23em rgba(210,105,30,0.2), 0.45em 2.3em 0 -0.15em #db7093, 0.6em 2.6em 0.2em -0.15em rgba(210,105,30,0.2), -0.5em 3em 0 -0.2em #a52a2a, -0.3em 3.2em 0.2em -0.2em rgba(210,105,30,0.2), 0.3em 4em 0 -0.1em #ff7f50, 0.5em 4.3em 0.2em -0.1em rgba(210,105,30,0.2), 1.5em 3.5em 0 -0.12em #e9967a, 1.8em 3.7em 0.18em -0.12em rgba(210,105,30,0.21), 1.35em 4.8em 0 -0.05em #ff7f50, 1.5em 5.2em 0.18em -0.05em rgba(210,105,30,0.21), -1.6em 5.2em 0 -0.1em #db7093, -1.4em 5.4em 0.18em -0.1em rgba(210,105,30,0.21), -1.5em 6.3em 0 -0.2em #a52a2a, -1.3em 6.5em 0.18em -0.2em rgba(210,105,30,0.22), 1.8em 7.2em 0 #5f9ea0, 2em 7.4em 0.18em rgba(210,105,30,0.22), -2em 8.7em 0 -0.2em #5f9ea0, -1.8em 8.9em 0.2em -0.2em rgba(210,105,30,0.22), 1.7em -0.8em 0.4em 0.1em white, 2.1em -0.4em 0.4em 0.1em rgba(210,105,30,0.18), 2.3em 1em 0.4em 0.1em white, 2.5em 1.3em 0.4em 0.1em rgba(210,105,30,0.18);
+}
+#dry::after {
+  width: 5%;
+  height: 6%;
+  left: 42.5%;
+  top: 18%;
+  background-color: #e9967a;
+  border-top-right-radius: 60%;
+  border-bottom-left-radius: 60%;
+  box-shadow: 0.2em 0.2em 0.18em rgba(210,105,30,0.3), 0.47em -2.2em 0 -0.1em #ff7f50, 0.49em -2em 0.2em -0.1em rgba(210,105,30,0.2), 0.55em -1em 0 -0.15em #a52a2a, 0.57em -0.8em 0.2em -0.15em rgba(210,105,30,0.2), 1.3em -0.2em 0 -0.29em #ff7f50, 1.5em 0 0.2em -0.29em rgba(210,105,30,0.2), 0.2em 1.4em 0 -0.2em #ff7f50, 0.4em 1.6em 0.2em -0.2em rgba(210,105,30,0.3), 2.3em 1.1em 0 -0.2em #a52a2a, 2.5em 1.3em 0.2em -0.2em rgba(210,105,30,0.2), 1em 1.8em 0 -0.2em #a52a2a, 1.2em 2em 0.2em -0.2em rgba(210,105,30,0.2), 1.75em 3em 0 -0.2em #db7093, 1.95em 3.2em 0.18em -0.2em rgba(210,105,30,0.21), -1.1em 2.4em 0 #ff7f50, -0.9em 2.6em 0.18em rgba(210,105,30,0.3), -0.75em 4em 0 -0.15em #e9967a, -0.55em 4.2em 0.18em -0.15em rgba(210,105,30,0.3), 2.5em 4.5em 0 -0.15em #5f9ea0, -1.7em 5em 0 #5f9ea0, -1.2em 5.2em 0.2em rgba(210,105,30,0.15), -2.3em -1.1em 0.4em 0.1em white, -1.8em -0.8em 0.4em 0.1em rgba(210,105,30,0.2), -1.3em -3.3em 0.4em 0.1em white, -0.8em -3em 0.4em 0.1em rgba(210,105,30,0.2);
+}

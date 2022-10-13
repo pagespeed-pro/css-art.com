@@ -1,0 +1,163 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: rgb(59, 82, 100);
+}
+
+.black {
+    background-color: #000;
+}
+
+.white {
+    background-color: rgba(255, 255, 255, 0.993);
+}
+
+.container {
+    height: 590px;
+    width: 320px;
+    position: relative;
+}
+
+.container * {
+    position: absolute;
+    /* border: 1px solid rgba(9, 4, 75, 0.589); */
+}
+
+.floor {
+    width: inherit;
+    height: 35%;
+    bottom: 0;
+    left: 0;
+    clip-path: polygon(0 35%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.card {
+    height: 180px;
+    width: 125px;
+    top: 260px;
+    left: 100px;
+    border-radius: 6px;
+    transform: rotatez(-40deg) skewy(-15deg);
+    border: 1px solid #31363a75;
+    z-index: 4;
+}
+
+.card-shadow {
+    clip-path: polygon(0 48%, 100% 76%, 100% 100%, 0% 100%);
+    width: 125px;
+    height: 130px;
+    position: absolute;
+    background-color: #d6d6d6;
+    top: 335px;
+    left: 118px;
+    transform: rotatez(-29deg);
+    z-index: 3;
+    border-radius: 6px;
+}
+
+.club-container {
+    background-color: rgba(255, 255, 255, 0);
+    height: 50px;
+    width: 40px;
+    border: none;
+}
+
+.club-circles-1 {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 17%;
+    left: 32%;
+}
+
+.club-circles-2 {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 44%;
+    left: 11%;
+}
+
+.club-circles-3 {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 44%;
+    left: 55%;
+}
+
+.club-circles-4 {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    top: 44%;
+    left: 39%;
+}
+
+.club-triangle {
+    height: 0;
+    width: 0;
+    background-color: transparent;
+    border-style: solid;
+    border-color: transparent transparent #000 transparent;
+    border-width: 0px 3px 20px 3px;
+    top: 53%;
+    left: 44%;
+}
+
+.club-mid .club-container {
+    top: 65px;
+    left: 43px;
+}
+
+.club-top .club-container {
+    top: 6px;
+    left: 94px;
+    transform: scale(0.5);
+}
+
+.club-bot .club-container {
+    top: 120px;
+    left: -10px;
+    transform: scale(0.5) rotate(180deg);
+}
+
+.club-bot .club-container::after {
+    content: "A";
+    height: 50px;
+    width: 40px;
+    position: absolute;
+    font-size: 40px;
+    top: -36px;
+    left: 4px;
+    font-family: sans-serif;
+}
+
+.club-top .club-container::after {
+    content: "A";
+    height: 50px;
+    width: 40px;
+    position: absolute;
+    font-size: 40px;
+    top: -36px;
+    left: 4px;
+    font-family: sans-serif;
+}
+
+.level-1 {
+    z-index: 1;
+}
+
+.level-2 {
+    z-index: 2;
+}
+
+.level-4 {
+    z-index: 4;
+}
+
+.level-5 {
+    z-index: 5;
+}

@@ -1,0 +1,41 @@
+{
+    "name": "there-s-no-place-like-home",
+    "version": "1.0.0",
+    "title": "There's no place like home",
+    "description": "A CSS-only house based off of the Pokemon Gameboy art featuring some JS and CSS variables to change its colours.",
+    "author": {
+        "name": "Tiffany Choong",
+        "avatar": "https://assets.codepen.io/765377/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1516941279&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/tiffachoo/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/tiffachooo"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/tiffachoo"
+            }
+        ]
+    },
+    "html": "there-s-no-place-like-home.html",
+    "css": [
+        "there-s-no-place-like-home.css"
+    ],
+    "js": "console.clear();\n\nconst buttons = [...document.querySelectorAll('.color-controls-button')];\nconst house = document.getElementById('house');\n\nbuttons.forEach(button => button.addEventListener('click', () => {\n\tupdateColor(button)\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\n}));\n\nfunction updateColor(button) {\n\tconst color = button.getAttribute('data-color');\n\t\n\thouse.className = 'house';\n\thouse.classList.add(color);\n\t\n\tdocument.querySelector('.active').classList.remove('active');\n\tbutton.classList.add('active');\n}",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "pokemon",
+        "gameboy",
+        "css-image",
+        "css-variables",
+        "scss"
+    ],
+    "original": "https://codepen.io/tiffachoo/pen/aKKZrB",
+    "codepen": "https://codepen.io/tiffachoo/pen/aKKZrB"
+}

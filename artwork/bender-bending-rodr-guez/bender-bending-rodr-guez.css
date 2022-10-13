@@ -1,0 +1,211 @@
+html, body {
+  --primary: aqua;
+  --secondary: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: aqua;
+  background-image: radial-gradient(white, transparent), conic-gradient(transparent 15deg, var(--secondary) 0 45deg, transparent 0 75deg, var(--secondary) 0 105deg, transparent 0 135deg, var(--secondary) 0 165deg, transparent 0 195deg, var(--secondary) 0 225deg, transparent 0 255deg, var(--secondary) 0 285deg, transparent 0 315deg, var(--secondary) 0 345deg, transparent 0)
+}
+
+#bender {
+  --gray: #b1c2cf;
+  --light: #ffffff;
+  --eyes: #fffdec;
+  --line: #000000;
+  position: absolute;
+  width: 90vmin;
+  height: 90vmin;
+  top: 53%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 1vmin solid;
+}
+
+.r {
+  border-radius: 50%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.head {
+  width: 30.35%;
+  height: 57%;
+  border-radius: 40vmin 40vmin 0 0;
+  top: 20.25%;
+  left: 33.5%;
+  transform: rotate(-1deg);
+  border-bottom: 0;
+  background: var(--gray);
+  box-shadow: inset 1.75vmin 0.25vmin var(--light), inset -1.75vmin 0vmin var(--light), inset 0 0.75vmin var(--light);
+}
+
+.head::after {
+  width: 200%;
+  height: 45%;
+  border: 1vmin solid;
+  border-radius: 50%;
+  top: 58%;
+  left: -50%;
+  clip-path: polygon(23% 100%, 23% 50%, 77% 50%, 77% 100%);
+}
+
+.visor {
+  width: 43.5%;
+  height: 19%;
+  border-radius: 9vmin 9vmin 10vmin 9vmin;
+  top: 40.5%;
+  left: 27%;
+  background: var(--light);
+  background-image: radial-gradient(at 50% 25%, var(--gray) 50%, transparent 0), radial-gradient(at 50% 75%, var(--gray) 50%, transparent 0);
+}
+
+.eyes {
+  width: 90%;
+  height: 78%;
+  background: black;
+  border-radius: 5vmin 5vmin 6vmin 6vmin;
+  top: 10%;
+  left: 5%;
+}
+
+.eye {
+  top: -7%;
+  left: 9%;
+  width: 13vmin;
+  height: 13vmin;
+  background: var(--eyes);
+  clip-path: polygon(0% 12%, 70% 12%, 100% 35%, 100% 90%, 0% 90%)
+}
+
+.eye::after {
+  width: 2.4vmin;
+  height: 2.4vmin;
+  background: var(--line);
+  top: 40%;
+  left: 32%;
+}
+
+.eye + .eye {
+  left: 53%;
+  top: -9%;
+  clip-path: polygon(0% 30%, 30% 15%, 100% 15%, 100% 92%, 0% 93%)
+}
+
+.eye + .eye::after {
+  left: 48%;
+  top: 44%;
+}
+
+.antenna-top {
+  border-width: 0.75vmin;
+  width: 4.5%;
+  height: 4.5%;
+  top: 1%;
+  left: 46.4%;
+  background: var(--gray);
+  box-shadow: inset 0 0.5vmin var(--light);
+}
+
+.antenna-base {
+  width: 11%;
+  height: 12%;
+  top: 18%;
+  left: 43%;
+  background: var(--gray);
+  box-shadow: inset 0.75vmin 0.125vmin var(--light), inset -0.75vmin 0.125vmin var(--light), inset 0 0.25vmin var(--light);
+}
+
+.antenna {
+  top: -5%;
+  left: 47.2%;
+  width: 3%;
+  height: 30%;
+  border-left: 0.75vmin solid;
+  border-right: 0.75vmin solid;
+  transform: perspective(150px) rotate3d(1,0,0,50deg) rotate(-0.5deg) skewY(10deg);
+  background: var(--gray);
+  box-shadow: inset -0.2vmin 0 var(--light), inset 0.2vmin 0 var(--light);
+}
+
+.mouth {
+  width: 23.5%;
+  height: 8%;
+  background: var(--eyes);
+  top: 66%;
+  left: 37.5%;
+  filter: drop-shadow(-0.75vmin 0) drop-shadow(0 -0.75vmin) drop-shadow(0.75vmin 0) drop-shadow(0 0.75vmin)
+}
+
+.mouth::after {
+  width: 30%;
+  height:115%;
+  background: var(--eyes);
+  border-radius: 50%;
+  top: -35%;
+  left: -3%;
+  box-shadow: 16vmin 0 var(--eyes);
+}
+
+.mouth::before {
+  width: 80%;
+  left: 10%;
+  height: 40%;
+  border-radius: 50%;
+  top: -64.5%;
+  box-shadow: 0 2.5vmin 0 1vmin var(--eyes);
+}
+
+.mouth-lines {
+  width: 0.5vmin;
+  height: 10%;
+  top: 63%;
+  left: 39%;
+  background: black;
+  box-shadow: 4vmin 0.5vmin, 8.5vmin 0.9vmin, 12.75vmin 0.75vmin, 16.75vmin 0;
+}
+
+.mouth-lines::before,
+.mouth-lines::after {
+  width: 25vmin;
+  height: 5vmin;
+  transform: translate(-15%, -25%);
+  border: 0.5vmin solid;
+  border-radius: 50%;
+  clip-path: polygon(5% 50%, 95% 50%, 95% 100%, 5% 100%);
+}
+
+.mouth-lines::after {
+  transform: translate(-14%, 45%);
+}
+
+.body-top {
+  width: 46.75%;
+  height: 20%;
+  border-radius: 100% / 160% 150% 40% 40%;
+  top: 69.5%;
+  left: 25.5%;
+  transform: perspective(150px) rotate3d(1,0,0,40deg) rotate(-1deg);
+  background: var(--gray);
+  box-shadow: inset 0 1vmin, inset 2.5vmin 1vmin var(--light), inset -2vmin 1vmin var(--light);
+}

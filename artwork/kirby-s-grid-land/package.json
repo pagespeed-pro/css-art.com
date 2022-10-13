@@ -1,0 +1,41 @@
+{
+    "name": "kirby-s-grid-land",
+    "version": "1.0.0",
+    "title": "Kirby's grid land",
+    "description": "Some CSS grid area template pixel art combined with keyframe animations.",
+    "author": {
+        "name": "Tiffany Choong",
+        "avatar": "https://assets.codepen.io/765377/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1516941279&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/tiffachoo/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/tiffachooo"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/tiffachoo"
+            }
+        ]
+    },
+    "html": "kirby-s-grid-land.html",
+    "css": [
+        "kirby-s-grid-land.css"
+    ],
+    "js": "// (> ^ . ^ )>",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "scss",
+        "css-grid",
+        "css-animation",
+        "pixel",
+        "kirby"
+    ],
+    "original": "https://codepen.io/tiffachoo/pen/KvxRmN",
+    "codepen": "https://codepen.io/tiffachoo/pen/KvxRmN"
+}

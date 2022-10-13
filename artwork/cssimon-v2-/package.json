@@ -1,0 +1,41 @@
+{
+    "name": "cssimon-v2-",
+    "version": "1.0.0",
+    "title": "CSSimon (v2)",
+    "description": "CSSimon is a Simon game developed using only CSS and HTML, and without a single line of JavaScript.\n\nSwitch the on/off toggle and follow the sequence of colors. Good luck! And enjoy!\n\nIt could be extended to have sound for each tile (still without JavaScript), but that version would only work on Chrome.",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "cssimon-v2-.html",
+    "css": [
+        "cssimon-v2-.css"
+    ],
+    "js": "// https://i.imgur.com/YsbKHg1.gif",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "html",
+        "no-javascript",
+        "game",
+        "simon"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/BaxKqwO",
+    "codepen": "https://codepen.io/alvaromontoro/pen/BaxKqwO"
+}

@@ -1,0 +1,37 @@
+{
+    "name": "pure-css-queen-elizabeth-ii",
+    "version": "1.0.0",
+    "title": "Pure css Queen Elizabeth II",
+    "description": "A pure css funko pop Elizabeth II",
+    "author": {
+        "name": "Maxime Malfilâtre",
+        "avatar": "https://assets.codepen.io/5558163/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1646553688&width=512",
+        "web": "https://maxime-malfilatre.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/maxew33/"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/maxew33"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/m4xew"
+            }
+        ]
+    },
+    "html": "pure-css-queen-elizabeth-ii.html",
+    "css": [
+        "pure-css-queen-elizabeth-ii.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "funko pop"
+    ],
+    "original": "https://codepen.io/maxew33/pen/NWMveBz",
+    "codepen": "https://codepen.io/maxew33/pen/NWMveBz"
+}

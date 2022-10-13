@@ -1,0 +1,41 @@
+{
+    "name": "let-s-snuggle-forever",
+    "version": "1.0.0",
+    "title": "Let's snuggle forever",
+    "description": "CSS only Mimikyu wants to be your friend.",
+    "author": {
+        "name": "Tiffany Choong",
+        "avatar": "https://assets.codepen.io/765377/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1516941279&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/tiffachoo/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/tiffachooo"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/tiffachoo"
+            }
+        ]
+    },
+    "html": "let-s-snuggle-forever.html",
+    "css": [
+        "let-s-snuggle-forever.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css-image",
+        "css-animation",
+        "scss",
+        "css-only",
+        "mimikyu"
+    ],
+    "original": "https://codepen.io/tiffachoo/pen/WNxEJZP",
+    "codepen": "https://codepen.io/tiffachoo/pen/WNxEJZP"
+}

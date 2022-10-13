@@ -1,0 +1,41 @@
+{
+    "name": "3d-duracell-battery-using-css3",
+    "version": "1.0.0",
+    "title": "3D Duracell battery using CSS3",
+    "description": "Using CSS3 rotations and transformations to build a 3D looking 9V battery",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "3d-duracell-battery-using-css3.html",
+    "css": [
+        "3d-duracell-battery-using-css3.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "css3",
+        "transform",
+        "transform3d",
+        "duracell"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/WZZNPR",
+    "codepen": "https://codepen.io/alvaromontoro/pen/WZZNPR"
+}

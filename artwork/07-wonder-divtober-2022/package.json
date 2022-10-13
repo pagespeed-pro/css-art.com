@@ -1,0 +1,40 @@
+{
+    "name": "07-wonder-divtober-2022",
+    "version": "1.0.0",
+    "title": "07. Wonder - Divtober 2022",
+    "description": "This entry for #divtober 2022 was for \"wonder\". I've always been fascinated by the Library of Alexandria, one of the Seven Wonders of the World. I recreated what it is believed that amazing lighthouse building to have looked like. ",
+    "author": {
+        "name": "Greg Robleto",
+        "avatar": "https://assets.codepen.io/28337/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1641427924&width=512",
+        "web": "http://www.robleto.com",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/robleto/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/robleto"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/robleto"
+            }
+        ]
+    },
+    "html": "07-wonder-divtober-2022.html",
+    "css": [
+        "07-wonder-divtober-2022.css"
+    ],
+    "js": "/* This entry for #divtober 2022 was for \"wonder\". I've always been fascinated by the Library of Alexandria, one of the Seven Wonders of the World. I recreated what it is believed that amazing lighthouse building to have looked like. There is a time-lapse video of making this piece at https://youtu.be/pWvtimh4y_A */",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "cssart",
+        "divtober",
+        "singediv"
+    ],
+    "original": "https://codepen.io/robleto/pen/YzLjYvr",
+    "codepen": "https://codepen.io/robleto/pen/YzLjYvr"
+}

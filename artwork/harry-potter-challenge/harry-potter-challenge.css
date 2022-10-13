@@ -1,0 +1,192 @@
+body {
+  margin:0;
+  height:100vh;
+  display:grid;
+  place-content:center;
+  background:lightblue;
+}
+.magic {
+  width: 280px;
+  position:relative;
+  cursor:pointer;
+  z-index:0;
+  aspect-ratio: 1/1;
+}
+.body {
+    position: absolute;
+    width: 39%;
+    height: 33%;
+    --c: #000;
+    background: 
+      radial-gradient(farthest-side,#e9b23f 90%,#0000 )67% 34%/10% 11%,
+      linear-gradient(#e9b23f 0 0)67% 32%/10% 8%,
+      linear-gradient(to bottom right,#b0a49e 50%,#0000 50.5% ) 52% 27%/6% 7%,
+      linear-gradient(#eb3941 50%,#e6b33e 0) 32% 38%/18% 34%,
+      linear-gradient(90deg,#eb3941 10%,#e6b33e 0 36%,#eb3941 0 63%,#e6b33e 0 90%,#eb3941 0) 50% 0/80% 17%,
+      radial-gradient(farthest-side at top,#fbcab2 95%,#0000) 6% 57%/11% 6%,
+      radial-gradient(farthest-side at top,#fbcab2 95%,#0000) 94% 57%/11% 6%,
+      linear-gradient(#5b3841 0 0) 29% 80%/20% 7%,
+      linear-gradient(#5b3841 0 0) 71% 80%/20% 7%,
+      radial-gradient(farthest-side,var(--c) 96%,#0000) 0% 56%/21% 21%,
+      radial-gradient(farthest-side,var(--c) 96%,#0000) 100% 56%/21% 21%,
+      linear-gradient(to top left,var(--c) 50%,#0000 50.5%) 0% -2%/12% 55%,
+      linear-gradient(to top right,var(--c) 50%,#0000 50.5%) 100% -2%/12% 55%,
+      linear-gradient(var(--c) 0 0) 50% 0/80% 73%,
+      linear-gradient(var(--c) 0 0) 26% 100%/29% 30%,
+      linear-gradient(var(--c) 0 0) 74% 100%/29% 30%,
+      radial-gradient(farthest-side,var(--c) 90%,#0000) 16% 100%/12% 14%,
+      radial-gradient(farthest-side,var(--c) 90%,#0000) 83% 100%/12% 14%,
+      linear-gradient(var(--c) 0 0) 50% 0/92% 22%;
+    background-repeat: no-repeat;
+    bottom: 2%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.head {
+    position: absolute;
+    width: 53%;
+    height: 40%;
+    box-sizing: border-box;
+    left: 23%;
+    bottom: 32%;
+    border-radius: 40% 40% 40% 40%;
+    border: 5px solid #000;
+    background: 
+       linear-gradient(#000 0 0) 50% 86%/12% 4%,
+       radial-gradient(farthest-side,#000 96%,#0000) 21% 62%/12% 17%,
+      radial-gradient(farthest-side,#000 96%,#0000) 79% 62%/12% 17%,#fbc8b3;
+    background-repeat: no-repeat;
+}
+.head:before, 
+.head:after {
+    content: "";
+    position: absolute;
+    width: 13%;
+    height: 24%;
+    background: #fbc8b3;
+    z-index: -1;
+    border-radius: 50px 0 0 50px;
+    left: -9%;
+    bottom: 20%;
+    box-sizing: border-box;
+    border: 4px solid #000;
+    border-right: 0;
+}
+.head:after {
+  left:auto;
+  right:-9%;
+  border: 4px solid #000;
+  border-left:0;
+  border-radius: 0 50px 50px 0;
+}
+.hair-a {
+    position: absolute;
+    width: 80%;
+    height: 45%;
+    left: 50%;
+    top: 10%;
+    --c: #ef5032;
+    background: 
+      radial-gradient(100% 100% at 0 0,var(--c) 98%,#0000)89.5% 97%/9% 25%,
+      radial-gradient(100% 100% at 100% 0,var(--c) 98%,#0000)9% 97%/9% 21%,
+      linear-gradient(var(--c) 0 0) 79% 52.5%/13% 11%,
+      linear-gradient(var(--c) 0 0) 74% 75.5%/13% 7%,
+      conic-gradient( from 9deg at 0 100%,var(--c) 25deg,#0000 0) 45% 75%/16% 43%,
+      linear-gradient(to top right,var(--c) 50%,#0000 50.5%) 88.5% 31%/8% 28%,
+      radial-gradient(73% 100% at 38% 100%,var(--c) 98%,#0000) 73% 5%/35% 47%,
+      radial-gradient(73% 100% at 63% 100%,var(--c) 98%,#0000) 24% 9%/31% 47%,
+      radial-gradient(farthest-side,var(--c) 98%,#0000) 15% 50%/30% 47%,
+      radial-gradient(farthest-side,var(--c) 98%,#0000) 93% 76%/20% 37%,
+      radial-gradient(farthest-side,var(--c) 98%,#0000) 69% 63%/28% 39%,
+      radial-gradient(farthest-side,var(--c) 98%,#0000) 8% 76%/19% 34%;
+    background-repeat: no-repeat;
+    transform: translate(-50%,var(--y,0%));
+    filter: drop-shadow(0px 0px 1px black) drop-shadow(0px 0px 1px black) drop-shadow(0px 0px 1px black) drop-shadow(0px 0px 1px black) drop-shadow(0px 0px 1px black);
+}
+
+.extra-a {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #ef5032;
+    border-radius: 50%;
+    bottom: 39%;
+    left: 34%;
+    transform: translate(var(--x,0%));
+    box-shadow: 
+      -9px -14px #ef5032, 12px -9px #ef5032,
+      67px -9px #ef5032,76px 1px #ef5032,87px -10px #ef5032;
+}
+
+.hair-b {
+    position: absolute;
+    width: 73%;
+    height: 45%;
+    left: 50%;
+    transform: translate(-50%,var(--y,0%));
+    top: 10%;
+    --c: #564319;
+    background: 
+      radial-gradient(farthest-side at 0 0,var(--c)98%,#0000) 95.5% 82%/7% 15%,
+      radial-gradient(farthest-side at 0 50%,var(--c)98%,#0000) 91% 99%/7% 37%,
+      radial-gradient(farthest-side at 0 100%,var(--c)98%,#0000) 95% 42%/18% 50%,
+      conic-gradient(from -35deg at 100% 100%,var(--c)70deg,#0000 0) 73% 76%/46% 60%,
+      conic-gradient(from -46deg at 100% 100%,var(--c)70deg,#0000 0) 48% 56%/40% 60%,
+      radial-gradient(100% 50% at 0  50%,var(--c) 98%,#0000 ) 49% 55%/7% 43%,
+      radial-gradient(105% 78% at 0  100%,#0000 98%,var(--c) ) 35% 70%/17% 55%,
+      linear-gradient(to bottom right,var(--c) 50%,#0000 50.5%)17.5% 73%/7% 23%,
+      radial-gradient(farthest-side at right,var(--c) 98%,#0000 ) 7% 97%/8% 37%,
+      radial-gradient(farthest-side at right,var(--c) 98%,#0000 ) 6% 52%/12% 60%,
+      radial-gradient(farthest-side,var(--c) 98%,#0000 ) 10% 32%/23% 39%,
+      radial-gradient(52% 100% at 32% 100% ,var(--c) 98%,#0000 ) 82% 3%/52% 29%,
+      radial-gradient(61% 100% at 74% 100% ,var(--c) 98%,#0000 ) 9% 10%/38% 24%;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0px 0px 1px black) drop-shadow(0px 0px 1px black) drop-shadow(0px 0px 1px black) drop-shadow(0px 0px 1px black) drop-shadow(0px 0px 1px black);
+}
+
+.extra-b {
+    position: absolute;
+    width: 53%;
+    height: 26%;
+    left: 50%;
+    top: 40%;
+    transform: translate(calc(var(--x,0%) - 50%));
+    background: 
+      linear-gradient(#000 0 0) 100% 50%/11% 5%,linear-gradient(#000 0 0) 0% 50%/11% 5%,
+      linear-gradient(#000 0 0) 50% 50%/21% 5%,
+      radial-gradient(farthest-side,#0000 80%,#000 83%  98%,#0000) 14% 43%/32% 60%,
+      radial-gradient(farthest-side,#0000 80%,#000 83%  98%,#0000) 84% 43%/32% 60%;
+    background-repeat: no-repeat;
+}
+.extra-b:before {
+    content: "";
+    position: absolute;
+    width: 8%;
+    height: 29%;
+    background: #f49864;
+    left: 21%;
+    bottom: 93%;
+    clip-path: polygon(50% 0,100% 70%,48% 60%,50% 100%,0 30%,54% 40%);
+}
+
+input#magic:checked ~ .magic .hair-a,
+input#magic:checked ~ .magic .extra-a,
+input#magic:not(:checked) ~ .magic .hair-b,
+input#magic:not(:checked) ~ .magic .extra-b{
+  --y:0%;
+  --x:0%;
+  opacity:1;
+  transition:0.6s 0.6s;
+}
+input#magic:checked ~ .magic .hair-b,
+input#magic:checked ~ .magic .extra-b,
+input#magic:not(:checked) ~ .magic .hair-a,
+input#magic:not(:checked) ~ .magic .extra-a{
+  --y:-100px;
+  --x:100px;
+  opacity:0;
+  transition:0.6s;
+}
+
+input#magic {visibility:hidden;}

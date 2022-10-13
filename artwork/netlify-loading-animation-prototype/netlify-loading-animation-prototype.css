@@ -1,0 +1,656 @@
+body {
+  display: flex;
+}
+section {
+  height: 100vh;
+  flex: 1;
+  display: grid;
+  place-content: center;
+  background-color: var(--primary);
+}
+.light {
+  --primary: #fff;
+}
+.dark {
+  --primary: #151a1e;
+}
+svg {
+  width: 60px;
+  height: auto;
+  transform: rotate(-45deg);
+  --duration: 3s;
+  --teal: #5cebdf;
+  --stroke-offset: 140;
+  animation: pulse var(--duration) infinite;
+}
+#bg {
+  opacity: 1;
+  animation: to-bg var(--duration) infinite;
+}
+#border > path {
+  fill: var(--primary);
+}
+#border rect {
+  stroke: var(--teal);
+  stroke-dasharray: 200;
+  stroke-dashoffset: 240;
+  animation: border var(--duration) linear infinite;
+}
+[id^="stroke"] line {
+  stroke-dasharray: 100;
+  stroke-dashoffset: var(--stroke-offset);
+}
+#stroke1 line {
+  animation: stroke1 var(--duration) infinite, to-stroke-color var(--duration) infinite;
+}
+#stroke2 line {
+  animation: stroke2 var(--duration) infinite, to-stroke-color var(--duration) infinite;
+}
+#stroke3 line {
+  animation: stroke3 var(--duration) infinite, to-stroke-color var(--duration) infinite;
+}
+#stroke4 line {
+  animation: stroke4 var(--duration) infinite, to-stroke-color var(--duration) infinite;
+}
+#stroke5 line {
+  animation: stroke5 var(--duration) infinite, to-stroke-color var(--duration) infinite;
+}
+#stroke6 line {
+  animation: stroke6 var(--duration) infinite, to-stroke-color var(--duration) infinite;
+}
+[id^="node"] circle {
+  transform: scale(0);
+  fill: var(--primary);
+}
+#node1 circle {
+  transform-origin: 23% 36%;
+  animation: node1 var(--duration) infinite, to-fill-color var(--duration) infinite;
+}
+#node2 circle {
+  transform-origin: 66% 25%;
+  animation: node2 var(--duration) infinite, to-fill-color var(--duration) infinite;
+}
+#node3 circle {
+  transform-origin: 50% 76%;
+  animation: node3 var(--duration) infinite, to-fill-color var(--duration) infinite;
+}
+#node4 circle {
+  transform-origin: 80% 58%;
+  animation: node4 var(--duration) infinite, to-fill-color var(--duration) infinite;
+}
+@-moz-keyframes pulse {
+  0%, 70% {
+    transform: rotate(-45deg) scale(1);
+  }
+  90% {
+    transform: rotate(-45deg) scale(1.15);
+  }
+  95%, 100% {
+    transform: rotate(-45deg) scale(1);
+  }
+}
+@-webkit-keyframes pulse {
+  0%, 70% {
+    transform: rotate(-45deg) scale(1);
+  }
+  90% {
+    transform: rotate(-45deg) scale(1.15);
+  }
+  95%, 100% {
+    transform: rotate(-45deg) scale(1);
+  }
+}
+@-o-keyframes pulse {
+  0%, 70% {
+    transform: rotate(-45deg) scale(1);
+  }
+  90% {
+    transform: rotate(-45deg) scale(1.15);
+  }
+  95%, 100% {
+    transform: rotate(-45deg) scale(1);
+  }
+}
+@keyframes pulse {
+  0%, 70% {
+    transform: rotate(-45deg) scale(1);
+  }
+  90% {
+    transform: rotate(-45deg) scale(1.15);
+  }
+  95%, 100% {
+    transform: rotate(-45deg) scale(1);
+  }
+}
+@-moz-keyframes to-bg {
+  0%, 70% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes to-bg {
+  0%, 70% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes to-bg {
+  0%, 70% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes to-bg {
+  0%, 70% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes border {
+  0% {
+    stroke-dashoffset: 240;
+  }
+  50%, 100% {
+    stroke-dashoffset: 0;
+  }
+  0%, 60% {
+    opacity: 100%;
+  }
+  75%, 100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes border {
+  0% {
+    stroke-dashoffset: 240;
+  }
+  50%, 100% {
+    stroke-dashoffset: 0;
+  }
+  0%, 60% {
+    opacity: 100%;
+  }
+  75%, 100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes border {
+  0% {
+    stroke-dashoffset: 240;
+  }
+  50%, 100% {
+    stroke-dashoffset: 0;
+  }
+  0%, 60% {
+    opacity: 100%;
+  }
+  75%, 100% {
+    opacity: 0;
+  }
+}
+@keyframes border {
+  0% {
+    stroke-dashoffset: 240;
+  }
+  50%, 100% {
+    stroke-dashoffset: 0;
+  }
+  0%, 60% {
+    opacity: 100%;
+  }
+  75%, 100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes stroke1 {
+  0%, 25% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  75%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes stroke1 {
+  0%, 25% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  75%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-o-keyframes stroke1 {
+  0%, 25% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  75%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes stroke1 {
+  0%, 25% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  75%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes stroke2 {
+  0%, 30% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  80%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes stroke2 {
+  0%, 30% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  80%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-o-keyframes stroke2 {
+  0%, 30% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  80%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes stroke2 {
+  0%, 30% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  80%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes stroke3 {
+  0%, 35% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  85%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes stroke3 {
+  0%, 35% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  85%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-o-keyframes stroke3 {
+  0%, 35% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  85%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes stroke3 {
+  0%, 35% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  85%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes stroke4 {
+  0%, 40% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  90%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes stroke4 {
+  0%, 40% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  90%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-o-keyframes stroke4 {
+  0%, 40% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  90%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes stroke4 {
+  0%, 40% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  90%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes stroke5 {
+  0%, 45% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  95%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes stroke5 {
+  0%, 45% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  95%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-o-keyframes stroke5 {
+  0%, 45% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  95%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes stroke5 {
+  0%, 45% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  95%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes stroke6 {
+  0%, 40% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  80%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes stroke6 {
+  0%, 40% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  80%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-o-keyframes stroke6 {
+  0%, 40% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  80%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes stroke6 {
+  0%, 40% {
+    stroke-dashoffset: var(--stroke-offset);
+  }
+  80%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes node1 {
+  0%, 30% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  50%, 100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes node1 {
+  0%, 30% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  50%, 100% {
+    transform: scale(1);
+  }
+}
+@-o-keyframes node1 {
+  0%, 30% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  50%, 100% {
+    transform: scale(1);
+  }
+}
+@keyframes node1 {
+  0%, 30% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1.2);
+  }
+  50%, 100% {
+    transform: scale(1);
+  }
+}
+@-moz-keyframes node2 {
+  0%, 35% {
+    transform: scale(0);
+  }
+  45% {
+    transform: scale(1.2);
+  }
+  55%, 100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes node2 {
+  0%, 35% {
+    transform: scale(0);
+  }
+  45% {
+    transform: scale(1.2);
+  }
+  55%, 100% {
+    transform: scale(1);
+  }
+}
+@-o-keyframes node2 {
+  0%, 35% {
+    transform: scale(0);
+  }
+  45% {
+    transform: scale(1.2);
+  }
+  55%, 100% {
+    transform: scale(1);
+  }
+}
+@keyframes node2 {
+  0%, 35% {
+    transform: scale(0);
+  }
+  45% {
+    transform: scale(1.2);
+  }
+  55%, 100% {
+    transform: scale(1);
+  }
+}
+@-moz-keyframes node3 {
+  0%, 40% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  60%, 100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes node3 {
+  0%, 40% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  60%, 100% {
+    transform: scale(1);
+  }
+}
+@-o-keyframes node3 {
+  0%, 40% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  60%, 100% {
+    transform: scale(1);
+  }
+}
+@keyframes node3 {
+  0%, 40% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  60%, 100% {
+    transform: scale(1);
+  }
+}
+@-moz-keyframes node4 {
+  0%, 45% {
+    transform: scale(0);
+  }
+  55% {
+    transform: scale(1.2);
+  }
+  65%, 100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes node4 {
+  0%, 45% {
+    transform: scale(0);
+  }
+  55% {
+    transform: scale(1.2);
+  }
+  65%, 100% {
+    transform: scale(1);
+  }
+}
+@-o-keyframes node4 {
+  0%, 45% {
+    transform: scale(0);
+  }
+  55% {
+    transform: scale(1.2);
+  }
+  65%, 100% {
+    transform: scale(1);
+  }
+}
+@keyframes node4 {
+  0%, 45% {
+    transform: scale(0);
+  }
+  55% {
+    transform: scale(1.2);
+  }
+  65%, 100% {
+    transform: scale(1);
+  }
+}
+@-moz-keyframes to-fill-color {
+  0%, 60% {
+    fill: var(--teal);
+  }
+  75%, 100% {
+    fill: var(--primary);
+  }
+}
+@-webkit-keyframes to-fill-color {
+  0%, 60% {
+    fill: var(--teal);
+  }
+  75%, 100% {
+    fill: var(--primary);
+  }
+}
+@-o-keyframes to-fill-color {
+  0%, 60% {
+    fill: var(--teal);
+  }
+  75%, 100% {
+    fill: var(--primary);
+  }
+}
+@keyframes to-fill-color {
+  0%, 60% {
+    fill: var(--teal);
+  }
+  75%, 100% {
+    fill: var(--primary);
+  }
+}
+@-moz-keyframes to-stroke-color {
+  0%, 60% {
+    stroke: var(--teal);
+  }
+  75%, 100% {
+    stroke: var(--primary);
+  }
+}
+@-webkit-keyframes to-stroke-color {
+  0%, 60% {
+    stroke: var(--teal);
+  }
+  75%, 100% {
+    stroke: var(--primary);
+  }
+}
+@-o-keyframes to-stroke-color {
+  0%, 60% {
+    stroke: var(--teal);
+  }
+  75%, 100% {
+    stroke: var(--primary);
+  }
+}
+@keyframes to-stroke-color {
+  0%, 60% {
+    stroke: var(--teal);
+  }
+  75%, 100% {
+    stroke: var(--primary);
+  }
+}

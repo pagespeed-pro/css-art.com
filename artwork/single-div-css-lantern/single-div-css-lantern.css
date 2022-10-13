@@ -1,0 +1,57 @@
+body {
+  min-height: 300px;
+  height: 100vh;
+  position: relative;
+  background-color: #191970;
+  text-align: center;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div:before,
+div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+@media (max-width: 400px) {
+  div:not(.no-scale) {
+    transform: scale(0.8);
+  }
+}
+#bright {
+  font-size: 10px;
+  box-sizing: border-box;
+  width: 12em;
+  height: 10em;
+  margin-left: -6em;
+  margin-top: -5em;
+  background-color: #eee8aa;
+  border-radius: 3em;
+  border: 0.6em solid #ddd155;
+  box-shadow: 0 0 0 1em #ff6347, 0 0 0 2em #ffa07a, 0 0 0 3em #20b2aa, 0 0 0 4em #4682b4, 0 0 0 5em rgba(255,255,255,0.1), inset 0 0 0 0.8em #eee8aa, inset 1.6em 0 0 white;
+}
+#bright:before {
+  width: 14em;
+  height: 20em;
+  left: -1.6em;
+  top: -5em;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, rgba(255,255,255,0) 25%, white 26%, white 45%, rgba(255,255,255,0) 46%), radial-gradient(ellipse at 100% 100%, #ccc 60%, rgba(255,255,255,0) 60.5%), radial-gradient(ellipse at 100% 100%, white 60%, rgba(255,255,255,0) 60.5%), radial-gradient(ellipse at 0 100%, #ccc 60%, rgba(255,255,255,0) 60.5%), linear-gradient(to right, #5f9ea0 35%, #4682b4 35%), radial-gradient(circle at 100% 100%, #ccc 60%, rgba(255,255,255,0) 60.5%), radial-gradient(circle at 100% 100%, white 60%, rgba(255,255,255,0) 60.5%), radial-gradient(circle at 0 100%, #ccc 60%, rgba(255,255,255,0) 60.5%), linear-gradient(to right, #ffffe0 35%, #bdb76b 35%), linear-gradient(to right, #5f9ea0 35%, #4682b4 35%), linear-gradient(to right, white 30%, #ccc 30%), linear-gradient(to right, white 35%, #ccc 35%), linear-gradient(to right, #5f9ea0 36%, #4682b4 36%);
+  background-size: 3em 3em, 2em 2em, 3em 2em, 3em 2em, 6em 0.5em, 3.5em 3.5em, 3.5em 3.5em, 3.5em 3.5em, 4em 1em, 6em 0.5em, 5em 4em, 9em 1em, 9.6em 0.5em;
+  background-position: center -0.1em, left calc(50% - 0.5em) top 1.9em, left calc(50% - 1.5em) top 1.9em, left calc(50% + 1.5em) top 1.9em, center top 3.9em, left 4em bottom 1.5em, left 2.5em bottom 1.5em, right 2.5em bottom 1.5em, center bottom 6.2em, center bottom 5.1em, center bottom 1.5em, center bottom 0.5em, center bottom;
+}
+#bright:after {
+  width: 3.5em;
+  height: 3.5em;
+  left: 50%;
+  margin-left: -1.75em;
+  top: 4em;
+  background-color: #ffa500;
+  background-image: radial-gradient(circle at 40% 60%, #ff6347 30%, transparent 30.5%);
+  border-radius: 2em;
+  border-top-right-radius: 0.4em;
+  transform: rotate(-45deg);
+}

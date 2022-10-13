@@ -1,0 +1,323 @@
+body {
+  margin: 0;
+  height: 100vh;
+  perspective: 1000px;
+}
+
+@keyframes show {
+  0% { transform: translate(-50%, -50%) rotateY(0deg); }
+  100% { transform: translate(-50%, -50%) rotateY(360deg); }
+}
+
+article {
+  --box: 2vmin;
+  --color0: #0000;
+  --color1: #8fe38f;
+  --color2: #0f800f;
+  --color3: #0db50d;
+  --color4: #609e60;
+  --color5: #00d500;
+  --color6: #4f9351;
+  --color7: #5ae143;
+  --color8: #ded;
+  --pos1x:  0; --pos1y:  4; --size1x:  3; --size1y:  4;
+  --pos2x:  1; --pos2y: -2; --size2x:  3; --size2y:  3;
+  --pos3x:  2; --pos3y:  1; --size3x:  3; --size3y:  4;
+  --pos4x:  3; --pos4y:  2; --size4x:  4; --size4y:  3;
+  --pos5x:  0; --pos5y:  2; --size5x:  2; --size5y:  3;
+  --pos6x:  1; --pos6y: -3; --size6x:  3; --size6y:  2;
+  --pos7x:  2; --pos7y:  3; --size7x:  2; --size7y:  1;
+  --pos8x:  3; --pos8y:  0; --size8x:  1; --size8y:  2;
+  --bg:
+    conic-gradient(at calc(100% - var(--box)) var(--box), var(--color1) 25%, #0000 0) calc(var(--pos1x) * var(--box)) calc(var(--pos1y) * var(--box)) / calc(var(--size1x) * var(--box)) calc(var(--size1y) * var(--box)),
+    conic-gradient(at var(--box) var(--box), #0000 75%, var(--color2) 0) calc(var(--pos2x) * var(--box)) calc(var(--pos2y) * var(--box)) / calc(var(--size2x) * var(--box)) calc(var(--size2y) * var(--box)),
+    conic-gradient(at var(--box) var(--box), #0000 75%, var(--color3) 0) calc(var(--pos3x) * var(--box)) calc(var(--pos3y) * var(--box)) / calc(var(--size3x) * var(--box)) calc(var(--size3y) * var(--box)),
+    conic-gradient(at var(--box) var(--box), #0000 75%, var(--color4) 0) calc(var(--pos4x) * var(--box)) calc(var(--pos4y) * var(--box)) / calc(var(--size4x) * var(--box)) calc(var(--size4y) * var(--box)),
+    conic-gradient(at var(--box) var(--box), #0000 75%, var(--color5) 0) calc(var(--pos5x) * var(--box)) calc(var(--pos5y) * var(--box)) / calc(var(--size5x) * var(--box)) calc(var(--size5y) * var(--box)),
+    conic-gradient(at var(--box) var(--box), #0000 75%, var(--color6) 0) calc(var(--pos6x) * var(--box)) calc(var(--pos6y) * var(--box)) / calc(var(--size6x) * var(--box)) calc(var(--size6y) * var(--box)),
+    conic-gradient(at var(--box) var(--box), #0000 75%, var(--color7) 0) calc(var(--pos7x) * var(--box)) calc(var(--pos7y) * var(--box)) / calc(var(--size7x) * var(--box)) calc(var(--size7y) * var(--box)),
+    conic-gradient(at var(--box) var(--box), #0000 75%, var(--color8) 0) calc(var(--pos8x) * var(--box)) calc(var(--pos8y) * var(--box)) / calc(var(--size8x) * var(--box)) calc(var(--size8y) * var(--box)),
+    var(--color1)
+    ;
+  height: calc(30 * var(--box));
+  width: calc(8 * var(--box));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(0deg);
+  transform-style: preserve-3d;
+  animation: show 8s linear infinite;
+}
+
+article *,
+article *::before,
+article *::after {
+  position: absolute;
+  box-sizing: border-box;
+  transform-style: preserve-3d;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: #0f06;
+  color: #0000;
+  box-shadow: inset 0 0 0 1px #0002;
+  background: var(--bg);
+}
+
+article *::before,
+article *::after {
+  box-shadow: inset 0 0 0 50vmin #0002;
+}
+
+article > * >::before,
+article > * >::after {
+  box-shadow: inset 0 0 0 50vmin #0005;
+}
+
+/* head */
+
+header {
+  width: calc(8 * var(--box));
+  height: calc(8 * var(--box));
+  transform: translate3d(0, 0, calc(4 * var(--box)));
+  background:
+    linear-gradient(#000 0 0) calc(var(--box) * 1) calc(var(--box) * 2) / calc(var(--box) * 2) calc(var(--box) * 2) no-repeat,
+    linear-gradient(#000 0 0) calc(var(--box) * 5) calc(var(--box) * 2) / calc(var(--box) * 2) calc(var(--box) * 2) no-repeat,
+    linear-gradient(#000 0 0) calc(var(--box) * 3) calc(var(--box) * 4) / calc(var(--box) * 2) calc(var(--box) * 3) no-repeat,
+    linear-gradient(#000 0 0) calc(var(--box) * 2) calc(var(--box) * 5) / calc(var(--box) * 1) calc(var(--box) * 3) no-repeat,
+    linear-gradient(#000 0 0) calc(var(--box) * 5) calc(var(--box) * 5) / calc(var(--box) * 1) calc(var(--box) * 3) no-repeat,
+    var(--bg)
+    ;
+}
+
+header::before {
+  content: "";
+  transform-origin: 100% 50%;
+  transform: rotateY(-90deg);
+}
+
+header::after {
+  content: "";
+  transform-origin: 0% 50%;
+  transform: rotateY(90deg);
+}
+
+h1 {
+  transform: translateZ(calc(-8 * var(--box)));
+}
+
+h1::before {
+  content: "";
+  transform-origin: 50% 0;
+  transform: rotateX(90deg);
+}
+
+h1::after {
+  content: "";
+  transform-origin: 50% 100%;
+  transform: rotateX(-90deg);
+}
+
+/* body */
+
+main {
+  width: calc(8 * var(--box));
+  height: calc(16 * var(--box));
+  transform: translate3d(0, calc(8 * var(--box)), calc(2 * var(--box)));
+}
+
+main::before {
+  content: "";
+  left: 50%;
+  transform-origin: 100% 50%;
+  transform: rotateY(-90deg);
+  width: calc(4 * var(--box));
+}
+
+main::after {
+  content: "";
+  transform-origin: 0% 50%;
+  transform: rotateY(90deg);
+  width: calc(4 * var(--box));
+}
+
+main p {
+  transform: translateZ(calc(-4 * var(--box)));
+}
+
+main p::before {
+  content: "";
+  width: 100%;
+  height: calc(4 * var(--box));
+  top: 100%;
+  transform-origin: 50% 0;
+  transform: rotateX(90deg);
+}
+
+/* feet */
+footer {
+  background: none;  
+  box-shadow: none;
+}
+
+.foot {
+  --time: 1s;
+  --pos1y: var(--z);
+  --pos3x: calc(var(--z) * 2);
+  top: calc(24 * var(--box));
+  width: calc(4 * var(--box));
+  height: calc(6 * var(--box));
+}
+
+.foot::before {
+  content: "";
+  width: 100%;
+  height: calc(4 * var(--box));
+  transform-origin: 50% 0;
+  transform: rotateX(90deg);
+}
+
+.foot::after {
+  content: "";
+  width: 100%;
+  top: 100%;
+  height: calc(4 * var(--box));
+  transform-origin: 50% 0;
+  transform: rotateX(90deg);
+}
+
+.foot p {
+  transform: translateZ(calc(4 * var(--box)));
+}
+
+.foot p::before {
+  content: "";
+  height: 100%;
+  width: calc(4 * var(--box));
+  transform-origin: 0 50%;
+  transform: rotateY(90deg);
+}
+
+.foot p::after {
+  content: "";
+  height: 100%;
+  width: calc(4 * var(--box));
+  transform-origin: 100% 50%;
+  transform: rotateY(-90deg);
+}
+
+@keyframes walk {
+  0%, 100% { transform: translateZ(calc(var(--z) * var(--box))) var(--r)  rotateX(0deg) }
+  25% { transform: translateZ(calc(var(--z) * var(--box))) var(--r)  rotateX(10deg) }
+  75% { transform: translateZ(calc(var(--z) * var(--box))) var(--r) rotateX(-15deg) }
+}
+
+.foot:nth-child(1) {
+  --r: rotateY(0);
+  --z: 2;
+  animation: walk var(--time) linear infinite;
+  transform-origin: 50% 0;
+  transform: var(--r) translateZ(calc(var(--z) * var(--box))) rotateX(10deg);
+}
+
+.foot:nth-child(2) {
+  --z: 2;
+  --r: rotateY(0);
+/*   --pos1x: 3;
+  --pos1y: 0; */
+  --size1x: 1;
+  --size1y: 1;
+  background: var(--bg);
+  background-position: calc(var(--box) * 1) calc(var(--box) * 3), calc(var(--box) * 3) calc(var(--box) * 3), calc(var(--box) * 2) calc(var(--box) * 1);
+  animation: walk var(--time) linear infinite;
+  animation-delay: calc(var(--time) / 2);
+  transform-origin: 50% 0;
+  left: 50%;
+  transform: var(--r) translateZ(calc(var(--z) * var(--box)));
+}
+
+.foot:nth-child(3) {
+  --z: -2;
+  --r: rotateY(180deg);
+  animation: walk var(--time) linear infinite;
+  animation-delay: calc(var(--time) / 2);
+  transform-origin: 50% 0%;
+  transform: translateZ(calc(var(--z) * var(--box))) var(--r);
+  left: 50%;
+}
+
+.foot:nth-child(4) {
+  --z: -2;
+  --r: rotateY(180deg);
+  animation: walk var(--time) linear infinite;
+  transform-origin: 50% 0%;
+  transform: translateZ(calc(var(--z) * var(--box))) var(--r);
+}
+
+.foot:nth-child(1) p,
+.foot:nth-child(2) p,
+.foot:nth-child(3),
+.foot:nth-child(4) {
+  background:
+    repeating-conic-gradient(#000 0 25%, #040 0 50%) 0 100% / calc(2 * var(--box)) calc(2 * var(--box)) repeat-x,
+    var(--bg)
+    ;
+}
+
+
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

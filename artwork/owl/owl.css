@@ -1,0 +1,195 @@
+body{
+    background-color: black;
+    padding: 0;
+    margin: 0;
+}
+.moon{
+    height: 150px;
+    background-color: white;
+    width: 150px;
+    border-radius: 50%;
+    margin-left: 50%;
+    margin-top: -170px;
+}
+
+.container{
+    height: 400px;
+    width: 400px;
+   
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+.branch{
+     background-color: #644e48;
+     height: 15px;
+     width: 700px;
+     position: absolute;
+     top:260px;
+     left: 0;
+     border-radius: 0 15px 15px 0;
+     z-index: 1;
+
+}
+.branch>div{
+    background-color: #644e48;
+    height: 8px;
+    width: 50px;
+    transform: rotate(-30deg);
+    position: relative;
+    bottom: 10px;
+    left: 250px;
+    border-radius: 8px;
+}
+.owl{
+     background-color: #cfae69;
+     height: 160px;
+     width: 120px;
+     border-radius: 120px;
+     position: absolute;
+     top: 125px;
+     left: 100px;
+     z-index: -2;
+}
+.owl2{
+    background-color: #cfae69;
+    height: 160px;
+    width: 120px;
+    border-radius: 120px;
+    position: absolute;
+    top: 125px;
+    left: 300px;
+    z-index: -2;
+}
+.owl3{
+    background-color: #cfae69;
+    height: 160px;
+    width: 120px;
+    border-radius: 120px;
+    position: absolute;
+    top: 125px;
+    left: 500px;
+    z-index: -2;
+}
+
+.ear-r,.ear-l{
+    height: 0;
+    width: 0;
+    border-bottom: 33px solid #a6813b;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    position: relative;
+}
+.ear-l{
+    bottom: 10px;
+    left: 3px;
+    transform: rotate(-20deg);
+}
+.ear-r{
+     bottom: 42px;
+     left: 88px;
+     transform: rotate(20deg);
+}
+.wing-l,.wing-r{
+      background-color: #a6813b;
+      height: 88px;
+      width: 20px;
+      position: relative;
+      z-index: 2;
+
+}
+.wing-l{
+    right: 8px;
+    top: 4px;
+    border-radius: 20px 0;
+}
+.wing-r{
+        border-radius: 0 20px;
+        bottom: 76px;
+        left: 108px;
+}
+.eye-l,.eye-r{
+    height: 41px;
+    width: 41px;
+    background-color: #a6813b;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+.eye-l{
+    bottom: 190px;
+    left: 12px;
+
+}
+.eye-r{
+    bottom: 230px;
+    left: 67px;
+
+}
+
+.eye-l:before,.eye-r:before{
+    content: "";
+    position: absolute;
+    height: 32px;
+    width: 32px;
+    background-color: #ffffff;
+    border-radius: 50%;
+   
+    left: 4.5px;
+    top: 4.5px;
+}
+.eyeball{
+    height: 15px;
+    width: 15px;
+    background-color: #424242;
+    border-radius: 50%;
+    position: absolute;
+    top: 13px;
+    left: 13px;
+}
+.eyelid{
+    height: 50px;
+    width: 50px;
+    background-color: #a6813b;
+    position: relative;
+    bottom: 30px;
+    right: 5px;
+    animation: blink 2s infinite;
+}
+.break{
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 20px solid #ffcc30;
+    border-radius: 50%;
+    position: relative;
+    bottom: 240px;
+    left: 47.5px;
+}
+.leg-l,.leg-r{
+    background-color: #ffcc30;
+    height: 9px;
+    width: 20px;
+    position: relative;
+    z-index: 2;
+    border-radius: 8px;
+}
+.leg-l{
+    bottom:-22px;
+    left: 12px;
+ 
+
+}
+.leg-r{
+    bottom: -15px;
+    right: 48px;
+}
+@keyframes blink {
+    30%{
+         transform: translateY(18px);
+    }
+    
+}

@@ -1,0 +1,40 @@
+{
+    "name": "css-blue-jay-v2-",
+    "version": "1.0.0",
+    "title": "CSS Blue Jay (v2)",
+    "description": "Cardinal bird drawn with HTML and CSS.\n\nBased on [Cardinal](https://dribbble.com/shots/13995110-Cardinal) by [Jord Riekwel](https://dribbble.com/Larkef).",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "css-blue-jay-v2-.html",
+    "css": [
+        "css-blue-jay-v2-.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "html",
+        "illustration",
+        "cssart"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/XWdXBEe",
+    "codepen": "https://codepen.io/alvaromontoro/pen/XWdXBEe"
+}

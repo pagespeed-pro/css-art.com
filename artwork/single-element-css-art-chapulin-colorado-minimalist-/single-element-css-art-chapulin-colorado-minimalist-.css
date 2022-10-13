@@ -1,0 +1,60 @@
+html {
+  background: #a12;
+}
+
+.chapulin {
+  width: 60vmin;
+  height: 60vmin;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: 
+    /* antennae */
+    radial-gradient(circle farthest-side, #fe0 79.9%, #a12 0 99.9%, #a120 0) 20% 7% / 8% 8%,
+    radial-gradient(circle farthest-side, #fe0 99.9%, #fe00 0) 80% 8% / 6% 6%,
+    radial-gradient(105% 140% at 30% 100%, #0000 40%, #fff 0 43%, #0000 0) 35% -5% / 30% 20%,
+    radial-gradient(105% 140% at 70% 100%, #0000 40%, #fff 0 42.5%, #0000 0) 65% -9% / 30% 23%,
+    
+    /* heart */
+    radial-gradient(circle farthest-side, #fe0 99.5%, #fe00 99.9%) 42.15% 89.33% / 18% 18%,
+    radial-gradient(circle farthest-side, #fe0 99.5%, #fe00 99.9%) 57.85% 89.33% / 18% 18%,
+    conic-gradient(from -0.135turn at 50% 100%, #fe0 0.27turn, #fe00 0) 50% 99.9% / 24% 24%,
+    #a12;
+  background-repeat: no-repeat;
+}
+
+.chapulin::before {
+  content: "";
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28%;
+  height: 35%;
+  border-radius: 100% / 110% 110% 80% 80%;
+  background:
+    radial-gradient(105% 60% at 5% 5%, #422 60%, #0000 0),
+    radial-gradient(80% 65% at 17% 6%, #da8 63%, #0000 0),
+    radial-gradient(115% 60% at 5% 5%, #422 63%, #0000 0),
+    linear-gradient(#da8 0 0);
+}
+
+.chapulin::after {
+  content: "";
+  position: absolute;
+  top: 78.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 21%;
+  height: 10%;
+  background: 
+    /* c */
+    linear-gradient(#a12 25%, #0000 0 75%, #a12 0) 0 0 / 45% 100%,
+    linear-gradient(90deg, #a12 12.5%, #0000 0),
+    /* h */
+    linear-gradient(90deg, #0000 55%, #a12 0 67.5%, #0000 0 87.5%, #a12 0),
+    linear-gradient(#0000 37.5%, #a12 0 62.5%, #0000 0) 100% 0 / 45% 100%;
+  background-repeat: no-repeat;
+}

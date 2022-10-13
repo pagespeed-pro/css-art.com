@@ -1,0 +1,334 @@
+/* Based on https://dribbble.com/shots/13989550-Swiss-Beatz */
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 1vmin solid black;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+html, body {
+  background: #b7625e22;
+}
+
+#image-alt {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* image container */
+.cartoon {
+  --skin: #b7625e;
+  --skinlight: #deaca4;
+  --skinshadow: #7d353c; #702b36;
+  --line: #432325;
+  --hair: #271525;
+  width: 80vmin;
+  height: 80vmin;
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1/1;
+}
+
+.cartoon::before {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size:cover;
+  opacity: 0.5;
+}
+
+.forehead {
+  width: 35%;
+  height: 39%;
+  background: var(--skin);
+  background: linear-gradient(34deg, var(--skin) 47%, var(--skinshadow) 0);
+  border-radius: 30% 80% 40% 100% / 90% 100% 100% 110%;
+  top: 22%;
+  left: 34%;
+  transform: rotate(10deg);
+  box-shadow:  inset -8.5vmin 8vmin var(--skinshadow);
+  filter: blur(0px);
+}
+
+.neck {
+  width: 10%;
+  height: 30%;
+  background: var(--skin);
+  background: linear-gradient(-39deg, transparent 67.5%, var(--skin) 0), linear-gradient(-70deg, var(--skin) 65%, var(--skinshadow) 0);
+  transform: rotate(9deg);
+  top: 57%;
+  left: 51.25%;
+  border-radius: 40% 0 0 0 ;
+}
+
+.ear {
+  width: 16%;
+  height: 8%;
+  border-radius: 0% 5% 50% 0;
+  background: var(--skin);
+  transform: rotate(-38deg);
+  top: 51%;
+  left: 53%;
+  box-shadow: inset 5vmin -2vmin 0.5vmin var(--skin), inset -0.5vmin 0.5vmin 0.0vmin -0.25vmin var(--skinlight);
+}
+
+.ear::before {
+  width: 42%;
+  height: 60%;
+  top: 20%;
+  left: 45%;
+  background: var(--skinshadow);
+  border-radius: 0 5% 70% 0;
+  box-shadow: inset -0.25vmin 0.25vmin var(--line);
+}
+
+.ear::after {
+  width: 2vmin;
+  height: 1vmin;
+  border-top: 0.25vmin solid var(--line);
+  border-right: 0.33vmin solid var(--line);
+  transform: rotate(24deg) skew(-60deg) ;
+  top: 21%;
+  left: 37%;
+  background: var(--skin);
+}
+
+.earring {
+  border: 0.4vmin solid silver;
+  width: 2.5%;
+  height: 2.5%;
+  background: var(--line);
+  top: 55.25%;
+  left: 60.25%;
+}
+
+.chin {
+  width:19%;
+  height: 13%;
+  transform: rotate(-29deg) skew(10deg);
+  background: var(--skin);
+  top: 55.75%;
+  left: 40.25%;
+  border-radius:0 0 0 20%;
+}
+
+.eyebrow {
+  width: 9%;
+  height: 2%;
+  background: var(--line);
+  transform: rotate(-39deg);
+  top: 49.5%;
+  left: 38%;
+  clip-path: polygon(0% 100%, 33% 80%, 100% 93%, 35% 0%)
+}
+
+.lip {
+  background: var(--skinlight);
+  background: linear-gradient(45deg, var(--skinlight) 50%, var(--skin) 0);
+  width: 7%;
+  height: 4%;
+  top: 62%;
+  left: 37%;
+  transform: rotate(25deg);
+  border-radius: 0 0 0 20%;
+  box-shadow: inset -1.5vmin 1.5vmin 0 0.5vmin var(--skin);
+
+}
+
+.lip-bottom {
+  top: 64%;
+  left: 39%;
+  box-shadow: inset -3.66vmin 1.5vmin 0 0.5vmin var(--skin);
+}
+
+.mouth {
+  width: 5.5%;
+  height: 5.5%;
+  border: 0.25vmin solid transparent;
+  border-bottom: 0.25vmin solid var(--line);
+  top: 60.25%;
+  left: 37.125%;
+  transform: rotate(-20deg);
+}
+
+.mouth::after {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 0.25vmin solid transparent;
+  border-right: 0.25vmin solid var(--line);
+  transform: rotate(-40deg);
+  top: 73.33%;
+  left: 33.33%;
+}
+
+.nose {
+  width: 10%;
+  height: 10%;
+  background: var(--skin);
+  transform: rotate(34deg);
+  top: 54.5%;
+  left: 37.5%;
+  border-radius: 30% 0 0 20%;
+}
+
+.nose::after {
+  width: 2.5vmin;
+  height: 2.5vmin;
+  background: var(--skin);
+  border-radius: 50% 0 0 50%;
+  bottom: 0;
+  left: 0;
+  transform: translate(-15%, 15%);
+}
+
+.nose::before {
+  width: 50%;
+  height: 100%;
+  border-radius: 50%;
+  left: -50%;
+  top: 10%;
+  box-shadow: 1vmin -2vmin var(--skin);
+}
+
+.eye {
+  top: 46.5%;
+  left: 40.5%;
+  width: 12%;
+  height: 12%;
+  background: #00f8;
+  background: conic-gradient(var(--skin) 220deg, var(--line) 0, var(--line) 226deg, transparent 0, transparent 250deg, var(--line) 0, var(--line) 256deg, var(--skin) 0), radial-gradient(var(--line) 41%, #dcb 0, #dcb 65%, transparent 0);
+}
+
+.nostril {
+  width: 3.25vmin;
+  height: 4.5vmin;
+  border: 0.2vmin solid transparent;
+  border-bottom: 0.25vmin solid var(--line);
+  top: 56.5%;
+  left: 36.75%;
+  transform: rotate(-10deg)
+}
+
+.hair {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 4.75%;
+  background: var(--hair);
+  clip-path: polygon(35.25% 35.12%, 35.94% 33.38%, 34.75% 31.94%, 34.94% 30.56%, 35.50% 31.44%, 39.56% 29.38%, 41.06% 29.81%, 42.75% 29.06%, 43.38% 29.62%, 42.44% 30.00%, 43.25% 30.19%, 42.94% 31.19%, 44.19% 29.88%, 44.19% 29.00%, 46.00% 27.94%, 45.19% 29.44%, 45.94% 29.44%, 46.06% 30.12%, 47.94% 29.12%, 48.62% 29.69%, 48.94% 29.00%, 52.38% 29.00%, 53.62% 29.44%, 53.75% 30.19%, 55.19% 29.56%, 56.19% 31.00%, 56.94% 31.38%, 57.19% 31.06%, 58.56% 31.94%, 58.56% 32.94%, 59.94% 34.00%, 61.56% 35.56%, 62.44% 38.06%, 62.44% 39.31%, 62.94% 41.19%, 62.56% 42.00%, 63.12% 43.38%, 62.19% 44.69%, 63.12% 46.19%, 61.44% 48.69%, 57.69% 58.12%, 58.88% 59.75%, 57.56% 59.62%, 58.44% 61.00%, 60.69% 59.38%, 60.19% 58.44%, 61.56% 56.25%, 63.25% 55.12%, 62.06% 55.19%, 63.81% 52.56%, 64.31% 53.25%, 65.31% 51.38%, 64.38% 51.12%, 65.31% 50.56%, 63.75% 49.75%, 63.81% 48.75%, 65.50% 47.38%, 65.38% 48.44%, 66.25% 48.38%, 66.44% 47.00%, 65.44% 46.69%, 65.19% 45.69%, 66.62% 44.44%, 67.25% 45.12%, 68.81% 43.69%, 67.44% 44.12%, 66.81% 43.25%, 66.75% 42.19%, 67.31% 41.12%, 66.81% 40.75%, 67.38% 40.31%, 68.62% 38.44%, 68.25% 38.38%, 67.44% 39.25%, 67.31% 38.00%, 67.12% 37.19%, 68.19% 36.50%, 68.19% 35.38%, 67.31% 35.81%, 67.25% 35.12%, 68.19% 34.94%, 67.00% 33.38%, 67.19% 31.88%, 65.81% 32.12%, 66.56% 31.38%, 66.75% 29.62%, 65.75% 29.38%, 64.75% 29.38%, 64.12% 27.00%, 65.12% 28.19%, 65.38% 26.19%, 63.88% 26.12%, 65.38% 25.00%, 64.12% 25.06%, 63.31% 25.69%, 62.69% 24.38%, 61.75% 24.12%, 60.69% 24.62%, 60.69% 23.38%, 61.12% 22.50%, 60.81% 21.44%, 60.25% 22.50%, 60.31% 20.88%, 59.38% 20.88%, 59.38% 22.06%, 58.69% 20.88%, 58.25% 21.38%, 57.69% 21.12%, 58.31% 20.12%, 56.44% 18.25%, 55.94% 18.75%, 56.69% 19.69%, 57.38% 20.25%, 56.94% 20.88%, 55.81% 19.62%, 54.56% 19.69%, 53.06% 18.62%, 50.38% 17.12%, 48.56% 17.75%, 47.19% 17.00%, 36.25% 17.81%, 20.75% 20.12%, 19.06% 21.38%, 18.12% 23.56%, 18.50% 25.19%, 19.69% 26.19%, 20.31% 27.19%, 19.75% 28.38%, 19.62% 30.19%, 20.62% 31.56%, 21.44% 30.19%, 20.81% 29.62%, 20.38% 30.12%, 20.81% 30.41%, 20.59% 30.94%, 20.00% 30.47%, 20.19% 29.16%, 21.41% 27.75%, 21.88% 25.41%, 21.22% 24.72%, 21.09% 23.38%, 21.34% 22.22%, 23.69% 21.94%, 24.03% 25.34%, 22.59% 27.19%, 22.47% 28.59%, 22.97% 29.53%, 21.81% 30.66%, 21.81% 31.47%, 23.12% 32.47%, 24.03% 32.81%, 23.06% 33.88%, 23.25% 34.53%, 23.72% 35.84%, 23.34% 35.97%, 23.50% 38.53%, 24.31% 36.28%, 25.09% 35.25%, 24.56% 34.03%, 25.38% 32.97%, 25.00% 32.00%, 23.66% 31.31%, 23.12% 30.97%, 23.91% 30.12%, 25.12% 29.41%, 25.31% 29.81%, 24.94% 31.31%, 25.59% 32.38%, 26.31% 32.88%, 27.16% 32.75%, 27.62% 32.22%, 27.44% 31.72%, 26.59% 31.72%, 25.84% 31.12%, 25.91% 30.19%, 26.34% 30.97%, 27.09% 31.44%, 27.53% 31.72%, 27.94% 33.00%, 28.44% 34.09%, 27.59% 35.69%, 28.34% 36.75%, 28.22% 37.72%, 28.91% 36.62%, 28.41% 35.75%, 29.84% 33.34%, 29.25% 31.44%, 30.09% 33.12%, 29.97% 31.78%, 30.25% 32.69%, 31.09% 31.59%, 30.44% 33.22%, 30.94% 33.25%, 31.38% 33.56%, 30.56% 34.47%, 30.06% 35.53%, 30.88% 36.38%, 31.41% 36.91%, 32.84% 36.16%, 32.22% 35.94%, 32.34% 35.62%, 32.22% 35.19%, 31.69% 35.19%, 31.97% 35.59%, 31.66% 36.25%, 31.25% 35.47%, 31.28% 34.44%, 32.38% 33.44%, 32.38% 32.81%, 31.59% 32.38%, 31.59% 31.78%, 32.56% 31.94%, 33.72% 31.53%, 33.38% 32.75%, 34.12% 32.47%, 35.16% 33.97%);
+}
+
+.hair-2 {
+  width: 18%;
+  height: 14%;
+  background: var(--hair);
+  top: 12.5%;
+  left: 25%;
+  box-shadow: 10.75vmin 1.75vmin 0 -0.5vmin var(--hair);
+}
+
+.jacket-back {
+  top: 72%;
+  left: 43%;
+  background: #222;
+  width: 10%;
+  height: 20%;
+  transform: rotate(15deg) skewY(-48deg);
+  border-radius: 8% 0 0 0;
+}
+
+.jacket {
+  width: 44%;
+  height: 32%;
+  background: #f008;
+  bottom: 0;
+  left: 37%;
+}
+
+.jacket-front {
+  opacity:1;
+  background: #292623;
+  clip-path: polygon(0% 100%, 18% 40%, 70% 25%, 80% 50%, 90% 100%);
+}
+
+.jacket-front::before {
+  width: 40%;
+  height: 32%;
+  border-top: 0.33vmin solid #fff2;
+  border-left: 0.33vmin solid #fff2;
+  bottom: 2%;
+  right: 0;
+  border-radius: 10% 50% 0 0 / 100% 50%;
+  transform: skewY(-7deg);
+}
+
+.jacket-front::after {
+  width: 0;
+  height: 40%;
+  border-left: 0.33vmin solid #fff2;
+  left: 53%;
+  top: 34%;
+  transform: rotate(-37deg);
+}
+
+.jacket-shoulder {
+  opacity:1;
+  background: #d2c3ab;
+  background-image: linear-gradient(40deg, transparent 67%, #bea685 0), linear-gradient(60deg, transparent 73%, #bea685 0);
+  clip-path: polygon(100% 100%, 90% 60%, 73% 25%, 50% 33%, 80% 66%, 87% 100%)
+}
+
+.jacket-neck {
+  clip-path: polygon(0% 100%, 10% 60%, 19% 35%, 60% 0%, 66% 0%, 73% 13%, 72% 16%, 75% 18%, 77% 28%, 76% 31%, 30% 50%);
+  background: #242023;
+  background-image: linear-gradient(-27deg, transparent 71%, #5f5056 0), linear-gradient(-18deg, transparent 60%, #312d31 0), linear-gradient(-55deg, transparent 65%, #312d31 0);
+}
+
+.hair-3 {
+  border: 0.5vmin solid var(--hair);
+  border-right: 1vmin solid var(--hair);
+  width: 8%;
+  height: 10%;
+  top: 16%;
+  left: 51%;
+  box-shadow: 14vmin 10vmin 0 -2.8vmin var(--hair), 11.5vmin 22.5vmin 0 -2.8vmin var(--hair), 7vmin 31vmin 0 -2.8vmin var(--hair);
+}
+
+/* fallback for browsers that don't support conic-gradient */
+.eye-lid {
+  width: 7%;
+  height: 3%;
+  border: 0.25vmin solid transparent;
+  border-bottom: 0.25vmin solid var(--line);
+  top: 51.5%;
+  left: 40.5%;
+  transform: rotate(-27deg);
+}

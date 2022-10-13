@@ -1,0 +1,41 @@
+{
+    "name": "summer-2021",
+    "version": "1.0.0",
+    "title": "Summer 2021",
+    "description": "A drawing trying to add some noise.\n\nInspired by Surreal Days: https://dribbble.com/shots/16160874--Surreal-Days",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "summer-2021.html",
+    "css": [
+        "summer-2021.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "html",
+        "cssart",
+        "drawing",
+        "noise"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/PomLVbN",
+    "codepen": "https://codepen.io/alvaromontoro/pen/PomLVbN"
+}

@@ -1,0 +1,20 @@
+body {
+  min-height: 310px;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: #00ced1;
+}
+#slice {
+  width: 10em;
+  height: 17em;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(ellipse, #7447d1 20%, #9370db 21%, #9370db 60%, #b299e5 61%, #b299e5 70%, rgba(147,112,219,0) 71%), radial-gradient(ellipse, white 70%, rgba(255,255,255,0) 71%), linear-gradient(white, white), radial-gradient(ellipse, #7447d1 20%, #9370db 21%, #9370db 60%, #b299e5 61%, #b299e5 70%, rgba(147,112,219,0) 71%), radial-gradient(ellipse, white 70%, rgba(255,255,255,0) 71%), linear-gradient(white, white), radial-gradient(ellipse, #7447d1 20%, #9370db 21%, #9370db 60%, #b299e5 61%, #b299e5 70%, rgba(147,112,219,0) 71%), radial-gradient(ellipse, white 70%, rgba(255,255,255,0) 71%), linear-gradient(white, white), radial-gradient(ellipse, #7447d1 20%, #9370db 21%, #9370db 60%, #b299e5 61%, #b299e5 70%, rgba(147,112,219,0) 71%), radial-gradient(ellipse, white 70%, rgba(255,255,255,0) 71%), linear-gradient(white, white);
+  background-size: 100% 12%, 100% 12%, 100% 8.5%, 100% 20%, 100% 20%, 100% 8.5%, 100% 12%, 100% 12%, 100% 8.5%, 100% 20%, 100% 20%, 100% 8.5%;
+  background-position: 50% 40%, 50% 30%, 50% 36%, 50% 10%, 50% 0, 50% 11%, 50% 60%, 50% 70%, 50% 64.5%, 50% 90%, 50% 100%, 50% 89%;
+}
+@media (max-width: 400px) {
+  #slice {
+    transform: scale(0.8);
+  }
+}

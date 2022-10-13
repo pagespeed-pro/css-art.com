@@ -1,0 +1,41 @@
+{
+    "name": "stripes",
+    "version": "1.0.0",
+    "title": "Stripes",
+    "description": "CSS only tiger in squiggle vision",
+    "author": {
+        "name": "Tiffany Choong",
+        "avatar": "https://assets.codepen.io/765377/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1516941279&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/tiffachoo/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/tiffachooo"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/tiffachoo"
+            }
+        ]
+    },
+    "html": "stripes.html",
+    "css": [
+        "stripes.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css-image",
+        "css-animation",
+        "css-only",
+        "squiggle-vision",
+        "tiger"
+    ],
+    "original": "https://codepen.io/tiffachoo/pen/vYWLYRR",
+    "codepen": "https://codepen.io/tiffachoo/pen/vYWLYRR"
+}

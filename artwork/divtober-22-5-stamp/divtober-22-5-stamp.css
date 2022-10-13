@@ -1,0 +1,86 @@
+body {
+  background:
+    repeating-linear-gradient(-55deg, #0000 0 4%, #c43 0 8%, #0000 0 12%, #369 0 16%) 0 0 / 100% 6vmin repeat-x,
+    #d0e0e0
+}
+
+.stamp {
+  width: 36vmin;
+  height: 45vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: pre;
+  box-sizing: border-box;
+  padding: 1.5vmin 2vmin;
+  display: flex;
+  align-items: flex-end;
+  color: #fffff8dd;
+  font-size: 7vmin;
+  background: 
+    radial-gradient(80% 70% at 60% 40%, #796 30%, #0000 0),
+    radial-gradient(50% 60% at 50% 60%, #796 90%, #0000 0) 38% 25% / 23% 20%,
+    radial-gradient(50% 50% at 50% 50%, #796 90%, #0000 0) 43% 65% / 23% 15%,
+    radial-gradient(50% 50% at 50% 50%, #796 90%, #0000 0) 43% 60% / 23% 5%,
+    radial-gradient(50% 50% at 50% 50%, #796 90%, #0000 0) 42% 57% / 23% 7%,
+    conic-gradient(at 0 100%, #0000 20deg, #796 0) 29% 45% / 10% 15%,
+    conic-gradient(at 0 0, #0000 130deg, #796 0 170deg, #0000 0) 45% 10% / 15% 15%,
+    conic-gradient(at 100% 0, #0000 190deg, #796 0 230deg, #0000 0) 76% 11% / 15% 15%,
+    conic-gradient(at 50% 0, #0000 155deg, #796 0 210deg, #0000 0) 60% 8% / 15% 15%,
+    radial-gradient(210% 220% at 0 0, #0000 50%, #796 0) 24% 85% / 45% 50%,
+    radial-gradient(120% 120% at 100% 0, #0000 80%, #796 0) 82% 80% / 15% 35%,
+    radial-gradient(35% 100%, #796 50%, #0000 0) 70% 80% / 30% 40%,
+    #9b8;
+  background-repeat: no-repeat;
+  font-family: Arial,Helvetica, sans-serif;
+}
+
+.stamp::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vmin;
+  height: 49vmin;
+  -webkit-mask:
+    radial-gradient(farthest-side at 50% 0%, #0000 60%, #000 0) -2.25vmin 0 / 4.5vmin 2.25vmin repeat-x,
+    radial-gradient(farthest-side at 50% 100%, #0000 60%, #000 0) -2.25vmin 100% / 4.5vmin 2.25vmin repeat-x,
+    radial-gradient(farthest-side at 0% 50%, #0000 60%, #000 0) 0 -2.25vmin / 2.25vmin 4.5vmin repeat-y,
+    radial-gradient(farthest-side at 100% 50%, #0000 60%, #000 0) 100% -2.25vmin / 2.25vmin 4.5vmin repeat-y
+    ;
+  background: 
+    #fffff9;
+}
+
+.stamp::after {
+  content: "Air Mail \a OCT . 05 . 22 \a AUS TX";
+  white-space: pre-wrap;
+  text-align: center;
+  display: grid;
+  place-items: center;
+  font-size: 4.5vmin;
+  font-family: Arial, sans-serif;
+  color: #236c;
+  line-height: 2;
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  top: 60%;
+  left: 60%;
+  background:
+    radial-gradient(farthest-side, #0000 95%, #2369 0),
+    linear-gradient(#2369 0 0) 50% 40% / 75% 2.25% no-repeat,
+    linear-gradient(#2369 0 0) 50% 60% / 75% 2.25% no-repeat;
+  transform: rotate(13deg);
+  -webkit-mask:
+    radial-gradient(#0008, #0000 70%) 3% 3% / 5% 5%,
+    radial-gradient(#000c, #0000 50%) 5% 5% / 7% 7%,
+    radial-gradient(#0008, #0000 40%) 7% 7% / 11% 11%,
+    radial-gradient(#0005, #0000 30%) 11% 11% / 13% 13%,
+    radial-gradient(#000f, #0000 70%) 5% 5% / 13% 11%,
+    radial-gradient(#000a, #0000 50%) 7% 9% / 14% 12%,
+    radial-gradient(#0008, #0000 30%) 9% 11% / 9% 8%
+}

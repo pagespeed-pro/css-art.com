@@ -1,0 +1,217 @@
+/* *, *::before {
+  animation: none !important;
+}
+.boat { left: 30% !important; } */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(#adf, #bef 20%, #9de 0)
+}
+
+@keyframes biting {
+  0%, 30%, 100% { clip-path: polygon(-10% -20%, 0% -50%, 100% -50%, 100% 60%, 80% 60%, 100% 60%, 100% 125%, -10% 125%);}
+  15% { clip-path: polygon(-10% -20%, 0% -50%, 100% -50%, 100% 60%, 80% 50%, 100% 100%, 100% 125%, -10% 125%); }
+}
+
+@keyframes swim {
+  0% {
+    transform: translate(0, 0) scaleX(1);
+  }
+  50% {
+    transform: translate(58vw, 0) scaleX(1);
+  }
+  50.1% {
+    transform: translate(58vw, 0) scaleX(-1);
+  }
+  100% {
+    transform: translate(0, 0) scaleX(-1);
+  }
+}
+
+.shark {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 34vw;
+  height: 14vw;
+  background-image:
+    radial-gradient(circle at 83% 14%, white 1%, transparent 0),
+    radial-gradient(circle at 81% 16%, black 4%, transparent 0),
+    radial-gradient(at 54% 0%, gray 60%, transparent 0);
+  clip-path: polygon(-10% -50%, 100% -50%, 100% 60%, 80% 60%, 100% 60%, 100% 125%, -10% 125%);
+  animation: biting 5.25s infinite, swim 13s infinite linear;
+}
+
+.shark::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% / 80% 100% 50% 120%;
+  width: 50%;
+  height: 150%;
+  top: -35%;
+  box-shadow: 6vw -0.5vw 0 -0.75vw gray
+}
+
+.shark::after {
+  content: "";
+  display: block;
+  position: absolute;
+  color: rgba(0,0,0,0.5);
+  width: 8vw;
+  height: 10vw;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+  top: 0vw;
+  left: 22vw;
+  box-shadow: 
+    inset 1vw 0vw 0 -0.75vw,
+    -1.5vw 0 0 -0.5vw gray,
+    -2vw 0 0 -0.75vw,
+    -26vw -17vw 0 1vw #9de,
+    -22vw -14vw gray;
+}
+
+@keyframes sail {
+  0% { transform: translate(160vw, 0); }
+  100% { transform: translate(0vw, 0); }
+}
+
+.boat {
+  position: absolute;
+  width: 40vw;
+  height: 10vw;
+  background: red;
+  border-radius: 0 0 60vw 100vw;
+  top: calc(20% - 6vw);
+  background-image: linear-gradient(white 22%, #eee 0 23%, white 0 45%, navy 0 60%, #56f 0, #9de 90%);
+  animation: sail 22s 1 linear;
+  animation-fill-mode: forwards;
+  left: -50vw;
+  transform: translate(0,0);
+}
+
+@keyframes sleep {
+  0% {
+    text-indent: 3em;
+    color: black;
+    padding-top: 1.2rem;
+  }
+  100% {
+    text-indent: 5em;
+    color: transparent;
+    padding-top: 0;
+  }
+}
+
+.boat::before {
+  content: "zzz";
+  box-sizing: border-box;
+  text-indent: -1em;
+  display: block;
+  position: absolute;
+  width: 30%;
+  height: 120%;
+  top: -120%;
+  left: 30%;
+  background-image:
+    linear-gradient(black, black),
+    linear-gradient(to right, transparent 10%, rgba(0,0,0,0.3) 12%, transparent 25% 75%, rgba(0,0,0,0.3) 88%, transparent 90%),
+    radial-gradient(circle at 40% 27%, #d98 8%, transparent 0),
+    radial-gradient(circle at 60% 27%, #d98 8%, transparent 0),
+    radial-gradient(circle at 40% 29%, #000 8%, transparent 0),
+    radial-gradient(circle at 60% 29%, #000 8%, transparent 0),
+    radial-gradient(circle at 50% 27%, #d98 30%, transparent 0),
+    radial-gradient(circle at 50% 40%, black 5%, transparent 25%),
+    radial-gradient(ellipse at 50% 130%, #d82 50%, transparent 0);
+  background-size: 20% 2%, 50% 20%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  background-position: 50% 45%, bottom center;
+  background-repeat: no-repeat;
+  animation: sleep 3s linear 10;
+}
+
+.boat::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 28%;
+  height: 600%;
+  left: calc(50% + 4.5vw);
+  top: -150%;
+  background-image: 
+    linear-gradient(-54.5deg, transparent 48%, black 0 52%, transparent 0),
+    linear-gradient(#888 35%, #bbb 0, transparent);
+  background-size: 100% 25%, 2% 100%;
+  background-position: top left, top right;
+  background-repeat: no-repeat;
+}
+
+@keyframes beans {
+  0% { transform: translate(70vw, 0); }
+  50% { transform: translate(0, 0); }
+  99.9% { transform: translate(0, 77vh); opacity: 1; animation-timing-function: ease-in-out; }
+  100% { transform: translate(0, 77vh); opacity: 0; animation-timing-function: ease-in-out; }
+}
+
+.can {
+  position: absolute;
+  width: 4.5vw;
+  height: 7vw;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 1.2vw;
+  background: linear-gradient(gray 5%, black 0 7%, #fcc 0 93%, black 0 95%, gray 0);
+  font-family: Arial, sans-serif;
+  top: calc(20% - 13vw);
+  left: 50%;
+  animation: beans 22s 1 linear;
+  animation-fill-mode: forwards;
+}
+
+.bubbles {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 34vw;
+  height: 14vw;
+  animation: swim 13s infinite linear;
+}
+
+@keyframes popup {
+  0%, 99.9% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes bubbleUp {
+  0% { 
+    transform: translate(0, 0); 
+    opacity: 1;
+    box-shadow: 3vw -2vw 0 -1vw white, -4vw 1vw 0 -0.5vw white;
+  }
+  50%, 100% { 
+    transform: translate(-20vw, -60vh); 
+    opacity: 0;
+    box-shadow: 2vw 1vw 0 -1vw white, -3vw -2vw 0 -0.75vw white;
+  }
+}
+
+.bubbles::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 4vw;
+  height: 4vw;
+  background: white;
+  border-radius: 50%;
+  animation:popup 22s linear 1, bubbleUp 6s infinite;
+  animation-fill-mode: forwards;
+  animation-delay: 0s, 22s;
+  box-shadow: 3vw -2vw 0 -1vw white, -4vw 1vw 0 -0.5vw white;
+}

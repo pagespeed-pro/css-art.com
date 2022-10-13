@@ -1,0 +1,33 @@
+/* colors */
+body {
+  animation: darken-wall 20s ease-out 0s 1 both running;
+}
+
+div.shadow {
+  box-shadow: 0 0 15px 15px white;
+  filter: blur(0.125rem);
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  animation: move-shadow 20s ease-out 0s 1 both running;
+  background: repeating-linear-gradient(180deg, transparent 0 20px, #a6a6a6 20px 28px), repeating-linear-gradient(90deg, transparent 0 31%, #a6a6a6 31% 34%), repeating-linear-gradient(180deg, transparent 0 48%, #a6a6a6 48% 52%), linear-gradient(white 0%, #fdfaf3 100%);
+}
+
+@keyframes move-shadow {
+  0% {
+    opacity: 1;
+    transform: perspective(100px) rotateY(-10deg) rotateZ(0deg);
+  }
+  100% {
+    opacity: 0.1;
+    transform: perspective(100px) rotateY(-10deg) rotateZ(0deg) translateY(-30vh);
+  }
+}
+@keyframes darken-wall {
+  0% {
+    background-color: #fffdf9;
+  }
+  100% {
+    background-color: #090600;
+  }
+}

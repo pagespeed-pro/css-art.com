@@ -1,0 +1,52 @@
+:root {
+  --c1: #ef548f;
+  --c2: #ef8b6d;
+  --c3: #cfef6b;
+  --c4: #3bf0c1;
+  --c5: #bb4af0;
+}
+
+h1 {
+  display: grid;
+  grid-template-area: "text";
+  place-items: center;
+  font-size: clamp(6rem, 30vw, 20rem);
+  font-family: "Alegreya Sans SC", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--c5);
+}
+h1 span {
+  background: linear-gradient(15deg, rgba(255, 0, 0, 0) 0%, rgba(255, 0, 0, 0) 35%, rgba(255, 255, 255, 0.98) 49.95%, rgba(255, 255, 255, 0.98) 50.15%, rgba(255, 0, 0, 0) 65%, rgba(255, 0, 0, 0)), linear-gradient(to right, var(--c1), var(--c2), var(--c3), var(--c4), var(--c5));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.009em rgba(0, 0, 0, 0.6);
+}
+h1 > *, h1::before, h1::after {
+  grid-area: text;
+}
+h1::before {
+  content: "CSS";
+  background: no-repeat linear-gradient(white, white) 0 50%/70% 30%;
+  color: #fff;
+  z-index: -1;
+  -webkit-text-stroke: 0.14em white;
+}
+h1::after {
+  content: "CSS";
+  color: #fff;
+  z-index: -2;
+  text-shadow: 0.07em 0.07em 0.03em rgba(0, 0, 0, 0.15), 0 -0.07em 0.04em rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: sans-serif;
+  background-color: #eee;
+}

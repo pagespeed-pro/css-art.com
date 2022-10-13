@@ -1,0 +1,133 @@
+html {
+  --bg: #bec;
+  background: var(--bg);
+}
+
+div {
+  --bg: #bec;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vmin;
+  height: 90vmin;
+  background:
+    /* poster */
+    linear-gradient(#ffe, #fff) 95% 57% / 27% 20%,
+    /* face */
+    radial-gradient(closest-side, white 0 60%, transparent 0) 44% 49% / 2% 2%,
+    radial-gradient(closest-side, white 0 60%, transparent 0) 43.1% 48.9% / 1% 1%,
+    radial-gradient(closest-side, white 0 60%, transparent 0) 57.9% 49% / 2% 2%,
+    radial-gradient(closest-side, white 0 60%, transparent 0) 57% 49% / 1% 1%,
+    radial-gradient(closest-side, black 20%, white 0 60%, transparent 0) 42% 50% / 15% 15%,
+    radial-gradient(closest-side, black 20%, white 0 60%, transparent 0) 58% 50% / 15% 15%,
+    radial-gradient(farthest-side at 50% 0%, #0000 40%, #000 0 58%, #0000 0) 50% 58% / 10% 5%,
+    /* body */
+    radial-gradient(farthest-side at 50% 0%, #e00, red 91%, #ffd 0 93%, #0c0 0, green 99.9%, transparent 0) 50% 50% / 90% 45%,
+    /* legs */
+    radial-gradient(farthest-side at 50% 100%, #000 0 58%, #0000 0) 33.125% 90% / 15% 5%,
+    radial-gradient(farthest-side at 50% 100%, #fff 0 58%, #0000 0) 67% 89.5% / 16% 6%,
+    linear-gradient(#fff 10%, red 0 15%, #fff 0 20%, blue 0 25%, #fff 0) 60.9% 89.5% / 2% 5%,
+    radial-gradient(farthest-side at 50% 100%, #0000 50%, #000 0 58%, #0000 0) 50% 80% / 40% 50%,
+    /* arms */
+    radial-gradient(farthest-side at 100% 0%, #0000 53.5%, #000 0 58%, #0000 0) 74% 85% / 30% 35%,
+    radial-gradient(150% 151%, black 99%, transparent) 30% 70% / 1.5% 40%,
+    linear-gradient(125deg, #0000 50%, #000 0 63%, #0000 0) 25.6% 80% / 10% 4%, 
+    linear-gradient(60deg, #0000 50%, #000 0 63%, #0000 0) 28.5% 80% / 10% 4%, 
+    radial-gradient(closest-side, #000 90%, #0000 0) 84% 76% / 5% 5%,
+    linear-gradient(brown 0 0) 83% 70% / 2% 27%,
+    /* shadow */
+    radial-gradient(closest-side, #aba8 60%, #0000) 50% 92.5% / 90% 5%
+    ;
+  background-repeat: no-repeat;
+  background-color: var(--bg);
+}
+
+div::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  width: 2%;
+  height: 3.5%;
+  background: black;
+  border-radius: 100% / 125% 125% 60% 60%;
+  box-shadow:
+    /* bite */
+    -22vmin -5vmin 0 1.5vmin var(--bg),
+    -18vmin -3vmin 0 1.5vmin var(--bg),
+    -14vmin -5vmin 0 2vmin var(--bg),
+    /* seeds */
+    -17vmin 5vmin,
+    -10vmin 15vmin,
+    21vmin 25vmin,
+    30vmin 10vmin,
+    12vmin 6vmin,
+    25vmin 1vmin,
+    37vmin 3vmin
+}
+
+div::after {
+  content: "Hola!";
+  position: absolute;
+  left: 80%;
+  top: 55%;
+  width: 27%;
+  height: 20%;
+  transform: translate(-40%, -46%);
+  font-size: 6vmin;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+  font-size: 0;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+

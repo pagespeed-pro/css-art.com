@@ -1,0 +1,41 @@
+{
+    "name": "float-on",
+    "version": "1.0.0",
+    "title": "Float on",
+    "description": "CSS-only floating balloon pikachu",
+    "author": {
+        "name": "Tiffany Choong",
+        "avatar": "https://assets.codepen.io/765377/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1516941279&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/tiffachoo/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/tiffachooo"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/tiffachoo"
+            }
+        ]
+    },
+    "html": "float-on.html",
+    "css": [
+        "float-on.css"
+    ],
+    "js": "// <(o ^-^ o)>",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "pikachu",
+        "keyframe-animation",
+        "css-animation",
+        "css-image",
+        "scss"
+    ],
+    "original": "https://codepen.io/tiffachoo/pen/JveaJZ",
+    "codepen": "https://codepen.io/tiffachoo/pen/JveaJZ"
+}

@@ -1,0 +1,41 @@
+.heart {
+  width: 380px;
+  aspect-ratio: 1;
+  display: grid;
+  padding: var(--b);
+  --c: lightblue;
+  --b: 14px;
+  --g1:#0000 calc(62% - var(--b)),var(--c) calc(63% - var(--b)) 64%,#0000 65%;
+  --g2:#0000 calc(42% - var(--b)),var(--c) calc(43% - var(--b)) 42%,#0000 43%;
+  background:
+   radial-gradient(circle at 60% 65%,var(--g1)) top left,
+   radial-gradient(circle at 40% 65%,var(--g1)) top right,
+   linear-gradient(to bottom left, var(--g2)) bottom left,
+   linear-gradient(to bottom right,var(--g2)) bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
+  animation: h 6s infinite linear;
+}
+
+.heart *{
+  display: inherit;
+  padding: inherit;
+  background: inherit;
+  filter: inherit;
+}
+
+@keyframes h {
+  0%,20% {filter:drop-shadow(0 0 1px var(--c)) hue-rotate(0deg)}
+  to     {filter:drop-shadow(0 0 1px var(--c)) hue-rotate(360deg)}
+}
+
+body {
+  background: #000;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+* {
+  box-sizing:border-box;
+}

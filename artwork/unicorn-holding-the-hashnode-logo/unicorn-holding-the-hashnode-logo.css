@@ -1,0 +1,404 @@
+/* based on: https://www.shutterstock.com/image-vector/painting-unicorn-flat-pony-cartoon-hug-2020942808 */
+body {
+  background: #f9d4;
+}
+
+.cartoon {
+  --line: #525;
+  --skin: #fff;
+  --skin2: #fdd;
+  --mane1: #f9d;
+  --mane2: #ff9;
+  --mane3: #aef;
+  --mane4: #a9e;
+  --shade: #0001;
+  width: 80vmin;
+  height: 80vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--line);
+}
+
+.cartoon *,
+.cartoon *::before,
+.cartoon *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.heart {
+  width: 8%;
+  height: 8%;
+  border-radius: 0 0 15% 0;
+  background: var(--mane1);
+  opacity: 0.6;
+  transform: rotate(30deg);
+  left: 40%;
+  
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--mane1);
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, 0);
+}
+
+.heart::after {
+  transform: translate(0, -50%);
+}
+
+
+.head {
+  width: 50%;
+  height: 40%;
+  border: 1vmin solid;
+  border-top-color: #0000;
+  border-radius: 70% 62% 62% 60%;
+  top: 21%;
+  left: 25%;
+  background:
+    radial-gradient(circle at 15% 67%, var(--skin2) 10%, #0000 0),
+    radial-gradient(circle at 68% 78%, var(--skin2) 10%, #0000 0)
+    ;
+  background-color: var(--skin);
+  
+  box-shadow: inset -1vmin 0 var(--shade);
+}
+
+.head::before {
+  content: "";
+  width: 47%;
+  height: 20%;
+  top: 90%;
+  left: 20%;
+  background: var(--skin);
+  border-radius: 20% 20% 50%;
+}
+
+.forehead {
+  width: 25%;
+  height: 20%;
+  background: var(--skin);
+  border-radius: 40% / 100%;
+  border: 1vmin solid #0000;
+  border-left-color: var(--line);
+  border-top: 0.5vmin solid #0000;
+  transform: rotate(30deg);
+  top: 22.5%;
+  left: 28%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 84%)
+}
+
+.body {
+  width: 39%;
+  height: 35%;
+  background: var(--skin);
+  border: 1vmin solid;
+  border-radius: 55% 50% 60% 55%;
+  transform: rotate(-40deg);
+  top: 48%;
+  left: 26%;
+  box-shadow: inset -0.25vmin -1vmin var(--shade);
+}
+
+.ear {
+  width: 11%;
+  height: 15%;
+  border: 1vmin solid;
+  border-radius:100% 20% 80% 50% / 80%;
+  left: 28%;
+  top: 12%;
+  transform: rotate(-15deg);
+  background:
+    radial-gradient(at 100% 60%, var(--skin2) 50%, #0000 0) no-repeat 0% 100% / 70% 100%
+    ;
+  background-color: var(--skin)
+}
+
+.ear ~ .ear {
+  transform: scaleX(-1) rotate(-45deg);
+  top: 21%;
+  left: 68%;
+}
+
+.mane-top,
+.tail {
+  width: 36%;
+  height: 40%;
+  border-radius: 50%;
+  top: 28%;
+  left: 55%;
+  transform: rotate(-25deg);
+  border: 1vmin solid;
+  border-top-color: #0000;
+  border-right: 0.5vmin solid #0000;
+  background:
+    radial-gradient(90% 160% at 90% 42%, #0000 23%, var(--line) 23.25% calc(23% + 0.75vmin), var(--mane1) calc(23.25% + 0.75vmin) 40%, #0000 0),
+    radial-gradient(90% 100% at 90% 46%, #0000 35%, var(--mane1) 0 55%, var(--line) 0 57.5%, var(--mane2) 0 80%, var(--line) 0 82.5%, #0000 0),
+    linear-gradient(40deg, var(--mane3) 30%, #0000 0 99.9%)
+    ;
+  clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+}
+
+.tail {
+  transform: scaleX(-1) rotate(-95deg);
+  left: 12%;
+  top: 54%;
+  width: 25%;
+  height: 30%;
+  background:
+    radial-gradient(110% 160% at 90% 42%, #0000 23%, var(--line) 0 calc(23% + 0.5vmin), var(--mane1) calc(23.1% + 0.5vmin) 40%, #0000 0),
+    radial-gradient(90% 100% at 90% 46%, #0000 35%, var(--mane1) 0 55%, var(--line) 55.5% 58%, var(--mane2) 58.5% 80%, var(--line) 80.5% 83%, #0000 83.5%),
+    linear-gradient(80deg, var(--mane3) 30%, #0000 0 99.9%)
+    ;
+}
+
+.leg {
+  border: 1vmin solid;
+  border-top: 0vmin;
+  border-radius: 50%;
+  background-color: var(--skin);
+  box-shadow: inset 0 -6vmin 0 -4vmin var(--skin2);
+}
+
+.leg1 {
+  width: 12.5%;
+  height: 12%;
+  border-radius: 0 00% 70% 100%;
+  top: 79.5%;
+  left: 33%;
+  transform: rotate(-2deg);
+  clip-path: polygon(0 0, 100% 29%, 100% 100%, 0 100%);
+  box-shadow: 
+    inset -1vmin 0 var(--shade),
+    inset 0 -6vmin 0 -4vmin var(--skin2)
+    ;
+}
+
+.leg2 {
+  width: 13%;
+  height: 19%;
+  border-radius: 0 00% 60% 40%;
+  top: 72.5%;
+  left: 48%;
+  transform: rotate(2deg);
+  clip-path: polygon(0 52%, 10% 52%, 10% 0, 100% 0%, 100% 100%, 0 100%);
+  
+  box-shadow: 
+    inset -1vmin 0 var(--shade),
+    inset 0 -6vmin 0 -4vmin var(--skin2)
+    ;
+}
+
+.leg3 {
+  width: 10.6%;
+  height: 13%;
+  clip-path: polygon(0 20%, 100% 20%, 100% 100%, 0 100%);
+  transform: rotate(165deg);
+  left: 47%;
+  top: 56%;
+}
+
+.leg4 {
+  width: 11%;
+  height: 15%;
+  clip-path: polygon(0 20%, 100% 20%, 100% 100%, 0 100%);
+  transform: rotate(-160deg);
+  left: 39%;
+  top: 53%;
+}
+
+.shadow {
+  width: 50%;
+  height: 8%;
+  background: #0002;
+  border-radius: 50%;
+  top: 86%;
+  left: 23%;
+}
+
+.hashnode-logo {
+  width: 10vmin;
+  aspect-ratio: 1;
+  position: absolute;
+  border-radius: 27%;
+  transform: rotate(105deg);
+  border: 0.8vmin solid;
+  background: radial-gradient(var(--line) 35%, #2962ff 0);
+  background-color: #2962ff;
+  -webkit-mask: radial-gradient(#0000 20%, #000 20.25%);
+  mask: radial-gradient(#0000 25%, #000 25.25%);
+  /* for demo, centering it on the page */
+  top: 52%;
+  left: 52%;
+  transform: translate(-50%, -50%) rotate(65deg);
+}
+
+.semi {
+  width: 11%;
+  height: 5.5%;
+  background: 
+    radial-gradient(farthest-side at 50% 0%, #0000 80%, var(--line) 0 99.9%, #0000 0)
+    ;
+}
+
+.eye {
+  top: 36%;
+  left: 30%;
+  transform: rotate(190deg)
+}
+
+.eye::before,
+.eye::after {
+  content: "";
+  width: 20%;
+  height: 15%;
+  background: var(--line);
+  left: 96%;
+  top: 15%;
+}
+
+.eye::after {
+  transform: rotate(20deg);
+  left: 90%;
+  top: 45%;
+}
+
+.eye + .eye {
+  top: 39%;
+  left: 53%;
+}
+
+.eye + .eye::before {
+  left: -15%;
+}
+
+.eye + .eye::after {
+  left: -10%;
+  transform: rotate(-20deg);
+}
+
+
+.eyebrow {
+  width: 3%;
+  height: 1.5%;
+  top: 32%;
+  left: 35%;
+  transform: rotate(190deg);
+  background: 
+    radial-gradient(farthest-side at 50% 0%, #0000 60%, var(--line) 0 99.9%, #0000 0)
+    ;
+}
+
+.eyebrow + .eyebrow {
+  top: 35%;
+  left: 59%;
+}
+
+.mouth {
+  width: 4%;
+  height: 2%;
+  background: 
+    radial-gradient(farthest-side at 50% 0%, #0000 60%, var(--line) 0 99.9%, #0000 0)
+    ;
+  top: 45%;
+  left: 44%;
+  transform: rotate(10deg);
+}
+
+.nose {
+  width: 1%;
+  height: 1.7%;
+  background: var(--line);
+  border-radius: 50%;
+  top: 42%;
+  left: 45%;
+}
+
+.nose + .nose {
+  left: 47%;
+  top: 42.25%;
+  transform: rotate(20deg);
+}
+
+.mane {
+  border-radius: 50%;
+  border: 1vmin solid;
+}
+
+.mane1 {
+  width: 21%;
+  height: 16%;
+  background: var(--mane4);
+  transform: rotate(22deg);
+  top: 17%;
+  left: 52%;
+  
+  height: 12%;
+  top: 19%;
+  transform: rotate(4deg);
+  border-radius: 110% / 50% 50% 150% 100%;
+  background: var(--mane1);
+}
+
+.mane2 {
+  width: 15%;
+  height: 14.6%;
+  background: var(--mane3);
+  transform: rotate(42deg);
+  top: 18%;
+  left: 51%;
+}
+
+.mane3 {
+  width: 15%;
+  height: 14.6%;
+  background: var(--mane2);
+  transform: rotate(-42deg);
+  top: 18%;
+  left: 45%;
+}
+
+.mane4 {
+  width: 18%;
+  height: 12%;
+  background: var(--mane4);
+  transform: rotate(2deg);
+  top: 15%;
+  left: 37%;
+  border-radius: 100% / 5% 110% 90% 140%;
+}
+
+.horn {
+  width: 8%;
+  height: 18%;
+  border: 1vmin solid;
+  border-radius: 100% / 170% 170% 20% 20%;
+  transform: rotate(12deg);
+  top: 6%;
+  left: 52%;
+  background:
+    radial-gradient(circle at 60% 0%, var(--mane1) 30%, var(--line) 0 35%, var(--mane2) 0 64%, var(--line) 0 70%, var(--mane3) 0);
+  box-shadow: 
+/*     inset 0.5vmin 0 0.5vmin #fff3, */
+    inset -0.5vmin 0 var(--shade)
+    ;
+}
+
+.bottom {
+  width: 10%;
+  height: 15%;
+  border-radius:  100% / 20%;;
+  background: var(--skin);
+  border-bottom: 1vmin solid;
+  top: 70%;
+  left: 42%;
+}

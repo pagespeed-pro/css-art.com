@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+html {
+  --bg: #dca;
+  background: var(--bg);
+}
+
+div {
+  --color: #444;
+  --colordark: #333;
+  --colorlight: #666;
+  --bgdark: #0003;
+  --bglight: #fff2;
+  width: 80vmin;
+  height: 50vmin;
+  border-radius: 2vmin 2vmin 1vmin 1vmin / 1.5vmin 1.5vmin 2vmin 2vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  box-shadow:
+    inset -0.25vmin 0.5vmin 0vmin var(--bglight),
+    inset -0.75vmin 0.75vmin 1vmin var(--colorlight),
+    inset 0.75vmin -0.75vmin 1vmin var(--colordark),
+    -18vmin 11vmin 0 -17.5vmin var(--colordark),
+    18vmin 11vmin 0 -17.5vmin var(--colordark),
+    -1vmin 8vmin 7vmin -3vmin #2229;
+  background:
+    linear-gradient(to right, var(--colorlight) 0.25%, transparent 0 99%, var(--colordark)) 4vmin 4vmin / 72vmin 33vmin,
+    linear-gradient(var(--colordark), var(--color) 1.5% 99.75%, var(--colorlight) 0) 4vmin 4vmin / 72vmin 33vmin,
+    /* screws lines */
+    linear-gradient(black, black) 2.6vmin 2vmin / 0.4vmin 1.6vmin,
+    linear-gradient(black, black) 1.9vmin 2.6vmin / 1.6vmin 0.4vmin,
+    linear-gradient(black, black) 77.25vmin 2vmin / 0.4vmin 1.6vmin,
+    linear-gradient(black, black) 76.6vmin 2.6vmin / 1.6vmin 0.4vmin,
+    linear-gradient(black, black) 3vmin 46.25vmin / 0.4vmin 1.6vmin,
+    linear-gradient(black, black) 2.3vmin 46.85vmin / 1.6vmin 0.4vmin,
+    linear-gradient(black, black) 76.75vmin 46.25vmin / 0.4vmin 1.6vmin,
+    linear-gradient(black, black) 76.25vmin 46.85vmin / 1.6vmin 0.4vmin,
+    /* screws */
+    radial-gradient(closest-side, #282828 60%, #222 0 90%, transparent 0) 1.5vmin 1.5vmin / 2.5vmin 2.5vmin,
+    radial-gradient(closest-side, #282828 60%, #222 0 90%, transparent 0) 76vmin 1.5vmin / 2.5vmin 2.5vmin,
+    radial-gradient(closest-side, #282828 60%, #222 0 90%, transparent 0) 2vmin 46vmin / 2.5vmin 2.5vmin,
+    radial-gradient(closest-side, #282828 60%, #222 0 90%, transparent 0) 75.5vmin 46vmin / 2.5vmin 2.5vmin,
+    
+    repeating-linear-gradient(transparent 0 0.75%, var(--bgdark) 1.5%)
+    ;
+  background-repeat: no-repeat;
+  background-color: var(--color);
+}
+
+div::before {
+  content: "";
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -12vmin);
+  width: 55vmin;
+  height: 30vmin;
+  border-radius: 5% / 50%;
+  box-shadow:
+    inset -0.25vmin 0.5vmin 0vmin var(--bglight),
+    inset 0 -30vmin 1vmin -18vmin var(--colordark),
+    inset -0.5vmin 0.5vmin 1vmin var(--colorlight),
+    inset 0 -0.75vmin 1vmin var(--colordark),
+    inset 0.5vmin 0vmin 1vmin var(--bgdark),
+    
+    -0.5vmin 0vmin 1vmin var(--colordark)
+    ;
+  background:
+    radial-gradient(closest-side, var(--colordark) 40%, #222 99%, transparent 0) 6.5vmin 7.5vmin / 3.75vmin 3.75vmin,
+    radial-gradient(50% 70% at 50% 50%, var(--colordark) 40%, #222 99%, transparent 0) 13.5vmin 5.5vmin / 3.25vmin 2.5vmin,
+    radial-gradient(closest-side, var(--colordark) 40%, #222 99%, transparent 0) 44.75vmin 7.5vmin / 3.75vmin 3.75vmin,
+    radial-gradient(50% 70% at 50% 50%, var(--colordark) 40%, #222 99%, transparent 0) 38.75vmin 5.5vmin / 3.25vmin 2.5vmin,
+    
+    radial-gradient(closest-side, #282828 60%, #222 0 90%, transparent 0) 50% 10% / 2.5vmin 2.5vmin,
+    repeating-linear-gradient(transparent 0 2%, var(--bgdark) 3%)
+    ;
+  background-color: var(--color);
+  background-repeat: no-repeat;
+}
+
+div::after {
+  content: "Summer 95 Radio Mix!";
+  color: red;
+  display: block;
+  position: absolute;
+  left: 5vmin;
+  top: 5vmin;
+  width: 70vmin;
+  height: 30vmin;
+  border-radius: 2vmin;
+  background:
+    /* tracks */
+    radial-gradient(farthest-side, var(--bg) 45%, transparent 0 65%, white 0 70%, #ddd 85%, transparent 0 99.9%, var(--color) 0) 13vmin 12vmin / 11vmin 11vmin,
+    linear-gradient(white, white) 18vmin 13.75vmin / 1vmin 7.5vmin,
+    linear-gradient(30deg, transparent 45%, white 0% 55%, transparent 0) 15vmin 14vmin / 7vmin 7vmin,
+    linear-gradient(-30deg, transparent 45%, white 0% 55%, transparent 0) 15vmin 14vmin / 7vmin 7vmin,
+    radial-gradient(closest-side, var(--bg) 99.9%, transparent 0) 14.5vmin 13.5vmin / 8vmin 8vmin,
+    linear-gradient(45deg, var(--colorlight), var(--colordark)) 13vmin 12vmin / 11vmin 11vmin,
+    radial-gradient(farthest-side, var(--bg) 45%, transparent 0 65%, white 0 70%, #ddd 85%, transparent 0 99.9%, var(--color) 0) 46vmin 12vmin / 11vmin 11vmin,
+    linear-gradient(white, white) 51vmin 13.75vmin / 1vmin 7.5vmin,
+    linear-gradient(30deg, transparent 45%, white 0% 55%, transparent 0) 48vmin 14vmin / 7vmin 7vmin,
+    linear-gradient(-30deg, transparent 45%, white 0% 55%, transparent 0) 48vmin 14vmin / 7vmin 7vmin,
+    radial-gradient(closest-side, var(--bg) 99.9%, transparent 0) 47.5vmin 13.5vmin / 8vmin 8vmin,
+    linear-gradient(45deg, var(--colorlight), var(--colordark)) 46vmin 12vmin / 11vmin 11vmin,
+    
+    /* window */
+    repeating-linear-gradient(to right, transparent 0 16%, #0001 0, #fff4 20%) 27.5vmin 17vmin / 13vmin 4vmin,
+    linear-gradient(#da33, #da33) 26vmin 12.5vmin / 18vmin 10vmin,
+    radial-gradient(circle at -100% 50%, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown 78%, transparent 0) 26vmin 12.5vmin / 18vmin 10vmin,
+    radial-gradient(circle at 150% 50%, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon, brown, maroon,brown 40%, var(--bg) 0) 26vmin 12.5vmin / 18vmin 10vmin,
+    
+    /* ,lines and b letter */
+    linear-gradient(70deg, transparent 40%, white 0 50%, transparent 0) 4vmin 3.25vmin / 6vmin 4.5vmin,
+    linear-gradient(-70deg, transparent 40%, white 0 50%, transparent 0) 1.33vmin 3.25vmin / 6vmin 4.5vmin,
+    
+    linear-gradient(transparent 40%, white 0 50%, transparent 0) 4.5vmin 3.25vmin / 2.5vmin 7vmin,
+    linear-gradient(#222, #222) 2vmin 2vmin / 7vmin 7vmin,
+    linear-gradient(black 4%, transparent 0 96%, black 0) 10vmin 3.5vmin / 55vmin 4vmin,
+    linear-gradient(var(--color), var(--color)) 12vmin 11vmin / 46vmin 13vmin
+    ;
+  background-repeat: no-repeat;
+  background-color: white;
+  box-sizing: border-box;
+  font-family: 'Architects Daughter', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 5vmin;
+  padding: 2.25vmin 0 2.75vmin 12vmin;
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+  font-size: 0;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+

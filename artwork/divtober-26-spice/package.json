@@ -1,0 +1,39 @@
+{
+    "name": "divtober-26-spice",
+    "version": "1.0.0",
+    "title": "Divtober 26: Spice",
+    "description": "A CSS version of the McCormick Curry Powder spice bottle.",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "divtober-26-spice.html",
+    "css": [
+        "divtober-26-spice.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "html",
+        "divtober"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/wvqJNGZ",
+    "codepen": "https://codepen.io/alvaromontoro/pen/wvqJNGZ"
+}

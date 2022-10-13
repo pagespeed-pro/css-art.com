@@ -1,0 +1,57 @@
+/*dimensions */
+/* Presets */
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #B5DCAF 15%, #BCD9B2 100%);
+}
+
+div:before, div:after {
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+div.burger {
+  width: 60vh;
+  height: 50vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30%;
+  background-color: #000000;
+  background: linear-gradient(#000000 100%, #000000 100%) 0 0/100% 100% no-repeat;
+}
+
+div.burger:before {
+  width: 60vh;
+  height: 45vh;
+  margin-top: -10vh;
+  position: relative;
+  display: flex;
+  border: solid 10px #000000;
+  justify-content: start;
+  align-items: start;
+  border-radius: 30%;
+  background: repeating-linear-gradient(0deg, transparent 0 20px, black 20px 35px), repeating-linear-gradient(90deg, transparent 0 32%, black 32% 35%), radial-gradient(ellipse, #F8F4EA 0%, #B57336 60%) 0 0/100% 100% no-repeat;
+}
+
+div.burger:after {
+  width: 85vh;
+  height: 45vh;
+  display: flex;
+  overflow: visible;
+  justify-content: start;
+  align-items: start;
+  transform: rotateZ(-20deg);
+  background: radial-gradient(ellipse, black 0.5vh, #27100f 0.5vh, transparent 0.5vh) calc(14vh + 6.5vh) calc(10vh + 5vh)/1.5vh 10vh no-repeat, radial-gradient(ellipse, black 0.5vh, #27100f 0.5vh, transparent 0.5vh) calc(14vh + 9.5vh) calc(10vh + 2.5vh)/1.5vh 15vh no-repeat, radial-gradient(ellipse, black 0.5vh, #27100f 0.5vh, transparent 0.5vh) calc(14vh + 12.5vh) calc(10vh + 5vh)/1.5vh 10vh no-repeat, radial-gradient(circle, #712821 0vh, #220c0a 7.5vh, transparent 7.5vh) 14vh 10vh/20vh 20vh no-repeat, radial-gradient(circle, #712821 0vh, #361310 7.5vh, transparent 7.5vh) calc(14vh - .75vh) calc(10vh + .25vh)/21vh 21vh no-repeat, radial-gradient(ellipse, black 0.5vh, #27100f 0.5vh, transparent 0.5vh) calc(36vh + 6.5vh) calc(22vh + 5vh)/1.5vh 10vh no-repeat, radial-gradient(ellipse, black 0.5vh, #27100f 0.5vh, transparent 0.5vh) calc(36vh + 9.5vh) calc(22vh + 2.5vh)/1.5vh 15vh no-repeat, radial-gradient(ellipse, black 0.5vh, #27100f 0.5vh, transparent 0.5vh) calc(36vh + 12.5vh) calc(22vh + 5vh)/1.5vh 10vh no-repeat, radial-gradient(circle, #712821 0vh, #220c0a 7.5vh, transparent 7.5vh) 36vh 22vh/20vh 20vh no-repeat, radial-gradient(circle, #712821 0vh, #361310 7.5vh, transparent 7.5vh) calc(36vh - .75vh) calc(22vh + .25vh)/21vh 21vh no-repeat, radial-gradient(ellipse, black 0.5vh, #27100f 0.5vh, transparent 0.5vh) calc(36vh + 6.5vh) calc(1vh + 5vh)/1.5vh 10vh no-repeat, radial-gradient(ellipse, black 0.5vh, #27100f 0.5vh, transparent 0.5vh) calc(36vh + 9.5vh) calc(1vh + 2.5vh)/1.5vh 15vh no-repeat, radial-gradient(ellipse, black 0.5vh, #27100f 0.5vh, transparent 0.5vh) calc(36vh + 12.5vh) calc(1vh + 5vh)/1.5vh 10vh no-repeat, radial-gradient(circle, #712821 0vh, #220c0a 7.5vh, transparent 7.5vh) 36vh 1vh/20vh 20vh no-repeat, radial-gradient(circle, #712821 0vh, #361310 7.5vh, transparent 7.5vh) calc(36vh - .75vh) calc(1vh + .25vh)/21vh 21vh no-repeat, radial-gradient(ellipse, black 0.5vh, #27100f 0.5vh, transparent 0.5vh) calc(52vh + 6.5vh) calc(15vh + 5vh)/1.5vh 10vh no-repeat, radial-gradient(ellipse, black 0.5vh, #27100f 0.5vh, transparent 0.5vh) calc(52vh + 9.5vh) calc(15vh + 2.5vh)/1.5vh 15vh no-repeat, radial-gradient(ellipse, black 0.5vh, #27100f 0.5vh, transparent 0.5vh) calc(52vh + 12.5vh) calc(15vh + 5vh)/1.5vh 10vh no-repeat, radial-gradient(circle, #712821 0vh, #220c0a 7.5vh, transparent 7.5vh) 52vh 15vh/20vh 20vh no-repeat, radial-gradient(circle, #712821 0vh, #361310 7.5vh, transparent 7.5vh) calc(52vh - .75vh) calc(15vh + .25vh)/21vh 21vh no-repeat, radial-gradient(ellipse 35% 140% at 50% 50%, #D9D9D9 70%, #8F8F8F 100%) 36vh 5vh/20vh 12vh no-repeat, radial-gradient(ellipse, #220c0a 10vh, transparent 10vh) 66vh 7.5vh/18vh 6vh no-repeat, linear-gradient(#CCCCCC -19.15%, #909090 40%, transparent 40%) 54vh 9.5vh/17vh 6vh no-repeat;
+}

@@ -1,0 +1,49 @@
+body {
+  background-color: #008b8b;
+  position: relative;
+  height: 100vh;
+}
+.entry {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.entry:before,
+.entry:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+.entry.pie {
+  width: 240px;
+  height: 90px;
+  margin-left: -120px;
+  margin-top: -30px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 5px 0 #ddd, 0 8px 2px rgba(0,0,0,0.1);
+}
+.entry.pie:before {
+  width: 180px;
+  height: 45px;
+  left: 50%;
+  margin-left: -90px;
+  margin-top: 25px;
+  background-color: #fec;
+  background-image: linear-gradient(68deg, white 10%, transparent 10%), linear-gradient(-68deg, white 10%, transparent 10%), linear-gradient(to right, #808080, #c0c0c0 30%, rgba(255,255,255,0.1) 40%, #c0c0c0 70%, #808080 100%);
+  border-bottom-right-radius: 80px 35px;
+  border-bottom-left-radius: 80px 35px;
+}
+.entry.pie:after {
+  width: 180px;
+  height: 60px;
+  left: 50%;
+  margin-left: -90px;
+  top: -18px;
+  background-image: radial-gradient(white 50%, transparent 50%), radial-gradient(white 50%, transparent 50%), radial-gradient(white 50%, transparent 50%), radial-gradient(#cd853f 50%, transparent 50%), radial-gradient(#cd853f 50%, transparent 50%), radial-gradient(#cd853f 50%, transparent 50%), radial-gradient(#cd853f 50%, transparent 50%), radial-gradient(#cd853f 50%, transparent 50%), radial-gradient(#cd853f 50%, transparent 50%), radial-gradient(#cd853f 50%, transparent 50%), radial-gradient(#cd853f 50%, transparent 50%), radial-gradient(#cd853f 50%, transparent 50%), radial-gradient(#cd853f 50%, transparent 50%), radial-gradient(#cd853f 50%, transparent 50%), radial-gradient(ellipse at center, #ffa500 40%, #ff8c00 60%);
+  background-repeat: no-repeat;
+  background-size: 40px 15px, 28px 10px, 10px 20px, 25px 18px, 25px 18px, 30px 20px, 30px 20px, 30px 20px, 30px 20px, 30px 20px, 30px 20px, 30px 20px, 25px 18px, 25px 18px, 100% 100%;
+  background-position: 70px 20px, 75px 16px, 86px 10px, -15px 30px, 0 40px, 15px 45px, 35px 50px, 55px 52px, 75px 52px, 95px 52px, 115px 50px, 135px 45px, 155px 40px, 170px 30px, 0 0;
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px #cd853f, 0 3px 0 9px #c0c0c0;
+}

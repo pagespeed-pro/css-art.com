@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One&display=swap');
+
+body {
+  background: #a862;
+}
+
+.rise {
+  box-sizing: border-box;
+  font-family: 'Bowlby One', sans-serif;
+  color: #bbb;
+  ztext-shadow: -0.1vmin -0.1vmin #0003, 0.1vmin 0.1vmin #fff4;
+  font-size: 5vmin;
+  padding-top: 26vmin;
+  padding-left: 51.5vmin;
+  width: 75vmin;
+  height: 60vmin;
+  background: 
+    radial-gradient(farthest-side at 50% 100%, #864 99%, #0000 0) 67% 75% / 5% 2%,
+    radial-gradient(farthest-side at 50% 100%, #864 99%, #0000 0) 72% 75% / 7% 2.5%,
+    radial-gradient(farthest-side at 50% 100%, #a86 99%, #0000 0) 89% 75% / 6% 2.5%,
+    /* tombstone */
+    radial-gradient(circle closest-side at 75% 45%, #ccc 50%, #0000 0),
+    linear-gradient(#ccc 0 0) 83.5% 64% / 25% 30%,
+    radial-gradient(25.55% 35% at 78.25% 47.25%, #bbb 50%, #0000 0),
+    linear-gradient(#bbb 0 0) 88% 64% / 25% 30%,
+    /* rock */
+    radial-gradient(farthest-side at 50% 100%, #864 99%, #0000 0) 40% 76.5% / 5% 2%,
+    /* arm */
+/*     conic-gradient(#0000 10%, #fff 0 90%, #0000 0) 39.5% 66.6% / 1% 10%,
+    linear-gradient(#0003 0 0)39.75% 66.6% / 0.4% 10%, */
+    radial-gradient(farthest-side at 75% 100%, #7c6 98%, #0000 99.99%) 38.75% 66.6% / 5% 30%,
+    
+    radial-gradient(farthest-side at 50% 0, #7c6 99.99%, #0000 0) 43.5% 48.25% / 11% 3.5%,
+    /* fingers */
+    radial-gradient(farthest-side, #7c6 90%, #0000 0) 46% 48% / 6% 3%,
+    radial-gradient(farthest-side, #7c6 90%, #0000 0) 43% 35% / 2% 7%,
+    
+    radial-gradient(farthest-side at 50% 60%, #7c6 90%, #0000 0) 48.5% 33.4% / 2.2% 7%,
+   
+    radial-gradient(farthest-side, #7c6 90%, #0000 0) 48% 42% / 6% 2.7%,
+    radial-gradient(farthest-side, #7c6 90%, #0000 0) 46% 32.5% / 2% 5.7%,
+    
+    radial-gradient(farthest-side, #7c6 90%, #0000 0) 51.75% 37.5% / 2% 4.5%,
+    
+    radial-gradient(farthest-side, #7c6 90%, #0000 0) 41.5% 33.25% / 4% 2%,
+    
+    /* ground in the background */
+    radial-gradient(farthest-side at 50% 100%, #864 99%, #0000 0) 37% 76% / 5% 2%,
+    radial-gradient(farthest-side at 50% 100%, #753 99%, #0000 0) 42% 76% / 4% 2.5%,
+    radial-gradient(50% 5% at 50% 76%, #a86 99%, #0000 99.5%),
+    radial-gradient(45% 4% at 50% 79%, #a86 99%, #0000 99.5%),
+    radial-gradient(40% 4% at 45% 72.5%, #a86 99%, #0000 99.5%),
+    radial-gradient(40% 4% at 57% 73%, #a86 99%, #0000 99.5%);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rise::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 33%;
+  width: 20%;
+  height: 30%;
+  transform: rotate(40deg);
+  background: 
+    radial-gradient(50% 30% at 70% 65%, #7c6 25%, #0000 0),
+    radial-gradient(50% 30% at 69% 61%, #0002 20%, #0000 0),
+    radial-gradient(farthest-side at 50% 20%, #7c6 90%, #0000 0) 70% 75% / 30% 40%,
+    radial-gradient(farthest-side at 50% 20%, #7c6 90%, #0000 0) 60% 75% / 30% 40%,
+    radial-gradient(farthest-side at 50% 50%, #7c6 90%, #0000 0) 66.6% 33% / 11% 30%,
+    radial-gradient(farthest-side at 50% 50%, #7c6 90%, #0000 0) 86% 27% / 11% 20%,
+    radial-gradient(farthest-side at 50% 50%, #7c6 90%, #0000 0) 96% 51% / 11% 16%,
+    #f000;
+  background-repeat: no-repeat;
+}
+.rise::before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 33%;
+  width: 20%;
+  height: 30%;
+  transform: rotate(28deg);
+  background: 
+    radial-gradient(farthest-side at 50% 60%, #7c6 90%, #0000 0) 39% 16% / 20% 8%,
+     radial-gradient(farthest-side at 50% 60%, #7c6 90%, #0000 0) 57% 35% / 11% 25%,
+    #f000;
+  background-repeat: no-repeat;
+}

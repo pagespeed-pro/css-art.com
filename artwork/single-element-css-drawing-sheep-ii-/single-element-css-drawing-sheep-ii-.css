@@ -1,0 +1,144 @@
+article {
+  --skin: #a98;
+  --skin-dark: #876;
+  width: 60vmin;
+  aspect-ratio: 1.2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: 
+    /* details 1 */
+    radial-gradient(130% 140% at 74.5% 48%, #fff 7.5%, #0000 0),
+    radial-gradient(110% 100% at 77.5% 48%, #000 7%, #0000 0),
+    radial-gradient(circle at 74% 37%, #fff 7.5%, #0000 0),
+    radial-gradient(90% 100% at 74.8% 34.5%, #000 6.5%, #0000 0),
+    radial-gradient(circle at 32% 58%, #fff 7.5%, #0000 0),
+    radial-gradient(circle at 34% 61%, #fff 7.5%, #0000 0),
+    radial-gradient(circle at 31% 57.85%, #000 7.5%, #0000 0),
+    radial-gradient(circle at 33% 61%, #000 7.5%, #0000 0),
+    radial-gradient(130% 100% at 43% 70%, #fff 7.5%, #0000 0),
+    radial-gradient(90% 100% at 43.5% 72%, #000 7%, #0000 0),
+    radial-gradient(130% 100% at 68% 70%, #fff 7.5%, #0000 0),
+    radial-gradient(100% 100% at 68% 72%, #000 7%, #0000 0),
+    /* front-legs */
+    conic-gradient(from -0.009turn at 50% 250%, #0000, var(--skin) 0.0005turn 0.018turn, #0000 0.0185turn) 43% 95% / 15% 25%,
+    conic-gradient(from -0.01turn at 50% 290%, #0000, #000 0.0005turn 0.02turn, #0000 0.0205turn) 43% 100% / 15% 25%,
+    conic-gradient(from -0.009turn at 50% 250%, #0000, var(--skin) 0.0005turn 0.018turn, #0000 0.0185turn) 72% 95% / 15% 25%,
+    conic-gradient(from -0.01turn at 50% 290%, #0000, #000 0.0005turn 0.02turn, #0000 0.0205turn) 72% 100% / 15% 25%,
+    /* cover */
+    radial-gradient(100% 100% at 54% 50.4%, #fff 30.2%, #0000 0),
+    /* details 2 */
+    radial-gradient(circle at 61% 25%, #000 4.9%, #0000 0),
+    radial-gradient(circle at 59% 76%, #000 4.9%, #0000 0),
+    /* edges */
+    radial-gradient(circle at 25% 58%, #fff 6%, #0000 0),
+    radial-gradient(circle at 32.5% 65%, #fff 8.5%, #0000 0),
+    radial-gradient(circle at 35% 74%, #fff 5%, #0000 0),
+    radial-gradient(100% 95% at 45% 74%, #fff 10%, #0000 0),
+    radial-gradient(circle at 55% 76%, #fff 7%, #0000 0),
+    radial-gradient(90% 100% at 65% 74%, #fff 9%, #0000 0),
+    radial-gradient(circle at 75% 75%, #fff 4%, #0000 0),
+    radial-gradient(circle at 79% 64%, #fff 8%, #0000 0),
+    radial-gradient(circle at 80% 53%, #fff 7%, #0000 0),
+    radial-gradient(circle at 79% 40%, #fff 9%, #0000 0),
+    radial-gradient(circle at 72% 30%, #fff 7%, #0000 0),
+    radial-gradient(circle at 65% 24%, #fff 4%, #0000 0),
+    radial-gradient(circle at 55% 27%, #fff 11%, #0000 0),
+    radial-gradient(90% 95% at 45% 24%, #fff 10%, #0000 0),
+    /* edges lines */
+    radial-gradient(circle at 24.7% 58%, #000 7%, #0000 0),
+    radial-gradient(circle at 32.5% 65%, #000 9.5%, #0000 0),
+    radial-gradient(circle at 34.25% 74.7%, #000 5.2%, #0000 0),
+    radial-gradient(100% 95% at 45% 74%, #000 11%, #0000 0),
+    radial-gradient(circle at 55% 76.5%, #000 7.7%, #0000 0),
+    radial-gradient(90% 100% at 65% 74.2%, #000 9.8%, #0000 0),
+    radial-gradient(circle at 75% 75%, #000 4.9%, #0000 0),
+    radial-gradient(circle at 78.8% 64.1%, #000 9%, #0000 0),
+    radial-gradient(circle at 80% 53%, #000 8%, #0000 0),
+    radial-gradient(circle at 79.3% 39.9%, #000 9.6%, #0000 0),
+    radial-gradient(circle at 72% 30%, #000 8%, #0000 0),
+    radial-gradient(circle at 65% 23.9%, #000 4.9%, #0000 0),
+    radial-gradient(circle at 55% 27%, #000 12%, #0000 0),
+    radial-gradient(90% 95% at 45% 23.8%, #000 11%, #0000 0),
+    /* back-legs */
+    conic-gradient(from -0.009turn at 50% 250%, #0000, var(--skin-dark) 0.0005turn 0.018turn, #0000 0.0185turn) 30.5% 95% / 15% 25%,
+    conic-gradient(from -0.01turn at 50% 290%, #0000, #000 0.0005turn 0.02turn, #0000 0.0205turn) 30.5% 100% / 15% 25%,
+    conic-gradient(from -0.009turn at 50% 250%, #0000, var(--skin-dark) 0.0005turn 0.018turn, #0000 0.0185turn) 60% 95% / 15% 25%,
+    conic-gradient(from -0.01turn at 50% 290%, #0000, #000 0.0005turn 0.02turn, #0000 0.0205turn) 60% 100% / 15% 25%,
+    linear-gradient(#0000 99%, #000 0),
+    #0000;
+  background-repeat: no-repeat;
+}
+
+article::before {
+  content: "";
+  position: absolute;
+  left: -5%;
+  top: -3%;
+  width: 60%;
+  height: 60%;
+  background: 
+    radial-gradient(50% 50%, var(--skin-dark) 40%, #000 0 50%, #0000 0) 80% 37% / 40% 14%,
+    radial-gradient(50% 50%, var(--skin) 0 82%, #000 0 99.99%, #0000 0) 76% 35% / 40% 14%,
+    radial-gradient(farthest-side, var(--skin-dark) 40%, #000 0 50%, #0000 0) 27% 90% / 10% 40%,
+    radial-gradient(farthest-side, var(--skin) 82%, #000 0 99.99%, #0000 0) 26% 90% / 10% 40%,
+    #0000;
+  background-repeat: no-repeat;
+  transform: rotate(45deg);
+}
+
+article::after {
+  content: "";
+  position: absolute;
+  left: 3%;
+  top: -3%;
+  width: 40%;
+  height: 60%;
+  background:
+    /* hair details */ 
+    radial-gradient(100% 80% at 27.5% 24%, #fff 9%, #0000 0),
+    radial-gradient(100% 80% at 24% 25%, #000 8%, #0000 0),
+    radial-gradient(128% 90% at 41% 28%, #fff 18%, #0000 0),
+    radial-gradient(170% 250% at 36% 28%, #000 7%, #0000 0),
+    radial-gradient(circle at 71% 29%, #fff 11%, #0000 0),
+    radial-gradient(circle at 77% 27%, #000 7%, #0000 0),
+    /* hair top */
+    radial-gradient(circle at 45% 40%, #fff 12%, #0000 0),
+    radial-gradient(circle at 29.5% 39%, #fff 9%, #0000 0),
+    radial-gradient(circle at 20% 32%, #fff 8%, #0000 0),
+    radial-gradient(circle at 31% 22%, #fff 11%, #0000 0),
+    radial-gradient(circle at 42% 13%, #fff 6%, #0000 0),
+    radial-gradient(circle at 59% 20%, #fff 14%, #0000 0),
+    radial-gradient(circle at 76% 22.5%, #fff 6%, #0000 0),
+    radial-gradient(circle at 83% 29%, #fff 5%, #0000 0),
+    radial-gradient(circle at 78% 35%, #fff 8%, #0000 0),
+    radial-gradient(circle at 69% 40%, #fff 9%, #0000 0),
+    radial-gradient(circle at 59% 39%, #fff 8%, #0000 0),
+    /* hair top lines */
+    radial-gradient(circle at 45% 40.5%, #000 14%, #0000 0),
+    radial-gradient(circle at 29.5% 39%, #000 11%, #0000 0),
+    radial-gradient(circle at 19% 32%, #000 9.5%, #0000 0),
+    radial-gradient(circle at 31% 22%, #000 13%, #0000 0),
+    radial-gradient(circle at 42% 13%, #000 7.7%, #0000 0),
+    radial-gradient(circle at 59% 19%, #000 14.85%, #0000 0),
+    radial-gradient(circle at 76.5% 22.5%, #000 7.5%, #0000 0),
+    radial-gradient(circle at 83% 29%, #000 7%, #0000 0),
+    radial-gradient(circle at 78.2% 35.5%, #000 9.3%, #0000 0),
+    radial-gradient(circle at 69% 40%, #000 10.7%, #0000 0),
+    radial-gradient(circle at 59% 39%, #000 10%, #0000 0),
+    
+    /* eyes */
+    radial-gradient(circle at 33% 60%, #000 4%, #0000 0),
+    radial-gradient(circle at 57% 60%, #000 4.25%, #0000 0),
+    /* nose */
+    radial-gradient(90% 100% at 50% 0, var(--skin) 99.99%, #0000 0) 45% 83.5% / 22% 10%,
+    radial-gradient(70% 100% at 50% 0, #000 99.99%, #0000 0) 45% 86.5% / 20% 12%,
+    radial-gradient(40% 150% at 100% 40%, #0000 45%, #000 45.5% 60%, #0000 60.5%) 31% 99% / 30% 18%,
+    /* face */
+    radial-gradient(farthest-side at 50% 0, var(--skin) 94%, #000 0 99.99%, #0000 0) 50% 100% / 80% 30%,
+    radial-gradient(farthest-side at 50% 100%, var(--skin) 94%, #000 0 99.99%, #0000 0) 50% 41% / 80% 50%,
+    #0000;
+  background-repeat: no-repeat;
+  transform: rotate(10deg)
+}

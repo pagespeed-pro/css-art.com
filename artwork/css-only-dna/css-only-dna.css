@@ -1,0 +1,72 @@
+body {
+  background: #000;
+  height: 100vh;
+	margin:0;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+  perspective: 50em;
+  overflow: hidden;
+}
+.adn {
+  --h: .6em; /* control the size */
+	--s: 7s;   /* control the speed */
+	margin: calc(2*var(--h)) auto;
+  aspect-ratio: 7/1;
+  height: var(--h);
+  animation: r var(--s) linear calc(var(--i)/-10 * var(--s)) infinite;
+}
+.adn i {
+  position:absolute;
+  inset:calc((1 - 0.577)*50%) calc(var(--h)/-10);
+  transform:translateZ(calc(var(--h)/2)) rotateX(180deg);
+  background:
+    linear-gradient(#0004, #0000, #0004)
+    hsl(calc(30 * var(--i)), 100%, 70%);
+  display:grid;
+}
+.adn i:nth-child(2) {
+  transform:translateZ(calc(var(--h)/-2));
+}
+.adn i:before,
+.adn i:after{
+  content:"";
+  grid-area:1/1;
+  background:inherit;
+  transform-origin:top;
+  transform:rotateX(120deg);
+}
+.adn i:after {
+  transform-origin:bottom;
+  transform:rotateX(-120deg);
+}
+
+.adn:before,
+.adn:after{
+  content:"";
+  position:absolute;
+  width:calc(4*var(--h));
+  aspect-ratio:1/1;
+  border-radius:50%;
+  top:calc(50% - 2*var(--h));
+  background: 
+    radial-gradient(circle at top, #0000, #000)
+    hsl(calc(30 * var(--i)), 100%, 70%);
+  box-shadow: 0 0 calc(1.5*var(--h)) #000;
+  animation:inherit;
+  animation-direction:reverse;
+}
+.adn:before {
+  left:100%;
+}
+.adn:after {
+  right:100%;
+}
+
+@keyframes r{
+  to {transform:rotateY(360deg)}
+}
+
+body * {
+  transform-style:preserve-3d;
+}

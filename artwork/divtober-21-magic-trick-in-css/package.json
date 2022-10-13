@@ -1,0 +1,40 @@
+{
+    "name": "divtober-21-magic-trick-in-css",
+    "version": "1.0.0",
+    "title": "Divtober 21: Magic (trick) in CSS",
+    "description": "The Great Magician Al will guess your card thanks to the powers of CSS! No JavaScript at all, and only one HTML element. This demo is part of the divtober challenge.\n\nIt is based on this other demo I built a long time ago: https://codepen.io/alvaromontoro/pen/xagVOa",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "divtober-21-magic-trick-in-css.html",
+    "css": [
+        "divtober-21-magic-trick-in-css.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "html",
+        "magic",
+        "divtober"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/zYdowmM",
+    "codepen": "https://codepen.io/alvaromontoro/pen/zYdowmM"
+}

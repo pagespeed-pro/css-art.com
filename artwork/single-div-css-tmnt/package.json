@@ -1,0 +1,41 @@
+{
+    "name": "single-div-css-tmnt",
+    "version": "1.0.0",
+    "title": "Single div CSS TMNT",
+    "description": "Heroes in a half shell.\n\n\\#divtober Day 30: Turtle 🐢 [a.singlediv.com](https://a.singlediv.com)",
+    "author": {
+        "name": "Lynn Fisher",
+        "avatar": "https://s.cdpn.io/profiles/user/1025350/512.jpg?1",
+        "web": "https://lynnandtonic.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/lynnandtonic"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/lynnandtonic"
+            },
+            {
+                "title": "Medium.com",
+                "url": "https://medium.com/@lynnandtonic"
+            }
+        ]
+    },
+    "html": "single-div-css-tmnt.html",
+    "css": [
+        "single-div-css-tmnt.css"
+    ],
+    "js": "// @lynnandtonic\n// a.singlediv.com\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "singlediv",
+        "illustration",
+        "drawing",
+        "divtober"
+    ],
+    "original": "https://codepen.io/lynnandtonic/pen/jOrzeve",
+    "codepen": "https://codepen.io/lynnandtonic/pen/jOrzeve"
+}

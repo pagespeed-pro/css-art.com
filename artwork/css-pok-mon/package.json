@@ -1,0 +1,41 @@
+{
+    "name": "css-pok-mon",
+    "version": "1.0.0",
+    "title": "CSS Pokémon",
+    "description": "Pikachu, Squirtle, Charmander and Bulbasaur created from scratch using CSS border radius magic",
+    "author": {
+        "name": "Tiffany Choong",
+        "avatar": "https://assets.codepen.io/765377/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1516941279&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/tiffachoo/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/tiffachooo"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/tiffachoo"
+            }
+        ]
+    },
+    "html": "css-pok-mon.html",
+    "css": [
+        "css-pok-mon.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "pokemon",
+        "css-animation",
+        "css-only",
+        "css-drawing",
+        "scss"
+    ],
+    "original": "https://codepen.io/tiffachoo/pen/xELjrr",
+    "codepen": "https://codepen.io/tiffachoo/pen/xELjrr"
+}

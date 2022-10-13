@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #78a;
+}
+
+div {
+  --skin: #ace;
+  --teeth: #ff0;
+  width: 80vmin;
+  height: 80vmin;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 0);
+  background:
+    /* arms */
+    radial-gradient(at 100% 80%, transparent 50%, white 0 70%, transparent 0) 10% 45% / 40% 40%,
+    radial-gradient(at 0% 80%, transparent 50%, white 0 70%, transparent 0) 90% 42% / 45% 43%,
+    /* body */
+    radial-gradient(at 50% 32%, white 0 70%, transparent 0) 51% 53% / 48% 50%,
+    /* wrists */
+    conic-gradient(at 30% 100%, transparent 25deg, white 0 55deg, transparent 0) 81.8% 69% / 8% 4%,
+    conic-gradient(at 50% 100%, white 25deg, transparent 0 340deg, white 0) 85% 69% / 4% 4%,
+    conic-gradient(at 50% 100%, white 29deg, transparent 0 340deg, white 0) 88% 70% / 5% 6%,
+    conic-gradient(at 60% 100%, white 19deg, transparent 0 330deg, white 0) 92.5% 70% / 5% 6%,
+    
+    conic-gradient(at 60% 100%, transparent 300deg, white 0 339deg, transparent 0) 17.5% 69.5% / 8% 4%,
+    conic-gradient(at 60% 100%, white 25deg, transparent 0 330deg, white 0) 14.5% 69.5% / 4% 9%,
+    conic-gradient(at 70% 100%, white 19deg, transparent 0 320deg, white 0) 10% 69.75% / 5% 6%,
+    conic-gradient(at 60% 100%, white 22deg, transparent 0 342deg, white 0) 6.5% 69.75% / 5% 6%,
+    /* legs */
+    conic-gradient(at 50% 0%, white 145deg, var(--skin) 0 220deg, white 0) 30% 94.25% / 4% 3%,
+    conic-gradient(at 50% 0%, white 150deg, var(--skin) 0 200deg, white 0) 33.5% 94% / 4% 4%,
+    conic-gradient(at 30% 0%, white 117deg, var(--skin) 0 210deg, white 0) 38% 94% / 5% 2%,
+    conic-gradient(at 70% 100%, transparent 0 290deg, white 0 325deg, transparent 0) 40.5% 93% / 8% 4%,
+    
+    conic-gradient(at 50% 0%, white 145deg, var(--skin) 0 220deg, white 0) 71% 94% / 4% 3%,
+    conic-gradient(at 50% 0%, white 140deg, var(--skin) 0 230deg, white 0) 68% 94% / 5% 2%,
+    conic-gradient(at 70% 0%, white 160deg, var(--skin) 0 215deg, white 0) 63.5% 94.75% / 4% 4%,
+    conic-gradient(at 70% 100%, transparent 0 290deg, white 0 340deg, transparent 0) 75% 93.55% / 8% 4%,
+    
+    radial-gradient(at 49% 80%, transparent 32%, white 0 68%, transparent 0) 52% 91% / 46% 32%,
+    
+    /* feet */
+    radial-gradient(farthest-side at 50% 110%, transparent calc(99% - 0.5vmin), var(--teeth) 0 99%, transparent 0) 30% 98% / 5% 1%,
+    radial-gradient(farthest-side at 50% 110%, transparent calc(99% - 0.5vmin), var(--teeth) 0 99%, transparent 0) 25.25% 98% / 4% 1%,
+    radial-gradient(farthest-side at 50% 110%, transparent calc(99% - 0.5vmin), var(--teeth) 0 99%, transparent 0) 21.25% 98% / 4% 1%,
+    radial-gradient(farthest-side at 50% 110%, transparent calc(99% - 0.5vmin), var(--teeth) 0 99%, transparent 0) 70% 98% / 5% 1%,
+    radial-gradient(farthest-side at 50% 110%, transparent calc(99% - 0.5vmin), var(--teeth) 0 99%, transparent 0) 74.75% 98% / 4% 1%,
+    radial-gradient(farthest-side at 50% 110%, transparent calc(99% - 0.5vmin), var(--teeth) 0 99%, transparent 0) 78.5% 98% / 3.75% 1%,
+    radial-gradient(farthest-side at 40% 70%, var(--skin) 120%, transparent 0) 34% 100% / 15% 8%,
+    radial-gradient(farthest-side at 100% 100%, var(--skin) 120%, transparent 0) 24% 100% / 15% 7.5%,
+    radial-gradient(50% 100% at 60% 80%, var(--skin) 120%, transparent 0) 67% 100% / 15% 8%,
+    radial-gradient(farthest-side at 0% 100%, var(--skin) 120%, transparent 0) 76% 100% / 15% 7.5%,
+    
+    /* hands*/
+    radial-gradient(farthest-side at 53% 50%, var(--skin) 120%, transparent 0) 10.5% 75% / 10% 14%,
+    radial-gradient(farthest-side at 50% 50%, var(--skin) 120%, transparent 0) 89% 74% / 10.5% 15%,
+    
+    radial-gradient(farthest-side at 50% 50%, var(--skin) 120%, transparent 0) 81% 72% / 3% 5%,
+    
+    radial-gradient(farthest-side at 50% 50%, var(--skin) 120%, transparent 0) 18% 72% / 3% 5%,
+    
+    /* fur */
+    conic-gradient(at 50% 100%, white 20deg, transparent 0 342deg, white 0 360deg) 31% 64% / 10% 13%,
+    conic-gradient(at 50% 100%, white 20deg, transparent 0 341.5deg, white 0 360deg) 34.5% 70% / 10% 13%,
+    conic-gradient(at 50% 100%, white 20deg, transparent 0 354deg, white 0) 27% 61% / 10% 15%,
+    
+    conic-gradient(at 80% 100%, white 16deg, transparent 0 330deg, white 0) 66% 64% / 13% 16%,
+    conic-gradient(at 60% 100%, white 10deg, transparent 0 330deg, white 0 360deg) 72% 61% / 10% 12%,
+    
+    conic-gradient(at 50% 100%, transparent 30deg, white  0 50deg, transparent 0) 0% 48% / 10% 13%,
+    
+    conic-gradient(at 50% 100%, transparent 20deg, white  0 60deg, transparent 0) 83% 56% / 10% 13%,
+    conic-gradient(at 50% 100%, transparent 300deg, white  0 320deg, transparent 0) 100% 43% / 10% 13%
+   ;
+  background-repeat: no-repeat;
+  color: #235;
+  afilter: 
+    drop-shadow(0 0.75vmin)
+    drop-shadow(0 -0.75vmin)
+    drop-shadow(0.75vmin 0)
+    drop-shadow(-0.75vmin 0);
+}
+
+div::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 5%;
+  filter: drop-shadow(0 1vmin lightgray);
+  background:
+    /* eyes */
+    radial-gradient(circle farthest-side, white 90%, transparent 0) 45% 16.25% / 1.25% 1.25%,
+    radial-gradient(circle farthest-side, white 90%, transparent 0) 56.5% 16.25% / 1.25% 1.25%,
+    radial-gradient(circle farthest-side, black 90%, transparent 0) 44% 16% / 5% 5%,
+    radial-gradient(circle farthest-side, black 90%, transparent 0) 56% 16% / 5% 5%,
+    /* mouth */
+    radial-gradient(farthest-side at 50% 110%, transparent calc(99% - 0.5vmin), black 0 99%, var(--skin) 0) 50% 21% / 6% 2%,
+    conic-gradient(at 50% 0%, transparent 175deg, var(--teeth) 0 230deg, transparent 0) 48.5% 21% / 3% 2%,
+    /* eeybrows*/
+    radial-gradient(farthest-side, var(--skin) 90%, transparent 0) 44% 14% / 8% 6%,
+    radial-gradient(farthest-side, white 90%, transparent 0) 43.5% 12% / 7% 6%,
+    radial-gradient(farthest-side, var(--skin) 90%, transparent 0) 43% 13.5% / 8% 6%,
+    radial-gradient(farthest-side, white 90%, transparent 0) 43% 12.25% / 8% 7%,
+    
+    radial-gradient(farthest-side, var(--skin) 90%, transparent 0) 56% 14% / 8% 6%,
+    radial-gradient(farthest-side, white 90%, transparent 0) 56.5% 12% / 7% 6%,
+    radial-gradient(farthest-side, var(--skin) 90%, transparent 0) 57% 13.5% / 8% 6%,
+    radial-gradient(farthest-side, white 90%, transparent 0) 57% 12% / 8% 7%,
+    /* head */
+    radial-gradient(farthest-side at 50% 0%, var(--skin) 99.9%, transparent 0) 50% 26.5% / 35.5% 2.5%,
+    radial-gradient(farthest-side at 0% 50%, var(--skin) 99.9%, transparent 0) 68.25% 6% / 2% 22%,
+    radial-gradient(farthest-side at 100% 50%, var(--skin) 99.9%, transparent 0) 31.5% 8% / 2.5% 20%,
+    radial-gradient(farthest-side at 0% 50%, white 99.9%, transparent 0) 71.25% 4% / 5% 25%,
+    radial-gradient(farthest-side at 100% 50%, white 99.9%, transparent 0) 29% 3.75% / 5% 25.25%,
+    radial-gradient(farthest-side at 50% 100%, white 99.9%, transparent 0) 50% 0 / 40% 5%,
+    radial-gradient(farthest-side at 50% 0%, white 99.9%, transparent 0) 50% 27.25% / 40% 5%,
+    /* bangs */
+    conic-gradient(at 50% 100%, white 25deg, transparent 0 340deg, white 0) 66% 5% / 4% 4%,
+    conic-gradient(at 75% 100%, white 15deg, transparent 0 340deg, white 0) 62% 5% / 6% 6%,
+    conic-gradient(at 50% 100%, white 35deg, transparent 0 325deg, white 0) 58% 5% / 7% 5%,
+    conic-gradient(at 45% 100%, white 15deg, transparent 0 340deg, white 0) 54% 5% / 6% 4%,
+    conic-gradient(at 50% 100%, white 25deg, transparent 0 345deg, white 0) 50% 5% / 7% 7%,
+    conic-gradient(at 30% 100%, white 25deg, transparent 0 345deg, white 0) 47.5% 5% / 7% 5%,
+    conic-gradient(at 50% 100%, white 30deg, transparent 0 330deg, white 0) 42.5% 5% / 5% 4%,
+    conic-gradient(at 60% 100%, white 20deg, transparent 0 330deg, white 0) 38% 5% / 5% 5.5%,
+    conic-gradient(at 50% 100%, white 25deg, transparent 0 320deg, white 0) 34% 5% / 6% 4%,
+    /* face */
+    linear-gradient(var(--skin), var(--skin)) 50% 5% / 37% 23%,
+    /* chin */
+    conic-gradient(at 50% 100%, white 31deg, transparent 0 345deg, white 0) 68.25% 25.75% / 7% 8%,
+    conic-gradient(at 50% 100%, white 25deg, transparent 0 340deg, white 0) 66% 29% / 4% 4%,
+    conic-gradient(at 50% 100%, white 35deg, transparent 0 325deg, white 0) 62% 30.5% / 7% 5%,
+    conic-gradient(at 75% 100%, white 15deg, transparent 0 340deg, white 0) 57% 29% / 6% 6%,
+    conic-gradient(at 45% 100%, white 25deg, transparent 0 340deg, white 0) 56% 31.5% / 7% 4%,
+    conic-gradient(at 30% 100%, white 25deg, transparent 0 345deg, white 0) 54.5% 30% / 7% 5%,
+    conic-gradient(at 50% 100%, white 30deg, transparent 0 330deg, white 0) 50% 32% / 5% 4%,
+    conic-gradient(at 60% 100%, white 20deg, transparent 0 330deg, white 0) 45.5% 31.5% / 5% 5.5%,
+    conic-gradient(at 50% 100%, white 25deg, transparent 0 320deg, white 0) 42% 31% / 6% 4%,
+    
+    conic-gradient(at 50% 100%, white 31deg, transparent 0 345deg, white 0) 38.25% 27.75% / 7% 8%,
+    conic-gradient(at 50% 100%, white 25deg, transparent 0 340deg, white 0) 36% 30.5% / 4% 5%,
+    conic-gradient(at 50% 100%, white 35deg, transparent 0 331deg, white 0) 32% 27% / 7% 7%
+    
+    ;
+  background-repeat: no-repeat;
+}

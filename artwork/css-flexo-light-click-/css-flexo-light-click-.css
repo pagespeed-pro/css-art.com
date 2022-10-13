@@ -1,0 +1,88 @@
+.flexo {
+  --base1: #210;
+  --base2: #281808;
+  --lightbg: radial-gradient(100vmin 100vmin at 50% 100%, #000a 10vmin, #000a 55vmin);
+  --gray1: #999;
+  --gray2: #bbb;
+  --gray3: #777;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, 0%);
+  background: 
+    radial-gradient(100vmin 50vmin at 50% 100%, var(--base1), var(--base2) 10vmin, #0000 10.1vmin),
+    radial-gradient(55vmin 55vmin at 50% 100%, #211c 10%, #0000 10.1%),
+    var(--lightbg),
+    radial-gradient(farthest-side at 50% 100%, var(--gray3) 99.99%, #0000 0) 50% calc(100% - 93vmin) / 4vmin 2vmin no-repeat,
+    linear-gradient(var(--gray3) 20%, #aaa0) 50% calc(100% - 89vmin) / 4vmin 4vmin no-repeat,
+    repeating-linear-gradient(#0000 0 2%, #7771 0 2.2%) 50% 100% / 4vmin 93vmin no-repeat,
+    linear-gradient(90deg, var(--gray1), var(--gray2) 20%, var(--gray3)) 50% 100% / 4vmin 93vmin no-repeat,
+    #666;
+}
+
+.flexo::before {
+  content: "";
+  position: absolute;
+  bottom: 50vmin;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 30vmin;
+  height: 30vmin;
+  border-radius: 100% / 200% 200% 30% 30%;
+  filter: brightness(0.25);
+  background: 
+    linear-gradient(#5554, #c000 80%),
+    radial-gradient(50% 11.5% at 50% 89%, #fff0 99.9%, #ddd 0),
+    radial-gradient(48% 10% at 50% 89%, #fff0 97.5%, #eee 0),
+    radial-gradient(circle at 50% 64%, white 30%, #ffe8 30.5%, #fff0 50%),
+    radial-gradient(48% 21% at 50% 79%, #777, #ccc),
+    radial-gradient(50% 11.5% at 50% 89%, #fff5 98.5%, #fff0 99.9%),
+    #fca;
+  box-shadow:
+    inset 1vmin 4vmin 5vmin #0001,
+    0 -13vmin 2vmin -12vmin #4441,
+    0 -16vmin 1vmin -12vmin #4442,
+    0 -18vmin 0 -11.5vmin #ccc
+    ;
+}
+
+.flexo::after {
+  content: "";
+  bottom: 0;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  width: 70%;
+  height: 56.5vmin;
+  background: 
+    conic-gradient(at 50% -140%, #0000 169deg, #ffd 178deg 182deg, #0000 191deg);
+  -webkit-mask: linear-gradient(#0005, #0001);
+  border-radius: 50% / 50% 50% 0 0 ;
+  opacity: 0;
+}
+
+/* active */
+.flexo:active {
+  --base1: #321;
+  --base2: #432;
+  --lightbg: radial-gradient(100vmin 100vmin at 50% 100%, #0000 10vmin, #000a 55vmin);
+  --gray1: #ccc;
+  --gray2: #eee;
+  --gray3: #aaa;
+}
+
+.flexo:active::before {
+  filter: brightness(0.65);
+  box-shadow: 
+    inset 0 5vmin 5vmin #0006,
+    inset 1vmin 4vmin 5vmin #0001,
+    0 -13vmin 2vmin -12vmin #fff1,
+    0 -16vmin 2vmin -12vmin #fff2,
+    0 -18vmin 0 -11.5vmin #666
+}
+
+.flexo:active::after {
+  opacity: 1;
+}

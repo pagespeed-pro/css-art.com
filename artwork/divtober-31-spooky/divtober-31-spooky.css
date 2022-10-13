@@ -1,0 +1,144 @@
+body {
+  --bg: #234;
+  background:
+    radial-gradient(circle at 47% 50%, black 2.5%, transparent 0) 0% 0% / 15vmin 15vmin,
+    radial-gradient(circle at 53% 50%, black 2.5%, transparent 0) 0% 0% / 15vmin 15vmin,
+    radial-gradient(70% 60% at 50% 0%, black 5%, transparent 0) 0% 8.125vmin / 15vmin 15vmin,
+    radial-gradient(70% 75%, orange 15%, transparent 0) 0% 0% / 15vmin 15vmin,
+    radial-gradient(circle at 45% 50%, darkorange 14%, transparent 0) 0% 0% / 15vmin 15vmin,
+    radial-gradient(circle at 55% 50%, darkorange 14%, transparent 0) 0% 0% / 15vmin 15vmin,
+    radial-gradient(70% 75%, var(--bg) 15%, transparent 0) 1.5vmin -1vmin / 15vmin 15vmin,
+    radial-gradient(70% 75%, green 15%, transparent 0) 1.1vmin -1vmin / 15vmin 15vmin,
+    radial-gradient(circle at 47% 50%, black 2.5%, transparent 0) 7.5vmin / 15vmin 15vmin,
+    radial-gradient(circle at 53% 50%, black 2.5%, transparent 0) 7.5vmin / 15vmin 15vmin,
+    radial-gradient(70% 60% at 50% 0%, black 5%, transparent 0) 7.5vmin 1.25vmin / 15vmin 15vmin,
+    radial-gradient(70% 75%, orange 15%, transparent 0) 7.5vmin / 15vmin 15vmin,
+    radial-gradient(circle at 45% 50%, darkorange 14%, transparent 0) 7.5vmin / 15vmin 15vmin,
+    radial-gradient(circle at 55% 50%, darkorange 14%, transparent 0) 7.5vmin / 15vmin 15vmin,
+    radial-gradient(70% 75%, var(--bg) 15%, transparent 0) 8.9vmin -8.125vmin / 15vmin 15vmin,
+    radial-gradient(70% 75%, green 15%, transparent 0) 8.5vmin -8.125vmin / 15vmin 15vmin
+    ;
+  background-color: var(--bg);
+}
+
+div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  width: 40vmin;
+  height: 60vmin;
+  border-radius: 50vmin;
+  background:
+    /* eyes */
+    radial-gradient(closest-side, white 19%, transparent 0) 32% 25% / 10vmin 10vmin,
+    radial-gradient(closest-side, white 9%, transparent 0) 37% 27% / 10vmin 10vmin,
+    radial-gradient(closest-side, black 99%, transparent 0) 27% 30% / 10vmin 10vmin,
+    radial-gradient(closest-side, white 19%, transparent 0) 83% 25% / 10vmin 10vmin,
+    radial-gradient(closest-side, white 9%, transparent 0) 88% 27% / 10vmin 10vmin,
+    radial-gradient(closest-side, black 99%, transparent 0) 78% 30% / 10vmin 10vmin,
+    /* cheeks */
+    radial-gradient(farthest-side, pink 99%, transparent 0) 25% 44.5% / 14% 5%,
+    radial-gradient(farthest-side, pink 99%, transparent 0) 79% 44.5% / 14% 5%,
+    /* mouth */
+    radial-gradient(farthest-side at 50% 0%, black 90%, transparent 0) 53% 47% / 15% 5%
+    ;
+  background-repeat: no-repeat;
+  background-color: white;
+  filter:
+    drop-shadow(1vmin 0vmin)
+    drop-shadow(-1vmin 0vmin)
+    drop-shadow(0vmin -1vmin)
+    drop-shadow(0vmin 0.25vmin)
+    drop-shadow(0vmin 0.25vmin)
+    drop-shadow(0vmin 0.25vmin)
+    drop-shadow(0vmin 0.25vmin)
+    drop-shadow(0vmin 0.25vmin)
+    drop-shadow(0vmin 0.25vmin)
+    drop-shadow(0vmin 0.25vmin)
+}
+
+div::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 40vmin;
+  left: -20vmin;
+  width: 40vmin;
+  height: 20vmin;
+  background: 
+    radial-gradient(100% 210% at 0 0, transparent 50%, white 0);
+}
+
+div::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 22vmin;
+  left: 0vmin;
+  width: 40vmin;
+  height: 40vmin;
+  transform: rotate(45deg);
+  background: 
+    radial-gradient(50% 50% at 0% 50%, #0000 80%, #000 0 92%, #0000 0) 50% 70% / 50% 25%,
+    radial-gradient(50% 50% at 50% 0%, #0000 80%, #000 0 92%, #0000 0) 76% 35% / 25% 50%;
+  background-repeat: no-repeat;
+/*   width: 12vmin;
+  height: 17vmin;
+  border-radius: 100% / 0 0 130% 130%;
+  background: #F003;
+  transform: rotate(-30deg);
+  box-shadow: 
+    -0.5vmin 1vmin 0 0.25vmin,
+    0.5vmin 1vmin 0 0.25vmin,
+    0 1vmin 0 0.25vmin; */
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+  font-size: 0;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+

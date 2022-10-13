@@ -1,0 +1,41 @@
+{
+    "name": "teacher-assistant-frida",
+    "version": "1.0.0",
+    "title": "Teacher Assistant Frida",
+    "description": "A virtual class assistant developed using vanilla JavaScript and two experimental Web APIs (Speech Recognition and Web Speech)... so, **unfortunately, it will work only on Chrome for now**.\n\nClick anywhere on the page and ask a question **in Spanish**. Frida will answer accordingly. Some of the sentences that you can say or ask:\n\n- Hola\n- ¿Cómo te llamas?\n- ¿Cómo estás?\n- ¿Qué día es hoy?\n- ¿Qué hora es?\n- ¿Cuál es la fecha?",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "teacher-assistant-frida.html",
+    "css": [
+        "teacher-assistant-frida.css"
+    ],
+    "js": "function runSpeechRecognition() {\n  const frida = document.querySelector(\"#frida\");\n  const texto = document.querySelector(\"#output\");\n\n  // new speech recognition object in Spanish!\n  var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;\n  const recognition = new SpeechRecognition();\n  recognition.lang = \"es\";\n\n  // This runs when the speech recognition service starts\n  recognition.onstart = function () {\n    frida.classList.add(\"listening\");\n  };\n\n  // stop listenting the speech recognition\n  recognition.onspeechend = function () {\n    recognition.stop();\n  }\n\n  // This runs when the speech recognition service returns result\n  recognition.onresult = function (event) {\n    const transcript = event.results[0][0].transcript.toLowerCase();\n    const confidence = event.results[0][0].confidence;\n\n    let textToSpeak = \"Perdón. No comprendí.\";\n\n    // only run the special sentences if confidence is \"high\"\n    if (confidence > 0.75) {\n      const dias = [\"domingo\", \"lunes\", \"martes\", \"miércoles\", \"jueves\", \"viernes\", \"sábado\"];\n      const meses = [\"enero\", \"febrero\", \"marzo\", \"abril\", \"mayo\", \"junio\", \"julio\", \"agosto\", \"septiembre\", \"octubre\", \"noviembre\", \"diciembre\"];\n      const d = new Date();\n\n      if ((transcript.indexOf(\" día\") > -1 || transcript.indexOf(\" dia\") > -1) && transcript.indexOf(\" hoy\") > -1) {\n        textToSpeak = `Hoy es ${dias[d.getDay()]}`;\n      } else if ((transcript.indexOf(\" día\") > -1 || transcript.indexOf(\" dia\") > -1) && transcript.indexOf(\" mañana\") > -1) {\n        const n = d.getDay();\n        textToSpeak = `Mañana será ${dias[(n + 1) % 7]}`;\n      } else if (transcript.indexOf(\"hora\") > -1) {\n        let hour = d.getHours();\n        if (hour > 12) hour -= 12;\n        if (hour === 0) hour = 12;\n        const minutes = d.getMinutes();\n        let textMinutes = `y ${minutes} minutos`;\n        if (minutes === 0) { textMinutes = \"en punto\"; }\n        if (minutes === 1) { textMinutes = \"y 1 minuto\"; }\n        if (minutes === 15) { textMinutes = \"y cuarto\"; }\n        if (minutes === 30) { textMinutes = \"y media\"; }\n        textToSpeak = `Son las ${hour} ${textMinutes}`;\n      } else if (transcript.indexOf(\" fecha\") > -1 && transcript.indexOf(\" hoy\") > -1) {\n        textToSpeak = `Hoy es ${d.getDate()} de ${meses[d.getMonth()]}`;\n      } else if (transcript.indexOf(\" fecha\") > -1 && transcript.indexOf(\" mañana\") > -1) {\n        d.setDate(d.getDate() + 1)\n        textToSpeak = `Mañana será ${d.getDate()} de ${meses[d.getMonth()]}`;\n      } else if (transcript.indexOf(\" mejor\") > -1 && transcript.indexOf(\" profesora\") > -1) {\n        textToSpeak = `Jill Montoro es la mejor profesora`;\n      } else if (transcript === \"hola\" || transcript === \"hola frida\") {\n        textToSpeak = `¡Hola!`;\n      } else if ((transcript.indexOf(\"como\") > -1 || transcript.indexOf(\"cómo\") > -1) && transcript.indexOf(\"llamas\") > -1) {\n        textToSpeak = \"Me llamo Frida. ¿Cómo te llamas tú?\"\n      } else if ((transcript.indexOf(\"como\") > -1 || transcript.indexOf(\"cómo\") > -1) && (transcript.indexOf(\"estas\") > -1 || transcript.indexOf(\"estás\"))) {\n        textToSpeak = \"Estoy bien, ¿y tú?\"\n      }\n    }\n\n    // show the closed captioned and remove after 3 seconds\n    texto.textContent = textToSpeak;\n    setTimeout(function () {\n      texto.textContent = \"\";\n    }, 3000)\n\n    // read out loud the answer\n    let speech = new SpeechSynthesisUtterance();\n    speech.lang = \"es\";\n    speech.text = textToSpeak;\n    speech.onend = function (event) {\n      console.log(event.elapsedTime);\n      setTimeout(function () {\n        frida.classList.remove(\"speaking\");\n      }, 600 - (event.elapsedTime % 600));\n    }\n    frida.classList.remove(\"listening\");\n    frida.classList.add(\"speaking\");\n    window.speechSynthesis.speak(speech);\n  };\n\n  // start recognition\n  recognition.start();\n}\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "html",
+        "svg",
+        "javascript",
+        "webdevelopment",
+        "speech"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/gOWorVj",
+    "codepen": "https://codepen.io/alvaromontoro/pen/gOWorVj"
+}

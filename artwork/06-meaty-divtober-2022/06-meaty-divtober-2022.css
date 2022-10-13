@@ -1,0 +1,271 @@
+/* Presets */
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* font */
+  --font: Inter, serif;
+  /* colors */
+  --white: #FFFFFF;
+  --light-off-white: #FAEEE2;
+  --off-white: #F5E0C3;
+  --lightest-gray: #F1F1FB;
+  --light-gray: #C9CACD;
+  --dark-gray: #BBBBBB;
+  --shadow-gray: #CCC7CE;
+  --black: #333333;
+  --tan: #CC8C5C;
+  --other-tan: #FAAE3D;
+  --light-brown: #A0763A;
+  --darker-brown: #7D5924;
+  --darkest-brown: #45260B;
+  --red: #FE583A;
+  --shadow-red: #D54B36;
+  --blood-red: #D82C2E;
+  --yellow: #FCE57E;
+  --shadow-yellow: #D1BD6A;
+  --dark-yellow: #E2A642;
+  --darkest-yellow: #AD6322;
+  --dark-aqua: #A4C9D3;
+  --light-aqua: #C5DEE2;
+  /*dimensions */
+  --width: 70vh;
+  --height: 80vh;
+  --l-space: calc(var(--width) / 20);
+  --wideness: calc(var(--width) - (2 * var(--l-space)));
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(#EACC7D, #E3DED1);
+}
+
+div:before, div:after {
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+div.meaty {
+  width: var(--width);
+  height: var(--height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  /* placements */
+  --meat-logo:
+
+    /* meat */ radial-gradient(circle, var(--off-white) 1vh, transparent 1vh) 28.25vh 8.5vh / 2vh 2vh no-repeat,
+    /* meat */ radial-gradient(circle, var(--blood-red) 4vh, transparent 4vh) 25vh 5vh / 9vh 9vh no-repeat,
+    /* meat */ radial-gradient(circle, var(--off-white) 4.5vh, transparent 4.5vh) 24.5vh 4.5vh / 10vh 10vh no-repeat,
+    /* meat */ radial-gradient(ellipse, var(--tan) 7.75vh, transparent 7.75vh) 25vh 4.75vh / 15vh 9vh no-repeat,
+    /* meat */ radial-gradient(circle, var(--off-white) 1vh, transparent 1vh) 41.5vh 7.5vh / 2vh 2vh no-repeat,
+    /* meat */ radial-gradient(circle, var(--off-white) 1vh, transparent 1vh) 41.5vh 9.25vh / 2vh 2vh no-repeat,
+  /* sign-base */ linear-gradient( var(--off-white) 100%, transparent 2vh) 38vh 8.75vh / 4vh 1.5vh no-repeat;
+  --roofsign:
+  /* sign-top */ radial-gradient(ellipse, var(--darker-brown) 14vh, transparent 14vh) 17vh -1vh / 36vh 26vh no-repeat,
+  /* sign-base */ linear-gradient( var(--darker-brown) 100%, transparent 2vh) 10vh 14.5vh /50vh 7.5vh no-repeat,
+  /* sign-base */ linear-gradient( var(--light-brown) 100%, transparent 2vh) 10vh 13vh / 50vh 10vh no-repeat,
+  /* sign-base-l */ linear-gradient(-65deg, var(--darker-brown) 7vh, transparent 7vh) 2.5vh 14.5vh / 10vh 7.5vh no-repeat,
+  /* sign-base-l */ linear-gradient(-65deg, var(--light-brown) 7vh, transparent 7vh) 0vh 13vh / 10vh 10vh no-repeat,
+  /* sign-base-l */ linear-gradient(65deg, var(--darker-brown) 7vh, transparent 7vh) 57.5vh 14.5vh / 10vh 7.5vh no-repeat,
+  /* sign-base-r */ linear-gradient(65deg, var(--light-brown) 7vh, transparent 7vh) 60vh 13vh / 10vh 10vh no-repeat,
+  /* button1 */ radial-gradient(circle, var(--light-brown) 1vh, transparent 1vh) 12vh 23.5vh / 2vh 2vh no-repeat,
+  /* button1 */ radial-gradient(circle, var(--light-brown) 1vh, transparent 1vh) 26vh 23.5vh / 2vh 2vh no-repeat,
+  /* button1 */ radial-gradient(circle, var(--light-brown) 1vh, transparent 1vh) 40vh 23.5vh / 2vh 2vh no-repeat,
+  /* button1 */ radial-gradient(circle, var(--light-brown) 1vh, transparent 1vh) 54vh 23.5vh / 2vh 2vh no-repeat,
+  /* sign-bottom */ linear-gradient( var(--darkest-brown) 100%, transparent 2vh) 2vh 23vh / 66vh 3vh no-repeat,
+  /* sign-top */ radial-gradient(ellipse, var(--light-brown) 15vh, transparent 15vh) 15vh -3vh / 40vh 30vh no-repeat;
+  --window:
+  /* window-r-shadow1 */ linear-gradient(115deg, var(--dark-aqua) 6vh, transparent 6vh) 9.5vh 39vh / 12vh 15vh no-repeat,
+  /* window-r-shadow2 */ linear-gradient(-65deg, var(--dark-aqua) 5vh, transparent 5vh) 11.5vh 40vh / 12vh 15vh no-repeat,
+  /* window-l */ linear-gradient( var(--light-aqua) 100%, transparent 100%) 9.5vh 39vh / 14vh 16vh no-repeat,
+  /* window-r-shadow1 */ linear-gradient(115deg, var(--dark-aqua) 6vh, transparent 6vh) 25.5vh 39vh / 12vh 15vh no-repeat,
+  /* window-r-shadow2 */ linear-gradient(-65deg, var(--dark-aqua) 5vh, transparent 5vh) 27.5vh 40vh / 12vh 15vh no-repeat,
+  /* window-r */ linear-gradient( var(--light-aqua) 100%, transparent 100%) 25.5vh 39vh / 14vh 16vh no-repeat,
+  /* window-frames-r */ linear-gradient( var(--off-white) 100%, transparent 100%) 41.5vh 37vh / .5vh 20vh no-repeat,
+  /* window-frames-l */ linear-gradient( var(--shadow-gray) 100%, transparent 100%) 7vh 37vh / .5vh 20vh no-repeat,
+  /* window-frames */ linear-gradient( var(--light-brown) 100%, transparent 100%) 7.5vh 37vh / 34.5vh 20vh no-repeat,
+  /* upper-base */ linear-gradient( var(--off-white) 100%, transparent 100%) 7vh 35vh / 35vh 2vh no-repeat,
+  /* upper-base */ linear-gradient( var(--shadow-gray) 100%, transparent 100%) 7vh 34vh / 35vh 1vh no-repeat,
+  /* lower-base */ linear-gradient( var(--off-white) 100%, transparent 100%) 7vh 57vh / 35vh 2vh no-repeat,
+  /* lower-base */ linear-gradient( var(--shadow-gray) 100%, transparent 100%) 7vh 59vh / 35vh 1vh no-repeat,
+  /* lowest-base */ linear-gradient( var(--darkest-yellow) 100%, transparent 100%) 7vh 60vh / 35vh 2vh no-repeat;
+  --door:
+  /* open-sign */ linear-gradient(var(--white) 10vh, transparent 10vh) 49vh 50vh / 7vh 4vh no-repeat,
+  /* open-sign-frame */ linear-gradient(var(--darker-brown) 10vh, transparent 10vh) 48.75vh 49.75vh / 7.5vh 4.5vh no-repeat,
+  /* open-sign-string */ linear-gradient(-45deg, var(--light-aqua) 2vh, transparent 2vh) 48.75vh 46.5vh / 4vh 4vh no-repeat,
+  /* open-sign-string */ linear-gradient(-45deg, var(--off-white) 2vh, transparent 2vh) 48.25vh 45.5vh / 4.5vh 4.5vh no-repeat,
+  /* open-sign-string */ linear-gradient(45deg, var(--light-aqua) 2vh, transparent 2vh) 52.75vh 46.5vh / 4vh 4vh no-repeat,
+  /* open-sign-string */ linear-gradient(45deg, var(--off-white) 2vh, transparent 2vh) 52.75vh 45.5vh / 4.5vh 4.5vh no-repeat,
+  /* door-top-shadow1 */ linear-gradient(115deg, var(--dark-aqua) 4vh, transparent 4vh) 48vh 45vh / 12vh 15vh no-repeat,
+  /* door-top-shadow2 */ linear-gradient(-65deg, var(--dark-aqua) 5vh, transparent 5vh) 45vh 45vh / 12vh 15vh no-repeat,
+  /* door-top */ linear-gradient( var(--light-aqua) 100%, transparent 100%) 48vh 45vh / 9vh 15vh no-repeat,
+  /* door-bottom */ linear-gradient( var(--darker-brown) 100%, transparent 100%) 48vh 64vh / 9vh 8vh no-repeat,
+  /* door-shadow-l */ linear-gradient( var(--shadow-gray) 100%, transparent 100%) 44.5vh 41vh / .5vh 34vh no-repeat,
+  /* door-shadow-r */ linear-gradient( var(--light-off-white) 100%, transparent 100%) 60vh 41vh / .5vh 34vh no-repeat,
+  /* door*/ linear-gradient( var(--darkest-brown) 100%, transparent 100%) 45vh 41vh / 15vh 34vh no-repeat;
+  --storefront:
+  /* lower-base */ linear-gradient( var(--light-off-white) 100%, transparent 100%) var(--l-space) 71vh / var(--wideness) 4vh no-repeat,
+  /* lower-base-shadow */ linear-gradient( var(--off-white) 100%, transparent 100%) var(--l-space) 70vh / var(--wideness) 1vh no-repeat,
+  /* yellow-store */ linear-gradient( var(--dark-yellow) 100%, transparent 100%) var(--l-space) 30vh / var(--wideness) 40vh no-repeat;
+  --sidewalk:
+  /* upper-sidewalk */ linear-gradient( var(--dark-gray) 100%, transparent 100%) var(--l-space) 75vh / var(--wideness) 1vh no-repeat,
+  /* curb-crack1*/ linear-gradient( var(--dark-gray) 6rem, transparent 2vh) 20% 100% / 0.25vh 4vh no-repeat,
+  /* curb-crack2*/ linear-gradient( var(--dark-gray) 6rem, transparent 2vh) 40% 100% / 0.25vh 4vh no-repeat,
+  /* curb-crack3*/ linear-gradient( var(--dark-gray) 6rem, transparent 2vh) 60% 100% / 0.25vh 4vh no-repeat,
+  /* curb-crack4*/ linear-gradient( var(--dark-gray) 6rem, transparent 2vh) 80% 100% / 0.25vh 4vh no-repeat,
+  /* sidewalk */ linear-gradient( var(--lightest-gray) 100%, transparent 2vh) 3vh 76vh / 64vh 2vh no-repeat,
+  /* sidewalk */ linear-gradient(-45deg, var(--lightest-gray) 2vh, transparent 2vh) 0vh 76vh / 3vh 2vh no-repeat,
+  /* sidewalk */ linear-gradient(45deg, var(--lightest-gray) 2vh, transparent 2vh) 67vh 76vh / 3vh 2vh no-repeat,
+  /* curb */ linear-gradient( var(--light-gray) 100%, transparent 2vh) 0% 100% / 70vh 2vh no-repeat;
+  background: var(--meat-logo), var(--roofsign), var(--window), var(--door), var(--storefront), var(--sidewalk);
+}
+
+div.meaty:after {
+  width: var(--width);
+  height: var(--height);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "Open";
+  color: #990000;
+  padding-top: 24vh;
+  padding-left: 35vh;
+  font-family: Helvetica, serif;
+  font-weight: bold;
+  font-size: 1.5vh;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 99;
+  opacity: 0.4;
+  /* positions */
+  --meat-cut-1:
+     /* meat */ radial-gradient(circle, var(--off-white) .5vh, transparent .5vh) 31.75vh 50.5vh / 2vh 2vh no-repeat,
+     /* meat */ radial-gradient(circle, var(--blood-red) 2vh, transparent 2vh) 28vh 47vh / 9vh 9vh no-repeat,
+     /* meat */ radial-gradient(circle, var(--off-white) 2.5vh, transparent 2.5vh) 27.5vh 46.5vh / 10vh 10vh no-repeat,
+     /* meat */ radial-gradient(ellipse, var(--tan) 4.75vh, transparent 4.75vh) 23.5vh 46.75vh / 13.25vh 9vh no-repeat;
+  /* positions */
+  --meat-cut-2:
+     /* meat */ radial-gradient(circle, var(--off-white) .5vh, transparent .5vh) 36.5vh 49.5vh / 2vh 2vh no-repeat,
+     /* meat */ radial-gradient(circle, var(--blood-red) 2vh, transparent 2vh) 32vh 45vh / 9vh 9vh no-repeat,
+     /* meat */ radial-gradient(ellipse, var(--blood-red) 2vh, transparent 2vh) 31.75vh 44.5vh / 9vh 12vh no-repeat,
+     /* meat */ radial-gradient(circle, var(--blood-red) 2vh, transparent 2vh) 32.5vh 47.5vh / 9vh 9vh no-repeat,
+     /* meat */ radial-gradient(circle, var(--off-white) 2.5vh, transparent 2.5vh) 32vh 47vh / 10vh 10vh no-repeat,
+     /* meat */ radial-gradient(circle, var(--off-white) 2.5vh, transparent 2.5vh) 31.5vh 44.5vh / 10vh 10vh no-repeat;
+  /* positions */
+  --meat-cut-3:
+     /* turkey-wing-l */ radial-gradient(ellipse, var(--other-tan) 1vh, transparent 1vh) 15.75vh 47vh / 2.5vh 4.5vh no-repeat,
+     /* turkey-leg-l */ radial-gradient(ellipse, var(--other-tan) 1.5vh, transparent 1.5vh) 15.5vh 51vh / 3vh 3vh no-repeat,
+     /* turkey-wing-r */ radial-gradient(ellipse, var(--other-tan) 1vh, transparent 1vh) 20.75vh 47vh / 2.5vh 4.5vh no-repeat,
+     /* turkey-leg-r */ radial-gradient(ellipse, var(--other-tan) 1.5vh, transparent 1.5vh) 20.5vh 51vh / 3vh 3vh no-repeat,
+     /* turkey-base */ radial-gradient(ellipse, var(--other-tan) 3vh, transparent 3vh) 16.5vh 46.5vh / 6vh 8vh no-repeat;
+  /* positions */
+  --meat-cut-4:
+     /* meat */ radial-gradient(circle, var(--off-white) .5vh, transparent .5vh) 10.75vh 52vh / 1.5vh 1.5vh no-repeat,
+     /* meat */ radial-gradient(circle, var(--blood-red) 2vh, transparent 2vh) 8.5vh 49vh / 7vh 7vh no-repeat,
+     /* meat */ radial-gradient(circle, var(--off-white) 2.5vh, transparent 2.5vh) 8vh 48.5vh / 8vh 8vh no-repeat,
+     /* meat */ radial-gradient(ellipse, var(--tan) 4.75vh, transparent 4.75vh) 9vh 49.25vh / 12vh 6vh no-repeat;
+  --shelves:
+  /* lower-shelf-l */ linear-gradient( var(--darker-brown) 100%, transparent 100%) 9.5vh 52vh / 14vh 3vh no-repeat,
+  /* lower-shelf-r */ linear-gradient( var(--darker-brown) 100%, transparent 100%) 25.5vh 52vh / 14vh 3vh no-repeat;
+  --awning-shadow:
+  /* 1 */ linear-gradient(var(--black) 10vh, transparent 6vh) 2vh 30vh / 6vh 20vh no-repeat,
+  /* 1 */ radial-gradient(circle, var(--black) 3vh, transparent 3vh) 2vh 36vh / 6vh 6vh no-repeat,
+  /* 2 */ linear-gradient(var(--black) 10vh, transparent 6vh) 8vh 30vh / 6vh 20vh no-repeat,
+  /* 2 */ radial-gradient(circle, var(--black) 3vh, transparent 3vh) 8vh 36vh / 6vh 6vh no-repeat,
+  /* 3 */ linear-gradient(var(--black) 10vh, transparent 6vh) 14vh 30vh / 6vh 20vh no-repeat,
+  /* 3 */ radial-gradient(circle, var(--black) 3vh, transparent 3vh) 14vh 36vh / 6vh 6vh no-repeat,
+  /* 4 */ linear-gradient(var(--black) 10vh, transparent 6vh) 20vh 30vh / 6vh 20vh no-repeat,
+  /* 4 */ radial-gradient(circle, var(--black) 3vh, transparent 3vh) 20vh 36vh / 6vh 6vh no-repeat,
+  /* 5 */ linear-gradient(var(--black) 10vh, transparent 6vh) 26vh 30vh / 6vh 20vh no-repeat,
+  /* 5 */ radial-gradient(circle, var(--black) 3vh, transparent 3vh) 26vh 36vh / 6vh 6vh no-repeat,
+  /* 6 */ linear-gradient(var(--black) 10vh, transparent 6vh) 32vh 30vh / 6vh 20vh no-repeat,
+  /* 6 */ radial-gradient(circle, var(--black) 3vh, transparent 3vh) 32vh 36vh / 6vh 6vh no-repeat,
+  /* 7 */ linear-gradient(var(--black) 10vh, transparent 6vh) 38vh 30vh / 6vh 20vh no-repeat,
+  /* 7 */ radial-gradient(circle, var(--black) 3vh, transparent 3vh) 38vh 36vh / 6vh 6vh no-repeat,
+  /* 8 */ linear-gradient(var(--black) 10vh, transparent 6vh) 44vh 30vh / 6vh 20vh no-repeat,
+  /* 8 */ radial-gradient(circle, var(--black) 3vh, transparent 3vh) 44vh 36vh / 6vh 6vh no-repeat,
+  /* 9 */ linear-gradient(var(--black) 10vh, transparent 6vh) 50vh 30vh / 6vh 20vh no-repeat,
+  /* 9 */ radial-gradient(circle, var(--black) 3vh, transparent 3vh) 50vh 36vh / 6vh 6vh no-repeat,
+  /* 10 */ linear-gradient(var(--black) 10vh, transparent 6vh) 56vh 30vh / 6vh 20vh no-repeat,
+  /* 10 */ radial-gradient(circle, var(--black) 3vh, transparent 3vh) 56vh 36vh / 6vh 6vh no-repeat,
+  /* 11 */ linear-gradient(var(--black) 10vh, transparent 6vh) 62vh 30vh / 6vh 20vh no-repeat,
+  /* 11 */ radial-gradient(circle, var(--black) 3vh, transparent 3vh) 62vh 36vh / 6vh 6vh no-repeat;
+  background: var(--meat-cut-1), var(--meat-cut-2), var(--meat-cut-3), var(--meat-cut-4), var(--shelves), var(--awning-shadow);
+}
+
+div.meaty:before {
+  width: var(--width);
+  height: var(--height);
+  padding-top: 15.5vh;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  content: "Butcher Shop";
+  color: var(--white);
+  font-family: Helvetica, serif;
+  font-weight: bold;
+  font-size: 5.5vh;
+  text-transform: uppercase;
+  text-shadow: 2px 2px var(--tan);
+  letter-spacing: 4px;
+  z-index: 9999;
+  /* positions */
+  --awning:
+   linear-gradient(var(--red) 10vh, transparent 6vh) 2vh 26vh / 6vh 9vh no-repeat,
+   linear-gradient(var(--shadow-red) 10vh, transparent 6vh) 2vh 33.5vh / 6vh 3vh no-repeat,
+   radial-gradient(circle, var(--shadow-red) 3vh, transparent 3vh) 2vh 33vh / 6vh 6vh no-repeat,
+
+  linear-gradient(var(--yellow) 10vh, transparent 6vh) 8vh 26vh / 6vh 9vh no-repeat,
+  linear-gradient(var(--shadow-yellow) 10vh, transparent 6vh) 8vh 33.5vh / 6vh 3vh no-repeat,
+  radial-gradient(circle, var(--shadow-yellow) 3vh, transparent 3vh) 8vh 33vh / 6vh 6vh no-repeat,
+
+   linear-gradient(var(--red) 10vh, transparent 6vh) 14vh 26vh / 6vh 9vh no-repeat,
+   linear-gradient(var(--shadow-red) 10vh, transparent 6vh) 14vh 33.5vh / 6vh 3vh no-repeat,
+   radial-gradient(circle, var(--shadow-red) 3vh, transparent 3vh) 14vh 33vh / 6vh 6vh no-repeat,
+
+  linear-gradient(var(--yellow) 10vh, transparent 6vh) 20vh 26vh / 6vh 9vh no-repeat,
+  linear-gradient(var(--shadow-yellow) 10vh, transparent 6vh) 20vh 33.5vh / 6vh 3vh no-repeat,
+  radial-gradient(circle, var(--shadow-yellow) 3vh, transparent 3vh) 20vh 33vh / 6vh 6vh no-repeat,
+
+
+   linear-gradient(var(--red) 10vh, transparent 6vh) 26vh 26vh / 6vh 9vh no-repeat,
+   linear-gradient(var(--shadow-red) 10vh, transparent 6vh) 26vh 33.5vh / 6vh 3vh no-repeat,
+   radial-gradient(circle, var(--shadow-red) 3vh, transparent 3vh) 26vh 33vh / 6vh 6vh no-repeat,
+
+  linear-gradient(var(--yellow) 10vh, transparent 6vh) 32vh 26vh / 6vh 9vh no-repeat,
+  linear-gradient(var(--shadow-yellow) 10vh, transparent 6vh) 32vh 33.5vh / 6vh 3vh no-repeat,
+  radial-gradient(circle, var(--shadow-yellow) 3vh, transparent 3vh) 32vh 33vh / 6vh 6vh no-repeat,
+
+   linear-gradient(var(--red) 10vh, transparent 6vh) 38vh 26vh / 6vh 9vh no-repeat,
+   linear-gradient(var(--shadow-red) 10vh, transparent 6vh) 38vh 33.5vh / 6vh 3vh no-repeat,
+   radial-gradient(circle, var(--shadow-red) 3vh, transparent 3vh) 38vh 33vh / 6vh 6vh no-repeat,
+
+  linear-gradient(var(--yellow) 10vh, transparent 6vh) 44vh 26vh / 6vh 9vh no-repeat,
+  linear-gradient(var(--shadow-yellow) 10vh, transparent 6vh) 44vh 33.5vh / 6vh 3vh no-repeat,
+  radial-gradient(circle, var(--shadow-yellow) 3vh, transparent 3vh) 44vh 33vh / 6vh 6vh no-repeat,
+
+   linear-gradient(var(--red) 10vh, transparent 6vh) 50vh 26vh / 6vh 9vh no-repeat,
+   linear-gradient(var(--shadow-red) 10vh, transparent 6vh) 50vh 33.5vh / 6vh 3vh no-repeat,
+   radial-gradient(circle, var(--shadow-red) 3vh, transparent 3vh) 50vh 33vh / 6vh 6vh no-repeat,
+
+  linear-gradient(var(--yellow) 10vh, transparent 6vh) 56vh 26vh / 6vh 9vh no-repeat,
+  linear-gradient(var(--shadow-yellow) 10vh, transparent 6vh) 56vh 33.5vh / 6vh 3vh no-repeat,
+  radial-gradient(circle, var(--shadow-yellow) 3vh, transparent 3vh) 56vh 33vh / 6vh 6vh no-repeat,
+
+
+   linear-gradient(var(--red) 10vh, transparent 6vh) 62vh 26vh / 6vh 9vh no-repeat,
+   linear-gradient(var(--shadow-red) 10vh, transparent 6vh) 62vh 33.5vh / 6vh 3vh no-repeat,
+   radial-gradient(circle, var(--shadow-red) 3vh, transparent 3vh) 62vh 33vh / 6vh 6vh no-repeat;
+  background: var(--awning);
+}

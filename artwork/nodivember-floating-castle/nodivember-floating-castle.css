@@ -1,0 +1,43 @@
+
+html, body {
+  position: absolute;
+  top: 0;
+  left; 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  background: LightSkyBlue;
+  background: linear-gradient(135deg, #beeeef, LightSkyBlue)
+}
+
+body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vmin;
+  height: 80vmin;
+  clip-path: polygon(50% 23%, 52% 23.5%, 52% 10%, 52.25% 9.75%, 52.5% 10%, 54.5% 16%, 53.5% 18%, 52.5% 17%, 52.5% 23.66%, 78% 30%, 80% 81%, 90% 82.5%, 99.5% 84.5%, 100% 85%, 100% 85.5%, 75% 95%, 50% 100%, 20% 95%, 0% 84.5%, 0.25% 84%, 20% 81%, 22% 30%);
+  background-image: linear-gradient(135deg, transparent 65%, rgba(0,0,0,0.5) 90%), radial-gradient(at 60% 12.5%, #d50000 8%, transparent 10%), linear-gradient(black 24%, transparent 0), linear-gradient(to top, #3B1500 10%, darkgreen 15%, green 16% 19.7%, transparent 0), radial-gradient(at 50% 80%, green 15%, transparent 0), radial-gradient(at 50% 60%, #333 20%, #666 38%, transparent 0 );
+}
+
+body::before,
+body::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  clip-path: polygon(50% 23%, 56% 24.5%, 56% 26.75%, 62.25% 28.25%, 62.25% 26%, 68% 27.5%, 68% 29.5%, 73% 30.75%, 73% 28.66%, 78% 30%, 66% 41.125%, 65.5% 40%, 65% 41%, 65% 46%, 66% 46.25%, 66% 41.125%, 78% 30%, 80% 81%, 50% 80%, 38.5% 80.433%, 38.5% 67.5%, 42% 45.125%, 43% 45.125%, 43% 40%, 42.75% 39.25%, 42.5% 39%, 42.25% 39.25%, 42% 40.125%, 42% 45.125%, 38.5% 67.5%, 29.5% 68.5%, 29% 47.125%, 29% 42.2%, 28.6% 41.25%, 28.5% 41%, 28.3% 41.5%, 28.1% 42.325%, 28.1% 47.125%, 29% 47.125%, 29.5% 68.5%, 29.4% 80.5%, 20% 81%, 22% 30%, 27% 28.75%, 27% 30.5%, 32% 29.33%, 32% 27.5%, 37.75% 26%, 37.75% 28.25%, 44% 26.75%, 44% 24.5%);
+  background-image: linear-gradient(to right, #eee 50%, #ccc 0);
+  box-shadow: inset -10vmin -3vmin 10vmin 10vmin rgba(0,0,0,0.2);I 
+}
+
+body::before {
+  background-image: radial-gradient(at 36% 43%, #888 5%, transparent 13%), radial-gradient(at 56% 43%, #888 13%, transparent 20%), linear-gradient(to right, #ccc 50%, #eee 0); 
+  clip-path: polygon(50% 23%, 55% 28%, 62.25% 26%, 65% 31%, 73% 28.66%, 78% 30%, 80% 81%, 50% 80%, 38.5% 80.433%, 38.5% 68.25%, 31.5% 69%, 31.4% 80.5%, 20% 81%, 22% 30%, 27% 28.75%, 35% 31%, 37.75% 26%, 45% 28%);
+}

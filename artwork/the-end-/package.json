@@ -1,0 +1,41 @@
+{
+    "name": "the-end-",
+    "version": "1.0.0",
+    "title": "The end!",
+    "description": "Nodivember \"the end\" credits",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "the-end-.html",
+    "css": [
+        "the-end-.css"
+    ],
+    "js": "// Nothing to see here either!",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "html",
+        "illustration",
+        "cssart",
+        "nodivember"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/ZEOVEKJ",
+    "codepen": "https://codepen.io/alvaromontoro/pen/ZEOVEKJ"
+}

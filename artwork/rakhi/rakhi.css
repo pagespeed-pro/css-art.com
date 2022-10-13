@@ -1,0 +1,121 @@
+* {
+    margin:0;
+    paddin:0;
+    background-color:black;
+}
+body,html{
+    height:100vh;
+    width:100%;
+    font-family: 'Permanent Marker', cursive;
+}
+
+
+:root{
+    --primary: blue;
+    --secondary: red;
+    --secondary-bg:pink;
+    --bg: yellow;
+    --dots: green;
+}
+h1{
+    position:absolute;
+    writing-mode:vertical-rl;
+    text-orientation:upright;
+    height:100%;
+    text-align:center;
+    text-transform:uppercase ;
+    margin:0 25px;
+    background: -webkit-linear-gradient(var(--primary), #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+#first{
+    left:0;
+}
+#second{
+    right:0;
+}
+
+.container{
+    width:300px;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+}
+.container > *{
+    width:100%;
+}
+
+.shadow {
+    box-shadow: 0px 0px 38px 2px rgba(179, 176, 173,0.4),
+                inset 0px 0px 4px 2px rgba(179, 176, 173,0.4);
+}
+.shadow-inner {
+    box-shadow: 0px 0px 38px 2px rgba(179, 176, 173,1),
+                inset 0px 0px 10px 2px rgba(0,0,0,0.5);
+}
+.thread{
+    flex:1;
+    width:20px;
+    background-color:white;
+    background-image: linear-gradient(90deg, var(--primary) 50%, transparent 50%),
+                    linear-gradient(var(--primary) 50%, transparent 50%);
+    background-size:3px 5px;
+}
+.dial{
+    flex:0.7;
+}
+.circle{
+    width:200px;
+    height:200px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+}
+.outer{
+    background-color: var(--bg);
+    background-image: radial-gradient(closest-side, transparent 98%, var(--primary) 99%),
+                     radial-gradient(closest-side, transparent 98%, var(--primary) 99%);
+    background-size:80px 80px;
+background-position:0 0, 40px 40px;
+}
+.inner-1{
+    width:160px;
+    height:160px;
+    background-color:var(--secondary-bg);
+    background-image: radial-gradient(var(--primary) 15%, transparent 16%),
+                      radial-gradient(var(--primary) 15%, transparent 16%);
+    background-size: 20px 20px;
+    background-position: 0 0, 30px 30px;
+}
+.inner-2{
+    width:120px;
+    height:120px;
+    background-color: var(--secondary);
+    background-image: radial-gradient(var(--dots) 9px, transparent 10px),
+                      repeating-radial-gradient(var(--dots) 0, var(--secondary-bg) 4px, transparent 5px, transparent 20px, var(--secondary-bg) 21px, var(--secondary-bg) 25px, transparent 26px, transparent 50px);
+    background-size: 30px 30px, 90px 90px;
+    background-position: 0 0;
+  animation:animate 2s linear;
+}
+.inner-3{
+    width:80px;
+    height:80px;
+    background: radial-gradient(circle closest-side at 60% 43%, #b06 26%, var(--primary) 27%),
+                radial-gradient(circle closest-side at 40% 43%, #b03 26%, var(--primary) 27%),
+                radial-gradient(circle closest-side at 40% 22%, #d35 45%, var(--primary) 46%),
+                radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+                radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%),
+                
+                radial-gradient(circle closest-side at 60% 43%, #b03 26%, transparent 27%) 50px 50px,
+                radial-gradient(circle closest-side at 40% 43%, #b03 26%, transparent  27%) 50px 50px,
+                radial-gradient(circle closest-side at 40% 22%, #d35 45%, transparent  46%) 50px 50px,
+                radial-gradient(circle closest-side at 60% 22%, #d35 45%, transparent  46%) 50px 50px,
+                radial-gradient(circle closest-side at 50% 35%, #d35 30%, transparent  31%) 50px 50px;
+    background-color:#b03;
+    background-size:20px 20px;
+}

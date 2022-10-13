@@ -1,0 +1,376 @@
+@property --color0 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: white;
+}
+
+@property --color1 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: white;
+}
+
+@property --color2 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: white;
+}
+
+@property --color3 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: white;
+}
+@property --color4 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: white;
+}
+
+@property --color5 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: white;
+}
+
+@property --color6 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: white;
+}
+
+@property --color7 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: white;
+}
+
+@property --color8 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: white;
+}
+
+@property --color9 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: white;
+}
+
+@keyframes swapColors {
+  0%, 20% { 
+    --color: white;
+    --color0: white;
+    --color1: white;
+    --color2: white;
+    --color3: white;
+    --color4: white;
+    --color5: white;
+    --color6: white;
+    --color7: white;
+    --color8: white;
+    --color9: white;
+    color: white; }
+  25% { 
+    color: red; 
+    --color: red;
+    --color0: white;
+  }
+  28% { --color0: red; --color1: white; }
+  31% { --color1: red; --color2: white; }
+  34% { --color2: red; --color3: white; }
+  37% { --color3: red; --color4: white; }
+  40% { --color4: red; --color5: white; }
+  43% { --color5: red; --color6: white; }
+  46% { --color6: red; --color7: white; }
+  49% { --color7: red; --color8: white; }
+  52% { --color8: red; --color9: white; }
+  55% { --color9: red; }
+  80%, 100% {
+    color: red;
+    background: red;
+  }
+}
+div {
+  --color: red;
+  --color0: red;
+  --color1: red;
+  --color2: red;
+  --color3: red;
+  --color4: red;
+  --color5: red;
+  --color6: red;
+  --color7: red;
+  --color8: red;
+  --color9: red;
+  --duration: 10s;
+  --timing: ease-in-out;
+  animation: swapColors var(--duration) var(--timing) 1 forwards;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: red;
+  width: 1vmax;
+  height: 1vmax;
+  border-radius: 50%;
+  font-size: 1vmax;
+  box-shadow:
+    /* o */
+    -1em -3em 0 0.75em var(--color0),
+    -0.75em -1em 0 -0.25em var(--color1),
+    0.5em -1.4em 0 0.1em var(--color2),
+    1.2em -2.9em 0 0.25em var(--color3),
+    1.9em -1.5em var(--color4),
+    1.75em 0.25em 0 0.5em var(--color5),
+    2.9em 1.25em 0 -0.25em var(--color6),
+    1.25em 3.25em 0 1.25em var(--color7),
+    0.25em 1.125em 0 -0.125em var(--color8),
+    3em 2em 0 -0.25em var(--color9),
+    2.5em 5em 0 -0.25em var(--color0),
+    1.5em 6em 0 0.25em var(--color1),
+    0.6em 5.25em 0 -0.33em var(--color2),
+    -0.4em 5.25em 0 0.1em var(--color3),
+    0.25em 6.25em 0 -0.125em var(--color4),
+    0.75em 7.25em var(--color5),
+    -0.5em 8em 0 0.25em var(--color6),
+    -0.75em 6.5em 0 -0.125em var(--color7),
+    -2em 7em 0 0.2em var(--color8),
+    -1.5em 5.75em 0 -0.2em var(--color9),
+    -4em 7.8em 0 0.6em var(--color0),
+    -2.125em 8.5em 0 0.125em var(--color1),
+    -3.1em 6.5em 0 -0.3em var(--color2),
+    -5em 6.25em var(--color3),
+    -4em 6.25em 0 -0.4em var(--color4),
+    -6.2em 7.5em 0 0.25em var(--color5),
+    -6.25em 6em var(--color6),
+    -5.5em 8.5em 0 -0.25em var(--color7),
+    -8em 6em 0 0.4em var(--color8),
+    -7.5em 7.25em 0 -0.2em var(--color9),
+    -6.75em 4.75em 0 0.125em var(--color0),
+    -7.75em 2.75em 0 0.7em var(--color1),
+    -8.25em 4.5em 0 -0.2em var(--color2),
+    -9.5em 4.5em 0 0.2em var(--color3),
+    -9.5em 3.25em 0 -0.2em var(--color4),
+    -9.75em 2em 0 0.125em var(--color5),
+    -8.75em 0 0 0.9em var(--color6),
+    -7em 1em 0 -0.1em var(--color7),
+    -6.75em 0em 0 -0.1em var(--color8),
+    -6.5em -1.5em 0 0.2em var(--color9),
+    -8.75em -2.25em var(--color0),
+    -7.75em -1.8em 0 -0.15em var(--color1),
+    -7em -3.5em 0 0.6em var(--color2),
+    -5.5em -4.5em var(--color3),
+    -4.5em -3em 0 0.3em var(--color4),
+    -5.5em -2.2em 0 -0.2em var(--color5),
+    -4em -4.75em 0 0.2em var(--color6),
+    -3em -3em var(--color7),
+    -2.5em -4.5em var(--color8),
+    -3.25em -3.9em 0 -0.25em var(--color9),
+    -1.5em -4.6em 0 -0.3em var(--color0),
+    /* d */
+    -15em 0 0 0.75em var(--color1),
+    -13.125em 0 0 -0.125em var(--color2),
+    -14em 1.75em var(--color3),
+    -13.1em 1em 0 -0.08em var(--color4),
+    -15.4em 2.25em 0 0.2em var(--color5),
+    -13em 2em 0 -0.25em var(--color6),
+    -14.5em 4.75em 0 1.125em var(--color7),
+    -13em 3em var(--color8),
+    -13.9em 2.75em 0 -0.3em var(--color9),
+    -13.25em -1.5em 0 0.25em var(--color0),
+    -14.5em -3em 0 0.5em var(--color1),
+    -16em -1.9em 0 0.125em var(--color2),
+    -15em -1.65em 0 -0.25em var(--color3),
+    -14.4em -1.5em 0 -0.3em var(--color4),
+    -13em -4em var(--color5),
+    -12.95em -2.85em 0 -0.1em var(--color6),
+    -13.5em -5.75em 0 0.5em var(--color7),
+    -14em -4.4em 0 -0.2em var(--color8),
+    -16em -3.25em 0 -0.1em var(--color9),
+    -15.5em -4.5em 0 0.2em var(--color0),
+    -15.5em -6em var(--color1),
+    -14.85em -5.5em 0 -0.3em var(--color2),
+    -14.65em -5em 0 -0.35em var(--color3),
+    -15em -8em 0 0.9em var(--color4),
+    -13em -9em var(--color5),
+    -13.2em -8em 0 -0.2em var(--color6),
+    -13.1em -7.2em 0 -0.1em var(--color7),
+    -12.7em 5.6em 0 -0.35em var(--color8),
+    -12.9em 6.3em 0 -0.1em var(--color9),
+    -12.9em 7em 0 -0.3em var(--color0),
+    -13.4em 8em 0 0.3em var(--color1),
+    -15.2em 8em 0 0.1em var(--color2),
+    -14.4em 8.5em 0 -0.3em var(--color3),
+    -14em 6.8em 0 -0.1em var(--color4),
+    -16.7em 6em var(--color5),
+    -14.8em 6.85em 0 -0.25em var(--color6),
+    -15.75em 6.75em 0 0.1em var(--color7),
+    -17.25em 7.3em 0 0.2em var(--color8),
+    -23.5em 0 0 1.2em var(--color9),
+    -18em 6.3em 0 -0.15em var(--color0),
+    -17.9em 8.3em 0 -0.25em var(--color1),
+    -20.25em 7.6em 0 1.5em var(--color2),
+    -23em 7.2em 0 0.1em var(--color3),
+    -22.5em 5.5em 0 0.3em var(--color4),
+    -24.4em 6.2em 0 -0.1em var(--color5),
+    -23.5em 6.3em 0 -0.2em var(--color6),
+    -24.05em 6.95em 0 -0.18em var(--color7),
+    -24.5em 5em 0 0.2em var(--color8),
+    -21.25em 5.5em 0 -0.3em var(--color9),
+    -23.6em 5.5em 0 -0.3em var(--color0),
+    -24em 3em 0 0.45em var(--color1),
+    -23.3em 4.4em 0 0em var(--color2),
+    -24.9em 4em 0 -0.2em var(--color3),
+    -25.1em 1.75em var(--color4),
+    -25.4em 2.8em 0 -0.125em var(--color5),
+    -22.3em 2.8em 0 0.125em var(--color6),
+    -22.15em 4.1em var(--color7),
+    -23em 2em 0 -0.2em var(--color8),
+    -22.3em 1.7em 0 -0.3em var(--color9),
+    -18em -3em 0 0.4em var(--color0),
+    -17.1em -1.9em 0 -0.1em var(--color1),
+    -16.6em -1em 0 -0.2em var(--color2),
+    -16.7em -2.7em 0 -0.2em var(--color3),
+    -16.7em -3.4em 0 -0.35em var(--color4),
+    -19em -4.25em var(--color5),
+    -18em -4.4em 0 -0.2em var(--color6),
+    -19.9em -3em 0 0.3em var(--color7),
+    -21.4em -1.9em 0 0.1em var(--color8),
+    -21.6em -0.9em 0 -0.2em var(--color9),
+    -20.4em -1.8em 0 -0.2em var(--color0),
+    -19em -2.2em 0 -0.3em var(--color1),
+    -21em -4.5em var(--color2),
+    -20em -4.4em 0 -0.1em var(--color3),
+    -22.25em -3.75em 0 0.2em var(--color4),
+    -21.35em -3em 0 -0.2em var(--color5),
+    -21em -3.6em 0 -0.25em var(--color6),
+    -24em -2.4em var(--color7),
+    -22.7em -2.4em 0 0.1em var(--color8),
+    -23.5em -3.2em 0 -0.2em var(--color9),
+    /* t */
+    10.7em -3.5em 0 0.75em var(--color0),
+    8em -3em var(--color1),
+    4.75em -2.5em var(--color2),
+    6.25em -3.2em 0 0.4em var(--color3),
+    4.9em -3.5em 0 -0.2em var(--color4),
+    8em 6.5em 0 1.5em var(--color5),
+    11em 8em 0 0.2em var(--color6),
+    9.7em 8.5em 0 -0.1em var(--color7),
+    10.75em 6.6em var(--color8),
+    11.5em 7em 0 -0.3em var(--color9),
+    11.6em 6.4em 0 -0.35em var(--color0),
+    10em 7.8em 0 -0.35em var(--color1),
+    10.2em 7.3em 0 -0.25em var(--color2),
+    9em 4em var(--color3),
+    7em 4em var(--color4),
+    6.5em 4.65em 0 -0.3em var(--color5),
+    8em 2.85em 0 0.3em var(--color6),
+    8em -6.4em 0 0.6em var(--color7),
+    6.7em -7.65em var(--color8),
+    7.5em -8em 0 -0.25em var(--color9),
+    8.3em -8em 0 -0.15em var(--color0),
+    9.4em -7.6em 0 0.1em var(--color1),
+    8em 4.1em 0 -0.2em var(--color2),
+    9.4em 3em 0 -0.1em var(--color3),
+    6.7em 3em 0 -0.15em var(--color4),
+    8.6em 0.5em 0 0.8em var(--color5),
+    9.1em 2.2em 0 -0.2em var(--color6),
+    6.8em 1.7em 0 0.15em var(--color7),
+    6.66em 0.3em var(--color8),
+    7em -1.4em 0 0.4em var(--color9),
+    9em -2.1em 0 0.2em var(--color0),
+    9.5em -1em 0 -0.2em var(--color1),
+    8.4em -1.2em 0 -0.25em var(--color2),
+    8em -2.05em 0 -0.35em var(--color3),
+    6.8em -4.9em 0 0.14em var(--color4),
+    6.6em -6em 0 -0.2em var(--color5),
+    6.6em -6.8em 0 -0.3em var(--color6),
+    8.5em -4.5em 0 0.2em var(--color7),
+    7.5em -3.85em 0 -0.15em var(--color8),
+    8.95em -3.4em 0 -0.12em var(--color9),
+    4.8em -4.3em 0 -0.1em var(--color0),
+    5.6em -4.4em 0 -0.2em var(--color1),
+    9.5em -5em 0 -0.2em var(--color2),
+    9.58em -6.5em 0 -0.12em var(--color3),
+    9.48em -5.75em 0 -0.28em var(--color4),
+    9.05em -5.5em 0 -0.35em var(--color5)
+}
+
+@keyframes dotdotdot {
+  0%,45% { 
+    color: transparent; 
+    box-shadow:
+      15.4em 7.5em 0 1em,
+      15.4em 7.5em 0 1em,
+      15.4em 7.5em 0 1em
+  }
+  50% {
+    color: red;
+    box-shadow:
+      15.4em 7.5em 0 1em,
+      15.4em 7.5em 0 1em,
+      15.4em 7.5em 0 1em
+  }
+  55%,60% {
+    box-shadow:
+      15.4em 7.5em 0 1em,
+      19.4em 7.5em 0 1em,
+      19.4em 7.5em 0 1em
+  }
+  65%,100% {
+    color: red;
+    box-shadow:
+      15.4em 7.5em 0 1em,
+      19.4em 7.5em 0 1em,
+      23.4em 7.5em 0 1em
+  }
+}
+
+div::before {
+  animation: dotdotdot var(--duration) var(--timing) 1 forwards;
+  animation-delay: 6s;
+  content: "";
+  display: block;
+  position: absolute;
+  color: white;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow:
+    15.4em 7.5em 0 1em,
+    19.4em 7.5em 0 1em,
+    23.4em 7.5em 0 1em
+}
+
+@keyframes growdot {
+  0% { 
+    box-shadow: 0 0 0 0vmax; 
+    background-color: white; 
+  }
+  5% { background-color: red; }
+  10% { background-color: white; }
+  15% { background-color: red; }
+  20% { background-color: white; }
+  25%,75% { background-color: red; }
+  80% { background-color: #6a6a6a; }
+  90% { box-shadow: 0 0 0 0vmax; }
+  100% { background-color: #6a6a6a; box-shadow: 0 0 0 30vmax; }
+}
+
+div::after {
+  animation: growdot var(--duration) var(--timing) 1 forwards;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: red;
+  color: black;
+  box-shadow: 0 0 0 0vmax;
+  mix-blend-mode: hue;
+}

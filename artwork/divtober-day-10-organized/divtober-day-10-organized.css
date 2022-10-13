@@ -1,0 +1,165 @@
+html {
+  background-color: #d00;
+  /* filter: blur(1.25px) contrast(4); */
+}
+
+div {
+  width: 50vmin;
+  height: 80vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image:
+    /* hand + gun */
+    conic-gradient(at 50% 0, transparent 120deg, black 0 230deg, transparent 0),
+    radial-gradient(farthest-side at 50% 0%, black 99.9%, transparent 0),
+    linear-gradient(black, black),
+    radial-gradient( at 100% 50%, transparent 50%, black 0 70%, transparent 0),
+    conic-gradient(at 100% 70%, transparent 245deg, black 0),
+    linear-gradient(black, black),
+    linear-gradient(black, black),
+    radial-gradient(farthest-side at 0% 50%, black 99.9%, transparent 0),
+    /* neck */
+    conic-gradient(at 100% 50%, transparent 240deg, gray 0 250deg, transparent 0 280deg, gray 0 290deg, transparent 0),
+    conic-gradient(at 10% 50%, transparent 80deg, gray 0 90deg, transparent 0 110deg, gray 0 120deg, transparent 0),
+    linear-gradient(70deg, transparent 40%, gray 0 50%, transparent 0),
+    conic-gradient(at 0% 100%, transparent 15deg, gray 0 19deg, transparent 0),
+    /* face */
+    radial-gradient(farthest-side at 50% -20%, white 60%, black 0 85%, transparent 0),
+    radial-gradient(farthest-side at 50% 100%, white 99.99%, transparent 0),
+    linear-gradient(black, black),
+    radial-gradient(at 50% -40%, white 75%, transparent 0),
+    radial-gradient(ellipse 40% 100% at 50% 50%, black 99.99%, transparent 0),
+    /* tie and shirt */
+    conic-gradient(at 50% -60%, transparent 160deg, black 0 200deg, transparent 0),
+    conic-gradient(at 50% 290%, black 20deg, transparent 0 340deg, black 0),
+    conic-gradient(at 50% -40%, transparent 172deg, black 0 188deg, transparent 0),
+    conic-gradient(at 50% 100%, black 30deg, transparent 0 332deg, black 0),
+    radial-gradient(farthest-side at 50% 0%, black 99.9%, transparent 0),
+    conic-gradient(at 0% -900%, transparent 178deg, white 0 200deg, transparent 0),
+    /* arms */
+    linear-gradient(125deg, transparent 17%, black 0 83%, transparent 0),
+    radial-gradient(farthest-side at 0% 50%, black 99.9%, transparent 0),
+    radial-gradient(farthest-side at 90% 0%, black 60%, transparent 0),
+    /* hat */
+    radial-gradient(ellipse 40% 130% at 40% 90%, black 99.99%, transparent 0),
+    radial-gradient(farthest-side at 50% 0%, black 99.99%, transparent 0),
+    /* jacket */
+    radial-gradient(ellipse farthest-side at 50% 60%, black 99.99%, transparent 0),
+    radial-gradient(farthest-side at 50% 100%, black 99.99%, transparent 0),
+    linear-gradient(black, black),
+    linear-gradient(48deg, transparent 50%, black 0),
+    conic-gradient(at 100% 80%, transparent 255deg, black 0 355deg, transparent 0),
+    /* legs */
+    linear-gradient(97deg, black 70%, transparent 0),
+    conic-gradient(at 80% 220%, transparent 346.5deg, black 0 356deg, transparent 0),
+    radial-gradient(ellipse 200% 120% at 0% 0%, transparent 49%, black 0),
+    radial-gradient(ellipse 100% 200% at 0% 50%, black 69%, transparent 0),
+    linear-gradient(115deg, black 80%, transparent 0),
+    radial-gradient(closest-side at 50% 40%, black 99.9%, transparent),
+    conic-gradient(at 0% 0%, transparent 130.5deg, black 0)
+    ;
+  background-size:
+    /* hand + gun */
+    5vmin 3.25vmin,
+    5vmin 3vmin,
+    1vmin 3vmin,
+    2.5vmin 3vmin,
+    2.5vmin 5.5vmin,
+    1.5vmin 2vmin,
+    1vmin 6vmin,
+    0.75vmin 1vmin,
+    /* neck */
+    2vmin 3vmin,
+    2.25vmin 3vmin,
+    2vmin 3vmin,
+    2vmin 5vmin,
+    /* face */
+    2vmin 1.5vmin,
+    5.25vmin 0.75vmin,
+    1.75vmin 0.4vmin,
+    5.25vmin 3.75vmin,
+    9.5vmin 4vmin,
+    /* tie and shirt */
+    2vmin 2vmin,
+    2vmin 1vmin,
+    3.5vmin 9vmin,
+    3.25vmin 3.5vmin,
+    6.5vmin 2vmin,
+    8vmin 16vmin,
+    /* arms */
+    4vmin 17vmin,
+    3vmin 23vmin,
+    8vmin 32vmin,
+    /* hat */
+    9vmin 5vmin,
+    14vmin 2vmin,
+    /* jacket */
+    11vmin 10vmin,
+    19.5vmin 1.65vmin,
+    19.5vmin 33vmin,
+    1.5vmin 5vmin,
+    4vmin 20vmin,
+    /* legs */
+    7.5vmin 19.5vmin,
+    18vmin 22vmin,
+    6vmin 4vmin,
+    4vmin 4vmin,
+    1vmin 4vmin,
+    6vmin 4vmin,
+    6vmin 6vmin
+    ;
+  background-position:
+    /* hand + gun */
+    11vmin 13vmin,
+    11vmin 16vmin,
+    14vmin 12vmin,
+    13vmin 11vmin,
+    15vmin 10vmin,
+    15.75vmin 8.5vmin,
+    16.5vmin 5vmin,
+    17.25vmin 5.5vmin,
+    /* neck */
+    20vmin 20vmin,
+    30vmin 20vmin,
+    19.75vmin 22.25vmin,
+    30.6vmin 22.4vmin,
+    /* face */
+    24.75vmin 15.5vmin,
+    23.5vmin 15.5vmin,
+    25vmin 17.5vmin,
+    23.5vmin 16vmin,
+    21.75vmin 12vmin,
+    /* tie and shirt */
+    25vmin 20vmin,
+    25vmin 21.8vmin,
+    24.3vmin 22.5vmin,
+    24.45vmin 31vmin,
+    23vmin 19vmin,
+    24vmin 20vmin,
+    /* arms */
+    15vmin 19.75vmin,
+    36.5vmin 19.75vmin,
+    8vmin 18vmin,
+    /* hat */
+    22.75vmin 7.5vmin,
+    19vmin 11.5vmin,
+    /* jacket */
+    21vmin 15vmin,
+    17.5vmin 18.5vmin,
+    17.5vmin 20vmin,
+    17.5vmin 52.5vmin,
+    33.5vmin 39vmin,
+    /* legs */
+    19.5vmin 52.5vmin,
+    23vmin 52.5vmin,
+    14.5vmin 71vmin,
+    21vmin 71vmin,
+    20.25vmin 71vmin,
+    32vmin 100%,
+    32vmin 72vmin
+    ;
+  background-repeat: no-repeat;
+  
+}

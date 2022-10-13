@@ -1,0 +1,259 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon span {
+  position: absolute;
+  display:block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  left: -1000in;
+  font-size: 0;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.75vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+.cartoon {
+  --red: #f11;
+  --yellow: #fc0;
+  --blue: #0bf;
+  --green: #193;
+  --black: #000;
+  --white: #fee;
+  --bg: #fff;
+}
+
+.cresta {
+  width: 7%;
+  height: 7%;
+  top: 19%;
+  left: 37%;
+  box-shadow: -3vmin 6vmin 0 1.5vmin var(--black), -3vmin 6vmin 0 2vmin var(--bg), -4vmin -6vmin 0 7vmin var(--red);
+  clip-path: polygon(-250% -250%, -130% -150%, -180% -250%, -50% -250%, -35% -200%, -30% -250%, 140% -250%, 80% -150%, 200% -250%, 200% 113%, 0% 50%, 16% 113%,  -200% 113%);
+}
+
+.pico {
+  width: 10%;
+  height: 4%;
+  background: var(--yellow);
+  border-radius: 30%;
+  transform : rotate(10deg) skewX(-60deg) ;
+  clip-path: polygon(0% 0%, 20% 0%, 80% 100%, 0% 100%);
+  top: 27%;
+  left: 29%;
+}
+
+.ojo {
+  background: var(--black);
+  border-color: var(--red);
+  width: 2.5vmin;
+  height: 2.5vmin;
+  top: 27%;
+  left: 34%;
+}
+
+.cola {
+  width: 14%;
+  height: 22%;
+  border-radius: 100% 100% 100% 50% / 100%;
+  top: 44%;
+  left: 57%;
+  box-shadow: -1vmin -10vmin 0 5.5vmin var(--black);
+}
+
+.barbilla {
+  width: 5vmin;
+  height: 10vmin;
+  border-radius: 4vmin;
+  background: var(--red);
+  transform: rotate(45deg);
+  top: 29%;
+  left: 30%;
+}
+
+.cuello {
+  width: 24%;
+  height: 41%;
+  top: 15%;
+  left: 9%;
+  box-shadow: 0.5vmin 0 var(--bg), 4vmin 0 0 1vmin var(--black);
+  clip-path: polygon(0% 28%, 200% 29%, 200% 90%, 0% 90%)
+}
+
+.alon {
+  width: 14%;
+  height: 15%;
+  border-radius: 100% 20% 30vmin 40vmin / 100% 60% 140% 120%;
+  top: 38%;
+  left: 38.33%;
+  transform: rotate(5deg);
+  box-shadow: -0.5vmin 7vmin 0 4.5vmin var(--black);
+}
+
+.cuerpo {
+  width: 30.5%;
+  height: 30%;
+  background: var(--black);
+  border-radius: 100% 100% 25vmin 20vmin / 100%;
+  top: 43%;
+  left: 27.5%;
+  clip-path: polygon(0% 15%, 100% 55%, 100% 100%, 0% 100%);
+  border-bottom: 0.66vmin solid var(--bg);
+  border-right: 0.75vmin solid var(--bg);
+}
+
+.base {
+  width: 26%;
+  height: 12%;
+  background: var(--blue);
+  border-radius: 30vmin / 100%;
+  top: 82%; 
+  left: 30%;
+}
+
+.base::after {
+  width: 40%;
+  height: 115%;
+  background: var(--bg);
+  border-radius: 50%;
+  z-index: -1;
+  top: -100%;
+  left: -10%;
+  box-shadow: 18vmin -0.5vmin 0 1vmin var(--bg), 9vmin 0 0 5vmin var(--blue);
+}
+
+.ala {
+  background: var(--black);
+  width: 20%;
+  height: 15%;
+  border-radius: 30% / 100%;
+  transform: skewX(15deg) rotate(2deg);
+  top: 53.5%;
+  left: 38%;
+}
+
+.pata {
+  width: 10%;
+  height: 20%;
+  border: 0.75vmin solid transparent;
+  border-right-color: var(--yellow);
+  border-radius: 50%;
+  top: 69%;
+  left: 30%;
+  transform: rotate(10deg);
+}
+
+.pata::before,
+.pata::after {
+  width: 50%;
+  height: 40%;
+  border: 0.75vmin solid transparent;
+  border-right-color: var(--yellow);
+  bottom: -10%;
+  right: -25%;
+  transform-origin: right top;
+  transform: rotate(40deg);
+  border-radius: 100%;
+}
+
+.pata::after {
+  width: 20%;
+  bottom: -5%;
+  right: -15%;
+  transform: rotate(-4deg);
+}
+
+.oreja {
+  width: 2.5%;
+  height: 7%;
+  border-radius: 90% / 50% 50% 130% 130%;
+  background: var(--yellow);
+  top: 31%;
+  left: 35%;
+}
+
+.puntos {
+  width: 1.5vmin;
+  height: 1.5vmin;
+  background: var(--white);
+  color: var(--white);
+  top: 47%;
+  left: 33%;
+  box-shadow: -0.5vmin 2vmin, -1vmin 4vmin, -1.5vmin 6vmin, -1.75vmin 8vmin, -1.75vmin 10vmin, -0.75vmin 11.5vmin, 0.5vmin 13vmin, 2.33vmin 13.75vmin, 4.25vmin 14.5vmin, 6.15vmin 15vmin, 8.25vmin 15.125vmin, 10.33vmin 15.27vmin, 12.33vmin 15.33vmin, 14.25vmin 15.35vmin, 16.25vmin 15.3vmin, 18.25vmin 15.25vmin, 18.5vmin 13.25vmin, 18.25vmin 11.25vmin, 17.5vmin 9.25vmin, 16.25vmin 7.5vmin, 15.125vmin 5.66vmin, 13.125vmin 5.25vmin, 11.125vmin 5.5vmin, 9vmin 5.4vmin, 6.9vmin 5.125vmin, 4.75vmin 4.75vmin, 2.75vmin 3.75vmin, 1.75vmin 1.75vmin, 
+    15.125vmin 3.66vmin, 14.5vmin 1.5vmin, 14vmin -0.5vmin, 13.75vmin -2.75vmin, 13.5vmin -5vmin, 13.66vmin -7vmin, 14.25vmin -9.25vmin, 15vmin -11.5vmin, 16vmin -13.25vmin, 17.5vmin -15vmin, 19.125vmin -16.4vmin, 21vmin -17vmin, 23vmin -17.25vmin, 25vmin -17vmin, 27vmin -16.25vmin, 28.75vmin -15vmin, 30vmin -13.5vmin, 31.25vmin -11.25vmin, 32vmin -9vmin, 32.5vmin -7vmin, 32.75vmin -5vmin, 32.75vmin -2.75vmin, 32.5vmin -0.5vmin, 31.75vmin 1.5vmin, 31vmin 3.5vmin,
+    0.9vmin 4.25vmin var(--green), 0.5vmin 6.25vmin var(--green), 0.4vmin 8.25vmin var(--green), 0.75vmin 10.25vmin var(--green), 2.125vmin 11.75vmin var(--green), 4vmin 12.5vmin var(--green), 6vmin 13vmin var(--green), 8vmin 13.25vmin var(--green), 10vmin 13.25vmin var(--green), 9.25vmin 11.25vmin var(--green), 9.25vmin 9.25vmin var(--green), 9.75vmin 7.25vmin var(--green), 7.75vmin 7.5vmin var(--green), 5.75vmin 7.25vmin var(--green), 3.75vmin 7vmin var(--green), 2.5vmin 5.75vmin var(--green), 
+    2.25vmin 8.25vmin var(--yellow), 3.25vmin 10vmin var(--yellow), 5vmin 10.8vmin var(--yellow), 7vmin 11.25vmin var(--yellow), 7.25vmin 9.33vmin var(--yellow),
+    5.5vmin 9vmin 0 -0.25vmin var(--blue), 4.2vmin 8.5vmin 0 -0.25vmin var(--blue),
+    
+    /* flor 1 */
+    27vmin -6vmin 0 0.5vmin var(--green), 28.25vmin -8vmin var(--yellow), 29.5vmin -6.5vmin var(--yellow), 29vmin -4.5vmin var(--yellow), 27vmin -3.75vmin var(--yellow), 25vmin -4.5vmin var(--yellow), 24.5vmin -6.5vmin var(--yellow), 26.125vmin -8.25vmin var(--yellow),
+    /* flor 2 */
+     22vmin -13vmin 0 0.5vmin var(--green), 23.25vmin -15vmin var(--yellow), 24.5vmin -13.5vmin var(--yellow), 24vmin -11.5vmin var(--yellow), 22vmin -10.75vmin var(--yellow), 20vmin -11.75vmin var(--yellow), 19.75vmin -13.75vmin var(--yellow), 21.125vmin -15.25vmin var(--yellow),
+    
+    24vmin -9vmin var(--blue), 25.5vmin -10.25vmin var(--blue), 26vmin -12.25vmin var(--blue), 26.5vmin -14.25vmin var(--blue), 28vmin -13vmin var(--blue), 29vmin -11.25vmin var(--blue), 30vmin -9.5vmin var(--blue),
+    
+    27.5vmin -9.75vmin 0 -0.25vmin var(--red), 27.25vmin -11.25vmin 0 -0.25vmin var(--red),
+    
+    18vmin -12.5vmin var(--blue), 17vmin -10.5vmin var(--blue), 16.5vmin -8.5vmin var(--blue), 15.75vmin -6.5vmin  var(--blue), 18.33vmin -9vmin 0 -0.25vmin var(--red), 19.2vmin -10.25vmin 0 -0.25vmin var(--red), 20.5vmin -9.5vmin 0 -0.25vmin var(--red),
+    
+    28.75vmin -2.5vmin 0 -0.25vmin var(--blue), 31vmin -4.5vmin 0 -0.25vmin var(--blue), 30.5vmin -2.5vmin var(--blue), 30.5vmin -0.75vmin 0 -0.25vmin var(--blue);
+}
+
+.corazon {
+  width: 3.5vmin;
+  height: 4.5vmin;
+  background: var(--red);
+}
+
+.corazon::before,
+.corazon::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--red);
+  left: -50%;
+}
+
+.corazon::after {
+  left: 0;
+  top: -50%;
+}
+
+.corazon-1 {
+  top: 59.5%;
+  left: 49.75%;
+  transform: rotate(6deg) skewX(25deg);
+}
+
+.corazon-2 {
+   width: 4vmin;
+  height: 5vmin;
+  top: 41%;
+  left: 54.5%;
+  transform: rotate(80deg) skewX(40deg) ;
+}

@@ -1,0 +1,35 @@
+{
+    "name": "single-div-pixel-art-kitty-css-drawing",
+    "version": "1.0.0",
+    "title": "Single Div Pixel Art Kitty CSS Drawing",
+    "description": "",
+    "author": {
+        "name": "Brianna McDonald",
+        "avatar": "https://avatars1.githubusercontent.com/u/54158369?s=460&u=23ab9a8dc460bf57d2303ced5d097b295840562f&v=4",
+        "web": "https://briannamcdonald.carrd.co/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/briannamcdonald/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/Brianna_Codes"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/briannamcdonald"
+            }
+        ]
+    },
+    "html": "single-div-pixel-art-kitty-css-drawing.html",
+    "css": [
+        "single-div-pixel-art-kitty-css-drawing.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [],
+    "original": "https://codepen.io/briannamcdonald/pen/ExKNWXm",
+    "codepen": "https://codepen.io/briannamcdonald/pen/ExKNWXm"
+}

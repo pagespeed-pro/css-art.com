@@ -1,0 +1,66 @@
+body {
+  height: 100vh;
+  background-color: white;
+  text-align: center;
+}
+div {
+  height: 100%;
+  position: relative;
+}
+div:before,
+div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+@media (max-width: 400px) {
+  div:not(.no-scale) {
+    transform: scale(0.8);
+  }
+}
+#power {
+  font-size: 10px;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to bottom, #ddd, #f7f7f7 13%, white 18%, white 35%, #f7f7f7 38%, #f7f7f7 50%, #eee 70%, #ddd 85%, #ccc 95%, #bbb 100%), linear-gradient(to left, rgba(0,0,0,0.1), rgba(0,0,0,0)), linear-gradient(to bottom, #ccc, #ddd 10%, #edf0f3 30%, #edf0f3 60%, #ccc 92%, #bbb 98%), linear-gradient(to left, rgba(0,0,0,0.1), rgba(0,0,0,0)), linear-gradient(to bottom, #ccc, #ddd 10%, #edf0f3 30%, #edf0f3 60%, #ccc 95%, #bbb 100%);
+  background-size: 11em 6.2em, 1em 3.2em, 8em 3.2em, 0.8em 2.3em, calc(50% - 4em) 2.3em;
+  background-position: calc(50% + 9.5em) 50%, calc(50% + 3.5em) 50%, 50% 50%, calc(50% - 4.4em) 50%, 0 50%;
+}
+@media screen and (max-width: 400px) {
+  #power {
+    font-size: 8px;
+    margin-left: -12em;
+  }
+}
+#power:before,
+#power:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+}
+#power:before {
+  width: 5em;
+  height: 4.8em;
+  left: calc(50% + 15em);
+  margin-top: -2.4em;
+  background-color: rgba(0,0,0,0.1);
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to bottom, white 30%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0) 90%), linear-gradient(to top, white 30%, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0) 90%), linear-gradient(to bottom, rgba(0,0,0,0.15), rgba(0,0,0,0)), linear-gradient(to top, rgba(0,0,0,0.15), rgba(0,0,0,0)), linear-gradient(to right, rgba(0,0,0,0.25), rgba(0,0,0,0)), linear-gradient(125deg, rgba(0,0,0,0) 5%, rgba(0,0,0,0.1) 25%, rgba(255,255,255,0.9) 48%, rgba(255,255,255,0.9) 52%, rgba(255,255,255,0) 75%), linear-gradient(55deg, rgba(0,0,0,0) 5%, rgba(0,0,0,0.1) 25%, rgba(255,255,255,0.9) 48%, rgba(255,255,255,0.9) 52%, rgba(255,255,255,0) 75%), linear-gradient(to bottom, #e5e0d5 30%, #c9c3bc 100%);
+  background-size: 30% 0.4em, 30% 0.4em, 100% 0.4em, 100% 0.4em, 0.4em 100%, 30% 50%, 30% 50%, 100% 100%;
+  background-position: 55% 0, 55% 100%, 0 0, 0 100%, 0 50%, 100% 0, 100% 100%, 0 50%;
+  border-radius: 0 1em 1em 0;
+  box-shadow: inset -0.3em 0 0.1em -0.1em rgba(0,0,0,0.2);
+}
+#power:after {
+  width: 1.8em;
+  height: 3.6em;
+  left: calc(50% + 17.6em);
+  margin-top: -1.8em;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-image: repeating-linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,0) 0.18em, white 0.18em, white 0.36em), linear-gradient(to bottom, #ddd 20%, #bbb);
+  background-size: 50% 75%;
+  background-position: 50% 50%;
+  border-radius: 0.5em;
+  box-shadow: -0.1em 0 0.1em rgba(0,0,0,0.07), 0.2em 0 0.1em rgba(0,0,0,0.1);
+}

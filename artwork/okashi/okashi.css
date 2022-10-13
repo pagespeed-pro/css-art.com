@@ -1,0 +1,643 @@
+:root {
+  --black: #2a2a33;
+  --white: #fff;
+  --grey: #dedede;
+  --primary-color: #4c4d5e;
+  --primary-color-dark: #353642;
+  --primary-color-tint: #63647a;
+  --secondary-color: #68e8d7;
+  --secondary-color-rgba: rgba(104, 232, 215, 0.7);
+  --secondary-color-dark: #3ce1cb;
+  --secondary-color-tint: #94efe3;
+  --background-color: #777891;
+  --blush-color: #ff6ec7;
+  --mouth-inner-color: #633440;
+  --face-detail-color: var(--black);
+  --choco: #4d4443;
+  --choco-dark: #423c3b;
+  --shadow-color: #707187;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--background-color);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.suppi {
+  --eye-top-radius: 0;
+  --eye-bottom-radius: 50% 75%;
+  --eye-inner-top-radius: 0;
+  --mouth-width: 0.75rem;
+  --blush-scale: 1;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.suppi::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 1.25rem;
+  height: 2rem;
+  width: 9rem;
+  border-radius: 50%;
+  background-color: var(--shadow-color);
+}
+.suppi-eye {
+  position: absolute;
+  z-index: 3;
+  top: var(--eye-top, 6rem);
+  height: 2.5rem;
+  width: 3.25rem;
+  transform-origin: center 20%;
+  background-color: var(--secondary-color);
+  border-top-left-radius: var(--eye-top-radius);
+  border-top-right-radius: var(--eye-top-radius);
+  border-bottom-left-radius: var(--eye-bottom-radius);
+  border-bottom-right-radius: var(--eye-bottom-radius);
+  overflow: hidden;
+  transition: var(--eye-transition, border-radius 0.2s ease-in-out, top, 0.4s ease-in-out);
+}
+.suppi-eye::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 70%;
+  width: 0.75rem;
+  transform: var(--eye-inner-transform, translateY(0));
+  border-top-left-radius: var(--eye-inner-top-radius);
+  border-top-right-radius: var(--eye-inner-top-radius);
+  border-bottom-left-radius: 0.75rem 2rem;
+  border-bottom-right-radius: 0.75rem 2rem;
+  background-color: var(--primary-color);
+  transition: var(--eye-inner-transition, 0.3s ease-in-out);
+}
+.suppi-eye-left {
+  left: 1.125rem;
+}
+.suppi-eye-left::before {
+  right: 0.875rem;
+}
+.suppi-eye-right {
+  right: 1.125rem;
+}
+.suppi-eye-right::before {
+  left: 0.875rem;
+}
+.suppi-nose {
+  border-top-left-radius: 50% 20%;
+  border-top-right-radius: 50% 20%;
+  border-bottom-right-radius: 50% 80%;
+  border-bottom-left-radius: 50% 80%;
+  position: absolute;
+  left: 50%;
+  top: 7.5rem;
+  height: 0.1875rem;
+  width: 0.325rem;
+  transform: translateX(-50%);
+  background-color: var(--face-detail-color);
+}
+.suppi-mouth {
+  position: absolute;
+  top: 8rem;
+  left: 50%;
+  height: 3.125rem;
+  width: var(--mouth-width);
+  transform: translateX(-50%);
+  overflow: hidden;
+  transition: var(--mouth-transtion, width 0.3s 0.1s ease-in-out);
+}
+.suppi-mouth::before, .suppi-mouth::after {
+  content: "";
+  position: absolute;
+  height: 0.5rem;
+  width: 1.125rem;
+  border-radius: 100%;
+  border-bottom: 2px solid var(--face-detail-color);
+  background-color: var(--primary-color);
+}
+.suppi-mouth::before {
+  left: 50%;
+}
+.suppi-mouth::after {
+  right: 50%;
+}
+.suppi-mouth-inner {
+  position: absolute;
+  z-index: -1;
+  top: 0.25rem;
+  left: calc(50% - 0.75rem);
+  width: 1.5rem;
+  height: 2.5rem;
+  transform-origin: center top;
+  transform: scaleY(0);
+  background-color: var(--mouth-inner-color);
+  border-bottom-left-radius: 50% 70%;
+  border-bottom-right-radius: 50% 70%;
+  overflow: hidden;
+  transition: transform 0.1s ease-in-out;
+}
+.suppi-mouth-inner::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0.25rem;
+  height: 2.25rem;
+  width: 120%;
+  border-radius: 100%;
+  background-color: var(--blush-color);
+}
+.suppi-blush {
+  position: absolute;
+  z-index: 1;
+  top: 7.75rem;
+  height: 1.25rem;
+  width: 2.25rem;
+  border-radius: 50%;
+  background-color: var(--blush-color);
+  opacity: var(--blush-opacity, 0.2);
+  transition: var(--blush-transition, transform 0.4s ease-in-out, opacity 0.4s ease-in-out);
+}
+.suppi-blush-left {
+  left: 0.5rem;
+  transform: rotate(5deg) scale(var(--blush-scale));
+}
+.suppi-blush-right {
+  right: 0.5rem;
+  transform: rotate(-5deg) scale(var(--blush-scale));
+}
+.suppi-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 50% 55%;
+  border-top-right-radius: 50% 55%;
+  border-bottom-right-radius: 50% 45%;
+  border-bottom-left-radius: 50% 45%;
+  z-index: 5;
+  background-color: var(--primary-color);
+}
+.suppi-ear {
+  position: absolute;
+  z-index: 1;
+  top: 0rem;
+  height: 6.5rem;
+  width: 6rem;
+  background-color: var(--primary-color);
+  overflow: hidden;
+}
+.suppi-ear::before {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  height: 150%;
+  width: 100%;
+  border-radius: 100%;
+  background-color: var(--secondary-color);
+}
+.suppi-ear-left {
+  --ear-transform: 5deg;
+  right: calc(100% - 3.25rem);
+  transform-origin: bottom right;
+  transform: rotate(var(--ear-transform));
+  border-top-right-radius: 100% 10%;
+  border-bottom-left-radius: 70% 90%;
+}
+.suppi-ear-left::before {
+  left: -3rem;
+  transform: rotate(-60deg);
+}
+.suppi-ear-right {
+  --ear-transform: -5deg;
+  left: calc(100% - 3.25rem);
+  transform-origin: bottom left;
+  transform: rotate(var(--ear-transform));
+  border-top-left-radius: 100% 10%;
+  border-bottom-right-radius: 70% 90%;
+}
+.suppi-ear-right::before {
+  right: -3rem;
+  transform: rotate(60deg);
+}
+.suppi-head {
+  position: relative;
+  z-index: 10;
+  height: 11.5rem;
+  width: 12rem;
+}
+.suppi-head::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -0.5rem;
+  left: 40%;
+  height: 1rem;
+  width: 20%;
+  border-radius: 100%;
+  background-color: var(--primary-color-dark);
+}
+.suppi-arm {
+  border-top-left-radius: 50% 10%;
+  border-top-right-radius: 50% 10%;
+  border-bottom-right-radius: 50% 30%;
+  border-bottom-left-radius: 50% 30%;
+  position: absolute;
+  z-index: 4;
+  top: 4.75rem;
+  height: 5rem;
+  width: 2rem;
+  background-color: var(--primary-color);
+  transform-origin: 50% 1rem;
+  transition: transform 0.15s ease-in-out;
+}
+.suppi-arm-paw {
+  border-top-left-radius: 50% 30%;
+  border-top-right-radius: 50% 30%;
+  border-bottom-right-radius: 50% 30%;
+  border-bottom-left-radius: 50% 30%;
+  position: absolute;
+  top: 1rem;
+  height: 4rem;
+  width: 100%;
+  transform-origin: center 1rem;
+  transform: rotate(var(--paw-rotate, 0deg));
+  background-color: inherit;
+  transition: 0.4s ease-in-out;
+}
+.suppi-arm-left {
+  z-index: 5;
+  left: 0;
+  transform: rotate(-10deg) translateY(var(--arm-left-translate, 0));
+  height: 3rem;
+}
+.suppi-arm-right {
+  right: 0;
+  transform: rotate(10deg);
+}
+.suppi-foot {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  width: 4.5rem;
+  height: 1.5rem;
+  background-color: var(--primary-color-dark);
+}
+.suppi-leg {
+  position: absolute;
+  z-index: 1;
+  bottom: -1rem;
+  height: 5rem;
+  width: 3.5rem;
+}
+.suppi-leg-upper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: var(--primary-color-dark);
+  overflow: hidden;
+}
+.suppi-leg-upper::after {
+  content: "";
+  position: absolute;
+  top: -2.5rem;
+  height: 100%;
+  width: 120%;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+.suppi-leg-left {
+  right: calc(100% - 2rem);
+}
+.suppi-leg-left .suppi-foot {
+  right: calc(100% - 2rem);
+  transform: rotate(40deg);
+  border-top-left-radius: 80% 70%;
+  border-bottom-left-radius: 0.5rem 30%;
+  border-top-right-radius: 20% 30%;
+  border-bottom-right-radius: 1rem 70%;
+  transform-origin: 90% 50%;
+}
+.suppi-leg-left .suppi-leg-upper::after {
+  left: -2rem;
+}
+.suppi-leg-right {
+  left: calc(100% - 2rem);
+}
+.suppi-leg-right .suppi-foot {
+  left: calc(100% - 2rem);
+  transform: rotate(-40deg);
+  border-top-right-radius: 80% 70%;
+  border-bottom-right-radius: 0.5rem 30%;
+  border-top-left-radius: 20% 30%;
+  border-bottom-left-radius: 1rem 70%;
+  transform-origin: 10% 50%;
+}
+.suppi-leg-right .suppi-leg-upper::after {
+  right: -2rem;
+}
+.suppi-wing {
+  --wing-transform: rotate(20deg);
+  z-index: 1;
+  top: 2rem;
+  height: 2rem;
+  width: 6.5rem;
+  transform-origin: 90% 50%;
+  transform: var(--wing-transform);
+}
+.suppi-wing, .suppi-wing::before {
+  position: absolute;
+  border-top-right-radius: 80% 50%;
+  border-bottom-right-radius: 80% 50%;
+  border-top-left-radius: 20% 50%;
+  border-bottom-left-radius: 20% 50%;
+  background-color: var(--secondary-color-rgba);
+}
+.suppi-wing::before {
+  content: "";
+  right: -0.5rem;
+  top: 1.5rem;
+  height: 1.5rem;
+  width: 4rem;
+  transform: rotate(-40deg);
+}
+.suppi-wing-left {
+  right: calc(100% - 1rem);
+}
+.suppi-wing-right {
+  --wing-transform: rotate(-20deg) rotateY(180deg);
+  left: -0.25rem;
+}
+.suppi-tail {
+  --tail-width: 1rem;
+  --spiral-width: 2.5rem;
+  --tail-transform: rotate(10deg);
+  position: absolute;
+  z-index: 0;
+  bottom: 0.5rem;
+  left: 50%;
+  height: 10rem;
+  width: 10rem;
+  transform-origin: left bottom;
+  transform: var(--tail-transform);
+}
+.suppi-tail-length {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.suppi-tail-length::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 15rem;
+  width: 15rem;
+  border-radius: 50%;
+  border-right: var(--tail-width) solid var(--primary-color);
+  border-bottom: var(--tail-width) solid var(--primary-color);
+}
+.suppi-tail-spiral {
+  position: absolute;
+  height: var(--tail-width);
+  width: var(--spiral-width);
+  border-radius: 0.25rem;
+}
+.suppi-tail-spiral-1, .suppi-tail-spiral-3, .suppi-tail-spiral-5 {
+  transform-origin: bottom right;
+}
+.suppi-tail-spiral-2, .suppi-tail-spiral-4 {
+  left: 0.5rem;
+  transform-origin: bottom left;
+  background-color: var(--primary-color-dark);
+}
+.suppi-tail-spiral-2::after, .suppi-tail-spiral-4::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  top: -0.325rem;
+  left: -0.4375rem;
+  border-radius: inherit;
+  transform: rotate(40deg);
+  transform-origin: inherit;
+  background-color: var(--primary-color);
+}
+.suppi-tail-spiral-1 {
+  right: 0.35rem;
+  transform: rotate(20deg);
+}
+.suppi-tail-spiral-2 {
+  transform: rotate(-40deg);
+}
+.suppi-tail-spiral-3 {
+  transform: rotate(30deg);
+}
+.suppi-tail-spiral-4 {
+  transform: rotate(-40deg);
+}
+.suppi-tail-spiral-5 {
+  transform: rotate(40deg);
+  background-color: var(--primary-color);
+}
+.suppi-torso {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transform: perspective(1rem) rotateX(2.5deg);
+  border-bottom-left-radius: 2.25rem 2rem;
+  border-bottom-right-radius: 2.25rem 2rem;
+  background-color: var(--primary-color);
+  overflow: hidden;
+}
+.suppi-torso::before, .suppi-torso::after {
+  content: "";
+  position: absolute;
+}
+.suppi-torso::before {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 35%;
+  background-color: var(--primary-color-dark);
+}
+.suppi-torso::after {
+  bottom: 2.5rem;
+  left: 20%;
+  border-radius: 100%;
+  width: 60%;
+  height: 3rem;
+  background-color: var(--primary-color);
+}
+.suppi-torso, .suppi-torso-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+}
+.suppi-body {
+  position: relative;
+  z-index: 9;
+  top: -3rem;
+  height: 8rem;
+  width: 6rem;
+  perspective: 1000px;
+}
+
+.sweets {
+  --sweets-width: 4.5rem;
+  position: absolute;
+  z-index: 11;
+  bottom: 0;
+  left: calc(50% - (var(--sweets-width) / 2));
+  height: var(--sweets-width);
+  width: var(--sweets-width);
+  transform: translateY(var(--sweets-translate, 0));
+  border-radius: 50%;
+  box-shadow: inset 0 -0.5rem 0 var(--choco-dark), inset 0 0 0 1.75rem var(--choco);
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+}
+.sweets-shadow {
+  position: absolute;
+  z-index: 0;
+  bottom: -0.25rem;
+  height: 0.75rem;
+  width: 3.5rem;
+  transform: var(--sweets-shadow-scale, scale(1));
+  border-radius: 50%;
+  background-color: var(--shadow-color);
+  transition: transform 0.4s ease-in-out;
+}
+.sweets-control {
+  position: absolute;
+  opacity: 0;
+}
+.sweets-control:checked + .suppi {
+  --eye-top: 5.5rem;
+  --eye-top-radius: 50%;
+  --eye-bottom-radius: 20% 30%;
+  --eye-transition: border-radius 0.2s 1s ease-in-out, top 0.3s 1s ease-in-out;
+  --eye-inner-top-radius: 0.75rem 2rem;
+  --eye-inner-transform: translateY(1rem) scaleY(1.3);
+  --eye-inner-transition: 0.3s 1s ease-in-out;
+  --mouth-width: 2.25rem;
+  --mouth-transtion: width 0.3s 1s ease-in-out;
+  --arm-left-translate: -0.75rem;
+  --paw-rotate: -120deg;
+  --blush-scale: 1.3;
+  --blush-opacity: 0.4;
+  --blush-transition: transform 0.5s 1s ease-in-out, opacity 0.5s 1s ease-in-out;
+  --sweets-translate: -5rem;
+  --sweets-shadow-scale: scale(0.8) translateY(-1.2rem);
+}
+.sweets-control:checked + .suppi .suppi-ear-left {
+  animation: earMoveLeft 0.8s 1s ease-in-out infinite;
+}
+.sweets-control:checked + .suppi .suppi-ear-right {
+  animation: earMoveRight 0.8s 1s ease-in-out infinite;
+}
+.sweets-control:checked + .suppi .suppi-mouth-inner {
+  animation: chomp 1.2s 0.5s ease-in-out forwards;
+}
+.sweets-control:checked + .suppi .suppi-wing-left {
+  animation: wingflapLeft 1.2s 1s ease-in-out infinite;
+}
+.sweets-control:checked + .suppi .suppi-wing-right {
+  animation: wingflapRight 1.2s 1s ease-in-out infinite;
+}
+.sweets-control:checked + .suppi .suppi-tail {
+  animation: tailFlip 2s 1s ease-in-out infinite;
+}
+.sweets-control:not(:checked) + .suppi .suppi-eye {
+  animation: blinky 7s infinite;
+}
+.sweets-control:not(:checked) + .suppi .sweets:hover ~ .suppi-head {
+  --eye-inner-top-radius: 0.75rem 1.5rem;
+  --eye-inner-transform: translateY(0.5rem) scaleY(1.4);
+  --eye-inner-transition: border-radius 0.1s, transform 0.15s ease-in-out;
+}
+
+@keyframes blinky {
+  0%, 9%, 11%, 19%, 21%, 69%, 71%, 100% {
+    transform: scaleY(1);
+  }
+  10%, 20%, 70% {
+    transform: scaleY(0);
+  }
+}
+@keyframes wingflapLeft {
+  0%, 100% {
+    transform: --wing-transform;
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+@keyframes wingflapRight {
+  0%, 100% {
+    transform: --wing-transform;
+  }
+  50% {
+    transform: rotate(-15deg) rotateY(180deg);
+  }
+}
+@keyframes earMoveLeft {
+  0%, 100% {
+    transform: rotate(var(--ear-transform));
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}
+@keyframes earMoveRight {
+  0%, 100% {
+    transform: rotate(var(--ear-transform));
+  }
+  50% {
+    transform: rotate(-15deg);
+  }
+}
+@keyframes tailFlip {
+  0%, 100% {
+    transform: var(--tail-transform);
+  }
+  50% {
+    transform: rotate(-10deg) rotateY(180deg);
+  }
+}
+@keyframes chomp {
+  0%, 40% {
+    transform: scaleY(0);
+  }
+  20% {
+    transform: scale(0.2);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}

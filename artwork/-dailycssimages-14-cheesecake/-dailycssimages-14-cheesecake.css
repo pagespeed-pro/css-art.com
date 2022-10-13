@@ -1,0 +1,51 @@
+body {
+  background-color: #9370db;
+  position: relative;
+  height: 100vh;
+}
+.entry {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.entry:before,
+.entry:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+.entry.cheesecake {
+  width: 240px;
+  height: 90px;
+  margin-left: -120px;
+  margin-top: -30px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 5px 0 #ddd, 0 8px 2px rgba(0,0,0,0.1);
+}
+.entry.cheesecake:before {
+  width: 200px;
+  height: 80px;
+  left: 50%;
+  margin-left: -100px;
+  margin-top: 0;
+  background-color: #fec;
+  background-image: linear-gradient(to right, #bc9055, #d2b48c 60%, transparent 60%), linear-gradient(to right, transparent 40%, #d2b48c 40%, #bc9055), linear-gradient(-45deg, #fff 23%, transparent 23%), linear-gradient(45deg, #fff 23%, transparent 23%), linear-gradient(to right, transparent 30%, #ebd4b7 50%, transparent 70%);
+  background-size: 50% 100%;
+  background-position: 0 0, 100% 0, 0 0, 100% 0, 50% 0;
+  background-repeat: no-repeat;
+  border-bottom-right-radius: 100px 40px;
+  border-bottom-left-radius: 100px 40px;
+}
+.entry.cheesecake:after {
+  width: 200px;
+  height: 75px;
+  left: 50%;
+  margin-left: -100px;
+  top: -35px;
+  background-image: radial-gradient(#d31339 50%, transparent 50%), radial-gradient(#dc143c 50%, transparent 50%), radial-gradient(#ad102f 50%, transparent 52%), linear-gradient(-40deg, transparent 22%, #fff7e6 22%), linear-gradient(40deg, transparent 22%, #fff7e6 22%);
+  background-size: 20px 20px, 19px 19px, 18px 18px, 50% 100%, 50% 100%;
+  background-position: 83px 12px, 98px 15px, 93px 7px, 0 0, 100% 0;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}

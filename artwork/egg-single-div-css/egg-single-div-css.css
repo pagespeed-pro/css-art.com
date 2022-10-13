@@ -1,0 +1,39 @@
+body{
+  background-color:#45B7F5;
+	height: 100vh;
+	overflow: hidden;
+}
+.egg{
+  margin:50px auto;
+  height:400px;
+  width:310px;
+  background-color:white;
+  border-radius:50% 50% 50% 50%/ 60% 60% 40% 40%;
+  box-shadow: 25px 1px #3FA4DC;
+}
+div:after{
+  content:"";
+  position:absolute;
+  height:10px;
+  width:20px;
+  top:340px;
+  left:49vw;
+  background:radial-gradient(at 50% 100%, #f5750f 10px, black 8px);
+  border-radius: 5px 5px 15px 15px ;
+  border:3px solid black;
+}
+div:before{
+  content:"";
+  position:absolute;
+  height:400px;
+  width:310px;
+  border-radius:50%;   
+  background:
+    radial-gradient(farthest-side,#000206 100%,transparent) 125px 245px/15px 15px,
+    radial-gradient(farthest-side,#000206 100%,transparent) 175px 245px/15px 15px,
+    radial-gradient(farthest-side,#EE7A03 100%,transparent) 115px 265px/10px 10px,
+    radial-gradient(farthest-side,#EE7A03 100%,transparent) 190px 265px/10px 10px,
+     radial-gradient(farthest-side,#fff400 100%,transparent) 65px 155px/180px 180px;
+  background-repeat:no-repeat;
+}
+

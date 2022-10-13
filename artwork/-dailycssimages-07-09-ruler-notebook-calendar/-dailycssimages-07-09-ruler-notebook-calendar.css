@@ -1,0 +1,51 @@
+body {
+  background-color: #cfcfcf;
+  position: relative;
+  height: 100vh;
+}
+.entry {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.entry:before,
+.entry:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+.entry.supplies {
+  width: 80px;
+  height: 100px;
+  margin-left: -100px;
+  margin-top: -24px;
+  background-color: #fff;
+  background-image: radial-gradient(circle at 10px 15px, #708090 4px, transparent 4px), radial-gradient(circle at 10px 50px, #708090 4px, transparent 4px), radial-gradient(circle at 10px 85px, #708090 4px, transparent 4px), linear-gradient(to right, #afeeee 22px, #fff 22px, #fff 35px, transparent 35px, transparent 65px, #fff 65px), linear-gradient(to bottom, transparent 20px, #d3d3d3 20px, #d3d3d3 22px, transparent 22px, transparent 28px, #d3d3d3 28px, #d3d3d3 30px, transparent 30px, transparent 36px, #d3d3d3 36px, #d3d3d3 38px, transparent 38px);
+  border-radius: 3px;
+  border: 2px solid #708090;
+  box-shadow: 0 4px 0 -2px #d3d3d3, 0 4px 0 #708090, 0 7px 2px rgba(0,0,0,0.2);
+}
+.entry.supplies:before {
+  width: 117px;
+  height: 18px;
+  margin-top: -50px;
+  margin-left: 20px;
+  background-color: #f5deb3;
+  background-image: repeating-linear-gradient(to right, transparent, transparent 5px, #708090 5px, #708090 7px, transparent 7px);
+  background-size: 100% 50%;
+  background-repeat: repeat-x;
+  border-radius: 3px;
+  border: 2px solid #708090;
+  box-shadow: 0 3px 2px rgba(0,0,0,0.2);
+}
+.entry.supplies:after {
+  width: 110px;
+  height: 90px;
+  margin-left: 100px;
+  margin-top: -10px;
+  background-color: #fff;
+  background-image: radial-gradient(circle at 30px 8px, #708090 3px, transparent 3px), radial-gradient(circle at 81px 8px, #708090 3px, transparent 3px), linear-gradient(to bottom, #fa8072, #fa8072 18px, #d3d3d3 18px, #d3d3d3 20px, transparent 20px, transparent 36px, #d3d3d3 36px, #d3d3d3 38px, transparent 38px, transparent 54px, #d3d3d3 54px, #d3d3d3 56px, transparent 56px, transparent 72px, #d3d3d3 72px, #d3d3d3 74px, transparent 74px), repeating-linear-gradient(to right, transparent, transparent 14px, #d3d3d3 14px, #d3d3d3 16px, transparent 16px);
+  border-radius: 3px;
+  border: 2px solid #708090;
+  box-shadow: 0 4px 0 -2px #d3d3d3, 0 4px 0 #708090, 0 8px 0 -2px #d3d3d3, 0 8px 0 #708090, 0 11px 2px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,68 @@
+body {
+  min-height: 400px;
+  height: 100vh;
+  position: relative;
+  background-color: white;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div::before {
+  display: block;
+  content: '';
+  position: absolute;
+}
+#rise {
+  width: 200px;
+  height: 310px;
+  margin-left: -100px;
+  margin-top: -155px;
+  background: linear-gradient(black, black) 50% 6.5em/1.6em 0.1em, linear-gradient(125deg, rgba(178,34,34,0) 50%, #b22222 51%) calc(50% - 0.4em) 6em/0.8em 1em, linear-gradient(-125deg, rgba(178,34,34,0) 50%, #b22222 51%) calc(50% + 0.4em) 6em/0.8em 1em, linear-gradient(125deg, rgba(128,0,0,0) 50%, #800000 51%) calc(50% - 0.7em) 5.8em/1.5em 1.4em, linear-gradient(-125deg, rgba(128,0,0,0) 50%, #800000 51%) calc(50% + 0.7em) 5.8em/1.5em 1.4em, linear-gradient(black, black) left calc(50% + 0.2em) bottom 5.05em/5em 0.1em, linear-gradient(173deg, rgba(0,0,0,0) 50%, black 50.5%, black 51.5%, rgba(0,0,0,0) 52%) left calc(50% + 0.1em) bottom 2.6em/5.2em 5em, radial-gradient(circle, #ff9cae 50%, rgba(255,192,203,0) 51%) left calc(50% - 4.7em) bottom 7.1em/1.2em 1.2em, radial-gradient(circle, #222 50%, rgba(0,0,0,0) 51%) left calc(50% - 0.4em) bottom 8.4em/0.4em 0.4em, radial-gradient(circle, #222 50%, rgba(0,0,0,0) 51%) left calc(50% + 0.2em) bottom 8.2em/0.4em 0.4em, radial-gradient(circle at 50% 70%, #555 50%, rgba(0,0,0,0) 51%) left calc(50% + 1.2em) bottom 9.2em/1.2em 1.2em, radial-gradient(circle at 50% 70%, #222 50%, rgba(0,0,0,0) 51%) left calc(50% + 1.2em) bottom 9em/1.8em 1.8em, radial-gradient(circle at 0 50%, white 55%, rgba(255,255,255,0) 55.5%) left calc(50% + 0.6em) bottom 7.7em/1em 1.3em, linear-gradient(159deg, rgba(255,255,255,0) 50%, white 51%) left calc(50% - 2.3em) bottom 7.7em/5em 1.3em, linear-gradient(159deg, rgba(153,153,153,0) 50%, #999 51%) left calc(50% - 2.9em) bottom 7.5em/6.2em 1.7em, radial-gradient(circle at 50% 0, white 40%, #999 40.5%, #999 70%, rgba(153,153,153,0) 70.5%) left calc(50% - 3.1em) bottom 7.15em/0.8em 0.4em, radial-gradient(circle at 50% 0, white 40%, #999 40.5%, #999 70%, rgba(153,153,153,0) 70.5%) left calc(50% - 2.2em) bottom 7.15em/0.8em 0.4em, linear-gradient(#ff9cae, #ff9cae) left calc(50% - 4em) bottom 6.5em/0.2em 0.6em, linear-gradient(#ff9cae, #ff9cae) left calc(50% - 4.25em) bottom 6.4em/0.7em 0.2em, linear-gradient(45deg, rgba(255,192,203,0) 35%, #ff9cae 35.5%, #ff9cae 65%, rgba(255,192,203,0) 65.5%) left calc(50% - 4.3em) bottom 6.5em/0.5em 0.5em, linear-gradient(#ff9cae, #ff9cae) left calc(50% + 4.4em) bottom 6.6em/0.2em 0.6em, linear-gradient(#ff9cae, #ff9cae) left calc(50% + 4.65em) bottom 6.4em/0.7em 0.2em, linear-gradient(-45deg, rgba(255,192,203,0) 35%, #ff9cae 35.5%, #ff9cae 65%, rgba(255,192,203,0) 65.5%) left calc(50% + 4.7em) bottom 6.5em/0.5em 0.5em, linear-gradient(-160deg, #ccc 40%, rgba(204,204,204,0) 40.5%) left calc(50% - 2.5em) bottom 5.1em/2.5em 1.4em, linear-gradient(-160deg, #999 40%, rgba(204,204,204,0) 40.5%) left calc(50% - 2.8em) bottom 4.6em/2.5em 2.1em, linear-gradient(160deg, #ccc 40%, rgba(204,204,204,0) 40.5%) left calc(50% + 2.9em) bottom 5.1em/2.5em 1.4em, linear-gradient(160deg, #999 40%, rgba(204,204,204,0) 40.5%) left calc(50% + 3.2em) bottom 4.6em/2.5em 2.1em, linear-gradient(60deg, #ff9cae 60%, rgba(255,192,203,0) 60.5%) left calc(50% - 4.6em) bottom 3em/0.4em 2em, linear-gradient(-60deg, #ff9cae 60%, rgba(255,192,203,0) 60.5%) left calc(50% + 5.1em) bottom 3em/0.4em 2em, linear-gradient(160deg, rgba(204,204,204,0) 60%, #ccc 60.5%) left calc(50% - 3em) bottom 3.2em/3.3em 2em, linear-gradient(160deg, rgba(153,153,153,0) 60%, #999 60.5%) left calc(50% - 3.1em) bottom 3em/3.3em 2.9em, linear-gradient(-160deg, rgba(204,204,204,0) 60%, #ccc 60.5%) left calc(50% + 3.5em) bottom 3.2em/3.3em 2em, linear-gradient(-160deg, rgba(153,153,153,0) 60%, #999 60.5%) left calc(50% + 3.6em) bottom 3em/3.3em 2.9em, linear-gradient(110deg, rgba(204,204,204,0) 41%, #ccc 41.5%, #ccc 56%, #ddd 57%) left calc(50% - 1.3em) bottom 3.2em/4em 4.5em, linear-gradient(-100deg, rgba(204,204,204,0) 38%, #ccc 38.5%, #ccc 56%, #ddd 57%) left calc(50% + 1.7em) bottom 3.2em/3em 5.8em, linear-gradient(110deg, rgba(153,153,153,0) 40%, #999 40.5%) left calc(50% - 1.45em) bottom 3em/4.8em 4.9em, linear-gradient(-100deg, rgba(153,153,153,0) 38%, #999 38.5%) left calc(50% + 1.85em) bottom 3em/3.8em 6.2em, radial-gradient(circle, #555 50%, rgba(0,0,0,0) 51%) left calc(50% - 0.4em) bottom 8.9em/1.4em 1.4em, radial-gradient(circle, #222 50%, rgba(0,0,0,0) 51%) left calc(50% - 0.4em) bottom 8.6em/2em 2em, linear-gradient(80deg, rgba(255,192,203,0) 45%, #ff9cae 45.5%) left calc(50% - 0.6em) bottom 1.1em/1.3em 3em, linear-gradient(-80deg, rgba(255,192,203,0) 45%, #ff9cae 45.5%) left calc(50% + 0.6em) bottom 1.1em/1.3em 3em, linear-gradient(45deg, rgba(255,192,203,0) 50.5%, #ff9cae 51%, #ff9cae 80%, rgba(255,192,203,0) 80.5%) center bottom 0.2em/2em 0.9em, linear-gradient(3deg, #ff9cae 40%, rgba(255,192,203,0) 40.5%) left calc(50% + 1.2em) bottom 0.2em/1.5em 1em, linear-gradient(-70deg, rgba(255,192,203,0) 47.5%, #ff9cae 48%, #ff9cae 76%, rgba(255,192,203,0) 76.5%) left calc(50% + 2.2em) bottom 0.2em/1em 1.4em, linear-gradient(5deg, rgba(255,192,203,0) 55%, #ff9cae 55.5%) left calc(50% + 1.8em) bottom 1.1em/1em 0.5em, linear-gradient(110deg, #ff9cae 45%, rgba(255,192,203,0) 45.5%) left calc(50% + 1.5em) bottom 1.1em/0.5em 0.5em, linear-gradient(black, black) 50% 0/0.13em 80%;
+  background-repeat: no-repeat;
+  animation: rise-balloon 2000ms infinite ease-in-out;
+}
+#rise::before {
+  width: 100px;
+  height: 100px;
+  left: 50%;
+  margin-left: -50px;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 50%) 80% 20%/2em 2em;
+  background-repeat: no-repeat;
+  background-color: #dc143c;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.2em #800000, inset 1em -1em 0 #b22222;
+}
+@-moz-keyframes rise-balloon {
+  0, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 0.5em);
+  }
+}
+@-webkit-keyframes rise-balloon {
+  0, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 0.5em);
+  }
+}
+@-o-keyframes rise-balloon {
+  0, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 0.5em);
+  }
+}
+@keyframes rise-balloon {
+  0, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 0.5em);
+  }
+}

@@ -1,0 +1,41 @@
+{
+    "name": "css-snowman",
+    "version": "1.0.0",
+    "title": "CSS Snowman",
+    "description": "Inspired by Dawn's kawaii Frosty the Snowman: https://dragoart.com/tut/drawing-a-kawaii-frosty-the-snowman-24002\n\nView how it was coded: https://www.youtube.com/watch?v=fXq6G00iKD0",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "css-snowman.html",
+    "css": [
+        "css-snowman.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "html",
+        "snowman",
+        "christmas",
+        "cssart"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/MWEOBPO",
+    "codepen": "https://codepen.io/alvaromontoro/pen/MWEOBPO"
+}

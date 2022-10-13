@@ -1,0 +1,41 @@
+{
+    "name": "sing-me-something-soft",
+    "version": "1.0.0",
+    "title": "Sing me something soft",
+    "description": "CSS only Jigglypuff. Don't interrupt her song.",
+    "author": {
+        "name": "Tiffany Choong",
+        "avatar": "https://assets.codepen.io/765377/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1516941279&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/tiffachoo/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/tiffachooo"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/tiffachoo"
+            }
+        ]
+    },
+    "html": "sing-me-something-soft.html",
+    "css": [
+        "sing-me-something-soft.css"
+    ],
+    "js": "//   ^  ७  ^\n// (つ ◕ . ◕ )つ",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css-only",
+        "css-image",
+        "css-animation",
+        "scss",
+        "pokemon"
+    ],
+    "original": "https://codepen.io/tiffachoo/pen/PVqQzW",
+    "codepen": "https://codepen.io/tiffachoo/pen/PVqQzW"
+}

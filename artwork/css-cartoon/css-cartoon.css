@@ -1,0 +1,308 @@
+html, body {
+  overflow: hidden;
+  background: #58b8;
+}
+
+.cartoon {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+.cartoon {
+  --skin: #fca;
+  --skin-dark: #fb9;
+  --cap-light: #fff; #369;
+  --cap-dark: #eee; #258;
+  --cap-lid: #777; #8f5158; #666;
+  --cap-front: #8f5158;
+  --cap-front-dark: #7f4148;
+}
+
+.eyes {
+  width: 60%;
+  height: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image:
+    linear-gradient(transparent 30%, var(--skin) 0 40%, black 0 41.5%, transparent 0),
+    radial-gradient(circle at 45% 50%, black 5%, transparent 0),
+    radial-gradient(circle at 75% 50%, black 4%, transparent 0),
+    radial-gradient(circle at 35% 50%, white 20%, black 0 21.5%, transparent 0),
+    radial-gradient(circle at 65% 50%, white 20%, black 0 21.5%, transparent 0)
+    ;
+  background-position: center center;
+  background-size: 61% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.face {
+  width: 50%;
+  height: 60%;
+  background: var(--skin);
+  background-image: radial-gradient(circle at 55% 100%, rgba(0,0,0,0.075) 44%, transparent 0);
+  border: 0.75vmin solid;
+  border-bottom: 1vmin solid;
+  border-top-color: var(--skin);
+  border-left: 0.1vmin solid var(--skin);
+  border-radius: 100% / 120% 120% 80% 80%;
+  transform: translate(-50%, 0) rotate(-15deg);
+  left: 45%;
+  top: 33%;
+}
+
+.nose {
+  width: 15%;
+  height: 10%;
+  background: var(--skin);
+  background-image: linear-gradient(to right, transparent, var(--skin-dark));
+  border: 0.66vmin solid;
+  border-right: 0.75vmin solid;
+  border-left: 0.5vmin solid var(--skin);
+  border-radius: 120% 80% 90% 100% / 100%;
+  top: 53%;
+  left: 48%;
+  transform: rotate(-15deg);
+}
+
+.ear {
+  width: 20%;
+  height: 30%;
+  border-radius: 100% / 80% 80% 120% 125%;
+  border: 0.75vmin solid;
+  border-right: 1.125vmin solid var(--skin);
+  border-left: 1.1vmin solid;
+  background: var(--skin);
+  top: 50%;
+  left: 5%;
+  transform: rotate(-12deg);
+}
+
+.ear::before {
+  width: 70%;
+  height: 60%;
+  border: 1.25vmin solid transparent;
+  border-top: 0.75vmin solid;
+  border-right: 0.5vmin solid;
+  border-radius: 50%;
+  top: 22%;
+  right: 15%;
+  box-shadow: inset -1.5vmin 2vmin 1vmin -0.5vmin var(--skin-dark);
+}
+
+.ear::after {
+  width: 30%;
+  height: 20%;
+  border: 0.75vmin solid;
+  border-bottom: 0.25vmin solid transparent;
+  border-right: 0.75vmin solid transparent;
+  border-radius: 50%;
+  right: 17%;
+  top: 55%;
+  transform: rotate(30deg);
+  box-shadow: -2vmin -1vmin 1vmin 0.5vmin var(--skin-dark);
+}
+
+.ear.ear-back {
+  border-left: 0.75vmin solid;
+  transform: scaleX(-1) rotate(-10deg);
+  left: 52%;
+  top: 46%;
+  background-image: linear-gradient(to right, transparent, var(--skin-dark) 20%);
+}
+
+.neck {
+  width: 30%;
+  height: 25%;
+  background: var(--skin);
+  border-left: 1vmin solid;
+  border-right: 0.75vmin solid;
+  top: 75%;
+  left: 20%;
+  background-image:
+    radial-gradient(circle at 83% 25%, var(--skin-dark) 52%, transparent 60%);
+}
+
+.forehead {
+  width: 57%;
+  height: 60%;
+  background: var(--skin);
+  border: 0.75vmin solid;
+  border-radius: 50%;
+  left: 12.5%;
+  top: 13.5%;
+}
+
+.mouth {
+  width: 30%;
+  height: 20%;
+  border: 1.25vmin solid transparent;
+  border-bottom: 0.5vmin solid;
+  border-right: 0.5vmin solid transparent;
+  border-radius: 50%;
+  top: 56%;
+  left: 37%;
+  transform: rotate(10deg);
+}
+
+.mouth::after {
+  width: 20%;
+  height: 30%;
+  border: 0.25vmin solid transparent;
+  border-left: 0.75vmin solid;
+  border-radius: 50%;
+  top: 80%;
+  left: 15%;
+  transform: rotate(15deg);
+}
+
+.show-cap .cap {
+  width: 85%;
+  height: 30%;
+  border: 0.75vmin solid;
+  border-radius:  80% 125% 125% 80% / 100%;
+  transform: rotate(-35deg);
+  top: 25%;
+  left: 4%;
+  border-left: 1.5vmin solid transparent;
+  border-right: 1.25vmin solid transparent;
+  border-bottom: 0.125vmin solid transparent;
+}
+
+.show-cap .cap-lid {
+  background: black;
+  background-image: linear-gradient(45deg, transparent 0%, var(--cap-lid));
+  border-right: 1.25vmin solid;
+  border-bottom: 0.5vmin solid;
+}
+
+.show-cap .cap-top {
+  width: 63%;
+  height: 28%;
+  border: 0.75vmin solid;
+  border-radius: 50vmin 50vmin 0 0;
+  border-bottom: 0vmin solid transparent;
+  transform: rotate(-35deg);
+  top: 9.5%;
+  left: -4%;
+ background-image:
+   radial-gradient(circle at 68% 80%, var(--cap-front), var(--cap-front-dark) 54%, black 0 56%, transparent 0),
+    linear-gradient(var(--cap-light), var(--cap-dark) 92%, transparent 0), 
+    linear-gradient(16deg, transparent 40%, var(--cap-dark) 0), 
+    linear-gradient(-17deg, transparent 39%, var(--cap-dark) 0) 
+}
+
+
+.cap-line {
+  overflow: hidden;
+}
+
+.cap-line::after {
+  width: 66%;
+  height: 105%;
+  background: var(--cap-front);
+  border-radius: 50% 50% 0 40%;
+  border: 0.75vmin solid;
+  border-left: 1vmin solid;
+  border-right: 0.5vmin solid;
+  left: 23%;
+  top: -84%;
+  transform: rotate(-7deg) skew(-30deg);
+}
+
+.eyebrow {
+  width: 25%;
+  height: 25%;
+  border-radius: 100% / 50%;
+  box-shadow: 1vmin -4vmin 0 -1.75vmin;
+  transform: rotate(-15deg);
+  top: 38.5%;
+  left: 27%;
+}
+
+.eyebrow + .eyebrow {
+  transform: scaleX(-1) rotate(-12deg);
+  left: 48.5%;
+  top: 38%;
+  width: 23%;
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

@@ -1,0 +1,31 @@
+{
+    "name": "monitor-hello-world",
+    "version": "1.0.0",
+    "title": "Monitor + hello world",
+    "description": "",
+    "author": {
+        "name": "Temani Afif",
+        "avatar": "https://assets.codepen.io/1480814/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1637754747&width=512",
+        "web": "https://css-only.art/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/t_afif/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/ChallengesCss"
+            }
+        ]
+    },
+    "html": "monitor-hello-world.html",
+    "css": [
+        "monitor-hello-world.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [],
+    "original": "https://codepen.io/t_afif/pen/MWobzwJ",
+    "codepen": "https://codepen.io/t_afif/pen/MWobzwJ"
+}

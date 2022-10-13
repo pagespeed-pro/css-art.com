@@ -1,0 +1,47 @@
+body {
+  min-height: 400px;
+  height: 100vh;
+  position: relative;
+  background-color: #ee7272;
+  text-align: center;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div:before,
+div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+#old-timey {
+  width: 250px;
+  height: 330px;
+  margin-left: -125px;
+  margin-top: -165px;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(ellipse at 50% 0, #ffc0cb 50%, rgba(255,255,255,0) 50.5%), repeating-linear-gradient(to top, #dc143c, #dc143c 5px, black 5px, black 10px), radial-gradient(circle, #ffc0cb 50%, rgba(255,255,255,0) 50.5%), linear-gradient(-105deg, rgba(255,255,255,0) 45%, #ffc0cb 45.5%), radial-gradient(ellipse at 0 50%, #ffc0cb 60%, rgba(255,255,255,0) 60.5%), radial-gradient(circle, #ffc0cb 50%, rgba(255,255,255,0) 50.5%), radial-gradient(ellipse, #ffc0cb 50%, rgba(255,255,255,0) 50.5%), radial-gradient(circle, #ffc0cb 50%, rgba(255,255,255,0) 50.5%), linear-gradient(105deg, rgba(255,255,255,0) 45%, #ffc0cb 45.5%), radial-gradient(ellipse at 100% 50%, #ffc0cb 60%, rgba(255,255,255,0) 60.5%), radial-gradient(circle, #ffc0cb 50%, rgba(255,255,255,0) 50.5%), radial-gradient(ellipse, #ffc0cb 50%, rgba(255,255,255,0) 50.5%), linear-gradient(78deg, rgba(0,0,0,0) 40%, black 40.5%), linear-gradient(-78deg, rgba(0,0,0,0) 40%, black 40.5%), linear-gradient(black, black), linear-gradient(78deg, rgba(255,255,255,0) 40%, #ffc0cb 40.5%), linear-gradient(-78deg, rgba(255,255,255,0) 40%, #ffc0cb 40.5%), radial-gradient(ellipse at 50% 100%, black 50%, rgba(0,0,0,0) 50.5%), radial-gradient(ellipse at 50% 100%, black 50%, rgba(0,0,0,0) 50.5%), radial-gradient(circle, black 50%, rgba(0,0,0,0) 50.5%), radial-gradient(circle, black 50%, rgba(0,0,0,0) 50.5%), linear-gradient(black, black), radial-gradient(ellipse at 50% 0, black 60%, rgba(0,0,0,0) 60.5%), radial-gradient(ellipse at 50% 0, black 60%, rgba(0,0,0,0) 60.5%), radial-gradient(circle, black 50%, rgba(0,0,0,0) 50.5%), radial-gradient(circle, black 50%, rgba(0,0,0,0) 50.5%), radial-gradient(circle, #ffc0cb 50%, rgba(255,255,255,0) 50.5%);
+  background-size: 90px 80px, 90px 80px, 50px 50px, 20px 50px, 20px 80px, 30px 30px, 12px 30px, 50px 50px, 20px 50px, 20px 80px, 30px 30px, 12px 30px, 50px 20px, 50px 20px, 80px 10px, 20px 50px, 20px 50px, 80px 25px, 80px 25px, 70px 70px, 70px 70px, 200px 5px, 50px 15px, 50px 15px, 10px 10px, 10px 10px, 80px 80px;
+  background-position: center bottom 120px, center bottom 120px, left 50px bottom 157px, left 62px bottom 187px, left 62px bottom 225px, left 54px bottom 284px, left 69px bottom 286px, right 50px bottom 157px, right 62px bottom 187px, right 62px bottom 225px, right 54px bottom 284px, right 69px bottom 286px, left 64px bottom 100px, right 64px bottom 100px, center bottom 110px, left 89px bottom 64px, right 89px bottom 64px, left 46px bottom 0, right 46px bottom 0, left -10px bottom 267px, right -10px bottom 267px, left 30px bottom 297px, left 80px bottom 208px, right 80px bottom 208px, left 112px bottom 225px, right 112px bottom 225px, center bottom 192px;
+}
+#old-timey:before,
+#old-timey:after {
+  width: 20px;
+  height: 80px;
+  bottom: 0;
+  background-image: linear-gradient(to top, #dc143c 65%, #ffc0cb 65.5%);
+}
+#old-timey:before {
+  left: 65px;
+  border-top-left-radius: 20px 40px;
+  border-bottom-left-radius: 20px 40px;
+  transform: rotate(40deg);
+}
+#old-timey:after {
+  right: 65px;
+  border-top-right-radius: 20px 40px;
+  border-bottom-right-radius: 20px 40px;
+  transform: rotate(-40deg);
+}

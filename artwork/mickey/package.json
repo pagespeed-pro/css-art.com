@@ -1,0 +1,39 @@
+{
+    "name": "mickey",
+    "version": "1.0.0",
+    "title": "mickey",
+    "description": "",
+    "author": {
+        "name": "Chhavi Srivastav",
+        "avatar": "https://assets.codepen.io/6383264/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1656037098&width=512",
+        "web": "https://linktr.ee/chhavisrivastav",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/chhavi-srivastav/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/SrivastavChhavi"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/chhavi48"
+            },
+            {
+                "title": "Medium",
+                "url": "https://medium.com/@sichhavi48"
+            }
+        ]
+    },
+    "html": "mickey.html",
+    "css": [
+        "mickey.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [],
+    "original": "https://codepen.io/chhavi-srivastav/pen/MWGpzbP",
+    "codepen": "https://codepen.io/chhavi-srivastav/pen/MWGpzbP"
+}

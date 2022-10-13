@@ -1,0 +1,95 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(#adf, #bef 20%, #9de 0)
+}
+
+#bubbles {
+  position: absolute;
+  width: 2vmin;
+  height: 2vmin;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+  top: 50%;
+  left: 50%;
+  transform: translate(12vmin, -8vmin);
+  box-shadow: -2vmin -1.25vmin 0 -0.5vmin rgba(255,255,255,0.3), -0.75vmin -2.75vmin 0 -0.25vmin rgba(255,255,255,0.5);
+}
+
+#shark {
+  width: 30vmin;
+  height: 10vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#shark div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.shark-body {
+  left: 0vmin;
+  width: 30vmin;
+  height: 20vmin;
+  background: red;
+  border-radius: 50%;
+  transform: translate(0, -50%);
+  clip-path: polygon(0% 50%, 100% 50%, 100% 90%, 70% 70%, 90% 100%, 0% 100%);
+  background: #aaa;
+}
+
+.shark-eye {
+  width: 1.5vmin;
+  height: 1.5vmin;
+  border-radius: 50%;
+  background: white;
+  box-shadow: inset -0.2vmin -0.45vmin 0 0.6vmin;
+  top: 1.5vmin;
+  right: 4vmin;
+}
+
+.aleta, .tail, .fin {
+  width: 10vmin;
+  height: 8vmin;
+  box-shadow: 4vmin -0.5vmin #aaa;
+  border-radius: 50%;
+  top: -1vmin;
+  transform: translate(-130%, -3vmin) rotate(10deg);
+}
+
+.aleta {
+  box-shadow: 5vmin 0vmin #999;
+  top: 5vmin;
+  left: 3vmin;
+  transform: none;
+  clip-path: polygon(0% 50%, 200% 40%, 200% 100%, 0% 100%);
+}
+
+.fin {
+  box-shadow: 5vmin 0vmin #aaa;
+  left: 15vmin;
+}
+
+.gill {
+  width: 6vmin;
+  height: 9vmin;
+  border-radius: 100%;
+  box-shadow: -2vmin 0 0 -1.7vmin rgba(0,0,0,0.25);
+  left: 18.5vmin;
+}
+
+.gill-2 {
+  transform: translate(-1vmin, 0) scale(0.9);
+}
+
+.gill-3 {
+  transform: translate(-2vmin, 0) scale(0.8);
+}

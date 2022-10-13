@@ -1,0 +1,65 @@
+#wonder {
+  box-sizing: border-box;
+  min-height: 400px;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle, white 60%, rgba(255,255,255,0) 75%) 70% 10%/4em 4em, radial-gradient(ellipse, #ff69b4 10%, rgba(255,105,180,0) 70%) calc(50% - 12em) calc(50% - 4em)/4em 2em, radial-gradient(circle, #ff69b4 10%, rgba(255,105,180,0) 60%) calc(50% - 11em) calc(50% - 4.5em)/3em 3em, radial-gradient(circle, #ff69b4 10%, rgba(255,105,180,0) 60%) calc(50% - 10em) calc(50% - 5.5em)/4em 4em, radial-gradient(circle, #ff69b4 10%, rgba(255,105,180,0) 60%) calc(50% - 9em) calc(50% - 5em)/3em 3em, radial-gradient(circle, #ff69b4 10%, rgba(255,105,180,0) 60%) calc(50% - 8.5em) calc(50% - 4em)/4.5em 4.5em, radial-gradient(circle, #ff69b4 10%, rgba(255,105,180,0) 60%) calc(50% - 10.4em) calc(50% - 3.5em)/3.7em 3.7em, radial-gradient(ellipse, #ff69b4 10%, rgba(255,105,180,0) 60%) calc(50% - 7em) calc(50% - 4em)/4em 2.5em, radial-gradient(ellipse, #ff69b4 10%, rgba(255,105,180,0) 60%) calc(50% + 8.5em) calc(50% - 0.5em)/4.5em 2.5em, radial-gradient(circle, #ff69b4 10%, rgba(255,105,180,0) 60%) calc(50% + 10em) calc(50% - 1.2em)/4em 4em, radial-gradient(circle, #ff69b4 10%, rgba(255,105,180,0) 60%) calc(50% + 11em) calc(50% - 2.4em)/3em 3em, radial-gradient(circle, #ff69b4 10%, rgba(255,105,180,0) 60%) calc(50% + 12.6em) calc(50% - 1.8em)/4em 4em, radial-gradient(ellipse, #ff69b4 10%, rgba(255,105,180,0) 60%) calc(50% + 13.7em) calc(50% - 0.5em)/4em 2.5em, radial-gradient(ellipse, #ff69b4 10%, rgba(255,105,180,0) 60%) calc(50% + 10.5em) calc(50% - 0.2em)/4em 4em, radial-gradient(ellipse, #ff69b4 10%, rgba(255,105,180,0) 70%) calc(50% + 12.3em) calc(50% - 0.4em)/4em 4em, linear-gradient(to bottom, #4682b4, #b0e0e6) 50% 0/100% 60%, radial-gradient(ellipse, rgba(0,0,0,0.11) 10%, rgba(0,0,0,0) 60%) calc(50% - 10em) calc(60% + 2.2em)/10em 2em, radial-gradient(ellipse, rgba(0,0,0,0.15) 10%, rgba(0,0,0,0) 60%) calc(50% + 11em) calc(60% + 1.5em)/10em 2em, radial-gradient(ellipse, rgba(0,0,0,0.5) 20%, rgba(0,0,0,0) 60%) 50% calc(50% + 8em)/12em 1em, linear-gradient(to top, rgba(240,248,255,0) 40%, #f0f8ff 90%) 50% 100%/100% 50%, repeating-conic-gradient(from 0deg, rgba(0,0,0,0) 0deg 3deg, black 3.1deg 4deg, rgba(0,0,0,0) 4.1deg) 50% 0/100% 115%, radial-gradient(circle, #f0f, rgba(255,0,255,0)) 50% 50%/100% 100%;
+  background-repeat: no-repeat;
+}
+#wonder::before,
+#wonder::after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+#wonder::before {
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(to bottom, #ffa500 30%, #ff0, #40e0d0, #008080);
+  z-index: -1;
+  animation: wonder-horizon 5s infinite alternate-reverse ease-in-out;
+}
+#wonder::after {
+  width: 8em;
+  min-height: 12em;
+  left: 50%;
+  top: calc(50% - 5.5em);
+  margin-left: -4em;
+  background: radial-gradient(white 10%, rgba(255,255,255,0) 100%) 20% 20%/0.2em 0.2em, radial-gradient(white 10%, rgba(255,255,255,0) 100%) 80% 50%/0.2em 0.2em, radial-gradient(white 10%, rgba(255,255,255,0) 100%) 70% 80%/0.2em 0.2em, radial-gradient(white 10%, rgba(255,255,255,0) 100%) 55% 90%/0.2em 0.2em, radial-gradient(rgba(255,255,255,0.6) 10%, rgba(255,255,255,0) 70%) 40% 10%/0.2em 0.2em, radial-gradient(rgba(255,255,255,0.6) 10%, rgba(255,255,255,0) 70%) 70% 20%/0.2em 0.2em, radial-gradient(rgba(255,255,255,0.6) 10%, rgba(255,255,255,0) 70%) 5% 40%/0.2em 0.2em, radial-gradient(rgba(255,255,255,0.6) 10%, rgba(255,255,255,0) 70%) 40% 45%/0.2em 0.2em, radial-gradient(rgba(255,255,255,0.6) 10%, rgba(255,255,255,0) 70%) 15% 65%/0.2em 0.2em, radial-gradient(rgba(255,255,255,0.6) 10%, rgba(255,255,255,0) 70%) 25% 70%/0.2em 0.2em, radial-gradient(rgba(255,255,255,0.6) 10%, rgba(255,255,255,0) 70%) 90% 75%/0.2em 0.2em, radial-gradient(rgba(255,255,255,0.6) 10%, rgba(255,255,255,0) 70%) 30% 99%/0.2em 0.2em;
+  background-color: black;
+  background-repeat: no-repeat;
+  border-radius: 4em 4em 0 0;
+}
+@-moz-keyframes wonder-horizon {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+@-webkit-keyframes wonder-horizon {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+@-o-keyframes wonder-horizon {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}
+@keyframes wonder-horizon {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-50%);
+  }
+}

@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #def;
+  display: grid;
+  place-items: center;
+}
+
+div {
+  position: relative;
+  width: 80vmin;
+  height: 80vmin;
+  background:
+    /* shadow */
+    radial-gradient(farthest-side at 50% -50%, #7ac 99%, transparent 0) 50% 100% / 80% 7.5%,
+    /* smell */
+    radial-gradient(farthest-side at 0% 80%, #def 100%, transparent 0) 39% 10% / 2.2% 10%,
+    radial-gradient(farthest-side at 0% 80%, #8d8 100%, transparent 0) 40% 10% / 4% 10%,
+    radial-gradient(farthest-side at 100% 20%, #def 100%, transparent 0) 43.4% 20% / 2.2% 10%,
+    radial-gradient(farthest-side at 100% 20%, #8d8 100%, transparent 0) 42% 20% / 4% 10%,
+    radial-gradient(farthest-side at 0% 80%, #def 100%, transparent 0) 49% 10% / 2.2% 10%,
+    radial-gradient(farthest-side at 0% 80%, #8d8 100%, transparent 0) 50% 10% / 3.75% 10%,
+    radial-gradient(farthest-side at 100% 20%, #def 100%, transparent 0) 53.1% 20% / 2.5% 10%,
+    radial-gradient(farthest-side at 100% 20%, #8d8 200%, transparent 0) 52.25% 20% / 4% 10%,
+    radial-gradient(farthest-side at 0% 80%, #def 100%, transparent 0) 44% 7% / 2.2% 10%,
+    radial-gradient(farthest-side at 0% 80%, #8d8 100%, transparent 0) 45.3% 7% / 4% 10%,
+    radial-gradient(farthest-side at 100% 20%, #def 100%, transparent 0) 48.4% 18% / 2.2% 10%,
+    radial-gradient(farthest-side at 100% 20%, #8d8 100%, transparent 0) 46.875% 18% / 4% 10%,
+    /* trash bag outside */
+    conic-gradient(at 50% 120%, #222 20deg, transparent 0 345deg, #222 0) 58% 76% / 5% 5%,
+    radial-gradient(40% 80% at 50% 60%, #222 99.9%, transparent 0) 60% 91.875% / 30% 12%,
+    radial-gradient(40% 80% at 50% 100%, #222 99.9%, transparent 0) 60% 82% / 23% 10%,
+    radial-gradient(40% 70% at 50% 60%, #000 99.9%, transparent 100.3%) 56% 91.875% / 30% 12%,
+    radial-gradient(40% 80% at 50% 98%, #000 99.9%, transparent 100.3%) 58% 82% / 23% 10%,
+    /* trash bag inside */
+    conic-gradient(at 20% 80%, transparent 50deg, #222 0 102deg, transparent 0 ) 51% 40% / 5% 4%,
+    /* trash can */
+    linear-gradient(to right, gray 17%, darkgray 0) 35% 92.5% / 33% 5%,
+    radial-gradient(80% 100% at 50% 0%, darkgray 0 99.9%, transparent 0 33.33%) 34% 79.25% / 2% 15%,
+    radial-gradient(80% 100% at 50% 0%, darkgray 0 99.9%, transparent 0 33.33%) 50% 79.25% / 2% 15%,
+    radial-gradient(80% 100% at 50% 0%, darkgray 0 99.9%, transparent 0 33.33%) 42% 79.25% / 2% 15%,
+    linear-gradient(to bottom right, darkgray 50%, transparent 0) 33% 68.75% /  20% 2%,
+    linear-gradient(to right, darkgray 14.5%, lightgray 0) 35% 90% / 32% 25%,
+    /* box background */
+    linear-gradient(darkgray, darkgray) 77% 82.25% / 3% 5%,
+    linear-gradient(to right, #c95 60%, #ec9 0) 74% 92% / 30% 15%,
+    linear-gradient(140deg, #da6 50%, #0000 0) 87.5% 77.25% / 40% 4.5%,
+    linear-gradient(20deg, #a73, #c95 75%, #0000 0) 78.5% 77.75% / 20% 2%,
+    /* bag outside back */
+    radial-gradient(farthest-side at 50% 80%, black 80%, transparent 81%) 20% 91% / 20% 21%
+    ;
+  background-repeat: no-repeat;
+}
+
+div::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    /* repeating-linear-gradient(to right, darkgray 0 10%, transparent 0 33.33%) 41.875% 66% / 20% 20%, */
+    radial-gradient(80% 100% at 50% 100%, darkgray 0 99.9%, transparent 0 33.33%) 33.125% 60% / 2% 20%,
+    radial-gradient(80% 100% at 50% 100%, darkgray 0 99.9%, transparent 0 33.33%) 49.125% 60% / 2% 20%,
+    radial-gradient(80% 100% at 50% 100%, darkgray 0 99.9%, transparent 0 33.33%) 41.125% 60% / 2% 20%,
+    linear-gradient(to right, darkgray 15%, lightgray 0) 33.6% 57.5% / 32% 25%,
+    radial-gradient(farthest-side at 50% 100%, #222 90%, transparent 0) 42% 41% / 23% 15%
+    ;
+  background-repeat: no-repeat;
+  transform: rotate(-3deg);
+  z-index: -1;
+}
+
+div::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    /* fish */
+    radial-gradient(closest-side, #000 90%, transparent 0) 49% 92.5% / 0.75% 0.75%,
+    radial-gradient(farthest-side at 0% 50%, white 99%, transparent 0) 49% 93.25% / 2.5% 2.5%,
+    linear-gradient(white, white) 46% 92.5% / 3.5% 0.4%,
+    radial-gradient(farthest-side at 0% 50%, white 80%, transparent 0) 47% 93.5% / 0.5% 3.5%,
+    radial-gradient(farthest-side at 0% 50%, white 80%, transparent 0) 46% 93.5% / 0.4% 3%,
+    radial-gradient(farthest-side at 0% 50%, white 80%, transparent 0) 45% 93.5% / 0.4% 2.75%,
+    /* trash can lid */
+    linear-gradient(to right, gray 21%, darkgray 0) 35% 36% / 35% 5%,
+    radial-gradient(farthest-side at 50% 100%, transparent 50%, gray 0 80%, transparent 0) 38.5% 32% / 15% 4%
+    ;
+  background-repeat: no-repeat;
+  transform: rotate(-15deg);
+}

@@ -1,0 +1,41 @@
+{
+    "name": "02-dry-divtober-2022",
+    "version": "1.0.0",
+    "title": "02. Dry : Divtober 2022",
+    "description": "This entry for #divtober was focused on understanding how to use CSS animation to make a sun set.  There is a time-lapse video of making this piece at https://youtu.be/xylb7FpKgkE and an article about overcoming the challenges of animating a gradient background at https://medium.com/@robleto/how-to-lighten-darken-gradients-with-pure-css-4a9800b044e5 \n",
+    "author": {
+        "name": "Greg Robleto",
+        "avatar": "https://assets.codepen.io/28337/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1641427924&width=512",
+        "web": "http://www.robleto.com",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/robleto/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/robleto"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/robleto"
+            }
+        ]
+    },
+    "html": "02-dry-divtober-2022.html",
+    "css": [
+        "02-dry-divtober-2022.css"
+    ],
+    "js": "/* This entry for #divtober was focused on understanding how to use CSS animation to make a sun set.  There is a time-lapse video of making this piece at https://youtu.be/xylb7FpKgkE and an article about overcoming the challenges of animating a gradient background at https://medium.com/@robleto/how-to-lighten-darken-gradients-with-pure-css-4a9800b044e5 */\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "cssart",
+        "cssanimation",
+        "divtober",
+        "singlediv"
+    ],
+    "original": "https://codepen.io/robleto/pen/BaxYwwd",
+    "codepen": "https://codepen.io/robleto/pen/BaxYwwd"
+}

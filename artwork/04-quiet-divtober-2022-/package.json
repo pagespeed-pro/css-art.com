@@ -1,0 +1,40 @@
+{
+    "name": "04-quiet-divtober-2022-",
+    "version": "1.0.0",
+    "title": "04. Quiet: Divtober 2022 ",
+    "description": "This entry for #divtober was trying to simplify after Day 3 didn't come out as I would like it. Once complete I added in a touch of animation just to give it a bit of life.  There is a time-lapse video of making this piece at https://youtu.be/c9RW1PzTtXQ \n",
+    "author": {
+        "name": "Greg Robleto",
+        "avatar": "https://assets.codepen.io/28337/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1641427924&width=512",
+        "web": "http://www.robleto.com",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/robleto/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/robleto"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/robleto"
+            }
+        ]
+    },
+    "html": "04-quiet-divtober-2022-.html",
+    "css": [
+        "04-quiet-divtober-2022-.css"
+    ],
+    "js": "/* This entry for #divtober was trying to simplify after Day 3 didn't come out as I would like it. Once complete I added in a touch of animation just to give it a bit of life.  There is a time-lapse video of making this piece at https://youtu.be/c9RW1PzTtXQ */\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "cssart",
+        "divtober",
+        "singlediv"
+    ],
+    "original": "https://codepen.io/robleto/pen/eYrrvBZ",
+    "codepen": "https://codepen.io/robleto/pen/eYrrvBZ"
+}

@@ -1,0 +1,274 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 1vmin solid black;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+.cartoon {
+  --skin: #fca;
+  --dark: #e96;
+  --hair: #630;
+  --robe: #222;
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon::after {
+  width: 120%;
+  bottom: 0;
+  border-top: 1vmin solid black;
+  left: 50%;
+  transform: translate(-50%, 25%);
+}
+
+.face {
+  left: 50%;
+  top: 2%;
+  background: var(--skin);
+  width: 60%;
+  height: 40%;
+  border-radius: 60% 60% 60% 60% / 50% 50% 30% 30%;
+  transform: translate(-50%, 0);
+}
+
+.glasses {
+  background: var(--skin);
+  width: 30%;
+  height: 45%;
+  top: 41%;
+  left: 12%;
+}
+
+.glasses + .glasses {
+  left: auto;
+  right: 12%;
+}
+
+.glasses-bar {
+  width: 100%;
+  border-top: 1vmin solid black;
+  top: 63%;
+}
+
+.scarf {
+  width: 38%;
+  height: 15%;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 25% / 130% ;
+  background: linear-gradient(to right, #c00 50%, #fc6 0);
+  background-size: 50%;
+  background-position: -25% 0;
+}
+
+.scarf-2 {
+  width: 15%;
+  height: 26%;
+  top: 43%;
+  left: 35%;
+  background: linear-gradient(to bottom, #c00 50%, #fc6 0);
+  background-size: 100% 70%;
+}
+
+.eye {
+  width: 6%;
+  height: 9%;
+  background: white;
+  top: 60%;
+  left: 24%;
+  box-shadow: inset -0.5vmin -0.5vmin 0 1vmin black;
+}
+
+.eye + .eye {
+  left: auto;
+  right: 24%;
+}
+
+.mouth {
+  width: 10%;
+  height: 15%;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transform: translate(-50%, 0) rotate(45deg);
+  top: 73%;
+  left: 50%;
+}
+
+.ear {
+  background: var(--skin);
+  width: 7%;
+  height: 7%;
+  top: 27%;
+  left: 16%;
+}
+
+.ear + .ear {
+  left: auto;
+  right: 16%;
+}
+
+.hair {
+  background: var(--hair);
+  top: 0%;
+  height: 28%;
+}
+
+.hair-1 {
+  left: 18%;
+  width: 17%;
+  border-radius: 80% 0 100% 0;
+}
+
+.hair-2 {
+  top: 7%;
+  height: 21%;
+  right: 18%;
+  width: 15%;
+  border-radius: 0 80% 0 100%;
+}
+
+
+.hair-3 {
+  height: 17%;
+  width: 48.5%;
+  right: 18%;
+  border-radius: 0 20vmin 0 90%;
+}
+
+.body {
+  width: 36%;
+  height: 55%;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 40% / 100% 100% 0 0;
+  background: var(--robe);
+}
+
+.arm {
+  top: 44%;
+  left: 45%;
+  height: 35%;
+  width: 40%;
+  transform: translate(-50%, 0) rotate(10deg);
+  border-radius: 100% 100% 40% 40% / 200% 200% 0 0;
+  background: var(--robe);
+}
+
+.arm + .arm {
+  left: auto;
+  right: 45%;
+  transform: translate(50%, 0) rotate(-10deg);
+}
+
+.hand {
+  width: 15%;
+  height: 15%;
+  top: 69%;
+  left: 23%;
+  background: var(--skin);
+}
+
+.hand + .hand {
+  left: 62%;
+}
+
+.wand {
+  width: 20%;
+  height: 4%;
+  border-radius: 3vmin 100% 100% 3vmin;
+  transform: rotate(30deg);
+  top: 81%;
+  right: 9%;
+  background: var(--hair)
+}
+
+.pants {
+  width: 15%;
+  height: 20%;
+  bottom: 6%;
+  left: 34%;
+  background: #444;
+}
+
+.pants + .pants {
+  left: auto;
+  right: 34%;
+}
+
+.shoe {
+  width: 20%;
+  left: 29%;
+  height: 8%;
+  bottom: 0;
+  border-radius: 200% 90% 0 5% / 400% 0 0 0;
+  background: var(--robe);
+}
+
+.shoe + .shoe {
+  left: auto;
+  right: 29%;
+  border-radius: 90% 200% 5% 0% / 0 400% 0 0;
+}
+
+.scar {
+  width: 0;
+  height: 14%;
+  border-left: 1.5vmin solid var(--dark);
+  border-bottom: 1.5vmin solid transparent;
+  top: 22%;
+  left: 22%;
+}
+
+.scar::after {
+  box-sizing: border-box;
+  top: 1.5vmin;
+  height: 3vmin;
+  border-left: 1.5vmin solid var(--dark);
+  border-bottom: 3.5vmin solid transparent;
+}
+
+.hair-mess {
+  width: 7%;
+  height: 7%;
+  border: 1vmin solid transparent;
+  border-right: 1vmin solid black;
+  transform: rotate(-45deg);
+  top: -3%;
+  left:27.5%;
+}
+
+.hair-mess::after {
+  width: 150%;
+  height: 150%;
+  border: 1vmin solid transparent;
+  border-top: 1vmin solid black;
+  border-radius: 50%;
+  top: 50%;
+  top: calc(50% + 1vmin);
+  right: -140%;
+  right: calc(-140% - 0.5vmin);
+}

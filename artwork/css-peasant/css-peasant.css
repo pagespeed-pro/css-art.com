@@ -1,0 +1,502 @@
+* {
+  animation: none !important;
+}
+
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+html, body {
+  overflow: hidden;
+  background: #e8eeff;
+}
+
+.cartoon {
+  --belt: #963;
+  --hair: #531;
+  --skin: #fca;
+  --skin-dark: #eb9;
+  --shirt: #ddc;
+  --shirt-dark: #ccb2;
+  --shirt-darker: #bba2;
+}
+
+.head, .beard {
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 55%;
+  height: 35%;
+  background-color: var(--skin);
+  border-radius: 5% / 100% 100% 10% 10%;
+  background-image:
+    linear-gradient(transparent 80%, var(--skin-dark) 0),
+    linear-gradient(80deg, var(--skin-dark) 4%, transparent 0),
+    linear-gradient(-80deg, var(--skin-dark) 4%, transparent 0)
+}
+
+.beard {
+  background: transparent;
+  top: 75%;
+  border-radius: 100% /  120% 120% 75% 75% ;
+  box-shadow: inset 0 -1vmin 0 4vmin var(--hair);
+}
+
+.eye {
+  width: 2vmin;
+  height: 2vmin;
+  background: white;
+  border-radius: 50%;
+  top: 42%;
+  left: 27.25%;
+  box-shadow: 
+    0.5vmin -1.4vmin 0 -0.6vmin white,
+    14.5vmin -1.25vmin 0 -0.7vmin white,
+    2vmin 1vmin 0 2vmin black, 
+    2vmin 1vmin 0 2.75vmin #369, 2vmin 1vmin 0 4vmin white,
+    14vmin 0 white,
+    16vmin 1vmin 0 2vmin black, 16vmin 1vmin 0 2.75vmin #369, 16vmin 1vmin 0 4vmin white,
+    
+    2.5vmin 1vmin 0 6vmin var(--skin), 2vmin -3vmin 0 4vmin rgba(0,0,0,0.35), 2vmin -3vmin 0 4vmin var(--hair),
+    16.5vmin 1vmin 0 6vmin var(--skin), 17vmin -3vmin 0 4vmin rgba(0,0,0,0.35), 17vmin -3vmin 0 4vmin var(--hair);
+}
+
+@keyframes blink {
+  0%, 3%, 100% {
+    background-position: 0% -11vmin, 0% 11vmin;
+  }
+  1.5% {
+    background-position: 0% -3.5vmin, 0% 7.5vmin;
+  }
+}
+
+.eyelid {
+  width: 11vmin;
+  height: 11vmin;
+  top: 30%;
+  left: 22%;
+  overflow: hidden;
+  background-image:
+    linear-gradient(var(--skin-dark), var(--skin)),
+  linear-gradient(var(--skin-dark), var(--skin));
+  background-size: 11vmin 11vmin;
+  background-repeat: no-repeat;
+  background-position: 0% -11vmin, 0% 11vmin;
+  animation: blink 12s linear infinite;
+}
+
+.eyelid + .eyelid {
+  left: 54%;
+}
+
+.nose {
+  width: 5vmin;
+  height: 10vmin;
+  background: var(--skin);
+  border-radius: 100% / 120% 120% 80% 80%;
+  left: 50%;
+  top: 45%;
+  transform: translate(-50%, 0);
+  background-image: linear-gradient(transparent 60%, rgba(255,0,0,0.2));
+}
+
+.nose::before,
+.nose::after {
+  width: 2vmin;
+  height: 2vmin;
+  background: var(--skin);
+  border-radius: 50%;
+  top: 75%;
+  left: -15%;
+  background-image: linear-gradient(transparent -15%, rgba(255,0,0,0.2) 120%);
+}
+
+.nose::after {
+  right: -15%;
+  left: auto;
+}
+
+.hair-top {
+  width: 70%;
+  height: 40%;
+  background: var(--hair);
+  border-radius: 20% / 70% 0 50% 0;
+  transform: skew(-10deg);
+  top: -15%;
+  left: -5%;
+  clip-path: polygon(0% 0%, 400% 0%, 400% 100%, 0% 100%)
+}
+
+.lip {
+  width: 8vmin;
+  height: 1.5vmin;
+  background: #fa8;
+  border-radius: 70% 70% 2vmin 2vmin;
+  top: 85.5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.hair-2 {
+  width: 5vmin;
+  height: 5vmin;
+  top: -20%;
+  left: 49%;
+  box-shadow: 1.25vmin -1vmin var(--hair)
+}
+
+.hair-2::after {
+  border-radius: 50%;
+  width: 5vmin;
+  height: 5vmin;
+  top: 10%;
+  left: 6vmin;
+  box-shadow: -1vmin -1vmin var(--hair)
+}
+
+.hair-top::after {
+  width: 70%;
+  height: 90%;
+  background: var(--hair);
+  left: 90%;
+  transform: skew(20deg);
+  border-radius: 20% / 0 70% 0 50%;
+}
+
+.ear {
+  width: 7vmin;
+  height: 10vmin;
+  background: var(--skin);
+  left: -4vmin;
+  top: 40%;
+  border-radius: 100% / 70% 80% 0 100%;
+  background-image: linear-gradient(to right, transparent, rgba(0,0,0,0.05));
+  transform: rotate(-5deg);
+}
+
+.ear + .ear {
+  transform: scaleX(-1) rotate(-10deg);
+  left: auto;
+  right: -3.7vmin;
+}
+
+.hair-back {
+  width: 106%;
+  height: 70%;
+  border-radius: 120% 120% 50% 50% / 100%;
+  left: -3%;
+  top: -10%;
+  background: var(--hair);
+  box-shadow: inset 0 0 0 5vmin rgba(0,0,0,0.3);
+}
+
+@keyframes breathe {
+  0%, 100% {
+    border-radius: 100% / 150% 150% 10% 10%;
+  }
+  50% {
+    border-radius: 100% / 165% 165% 10% 10%;
+  }
+}
+
+.body {
+  width: 25%;
+  height: 38%;
+  background: var(--shirt);
+  border-radius: 100% / 150% 150% 10% 10%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  abox-shadow: 
+    inset 0 -5.5vmin var(--shirt),
+    inset 0 -9.5vmin var(--belt);
+  animation: breathe 4s infinite;
+  
+  /* This pattern is by Temani Afif: https://dev.to/afif/background-pattern-braided-lines-5h2d */
+   --s:2px; /* size of lines */
+   --m:1.5px; /* space */
+
+   background-image:
+     radial-gradient(circle at 50% -30%, transparent 74%, var(--belt) 74.25% 83%, transparent 83.25%),
+     /* 4 */
+     conic-gradient(from 90deg at var(--s) calc(100% - var(--s)), var(--shirt-dark) 90deg,transparent 0),
+     /* 3 */
+     linear-gradient(-90deg,transparent var(--m), var(--shirt-darker)   0 calc(var(--s) + var(--m)),transparent 0),
+     /* 2 */
+     linear-gradient(180deg,transparent var(--m), var(--shirt-dark) 0 calc(var(--s) + var(--m)),transparent 0),
+     /* 1 */
+     linear-gradient( 90deg, var(--shirt-darker) var(--s),transparent 0);
+
+   background-size:
+     100% 100%,
+     calc(2*(var(--s) + var(--m))) calc(2*(var(--s) + var(--m))),
+     calc(2*(var(--s) + var(--m))) calc(2*(var(--s) + var(--m))),
+     calc(2*(var(--s) + var(--m))) calc(2*(var(--s) + var(--m))),
+     calc(2*(var(--s) + var(--m))) calc(2*(var(--s) + var(--m)));
+}
+
+.body::before {
+  width: 6vmin;
+  height: 5vmin;
+  border: 0.8vmin solid silver;
+  border-radius: 1vmin;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -10vmin);
+  background-image: radial-gradient(circle at 50% 50%, silver 15%, transparent 0),
+    radial-gradient(circle at 75% 50%, silver 10%, transparent 0);
+}
+
+.jacket {
+  width: 37%;
+  height: 65%;
+  background: #222;
+  border-radius: 100% 0 20% 55% / 100% 20% 3% 10%;
+  left: -0%;
+  transform: rotate(5deg)
+}
+
+.jacket + .jacket {
+  transform: scaleX(-1) rotate(5deg);
+  left: auto;
+  right: -1%;
+}
+
+.leg {
+  width: 9%;
+  height: 30%;
+  background: #222;
+  transform: rotateX(-2deg) skew(2deg);
+  top: 62%;
+  left: 39%;
+}
+
+.leg + .leg {
+  left: 52%;
+  transform: none;
+}
+
+.leg::before {
+  height: 22%;
+  width: 108%;
+  bottom: 0;
+  left: -4%;
+  background: var(--belt);
+}
+
+.leg::after {
+  width: 115%;
+  height: 12%;
+  background: var(--belt);
+  background-image: linear-gradient(rgba(0,0,0,0.1), transparent);
+  bottom: 0;
+  left: -9%;
+  border-radius: 100vmin 100vmin 0 0;
+}
+
+.leg + .leg::after {
+  left: -2%;
+}
+
+.arm {
+  width: 25%;
+  height: 64%;
+  background: var(--shirt);
+  border-radius: 100% 0 0 0;
+  top: 17%;
+  transform: rotate(8deg);
+  left: -20%;
+  background-image: linear-gradient(-45deg, rgba(0,0,0,0.1), transparent);
+  
+  /* As above-This pattern is by Temani Afif: https://dev.to/afif/background-pattern-braided-lines-5h2d */
+  background-image:
+    linear-gradient(-45deg, rgba(0,0,0,0.1), transparent),
+     /* 4 */
+     conic-gradient(from 90deg at var(--s) calc(100% - var(--s)), var(--shirt-dark) 90deg,transparent 0),
+     /* 3 */
+     linear-gradient(-90deg,transparent var(--m), var(--shirt-darker)   0 calc(var(--s) + var(--m)),transparent 0),
+     /* 2 */
+     linear-gradient(180deg,transparent var(--m), var(--shirt-dark) 0 calc(var(--s) + var(--m)),transparent 0),
+     /* 1 */
+     linear-gradient( 90deg, var(--shirt-darker) var(--s),transparent 0);
+
+   background-size:
+     100% 100%,
+     calc(2*(var(--s) + var(--m))) calc(2*(var(--s) + var(--m))),
+     calc(2*(var(--s) + var(--m))) calc(2*(var(--s) + var(--m))),
+     calc(2*(var(--s) + var(--m))) calc(2*(var(--s) + var(--m))),
+     calc(2*(var(--s) + var(--m))) calc(2*(var(--s) + var(--m)));
+}
+
+@keyframes swingArm {
+  0%, 100% {
+    transform: scaleX(-1) rotate(13deg);
+  }
+  50% {
+    transform: scaleX(-1) rotate(14deg);
+  }
+}
+
+.arm + .arm {
+  transform-origin: top center;
+  transform: scaleX(-1) rotate(13deg);
+  left: auto;
+  right: -13%;
+  top: 16%;
+  aanimation: swingArm 3s infinite;
+}
+
+.hand {
+  width: 5vmin;
+  height: 7vmin;
+  border-radius: 50%;
+  background: var(--skin);
+  left: -28%;
+  top: 75%;
+}
+
+@keyframes swingHand {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0.5vw, -0.25vw)
+  }
+}
+
+.hand + .hand {
+  left: 111%;
+  top: 73.5%;
+  transform: rotate(-10deg);
+  aanimation: swingHand 3s infinite;
+}
+
+.shadow {
+  width: 56%;
+  height: 7%;
+  border-radius: 100% / 80% 80% 120% 120%;
+  background: rgba(0,0,0,0.1);
+  left: 50%;
+  top: 89%;
+  transform: translate(-50%, 0);
+  filter: blur(0.5vmin);
+}
+
+.grass {
+  --grass: #7c8;
+  width: 300vmax;
+  height: 100vh;
+  top: 83%;
+  left: 50%;
+  background: var(--grass);
+  transform: translate(-50%, 0);
+  border-radius: 100% / 100%;
+  background-image: linear-gradient(var(--grass) 5%, black);
+}
+
+.grass-leave {
+  border-radius: 50%;
+  width: 5vmin;
+  height: 5vmin;
+  top: -0.25vmin;
+  left: 44%;
+  box-shadow: 1.25vmin -1vmin var(--grass);
+  transform: rotate(-10deg)
+}
+
+.grass-leave::after {
+  border-radius: 50%;
+  width: 5vmin;
+  height: 5vmin;
+  top: 10%;
+  left: 6vmin;
+  box-shadow: -1vmin -1vmin var(--grass)
+}
+
+.grass-leave + .grass-leave {
+  transform: scaleX(-1);
+  left: 55%;
+  top: -0.25vmin;
+}
+
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

@@ -1,0 +1,41 @@
+{
+    "name": "oh-no-the-css-stapler-was-cake-css-cake-",
+    "version": "1.0.0",
+    "title": "Oh no! The CSS stapler was cake! (CSS cake)",
+    "description": "Illustration of a stapler coded in HTML and CSS using a single element. Some fun facts:\n\n- It is interactive: the stapler opens and closes on click because the element is a checkbox (...although I wouldn't recommend using it in a form 😅)\n- It is responsive: just change the width (it uses `aspect-ratio` to adapt).\n- It is not cake... it's CSS!\n\nBased on this [stapler on Amazon](https://m.media-amazon.com/images/I/61ED7jQCO-L._AC_SX679_.jpg)",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "oh-no-the-css-stapler-was-cake-css-cake-.html",
+    "css": [
+        "oh-no-the-css-stapler-was-cake-css-cake-.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "cssart",
+        "html",
+        "animatedcss",
+        "css-art"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/zYWQBma",
+    "codepen": "https://codepen.io/alvaromontoro/pen/zYWQBma"
+}

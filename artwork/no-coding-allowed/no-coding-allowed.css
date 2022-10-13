@@ -1,0 +1,327 @@
+html, body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  
+  background: linear-gradient(#ddd, white);
+}
+
+.cartoon {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80vmin;
+  height: 80vmin;
+  overflow: hidden;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+.cartoon {
+  --hat: #369;
+  --skin: #beeeef;
+  --line: #222;
+  color: var(--line);
+}
+
+.head {
+  width: 35%;
+  height: 43%;
+  border-radius: 100% / 80% 50% 70% 120%;
+  background: var(--skin);
+  top: 10%;
+  left: 35%;
+  transform: translate(-50%, 0);
+}
+
+.mouth {
+  width: 45%;
+  height: 15%;
+  border-radius: 50%;
+  border-color: transparent;
+  border-bottom: 0.5vmin solid;
+  top: 64%;
+  right: 12%;
+}
+
+.mouth::before,
+.mouth::after {
+  width: 50%;
+  height: 70%;
+  border: 0.5vmin solid transparent;
+  border-left: 0.5vmin solid;
+  border-radius: 50%;
+  transform: rotate(35deg);
+  top: 82%;
+}
+
+.mouth::before {
+  right: -15%;
+  top: 10%;
+  width: 30%;
+  transform: rotate(-40deg);
+}
+
+.nose {
+  width: 4.5vmin;
+  height: 4vmin;
+  border-left-color: transparent;
+  top: 55%;
+  left: 64%;
+  transform: rotate(-10deg);
+}
+
+.nose::after {
+  width: 20%;
+  height: 55%;
+  border: 0.5vmin solid transparent;
+  border-top: 0.25vmin solid transparent;
+  border-left: 0.5vmin solid;
+  border-radius: 50%;
+  top: -53%;
+  left: 25%;
+}
+
+.eye {
+  background: white;
+  width: 9vmin;
+  height: 9vmin;
+  right: -3%;
+  top: 26%;
+}
+
+.eye + .eye {
+  right: 35%;
+  top: 26.75%;
+  transform: scale(1.05)
+}
+
+.eye::before {
+  width: 1vmin;
+  height: 1vmin;
+  background: var(--line);
+  border-radius: 50%;
+  top: 50%;
+  left: 60%;
+}
+
+.eye::after {
+  width: 102%;
+  height: 30%;
+  border: 0.5vmin solid;
+  border-radius: 10vmin 10vmin 10vmin 0;
+  border-left: 0;
+  border-top-color: transparent;
+  background: var(--skin);
+  transform-origin: top left;
+  transform: rotate(-5deg);
+  top: -10%;
+}
+
+.ear {
+  width: 9vmin;
+  height: 11vmin;
+  border-right: 0.25vmin solid transparent;
+  transform: rotate(-12deg);
+  top: 40%;
+  left: -19%;
+  background: vaR(--skin);
+}
+
+.ear::before {
+  width: 50%;
+  height: 60%;
+  border: 0.5vmin solid;
+  border-radius: 50%;
+  border-left: 0.25vmin solid transparent;
+  border-bottom-color: transparent;
+  transform: rotate(-10deg);
+  right: 20%;
+  top: 20%;
+}
+
+.ear::after {
+  width: 3vmin;
+  height: 3vmin;
+  border-radius: 50%;
+  border: 0.5vmin solid;
+  border-right-color: transparent;
+  transform: rotate(55deg);
+  right: 20%;
+  top: 45%;
+}
+
+.hat-bottom {
+  width: 128%;
+  height: 15%;
+  border-left-color: transparent;
+  border-right: 0.75vmin solid;
+  border-bottom: 0.25vmin solid transparent;
+  transform: rotate(-23deg);
+  top: 18%;
+  left: -11%;
+  background-image: 
+    linear-gradient(68deg, transparent 84.5%, rgba(0,0,0,0.4) 0),
+    linear-gradient(69deg, transparent 84.5%, var(--hat) 0)
+}
+
+.hat-top {
+  width: 105%;
+  height: 40%;
+  transform: rotate(-24deg);
+  left: -19%;
+  top: -14%;
+  border-radius: 200% 100% 0 0;
+  border-bottom: 0;
+  background-image: 
+    linear-gradient(-6deg, transparent 18%, var(--hat) 0),
+    linear-gradient(6deg, transparent 18%, var(--hat) 0),
+    linear-gradient(var(--hat) 93%, transparent 0);
+}
+
+.neck {
+  width: 10%;
+  height: 15%;
+  background: var(--skin);
+  left: 28%;
+  top: 46%;
+  border-radius: 100% / 40%;
+}
+
+.shirt {
+  width: 38%;
+  height: 50%;
+  border-radius: 100% / 40% 45% 0 0;
+  top: 57%;
+  left: 32%;
+  background: white;
+  transform: translate(-50%, 0) skewY(-3deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  font-family: courier, 'courier new';
+  margin-left: 6vmin;
+  line-height: 5vmin;
+}
+
+.text span {
+  font-size: 7vmin;
+}
+
+.text .large {
+  font-size: 10vmin;
+}
+
+.heart {
+  color: red;
+}
+
+.arm {
+  width: 12%;
+  height: 50%;
+  background: var(--skin);
+  border-radius: 20% 80% 0 0;
+  transform: rotate(-1deg);
+  top: 63%;
+  left: 45.5%;
+}
+
+.arm ~ .arm {
+  border-radius: 80% 20% 0 0;
+  transform: rotate(8deg);
+  top: 62%;
+  left: 3%;
+}
+
+.poster {
+  width: 40%;
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 4vmin;
+  text-transform: uppercase;
+  background: #ffd;
+  top: 20%;
+  left: 60%;
+  font-family: Arial, sans-serif;
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

@@ -1,0 +1,55 @@
+body {
+  min-height: 300px;
+  height: 100vh;
+  position: relative;
+  background-color: #fffacd;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div::before,
+div::after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+@media (max-width: 400px) {
+  div:not(.no-scale) {
+    transform: scale(0.8);
+  }
+}
+#burger {
+  width: 200px;
+  height: 80px;
+  margin-left: -100px;
+  margin-top: -80px;
+  background-repeat: no-repeat;
+  background: radial-gradient(circle, black 50%, rgba(0,0,0,0) 52%) 38% 60%/1em 1em, radial-gradient(circle, white 50%, rgba(255,255,255,0) 51%) 35% 46%/3em 3em, radial-gradient(circle, black 50%, rgba(0,0,0,0) 52%) 62% 60%/1em 1em, radial-gradient(circle, white 50%, rgba(255,255,255,0) 51%) 65% 46%/3em 3em, radial-gradient(ellipse, #985f28 50%, rgba(205,133,63,0) 51%) 50% 84%/1.5em 1em, radial-gradient(ellipse, #ffefd5 50%, rgba(255,239,213,0) 52%) 25% 18%/0.6em 0.3em, radial-gradient(ellipse, #ffefd5 50%, rgba(255,239,213,0) 52%) 17% 30%/0.4em 0.4em, radial-gradient(ellipse, #ffefd5 50%, rgba(255,239,213,0) 52%) 10% 45%/0.3em 0.6em, radial-gradient(ellipse, #ffefd5 50%, rgba(255,239,213,0) 52%) 5% 65%/0.6em 0.3em, radial-gradient(ellipse, #ffefd5 50%, rgba(255,239,213,0) 52%) 15% 60%/0.4em 0.4em, radial-gradient(ellipse, #ffefd5 50%, rgba(255,239,213,0) 52%) 75% 18%/0.6em 0.3em, radial-gradient(ellipse, #ffefd5 50%, rgba(255,239,213,0) 52%) 83% 30%/0.4em 0.4em, radial-gradient(ellipse, #ffefd5 50%, rgba(255,239,213,0) 52%) 90% 45%/0.3em 0.6em, radial-gradient(ellipse, #ffefd5 50%, rgba(255,239,213,0) 52%) 95% 65%/0.6em 0.3em, radial-gradient(ellipse, #ffefd5 50%, rgba(255,239,213,0) 52%) 85% 60%/0.4em 0.4em, linear-gradient(to top, #daa470 10%, #cd853f 10%) 0 0/100% 100%;
+  background-repeat: no-repeat;
+  border-top-left-radius: 50% 80%;
+  border-top-right-radius: 50% 80%;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+  box-shadow: inset 2em 0.3em 0 rgba(139,69,19,0.2);
+}
+#burger::before {
+  width: 95%;
+  left: 2.5%;
+  height: 220px;
+  top: -56.5%;
+  background: radial-gradient(circle, #ffc4ad 40%, rgba(255,160,122,0) 40.5%) 65% 93%/2em 2em, radial-gradient(circle, #ffc4ad 45%, rgba(255,160,122,0) 45.5%) 75% 95%/2em 2em, radial-gradient(circle, #ffc4ad 30%, rgba(255,160,122,0) 30.5%) 85% 94%/2em 2em, radial-gradient(circle, #ffc4ad 30%, rgba(255,160,122,0) 30.5%) 5% 68%/2em 2em, radial-gradient(circle, #ffc4ad 40%, rgba(255,160,122,0) 40.5%) 15% 70%/2em 2em, radial-gradient(circle, #ffc4ad 35%, rgba(255,160,122,0) 35.5%) 25% 69%/2em 2em, radial-gradient(circle at 100% 30%, rgba(139,69,19,0) 50%, rgba(139,69,19,0.2) 50.5%) 0 100%/30% 13%, linear-gradient(to bottom, #daa470 20%, #cd853f 20%) 50% 100%/100% 13%, linear-gradient(#ffd700, #ffd700) 50% 77.5%/98% 3%, linear-gradient(to bottom, #daa470 20%, #cd853f 20%) 50% 72.5%/100% 9.5%, linear-gradient(#985f28, #985f28) 35% 26%/2em 0.6em, linear-gradient(#985f28, #985f28) 65% 26%/2em 0.6em, radial-gradient(ellipse at 50% 100%, rgba(255,215,0,0) 32%, #ffd700 33%, #ffd700 50%, rgba(255,215,0,0) 51%) 48.5% 5.5%/0.6em 1em, radial-gradient(ellipse at 50% 100%, rgba(255,215,0,0) 32%, #ffd700 33%, #ffd700 50%, rgba(255,215,0,0) 51%) 51.5% 5.5%/0.6em 1em, linear-gradient(black, black) 50% 16%/2.2em 0.3em, linear-gradient(#4169e1, #4169e1) 50% 11.1%/2.2em 1.71em, radial-gradient(circle, #4169e1 51%, rgba(65,105,225,0) 52%) 50% -2%/3em 3em, linear-gradient(140deg, rgba(65,105,225,0) 60%, #4169e1 61%) 36% 17.4%/1em 0.8em, linear-gradient(-140deg, rgba(65,105,225,0) 60%, #4169e1 61%) 64% 17.4%/1em 0.8em;
+  background-repeat: no-repeat;
+  border-radius: 0 0 1em 1em;
+}
+#burger::after {
+  width: 100%;
+  height: 20px;
+  top: 158%;
+  background: linear-gradient(40deg, #8b4513 30%, rgba(139,69,19,0) 30.5%) 0 0/51% 100%, linear-gradient(-40deg, #8b4513 65%, rgba(139,69,19,0) 65.5%) 0 0/51% 100%, linear-gradient(-40deg, #8b4513 30%, rgba(139,69,19,0) 30.5%) 100% 0/51% 100%, linear-gradient(40deg, #8b4513 65%, rgba(139,69,19,0) 65.5%) 100% 0/51% 100%;
+  background-repeat: no-repeat;
+  background-color: #ffd700;
+  border-radius: 1em;
+  box-shadow: 0 -2.9em 0 #8b4513;
+}

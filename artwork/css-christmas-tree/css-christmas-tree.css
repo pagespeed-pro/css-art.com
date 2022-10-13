@@ -1,0 +1,326 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background:
+    linear-gradient(#def, #cde calc(50% + 10vmin), #fff 0);
+}
+
+.canvas {
+  width: 80vmin;
+  height: 80vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.canvas div,
+.canvas div::before,
+.canvas div::after {
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+}
+
+.canvas .deco {
+  display: none;
+}
+
+#show-deco:checked ~ .canvas .deco,
+.canvas.no-deco .deco {
+  display: block;
+}
+
+#lights:not(:checked) ~ .canvas .light {
+  animation: none;
+}
+
+input {
+  position: absolute;
+  left: -1000px;
+}
+
+label {
+  display: block;
+  margin: 1vmin;
+  line-height: 4vmin;
+  font-size: 3.5vmin;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+label::before {
+  content: "";
+  display: inline-block;
+  width: 3vmin;
+  height: 3vmin;
+  border: 0.75vmin solid #369;
+  border-radius: 0.5vmin;
+  margin-right: 1vmin;
+  vertical-align: bottom;
+}
+
+input:checked + label::before {
+  background: #369;
+  box-shadow: inset 0 0 0 0.5vmin #def;
+}
+
+.leaves {
+  border-radius: 20%;
+  background: 
+    radial-gradient(at 0 0, darkgreen, green 72.5%, #0000 72.6%);
+  left: 50%;
+  transform: translate(-50%, 0) rotate(45deg);
+  -webkit-mask:
+    radial-gradient(50% 150% at -20% 50%, #0000 44%, #000 44.5%),
+    radial-gradient(150% 50% at 50% -20%, #0000 44%, #000 44.5%);
+  -webkit-mask-composite: destination-in;
+  
+}
+
+.top {
+  width: 25%;
+  height: 25%;
+  top: 0;
+}
+
+.middle {
+  width: 40%;
+  height: 40%;
+  top: 15%;
+}
+
+.bottom {
+  width: 65%;
+  height: 65%;
+  top: 35%;
+}
+
+.trunk {
+  width: 20%;
+  height: 30%;
+  background: 
+    radial-gradient(10% 120% at 20% 0%, maroon 50%, #0000 0),
+    radial-gradient(5% 120% at 40% 35%, maroon 40%, #0000 0),
+    radial-gradient(10% 120% at 70% 30%, maroon 25%, #0000 0),
+    radial-gradient(15% 120% at 70% 100%, maroon 25%, #0000 0),
+    linear-gradient(brown, maroon);
+  background-repeat: no-repeat;
+  border-radius: 100% / 30%;
+  bottom: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.decoration {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.balls {
+  background:
+    radial-gradient(circle at 25% 43%, #fff4 1%, #0000 0),
+    radial-gradient(circle at 27% 45%, darkorange 5%, #0000 0),
+    linear-gradient(silver 0 0) 26.75% 41% / 2% 3%,
+    
+    radial-gradient(circle at 63% 18%, #fff4 1%, #0000 0),
+    radial-gradient(circle at 65% 20%, lightseagreen 5%, #0000 0),
+    linear-gradient(silver 0 0) 65.5% 14.5% / 2% 3%,
+    
+    radial-gradient(circle at 53% 78%, #fff4 1%, #0000 0),
+    radial-gradient(circle at 55% 80%, #f55 5%, #0000 0),
+    linear-gradient(silver 0 0) 55% 76.5% / 2% 3%,
+    
+    radial-gradient(circle at 70% 55%, #fff4 1%, #0000 0),
+    radial-gradient(circle at 72% 57%, #d8e 5%, #0000 0),
+    linear-gradient(silver 0 0) 72.5% 53.25% / 2% 3%
+    ;
+  background-repeat: no-repeat;
+}
+
+.decoration-1 {
+  --color1: gold;
+  --color2: orange;
+  --color3: darkorange;
+  clip-path: polygon(20% 50%, 92% 50%, 92% 75%, 10% 72%, 10% 60%);
+  background:
+    repeating-linear-gradient(45deg, #0000 0 1%, var(--color1) 0 1.25%),
+    repeating-linear-gradient(98deg, #0000 0 1%, var(--color2) 0 1.25%),
+    repeating-linear-gradient(20deg, #0000 0 1%, var(--color1) 0 1.25%),
+    repeating-linear-gradient(-20deg, #0000 0 1%, var(--color3) 0 1.25%, #0000 0 1.5%);
+  -webkit-mask:
+    radial-gradient(180% 120% at 70% 20%, #0000 40%, #000 0 43%, #0000 0);
+}
+
+.decoration-2 {
+  --color1: gold;
+  --color2: orange;
+  --color3: darkorange;
+  background:
+    repeating-linear-gradient(45deg, #0000 0 1%, var(--color1) 0 1.25%),
+    repeating-linear-gradient(98deg, #0000 0 1%, var(--color3) 0 1.25%),
+    repeating-linear-gradient(20deg, #0000 0 1%, var(--color1) 0 1.25%),
+    repeating-linear-gradient(-20deg, #0000 0 1%, var(--color2) 0 1.25%, #0000 0 1.5%);
+  clip-path: polygon(25% 20%, 70% 20%, 80% 40%, 23% 40%); 
+  -webkit-mask:
+    radial-gradient(180% 120% at 40% -15%, #0000 40%, #000 0 43%, #0000 0);
+}
+
+.shadow {
+  width: 90%;
+  height: 20%;
+  background: #eee;
+  border-radius: 50%;
+  bottom: -13%;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(0.5vmin)
+}
+
+.star {
+  width: 16%;
+  height: 16%;
+  left: 50%;
+  top: -13%;
+  transform: translate(-50%, 0) rotate(5deg);
+}
+
+.point {
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  transform: translate(-50%, -10%) rotate(45deg);
+  border-radius: 20%;
+  background: conic-gradient(from 0.33turn at 0 0, orange 33.3deg, #0000 33.75deg);
+}
+
+.point:nth-child(2) {
+  transform: translate(-50%, 0%) rotate(45deg) translate(50%, -20%) rotate(70deg);
+}
+
+.point:nth-child(3) {
+  transform: scaleX(-1) translate(50%, 0%) rotate(45deg) translate(50%, -20%) rotate(70deg);
+}
+
+.point:nth-child(4) {
+  transform: translate(-50%, 0%) rotate(45deg) translate(80%, 30%) rotate(140deg);
+}
+
+.point:nth-child(5) {
+  transform: scaleX(-1) translate(50%, 0%) rotate(45deg) translate(80%, 30%) rotate(140deg);
+}
+
+
+
+@keyframes lightup {
+  0%, 100% {
+    box-shadow: 0 0 0 0 #ffc;
+    background: #ffcc;
+  }
+  50% {
+    box-shadow: 0 0 4vmin 1vmin #ffc;
+    background: #ffcf;
+  }
+}
+
+.light {
+  width: 3%;
+  height: 5%;
+  background: #ffcc;
+  border-radius: 100% / 70% 70% 150% 150%;
+  animation: lightup 3s infinite;
+}
+
+.light:nth-child(1) {
+  top: 70%;
+  left: 25%;
+  transform: rotate(30deg);
+  animation-delay: -1s;
+}
+
+.light:nth-child(2) {
+  top: 76%;
+  left: 70%;
+  transform: rotate(-15deg);
+  animation-delay: -2s;
+}
+
+.light:nth-child(3) {
+  top: 51%;
+  left: 50%;
+}
+
+.light:nth-child(4) {
+  top: 25%;
+  left: 37%;
+  transform: rotate(60deg);
+  animation-delay: -1.5s;
+}
+
+.light:nth-child(5) {
+  top: 10%;
+  left: 50%;
+  transform: rotate(-30deg);
+  animation-delay: -2.5s;
+}
+
+.light:nth-child(6) {
+  top: 40%;
+  left: 70%;
+  transform: rotate(-10deg);
+}
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

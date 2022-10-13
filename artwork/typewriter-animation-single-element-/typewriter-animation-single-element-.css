@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+
+html {
+  background: #fed;
+}
+
+@keyframes movePaper {
+  0% { transform: translate(-50%, -50%); }
+  100% { transform: translate(calc(-50% - 6ch), -50%); }
+}
+
+@keyframes moveTypewriter {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(calc(-50% + 6ch)); }
+}
+
+@keyframes typing {
+  to { width: 7ch; }
+}
+
+@keyframes typingHead {
+  0%, 2% { background-position: 0ch 0; }
+  8.333% { background-position: 0ch 6vmin }
+  
+  16.666% { background-position: 1ch 0 }
+  25% { background-position: 1ch 6vmin }
+  
+  33.333% { background-position: 2ch 0 }
+  41.666% { background-position: 2ch 6vmin }
+  
+  50% { background-position: 3ch 0 }
+  58.333% { background-position: 3ch 6vmin }
+  
+  66.666% { background-position: 4ch 0 }
+  75% { background-position: 4ch 6vmin }
+  
+  83.333% { background-position: 5ch 0 }
+  /* ooops, bad timing! */
+  100% { background-position: 5ch 6vmin; }
+}
+
+@media (prefers-reduced-motion) {
+  * { animation: none !important; }
+}
+
+body {
+  --hue: 0;
+  --saturation: 75%;
+  --lightness: 65%;
+  --primary: hsl(var(--hue), var(--saturation), var(--lightness));
+  --primary-light: hsl(var(--hue), var(--saturation), calc(var(--lightness) + 7%));
+  --primary-dark: hsl(var(--hue), var(--saturation), calc(var(--lightness) - 7%));
+  --base: #333;
+  --button: #eee;
+  --paper: #fff;
+  animation: movePaper 2s steps(6) 1;
+  aanimation-fill-mode: forwards;
+  padding-top: 20vmin;
+  padding-left: 28.5vmin;
+  font-family: syne mono, courier, monospace, monospace;
+  font-size: 2.5vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 58vmin;
+  height: 60vmin;
+  box-sizing: border-box;
+  background-image:
+    /* paper */
+    repeating-linear-gradient(var(--paper) 0 10%, var(--primary) 11%),
+    /* roller knob */
+    repeating-linear-gradient(gray 0 2%, var(--base) 0 4%),
+    /* carriage */
+    linear-gradient(silver, silver),
+    linear-gradient(transparent 35%, gray 0 48%, transparent 0),
+    radial-gradient(silver 50%, transparent 0);
+  background-size: 
+    /* paper */
+    70% 50%,
+    10% 9vmin,
+    3% 20vmin,
+    100% 100%,
+    6% 10vmin;
+  background-position:
+    /* paper */
+    center top,
+    right 20.35vmin,
+    left 9vmin,
+    left top,
+    left 7.5vmin;
+  background-repeat: no-repeat;
+}
+
+body::before {
+  animation: moveTypewriter 2s steps(6) 1;
+  aanimation-fill-mode: forwards;
+  content: "";
+  width: 50vmin;
+  height: 36vmin;
+  top: 24vmin;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--base);
+  border-radius: 2vmin;
+  position: absolute;
+  background-image:
+    /* buttons row 1 */
+    radial-gradient(ellipse 1.25vmin 1.25vmin at  9.5vmin 20vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 13.0vmin 20vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 16.5vmin 20vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 20.0vmin 20vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 23.5vmin 20vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 27.0vmin 20vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 30.5vmin 20vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 34.0vmin 20vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 37.5vmin 20vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 41.0vmin 20vmin, var(--button) 95%, transparent 0),
+    /* buttons row 2 */
+    radial-gradient(ellipse 1.25vmin 1.25vmin at  7.75vmin 23.25vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 11.25vmin 23.25vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 14.75vmin 23.25vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 18.25vmin 23.25vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 21.75vmin 23.25vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 25.25vmin 23.25vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 28.75vmin 23.25vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 32.25vmin 23.25vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 35.75vmin 23.25vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 39.25vmin 23.25vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 42.75vmin 23.25vmin, var(--button) 95%, transparent 0),
+    /* buttons row 3 */
+    radial-gradient(ellipse 1.25vmin 1.25vmin at  7.75vmin 26.5vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 11.25vmin 26.5vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 14.75vmin 26.5vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 18.25vmin 26.5vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 21.75vmin 26.5vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 25.25vmin 26.5vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 28.75vmin 26.5vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 32.25vmin 26.5vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 35.75vmin 26.5vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 39.25vmin 26.5vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 42.75vmin 26.5vmin, var(--button) 95%, transparent 0),
+    /* buttons row 4 */
+    radial-gradient(ellipse 1.25vmin 1.25vmin at  9.5vmin 29.75vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 13.0vmin 29.75vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 16.5vmin 29.75vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 20.0vmin 29.75vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 23.5vmin 29.75vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 27.0vmin 29.75vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 30.5vmin 29.75vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 34.0vmin 29.75vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 37.5vmin 29.75vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 41.0vmin 29.75vmin, var(--button) 95%, transparent 0),
+    /* buttons row 5 */
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 14.5vmin 33vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 18.0vmin 33vmin, var(--button) 95%, transparent 0),
+    radial-gradient(ellipse 1.25vmin 1.25vmin at 32.0vmin 33vmin, var(--button) 95%, transparent 0),
+    linear-gradient(var(--button), var(--button)),
+    /* keyboard background */
+    linear-gradient(var(--base), var(--base)),
+    /* key strokes window */
+    linear-gradient(transparent 45%, #fff4 0, var(--primary) 46%),
+    radial-gradient(circle at 50% -20%, var(--base) 18%, #666 0 20%, #0008 0, transparent 25% 44%, var(--primary-light) 0),
+    conic-gradient(at 50% -50%, var(--primary-light) 130deg, var(--base) 0 140deg, transparent 0 220deg, var(--base) 0 230deg, var(--primary-light) 0),
+    radial-gradient(circle at 50% -20%, transparent 30%, #0006 45%),
+    repeating-conic-gradient(at 50% -50%, #fff4 0 2deg, transparent 0 4deg)
+    
+    ;
+  background-size:
+     /* buttons row 1 */
+     100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
+    /* buttons row 2 */
+    100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
+    /* buttons row 3 */
+    100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
+    /* buttons row 4 */
+    100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%,
+    /* buttons row 5 */
+    100% 100%, 100% 100%, 100% 100%, 14vmin 2.5vmin,
+    /* keyboard background */
+    82% 48%,
+    /* key strokes window */
+    100% 100%, 100% 100%, 100% 45%, 100% 100%, 100% 45%
+    ;
+  background-repeat: no-repeat;
+  background-position: 
+    /* buttons row 1 */
+    top center, top center, top center, top center, top center, top center, top center, top center, top center, top center,
+    /* buttons row 2 */
+    top center, top center, top center, top center, top center, top center, top center, top center, top center, top center, top center,
+    /* buttons row 3 */
+    top center, top center, top center, top center, top center, top center, top center, top center, top center, top center, top center,
+    /* buttons row 4 */
+    top center, top center, top center, top center, top center, top center, top center, top center, top center, top center, top center,
+    /* buttons row 1 */
+    top center, top center, 18.25vmin 31.775vmin, 
+    /* keyboard background */
+    center 18vmin,
+    /* keyb strokes window */
+    top center, top center, top center, top center, top center
+    ;
+  box-shadow: 
+    inset 0 -1px 2px #fff2,
+    0 3vmin var(--primary-dark),
+    0 4vmin #444;
+}
+
+body::after {
+  content: " Hello!";
+  display: inline-block;
+  width: 1ch;
+  height: 20vmin;
+  overflow: hidden;
+  animation: typing 2s steps(6), typingHead 2s linear;
+  animation-fill-mode: forwards;
+  background: linear-gradient(var(--base), black);
+  background-repeat: no-repeat;
+  background-size: 1ch 20vmin;
+  background-position: -0.5ch 0;
+}

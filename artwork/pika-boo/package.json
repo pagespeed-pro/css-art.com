@@ -1,0 +1,41 @@
+{
+    "name": "pika-boo",
+    "version": "1.0.0",
+    "title": "Pika-boo",
+    "description": "CSS only Pikachu pumpkin with dark mode features.",
+    "author": {
+        "name": "Tiffany Choong",
+        "avatar": "https://assets.codepen.io/765377/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1516941279&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/tiffachoo/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/tiffachooo"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/tiffachoo"
+            }
+        ]
+    },
+    "html": "pika-boo.html",
+    "css": [
+        "pika-boo.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css-image",
+        "scss",
+        "css-only",
+        "css-variables",
+        "pikachu"
+    ],
+    "original": "https://codepen.io/tiffachoo/pen/OJgYxMm",
+    "codepen": "https://codepen.io/tiffachoo/pen/OJgYxMm"
+}

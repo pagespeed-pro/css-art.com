@@ -1,0 +1,272 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid black;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+.cartoon {
+  --skin: #d94;
+  --dark: #852;
+  width: 90vmin;
+  height: 90vmin;
+  background-size: 100% auto;
+  background-position: center center;
+}
+
+.eye {
+  width: 7%;
+  height: 5.5%;
+  top: 32.5%;
+  left: 23%;
+  background: #fff;
+}
+
+.eye ~ .eye {
+  width: 8%;
+  height: 7%;
+  top: 32%;
+  left: 27%;
+}
+
+.eye::after {
+  width: 1vmin;
+  height: 1vmin;
+  background: black;
+  border-radius: 50%;
+  top:40%;
+  left: 35%;
+}
+
+.eye ~ .eye::after {
+  left: 40%;
+}
+
+.nose {
+  width: 40%;
+  height: 20%;
+  border-color: transparent;
+  border-bottom-color: black;
+  transform: rotate(-8deg);
+  top: 20%;
+  left: -5%;
+  box-shadow: 5vmin 4.5vmin 0 1vmin var(--skin), 5vmin 4.5vmin 0 1.5vmin #000;
+  clip-path: polygon(50% 50%, 150% 150%, -150% 150%, 0% 50%)
+}
+
+.snout {
+  height: 4%;
+  width: 6%;
+  top: 35%;
+  left: -4%;
+  transform: rotate(40deg);
+  background: var(--dark);
+}
+
+.body {
+  width: 58%;
+  top: 47.5%;
+  height: 10%;
+  left: 32.5%;
+  border-radius: 10vmin;
+  background: var(--skin);
+}
+
+.body::after {
+  width: 10%;
+  height: 150%;
+  background: red;
+  left: -0.5vmin;
+  top: -100%;
+  border-left: 0.5vmin solid black;
+  background: var(--skin);
+}
+
+.body::before {
+  width: 30%;
+  height: 70%;
+  border: 0.5vmin solid transparent;
+  border-bottom: 0.5vmin solid black;
+  border-radius: 50%;
+  box-sizing: border-box;
+  left: 10%;
+  top: -69.25%;
+  box-shadow: -3vmin 3vmin 0 2vmin var(--skin);
+  clip-path: polygon(0% 50%, 50% 50%, 50% 100%, 0% 100%);
+}
+
+.ear {
+  width: 8%;
+  height: 18%;
+  top: 34%;
+  left: 34.25%;
+  border-radius: 60% 60% 100% 100% / 30% 30% 150% 150%;
+  transform: skewY(15deg);
+  background: var(--dark);
+}
+
+.ear-2 {
+  top: 33%;
+  left: 26%;
+  width: 6%;
+}
+
+.mouth {
+  width: 3%;
+  height: 3%;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  top: 41.3%;
+  left: 31.3%;
+  box-shadow: 2vmin -2vmin 0 2vmin var(--skin), -2vmin -4vmin 0 2vmin var(--skin), 1vmin -6vmin 0 3.5vmin var(--skin), 1vmin -6vmin 0 4vmin;
+}
+
+.tail {
+  width: 26%;
+  height: 22%;
+  top: 28%;
+  left: 76%;
+  box-shadow: -1.125vmin 0vmin 0 1vmin var(--dark), -1.125vmin 0vmin 0 1.5vmin;
+  clip-path: polygon(50% 50%, 150% 50%, 150% 150%, 50% 150%);
+}
+
+.jaw {
+  width: 5%;
+  height: 3%;
+  border-radius: 0 0 0 100%;
+  top: 42%;
+  left: 30%;
+  transform: rotate(-30deg);
+  background: var(--skin);
+  clip-path: polygon(0% 0%, 100% 0%, 40% 100%, 0% 100%);
+}
+
+.leg {
+  width: 4.5%;
+  height: 10%;
+  top: 55%;
+  left: 42%;
+  border-top: 0;
+  border-radius: 0 0 2vmin 0;
+  background: var(--skin);
+}
+
+.leg::before,
+.leg::after {
+  width: 60%;
+  height: 30%;
+  border: 0.5vmin solid;
+  border-right: 0;
+  border-radius: 100% 0 0 25%;
+  bottom: -0.5vmin;
+  left: -70%;
+  background: var(--skin);
+}
+
+.leg::after {
+  width: 40%;
+  height: 20%;
+  left: -30%;
+}
+
+.leg-back {
+  box-shadow: inset 0 0 0 10vmin rgba(0,0,0,0.33);
+}
+
+.leg-back::before,
+.leg-back::after {
+  box-shadow: inset 0 0 0 10vmin rgba(0,0,0,0.33);
+}
+
+.leg-front-back {
+  left:35.5%;
+}
+
+.leg-back-back {
+  left: 78.5%;
+}
+
+.leg-back-front {
+  left: 85%;
+}
+
+.back-leg {
+  width: 10%;
+  height: 10%;
+  clip-path: polygon(50% 50%, 50% 100%, 0% 100%, 0% 50%);
+  top: 49.75%;
+  left: 80.75%;
+  background: var(--skin);
+}
+
+.back-leg.leg-back {
+  top: 49%;
+  left: 74.25%;
+}
+
+
+.eyebrow {
+  width: 4%;
+  height: 2%;
+  border-radius: 100% 60% 0 0;
+  box-shadow: 0 -1vmin 0 -0.1vmin;
+  top: 31.25%;
+  left: 24%;
+  transform: rotate(-5deg);
+}
+
+.eyebrow + .eyebrow{
+  border-radius: 50% 100% 0 0;
+  left: 30%;
+  transform: rotate(5deg);
+}
+
+.shadow {
+  width: 80%;
+  height: 4%;
+  background: #ccc;
+  aclip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+  top: 62.75%;
+  left: 15%;
+}
+
+.collar {
+  width: 11%;
+  height: 4%;
+  background: #d00;
+  transform: rotate(-29deg);
+  top: 46%;
+  left: 31.5%;
+  box-sizing: content-box;
+}
+
+.collar::after {
+  width: 40%;
+  height: 130%;
+  border: 0.5vmin solid;
+  border-radius: 50%;
+  background: gold;
+  top: 75%;
+  left: -35%;
+}

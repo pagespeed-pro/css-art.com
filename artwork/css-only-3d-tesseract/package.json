@@ -1,0 +1,34 @@
+{
+    "name": "css-only-3d-tesseract",
+    "version": "1.0.0",
+    "title": "CSS only 3D Tesseract",
+    "description": "",
+    "author": {
+        "name": "Temani Afif",
+        "avatar": "https://assets.codepen.io/1480814/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1637754747&width=512",
+        "web": "https://css-only.art/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/t_afif/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/ChallengesCss"
+            }
+        ]
+    },
+    "html": "css-only-3d-tesseract.html",
+    "css": [
+        "css-only-3d-tesseract.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "3d"
+    ],
+    "original": "https://codepen.io/t_afif/pen/BawNYzo",
+    "codepen": "https://codepen.io/t_afif/pen/BawNYzo"
+}

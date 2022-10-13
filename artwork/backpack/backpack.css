@@ -1,0 +1,57 @@
+/* Presets */
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  text-align: center;
+  padding-top: 10%;
+  background: #25aaa7;
+}
+
+div.backpack {
+  width: 190px;
+  height: 250px;
+  margin: 0 auto;
+  background-color: #d84736;
+  border: 5px solid #410c38;
+  border-radius: 85px 85px 45px 45px;
+  box-shadow: inset 0 6px 0 2px #e64a3e, 0 6px 2px -2px #1a858b, 0 -93px 0 -81px #25aaa7, 0 -93px 0 -77px #3b1045, 0 -93px 0 -72px #d84736, 0 -93px 0 -68px #3b1045;
+}
+
+div:before, div:after {
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+div:before {
+  height: 75px;
+  width: 118px;
+  background-image: radial-gradient(circle closest-corner at 13px 29px, #af342c, #af342c 2px, transparent 2px, transparent), radial-gradient(circle closest-corner at 13px 29px, #491033, #491033 4px, transparent 4px, transparent), linear-gradient(to bottom, transparent 10px, transparent 15px, #491033 5px, #491033 18px, transparent 18px, transparent 100px), linear-gradient(to right, #af342c 10px, #af342c 10px, transparent 10px, transparent 16px, #af342c 9px, #af342c 50px), linear-gradient(to bottom, #af342c 8px, #af342c 16px, #491033 8px, #491033 30px, #af342c 20px, #af342c 72px, #af342c 10px, #af342c 57px, #af342c 5%);
+  margin-left: 33px;
+  margin-top: 128px;
+  border: 4px solid #491033;
+  border-radius: 11px;
+  box-shadow: 0 4px 0 0 #c1382e, inset 0px 4px 1px 0 #c03527;
+  content: "||";
+  color: transparent;
+  font-family: Comic Sans MS;
+  font-weight: bold;
+  z-index: 1;
+  text-shadow: black -2px -86px 0px;
+  font-size: 14px;
+}
+
+div:after {
+  margin-left: 74px;
+  margin-top: 40px;
+  background: #cca16a;
+  width: 32px;
+  height: 32px;
+  border: 3px solid #491033;
+  border-radius: 3px;
+  transform: rotate(45deg);
+}

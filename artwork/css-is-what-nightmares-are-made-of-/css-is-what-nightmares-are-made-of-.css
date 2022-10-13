@@ -1,0 +1,268 @@
+body {
+  background: black;
+}
+
+article {
+  width: 80vmin;
+  aspect-ratio: 1;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 0 20vmin #feea)
+}
+
+article *,
+article *::before,
+article *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.face {
+  width: 50%;
+  height: 20%;
+  border-radius: 30% / 100%;
+  border: 0.7vmin solid;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  box-shadow: inset -1.5vmin 0 #0002;
+}
+
+.face::before {
+  content: "";
+  width: 120%;
+  height: 270%;
+  border: 0.75vmin solid;
+  border-bottom: 0.25vmin solid #0000;
+  border-top: 1vmin solid;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  border-radius: 100% / 100% 100% 100% 100%;
+  border-bottom-color: white;
+  background: 
+/*     radial-gradient(200% 150% at 40% 100%, #0000 50%, #000 51% 55%, #0000 56%) 33.33% 66% / 25.5% 10% no-repeat,
+    radial-gradient(200% 150% at 60% 100%, #0000 50%, #000 51% 55%, #0000 56%) 66.66% 66% / 25.5% 10% no-repeat, */
+    radial-gradient(#0000 40%, #fff 0),
+    
+    radial-gradient(200% 150% at 40% 100%, #fff 50%, #0000 51%) 33.33% 66% / 25.5% 10% no-repeat,
+    radial-gradient(200% 150% at 60% 100%, #fff 50%, #0000 51%) 66.66% 66% / 25.5% 10% no-repeat,
+     radial-gradient(200% 150% at 55% 100%, #000 50%, #0000 51%) 35% 65% / 25.5% 10% no-repeat,
+    radial-gradient(200% 150% at 45% 100%, #000 50%, #0000 51%) 65% 65% / 25.5% 10% no-repeat,
+    
+    radial-gradient(200% 150% at 40% 100%, #fff 50%, #0000 51%) 33.33% 59% / 25.5% 10% no-repeat,
+    radial-gradient(200% 150% at 60% 100%, #fff 50%, #0000 51%) 66.66% 59% / 25.5% 10% no-repeat,
+    radial-gradient(200% 150% at 50% 100%, #000 50%, #0000 51%) 40% 58% / 20% 10% no-repeat,
+    radial-gradient(200% 150% at 50% 100%, #000 50%, #0000 51%) 60% 58% / 20% 10% no-repeat,
+    
+    white;
+  z-index: 1;
+  background-clip: content-box;
+  clip-path: polygon(0 0, 100% 0, 100% 87.5%, 0 87.5%);
+  box-shadow: inset -1.5vmin 0 #0002;
+}
+
+.face::after {
+  content: "";
+  z-index: 1;
+  width: 55%;
+  height: 210%;
+  top: 60%;
+  right: 37%;
+  transform: translate(50%, 0%);
+  border-radius: 100% / 80% 75% 120% 130%;
+  background:
+    #fff;
+  box-shadow:
+    inset -1.5vmin 0 #0002,
+    -10vmin 0 #fff,
+    0.1vmin 0.25vmin 0 0.75vmin #000,
+    -10vmin 0.25vmin 0 0.75vmin #000;
+  clip-path: polygon(110% 18.75%, -100% 18.75%, -100% 150%, 110% 150%)
+}
+
+.face * {
+  z-index: 2;
+}
+
+.eye {
+  --pos: 20%;
+  --shade:0.3vmin 0.6vmin 0 -0.1vmin;
+  width: 20%;
+  aspect-ratio: 1.2;
+  background: 
+    radial-gradient(circle at 25% 25%, #fff 10%, #0000 0),
+    black;
+  border-radius: 50%;
+  left: var(--pos);
+  box-shadow:
+    0 0 0 0.4vmin #fff,
+    -0.3vmin -0.6vmin 0 -0.1vmin,
+    var(--shade),
+    -0.5vmin -0.8vmin 0 -0.1vmin #fff,
+    -0.8vmin -1.25vmin 0 -0.5vmin
+    ;
+}
+
+.eye + .eye {
+  --shade: 0vmin 0.66vmin 0 -0.1vmin;
+  left: auto;
+  right: var(--pos);
+  background: 
+    radial-gradient(circle at 75% 25%, #fff 10%, #0000 0),
+    black;
+  transform: scaleX(-1);
+}
+
+.chin {
+  width: 1vmin;
+  height: 1.5vmin;
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  top: 220%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+}
+
+.ear {
+  --pos: 17%;
+  --transform: translateY(-50%) rotate(-15deg);
+  width: 20%;
+  height: 30%;
+  border: 0.75vmin solid;
+  border-bottom-width: 0.6vmin;
+  border-top-width: 0.8vmin;
+  background: 
+    radial-gradient(140% 100% at 55% 80%, #0000 10%, #000 0 13%, #0000 0),
+    radial-gradient(farthest-side at 20% 100%, #0000 89%, #000 0 92%, #0000 0),
+    white;
+  border-radius: 100% / 30% 80% 100% 120%;
+  top: 53%;
+  left: 17%;
+  transform: var(--transform);
+  box-shadow: 
+    inset -1vmin 1vmin #0002,
+    inset 1vmin 0 #fff;
+}
+
+.ear + .ear {
+  left: auto;
+  right: var(--pos);
+  transform: scaleX(-1) var(--transform) ;
+  box-shadow: 
+    inset 1vmin 1vmin #0002,
+    inset 1vmin 0 #fff;
+}
+
+.mouth {
+  width: 55%;
+  height: 70%;
+  background: 
+    /* fangs */
+    conic-gradient(at 50% 100%, #fff 8deg, #0000 0 352deg, #fff 0) 15.25% 9% / 9% 50% no-repeat,
+    conic-gradient(at 50% 100%, #000 9deg, #0000 0 351deg, #000 0) 15.25% 12% / 9% 70% no-repeat,
+    conic-gradient(at 50% 100%, #fff 8deg, #0000 0 352deg, #fff 0) 84.25% 14% / 9% 50% no-repeat,
+    conic-gradient(at 50% 100%, #000 9deg, #0000 0 351deg, #000 0) 84.25% 14% / 9% 70% no-repeat,
+    /* random teeth */
+    linear-gradient(90deg, #0000 40%, #fff 40.2% 42%, #0000 42.2%) 100% 0 / 100% 49% no-repeat,
+    linear-gradient(90deg, #0000 49%, #fff 49.2% 51%, #0000 51.2%) 100% 0 / 100% 48% no-repeat,
+    
+    linear-gradient(90deg, #0000 28%, #fff 28.2% 30%, #0000 30.2%) 100% 0 / 100% 47% no-repeat,
+    linear-gradient(90deg, #0000 55%, #fff 55.2% 57%, #0000 57.2%) 100% 0 / 100% 47% no-repeat,
+    
+    linear-gradient(90deg, #0000 67%, #fff 67.2% 69%, #0000 69.2%) 100% 0 / 100% 48.5% no-repeat,
+    linear-gradient(90deg, #0000 73%, #fff 73.2% 75%, #0000 75.2%) 100% 0 / 100% 46.5% no-repeat,
+    /* teeth line */
+    radial-gradient(370% 200% at 50% 0, #0000 22.75%, #000 23% 28%, #0000 28.25%),
+    /* teeth */
+    repeating-linear-gradient(90deg, #000 1%, #fff 1.2% 3%, #000 3.2% 4%) 100% 0 / 100% 45% no-repeat,
+    /* tongue */
+    radial-gradient(at 36% 100%, #fdd 20%, #0000 20.25%),
+    radial-gradient(at 64% 100%, #fdd 22%, #0000 22.25%),
+    radial-gradient(at 36% 100%, #000 22%, #0000 0),
+    radial-gradient(at 64% 100%, #000 24%, #0000 0)
+    #000;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%) rotate(1.5deg);
+  border-radius: 50% / 0 0 95% 105%;
+  border: 0.55vmin solid;
+  border-bottom: 0.7vmin solid;
+  border-top: 0;
+  overflow: hidden;
+  
+}
+
+.mouth::after {
+  content: "";
+  width: 105%;
+  height: 40%;
+  border-radius: 50%;
+  border: 0.5vmin solid;
+  border-bottom: 0.7vmin solid;
+  background: #fff;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.correction {
+  width: 55%;
+  height: 30%;
+  background: #fff;
+  border-radius: 50%;
+  top: 105%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(2deg);
+}
+
+.correction::before {
+  content: "";
+  transform: rotate(-2deg);
+  width: 100%;
+  height: 50%;
+  background: #fff;
+  left: -17%;
+}
+
+.nose {
+  width: 2%;
+  height: 10%;
+  background: #000;
+  border-radius: 100% 20% 50% 50%;
+  top: 70%;
+  left: 50%;
+  transform: translate(-100%, 0)
+}
+
+.nose::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 20% 100% 50% 50%;
+  background: black;
+  left: 200%;
+}
+
+.nose::after {
+  content: "";
+  width: 300%;
+  height: 100%;
+  border-top: 0.35vmin solid;
+  border-radius: 50%;
+  transform: translate(0, -80%);
+}
+
+.clothes {
+  width: 100%;
+  height: 50%;
+  background: 
+    radial-gradient(farthest-side at 50% 0, #0000 97%, #000 97.1%),
+    conic-gradient(at 50% 200%, #fff 10deg, #000 0 350deg, #fff 0);
+  bottom: 0;
+  border-radius: 100% 100% 0 0;
+  clip-path: polygon(0 0, 100% 0, 100% 30%, 71% 89%, 95% 100%, 2% 100%, 30% 90%, 0 30%)
+}

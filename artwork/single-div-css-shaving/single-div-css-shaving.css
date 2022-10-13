@@ -1,0 +1,49 @@
+body {
+  min-height: 250px;
+  height: 100vh;
+}
+#dots {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #eee;
+  background-repeat: no-repeat, repeat;
+  background-image: linear-gradient(#eee, #eee), radial-gradient(circle, rgba(0,0,0,0.2) 30%, rgba(0,0,0,0) 31%);
+  background-size: 40% 11em, 1em 1em;
+  background-position: 0 50%, 50% 50%;
+  font-size: 10px;
+}
+@media (max-width: 400px) {
+  #dots {
+    font-size: 7px;
+  }
+}
+#dots:before,
+#dots:after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 40%;
+  top: 50%;
+}
+#dots:before {
+  width: 4.5em;
+  height: 12em;
+  margin-left: -1em;
+  margin-top: -5.6em;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(45deg, white 40%, rgba(255,255,255,0) 40%), linear-gradient(45deg, #a9a9a9 40%, rgba(0,0,0,0) 40%), linear-gradient(135deg, white 40%, rgba(255,255,255,0) 40%), linear-gradient(135deg, #a9a9a9 40%, rgba(0,0,0,0) 40%), linear-gradient(135deg, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0) 40%), linear-gradient(to right, #ddd 20%, white 20%), linear-gradient(#a9a9a9, #a9a9a9), linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
+  background-size: 3.2em 3em, 3.2em 3em, 3.2em 3em, 3.2em 3em, 1.3em 5em, 2.6em 10.8em, 3em 11.2em, 2.7em 11.2em;
+  background-position: 2.5em 3.1em, 2.5em 2.8em, 2.5em 5.1em, 2.5em 5.4em, 3em 6.5em, 0.2em 0.2em, 0 0, 0.5em 0.2em;
+}
+#dots:after {
+  box-sizing: border-box;
+  width: 23em;
+  height: 2.8em;
+  margin-left: 2.8em;
+  margin-top: -1.4em;
+  background-image: linear-gradient(to top, #ff8c00 50%, #ffa500 50%);
+  border-radius: 0 0.8em 0.8em 0;
+  border: 0.2em solid #ff6347;
+  box-shadow: 0.5em 1.5em 0 rgba(0,0,0,0.1);
+}

@@ -1,0 +1,371 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+  transition: all 1s;
+}
+
+.b {
+  border: 1vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  transition: all 1s;
+}
+
+/****/
+.cartoon {
+  --skin: #fca;
+  --eyes: #222;
+  --hair: #222;
+  --blue: #45f;
+  --yellow: #ff6;
+  --red: #d00;
+  --suit: #444;
+  --boot: #333;
+}
+
+.face {
+  width: 60%;
+  height: 30%;
+  background: var(--skin);
+  border-radius: 70% / 15%;
+  top: 15%;
+  left: 20%;
+}
+
+.face::before {
+  width: 110%;
+  height: 80%;
+  background: var(--skin);
+  top: 10%;
+  left: -5%;
+  border-radius: 15% / 150%;
+}
+
+.eye {
+  width: 4vmin;
+  height: 4vmin;
+  background: #222;
+  top: 45%;
+  left: 30%;
+  transform: translate(-50%, 0);
+}
+
+.eye::before {
+  width: 25%;
+  height: 25%;
+  background: white;
+  border-radius: 50%;
+  top: 15%;
+  right: 15%;
+}
+
+.eye + .eye {
+  left: 70%;
+}
+
+.mouth {
+  width: 5vmin;
+  height: 5vmin;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  transform: translate(-50%, 0) rotate(-45deg);
+  top: 60%;
+  left: 50%;
+}
+
+.ear {
+  width: 6vmin;
+  height: 6vmin;
+  background: var(--skin);
+  top: 50%;
+  left: -7%;
+  transform: translate(-50%, -50%);
+}
+
+.ear + .ear {
+  left: 107%;
+}
+
+.side-hair {
+  width: 15%;
+  height: 50%;
+  background: var(--hair);
+  left: -8%;
+  transform: translate(-50%, 0);
+}
+
+.side-hair + .side-hair {
+  left: 108%;
+}
+
+.top-hair {
+  width: 120%;
+  height: 45%;
+  left: -10%;
+  top: -24.5%;
+  background: var(--hair);
+  border-radius: 100% /  100% 15vmin 5vmin 100%;
+  transform: rotate(-1deg);
+}
+
+.top-hair::before {
+  width: 5vmin;
+  height: 5vmin;
+  border-radius: 50%;
+  box-shadow: inset -1vmin -0.5vmin var(--hair), 0 0 0 transparent;
+  left: 49%;
+  bottom: -35%;
+  transform: translate(-50%, 0);
+}
+
+.cartoon:hover .top-hair::before {
+  width: 23%;
+  height: 67%;
+  bottom: -100%;
+  left: 32.5%;
+  border-radius: 0 0 2vmin 2vmin;
+  box-shadow: inset 0 0 0 transparent, 20vmin 0 rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.4);
+}
+
+.top-hair::after {
+  width: 100%;
+  height: 10%;
+  background: black;
+  top: 130%;
+  transform: rotate(1deg);
+  opacity: 0;
+}
+
+.cartoon:hover .top-hair::after {
+  opacity: 1;
+}
+
+.neck {
+  width: 7%;
+  height: 10%;
+  background: var(--skin);
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: inset 0 5vmin 2vmin -2vmin;
+  border-radius: 0 0 100% 100% / 50%;
+}
+
+.body {
+  width: 25%;
+  height: 35%;
+  transform: translate(-50%, 0);
+  left: 50%;
+  top: 47.5%;
+  border-radius: 100% / 60% 60% 140% 140%;
+  background: linear-gradient(var(--blue) 70%, var(--yellow) 0 80%, var(--red) 0);
+  overflow: hidden;
+  opacity: 1;
+}
+
+.cartoon:hover .body + .body {
+  opacity: 0;
+}
+
+.body-2 {
+  background: linear-gradient(var(--suit) 70%, var(--boot) 0 80%, var(--suit) 0); 
+}
+
+.cartoon:hover .body-2 {
+  border-radius: 100% / 60% 60% 80% 80%;
+}
+
+.body-2 .logo {
+  top: 0;
+  height: 60%;
+  border: 0 solid transparent;
+  box-shadow: inset 6vmin -0.5vmin 0 -4vmin var(--boot), inset -6vmin -0.5vmin 0 -4vmin var(--boot);
+  background: #eee;
+}
+
+.body-2 .logo::before {
+  content: "";
+}
+
+.logo {
+  width: 50%;
+  height: 35%;
+  background: var(--red);
+  top: 15%;
+  left: 25%;
+  border-radius: 100% / 40% 40% 130% 130%;
+  border: 1vmin solid var(--yellow);
+  text-align: center;
+}
+
+.logo::before {
+  content: "S";
+  font-size: 6.5vmin;
+  color: var(--yellow);
+  font-family: Arial, sans-serif;
+}
+
+.legs {
+  width: 23%;
+  height: 30%;
+  border-radius: 100% 100% 10% 10% / 100%;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: inset -6vmin 0 var(--blue), inset 6vmin 0 var(--blue);
+}
+
+.cartoon:hover .legs {
+  box-shadow: inset -6vmin 0 var(--suit), inset 6vmin 0 var(--suit);
+}
+
+.boot {
+  width: 16%;
+  height: 6%;
+  background: var(--red);
+  border-radius: 100vmin 100vmin 0 0;
+  bottom: 0;
+  left: 31%;
+}
+
+.cartoon:hover .boot {
+  background: var(--boot);
+}
+
+.boot::after {
+  width: 50%;
+  height: 150%;
+  background: var(--red);
+  bottom: 0;
+  right: 1%;
+  transform: skewX(6deg);
+  opacity: 1;
+}
+
+.cartoon:hover .boot::after {
+  opacity: 0;
+}
+
+.boot + .boot {
+  transform: scaleX(-1);
+  left: auto;
+  right: 31%;
+}
+
+.arms {
+  width: 50%;
+  height: 30%;
+  border: 6vmin solid var(--blue);
+  border-bottom: 3vmin solid transparent;
+  border-radius: 100% 100% 25vmin 25vmin;
+  top: 47.5%;
+  left: 50%;
+  transform: translate(-50%, 0)
+}
+
+.cartoon:hover .arms {
+   border: 6vmin solid var(--suit);
+  border-bottom: 3vmin solid transparent;
+}
+
+.hand {
+  width: 10%;
+  height: 10%;
+  background: var(--skin);
+  top: 71%;
+  left: 31%;
+}
+
+.hand + .hand {
+  left: auto;
+  right: 31%;
+}
+
+.cape {
+  width: 40%;
+  height: 47%;
+  background: var(--red);
+  box-shadow: inset 0 0 0 10in rgba(0,0,0,0.25);
+  border-radius: 100% 100% 0 0;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+.cartoon:hover .cape {
+  opacity: 0;
+}
+
+
+/***/
+
+#youtube {
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

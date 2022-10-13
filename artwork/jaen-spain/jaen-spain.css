@@ -1,0 +1,327 @@
+#desc {
+  position: absolute;
+  left: -10000in;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.cartoon {
+  --background: #cceeff;
+  --border: #645; #31161f; #71565f;
+  --light: #db9; #dfbfa1; #e1c684;
+  --dark: #a87; #b29283; #89726b;
+  --semi: #b89888; #cfc291; #965f3d;
+  --dark2: #865; #79625b;
+  --mountain: #ab8; #fea; #b0be88; #fff2af;
+  --trees: #92c970;
+  --treesdark: #629940;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vmin;
+  height: 60vmin;
+  border-radius: 100%;
+  border: 0.5vmin solid var(--border);
+  background: var(--background);
+  overflow: hidden;
+}
+
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid var(--border);
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+.mountain,
+.tower,
+.wall {
+  opacity: 10.2;  
+}
+
+.tower-1a {
+  width: 5%;
+  height: 20%;
+  top: 43.3%;
+  left: 83%;
+  border-radius: 0.25vmin;
+  transform: skewY(12deg);
+  background: var(--dark);
+}
+
+.tower-1b {
+  width: 5.5%;
+  height: 20%;
+  transform: skewY(-15deg);
+  left: 78.5%;
+  top: 43.55%;
+  background: var(--light);
+}
+
+.tower-3a::after,
+.tower-3b::after,
+.tower-4a::after,
+.tower-4b::after,
+.tower-1b::after {
+  width: 8%;
+  height: 7%;
+  background: var(--border);
+  top: 16%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.tower-2a {
+  width: 10.25%;
+  height: 22%;
+  top: 37.95%;
+  left: 75%;
+  border-radius: 0.25vmin;
+  transform: skewY(12deg);
+  background: var(--dark);
+}
+
+.tower-2b::after,
+.tower-2a::after {
+  width: 9%;
+  height: 7%;
+  border: 0.5vmin solid var(--border);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 2%;
+  background: var(--dark);
+}
+
+.tower-2b {
+  width: 9%;
+  height: 20%;
+  transform: skewY(-16deg);
+  left: 67%;
+  top: 38.2%;
+  background: var(--light);
+}
+
+.tower-2b::after {
+  left: 60%;
+  top: 5.5%;
+  width: 15%;
+  height: 15%;
+  background-color: var(--light);
+  background-image: linear-gradient(to top, rgba(0,0,0,0.2) 50%, transparent 0)
+}
+
+.tower-3a {
+  width: 4.5%;
+  height: 20%;
+  top: 41.3%;
+  left: 61.5%;
+  border-radius: 0.25vmin;
+  transform: skewY(12deg);
+  background: var(--dark);
+}
+
+.tower-3b {
+  width: 4%;
+  height: 20%;
+  transform: skewY(-18deg);
+  left: 58.4%;
+  top: 41.6%;
+  background: var(--light);
+}
+
+.tower-3a::after,
+.tower-3b::after {
+  width: 20%;
+}
+.tower-3b::after {
+  top: 14%;
+  height: 5%;
+}
+
+.tower-4a {
+  width: 5.5%;
+  height: 20%;
+  top: 38%;
+  left: 34.1%;
+  border-radius: 0.25vmin;
+  transform: skewY(7deg);
+  background: var(--dark);
+}
+
+.tower-4a::after {
+  width: 20%;
+}
+
+.tower-4b::after {
+  width: 20%;
+}
+
+.tower-4b {
+  width: 2.75%;
+  height: 20%;
+  transform: skewY(-30deg);
+  left: 32.2%;
+  top: 38.35%;
+  background: var(--light);
+}
+
+.tower-5 {
+  width: 11%;
+  height: 15%;
+  top: 34%;
+  left: 6%;
+  transform: skewY(5deg);
+  clip-path: polygon(0% 2%, 50% 0%, 100% 2.5%, 100% 100%, 0% 100%);
+  background-color: var(--dark);
+  background-image: linear-gradient(to right, rgba(0,0,0,0.1) 50%, transparent 0), linear-gradient(to right, var(--light) 50%, transparent 0); 
+}
+
+.wall-1 {
+  width: 20%;
+  height: 15%;
+  transform: skewY(6deg);
+  top: 42.25%;
+  left: 13.25%;
+  background-color: var(--semi);
+  background-image: linear-gradient(to top, var(--semi) 96%, transparent 0), linear-gradient(to right, transparent 80%, var(--border) 0);
+  background-size: 7% 100%;
+}
+
+.wall-2 {
+  width: 25%;
+  height: 15%;
+  transform: skewY(8.5deg);
+  top: 45.5%;
+  left: 34.5%;
+  background-color: var(--semi);
+  background-image: linear-gradient(to top, var(--semi) 96%, transparent 0), linear-gradient(to right, transparent 80%, var(--border) 0);
+  background-size: 6% 100%;
+}
+
+.tower-6a {
+  width: 8%;
+  height: 20%;
+  top: 44.8%;
+  left: 43%;
+  border-radius: 0.25vmin;
+  transform: skewY(10deg);
+  background-color: var(--dark);
+  background-image: linear-gradient(to top, var(--dark) 96%, transparent 0), linear-gradient(to right, transparent 80%, var(--border) 0);
+  background-size: 18% 100%;
+}
+
+.tower-6b {
+  width: 1.9%;
+  height: 20%;
+  transform: skewY(-30deg);
+  left: 42%;
+  top: 44.5%;
+  background: var(--light);
+}
+
+.wall-3 {
+  width: 20%;
+  height: 7%;
+  transform: skewY(8.5deg);
+  top: 49.5%;
+  left: 61.5%;
+  background-color: var(--semi);
+}
+
+.wall-3::after {
+  width: 10%;
+  height: 60%;
+  border-radius: 50% 50% 0 0;
+  background: var(--border);
+  border: 0.25vmin solid var(--light);
+  top: 45%;
+  right: 15%;
+}
+
+.wall-4 {
+  width: 33%;
+  height: 15%;
+  border-radius: 0 20% 20% 0;
+  transform: skewY(10deg);
+  left: 62%;
+  top: 56%;
+  background-color: var(--dark2);
+  background-image: linear-gradient(to top, var(--dark2) 96%, transparent 0), linear-gradient(to right, transparent 80%, var(--border) 0);
+  background-size: 5% 100%;
+}
+
+.mountain,
+.trees {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0vmin -0.25vmin var(--border)) drop-shadow(0vmin 0.25vmin var(--border)) drop-shadow(-0.25vmin 0vmin var(--border)) drop-shadow(0.25vmin 0vmin var(--border));
+}
+.trees {
+  filter: drop-shadow(0vmin -0.25vmin var(--treesdark)) drop-shadow(0vmin 0.25vmin var(--treesdark)) drop-shadow(-0.25vmin 0vmin var(--treesdark)) drop-shadow(0.25vmin 0vmin var(--treesdark));
+}
+
+.mountain-cutout {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--mountain);
+  clip-path: polygon(-1.12% 44.25%, 6.62% 46.12%, 17.38% 47.62%, 30.88% 50.50%, 32.50% 50.88%, 32.75% 54.25%, 42.62% 55.12%, 51.00% 57.50%, 71.38% 59.12%, 86.88% 65.38%, 101.25% 68.50%, 101.38% 101.50%, -0.88% 100.62%);
+}
+
+.green {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  adisplay: none;
+}
+.forest-cutout {
+  width: 100%;
+  height: 100%;
+  top: 2%;
+  left: 0;
+  background: var(--trees);
+  clip-path: polygon(-2.00% 42.25%, 1.00% 39.75%, 3.50% 40.75%, 3.50% 44.12%, 5.12% 42.25%, 8.12% 43.88%, 6.50% 46.88%, 11.25% 44.12%, 17.00% 47.38%, 16.12% 52.50%, 16.25% 56.50%, 16.00% 59.00%, 17.88% 61.25%, 18.88% 56.12%, 22.00% 53.62%, 25.00% 58.12%, 24.12% 59.25%, 24.25% 61.62%, 21.88% 64.50%, 24.75% 65.50%, 29.25% 63.12%, 29.25% 66.00%, 31.12% 64.12%, 32.62% 58.88%, 31.75% 56.25%, 33.62% 54.62%, 39.00% 60.25%, 39.50% 64.50%, 44.38% 64.62%, 44.12% 67.00%, 46.50% 70.12%, 49.38% 71.50%, 51.12% 71.12%, 54.62% 72.88%, 56.50% 76.00%, 62.38% 73.25%, 65.12% 77.00%, 67.88% 81.62%, 72.12% 79.38%, 72.25% 82.12%, 76.50% 79.12%, 75.12% 75.75%, 70.38% 74.12%, 73.50% 71.88%, 69.75% 69.25%, 66.25% 67.62%, 61.62% 65.38%, 64.12% 69.62%, 61.62% 69.62%, 58.75% 68.12%, 57.25% 64.25%, 51.50% 63.00%, 49.38% 60.38%, 44.50% 59.25%, 43.62% 54.75%, 40.62% 54.75%, 38.00% 53.00%, 35.50% 52.50%, 35.50% 51.38%, 37.88% 48.88%, 40.88% 47.00%, 41.75% 49.12%, 42.12% 46.50%, 45.38% 46.50%, 45.38% 49.50%, 46.88% 47.50%, 50.38% 53.25%, 47.38% 55.00%, 47.75% 57.00%, 49.75% 56.62%, 52.50% 53.62%, 55.25% 51.25%, 54.25% 49.12%, 56.50% 47.38%, 57.00% 49.25%, 58.75% 52.62%, 59.75% 51.38%, 59.75% 49.88%, 62.00% 52.25%, 60.62% 54.75%, 62.62% 57.00%, 63.38% 56.00%, 63.50% 53.62%, 64.88% 53.00%, 65.25% 50.25%, 68.00% 50.75%, 69.50% 53.88%, 72.88% 55.62%, 73.38% 53.88%, 75.88% 56.25%, 78.62% 56.00%, 81.00% 56.50%, 81.00% 58.62%, 82.62% 61.00%, 87.00% 58.00%, 87.88% 60.38%, 89.25% 58.88%, 89.62% 62.00%, 91.25% 59.38%, 94.50% 61.75%, 94.62% 64.25%, 99.38% 62.25%, 99.50% 66.50%, 105.50% 67.5%, 104.0% 83.38%, 99.12% 82.75%, 96.50% 79.00%, 91.50% 78.88%, 90.00% 76.50%, 90.38% 80.25%, 87.12% 80.25%, 87.25% 75.75%, 83.38% 75.62%, 81.50% 73.88%, 78.38% 75.50%, 81.25% 78.00%, 79.75% 80.12%, 83.50% 80.38%, 86.25% 84.25%, 83.25% 87.00%, 81.62% 85.38%, 82.12% 82.38%, 79.12% 82.38%, 76.50% 82.38%, 74.38% 83.62%, 75.12% 90.38%, 85.00% 88.88%, 87.75% 84.88%, 100.88% 88.12%, 106.25% 107.25%, -3.12% 107.25%, -2.25% 83.75%, 15.50% 84.00%, 14.75% 81.12%, 13.00% 81.12%, 13.25% 84.00%, -3.62% 83.75%);
+}
+
+.tree-trunks {
+  color: var(--border);
+  width: 0.8%;
+  height: 7%;
+  background: var(--border);
+  top: 63%;
+  left: 50%;
+  box-shadow: -5vmin -4.5vmin, -4vmin -3.5vmin 0 -0.15vmin, 4vmin 1.5vmin 0 -0.1vmin #653, 5vmin 2.5vmin, -7.5vmin -5.5vmin 0 -0.15vmin, 10vmin 4.5vmin 0 -0.1vmin, 14vmin 6.5vmin #653, 18vmin 5.5vmin 0 -0.15vmin, 20vmin 8.75vmin 0 0.15vmin #543, 12vmin 3.5vmin, 17vmin 11.5vmin #543, 15.5vmin 11.75vmin 0 -0.1vmin, -3vmin -1.8vmin, 8vmin 3.5vmin;
+  border-radius: 3vmin;
+  filter: drop-shadow(6vmin 3vmin)
+}
+
+/* .tree-trunks::after {
+  color: #543;
+  border-radius: 20%;
+  width: 100%;
+  height: 100%;
+  left: 200%;
+  top: 5%;
+  background: var(--border);
+  transform: rotate(-15deg);
+  box-shadow: -6vmin -6.5vmin 0 -0.05vmin var(--border), -3vmin -2vmin 0 -0.15vmin, 4vmin 1.5vmin 0 -0.1vmin, 12vmin 3.5vmin, 17vmin 11.5vmin 0 0.1vmin, 15.5vmin 11.75vmin 0 -0.2vmin;
+}  */

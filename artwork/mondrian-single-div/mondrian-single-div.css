@@ -1,0 +1,127 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #d0c8b6;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div:before,
+div:after {
+  content: "";
+  display: inline-block;
+}
+
+.mondrain {
+  /*colors */
+  --red: red;
+  --blue: blue;
+  --yellow: yellow;
+  --white: #fafafa;
+  --off-white: #ececec;
+  --black: #222222;
+  --shadow: #8d8d8d;
+  /*adjust this variable to resize the whole picture*/
+  --base: 60vw;
+  /* calculations */
+  --atomic: calc(var(--base) * 0.1);
+  --border: calc((var(--atomic) * .5));
+  --matting: calc((var(--atomic) * 1));
+  --artspan: calc(var(--base) - ((var(--atomic) * 3)));
+  --col1start: var(--matting);
+  --col1span: calc(var(--atomic) * 2);
+  --col2start: calc(var(--col1span) + var(--matting));
+  --col2span: calc(var(--atomic) * 4);
+  --col3start: calc(var(--col2start) + var(--col2span));
+  --col3span: calc(var(--base) * 0.1);
+  --row1start: var(--matting);
+  --row1span: calc(var(--atomic) * 2);
+  --row2start: calc(var(--row1start) + var(--row1span));
+  --row2span: calc(var(--atomic) * 3);
+  --row3start: calc(var(--row2start) + var(--row2span));
+  --row3span: calc(var(--atomic) * 2.25);
+  --row4start: calc(var(--row1span) + var(--row2span) + var(--row3span));
+  /*placements*/
+  --hor-line-1:
+  	linear-gradient(
+  		var(--black) 100%,
+  		transparent)
+  	var(--col1start) var(--row2start) / var(--col1span) calc(var(--atomic) * 0.25)
+  	no-repeat;
+  --hor-line-2:
+  	linear-gradient(
+  		var(--black) 100%,
+  		transparent)
+  	var(--col1start) var(--row3start) / var(--artspan) calc(var(--atomic) * 0.25)
+  	no-repeat;
+  --se1:
+  	linear-gradient(
+  		to bottom,
+  		var(--off-white) 85%,
+  		var(--black) 85%)
+  	var(--col3start) var(--row3start) / var(--col3span) calc(var(--atomic) * 1.25)
+  	no-repeat;
+  --se2:
+  	linear-gradient(
+  		to bottom,
+  		var(--yellow) 100%,
+  		transparent)
+  	var(--col3start) var(--row4start) / var(--col3span) calc(var(--atomic) * 1)
+  	no-repeat;
+  --s:
+  	linear-gradient(to right,
+  		var(--off-white) 95%,
+  		var(--black) 95%)
+  	var(--col2start) var(--row3start) / var(--col2span) var(--row3span)
+  	no-repeat;
+  --ne:
+  	linear-gradient(
+  		var(--red) 100%,
+  		transparent 100%)
+  	var(--col2start) var(--row1start) / calc(var(--col2span) + var(--col3span)) calc(var(--col2span) + var(--col3span))
+  	no-repeat;
+  --sw:
+  	linear-gradient(
+  		to right,
+  		var(--blue) 90%,
+  		var(--black) 90%)
+  	var(--col1start) var(--row3start) / var(--col1span) var(--row3span)
+  	no-repeat;
+  --w:
+  	linear-gradient(
+  		to right,
+  		var(--off-white) 90%,
+  		var(--black) 90%)
+  	var(--col1start) var(--row2start) / var(--col1span) var(--row2span)
+  	no-repeat;
+  --nw:
+  	linear-gradient(
+  		to right,
+  		var(--off-white) 90%,
+  		var(--black) 90%)
+  	var(--col1start) var(--row1start) / var(--col1span) var(--row1span)
+  	no-repeat;
+  --full:
+  	linear-gradient(
+  		var(--white) 100%,
+  		transparent)
+  	center center / 100% 100%
+  	no-repeat;
+  border: solid var(--border) black;
+  height: var(--base);
+  width: var(--base);
+  max-height: 95vw;
+  max-width: 95vw;
+  display: block;
+  box-shadow: 10px 10px 10px #8d8d8d;
+  background: var(--hor-line-1), var(--hor-line-2), var(--se2), var(--se1), var(--s), var(--sw), var(--ne), var(--w), var(--nw), var(--full);
+}

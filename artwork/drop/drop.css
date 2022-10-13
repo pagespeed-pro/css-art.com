@@ -1,0 +1,167 @@
+*{
+  margin:0;
+  padding:0;
+  position:relative;
+}
+body{
+  height:100vh;
+  width:100vw;
+ background: #5AD2E9;
+background: -webkit-linear-gradient(bottom, #5AD2E9, #902951);
+background: -moz-linear-gradient(bottom, #5AD2E9, #902951);
+background: linear-gradient(to top, #5AD2E9, #902951);
+}
+.drop{
+  width: 35vmax;
+  height: 35vmax;
+  border-radius: 80% 0 55% 50% / 55% 0 80% 50%;
+  border: 0.7vmax solid black;
+  transform: rotate(-45deg);
+  margin:0 32vmax;
+  margin-top: 20vmax;
+  background-color:pink;
+}
+.eye{
+  height:8vmax;
+  width:8vmax;
+  border-radius:50%;
+  border:0.7vmax solid;
+  z-index:2;
+}
+.left{
+  margin-top:-23vmax;
+  margin-left:39vmax;
+}
+
+.left::after{
+  content:"";
+  position:absolute;
+  background-color:#f07472;
+  height:5.5vmax;
+  width:8.5vmax;
+  border-radius:50%;
+  margin:9vmax 0 0 -2.8vmax;
+}
+
+.right{ 
+  margin-top:-10vmax;
+  margin-left:52vmax;
+}
+
+.right::after{
+  content:"";
+  position:absolute;
+  background-color:#f07472;
+  height:5.5vmax;
+  width:8.5vmax;
+  border-radius:50%;
+  margin:9vmax 0 0 2.8vmax;
+}
+
+.eyeCover{
+  height:6vmax;
+  width:27vmax;
+  background-color:pink;
+  z-index:3;
+  margin:-10vmax 0 0 37vmax;
+}
+.smile{
+  height:6.5vmax;
+  width:8vmax;
+  border-radius:50%;
+  border:0.7vmax solid;
+  z-index:2;
+  margin:6vmax 0 0 46vmax;
+}
+.smileCover{
+  height:6vmax;
+  width:9.5vmax;
+  background-color:pink;
+  z-index:3;
+  margin:-8.5vmax 0 0 46vmax;
+  border-radius:20%;
+}
+.star{
+  height:8vmax;
+  width:7vmax;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  background-color:#fbcd1f;
+    animation-name: twinkle;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.s1{
+  margin:5vmax 20vmax;
+}
+@keyframes twinkle{
+  0%{
+    transform:scale(1.3);
+    background-color:yellow;
+  } 
+  100%{
+    transform:scale(1);
+  }
+}
+.s2{
+  margin:-35vmax 80vmax;
+  animation-delay: 3.5s;
+}
+.s3{
+  margin:-30vmax 20vmax;
+  animation-delay: 4s;
+}
+.s4{
+  margin:17vmax 65vmax;
+  animation-delay: 3s;
+}
+.s5{
+  margin:0vmax 10vmax;
+  animation-delay: 3.5s;
+}
+.s6{
+  margin:15vmax 67vmax;
+  animation-delay: 2.5s;
+}
+
+@media (max-width:500px){
+.drop{
+  margin:0 15vmax;
+  margin-top: 20vmax;
+}
+.left{
+  margin-top:-23vmax;
+  margin-left:22vmax;
+}
+.right{ 
+  margin-top:-10vmax;
+  margin-left:35vmax;
+}
+.eyeCover{
+  margin:-10vmax 0 0 20vmax;
+}
+.smile{
+  margin:6vmax 0 0 29vmax;
+}
+.smileCover{
+  margin:-8.5vmax 0 0 29vmax;
+}
+.s1{
+  margin:5vmax 3vmax;
+}
+.s2{
+  margin:-35vmax 63vmax;
+}
+.s3{
+  margin:-30vmax 3vmax;
+}
+.s4{
+  margin:17vmax 31vmax;
+}
+.s5{
+  margin:0vmax -7vmax;
+}
+.s6{
+  margin:15vmax 50vmax;
+}
+}

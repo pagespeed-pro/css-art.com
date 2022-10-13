@@ -1,0 +1,40 @@
+{
+    "name": "03-snack-divtober-2022",
+    "version": "1.0.0",
+    "title": "03. Snack - Divtober 2022",
+    "description": "",
+    "author": {
+        "name": "Greg Robleto",
+        "avatar": "https://assets.codepen.io/28337/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1641427924&width=512",
+        "web": "http://www.robleto.com",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/robleto/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/robleto"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/robleto"
+            }
+        ]
+    },
+    "html": "03-snack-divtober-2022.html",
+    "css": [
+        "03-snack-divtober-2022.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "cssart",
+        "singlediv",
+        "divtober"
+    ],
+    "original": "https://codepen.io/robleto/pen/VwxxQyJ",
+    "codepen": "https://codepen.io/robleto/pen/VwxxQyJ"
+}

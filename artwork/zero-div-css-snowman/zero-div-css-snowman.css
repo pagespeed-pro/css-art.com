@@ -1,0 +1,130 @@
+@keyframes snowfall {
+  0% { background-position: 0% 0%,0% 0%,0% 0%,0% 0%,0% 0%; }
+  100% { background-position: 0% 0%,0% 223vh,0% 205vh,0% 210vh,0% 201vh; }
+}
+
+html {
+  animation: snowfall 40s infinite linear;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #abc;
+  background-image: 
+    radial-gradient(circle at 50% 300%, #eee 70%, transparent 70.1%),
+    radial-gradient(circle, #eee 3%, transparent 3.1%),
+    radial-gradient(circle at 80% 10%, #eee 0.8%, transparent 0.9%),
+    radial-gradient(circle, #eee 2.8%, transparent 2.9%),
+    radial-gradient(circle at 20% 40%, #eee 2.2%, transparent 2.3%)
+    ;
+  background-repeat:
+    no-repeat,
+    repeat,
+    repeat,
+    repeat,
+    repeat
+    ;
+  background-size:
+    100% 100%,
+    60% 80%,
+    70% 70%,
+    30% 35%,
+    45% 55%
+    ;
+  background-position: 
+    0% 0%,
+    0% 0%,
+    0% 0%,
+    0% 0%,
+    0% 0%
+    ;
+}
+
+html::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 37vmin;
+  height: 37vmin;
+  background: #0000;
+  border-radius: 50%;
+  bottom: -37vmin;
+  left: 50%;
+  transform: translate(calc(-50% - 4.5vmin), 0);
+  box-shadow: 
+    0 -85vmin 0 -17vmin #222,
+    8vmin -85vmin 0 -17vmin #222,
+    3.75vmin -80.95vmin 0 -16.65vmin orange,
+    4vmin -68vmin 0 -17vmin #233,
+    4.5vmin -67.875vmin 0 -16.75vmin #233,
+    4vmin -61vmin 0 -17vmin #111,
+    4.25vmin -54vmin 0 -16.75vmin #222,
+    4vmin -85vmin 0 -7vmin #fff,
+    4vmin -82vmin 1vmin -10vmin #aaa,
+    4vmin -63vmin 0 -4vmin #fff,
+    4vmin -60vmin 2vmin -7vmin #aaa,
+    4vmin -40vmin 0 0 #fff
+    ;
+}
+
+html::after {
+  content:"";
+  display: block;
+  position: absolute;
+  width: 60vmin;
+  height: 72vmin;
+  bottom: 3vmin;
+  left: 50%;
+  box-shadow:
+    0 -19vmin 0 -18vmin,
+    0 -26vmin 0 -22vmin #837,
+    0 -40vmin 0 -22vmin;
+  border-radius: 18.5vmin 18.5vmin 0 0;
+  transform-origin: top center;
+  transform: translate(-50%, 0) rotate(3deg);
+  background-image:
+    linear-gradient(60deg, transparent 45%, brown 0 50%, transparent 0),
+    linear-gradient(-64deg, transparent 45%, brown 0 50%, transparent 0),
+    linear-gradient(-60deg, transparent 45%, brown 0 50%, transparent 0),
+    linear-gradient(-50deg, transparent 45%, brown 0 54%, transparent 0),
+    linear-gradient(70deg, transparent 45%, brown 0 53%, transparent 0),
+    linear-gradient(23deg, orange 20%, transparent 0),
+    linear-gradient(-88deg, transparent 42%, maroon 0 50%, transparent 0),
+    linear-gradient(75deg, transparent 45%, maroon 0 50%, transparent 0),
+    linear-gradient(85deg, transparent 45%, maroon 0 50%, transparent 0),
+    linear-gradient(95deg, transparent 45%, maroon 0 50%, transparent 0),
+    linear-gradient(110deg, transparent 45%, maroon 0 48%, transparent 0),
+    linear-gradient(80deg, transparent 45%, maroon 0 48%, transparent 0),
+    linear-gradient(102deg, transparent 45%, maroon 0 51%, transparent 0)
+    ;
+  background-size: 
+    20% 50%,
+    18% 45%,
+    9% 11%,
+    9% 11%,
+    9% 11%,
+    16% 20%,
+    22% 65%,
+    20% 20%,
+    20% 25%,
+    25% 20%,
+    18% 20%,
+    22% 22%,
+    18% 21%
+    ;
+  background-position: 
+    90% 50%,
+    14% 55%,
+     6% 75%,
+     5% 73%,
+    13% 75%,
+    60% 0%,
+    102% 92%,
+    100% 20%,
+    103% 15%,
+    109% 19%,
+    109% 17%,
+    102.5% 15%,
+    106% 16%
+    ;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,41 @@
+{
+    "name": "pandora-s-box-model",
+    "version": "1.0.0",
+    "title": "Pandora's Box Model",
+    "description": "Pandora's Box vs Pandora's Boc Model\n\nDrawing of greek woman inspired by [this drawing on freepik](https://www.freepik.com/premium-vector/roman-woman-traditional-clothes-ancient-rome-citizen-female-character-tunic-sandals-historical-costume-goddess-actress-isolated-white-background-cartoon-people-vector-illustration_21472583.htm)",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "pandora-s-box-model.html",
+    "css": [
+        "pandora-s-box-model.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "comic",
+        "comicss",
+        "html",
+        "cartoon"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/JjpgQqG",
+    "codepen": "https://codepen.io/alvaromontoro/pen/JjpgQqG"
+}

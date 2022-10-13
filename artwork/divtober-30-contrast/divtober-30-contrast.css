@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+html, body {
+  overflow: hidden;
+}
+
+div {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, white 50%, black 0);
+}
+
+div::before,
+div::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #00f2;
+  width: 70vmin;
+  height: 70vmin;
+  border-radius: 50%;
+}
+
+div::before {
+  content: "Contrast";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Share Tech Mono', monospace, monospace;
+  font-size: 13vmin;
+  text-transform: uppercase;
+  color: white;
+  box-shadow: inset 0 0 0 2vmin white;
+  background: black;
+}
+
+div::after {
+  background: linear-gradient(to right, white 50%, black 0);
+  mix-blend-mode: difference;
+}

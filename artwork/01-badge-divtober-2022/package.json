@@ -1,0 +1,40 @@
+{
+    "name": "01-badge-divtober-2022",
+    "version": "1.0.0",
+    "title": "01. Badge  :  Divtober 2022",
+    "description": "This is my first entry into #divtober. I've been watching from the sidelines for years but now that I am on sabbatical it seemed a perfect time to participate. The first day theme was \"Badge\" and seeing as how I felt like a newbie attending a month-long conference with so many wonderful CSS artists I wanted to learn from, I decided to make my first piece of art a conference badge. There is a time-lapse video of making this piece at https://youtu.be/XSkVSjxbkAA ",
+    "author": {
+        "name": "Greg Robleto",
+        "avatar": "https://assets.codepen.io/28337/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1641427924&width=512",
+        "web": "http://www.robleto.com",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/robleto/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/robleto"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/robleto"
+            }
+        ]
+    },
+    "html": "01-badge-divtober-2022.html",
+    "css": [
+        "01-badge-divtober-2022.css"
+    ],
+    "js": "/* This is my first entry into #divtober. I've been watching from the sidelines for years but now that I am on sabbatical it seemed a perfect time to participate. The first day theme was \"Badge\" and seeing as how I felt like a newbie attending a month-long conference with so many wonderful CSS artists I wanted to learn from, I decided to make my first piece of art a conference badge. There is a time-lapse video of making this piece at https://youtu.be/XSkVSjxbkAA */",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "cssart",
+        "divtober",
+        "singlediv"
+    ],
+    "original": "https://codepen.io/robleto/pen/gOzoyJM",
+    "codepen": "https://codepen.io/robleto/pen/gOzoyJM"
+}

@@ -1,0 +1,40 @@
+{
+    "name": "-dailycssimages-03-beaver",
+    "version": "1.0.0",
+    "title": "#dailycssimages 03: Beaver",
+    "description": "A single div beaver for Day 3 of #dailycssimages. Can also be seen at a.singlediv.com.",
+    "author": {
+        "name": "Lynn Fisher",
+        "avatar": "https://s.cdpn.io/profiles/user/1025350/512.jpg?1",
+        "web": "https://lynnandtonic.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/lynnandtonic"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/lynnandtonic"
+            },
+            {
+                "title": "Medium.com",
+                "url": "https://medium.com/@lynnandtonic"
+            }
+        ]
+    },
+    "html": "-dailycssimages-03-beaver.html",
+    "css": [
+        "-dailycssimages-03-beaver.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "single-div",
+        "illustration",
+        "beaver"
+    ],
+    "original": "https://codepen.io/lynnandtonic/pen/mROQBK",
+    "codepen": "https://codepen.io/lynnandtonic/pen/mROQBK"
+}

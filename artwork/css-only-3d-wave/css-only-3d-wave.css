@@ -1,0 +1,74 @@
+.maze {
+  background: #333;
+	width:400px;
+	aspect-ratio:1/1;
+	display:grid;
+  grid-template-columns:repeat(var(--n),1fr);
+  grid-auto-rows:1fr;
+  transform: rotateX(65deg) rotateZ(-45deg);
+  transform-style:preserve-3d; 
+}
+.maze:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 0;
+  bottom: 0;
+  background: #222;
+  width: 50px;
+  transform-origin: right;
+  transform: rotateY(-90deg);
+}
+.maze:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background: #111;
+  height: 50px;
+  transform-origin: top;
+  transform: rotateX(-90deg);
+}
+.maze > * {
+  background: #333;
+  transform:translateZ(0px);
+  transform-style:preserve-3d;
+	--d:calc( 
+			(var(--n)/2 - var(--i))*(var(--n)/2 - var(--i)) +
+			(var(--n)/2 - var(--j))*(var(--n)/2 - var(--j))
+		 );
+	animation:t 2s calc(var(--d)* 0.02s) infinite;
+}
+.maze > *::before,
+.maze > *::after{
+  content:"";
+  bottom:0;
+  left:0;
+  position:absolute;
+}
+.maze > *::before {
+  width:40px;
+  top:0;
+  background:#222;
+  transform-origin:left;
+  transform:rotateY(90deg);
+}
+.maze > *::after {
+  height:40px;
+  right:0;
+  background:#111;
+  transform-origin:bottom;
+  transform:rotateX(90deg);
+}
+@keyframes t{
+	50%{transform:translateZ(40px)}
+}
+body {
+  perspective: 70em;
+  margin: 0;
+  background:#000;
+	min-height:100vh;
+	display:grid;
+	place-content:center;
+}

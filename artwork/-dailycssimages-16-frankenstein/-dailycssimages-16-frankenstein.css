@@ -1,0 +1,46 @@
+body {
+  background-color: #444;
+  position: relative;
+  height: 100vh;
+}
+.entry {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.entry:before,
+.entry:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+.entry.frankenstein {
+  width: 130px;
+  height: 160px;
+  margin-left: -65px;
+  margin-top: -80px;
+  background-image: linear-gradient(to top, rgba(0,0,0,0.1), rgba(0,0,0,0.1)), linear-gradient(to right, #2e8b57, #2e8b57), linear-gradient(to bottom, #a7a7a7 50%, #c0c0c0 50%), radial-gradient(circle, #21653f 25%, #2e8b57 25%, #2e8b57 50%, transparent 50%), radial-gradient(circle, #21653f 25%, #2e8b57 25%, #2e8b57 50%, transparent 50%);
+  background-repeat: no-repeat;
+  background-size: 50px 15px, 50px 100%, 70px 10px, 30px 30px, 30px 30px;
+  background-position: center 92%, center 0, center 95%, -2px 60%, 103% 60%;
+}
+.entry.frankenstein:before {
+  width: 100px;
+  height: 135px;
+  left: 15px;
+  background-color: #2e8b57;
+  background-image: linear-gradient(to bottom, #222, #222), radial-gradient(ellipse, #222 50%, transparent 50%), radial-gradient(ellipse, #222 50%, transparent 50%), radial-gradient(ellipse, #222 50%, transparent 50%), radial-gradient(ellipse, #222 50%, transparent 50%), radial-gradient(ellipse, #222 50%, transparent 50%), radial-gradient(circle, #222 15%, #ff6347 15%, #ff6347 30%, #fff 30%, #fff 50%, transparent 50%), radial-gradient(circle, #222 15%, #ff6347 15%, #ff6347 30%, #fff 30%, #fff 50%, transparent 50%), linear-gradient(#2e8b57, #2e8b57), radial-gradient(circle, #2e8b57 40%, #21653f 40%, #21653f 53%, transparent 42%), linear-gradient(#333, #333);
+  background-repeat: no-repeat;
+  background-size: 100% 15px, 15px 40px, 15px 40px, 15px 40px, 15px 40px, 15px 40px, 24px 24px, 24px 24px, 25px 13px, 25px 25px, 40px 2px;
+  background-position: 0 0, -5px -10px, 6px -14px, 17px -12px, 93% -14px, 106% -10px, 18px 70px, 56px 70px, center 70%, center 75%, center 85%;
+  border-radius: 6px 6px 15px 15px;
+}
+.entry.frankenstein:after {
+  width: 35px;
+  height: 12px;
+  left: 28px;
+  top: 68px;
+  background-color: #222;
+  border-radius: 4px;
+  box-shadow: 38px 0 0 #222, -2px -8px 0 4px #297c4d, 30px -8px 0 4px #297c4d, 41px -8px 0 4px #297c4d;
+}

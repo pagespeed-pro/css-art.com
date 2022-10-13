@@ -1,0 +1,41 @@
+{
+    "name": "divtober-22-1-badge",
+    "version": "1.0.0",
+    "title": "Divtober'22 #1: Badge",
+    "description": "Drawing of a Boy Scouts' Digital Technology merit badge, coded in HTML and CSS.  It is flat by default but, after adding the class \"texture\", it has some threading texture.\n\nMore about divtober: https://twitter.com/lynnandtonic/status/1574775248062332928",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "divtober-22-1-badge.html",
+    "css": [
+        "divtober-22-1-badge.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "html",
+        "divtober",
+        "badge",
+        "cssart"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/poVVbdG",
+    "codepen": "https://codepen.io/alvaromontoro/pen/poVVbdG"
+}

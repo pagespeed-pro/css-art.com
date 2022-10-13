@@ -1,0 +1,100 @@
+.cartoon {
+  width:80vmin;
+  height: 80vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.r {
+  border-radius: 50%;
+}
+
+.b {
+  border: 1vmin solid;
+}
+
+.text {
+  font-size: 25vmin;
+  font-family: verdana, arial, sans-serif;
+  margin-top: 10vmin;
+}
+
+.body {
+  width: 30.125%;
+  height: 50%;
+  border: 2.5vmin solid;
+  border-bottom-color: transparent;
+  border-radius: 100% 100% 70% 70% / 100%;
+  top: 14.5%;
+  left: 40.25%;
+  overflow: hidden;
+}
+
+.eye {
+  width: 15%;
+  height: 15%;
+  background: black;
+  top: 22%;
+  left: 40.25%;
+  box-shadow: inset 0 0 0 4vmin white;
+}
+
+.eye + .eye {
+  left: 55.25%;
+}
+
+.beak {
+  width: 10%;
+  height: 10%;
+  transform: rotate(45deg);
+  top: 30%;
+  left: 50%;
+}
+
+.wing {
+  width: 40%;
+  height: 50%;
+  top: 47%;
+  left: -20%;
+  border-top-color: transparent;
+}
+
+.wing + .wing {
+  transform: scaleX(-1);
+  left: auto;
+  right: -20%;
+}
+
+.feet {
+  width: 3.5vmin;
+  height: 6vmin;
+  border-radius: 5vmin;
+  top: 57%;
+  left: 46%;
+  background: white;
+  box-shadow: -2.5vmin 0 0 -1vmin white, -2.5vmin 0, 2.5vmin 0 0 -1vmin white, 2.5vmin 0, 9vmin 0 0 -1vmin white, 9vmin 0, 11.5vmin 0 0 -1vmin white, 11.5vmin 0, 14vmin 0 0 -1vmin white, 14vmin 0;
+}
+
+.ear {
+  width: 20%;
+  height: 25%;
+  border-left: 2.5vmin solid;
+  top: 15%;
+  left: 40.25%;
+  background: linear-gradient(45deg, white 50%, black 0 60%, transparent 0);
+}
+
+.ear + .ear {
+  transform: scaleX(-1);
+  left: 50.25%;
+}

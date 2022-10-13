@@ -1,0 +1,468 @@
+html {
+  background: #456;  
+}
+
+article {
+  outline: none;
+  width: 90vmin;
+  height: 90vmin;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background:
+    /* hat */
+    linear-gradient(black, black) 50% 25% / 15% 0.5%,
+    linear-gradient(purple, purple) 50.125% 23.5% / 9.4% 2%,
+    conic-gradient(at 50% 600%, black 4.5deg, transparent 4.75deg 356.25deg, black 356.5deg) 49.5% 14.5% / 15% 12%,
+    /* face */
+    radial-gradient(farthest-side at 0% 50%, #963 80%, transparent 0) 46.5% 24% / 2% 6%,
+    radial-gradient(farthest-side at 100% 50%, #963 80%, transparent 0) 53.5% 24% / 2% 5%,
+    linear-gradient(white, white) 50% 33% / 2.5% 0.25%,
+    radial-gradient(farthest-side at 50% 0%, #900 99%, transparent) 50% 33.25% / 2.5% 1%,
+    linear-gradient(#c003, #d85) 50.25% 29% / 0.25% 2%,
+    radial-gradient(closest-side, #fca 99.9%, transparent 0) 49.75% 31% / 2.25% 1.75%,
+    radial-gradient(closest-side, #d85 99.9%, transparent 0) 50.5% 30.75% / 1.75% 1.75%,
+    radial-gradient(closest-side, #fca 99.9%, transparent 0) 50% 35% / 2.5% 2.5%,
+    radial-gradient(closest-side, #fca 99.9%, transparent 0) 49% 25.5% / 3% 3%,
+    radial-gradient(closest-side, #963 99.9%, transparent 0) 50% 25% / 3% 3%,
+    radial-gradient(closest-side, black 80%, transparent 0) 48.5% 28% / 1% 1%,
+    radial-gradient(closest-side, black 80%, transparent 0) 51.5% 28% / 1% 1%,
+    radial-gradient(farthest-side at 130% 20%, #fca 80%, transparent 0) 47% 27% / 6% 18%,
+    radial-gradient(farthest-side at -30% 20%, #fca 80%, transparent 0) 53% 27% / 6% 18%,
+    radial-gradient(closest-side, #963 80%, transparent 0) 47% 25% / 6% 7.75%,
+    radial-gradient(closest-side, #963 80%, transparent 0) 53% 25% / 6% 8%,
+    radial-gradient(closest-side, #da8 80%, transparent 0) 47% 28.6% / 6% 7%,
+    radial-gradient(closest-side, #da8 80%, transparent 0) 53% 28.6% / 6% 7%,
+    /* bowtie */
+    radial-gradient(closest-side, #b00 90%, transparent 0) 50% 38.25% / 2% 2%,
+    conic-gradient(transparent 58deg, #e00 0 122deg, transparent 0 238deg, #d00 0 302deg, transparent 0) 50% 38% / 7.5% 4%,
+    /* body */
+    radial-gradient(closest-side, black 80%, transparent 0) 50% 49% / 1% 1%,
+    radial-gradient(closest-side, black 80%, transparent 0) 50% 45% / 1% 1%,
+    radial-gradient(closest-side, black 80%, transparent 0) 50% 41% / 1% 1%,
+    radial-gradient(farthest-side at 140% 20%, white 80%, transparent 82%) 49% 48% / 2% 20%,
+    radial-gradient(farthest-side at -40% 20%, white 80%, transparent 82%) 51% 48% / 2% 20%,
+    linear-gradient(black, black) 50% 55% / 5.5% 30%,
+    linear-gradient(#c97, #fca) 50% 35% / 1.75% 7%,
+    /* shoes */
+    radial-gradient(farthest-side at 40% 150%, black 90%, transparent 0) 59% 100% / 10% 2.5%,
+    radial-gradient(farthest-side at 60% 120%, black 90%, transparent 0) 41% 100% / 10% 2.5%,
+    /* pants */
+    radial-gradient(farthest-side at 50% 100%, transparent 50%, #000 50.75% 70%, transparent 71%) 50% 100% / 10% 70%,
+    /* arms */
+    linear-gradient(80deg, transparent 40%, white 41% 51%, transparent 52%) 66.33% 28% / 5% 2%,
+    linear-gradient(80deg, transparent 40%, black 41% 51%, transparent 52%) 67.25% 30.5% / 5% 9%,
+    radial-gradient(closest-side, #fca 99%, transparent 0) 68% 37.25% / 3% 2%,
+    radial-gradient(closest-side, #fca 99%, transparent 0) 69% 36% / 4% 4%,
+    radial-gradient(closest-side, #fca 99%, transparent 0) 42.125% 68.75% / 3% 2%,
+    radial-gradient(closest-side, #fca 99%, transparent 0) 41.125% 70% / 4% 4%,
+    radial-gradient(farthest-side at 100% 100%, transparent 80%, black 81% 90%, transparent 91%) 44.75% 50.75% / 11% 32.5%,
+    radial-gradient(farthest-side at 50% 0%, transparent 78%, black 79% 90%, transparent 91%) 63% 46% / 18% 15%,
+    linear-gradient(white, white) 68.5% 38.25% / 1% 1.5%,
+    linear-gradient(white, white) 41.33% 67.75% / 1% 1.5%,
+    /* penguin */
+    radial-gradient(farthest-side at 0% 0%, black 80%, transparent 0) 47.5% 71% / 2% 45%,
+    radial-gradient(farthest-side at 100% 0%, black 80%, transparent 0) 52.5% 70% / 2% 45%,
+    linear-gradient(#111, #222) 50% 75% / 6.6% 10%,
+    radial-gradient(farthest-side at 50% 0%, #222 80%, transparent 0) 48.25% 86% / 4.5% 15%,
+    radial-gradient(farthest-side at 50% 0%, #222 80%, transparent 0) 51.6% 86% / 4.5% 15%,
+    
+    /* bg */
+    radial-gradient(40% 40% at 50% 55%, #678, #456)
+    ;
+  background-color: #f001;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+article::after {
+  content: "Behold! The Great Al \0a will amuse you with an \0a amazing magic trick! \0a \0a Click here to continue!";
+  white-space: pre;
+  box-sizing: border-box;
+  padding: 2.5vmin;
+  padding-bottom: 5.5vmin;
+  font-family: Georgia, Garamond, serif;
+  font-size: 2.5vmin;
+  line-height: 3.5vmin;
+  display: block;
+  width: 39%;
+  background: 
+    linear-gradient(#dd8, #dd8) 0 0 / 100% calc(100% - 3vmin),
+    conic-gradient(at 100% 100%, transparent 310deg, #dd8 0 340deg, #0000 0) 95% 100% / 5vmin 3.5vmin
+  ;
+  background-repeat: no-repeat;
+}
+
+article::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 400%;
+  height: 22vmin;
+  transform: translate(0vmin, 0);
+  background:
+    /* card 1 step 1 */
+    
+    linear-gradient(#d00, #d00) 91vmin 2vmin / 0.25vmin 1.5vmin,
+    linear-gradient(55deg, #0000 40%, #d00 0 60%, #0000 0) 91.1vmin 2.375vmin / 0.9vmin 1.125vmin,
+    linear-gradient(-55deg, #0000 45%, #d00 0 65%, #0000 0) 91.1vmin 2vmin / 0.9vmin 1.125vmin,
+    linear-gradient(#d00, #d00) 102.875vmin 18.5vmin / 0.25vmin 1.5vmin,
+    linear-gradient(55deg, #0000 40%, #d00 0 60%, #0000 0) 102.175vmin 18.5vmin / 0.9vmin 1.125vmin,
+    linear-gradient(-55deg, #0000 45%, #d00 0 65%, #0000 0) 102.175vmin 18.875vmin / 0.9vmin 1.125vmin,
+    
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 90.6vmin 3.75vmin / 0.8vmin 0.8vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 91.4vmin 3.75vmin / 0.8vmin 0.8vmin,
+    conic-gradient(at 50% 100%, #d00 38deg, transparent 0 322deg, #d00 0) 90.6vmin 4.25vmin / 1.5vmin 1.2vmin,
+    
+    linear-gradient(to right, black 50%, white 0) 97vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, black 50%, white 0) 99vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 94vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 96vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(-45deg, #0000 10%, #d00 0 90%, #0000 0) 92.5vmin 50% / 9vmin 2vmin,
+    conic-gradient(at 100% -100%, #fa8 223deg, #0000 0) 92.5vmin 6vmin / 9vmin 4.5vmin,
+    conic-gradient(at 0% 200%, #fa8 43deg, #0000 0) 92.5vmin 11.5vmin / 9vmin 4.5vmin,
+    radial-gradient(closest-side, #000 99.9%, #0000 0) 92.75vmin 4.25vmin / 4.25vmin 4.25vmin,
+    radial-gradient(closest-side, #000 99.9%, #0000 0) 97vmin 13vmin / 4.25vmin 4.25vmin,
+    linear-gradient(-45deg, gold 50%, #0000 0) 97vmin 3.5vmin / 3vmin 2.75vmin,
+    linear-gradient(-45deg, gold 50%, #0000 0) 98.5vmin 3.5vmin / 3vmin 2.75vmin,
+    linear-gradient(-45deg, #0000 50%, gold 0) 92.5vmin 15.75vmin / 3vmin 2.75vmin,
+    linear-gradient(-45deg, #0000 50%, gold 0) 94vmin 15.75vmin / 3vmin 2.75vmin,
+    
+    linear-gradient(black 1px, transparent 0 calc(100% - 1px), black 0) 92.25vmin 50% / 9.5vmin 16vmin,
+    linear-gradient(to right, black 1px, transparent 0 calc(100% - 1px), black 0) 92.25vmin 50% / 9.5vmin 16vmin,
+    linear-gradient(white, white) 90.5vmin 50% / 13vmin 85%,
+    /* card 2 step 1 */
+    radial-gradient(farthest-side at 50% 0%, transparent 65%, #000 0 99.9%, #0000 0) 106.25vmin 3vmin / 1vmin 0.75vmin,
+    linear-gradient(#000, #000) 107vmin 2vmin / 0.25vmin 1.25vmin,
+    radial-gradient(farthest-side at 50% 100%, transparent 65%, #000 0 99.9%, #0000 0) 117.5vmin 18vmin / 1vmin 0.75vmin,
+    linear-gradient(#000, #000) 117.5vmin 18.5vmin /  0.25vmin 1.25vmin,
+    
+    radial-gradient(farthest-side at 50% 100%, black 99.9%, #0000) 106.25vmin 4vmin / 0.75vmin 0.375vmin,
+    radial-gradient(farthest-side at 100% 50%, black 99.9%, #0000) 105.875vmin 4.4vmin / 0.375vmin 0.75vmin,
+    radial-gradient(farthest-side at 0% 50%, black 99.9%, #0000) 106.875vmin 4.4vmin / 0.375vmin 0.75vmin,
+    conic-gradient(#000 25deg, #0000 0 40deg, #000 0 120deg, #0000 0 165deg, #000 0 195deg, #0000 0 240deg, #000 0 320deg, #0000 0 335deg, #000 0) 106.25vmin 4.375vmin / 0.75vmin 1.125vmin,
+    
+    linear-gradient(to right, black 50%, white 0) 112.25vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, black 50%, white 0) 114.25vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 109.25vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 111.25vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(-45deg, #0000 10%, #000 0 90%, #0000 0) 107.75vmin 50% / 9vmin 2vmin,
+    conic-gradient(at 100% -100%, #fa8 223deg, #0000 0) 107.75vmin 6vmin / 9vmin 4.5vmin,
+    conic-gradient(at 0% 200%, #fa8 43deg, #0000 0) 107.75vmin 11.5vmin / 9vmin 4.5vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 108vmin 4.25vmin / 4.25vmin 4.25vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 112.25vmin 13vmin / 4.25vmin 4.25vmin,
+    linear-gradient(gold, gold) 112.5vmin 5.25vmin / 4.25vmin 1vmin,
+    linear-gradient(gold, gold) 107.75vmin 15.75vmin / 4.25vmin 1vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 112.625vmin 3.5vmin / 4vmin 4vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 107.875vmin 14.5vmin / 4vmin 4vmin,
+    
+    linear-gradient(black 1px, transparent 0 calc(100% - 1px), black 0) 107.5vmin 50% / 9.5vmin 16vmin,
+    linear-gradient(to right, black 1px, transparent 0 calc(100% - 1px), black 0) 107.5vmin 50% / 9.5vmin 16vmin,
+    linear-gradient(white, white) 105.75vmin 50% / 13vmin 85%,
+    /* card 3 step 1 */
+    
+    linear-gradient(#000, #000) 121.5vmin 2vmin / 0.25vmin 1.5vmin,
+    linear-gradient(55deg, #0000 40%, #000 0 60%, #0000 0) 121.6vmin 2.375vmin / 0.9vmin 1.125vmin,
+    linear-gradient(-55deg, #0000 45%, #000 0 65%, #0000 0) 121.6vmin 2vmin / 0.9vmin 1.125vmin,
+    linear-gradient(#000, #000) 133.375vmin 18.5vmin / 0.25vmin 1.5vmin,
+    linear-gradient(55deg, #0000 40%, #000 0 60%, #0000 0) 132.75vmin 18.5vmin / 0.9vmin 1.125vmin,
+    linear-gradient(-55deg, #0000 45%, #000 0 65%, #0000 0) 132.75vmin 18.875vmin / 0.9vmin 1.125vmin,
+    
+    radial-gradient(closest-side, #000 99.9%, #0000 0) 121.25vmin 4.4vmin / 0.75vmin 0.75vmin,
+    radial-gradient(closest-side, #000 99.9%, #0000 0) 121.875vmin 4.4vmin / 0.75vmin 0.75vmin,
+    conic-gradient(at 50% 0%, transparent 148deg, #000 0 215deg, transparent 0) 121.25vmin 3.75vmin / 1.4vmin 1vmin,
+    linear-gradient(black, black) 121.875vmin 5.125vmin / 0.125vmin 0.5vmin,
+    
+    linear-gradient(to right, black 50%, white 0) 127.5vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, black 50%, white 0) 129.5vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 124.5vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 126.5vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(-45deg, #0000 10%, #000 0 90%, #0000 0) 123vmin 50% / 9vmin 2vmin,
+    conic-gradient(at 100% -100%, #fa8 223deg, #0000 0) 123vmin 6vmin / 9vmin 4.5vmin,
+    conic-gradient(at 0% 200%, #fa8 43deg, #0000 0) 123vmin 11.5vmin / 9vmin 4.5vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 123.25vmin 4.25vmin / 4.25vmin 4.25vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 127.5vmin 13vmin / 4.25vmin 4.25vmin,
+    linear-gradient(-45deg, gold 50%, #0000 0) 127.5vmin 3.5vmin / 3vmin 2.75vmin,
+    linear-gradient(-45deg, gold 50%, #0000 0) 129vmin 3.5vmin / 3vmin 2.75vmin,
+    linear-gradient(-45deg, #0000 50%, gold 0) 123vmin 15.75vmin / 3vmin 2.75vmin,
+    linear-gradient(-45deg, #0000 50%, gold 0) 124.5vmin 15.75vmin / 3vmin 2.75vmin,
+    
+    linear-gradient(black 1px, transparent 0 calc(100% - 1px), black 0) 122.75vmin 50% / 9.5vmin 16vmin,
+    linear-gradient(to right, black 1px, transparent 0 calc(100% - 1px), black 0) 122.75vmin 50% / 9.5vmin 16vmin,
+    linear-gradient(white, white) 121vmin 50% / 13vmin 85%,
+    /* card 4 step 1 */
+    
+    radial-gradient(closest-side, #0000 65%, #d00 0 99.9%, #0000 0) 136.5vmin 2vmin / 1.25vmin 1.5vmin,
+    linear-gradient(45deg, transparent 35%, #d00 0 65%, transparent 0) 137.25vmin 3vmin / 0.6vmin 0.6vmin,
+    radial-gradient(closest-side, #0000 65%, #d00 0 99.9%, #0000 0) 147.875vmin 18.5vmin / 1.25vmin 1.5vmin,
+    linear-gradient(45deg, transparent 35%, #d00 0 65%, transparent 0) 147.875vmin 18.5vmin / 0.6vmin 0.6vmin,
+    
+    conic-gradient(at 50% 0%, #0000 150deg, #d00 0 210deg, #0000 0) 136.5vmin 3.75vmin / 1.125vmin 1vmin,
+    conic-gradient(at 50% 100%, #d00 30deg, #0000 0 330deg, #d00 0) 136.5vmin 4.75vmin / 1.125vmin 1vmin,
+    
+    linear-gradient(to right, black 50%, white 0) 142.75vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, black 50%, white 0) 144.75vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 139.75vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 141.75vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(-45deg, #0000 10%, #d00 0 90%, #0000 0) 138.25vmin 50% / 9vmin 2vmin,
+    conic-gradient(at 100% -100%, #fa8 223deg, #0000 0) 138.25vmin 6vmin / 9vmin 4.5vmin,
+    conic-gradient(at 0% 200%, #fa8 43deg, #0000 0) 138.25vmin 11.5vmin / 9vmin 4.5vmin,
+    radial-gradient(closest-side, #000 99.9%, #0000 0) 138.5vmin 4.25vmin / 4.25vmin 4.25vmin,
+    radial-gradient(closest-side, #000 99.9%, #0000 0) 142.75vmin 13vmin / 4.25vmin 4.25vmin,
+    linear-gradient(45deg, gold 50%, #0000 0) 143vmin 3.5vmin / 3vmin 2.75vmin,
+    linear-gradient(-45deg, gold 50%, #0000 0) 144.25vmin 3.5vmin / 3vmin 2.75vmin,
+    linear-gradient(-45deg, #0000 50%, gold 0) 138.25vmin 15.75vmin / 3vmin 2.75vmin,
+    linear-gradient(45deg, #0000 50%, gold 0) 139.5vmin 15.75vmin / 3vmin 2.75vmin,
+    conic-gradient(at 50% 0, #0000 150deg, gold 0 210deg, #0000 0) 143.625vmin 3.5vmin / 3vmin 2.75vmin,
+    conic-gradient(at 50% 100%, gold 30deg, #0000 0 330deg, gold 0) 138.875vmin 15.75vmin / 3vmin 2.75vmin,
+    
+    linear-gradient(black 1px, transparent 0 calc(100% - 1px), black 0) 138vmin 50% / 9.5vmin 16vmin,
+    linear-gradient(to right, black 1px, transparent 0 calc(100% - 1px), black 0) 138vmin 50% / 9.5vmin 16vmin,
+    linear-gradient(white, white) 136.25vmin 50% / 13vmin 85%,
+    /* card 5 step 1 */
+    
+    radial-gradient(closest-side, #0000 65%, #000 0 99.9%, #0000 0) 151.75vmin 2vmin / 1.25vmin 1.5vmin,
+    linear-gradient(45deg, transparent 35%, #000 0 65%, transparent 0) 152.5vmin 3vmin / 0.6vmin 0.6vmin,
+    radial-gradient(closest-side, #0000 65%, #000 0 99.9%, #0000 0) 163.125vmin 18.5vmin / 1.25vmin 1.5vmin,
+    linear-gradient(45deg, transparent 35%, #000 0 65%, transparent 0) 163.125vmin 18.5vmin / 0.6vmin 0.6vmin,
+    
+    radial-gradient(farthest-side at 50% 100%, black 99.9%, #0000) 152vmin 4vmin / 0.75vmin 0.375vmin,
+    radial-gradient(farthest-side at 100% 50%, black 99.9%, #0000) 151.625vmin 4.4vmin / 0.375vmin 0.75vmin,
+    radial-gradient(farthest-side at 0% 50%, black 99.9%, #0000) 152.625vmin 4.4vmin / 0.375vmin 0.75vmin,
+    conic-gradient(#000 25deg, #0000 0 40deg, #000 0 120deg, #0000 0 165deg, #000 0 195deg, #0000 0 240deg, #000 0 320deg, #0000 0 335deg, #000 0) 152vmin 4.375vmin / 0.75vmin 1.125vmin,
+    
+    linear-gradient(to right, black 50%, white 0) 158vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, black 50%, white 0) 160vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 155vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 157vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(-45deg, #0000 10%, #000 0 90%, #0000 0) 153.5vmin 50% / 9vmin 2vmin,
+    conic-gradient(at 100% -100%, #fa8 223deg, #0000 0) 153.5vmin 6vmin / 9vmin 4.5vmin,
+    conic-gradient(at 0% 200%, #fa8 43deg, #0000 0) 153.5vmin 11.5vmin / 9vmin 4.5vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 153.75vmin 4.25vmin / 4.25vmin 4.25vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 158vmin 13vmin / 4.25vmin 4.25vmin,
+    linear-gradient(45deg, gold 50%, #0000 0) 158.25vmin 3.5vmin / 3vmin 2.75vmin,
+    linear-gradient(-45deg, gold 50%, #0000 0) 159.5vmin 3.5vmin / 3vmin 2.75vmin,
+    linear-gradient(-45deg, #0000 50%, gold 0) 153.5vmin 15.75vmin / 3vmin 2.75vmin,
+    linear-gradient(45deg, #0000 50%, gold 0) 154.75vmin 15.75vmin / 3vmin 2.75vmin,
+    conic-gradient(at 50% 0, #0000 150deg, gold 0 210deg, #0000 0) 158.875vmin 3.5vmin / 3vmin 2.75vmin,
+    conic-gradient(at 50% 100%, gold 30deg, #0000 0 330deg, gold 0) 154.125vmin 15.75vmin / 3vmin 2.75vmin,
+    
+    linear-gradient(black 1px, transparent 0 calc(100% - 1px), black 0) 153.25vmin 50% / 9.5vmin 16vmin,
+    linear-gradient(to right, black 1px, transparent 0 calc(100% - 1px), black 0) 153.25vmin 50% / 9.5vmin 16vmin,
+    linear-gradient(white, white) 151.5vmin 50% / 13vmin 85%,
+    /* card 6 step 1 */
+    
+    radial-gradient(farthest-side at 50% 0%, transparent 65%, #d00 0 99.9%, #0000 0) 166.875vmin 3vmin / 1vmin 0.75vmin,
+    linear-gradient(#d00, #d00) 167.625vmin 2vmin / 0.25vmin 1.25vmin,
+    radial-gradient(farthest-side at 50% 100%, transparent 65%, #d00 0 99.9%, #0000 0) 178.25vmin 18vmin / 1vmin 0.75vmin,
+    linear-gradient(#d00, #d00) 178.25vmin 18.5vmin /  0.25vmin 1.25vmin,
+    
+    conic-gradient(at 50% 0%, #0000 150deg, #d00 0 210deg, #0000 0) 166.75vmin 4vmin / 1.125vmin 1vmin,
+    conic-gradient(at 50% 100%, #d00 30deg, #0000 0 330deg, #d00 0) 166.75vmin 5vmin / 1.125vmin 1vmin,
+    
+    linear-gradient(to right, black 50%, white 0) 173vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, black 50%, white 0) 175vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 170vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 172vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(-45deg, #0000 10%, #d00 0 90%, #0000 0) 168.5vmin 50% / 9vmin 2vmin,
+    conic-gradient(at 100% -100%, #fa8 223deg, #0000 0) 168.5vmin 6vmin / 9vmin 4.5vmin,
+    conic-gradient(at 0% 200%, #fa8 43deg, #0000 0) 168.5vmin 11.5vmin / 9vmin 4.5vmin,
+    radial-gradient(closest-side, #000 99.9%, #0000 0) 168.75vmin 4.25vmin / 4.25vmin 4.25vmin,
+    radial-gradient(closest-side, #000 99.9%, #0000 0) 173vmin 13vmin / 4.25vmin 4.25vmin,
+    linear-gradient(gold, gold) 173.25vmin 5.25vmin / 4.25vmin 1vmin,
+    linear-gradient(gold, gold) 168.5vmin 15.75vmin / 4.25vmin 1vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 173.375vmin 3.5vmin / 4vmin 4vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 168.625vmin 14.5vmin / 4vmin 4vmin,
+    
+    
+    linear-gradient(black 1px, transparent 0 calc(100% - 1px), black 0) 168.25vmin 50% / 9.5vmin 16vmin,
+    linear-gradient(to right, black 1px, transparent 0 calc(100% - 1px), black 0) 168.25vmin 50% / 9.5vmin 16vmin,
+    linear-gradient(white, white) 166.5vmin 50% / 13vmin 85%,
+    
+    
+    
+    
+    /* card 1 step 2 */
+    radial-gradient(closest-side, #0000 65%, #d00 0 99.9%, #0000 0) 271vmin 0.75vmin / 1.5vmin 1.75vmin,
+    linear-gradient(45deg, transparent 35%, #d00 0 65%, transparent 0) 271.75vmin 1.75vmin / 0.75vmin 0.75vmin,
+    radial-gradient(closest-side, #0000 65%, #d00 0 99.9%, #0000 0) 283.5vmin 19.5vmin / 1.5vmin 1.75vmin,
+    linear-gradient(45deg, transparent 35%, #d00 0 65%, transparent 0) 283.5vmin 19.5vmin / 0.75vmin 0.75vmin,
+    
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 270.75vmin 3vmin / 1vmin 1vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 271.75vmin 3vmin / 1vmin 1vmin,
+    conic-gradient(at 50% 100%, #d00 38deg, transparent 0 322deg, #d00 0) 270.75vmin 3.5vmin / 2vmin 1.5vmin,
+    
+    linear-gradient(to right, black 50%, white 0) 278vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, black 50%, white 0) 280vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 275vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 277vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(-45deg, #0000 10%, #d00 0 90%, #0000 0) 273.5vmin 50% / 9vmin 2vmin,
+    conic-gradient(at 100% -100%, #fa8 223deg, #0000 0) 273.5vmin 6vmin / 9vmin 4.5vmin,
+    conic-gradient(at 0% 200%, #fa8 43deg, #0000 0) 273.5vmin 11.5vmin / 9vmin 4.5vmin,
+    radial-gradient(closest-side, #000 99.9%, #0000 0) 273.75vmin 4.25vmin / 4.25vmin 4.25vmin,
+    radial-gradient(closest-side, #000 99.9%, #0000 0) 278vmin 13vmin / 4.25vmin 4.25vmin,
+    linear-gradient(45deg, gold 50%, #0000 0) 278.25vmin 3vmin / 3vmin 3vmin,
+    linear-gradient(-45deg, gold 50%, #0000 0) 279.5vmin 3vmin / 3vmin 3vmin,
+    linear-gradient(-45deg, #0000 50%, gold 0) 273.5vmin 16vmin / 3vmin 3vmin,
+    linear-gradient(45deg, #0000 50%, gold 0) 274.75vmin 16vmin / 3vmin 3vmin,
+    conic-gradient(at 50% 0, #0000 150deg, gold 0 210deg, #0000 0) 278.875vmin 3vmin / 3vmin 3vmin,
+    conic-gradient(at 50% 100%, gold 30deg, #0000 0 330deg, gold 0) 274.125vmin 16vmin / 3vmin 3vmin,
+    
+    linear-gradient(black 1px, transparent 0 calc(100% - 1px), black 0) 273vmin 50% / 10vmin 17vmin,
+    linear-gradient(to right, black 1px, transparent 0 calc(100% - 1px), black 0) 273vmin 50% / 10vmin 17vmin,
+    linear-gradient(white, white) 270.5vmin 0 / 15vmin 100%,
+    /* card 2 step 2 */
+    linear-gradient(#000, #000) 289.65vmin 0.75vmin / 0.33vmin 1.75vmin,
+    linear-gradient(55deg, #0000 40%, #000 0 60%, #0000 0) 289.75vmin 1.125vmin / 1vmin 1.5vmin,
+    linear-gradient(-55deg, #0000 45%, #000 0 65%, #0000 0) 289.75vmin 0.75vmin / 1vmin 1.5vmin,
+    linear-gradient(#000, #000) 303vmin 19.5vmin / 0.33vmin 1.75vmin,
+    linear-gradient(55deg, #0000 40%, #000 0 60%, #0000 0) 302.25vmin 19.5vmin / 1vmin 1.5vmin,
+    linear-gradient(-55deg, #0000 45%, #000 0 65%, #0000 0) 302.25vmin 19.875vmin / 1vmin 1.5vmin,
+    
+    radial-gradient(farthest-side at 50% 100%, #000 99.9%, #0000 0) 289.75vmin 3vmin / 1vmin 0.5vmin,
+    radial-gradient(farthest-side at 0% 50%, #000 99.9%, #0000 0) 290.875vmin 3.625vmin / 0.5vmin 1vmin,
+    radial-gradient(farthest-side at 100% 50%, #000 99.9%, #0000 0) 289.25vmin 3.625vmin / 0.5vmin 1vmin,
+    conic-gradient(at 50% 50%, #000 38deg, transparent 0 52deg, #000 0 125deg, transparent 0 160deg, #000 0 200deg, transparent 0 235deg, #000 0 308deg, transparent 0 322deg, #000 0) 289.625vmin 3.4vmin / 1.25vmin 1.5vmin,
+    
+    linear-gradient(to right, black 50%, white 0) 296.5vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, black 50%, white 0) 298.5vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 293.5vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 295.5vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(-45deg, #0000 10%, #000 0 90%, #0000 0) 292vmin 50% / 9vmin 2vmin,
+    conic-gradient(at 100% -100%, #fa8 223deg, #0000 0) 292vmin 6vmin / 9vmin 4.5vmin,
+    conic-gradient(at 0% 200%, #fa8 43deg, #0000 0) 292vmin 11.5vmin / 9vmin 4.5vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 292.25vmin 4.25vmin / 4.25vmin 4.25vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 296.5vmin 13vmin / 4.25vmin 4.25vmin,
+    linear-gradient(-45deg, gold 50%, #0000 0) 296.75vmin 3vmin / 3vmin 3vmin,
+    linear-gradient(-45deg, gold 50%, #0000 0) 298vmin 3vmin / 3vmin 3vmin,
+    linear-gradient(-45deg, #0000 50%, gold 0) 292vmin 16vmin / 3vmin 3vmin,
+    linear-gradient(-45deg, #0000 50%, gold 0) 293.25vmin 16vmin / 3vmin 3vmin,
+
+    linear-gradient(black 1px, transparent 0 calc(100% - 1px), black 0) 291.5vmin 50% / 10vmin 17vmin,
+    linear-gradient(to right, black 1px, transparent 0 calc(100% - 1px), black 0) 291.5vmin 50% / 10vmin 17vmin,
+    linear-gradient(white, white) 289vmin 0 / 15vmin 100%,
+    /* card 3 step 2 */
+    radial-gradient(farthest-side at 50% 0%, transparent 65%, #d00 0 99.9%, #0000 0) 308.125vmin 1.75vmin / 1.125vmin 0.875vmin,
+    linear-gradient(#d00, #d00) 309vmin 0.75vmin / 0.25vmin 1.25vmin,
+    radial-gradient(farthest-side at 50% 100%, transparent 65%, #d00 0 99.9%, #0000 0) 320.5vmin 19.25vmin / 1.125vmin 0.875vmin,
+    linear-gradient(#d00, #d00) 320.5vmin 19.75vmin / 0.25vmin 1.25vmin,
+    
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 307.75vmin 3vmin / 1vmin 1vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 308.75vmin 3vmin / 1vmin 1vmin,
+    conic-gradient(at 50% 100%, #d00 38deg, transparent 0 322deg, #d00 0) 307.75vmin 3.5vmin / 2vmin 1.5vmin,
+    
+    linear-gradient(to right, black 50%, white 0) 315vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, black 50%, white 0) 317vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 312vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 314vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(-45deg, #0000 10%, #d00 0 90%, #0000 0) 310.5vmin 50% / 9vmin 2vmin,
+    conic-gradient(at 100% -100%, #fa8 223deg, #0000 0) 310.5vmin 6vmin / 9vmin 4.5vmin,
+    conic-gradient(at 0% 200%, #fa8 43deg, #0000 0) 310.5vmin 11.5vmin / 9vmin 4.5vmin,
+    radial-gradient(closest-side, #000 99.9%, #0000 0) 310.75vmin 4.25vmin / 4.25vmin 4.25vmin,
+    radial-gradient(closest-side, #000 99.9%, #0000 0) 315vmin 13vmin / 4.25vmin 4.25vmin,
+    
+    
+    linear-gradient(gold, gold) 315.25vmin 5vmin / 4.25vmin 3vmin,
+    linear-gradient(gold, gold) 310.5vmin 14vmin / 4.25vmin 3vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 315.375vmin 3vmin / 4vmin 4vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 310.625vmin 15vmin / 4vmin 4vmin,
+    
+    linear-gradient(black 1px, transparent 0 calc(100% - 1px), black 0) 310vmin 50% / 10vmin 17vmin,
+    linear-gradient(to right, black 1px, transparent 0 calc(100% - 1px), black 0) 310vmin 50% / 10vmin 17vmin,
+    linear-gradient(white, white) 307.5vmin 0 / 15vmin 100%,
+    /* card 4 step 2 */
+    radial-gradient(closest-side, #0000 65%, #000 0 99.9%, #0000 0) 326.5vmin 0.75vmin / 1.5vmin 1.75vmin,
+    linear-gradient(45deg, transparent 35%, #000 0 65%, transparent 0) 327.25vmin 1.75vmin / 0.75vmin 0.75vmin,
+    radial-gradient(closest-side, #0000 65%, #000 0 99.9%, #0000 0) 339vmin 19.5vmin / 1.5vmin 1.75vmin,
+    linear-gradient(45deg, transparent 35%, #000 0 65%, transparent 0) 339vmin 19.5vmin / 0.75vmin 0.75vmin,
+    
+    radial-gradient(closest-side, #000 99.9%, #0000 0) 326.25vmin 4vmin / 1vmin 1vmin,
+    radial-gradient(closest-side, #000 99.9%, #0000 0) 327.25vmin 4vmin / 1vmin 1vmin,
+    conic-gradient(at 50% 0%, #0000 144deg, #000 0 216deg, #0000 0) 326.25vmin 3vmin / 2vmin 1.5vmin,
+    linear-gradient(black, black) 327.125vmin 4.5vmin / 0.25vmin 1vmin,
+    
+    linear-gradient(to right, black 50%, white 0) 333.5vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, black 50%, white 0) 335.5vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 330.5vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 332.5vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(-45deg, #0000 10%, #000 0 90%, #0000 0) 329vmin 50% / 9vmin 2vmin,
+    conic-gradient(at 100% -100%, #fa8 223deg, #0000 0) 329vmin 6vmin / 9vmin 4.5vmin,
+    conic-gradient(at 0% 200%, #fa8 43deg, #0000 0) 329vmin 11.5vmin / 9vmin 4.5vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 329.25vmin 4.25vmin / 4.25vmin 4.25vmin,
+    radial-gradient(closest-side, #d00 99.9%, #0000 0) 333.5vmin 13vmin / 4.25vmin 4.25vmin,
+    linear-gradient(45deg, gold 50%, #0000 0) 333.75vmin 3vmin / 3vmin 3vmin,
+    linear-gradient(-45deg, gold 50%, #0000 0) 335vmin 3vmin / 3vmin 3vmin,
+    linear-gradient(-45deg, #0000 50%, gold 0) 329vmin 16vmin / 3vmin 3vmin,
+    linear-gradient(45deg, #0000 50%, gold 0) 330.25vmin 16vmin / 3vmin 3vmin,
+    conic-gradient(at 50% 0, #0000 150deg, gold 0 210deg, #0000 0) 334.375vmin 3vmin / 3vmin 3vmin,
+    conic-gradient(at 50% 100%, gold 30deg, #0000 0 330deg, gold 0) 329.625vmin 16vmin / 3vmin 3vmin,
+    
+    linear-gradient(black 1px, transparent 0 calc(100% - 1px), black 0) 328.5vmin 50% / 10vmin 17vmin,
+    linear-gradient(to right, black 1px, transparent 0 calc(100% - 1px), black 0) 328.5vmin 50% / 10vmin 17vmin,
+    linear-gradient(white, white) 326vmin 0 / 15vmin 100%,
+    /* card 5 step 2 */
+    linear-gradient(#d00, #d00) 345.25vmin 0.75vmin / 0.33vmin 1.75vmin,
+    linear-gradient(55deg, #0000 40%, #d00 0 60%, #0000 0) 345.35vmin 1.125vmin / 1vmin 1.5vmin,
+    linear-gradient(-55deg, #0000 45%, #d00 0 65%, #0000 0) 345.35vmin 0.75vmin / 1vmin 1.5vmin,
+    linear-gradient(black 1px, transparent 0 calc(100% - 1px), black 0) 347vmin 50% / 10vmin 17vmin,
+    linear-gradient(#d00, #d00) 358.5vmin 19.5vmin / 0.33vmin 1.75vmin,
+    linear-gradient(55deg, #0000 40%, #d00 0 60%, #0000 0) 357.75vmin 19.5vmin / 1vmin 1.5vmin,
+    linear-gradient(-55deg, #0000 45%, #d00 0 65%, #0000 0) 357.75vmin 19.875vmin / 1vmin 1.5vmin,
+    
+    conic-gradient(at 50% 0%, #0000 150deg, #d00 0 210deg, #0000 0) 345vmin 2.875vmin / 1.5vmin 1.25vmin,
+    conic-gradient(at 50% 100%, #d00 30deg, #0000 0 330deg, #d00 0) 345vmin 4.125vmin / 1.5vmin 1.25vmin,
+    
+    linear-gradient(to right, black 50%, white 0) 352vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, black 50%, white 0) 354vmin 7vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 349vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(to right, white 50%, black 0) 351vmin 14vmin / 1vmin 1vmin,
+    linear-gradient(-45deg, #0000 10%, #d00 0 90%, #0000 0) 347.5vmin 50% / 9vmin 2vmin,
+    conic-gradient(at 100% -100%, #fa8 223deg, #0000 0) 347.5vmin 6vmin / 9vmin 4.5vmin,
+    conic-gradient(at 0% 200%, #fa8 43deg, #0000 0) 347.5vmin 11.5vmin / 9vmin 4.5vmin,
+    radial-gradient(closest-side, #000 99.9%, #0000 0) 347.75vmin 4.25vmin / 4.25vmin 4.25vmin,
+    radial-gradient(closest-side, #000 99.9%, #0000 0) 352.25vmin 13vmin / 4.25vmin 4.25vmin,
+    linear-gradient(-45deg, gold 50%, #0000 0) 352.25vmin 3vmin / 3vmin 3vmin,
+    linear-gradient(-45deg, gold 50%, #0000 0) 353.625vmin 3vmin / 3vmin 3vmin,
+    linear-gradient(-45deg, #0000 50%, gold 0) 347.5vmin 16vmin / 3vmin 3vmin,
+    linear-gradient(-45deg, #0000 50%, gold 0) 348.825vmin 16vmin / 3vmin 3vmin,
+    
+    linear-gradient(to right, black 1px, transparent 0 calc(100% - 1px), black 0) 347vmin 50% / 10vmin 17vmin,
+    linear-gradient(white, white) 344.5vmin 0 / 15vmin 100%
+    ;
+  afilter: drop-shadow(0 0 0.5vmin);
+  background-repeat: no-repeat;
+}
+
+@keyframes talk {
+  0%, 35% { opacity: 1; content: "Here are 6 cards. \0a Pick one and focus only \0a on that one. Don't click \0a on it or place the mouse \0a over it! \0a Just remember your card." }
+  35.1%, 37% { opacity: 0; }
+  37.1%, 45% { opacity: 1; content: "Got it? Perfect!" }
+  45.1%, 47% { opacity: 0; }
+  47.1%, 60% { opacity: 1; content: "Now I will shuffle the cards, \0a guess your pick, and \0a remove it from the deck" }
+  60.1%, 70% { opacity: 0; }
+  70.1%, 90% { opacity: 1; content: "Focus on your card! \0a \0a With my great magic powers \0a I will guess it!!" }
+  90.1%, 92% { opacity: 0; }
+  92.1%, 100% { opacity: 1; content: "Done! I found your card and \0a removed it from the deck! \0a TA-DA!" }
+}
+
+@keyframes moveCards {
+  0% { transform: translate(0, 0); }
+  5%, 55% { transform: translate(-25%, 0) }
+  60%, 85% { transform: translate(-50%, 0); }
+  90%, 100% { transform: translate(-75%, 0); }
+}
+
+article {
+  --time: 20s;
+}
+
+article:focus::after {
+  animation: talk var(--time) linear 1 forwards;
+}
+
+article:focus::before {
+  animation: moveCards var(--time) linear 1 forwards;
+}

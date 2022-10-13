@@ -1,0 +1,41 @@
+{
+    "name": "divtober-22-5-stamp",
+    "version": "1.0.0",
+    "title": "Divtober'22 #5: Stamp",
+    "description": "Drawing of a stamp with a postmark on, coded in CSS with a single HTML element.",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "divtober-22-5-stamp.html",
+    "css": [
+        "divtober-22-5-stamp.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "html",
+        "divtober",
+        "css",
+        "cssart",
+        "stamp"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/vYjaKEB",
+    "codepen": "https://codepen.io/alvaromontoro/pen/vYjaKEB"
+}

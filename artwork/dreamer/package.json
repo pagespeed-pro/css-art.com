@@ -1,0 +1,41 @@
+{
+    "name": "dreamer",
+    "version": "1.0.0",
+    "title": "Dreamer",
+    "description": "CSS only Kero-chan",
+    "author": {
+        "name": "Tiffany Choong",
+        "avatar": "https://assets.codepen.io/765377/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1516941279&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/tiffachoo/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/tiffachooo"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/tiffachoo"
+            }
+        ]
+    },
+    "html": "dreamer.html",
+    "css": [
+        "dreamer.css"
+    ],
+    "js": "// ☆ ʕ• ᴥ •ʔ ☆\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css-image",
+        "css-animation",
+        "scss",
+        "css-only",
+        "kero"
+    ],
+    "original": "https://codepen.io/tiffachoo/pen/MWKzVWV",
+    "codepen": "https://codepen.io/tiffachoo/pen/MWKzVWV"
+}

@@ -1,0 +1,857 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+body {
+  display: grid;
+  place-items: center;
+  margin: 0;
+  min-height: 100vh;
+}
+
+article {
+  display: flex;
+  gap: 1vmin;
+  font-family: 'Comic Neue', 'Comic Sans', Arial, sans-serif;
+}
+
+section {
+  --bg: linear-gradient(#0000, #0002) #436;
+  position: relative;
+  border: 0.5vmin solid;
+  border-radius: 0.5vmin;
+  height: 60vmin;
+  width: 42vmin;
+  background: var(--bg);
+  overflow: clip;
+}
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+
+input {
+  position: absolute;
+  left: -1000in;
+}
+
+label {
+  display: inline-block;
+  height: 2.5vmin;
+  line-height: 2.5vmin;
+  font-family: 'Comic Neue', Arial, sans-serif;
+  font-size: 2vmin;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5vmin;
+}
+
+label::before {
+  content: "";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 0.25vmin solid;
+  border-radius: 0.25vmin;
+  margin-right: 0.5vmin;
+}
+
+input:checked + label::before {
+  background: currentColor;
+  box-shadow: inset 0 0 0 0.25vmin white;
+}
+
+input:not(:checked) ~ article *,
+input:not(:checked) ~ article *::before,
+input:not(:checked) ~ article *::after {
+  animation-play-state: paused !important;
+}
+
+@media (prefers-reduced-motion) {
+  *,
+  *::before,
+  *::after {
+    animation-play-state: paused !important;
+  }
+  
+  label {
+    display: none;
+  }
+}
+
+/******** First panel */
+
+section:nth-child(1) {
+  --s: 15vmin;
+  width: 52vmin;
+  overflow: hidden;
+}
+
+@keyframes lightMove {
+  0%, 100% { transform: rotate(-20deg); }
+  50% { transform: rotate(20deg); }
+}
+
+section:nth-child(2)::before,
+section:nth-child(1)::before,
+section:nth-child(1)::after {
+  --time: 3s;
+  animation: lightMove var(--time) infinite;
+  content: "";
+  width: 40%;
+  height: 120%;
+  top: -5%;
+  left: -5%;
+  position: absolute;
+  box-sizing: border-box;
+  background: #86b8;
+  clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%);
+  transform-origin: 50% 0;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+
+section:nth-child(1)::after {
+  left: auto;
+  right: -9%;
+  animation-duration: calc(var(--time) * 1.1);
+  animation-delay: calc(var(--time) / -1.5);
+}
+
+section:nth-child(1) .logo {
+  bottom: 20%;
+}
+
+@keyframes moveBall {
+  0% { background-position-x: 0; }
+  100% { background-position-x: 13vmin; }
+}
+
+.disco-ball {
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+  animation: moveBall 3s infinite linear;
+  width: 25%;
+  aspect-ratio: 1;
+  background: 
+    repeating-linear-gradient(#0003 0 0.25%, #0000 0 9.75%, #0003 0 10%),
+    repeating-linear-gradient(90deg, #0003 0 0.25%, #0000 0 9.75%, #0003 0 10%),
+    conic-gradient(at 90% 10%, #fff8 25%, #0000 0), 
+    conic-gradient(at 20% 20%, #0000 75%, #ffd8 0) 0 0 / 50% 50%, 
+    conic-gradient(at 80% 80%, #0000 25%, #fdfa 0 50%, #0000 0) 3vmin 5vmin / 50% 40%, 
+    #ddd;
+  border-radius: 50%;
+  box-shadow: 0 0 5vmin #fff6;
+}
+
+
+.disco-ball::before {
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 8%;
+  height: 40vmin;
+  background: #5478;
+}
+
+@keyframes bright {
+  0% { opacity: 1; transform: scale(0); }
+  20% { opacity: 1; }
+  40%, 100% { opacity: 0; transform: scale(3); }
+}
+
+@keyframes moveSpark {
+  0%, 19% { top: 30%; left: 50%; }
+  20%, 39% { top: 70%; left: 80%; }
+  40%, 59% { top: 20%; left: 30%; }
+  60%, 79% { top: 50%; left: 95%; }
+  80%, 100% { top: 80%; left: 30%; }
+}
+
+.disco-ball::after {
+  content: "";
+  width: 5%;
+  aspect-ratio:1;
+  background: #fff;
+  top: 30%;
+  left: 50%;
+  animation: bright 2s infinite, moveSpark 10s infinite linear;
+  border-radius: 50%;
+}
+
+.discord-leg {
+  --angle: 6deg;
+  width: 20%;
+  height: 35%;
+  border-radius: 50%;
+  border: 0.5vmin solid #0000;
+  border-right: 0.5vmin solid;
+  bottom: -5%;
+  left: 1%;
+  transform: rotate(var(--angle));
+}
+.discord-leg + .discord-leg {
+  --angle: -8deg;
+  left: 9%;
+}
+
+.discord-leg::before {
+  content: "";
+  width: 40%;
+  height: 5%;
+  background: #000;
+  top: 81%;
+  left: 84%;
+  transform: rotate(calc(var(--angle) * -1));
+  border-radius: 50% / 100% 100% 0 0;
+}
+
+.discord-leg + .discord-leg::before {
+  top: 87%;
+}
+
+@keyframes slackDanceLegs {
+  0%, 100% { height: 30%; transform: translate(-50%, 0) rotate(5deg) }
+  50% { height: 33%;transform: translate(-50%, 0) rotate(-5deg)}
+}
+
+.slack-legs {
+  transform-origin: 50% 15%;
+  animation: slackDanceLegs 1.3s infinite;
+  width: 13%;
+  border: 0.5vmin solid;
+  border-radius: 50%;
+  height: 30%;
+  bottom: -5%;
+  left: 50%;
+  transform: translate(-50%,0) rotate(0deg);
+  clip-path: polygon(-100% 15%, 200% 15%, 200% 84%, -100% 84%);
+}
+
+.slack-legs::before {
+    content: "";
+  width: 60%;
+  height: 5%;
+  background: #000;
+  top: 81%;
+  left: 85%;
+  transform: rotate(calc(var(--angle) * -1));
+  border-radius: 50% / 100% 100% 0 0;
+  box-shadow: -8vmin 0;
+}
+
+.webtorrent-leg {
+  --angle: -8deg;
+  width: 20%;
+  height: 35%;
+  border-radius: 50%;
+  border: 0.5vmin solid #0000;
+  border-left: 0.5vmin solid;
+  bottom: -5%;
+  right: -4%;
+  transform: rotate(var(--angle));
+}
+
+.webtorrent-leg + .webtorrent-leg {
+  --angle: 6deg;
+  right: 5%;
+}
+
+.webtorrent-leg::before {
+  content: "";
+  width: 40%;
+  height: 5%;
+  background: #000;
+  top: 81%;
+  right: 84%;
+  transform: rotate(calc(var(--angle) * -1));
+  border-radius: 50% / 100% 100% 0 0;
+  transform-origin:
+}
+
+@keyframes tapFoot {
+  0%, 10%, 90%, 100% { transform: rotate(0); }
+  50% { transform: rotate(10deg); }
+}
+
+.webtorrent-leg + .webtorrent-leg::before {
+  top: 86%;
+  transform-origin: bottom right;
+  animation: tapFoot 1.1s linear infinite;
+}
+
+@keyframes discordDance {
+  0%, 100% { transform: translate(0,0) rotate(var(--angle)); }
+  50% { transform: translate(0.25vmin, 0.5vmin) rotate(calc(var(--angle) / 2)); }
+}
+
+.discord {
+  --angle: -8deg;
+  animation: discordDance 0.9s infinite;
+  left: 6%;
+  transform: rotate(-6deg);
+}
+
+.slack {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.webtorrent {
+  --angle: 8deg;
+  animation: discordDance 0.9s infinite;
+  right: 5%;
+  bottom: 18% !important;
+  transform: rotate(8deg);
+  animation-delay: -0.7s;
+  animation-duration: 3s;
+}
+
+/************* panel 2 */
+section:nth-child(2) {
+  --s: 18vmin;
+  background: 
+    radial-gradient(at 0 0, #fff2, #fff0),
+    var(--bg);
+}
+
+section:nth-child(2)::before {
+  left: 50%;
+  animation-delay: -1s;
+}
+
+.safari-logo {
+  bottom: 22%;
+  left: 6%;
+  transform: rotateY(15deg);
+}
+
+.chrome-logo {
+  bottom: 21%;
+  right: 5%;
+  transform: rotateY(15deg);
+}
+
+@property --height {
+  initial-value: 100%;
+  syntax: '<percentage>';
+  inherits: true;
+}
+
+@keyframes blink {
+  0%, 50%, 60%, 100% {
+    --height: 100%;
+  }
+  55% {
+    --height: 0%;
+  }
+}
+
+.safari-eye,
+.chrome-eye {
+  --height: 100%;
+  animation: blink 3.33s linear infinite;
+  width: 3%;
+  height: 4%;
+  background: radial-gradient(100% var(--height), black 99%, transparent 0) no-repeat;
+  border-radius: 50%;
+  top: 62%;
+  left: 64%;
+}
+
+.chrome-eye + .chrome-eye {
+  left: 75%;
+  transform: scaleX(-1);
+}
+
+.chrome-eye::before {
+  content: "";
+  width: 250%;
+  height: 90%;
+  border: 0.5vmin solid #0000;
+  border-top: 0.5vmin solid;
+  border-radius: 50%;
+  transform: translate(-25%, -50%) rotate(-40deg)
+}
+
+.chrome-mouth {
+  width: 10%;
+  height: 3%;
+  border: 0.4vmin solid;
+  background: 
+    linear-gradient(10deg, #0000 40%, #000 0 60%, #0000 0) 50% 50% / 100% 14% no-repeat,
+    white;
+  top: 71%;
+  left: 67%;
+  border-radius: 50% 1vmin 50% 50% / 0 1vmin 1vmin 100%;
+  transform: rotate(-5deg);
+}
+
+.chrome-cheeks {
+  width: 32%;
+  height: 6%;
+  background: red;
+  top: 68%;
+  left: 72.5%;
+  border-radius: 50%;
+  background:
+    repeating-linear-gradient(-40deg, #0000 0 9%, #00f 0 10%) no-repeat,
+    radial-gradient(farthest-side, #00f8, #00f0)
+    ;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes dropDrop {
+  0% { 
+    transform: rotate(45deg) skew(25deg) translateY(0);
+    opacity: 0;
+  }
+  10%, 40% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: rotate(45deg) skew(25deg) translate(1vmin, 1vmin);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.chrome-drop {
+  animation: dropDrop 5.25s linear infinite;
+  border: 0.3vmin solid;
+  width: 7.5%;
+  height: 6%;
+  top: 54%;
+  left: 83%;
+  border-radius: 0 50% 50% 50%;
+  background: radial-gradient(circle at 50% 80%, white 15%, #0000 0)  #beeeef;
+  transform: rotate(45deg) skew(25deg);
+}
+
+
+.safari-leg,
+.chrome-leg {
+  border: 0.75vmin solid #0000;
+  border-left: 0.75vmin solid;
+  right: 1%;
+}
+
+.chrome-leg + .chrome-leg {
+  right: 15%;
+}
+
+.chrome-leg::before {
+  width: 60%;
+}
+
+.safari-leg + .safari-leg::before,
+.chrome-leg + .chrome-leg::before {
+  animation: none;
+}
+
+.safari-arm,
+.chrome-arms {
+  width: 35%;
+  height: 30%;
+  border: 0.5vmin solid;
+  border-radius:  120% 80% 40% 20% / 100%;
+  border-bottom-color: #0000;
+  top: 63%;
+  right: 8%;
+}
+
+.safari-arm::before,
+.chrome-arms::before,
+.chrome-arms::after {
+  content: "";
+  width: 12%;
+  height: 20%;
+  background: 
+    radial-gradient(farthest-side, #000 99.9%, #0000 0) 100% 0% / 40% 80% no-repeat,
+    radial-gradient(farthest-side, #000 99.9%, #0000 0) 45% 0% / 40% 100% no-repeat;
+  top: 90%;
+  border-radius: 50%;
+  box-shadow: inset 0.4vmin 1vmin;
+  left: 0;
+  transform: rotate(-20deg);
+}
+
+.safari-arm::before,
+.chrome-arms::after {
+  left: 82%;
+  transform: scaleX(-1) rotate(-25deg);
+}
+
+.safari-arm {
+  left: 12%;
+  transform: rotate(-15deg);
+  clip-path: polygon(50% 0, 200% 0, 200% 200%, 50% 200%)
+}
+
+.safari-arm2 {
+  width: 15%;
+  height: 20%;
+  border: 0.5vmin solid;
+  top: 67%;
+  left: 5%;
+  border-radius: 50%;
+  border-right:  0.25vmin solid #0000;
+  transform: rotate(45deg);
+}
+
+.safari-cup {
+  width: 10%;
+  height: 10%;
+  background: 
+    linear-gradient(82deg, #000 20%, #0000 0),
+    linear-gradient(-82deg, #000 18%, #0000 0),
+    linear-gradient(#0001 0 0) 50% 40% / 100% 5% no-repeat,
+     linear-gradient(#0001 0 0) 50% 30% / 100% 5% no-repeat,
+     linear-gradient(#0001 0 0) 50% 20% / 100% 5% no-repeat,
+     linear-gradient(#0001 0 0) 50% 10% / 100% 5% no-repeat,
+     linear-gradient(#0001 0 0) 50% 90% / 100% 5% no-repeat,
+    #c00;
+  top: 78%;
+  left: 8%;
+  clip-path: polygon(0 0, 100% 0, 80% 100%, 20% 100%);
+  border: 0.4vmin solid;
+ 
+}
+
+.safari-hand {
+  width: 5%;
+  aspect-ratio: 1;
+  background: black;
+  top: 82%;
+  left: 7%;
+  border-radius: 50%;
+}
+
+.safari-leg {
+  --angle: 5deg;
+  left: 19%;
+}
+.safari-leg + .safari-leg {
+  --angle: -10deg;
+  left: 32%;
+}
+
+.safari-leg::before {
+  top: 87%;
+  width: 60%;
+}
+.safari-leg + .safari-leg::before {
+  top: 84%;
+  left: -45%;
+  transform: rotate(10deg) !important;
+}
+
+.safari-eye {
+  left: 19%;
+  top: 60%;
+  animation-delay: -2.75s;
+  animation-duration: 4.1s;
+}
+
+.safari-eye + .safari-eye {
+  left: 29%;
+  transform: scaleX(-1);
+}
+
+.safari-eye::before {
+  content: "";
+  width: 250%;
+  height: 90%;
+  border: 0.5vmin solid #0000;
+  border-top: 0.5vmin solid;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) rotate(40deg)
+}
+
+.safari-mouth {
+  width: 12%;
+  height: 3%;
+  border: 0.4vmin solid;
+  border-radius: 0 100% 100% 100%;
+  top: 68%;
+  left: 20%;
+  border-left-color: #0000;
+  background:
+    linear-gradient(#fff 0 0) 100% 0 / 80% 30% no-repeat,
+    radial-gradient(at 100% 100%, #d00 40%, #0000 0) no-repeat
+    ;
+}
+
+.bubble {
+  background: #cdf;
+  font-size: 2.5vmin;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0;
+}
+
+.bubble-1 {
+  width: 45%;
+  background: #ffc;
+  padding: 3vmin 1vmin 2vmin 2vmin;
+  top: -2vmin;
+  left: -1vmin;
+  z-index: 2;
+}
+
+.bubble-1::before {
+  content: "";
+  height: 18vmin;
+  width: 3vmin;
+  border-radius: 50%;
+  left: 40%;
+  top: 90%;
+  box-shadow: inset 0.5vmin 1vmin #ffc;
+  transform: rotate(-5deg);
+  
+}
+
+.bubble-2 {
+  width: 65%;
+  right: -1vmin;
+  top: -2vmin;
+  padding: 3vmin 2vmin 2vmin 1vmin;
+}
+
+.bubble-2::before {
+  content: "";
+  height: 20vmin;
+  width: 5vmin;
+  border-radius: 50%;
+  left: 30%;
+  top: 85%;
+  box-shadow: inset 0.75vmin 0.75vmin #cdf;
+  
+}
+
+.bubble-3 {
+  left: 45%;
+  top: 22%;
+  padding: 1.5vmin;
+  font-size: 2vmin;
+}
+
+.bubble-4 {
+  left: 47%;
+  top: 35%;
+  padding: 1.125vmin;
+  font-size: 2vmin;
+}
+
+.mumbling {
+  color: #eee;
+  bottom: 50%;
+  right: 3%;
+  font-size: 1.5vmin;
+  transform: rotate(-3deg);
+}
+
+/************** logos */
+.logo {
+  position: absolute;
+  z-index: 1;
+}
+
+.discord {
+  --blurple: #5865F2;
+  display: inline-block;
+  color: var(--blurple);
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 100% / 130% 130% 55% 55%;
+  overflow: hidden;
+}
+
+.discord::before {
+  content: "";
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  width: 120%;
+  height: 80%;
+  transform: translate(-50%, -50%);
+  border-radius: 50% 50% 48% 48%;
+  background:
+    radial-gradient(105% 55% at 50% 19%, currentColor 22%, #0000 22.4%),
+/*     radial-gradient(34% 58% at 36.2% 53.5%, #fff 22%, #0000 22.25%),
+    radial-gradient(34% 58% at 63.8% 53.5%, #fff 22%, #0000 22.25%), */
+    radial-gradient(66% 80% at -5.5% 25%, currentColor 73%, #0000 73.25%),
+    radial-gradient(66% 80% at 105.5% 25%, currentColor 73%, #0000 73.25%),
+    radial-gradient(59% 99.5% at 50% 0, currentColor 84.5%, #0000 84.75% 88%, currentColor 88.25%) 50% 100% / 100% 92% no-repeat,
+    radial-gradient(50% 80% at 4% 35%, currentColor 73%, #0000 0),
+    radial-gradient(50% 80% at 96% 35%, currentColor 73%, #0000 0)
+    ;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 71.5% 100%, 65.5% 85%, 50% 87%, 34.5% 85%, 28.5% 100%, 0 100%);
+  -webkit-mask:
+    radial-gradient(34% 58% at 36.2% 53.5%, #0000 22%, #000 22.25%),
+    radial-gradient(34% 58% at 63.8% 53.5%, #0000 22%, #000 22.25%);
+  -webkit-mask-composite: intersect;
+  -webkit-mask-composite: destination-in;
+  mask:
+    radial-gradient(34% 58% at 36.2% 53.5%, #0000 22%, #000 22.25%),
+    radial-gradient(34% 58% at 63.8% 53.5%, #0000 22%, #000 22.25%);
+  mask-composite: intersect;
+  mask-composite: destination-in;
+}
+
+
+.slack {
+  --blue: #38c7f3;
+  --green: #31b67f;
+  --red: #e21e5c;
+  --yellow: #ecb32e;
+  --circle: calc(var(--s) * 0.105);
+  display: inline-block;
+  width: var(--s);
+  aspect-ratio: 1;
+    ;
+  background: conic-gradient(var(--green) 25%, var(--yellow) 0 50%, var(--red) 0 75%, var(--blue) 0);
+  -webkit-mask: 
+    radial-gradient(farthest-side, #000 99.99%, #0000 0) 0 0 / 21% 21% space,
+    linear-gradient(#000 0 0) 66.666% 13.333% / 21% 26.666% no-repeat,
+    linear-gradient(#000 0 0) 86.666% 66.666% / 26.666% 21% no-repeat,
+    linear-gradient(#000 0 0) 33.333% 86.666% / 21% 26.666% no-repeat,
+    linear-gradient(#000 0 0) 13.333% 33.333% / 26.666% 21% no-repeat,
+    
+    linear-gradient(#000 0 0) 41.125% 11.7% / 10.5% 10.5% no-repeat,
+    linear-gradient(#000 0 0) 88.3% 41.125% / 10.5% 10.5% no-repeat,
+    linear-gradient(#000 0 0) 58.7% 88.3% / 10.5% 10.5% no-repeat,
+    linear-gradient(#000 0 0) 11.7% 58.7% / 10.5% 10.5% no-repeat
+    
+    ;
+  clip-path: polygon(0 25%, 25% 25%, 25% 0, 75% 0, 75% 25%, 100% 25%, 100% 75%, 75% 75%, 75% 100%, 25% 100%, 25% 75%, 0 75%);
+}
+
+.webtorrent {
+  --red: #f04;
+  --gray: #323b46;
+  --darkgray: #252b34;
+  content: "";
+  display: inline-block;
+  height: var(--s);
+  aspect-ratio: 0.85;
+  background:
+    radial-gradient(circle at 38.5% 43%, var(--red) 14%, #0000 0),
+    radial-gradient(circle at 61.5% 43%, var(--red) 14%, #0000 0),
+    radial-gradient(circle at 50% 50%, var(--red) 14%, #0000 0),
+    conic-gradient(from 0.8815turn at 50% 100%, var(--red) 0.237turn, #0000 0) 50% 62% / 50% 20% no-repeat,
+    linear-gradient(90deg, var(--red) 5.5%, #0000 0 94.5%, var(--red) 0),
+    linear-gradient(30deg, var(--red) 20.75%, #0000 0 79.25%, var(--red) 0),
+    linear-gradient(-30deg, var(--red) 20.75%, #0000 0 79.25%, var(--red) 0),
+    linear-gradient(43deg, #0000 34%, var(--darkgray) 0 68%, #0000 0) 100% 100% / 50% 50% no-repeat,
+    linear-gradient(43deg, #0000 34%, var(--darkgray) 0 68%, #0000 0) 113% 70% / 50% 50% no-repeat,
+    var(--gray);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.chrome-logo {
+  --b: #0071f0;
+  --r: #f11718;
+  --g: #00a944;
+  --y: #ffbe01;
+  display: inline-block;
+  width: var(--s);
+  aspect-ratio: 1;
+  background:
+    radial-gradient(var(--b) 28.75%, #fff 29% 35.25%, #0000 35.5%),
+    linear-gradient(var(--r) 25%, #0000 0),
+    linear-gradient(60deg, var(--g) 31.75%, #0000 0),
+    linear-gradient(-60deg, var(--y) 31.75%, #0000 0),
+    conic-gradient(var(--y) 33.33%, var(--g) 0 66.66%, var(--r) 0)
+    ;
+  border-radius: 50%;
+}
+
+.safari-logo {
+  display: inline-block;
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(#2fa4d4 10%, #277ec2 50% 65.5%, #0000 65.66%),
+    linear-gradient(#f2f2f2, #dad9da)
+    ;
+  background-color: #f002;
+}
+
+.safari-logo::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 88%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    /* circle cutting long lines*/
+    radial-gradient(#2fa4d4 10%, #277ec2 57%, #0000 57.25%),
+    /* long lines */
+    linear-gradient(#0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(11.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(22.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(33.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(45deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(56.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(67.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(78.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(90deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(101.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(112.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(123.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(135.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(146.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(157.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(168.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    /* circle cutting short lines*/
+    radial-gradient(#2fa4d4 10%, #277ec2 57% 63.5%, #0000 63.75%),
+    /* short lines */
+    linear-gradient(5.6deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(16.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(28.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(39.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(50.6deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(61.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(73.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(84.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(95.6deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(106.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(118.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(129.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(140.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(151.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(163.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(174.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0)
+    ;
+}
+
+.safari-logo::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 13%;
+  height: 89%;
+  background:
+    linear-gradient(to bottom right, #0000 50%, #ff2d3a 0) 0 0,
+    linear-gradient(to bottom left, #0000 50%, #dd0017 0) 100% 0,
+    linear-gradient(to top right, #0000 50%, #dbdadb 0) 0 100%,
+    linear-gradient(to top left, #0000 50%, #abaaab 0) 100% 100%
+    ;
+  background-size: 50.125% 50.125%;
+  background-repeat: no-repeat;
+}

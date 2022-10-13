@@ -1,0 +1,140 @@
+body {
+  min-height: 300px;
+  height: 100vh;
+  position: relative;
+  background-color: #eee;
+  background-image: linear-gradient(to top, #ddd calc(50% - 6.5em), rgba(255,255,255,0) calc(50% - 6.5em));
+  text-align: center;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div:before,
+div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+#fan {
+  width: 14em;
+  height: 15em;
+  margin-left: -7em;
+  margin-top: -6em;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to bottom, #ccc 0.3em, #443e48 0.3em), linear-gradient(to bottom, #222 10em, transparent 10em), radial-gradient(ellipse at center, rgba(0,0,0,0.1) 20%, rgba(0,0,0,0) 50%);
+  background-size: 93% 8.1em, 100% 100%, 18em 1.5em;
+  background-position: 50% 0.6em, 0 0, left 50% bottom 0;
+  border-radius: 5px;
+  animation: floating 1500ms infinite ease-in-out;
+}
+#fan:after {
+  width: 18em;
+  height: 0.7em;
+  left: -2em;
+  top: 9.3em;
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to top, #888 20%, rgba(0,0,0,0) 40%), linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0) 1%, rgba(0,0,0,0) 1.2%, rgba(0,0,0,0.3) 2.5%, rgba(0,0,0,0) 5%), linear-gradient(to left, rgba(0,0,0,0.3), rgba(0,0,0,0) 1%, rgba(0,0,0,0) 1.2%, rgba(0,0,0,0.3) 2.5%, rgba(0,0,0,0) 5%), linear-gradient(35deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0) 70%), linear-gradient(-35deg, rgba(0,0,0,0) 30%, rgba(0,0,0,0.3) 40%, rgba(0,0,0,0) 70%), linear-gradient(to top, rgba(0,0,0,0.15) 20%, rgba(0,0,0,0) 30%);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 0.5em 0.3em, 0.5em 0.3em, 1.8em 0.3em;
+  background-position: 0 0, 0 0, 0 0, 44% 0, 56% 0, 50% 0;
+  border-radius: 1px;
+  border-bottom-left-radius: 1em 0.3em;
+  border-bottom-right-radius: 1em 0.3em;
+}
+#fan:before {
+  content: '☠️☠️☠️';
+  box-sizing: border-box;
+  width: 4em;
+  height: 11em;
+  margin-left: -2em;
+  padding-top: 4.5em;
+  left: 50%;
+  top: 0;
+  background-image: linear-gradient(to right, #444 20%, #333 50%, rgba(0,0,0,0) 50%), linear-gradient(to right, #aaa, #ccc, #aaa);
+  background-repeat: repeat-x, no-repeat;
+  background-size: 100% 0.3em, 0.3em 1em;
+  background-position: 0 100%, 50% 100%;
+  animation: fan 60ms infinite linear;
+}
+@-moz-keyframes fan {
+  0 {
+    background-position: 0 100%, 50% 100%;
+  }
+  100% {
+    background-position: 4em 100%, 50% 100%;
+  }
+}
+@-webkit-keyframes fan {
+  0 {
+    background-position: 0 100%, 50% 100%;
+  }
+  100% {
+    background-position: 4em 100%, 50% 100%;
+  }
+}
+@-o-keyframes fan {
+  0 {
+    background-position: 0 100%, 50% 100%;
+  }
+  100% {
+    background-position: 4em 100%, 50% 100%;
+  }
+}
+@keyframes fan {
+  0 {
+    background-position: 0 100%, 50% 100%;
+  }
+  100% {
+    background-position: 4em 100%, 50% 100%;
+  }
+}
+@-moz-keyframes floating {
+  0, 100% {
+    transform: translate(0, 0);
+    background-size: 93% 8.1em, 100% 100%, 18em 1.5em;
+    background-position: 50% 0.6em, 0 0, left 50% bottom 0;
+  }
+  50% {
+    transform: translate(0, 0.5em);
+    background-size: 93% 8.1em, 100% 100%, 21em 1.8em;
+    background-position: 50% 0.6em, 0 0, left 50% bottom 0.5em;
+  }
+}
+@-webkit-keyframes floating {
+  0, 100% {
+    transform: translate(0, 0);
+    background-size: 93% 8.1em, 100% 100%, 18em 1.5em;
+    background-position: 50% 0.6em, 0 0, left 50% bottom 0;
+  }
+  50% {
+    transform: translate(0, 0.5em);
+    background-size: 93% 8.1em, 100% 100%, 21em 1.8em;
+    background-position: 50% 0.6em, 0 0, left 50% bottom 0.5em;
+  }
+}
+@-o-keyframes floating {
+  0, 100% {
+    transform: translate(0, 0);
+    background-size: 93% 8.1em, 100% 100%, 18em 1.5em;
+    background-position: 50% 0.6em, 0 0, left 50% bottom 0;
+  }
+  50% {
+    transform: translate(0, 0.5em);
+    background-size: 93% 8.1em, 100% 100%, 21em 1.8em;
+    background-position: 50% 0.6em, 0 0, left 50% bottom 0.5em;
+  }
+}
+@keyframes floating {
+  0, 100% {
+    transform: translate(0, 0);
+    background-size: 93% 8.1em, 100% 100%, 18em 1.5em;
+    background-position: 50% 0.6em, 0 0, left 50% bottom 0;
+  }
+  50% {
+    transform: translate(0, 0.5em);
+    background-size: 93% 8.1em, 100% 100%, 21em 1.8em;
+    background-position: 50% 0.6em, 0 0, left 50% bottom 0.5em;
+  }
+}

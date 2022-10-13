@@ -1,0 +1,110 @@
+body {
+  background: #ddd;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hp-character {
+  display: inline-block;
+  margin: 3vmin;
+  width: 30vmin;
+  height: 30vmin;
+  aspect-ratio: 1/1;
+  border-radius: 20%;
+  box-shadow: 0 1vmin 4vmin;
+}
+
+.hp-character.griffindor {
+  background:
+    linear-gradient(69deg, #0000 30%, #da8 0 70%, #0000 0) 27% 20% / 10% 7%,
+    conic-gradient(at 90% 100%, #0000 320deg, #da8 0 350deg, #0000 0) 25% 27% / 10% 7%,
+    radial-gradient(farthest-side, #fff 90%, #0000 0) 22% 50% / 5% 5%,
+    radial-gradient(farthest-side, #fff 90%, #0000 0) 72% 50% / 5% 5%,
+    radial-gradient(farthest-side, #000 90%, #0000 0) 20% 55% / 20% 20%,
+    radial-gradient(farthest-side, #000 90%, #0000 0) 80% 55% / 20% 20%,
+    linear-gradient(to right, #000 7%, #0000 0 43%, #000 0 57%, #0000 0 93%, #000 0) 0 52% / 100% 2.5%,
+    radial-gradient(circle at 25% 50%, #0000 22%, #000 0 25%, #0000 0) 0 52% / 100% 40%,
+    radial-gradient(circle at 75% 50%, #0000 22%, #000 0 25%, #0000 0) 0 52% / 100% 40%,
+    repeating-linear-gradient(to right, brown 0 20%, gold 0 40%) 0 100% / 100% 25%,
+    linear-gradient(#0000 73%, #000 0 90%, #0000 0),
+    radial-gradient(farthest-side, #642 99.9%, #0000 0) -52% -60% / 52% 60%,
+    radial-gradient(farthest-side, #642 99.9%, #0000 0) 300% -58% / 90% 56%,
+    radial-gradient(farthest-side, #fca 99.9%, #0000 0) 320% -50% / 90% 55%,
+    radial-gradient(farthest-side, #642 99.9%, #0000 0) 500% -52% / 95% 55%,
+    linear-gradient(#fca 0 0)
+    ;
+  background-repeat: no-repeat;
+  color: #d006;
+}
+
+
+.hp-character.slytherin {
+  background:
+    linear-gradient(5deg, #0000 40%, #ffe 0 70%, #0000 0) 15% 30% / 30% 5%,
+    linear-gradient(-5deg, #0000 40%, #ffe 0 70%, #0000 0) 85% 30% / 30% 5%,
+    radial-gradient(farthest-side, #fff 90%, #0000 0) 24% 45% / 5% 5%,
+    radial-gradient(farthest-side, #fff 90%, #0000 0) 70% 45% / 5% 5%,
+    radial-gradient(farthest-side, #333 90%, #0000 0) 23% 50% / 20% 20%,
+    radial-gradient(farthest-side, #333 90%, #0000 0) 77% 50% / 20% 20%,
+    repeating-linear-gradient(to right, green 0 20%, #eee 0 40%) 0 100% / 100% 25%,
+    linear-gradient(#0000 73%, #000 0 90%, #0000 0),
+    radial-gradient(farthest-side, #ffe 99.9%, #0000 0) -300% -70% / 90% 50%,
+    radial-gradient(farthest-side, #ffe 99.9%, #0000 0) 400% -70% / 90% 50%,
+    linear-gradient(#f8d8b8 0 0)
+    ;
+  background-repeat: no-repeat;
+  color: #0006;
+}
+
+.hp-character.ravenclaw {
+  background:
+    radial-gradient(farthest-side, #fff 90%, #0000 0) 24% 45% / 5% 5%,
+    radial-gradient(farthest-side, #fff 90%, #0000 0) 70% 45% / 5% 5%,
+    radial-gradient(farthest-side, #111 90%, #0000 0) 23% 50% / 20% 20%,
+    radial-gradient(farthest-side, #111 90%, #0000 0) 77% 50% / 20% 20%,
+    repeating-linear-gradient(to right, #203aa0 0 20%, #b94 0 40%) 0 100% / 100% 25%,
+    linear-gradient(#0000 73%, #000 0 90%, #0000 0),
+    radial-gradient(farthest-side, #210 99.9%, #0000 0) -300% -70% / 90% 50%,
+    radial-gradient(farthest-side, #210 99.9%, #0000 0) 400% -70% / 90% 50%,
+    radial-gradient(farthest-side, #ffe8b8 99.9%, #0000 0) -350% -65% / 90% 50%,
+    radial-gradient(farthest-side, #ffe8b8 99.9%, #0000 0) 450% -65% / 90% 50%,
+    radial-gradient(farthest-side, #210 99.9%, #0000 0) 200% -55% / 80% 48%,
+    radial-gradient(farthest-side, #210 99.9%, #0000 0) -150% -55% / 86% 47%,
+    radial-gradient(circle at 100% 0%, #0000 0 35%, #432 0 40%, #0000 0 50%, #432 0 55%, #0000 0 65%, #432 0 70%, #0000 0) 13.5% 45% / 20% 10%,
+    radial-gradient(circle at 0% 0%, #0000 0 35%, #432 0 40%, #0000 0 50%, #432 0 55%, #0000 0 65%, #432 0 70%, #0000 0) 87% 45% / 20% 10%,
+    linear-gradient(#ffe8b8 0 0)
+    ;
+  background-repeat: no-repeat;
+  color: #2366;
+}
+
+
+.hp-character.hufflepuff {
+  background:
+    radial-gradient(farthest-side, #fff 90%, #0000 0) 24% 48% / 5% 5%,
+    radial-gradient(farthest-side, #fff 90%, #0000 0) 70% 48% / 5% 5%,
+    radial-gradient(farthest-side, #111 90%, #0000 0) 23% 53% / 20% 20%,
+    radial-gradient(farthest-side, #111 90%, #0000 0) 77% 53% / 20% 20%,
+    repeating-linear-gradient(to right, #222 0 20%, #fd0 0 40%) 0 100% / 100% 25%,
+    linear-gradient(#0000 73%, #000 0 90%, #0000 0),
+    radial-gradient(farthest-side, #111 99.9%, #0000 0) -250% -70% / 90% 54%,
+    radial-gradient(farthest-side, #111 99.9%, #0000 0) 300% -70% / 90% 53%,
+    radial-gradient(farthest-side, #963 99.9%, #0000 0) -350% -65% / 90% 54%,
+    radial-gradient(farthest-side, #963 99.9%, #0000 0) 450% -65% / 90% 53%,
+    radial-gradient(farthest-side, #111 99.9%, #0000 0) 200% -55% / 80% 50%,
+    radial-gradient(farthest-side, #111 99.9%, #0000 0) -150% -55% / 86% 51%,
+    radial-gradient(farthest-side at 52% 120%, #0000 70%, #111 0 99%, #0000 0) 18% 32% / 30% 10%,
+    radial-gradient(farthest-side at 49% 120%, #0000 70%, #111 0 99%, #0000 0) 82% 32% / 30% 10%,
+    linear-gradient(#963 0 0)
+    ;
+  background-repeat: no-repeat;
+  color: #0005;
+}
+

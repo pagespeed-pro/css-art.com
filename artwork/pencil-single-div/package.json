@@ -1,0 +1,37 @@
+{
+    "name": "pencil-single-div",
+    "version": "1.0.0",
+    "title": "Pencil-Single Div",
+    "description": "This pencil is a CSS art using only a single div.",
+    "author": {
+        "name": "Gagan Preet",
+        "avatar": "https://assets.codepen.io/4714320/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1597927830&width=512",
+        "web": "https://igaganpreet.github.io/Gagan/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/igaganpreet/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/i_gaganpreet"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/igaganpreet"
+            }
+        ]
+    },
+    "html": "pencil-single-div.html",
+    "css": [
+        "pencil-single-div.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "pencil"
+    ],
+    "original": "https://codepen.io/igaganpreet/pen/ZEQJNZq",
+    "codepen": "https://codepen.io/igaganpreet/pen/ZEQJNZq"
+}

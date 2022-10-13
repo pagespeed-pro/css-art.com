@@ -1,0 +1,273 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+  overflow: hidden;
+  background: var(--gray);
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 1vmin solid black;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.c {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+.cartoon {
+  --white: #ebeced;
+  --gray: #8e9194;
+  --dark: #636365;
+  --black: #222020;
+  --rainbow1: #c7cce1;
+  --rainbow2: #ffc215;
+  --rainbow3: #d8df20;
+  --rainbow4: #06b6a2;
+  --rainbow5: #1f86c8;
+  --rainbow6: #aa59a2;
+  --rainbow7: #f37a69;
+  --time: 2s;
+}
+
+.face {
+  width: 69%;
+  height: 67%;
+  top: 51.75%;
+  background: var(--black);
+}
+
+.eyes {
+  width: 14.5%;
+  height: 14.5%;
+  background: var(--white);
+  top: 36%;
+  left: 26.75%;
+  box-shadow: 25.5vmin 0 var(--white), 0 11.5vmin 0 -1.5vmin var(--dark), 25.5vmin 11.5vmin 0 -1.5vmin var(--dark), 0 0 0 2.75vmin var(--gray), 25.5vmin 0 0 2.75vmin var(--gray), 0 0 0 5.5vmin var(--black), 25.5vmin 0 0 5.5vmin var(--black);
+  clip-path: polygon(-200% -100%, 400% -100%, 400% 148%, -200% 148%);
+}
+
+@keyframes iris {
+  0%, 100% { color: var(--rainbow1); }
+  14.25% { color: var(--rainbow2); }
+  28.5% { color: var(--rainbow3); }
+  42.75% { color: var(--rainbow4); }
+  57% { color: var(--rainbow5); }
+  71.25% { color: var(--rainbow6); }
+  85.5% { color: var(--rainbow7); }
+}
+
+.pupil {
+  width: 9.5%;
+  height: 9.5%;
+  transform: rotate(45deg);
+  background: black;
+  top: 38.25%;
+  left: 29.25%;
+  border-radius: 0 50% 0 50%;
+  box-shadow: inset 0 0 0 4vmin, 18.5vmin -18.5vmin;
+  box-shadow: inset -4vmin 4vmin 0 -3vmin, inset 4vmin -4vmin 0 -3vmin;
+  animation: iris var(--time) steps(7, end) infinite;
+}
+
+.pupil + .pupil {
+  left: 61.75%;
+}
+
+.mouth {
+  width: 42%;
+  height: 40%;
+  top: 64%;
+  left: 29%;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0 0; }
+  100% { background-position: 24.5vmin 0; }
+}
+
+.mouth::before {
+  width: 24.5vmin;
+  height: 100%;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, 0);
+  background-image: linear-gradient(to right, var(--rainbow1) 0 3.5vmin, var(--rainbow2) 0 7vmin, var(--rainbow3) 0 10.5vmin, var(--rainbow4) 0 14vmin, var(--rainbow5) 0 17.5vmin, var(--rainbow6) 0 21vmin, var(--rainbow7) 0);
+  background-size: 100% 100%;
+  background-repeat: repeat-x;
+  background-position: 3.5vmin 0;
+  animation: rainbow var(--time) steps(7, end) infinite;
+}
+
+.mouth::after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8.3%;
+  background-image: linear-gradient(60deg, transparent 60%, var(--black) 0), linear-gradient(-60deg, transparent 60%, var(--black) 0);
+  background-size: 8.333% 103%, 8.333% 103%;
+  background-position: -4.16666% -0.001vmin, -50% -0.001vmin;
+    
+}
+
+.forehead {
+  width: 30%;
+  height: 27.5%;
+  top: 38.5%;
+  box-shadow: inset 0 -15.75vmin var(--dark);
+  overflow: hidden;
+}
+
+.forehead::after {
+  width: 100%;
+  height: 100%;
+  background: var(--dark);
+  border-radius: 50%;
+  top: -85%;
+}
+
+.ears {
+  width: 69%;
+  height: 33%;
+  left: 50%;
+  top: 19%;
+  transform: translate(-50%, 0);
+  border-radius: 1.5vmin;
+  background-image:  linear-gradient(to right, var(--black) 6%, transparent 0 94%, var(--black) 0), linear-gradient(209deg, transparent 52%, var(--black) 0 58.5%, var(--dark) 0), linear-gradient(-209deg, transparent 52%, var(--black) 0 58.5%, var(--dark) 0);
+  background-size: 100% 90%, 100% 100%, 100% 100%;
+  background-position: bottom left;
+  background-repeat: repeat-x;
+}
+
+.snout {
+  width: 45%;
+  height: 10%;
+  top: 62.5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: var(--white);
+  border-radius: 15% 15% 100vmin 100vmin;
+  aclip-path: polygon(2% 0%, 98% 0%, 98% 100%, 2% 100%)
+}
+
+.snout::after,
+.snout::before {
+  width: 5%;
+  height: 20%;
+  border-radius: 50%;
+  left: 0;
+  box-shadow: -1vmin -1vmin var(--gray);
+}
+
+.snout::before {
+  left: auto;
+  right: 0;
+  box-shadow: 1vmin -1vmin var(--gray);
+}
+
+.smile {
+  width: 10%;
+  height: 5%;
+  background: var(--gray);
+  top: 60%;
+  left: 22%;
+  border-radius: 100vmin 100vmin 0 0;
+  transform: rotate(-45deg);
+}
+
+.smile + .smile {
+  left: auto;
+  right: 22%;
+  transform: scaleX(-1) rotate(-45deg);
+}
+
+.whiskers {
+  width: 1.5%;
+  height: 1.5%;
+  color: var(--black);
+  top: 56.5%;
+  left: 42.25%;
+  box-shadow: inset 0 0 0 4vmin, 2vmin 2.5vmin, -2vmin 2.5vmin, 11.25vmin 0, 9.25vmin 2.5vmin, 13.25vmin 2.5vmin;
+}
+
+/* .nose {
+  width: 28%;
+  height: 28%;
+  background: var(--white);
+  transform: translate(-50%, 0%) rotate(45deg);
+  top: 52.5%;
+  left: 50.25%;
+  overflow: hidden;
+    background: linear-gradient(blue, red)
+}
+
+.nose::after {
+  width: 40%;
+  height: 40%;
+  background: var(--black);
+  border-radius: 50%;
+  top: -10%;
+  left: -10%;
+}
+
+.nose::before {
+  width: 2%;
+  height: 100%;
+  background: var(--white);
+  transform-origin: top center;
+  transform: rotate(-45deg);
+} 
+ */
+
+.nose {
+  width: 28%;
+  height: 20%;
+  background: var(--white);
+  top: 52.5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+ clip-path: polygon(0% 50%, 33% 0%, 67% 0%, 100% 50%);
+}
+
+.nose::after {
+  width: 40%;
+  height: 40%;
+  background: var(--black);
+  border-radius: 50%;
+  top: -28%;
+  left: 50%;
+  transform: translate(-50%, 0);
+ 
+}
+
+.nose::before {
+  top: 0;
+  left: -10%;
+  width:  59%;
+  height: 51%;
+  background: var(--gray);
+  border-radius: 0 0 3vmin 3vmin;
+  box-shadow: 13.75vmin 0 var(--gray)
+} 

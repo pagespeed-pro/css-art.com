@@ -1,0 +1,58 @@
+body {
+  min-height: 400px;
+  height: 100vh;
+  position: relative;
+  background-color: #faf0e6;
+  text-align: center;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div::before,
+div::after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+@media (max-width: 400px) {
+  div:not(.no-scale) {
+    transform: scale(0.8);
+  }
+}
+#stamp {
+  width: 250px;
+  height: 350px;
+  margin-left: -125px;
+  margin-top: -175px;
+  background: radial-gradient(ellipse, rgba(255,255,255,0.2) 10%, rgba(255,255,255,0) 40%) 50% 110%/120% 40%, linear-gradient(to right, #efca86, rgba(245,222,179,0) 25%) 50% 100%/94% 50%, linear-gradient(to left, #efca86, rgba(245,222,179,0) 25%) 50% 100%/94% 50%, linear-gradient(to bottom, #f5deb3, #ebbd66) 50% 100%/94% 50%, linear-gradient(#87cefa, #87cefa) 50% 15%/85% 0.5%, linear-gradient(#ccc, #ccc) 50% 10%/0.25% 60%, repeating-linear-gradient(to bottom, #ccc, #ccc 0.5%, rgba(255,255,255,0) 0.5%, rgba(255,255,255,0) 10%) 50% 41%/85% 50%, linear-gradient(to bottom, white 30%, #eee) 50% 40%/85% 40%, linear-gradient(40deg, white 96%, rgba(255,255,255,0) 96.1%) 50% 10%/85% 60%, linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.2) 6%) 19% 15%/70% 60%, linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.2) 6%) 81% 25%/70% 60%;
+  background-repeat: no-repeat;
+  box-shadow: 0 0.8em 0.4em -0.65em rgba(0,0,0,0.1);
+}
+#stamp::before,
+#stamp::after {
+  font-family: Courier New, mono;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #444;
+  text-transform: uppercase;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#stamp::before {
+  content: 'Jun 20 1990';
+  top: 22%;
+  left: 11%;
+  transform: rotate(-2deg);
+  background-image: linear-gradient(45deg, transparent 50%, #999, #888, #333, #444, #999, #ddd);
+  text-shadow: 0.1em 0 0 rgba(0,0,0,0.5);
+}
+#stamp::after {
+  content: 'Apr 14 1990';
+  top: 30%;
+  left: 20%;
+  transform: rotate(5deg);
+  background-image: linear-gradient(30deg, #ccc, #999, #444, #999, #bbb, #777, transparent 70%);
+  text-shadow: 0.07em 0 0 rgba(0,0,0,0.3);
+}

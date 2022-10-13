@@ -1,0 +1,620 @@
+:root {
+  --black: #4c4d5e;
+  --white: #fff;
+  --grey: #dedede;
+  --primary-color: #f8db83;
+  --primary-color-dark: #f6d05c;
+  --primary-color-tint: #fbe9b3;
+  --secondary-color: #ebe9e4;
+  --accent-color: #f5566e;
+  --accent-color-dark: #f32f4d;
+  --background-color: var(--black);
+  --face-detail-color: var(--black);
+  --ear-color: #ede99d;
+  --blush-color: #ff6ec7;
+  --mouth-inner-color: #995063;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--background-color);
+  font-size: 16px;
+  line-height: 1;
+}
+
+.kero {
+  --mouth-inner-scale: scaleY(0);
+  --arm-right-rotate: rotate(-70deg);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: floaty 5s ease-in-out infinite;
+}
+.kero-eye {
+  position: absolute;
+  top: 6rem;
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 100%;
+  background-color: var(--face-detail-color);
+  transform-origin: center 70%;
+}
+.kero-eye-left {
+  left: 1.5rem;
+}
+.kero-eye-right {
+  right: 1.5rem;
+}
+.kero-nose {
+  border-top-left-radius: 50% 20%;
+  border-top-right-radius: 50% 20%;
+  border-bottom-right-radius: 50% 80%;
+  border-bottom-left-radius: 50% 80%;
+  position: absolute;
+  left: 50%;
+  top: 6.5rem;
+  height: 0.25rem;
+  width: 0.625rem;
+  transform: translateX(-50%);
+  background-color: var(--face-detail-color);
+}
+.kero-mouth {
+  position: absolute;
+  top: 7rem;
+  left: 50%;
+}
+.kero-mouth::before, .kero-mouth::after {
+  content: "";
+  position: absolute;
+  height: 0.5rem;
+  width: 1rem;
+  border-radius: 100%;
+  border-bottom: 2px solid var(--face-detail-color);
+  background-color: var(--primary-color);
+}
+.kero-mouth::before {
+  left: 100%;
+}
+.kero-mouth::after {
+  right: 100%;
+}
+.kero-mouth-inner {
+  position: absolute;
+  z-index: -1;
+  top: 0.25rem;
+  left: calc(50% - 1rem);
+  width: 2rem;
+  height: 2.5rem;
+  transform-origin: center top;
+  transform: var(--mouth-inner-scale);
+  background-color: var(--mouth-inner-color);
+  border-bottom-left-radius: 50% 70%;
+  border-bottom-right-radius: 50% 70%;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+.kero-mouth-inner::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0.25rem;
+  height: 2.25rem;
+  width: 120%;
+  border-radius: 100%;
+  background-color: var(--blush-color);
+}
+.kero-blush {
+  position: absolute;
+  top: 7rem;
+  height: 1.25rem;
+  width: 2.25rem;
+  border-radius: 50%;
+  background-color: var(--blush-color);
+  opacity: 0.3;
+}
+.kero-blush-left {
+  left: 0.5rem;
+  transform: rotate(5deg);
+}
+.kero-blush-right {
+  right: 0.5rem;
+  transform: rotate(-5deg);
+}
+.kero-ear {
+  position: absolute;
+  z-index: 1;
+  top: -1rem;
+  height: 9rem;
+  width: 7rem;
+  background-color: var(--primary-color-dark);
+}
+.kero-ear::after {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  height: 75%;
+  width: 80%;
+  border-radius: inherit;
+  background-color: var(--ear-color);
+}
+.kero-ear-left {
+  left: -3.25rem;
+  border-top-left-radius: 50% 40%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 60% 60%;
+  border-bottom-right-radius: 40% 50%;
+}
+.kero-ear-right {
+  right: -3.25rem;
+  border-top-right-radius: 50% 40%;
+  border-top-left-radius: 50%;
+  border-bottom-right-radius: 60% 60%;
+  border-bottom-left-radius: 40% 50%;
+}
+.kero-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 50% 55%;
+  border-top-right-radius: 50% 55%;
+  border-bottom-right-radius: 50% 45%;
+  border-bottom-left-radius: 50% 45%;
+  z-index: 5;
+  background-color: var(--primary-color);
+}
+.kero-head {
+  position: relative;
+  z-index: 10;
+  height: 11.5rem;
+  width: 12rem;
+}
+.kero-arm {
+  border-top-left-radius: 50% 10%;
+  border-top-right-radius: 50% 10%;
+  border-bottom-right-radius: 50% 90%;
+  border-bottom-left-radius: 50% 90%;
+  position: absolute;
+  z-index: 4;
+  top: 1.75rem;
+  height: 4rem;
+  width: 2rem;
+  background-color: var(--primary-color-dark);
+  transform-origin: 50% 1rem;
+  transition: transform 0.15s ease-in-out;
+}
+.kero-arm-left {
+  left: -1rem;
+  transform: rotate(120deg) translateZ(1px);
+}
+.kero-arm-right {
+  right: -1rem;
+  transform: var(--arm-right-rotate) translateZ(1px);
+}
+.kero-foot {
+  position: absolute;
+  z-index: 1;
+  bottom: 1rem;
+  width: 4.5rem;
+  height: 1.5rem;
+  border-top-left-radius: 80% 70%;
+  border-bottom-left-radius: 0.5rem 30%;
+  border-top-right-radius: 20% 30%;
+  border-bottom-right-radius: 1rem 70%;
+  background-color: var(--primary-color-dark);
+  transform-origin: 90% 50%;
+}
+.kero-leg {
+  position: absolute;
+  z-index: 5;
+  bottom: -2.5rem;
+  height: 5rem;
+  width: 3.5rem;
+}
+.kero-leg-upper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  border-radius: 50%;
+  background-color: var(--primary-color-dark);
+  overflow: hidden;
+}
+.kero-leg-upper::after {
+  content: "";
+  position: absolute;
+  top: -1.5rem;
+  left: 0.5rem;
+  height: 100%;
+  width: 120%;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+}
+.kero-leg-left {
+  left: -1.5rem;
+}
+.kero-leg-left .kero-foot {
+  --foot-rotate: rotate(-50deg);
+  right: 0.25rem;
+  transform: var(--foot-rotate);
+  transition: 0.15s ease-in-out;
+}
+.kero-leg-right {
+  right: -1.5rem;
+  transform: rotateY(180deg);
+}
+.kero-leg-right .kero-foot {
+  --foot-rotate: rotate(25deg);
+  bottom: -0.5rem;
+  right: 1rem;
+  transform: rotate(25deg);
+}
+.kero-tail {
+  --tail-width: 0.75rem;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  right: calc(50% - (var(--tail-width) / 2));
+  height: 8rem;
+  width: 12rem;
+}
+.kero-tail-length {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  transform-origin: right center;
+  overflow: hidden;
+  animation: tailMove 6s ease-in-out infinite;
+}
+.kero-tail-length::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: calc(-1 * var(--tail-width));
+  height: 190%;
+  width: 100%;
+  border-radius: 50%;
+  border-bottom: var(--tail-width) solid var(--primary-color-dark);
+  border-right: var(--tail-width) solid var(--primary-color-dark);
+}
+.kero-tail-fluff {
+  --fluff-rotate: rotate(-65deg);
+  z-index: 1;
+  top: 0.75rem;
+  left: -2.5rem;
+  height: 4rem;
+  width: 4rem;
+  transform: var(--fluff-rotate);
+  border-top-left-radius: 70% 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 50% 70%;
+  animation: tailFluffMove 6s ease-in-out infinite;
+}
+.kero-tail-fluff, .kero-tail-fluff::before, .kero-tail-fluff::after {
+  position: absolute;
+  background-color: var(--secondary-color);
+}
+.kero-tail-fluff::before, .kero-tail-fluff::after {
+  content: "";
+}
+.kero-tail-fluff::before {
+  top: 1rem;
+  right: -0.25rem;
+  height: 2rem;
+  width: 2rem;
+  transform: rotate(15deg);
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 50% 70%;
+}
+.kero-tail-fluff::after {
+  top: 0;
+  left: -0.125rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  transform: rotate(-20deg);
+  border-top-left-radius: 70% 50%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 0.25rem;
+}
+.kero-wing {
+  --wing-flip: ;
+  position: absolute;
+  z-index: 1;
+  top: 2rem;
+  height: 2rem;
+  width: 10rem;
+  transform-origin: 90% 50%;
+  animation: wingFlap 4s ease-in-out infinite;
+}
+.kero-wing-inner {
+  --wing-height-half: 1rem;
+  z-index: 1;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transform: rotate(20deg);
+}
+.kero-wing-inner, .kero-wing-inner::before, .kero-wing-inner::after {
+  position: absolute;
+  border-top-left-radius: var(--wing-height-half) 20%;
+  border-bottom-left-radius: 70% 80%;
+  border-top-right-radius: var(--wing-height-half) var(--wing-height-half);
+  border-bottom-right-radius: 30% var(--wing-height-half);
+  background-color: var(--secondary-color);
+  transform-origin: 90% 50%;
+}
+.kero-wing-inner::before, .kero-wing-inner::after {
+  content: "";
+  right: 0;
+}
+.kero-wing-inner::before {
+  --wing-height-half: 0.875rem;
+  height: 1.75rem;
+  width: 8rem;
+  transform: rotate(-25deg);
+}
+.kero-wing-inner::after {
+  --wing-height-half: 0.75rem;
+  height: 1.5rem;
+  width: 6rem;
+  transform: rotate(-50deg);
+}
+.kero-wing-left {
+  --wing-rotate: rotate(-10deg);
+  right: calc(100% - 1rem);
+}
+.kero-wing-right {
+  --wing-flip: rotateY(180deg);
+  --wing-rotate: rotate(10deg);
+  right: -1rem;
+  transform: var(--wing-flip);
+}
+.kero-bow {
+  position: absolute;
+  z-index: 11;
+  top: 10.75rem;
+  left: 50%;
+  height: 1.75rem;
+  width: 1.25rem;
+  transform: translateX(-50%);
+}
+.kero-bow-tie {
+  position: absolute;
+  z-index: 3;
+  height: 100%;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--accent-color);
+}
+.kero-bow-ribbon {
+  position: absolute;
+  z-index: 2;
+  height: 2rem;
+  width: 2.5rem;
+  background-color: var(--accent-color);
+}
+.kero-bow-ribbon::after {
+  content: "";
+  position: absolute;
+  top: 0.75rem;
+  height: 0.75rem;
+  width: 70%;
+  border-radius: 50%;
+  background-color: var(--accent-color-dark);
+}
+.kero-bow-ribbon-left {
+  right: calc(100% - 0.75rem);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  transform: perspective(1.5rem) rotateY(40deg) rotate(-10deg);
+}
+.kero-bow-ribbon-left::after {
+  right: 0;
+  transform: rotate(-15deg);
+}
+.kero-bow-ribbon-right {
+  left: calc(100% - 0.75rem);
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  transform: perspective(1.5rem) rotateY(-40deg) rotate(10deg);
+}
+.kero-bow-ribbon-right::after {
+  left: 0;
+  transform: rotate(15deg);
+}
+.kero-bow-string {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+}
+.kero-bow-string::before, .kero-bow-string::after {
+  content: "";
+  position: absolute;
+  background-color: var(--accent-color-dark);
+  height: 3rem;
+  width: 2.5rem;
+  transform-origin: center top;
+}
+.kero-bow-string::before {
+  right: 100%;
+  transform: rotate(40deg);
+}
+.kero-bow-string::after {
+  left: 100%;
+  transform: rotate(-40deg);
+}
+.kero-torso {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  transform: perspective(1rem) rotateX(2.5deg);
+  border-bottom-left-radius: 2.25rem 2rem;
+  border-bottom-right-radius: 2.25rem 2rem;
+  background-color: var(--primary-color);
+}
+.kero-torso::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.25rem;
+  width: 100%;
+  background-color: var(--primary-color-dark);
+}
+.kero-body {
+  position: relative;
+  z-index: 9;
+  top: -3rem;
+  height: 9.5rem;
+  width: 6rem;
+  perspective: 1000px;
+}
+.kero:hover {
+  --mouth-inner-scale: scaleY(1);
+  --arm-right-rotate: rotate(-120deg);
+}
+.kero:hover .kero-eye {
+  background-color: transparent;
+  border-top: 3px solid var(--face-detail-color);
+  transform: scale(1.3) translateY(0.25rem);
+}
+.kero:hover .kero-leg-left .kero-foot {
+  --foot-rotate: rotate(25deg);
+  bottom: -0.5rem;
+  right: 1rem;
+}
+.kero:hover + .clow-pattern {
+  --clow-opacity: 0.5;
+}
+.kero:not(:hover) .kero-eye {
+  animation: blinky 7s infinite;
+}
+.kero:not(:hover) .kero-leg-right .kero-foot {
+  animation: footMove 5s ease-in-out infinite;
+}
+
+.clow-pattern {
+  --clow-box-shadow: 0 0 8px var(--primary-color);
+  --clow-border: 1px solid var(--primary-color);
+  --clow-opacity: 0.2;
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  height: 18rem;
+  width: 18rem;
+  transform: translate(-50%, -50%);
+  opacity: var(--clow-opacity);
+  transition: opacity 0.4s ease-in-out;
+}
+.clow-pattern::before, .clow-pattern::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  box-shadow: var(--clow-box-shadow);
+}
+.clow-pattern::before {
+  height: 90%;
+  width: 90%;
+  border: var(--clow-border);
+}
+.clow-pattern::after {
+  height: 150%;
+  width: 150%;
+  border: 0.5rem solid var(--primary-color);
+}
+.clow-pattern-inner {
+  transform: rotate(45deg);
+}
+.clow-pattern-inner, .clow-pattern-inner::before, .clow-pattern-inner::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: content-box;
+  height: inherit;
+  width: inherit;
+  border: var(--clow-border);
+  box-shadow: var(--clow-box-shadow);
+}
+.clow-pattern-inner::before, .clow-pattern-inner::after {
+  content: "";
+}
+.clow-pattern-inner::before {
+  transform: rotate(30deg);
+}
+.clow-pattern-inner::after {
+  transform: rotate(60deg);
+}
+
+@keyframes blinky {
+  0%, 9%, 11%, 19%, 21%, 69%, 71%, 100% {
+    transform: scaleY(1);
+  }
+  10%, 20%, 70% {
+    transform: scaleY(0);
+  }
+}
+@keyframes floaty {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.25rem);
+  }
+}
+@keyframes wingFlap {
+  0%, 30%, 100% {
+    transform: rotate(0deg) var(--wing-flip);
+  }
+  15% {
+    transform: var(--wing-rotate) var(--wing-flip);
+  }
+}
+@keyframes tailMove {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(0.8);
+  }
+}
+@keyframes tailFluffMove {
+  0%, 100% {
+    transform: translateX(0) scale(1) var(--fluff-rotate);
+  }
+  50% {
+    transform: translateX(2.375rem) scale(0.9) var(--fluff-rotate);
+  }
+}
+@keyframes footMove {
+  0%, 100% {
+    transform: var(--foot-rotate);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+}

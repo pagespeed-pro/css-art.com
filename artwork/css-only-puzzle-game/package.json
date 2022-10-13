@@ -1,0 +1,34 @@
+{
+    "name": "css-only-puzzle-game",
+    "version": "1.0.0",
+    "title": "CSS Only Puzzle game",
+    "description": "A CSS only playable puzzle game.\n\nSelect your image, adjust the size of the grid and Enjoy the game!\n\nMore CSS only games: https://github.com/Afif13/CSS-Games",
+    "author": {
+        "name": "Temani Afif",
+        "avatar": "https://assets.codepen.io/1480814/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1637754747&width=512",
+        "web": "https://css-only.art/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/t_afif/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/ChallengesCss"
+            }
+        ]
+    },
+    "html": "css-only-puzzle-game.html",
+    "css": [
+        "css-only-puzzle-game.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "game",
+        "puzzle"
+    ],
+    "original": "https://codepen.io/t_afif/pen/JjLWpOJ",
+    "codepen": "https://codepen.io/t_afif/pen/JjLWpOJ"
+}

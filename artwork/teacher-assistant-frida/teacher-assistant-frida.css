@@ -1,0 +1,107 @@
+body {
+  background: #d8ddd8;
+}
+
+button {
+  background: transparent;
+  display: flex;
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#output {
+  pointer-events: none;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 6vmin;
+  width: 80%;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 0 -1px #000, 1px -1px #000, 1px 0 #000, 1px 1px #000, 0 1px #000, -1px 1px #000, -1px 0 #000, -1px -1px #000;
+}
+
+svg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 99vmin;
+  z-index: -1;
+}
+
+svg #eyebrow1 {
+  transition: transform 1s;
+  transform-origin: 48% 52%;
+}
+
+svg.listening #eyebrow1 {
+  transform: rotate(11deg);
+}
+
+@keyframes blink1 {
+  0%, 3%, 100% {
+    d: path("M 769 1158 C 870 1162 989 1167 1027 1168 C 903 1055 816 1126 768 1158");
+  }
+  1.5% {
+    d: path("M 769,1158 C 880,1320 1007,1204 1027,1168 903,1055 816,1126 768,1158")
+  }
+}
+
+@keyframes blink2 {
+  0%, 3%, 100% {
+    d: path("M 1167,1167 C 1260,1163 1343,1159 1419,1157 1357,1078 1220,1090 1166,1167");
+  }
+  1.5% {
+    d: path("M 1167,1167 C 1229,1257 1341,1271 1419,1157 1357,1078 1220,1090 1166,1167")
+  }
+}
+
+svg #eyelid1 {
+  d: path("M 769,1158 C 880,1320 1007,1204 1027,1168 903,1055 816,1126 768,1158");
+  animation: blink1 10s infinite;
+}
+
+svg #eyelid2 {
+  d: path("M 1167,1167 C 1260,1163 1343,1159 1419,1157 1357,1078 1220,1090 1166,1167");
+  animation: blink2 10s infinite;
+}
+
+@keyframes moveEyes {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  15% {
+    transform: translate(1%, -0.5%);
+  }
+  50% {
+    transform: translate(-1%, 0);
+  }
+  75% {
+    transform: translate(0, -0.5%);
+  }
+}
+
+svg #pupils {
+  animation: moveEyes 60s infinite linear;
+}
+
+@keyframes speaking {
+  0%, 100% {
+    d: path("M 998,1462 C 1096,1462 1184,1462 1220,1462 1192,1508 1084,1564 998,1462")
+  }
+  50% {
+    d: path("M 998,1462 C 1065,1476 1154,1482 1220,1462 1179,1524 1084,1564 998,1462")
+  }
+}
+
+svg.speaking #lip-bottom {
+  animation: speaking 0.6s infinite;
+}

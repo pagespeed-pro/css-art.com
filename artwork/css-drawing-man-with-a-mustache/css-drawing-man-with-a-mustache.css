@@ -1,0 +1,147 @@
+article {
+  --skin: #f85;
+  --skin-dark: #e63;
+  --line: #831;
+  --hair: #420;
+  --shirt: #eed;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90vmin;
+  aspect-ratio: 1;
+  overflow: hidden;
+  -webkit-mask:
+    radial-gradient(farthest-side, #000 85%, #0000)
+    ;
+  background:
+    /* hair */
+    radial-gradient(farthest-side at 40% 60%, var(--hair) 99.2%, #0000 99.9%) 58% 17% / 30% 10.5%,
+    radial-gradient(farthest-side, var(--hair) 99%, #0000 99.9%) 68% 32%/ 11.5% 25%,
+    conic-gradient(at 100% 0, #0000 200deg, var(--hair) 0 240deg, #0000 0) 40% 13% / 14% 7%,
+    radial-gradient(100% 75% at 110% 50%, #0000 74%, var(--hair) 75%) 44% 12%/ 5% 7.6%,
+    radial-gradient(farthest-side at 100% 50%, var(--hair) 99.25%, #0000 99.9%) 28% 13.07% / 20% 15%,
+    linear-gradient(#0000 50%, var(--hair) 0) 54% 13%/ 25% 15%,
+    /* facial lines */
+    radial-gradient(farthest-side at 50% 100%, var(--hair) 98.5%, #0000 99.9%) 34% 37% / 12% 3%,
+    radial-gradient(farthest-side at 50% 100%, var(--hair) 98.5%, #0000 99.9%) 51% 37% / 12% 3%,
+    radial-gradient(farthest-side, var(--line) 90%, #0000 99.9%) 43% 33% / 15% 0.5%,
+    radial-gradient(farthest-side, var(--line) 90%, #0000 99.9%) 43% 31.5% / 17% 0.75%,
+    /* mouth */
+    radial-gradient(farthest-side at 50% 0%, var(--skin-dark) 99%, #0000 99.9%) 43% 57% / 12% 3%,
+    radial-gradient(farthest-side at 50% 0%, var(--line) 99%, #0000 99.9%) 43% 57% / 11% 5%,
+    /* eyes */
+    radial-gradient(farthest-side, #fff 90%, #0000 99.9%) 35% 39.5% / 0.75% 0.75%,
+    radial-gradient(farthest-side, #fff 90%, #0000 99.9%) 48.25% 39.5% / 0.75% 0.75%,
+    radial-gradient(farthest-side, #000 95%, #0000 99.9%) 36% 39% / 3% 3%,
+    radial-gradient(farthest-side, #000 95%, #0000 99.9%) 49.5% 39% / 3% 3%,
+    radial-gradient(farthest-side at 50% 20%, #fff 99%, #0000 99.9%) 36% 40% / 8% 5%,
+    radial-gradient(farthest-side at 50% 20%, #fff 99%, #0000 99.9%) 50% 40% / 8% 5%,
+    /* face and chin */
+    radial-gradient(farthest-side at 50% 100%, var(--skin) 99.5%, #0000 99.9%) 48.25% 23.25% / 37% 20%,
+    radial-gradient(farthest-side at 50% 0%, var(--skin) 99.5%, #0000 99.9%) 50% 55% / 35% 30%,
+    radial-gradient(farthest-side, var(--skin) 99.5%, #0000 99.9%) 47% 64% / 23% 13%,
+    /* lines */
+    radial-gradient(farthest-side at 50% 100%, var(--line) 99.5%, #0000 99.9%) 48.75% 21% / 37% 20%,
+    radial-gradient(farthest-side at 50% 0%, var(--line) 93.5%, #0000 94%) 49% 60% / 35% 25%,
+    radial-gradient(farthest-side, var(--line) 99.4%, #0000 99.9%) 46% 64.75% / 23.5% 13.25%,
+    /* neck */
+    linear-gradient(var(--skin) 0 0) 54% 80% / 17% 30%,
+    linear-gradient(var(--line) 0 0) 54.5% 80% / 17.5% 22.5%,
+    radial-gradient(farthest-side, var(--hair) 99.9%, #0000 0) 61% 54%/ 17% 19%,
+    #f000;
+    ;
+  background-repeat: no-repeat;
+}
+
+article::before,
+article::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(6deg);
+  background: 
+    /* mustache */
+    radial-gradient(farthest-side at 50% 100%, var(--hair) 98%, #0000 99.9%) 47.5% 54.75% / 11% 4.5%,
+    /* ear */
+    radial-gradient(farthest-side, var(--skin) 99%, #0000 99.9%) 67% 45% / 11% 16%,
+    radial-gradient(farthest-side, var(--line) 99%, #0000 99.9%) 67.5% 44.75% / 11.5% 17%,
+    /* body */
+    radial-gradient(farthest-side at 65% 60%, var(--shirt) 99.75%, #0000 99.9%) 50% 750% / 90% 90%,
+    radial-gradient(farthest-side at 65% 60%, var(--line) 99.75%, #0000 99.9%) 50% 740% / 90% 90%,
+    #f000;
+  background-repeat: no-repeat;
+}
+
+article::after {
+  transform: rotate(-4deg);
+  background: 
+    /* body */
+    radial-gradient(farthest-side, var(--skin) 99%, #0000 99.9%) 51.75% 78.5% / 17% 8%,
+    radial-gradient(farthest-side, var(--line) 98%, #0000 99.9%) 52% 79.33% / 17.25% 7.5%,
+    radial-gradient(farthest-side, var(--shirt) 99%, #0000 99.9%) 51.75% 81% / 19% 8%,
+    radial-gradient(farthest-side, var(--line) 99%, #0000 99.9%) 53% 81.5% / 19% 8%,
+    /* nose */
+    radial-gradient(farthest-side at 100% 50%, var(--skin) 99%, #0000 99.9%) 40.3% 48.75% / 5% 7.5%,
+    radial-gradient(farthest-side at 100% 50%, var(--line) 99%, #0000 99.9%) 39.5% 49% / 5% 8%,
+    /* mustache */
+    radial-gradient(farthest-side at 50% 100%, var(--hair) 98%, #0000 99.9%) 36.5% 53.5% / 11% 4.5%,
+    #f000;
+  background-repeat: no-repeat;
+}
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

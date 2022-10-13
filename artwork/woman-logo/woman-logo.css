@@ -1,0 +1,157 @@
+.canvas {
+  --dark: #004;
+  --light: #fff;
+  --pink: #f003;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vmin;
+  height: 70vmin;
+  border-radius: 50vmin;
+  border: 4vmin solid var(--light);
+  box-shadow: 0 0 0 2vmin var(--dark);
+  box-sizing: border-box;
+  background-image: 
+    radial-gradient(circle at 46.5% 45%, var(--dark) 1.25%, transparent 0),
+    radial-gradient(circle at 53.5% 45%, var(--dark) 1.25%, transparent 0),
+    radial-gradient(circle at 30% -5.75%, var(--dark) 20%, transparent 0),
+    radial-gradient(circle at 70% -5.75%, var(--dark) 20%, transparent 0),
+    radial-gradient(circle at 50% 38%, var(--light) 35%, transparent 35.2%), 
+    radial-gradient(circle at 50% 55%, var(--pink) 20%, transparent 0),
+    radial-gradient(circle at 5% 40%, var(--light) 8%, transparent 0),
+    radial-gradient(circle at 95% 40%, var(--light) 8%, transparent 0),
+    linear-gradient(var(--dark) 50%, transparent 0), 
+    radial-gradient(at 0% 60%, var(--dark) 20%, transparent 20.2%), 
+    radial-gradient(at 100% 60%, var(--dark) 20%, var(--light) 20.2%);
+}
+
+.canvas::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 29%;
+  left: 20%;
+  width: 8vmin;
+  height: 5vmin;
+  border-radius: 50%;
+  box-shadow:  0 1.125vmin 0 -0.75vmin var(--dark), 11vmin 0 var(--light), 11vmin 1.125vmin 0 -0.75vmin var(--dark);
+}
+
+.lips {
+  position: absolute;
+  width: 20%;
+  height: 3%;
+  background: var(--dark);
+  border-radius: 50%;
+  top: 51%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-image: linear-gradient(transparent 48%, var(--light) 0 52%, transparent 0)
+}
+
+.lips::before,
+.lips::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60%;
+  height: 130%;
+  background: var(--pink);
+  border-radius: 50%;
+  transform: translate(-180%, -100%) rotate(45deg);
+}
+
+.lips::after {
+  transform: translate(250%, -100%) rotate(-45deg);
+}
+
+.leaf {
+  position: absolute;
+  width: 25%;
+  height: 15%;
+  background: var(--dark);
+  border-radius: 100% 0;
+  bottom: 4%;
+  left: 58%;
+  transform: rotate(15deg);
+}
+
+.leaf::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 0% 100%;
+  width: 70%;
+  height: 60%;
+  background: var(--dark);
+  top: 80%;
+  left: -120%;
+  transform: rotate(-25deg);
+}
+
+.leaf::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: -100%;
+  border-right: 0.5vmin solid var(--dark);
+  background-image: linear-gradient(transparent 20%, var(--dark) 0 24%, transparent 0)
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

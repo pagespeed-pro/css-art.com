@@ -1,0 +1,77 @@
+.bull {
+  --gray1: #ddd;
+  --gray2: #999;
+  --gray3: #444;
+  width: 80vmin;
+  height: 80vmin;
+  background: var(--gray1);
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 40vmin);
+  box-shadow: 0 0 0 200vmax var(--gray1);
+  background-image:
+    radial-gradient(circle at 53% 165%, #0000 44%, var(--gray3) 0 44.5%, #0000 0),
+    radial-gradient(circle at 43% 66%, var(--gray3) 2%, var(--gray1) 0 4%, #0000 0),
+    radial-gradient(circle at 58% 66%, var(--gray3) 2%, var(--gray1) 0 4%, #0000 0),
+    radial-gradient(circle at 40% 46%, var(--gray3) 4%, var(--gray1) 0 10%, #0000 0),
+    radial-gradient(circle at 57% 44%, var(--gray3) 3%, var(--gray1) 0 12%, #0000 0),
+    radial-gradient(40% 23% at 52% 80%, var(--gray1) 60%, #0000 0),
+    radial-gradient(120% 220% at 50% 120%, var(--gray3) 40%, #0000 0),
+    radial-gradient(76% 40% at 50% 12%, var(--gray1) 50%, #0000 0),
+    radial-gradient(74% 38% at 50.5% 22%, var(--gray2) 53%, #0000 0);
+}
+
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

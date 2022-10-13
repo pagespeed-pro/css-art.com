@@ -1,0 +1,53 @@
+/* Presets */
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /*dimensions */
+  --width: 100vh;
+  --height: 100vh;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  overflow: hidden;
+  background: linear-gradient(#A3B2C9, #2D5478);
+}
+
+div:before, div:after {
+  display: block;
+  content: "";
+}
+
+div.rise {
+  width: 100vh;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: end;
+  background: radial-gradient(ellipse, #D9D9D9 8vh, transparent 8vh) 25vh 15vh/19vh 12vh no-repeat, radial-gradient(ellipse, #D9D9D9 9vh, transparent 9vh) 20vh 10vh/21vh 12vh no-repeat, radial-gradient(ellipse, #D9D9D9 4vh, transparent 4vh) 20vh 20vh/11vh 9vh no-repeat, radial-gradient(ellipse, #D9D9D9 8vh, transparent 8vh) 10vh 10vh/20vh 18vh no-repeat, radial-gradient(ellipse, #D9D9D9 7vh, transparent 7vh) 2vh 15vh/21vh 14vh no-repeat, radial-gradient(ellipse, #D9D9D9 8vh, transparent 8vh) 15vh 55vh/19vh 12vh no-repeat, radial-gradient(ellipse, #D9D9D9 6vh, transparent 6vh) 5vh 55vh/32vh 17vh no-repeat, radial-gradient(ellipse, #D9D9D9 4vh, transparent 4vh) 15vh 5vh/21vh 15vh no-repeat, radial-gradient(ellipse, #D9D9D9 8vh, transparent 8vh) 0vh 50vh/32vh 16vh no-repeat, radial-gradient(ellipse, #D9D9D9 7vh, transparent 7vh) 15vh 55vh/31vh 14vh no-repeat, radial-gradient(ellipse, #D9D9D9 8vh, transparent 8vh) 75vh 35vh/19vh 12vh no-repeat, radial-gradient(ellipse, #D9D9D9 8vh, transparent 8vh) 60vh 30vh/29vh 17vh no-repeat, radial-gradient(ellipse, #D9D9D9 4vh, transparent 4vh) 83vh 32vh/11vh 9vh no-repeat, radial-gradient(ellipse, #D9D9D9 8vh, transparent 8vh) 70vh 30vh/24vh 16vh no-repeat, radial-gradient(ellipse, #D9D9D9 7vh, transparent 7vh) 82vh 35vh/21vh 14vh no-repeat;
+}
+
+div.rise:before {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 100vh;
+  width: 20vh;
+  box-shadow: #425771 0px 0px 0px 2px, #425771 0px 15px 16px 2px, rgba(205, 205, 205, 0.5) 0px 1px 0px inset;
+  transform: perspective(50px) rotateX(15deg) rotateY(-30deg) rotateZ(-20deg);
+  --left-side:
+   /* windows */
+
+   repeating-linear-gradient(90deg, transparent 0 10px, #2C3B4E 10px 11px, #364B64 12px 20px),
+   /* wall */
+  linear-gradient(180deg, #607A99 0%, #607A99 100%);
+  background: var(--left-side);
+}

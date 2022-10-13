@@ -1,0 +1,567 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+html, body {
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  font-size: 18px;
+}
+
+.box {
+  position: relative;
+  margin: auto;
+  display: block;
+  margin-top: 10vh;
+  max-width: 245px;
+  height: 245px;
+  border-radius: 50%;
+  background: #9ddadb;
+  overflow: hidden;
+  z-index: 1;
+  border: solid 4px #fff;
+  transform: scale(1);
+}
+
+.girl-body {
+  width: 33%;
+  height: 41%;
+  background: #FFFAFA;
+  border-radius: 100%;
+  position: absolute;
+  bottom: -10%;
+  left: 30%;
+  z-index: 2;
+}
+
+.girl-head {
+  width: 41%;
+  height: 41%;
+  background: #ffd7c5;
+  border-radius: 50%;
+  position: absolute;
+  left: 24.5%;
+  bottom: 32%;
+  z-index: 2;
+}
+
+.girl-neck {
+  width: 4.5%;
+  height: 8%;
+  background: #ffd7c5;
+  border-radius: 30%;
+  position: absolute;
+  left: 43.5%;
+  bottom: 28%;
+  z-index: 3;
+}
+
+.girl-hair {
+  width: 51%;
+  height: 51%;
+  background: #663a3a;
+  position: absolute;
+  border-radius: 50% 50% 0 0;
+  left: 19.5%;
+  bottom: 31%;
+  z-index: -1;
+}
+
+.girl-bangs-right {
+  height: 28%;
+  width: 10%;
+  position: absolute;
+  background: #663a3a;
+  left: 51%;
+  bottom: 54%;
+  border-radius: 100%;
+  transform: rotate(-41deg);
+  z-index: 3;
+}
+
+.girl-bangs-left {
+  height: 28%;
+  width: 8%;
+  position: absolute;
+  background: #663a3a;
+  left: 33%;
+  bottom: 54%;
+  border-radius: 100%;
+  transform: rotate(70deg);
+  z-index: 3;
+}
+
+.girl-face {
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  position: absolute;
+  left: 24.5%;
+  bottom: 32%;
+  z-index: 3;
+}
+.girl-face .eye-left {
+  width: 13%;
+  height: 12%;
+  background: #000;
+  position: absolute;
+  left: 25%;
+  bottom: 54%;
+  border-radius: 50%;
+}
+.girl-face .eye-right {
+  width: 13%;
+  height: 12%;
+  background: #000;
+  position: absolute;
+  left: 65%;
+  bottom: 54%;
+  border-radius: 50%;
+}
+.girl-face .mouth {
+  position: absolute;
+  left: 35%;
+  bottom: 22%;
+  width: 30%;
+  height: 16%;
+  border-radius: 0 0 100px 100px;
+  background: #424B54;
+  overflow: hidden;
+  z-index: 3;
+}
+.girl-face .mouth .tongue {
+  position: absolute;
+  left: 25%;
+  bottom: -71%;
+  width: 80%;
+  height: 125%;
+  background: #F6828C;
+  border-radius: 100%;
+  z-index: 5;
+}
+
+.laptop {
+  position: absolute;
+  width: 35%;
+  height: 17%;
+  background: #E5E3E4;
+  bottom: 0%;
+  left: 20%;
+  z-index: 2;
+}
+.laptop .logo {
+  color: #fff;
+  z-index: 3;
+  left: 40%;
+  bottom: -75%;
+  position: absolute;
+}
+
+.lexi-container {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  position: absolute;
+  left: -5%;
+  bottom: -10%;
+  z-index: -5;
+}
+
+.lexi-head {
+  width: 40%;
+  height: 40%;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 4;
+  left: 76%;
+  bottom: 30%;
+}
+.lexi-head .eye-left {
+  position: absolute;
+  width: 5%;
+  height: 5%;
+  bottom: 54%;
+  left: 22%;
+  border-radius: 100%;
+  background: #27354A;
+}
+.lexi-head .eye-right {
+  position: absolute;
+  width: 5%;
+  height: 5%;
+  bottom: 67%;
+  left: 46%;
+  border-radius: 100%;
+  background: #27354A;
+}
+.lexi-head .cheek-left {
+  position: absolute;
+  width: 18%;
+  height: 16%;
+  bottom: 32%;
+  left: 30%;
+  border-radius: 50%;
+  background: #fff;
+  border-bottom: solid #c4c4c4 0.6px;
+  border-left: solid #c4c4c4 0.6px;
+  z-index: 2;
+  transform: rotate(-35deg);
+}
+.lexi-head .cheek-right {
+  position: absolute;
+  width: 18%;
+  height: 16%;
+  bottom: 42%;
+  left: 46%;
+  border-radius: 50%;
+  background: #fff;
+  border-bottom: solid #c4c4c4 0.6px;
+  border-right: solid #c4c4c4 0.6px;
+  z-index: 2;
+  transform: rotate(-35deg);
+}
+.lexi-head .nose {
+  position: absolute;
+  width: 10%;
+  height: 6%;
+  bottom: 46%;
+  left: 40%;
+  border-radius: 50%;
+  background: #27354A;
+  z-index: 3;
+  transform: rotate(-22deg);
+}
+.lexi-head .tongue {
+  position: absolute;
+  width: 11%;
+  height: 14%;
+  bottom: 32%;
+  left: 45%;
+  border-radius: 0 0 100% 100%;
+  background: #fca9e7;
+  z-index: 1;
+  transform: rotate(-25deg);
+}
+.lexi-head .whiskers-left-1 {
+  position: absolute;
+  width: 6%;
+  height: 6%;
+  top: 21%;
+  left: 20%;
+  background: #000;
+  border-radius: 30%;
+  transform: rotate(15deg);
+  z-index: 4;
+}
+.lexi-head .whiskers-left-2 {
+  position: absolute;
+  width: 6%;
+  height: 6%;
+  top: 36%;
+  left: 40%;
+  background: #000;
+  border-radius: 30%;
+  z-index: 4;
+}
+.lexi-head .whiskers-left-3 {
+  position: absolute;
+  width: 6%;
+  height: 6%;
+  top: 59%;
+  left: 22%;
+  background: #000;
+  border-radius: 30%;
+  transform: rotate(-15deg);
+  z-index: 4;
+}
+.lexi-head .whiskers-right-1 {
+  position: absolute;
+  width: 6%;
+  height: 6%;
+  top: 25%;
+  right: 20%;
+  background: #000;
+  border-radius: 30%;
+  transform: rotate(-15deg);
+  z-index: 4;
+}
+.lexi-head .whiskers-right-2 {
+  position: absolute;
+  width: 6%;
+  height: 6%;
+  top: 40%;
+  right: 42%;
+  background: #000;
+  border-radius: 30%;
+  z-index: 4;
+}
+.lexi-head .whiskers-right-3 {
+  position: absolute;
+  width: 6%;
+  height: 6%;
+  top: 65%;
+  right: 25%;
+  background: #000;
+  border-radius: 30%;
+  transform: rotate(15deg);
+  z-index: 4;
+}
+
+.lexi-body {
+  width: 80px;
+  height: 100px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 87%;
+  bottom: 0%;
+  z-index: 4;
+  transform: rotate(-20deg);
+}
+
+.lexi-ear--left {
+  position: absolute;
+  left: 70%;
+  bottom: 56%;
+  z-index: 5;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid #fff;
+  transform: rotate(-58deg);
+}
+
+.lexi-ear--right {
+  position: absolute;
+  left: 87%;
+  bottom: 67%;
+  z-index: 5;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 20px solid #fff;
+  transform: rotate(-15deg);
+}
+
+.fur-1 {
+  background: #fff;
+  position: absolute;
+  height: 3px;
+  width: 12px;
+  border-radius: 50%;
+  transform: rotate(95deg);
+  left: 4%;
+  bottom: 20%;
+}
+
+.fur-2 {
+  background: #fff;
+  position: absolute;
+  height: 3px;
+  width: 12px;
+  border-radius: 50%;
+  transform: rotate(105deg);
+  left: 0%;
+  bottom: 25%;
+}
+
+.fur-3 {
+  background: #fff;
+  position: absolute;
+  height: 3px;
+  width: 12px;
+  border-radius: 50%;
+  transform: rotate(110deg);
+  left: -2%;
+  bottom: 32%;
+}
+
+/* Text Styles  */
+h1, h2 {
+  font-family: "Roboto", sans-serif;
+  color: #505050;
+  text-align: center;
+}
+
+h3, h4, h5, footer {
+  font-family: "Roboto", sans-serif;
+  color: #6cc5c7;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1rem;
+  text-align: center;
+  margin: 2rem auto 2rem auto;
+}
+
+h5 {
+  font-size: 1em;
+  text-align: left;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  text-align: justify;
+  line-height: 1.5em;
+  padding-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  margin: 0 0.5em 1em 0.5em;
+}
+
+a:hover {
+  color: #505050;
+}
+
+/* Header  */
+.heading-primary {
+  margin-top: 1%;
+  margin-bottom: 6vh;
+  padding: 0.4em 0.1em;
+}
+
+.heading-primary-main {
+  display: block;
+  letter-spacing: 5px;
+}
+
+.heading-primary-sub {
+  display: block;
+  font-size: 1rem;
+  letter-spacing: 6px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* .btn:hover span {display:none}
+.btn:hover:before {
+	content:"I'm available for hire!";
+} */
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 25px 60px;
+  display: inline-block;
+  border-radius: 10px;
+  transition: all 0.2s;
+  position: relative;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+/* About */
+span.email a {
+  display: block;
+  margin-bottom: 1em;
+  /* font-size: 1.5em; */
+  color: #505050;
+}
+
+#contact p, i {
+  text-align: center;
+  font-size: 1.5em;
+  color: #6cc5c7;
+}
+
+#contact i:hover {
+  color: #ff7b9e;
+}
+
+.about {
+  padding: 2em;
+  width: 65%;
+  display: block;
+  margin: 0 auto;
+}
+
+.wrapper h3 {
+  font-size: 3em;
+  display: inline-block;
+  margin: 1em auto;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #ff7b9e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 15px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "»";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.text {
+  max-width: 724px;
+  margin: 0 auto;
+}

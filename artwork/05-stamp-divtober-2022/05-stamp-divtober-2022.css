@@ -1,0 +1,95 @@
+/* Presets */
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* font */
+  --serif: "Alkalami", serif;
+  /* colors */
+  --gray: #333;
+  --white: #FFFFFF;
+  /*dimensions */
+  --width: 50vh;
+  --height: 50vh;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #cae3f1 url("https://assets.codepen.io/28337/passport-bg-icon2.png") top left repeat;
+  background-position: 50% 50%;
+}
+
+div:before, div:after {
+  display: block;
+  position: absolute;
+}
+
+div.stamp {
+  backdrop-filter: grayscale(0%);
+  filter: blur(0.1rem);
+  width: var(--width);
+  height: var(--height);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  padding: 4vh;
+  border: solid 3px var(--gray);
+  border-radius: 25px;
+  transform: rotate(25deg);
+  font-face: var(--serif);
+  text-transform: uppercase;
+  letter-spacing: 1vh;
+  text-align: center;
+  font-size: 7.25vh;
+  line-height: 1.15;
+  background: radial-gradient(ellipse, var(--gray) 1vh, transparent 14vh) -180% -180%/60vh 60vh no-repeat, radial-gradient(ellipse, var(--gray) 1vh, transparent 14vh) 280% 280%/60vh 60vh no-repeat;
+}
+
+div.stamp:before {
+  width: calc(var(--width) - 2.5vh);
+  height: calc(var(--height) - 2.5vh);
+  margin: -3vh 1vh 1vh 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  overflow: hidden;
+  border: solid 3px var(--gray);
+  border-radius: 25px;
+  content: "International Airport";
+  font-face: var(--serif);
+  text-transform: uppercase;
+  letter-spacing: 0.25vh;
+  font-size: 2.5vh;
+  padding-bottom: 5vh;
+  padding-right: 3vh;
+  padding-left: 10vh;
+  text-align: right;
+  /* placements */
+  --airplane:
+  /* 8th-left */ radial-gradient(ellipse, var(--gray) 1.75vh, transparent 1.75vh) 22% 75% / 3.75vh 8vh no-repeat,
+  /* stem */ linear-gradient(180deg, var(--gray) 10vh, transparent 10vh) 22% 120% / 3vh 18vh no-repeat,
+  /* stem */ linear-gradient(25deg, var(--gray) 4vh, transparent 4vh) 30% 80% / 6vh 8vh no-repeat,
+  /* stem */ linear-gradient(-25deg, var(--gray) 4vh, transparent 4vh) 10% 80% / 6vh 8vh no-repeat,
+  /* stem */ linear-gradient(25deg, var(--gray) 2vh, transparent 2vh) 28% 95% / 3vh 3vh no-repeat,
+  /* stem */ linear-gradient(-25deg, var(--gray) 2vh, transparent 2vh) 16% 95% / 3vh 3vh no-repeat;
+  background: var(--airplane);
+}
+
+div.stamp:after {
+  width: 44vh;
+  height: 10vh;
+  margin-top: 16vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: dashed 3px var(--gray);
+  border-radius: 0px;
+  content: "";
+}

@@ -1,0 +1,40 @@
+{
+    "name": "08-haunted-divtober-2022",
+    "version": "1.0.0",
+    "title": "08. Haunted - Divtober 2022",
+    "description": "",
+    "author": {
+        "name": "Greg Robleto",
+        "avatar": "https://assets.codepen.io/28337/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1641427924&width=512",
+        "web": "http://www.robleto.com",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/robleto/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/robleto"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/robleto"
+            }
+        ]
+    },
+    "html": "08-haunted-divtober-2022.html",
+    "css": [
+        "08-haunted-divtober-2022.css"
+    ],
+    "js": "/* This entry for #divtober 2022 was adapted from a forked copy of the brilliant cute-little-ghost animation by Anastasia Goodwin \nhttps://codepen.io/agoodwin/pen/LOYeXP  that I had been using to practice learning CSS Art. There is a time-lapse video of making this piece at https://youtu.be/f7xiC6Iv_rM */\n\n\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "cssart",
+        "divtober",
+        "singediv"
+    ],
+    "original": "https://codepen.io/robleto/pen/oNdPYyd",
+    "codepen": "https://codepen.io/robleto/pen/oNdPYyd"
+}

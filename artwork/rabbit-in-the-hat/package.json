@@ -1,0 +1,40 @@
+{
+    "name": "rabbit-in-the-hat",
+    "version": "1.0.0",
+    "title": "Rabbit in the hat",
+    "description": "Simple but animated drawing of a rabbit in a hat.\n\nHere's a video of how it was done: https://www.youtube.com/watch?v=JoFO-I44Ryg",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "rabbit-in-the-hat.html",
+    "css": [
+        "rabbit-in-the-hat.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "html",
+        "illustration",
+        "cssart"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/yLJjWGR",
+    "codepen": "https://codepen.io/alvaromontoro/pen/yLJjWGR"
+}

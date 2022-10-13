@@ -1,0 +1,51 @@
+body {
+  min-height: 320px;
+  height: 100vh;
+  position: relative;
+  background-color: #ffe4e1;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div:before,
+div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+@media (max-width: 400px) {
+  div {
+    transform: scale(0.8);
+  }
+}
+#journey {
+  box-sizing: border-box;
+  font-size: 10px;
+  width: 35em;
+  height: 30em;
+  margin-left: -17.5em;
+  margin-top: -15em;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, #ffa07a 60%, rgba(255,160,122,0) 61%), radial-gradient(circle, #ffa07a 60%, rgba(255,160,122,0) 61%), linear-gradient(160deg, rgba(255,69,0,0) 40%, #ff4500 41%), linear-gradient(-160deg, rgba(255,69,0,0) 40%, #ff4500 41%), linear-gradient(#ff4500, #ff4500), linear-gradient(110deg, rgba(255,69,0,0) 40%, #ff4500 41%, #ff4500 50%, rgba(255,69,0,0) 51%), linear-gradient(-120deg, rgba(255,69,0,0) 48%, #ff4500 49%, #ff4500 56%, rgba(255,69,0,0) 57%), linear-gradient(#ff4500, #ff4500), linear-gradient(#ff4500, #ff4500);
+  background-size: 6em 6em, 6em 6em, 9em 7em, 6.5em 7.5em, 18em 5.8em, 6.5em 10em, 6.5em 10em, 10em 0.8em, 0.8em 10em;
+  background-position: left 6.5em bottom 0, right 6.5em bottom 0, left 1em bottom 3.5em, right 1em bottom 3.5em, left 10em bottom 3.5em, left 8.5em bottom 9em, right 6.5em bottom 9em, left 12.6em bottom 18.2em, left 17.5em bottom 8.5em;
+}
+#journey:before {
+  width: 10em;
+  height: 3em;
+  left: 13.5em;
+  top: 7.7em;
+  background-color: #ff7f50;
+  border-radius: 0.6em;
+  box-shadow: -2em -2.8em 0 -0.5em #ff4500, -0.3em -5.4em 0 -0.2em #ff7f50;
+}
+#journey:after {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, rgba(0,0,0,0) 40%, black 41%, black 47%, rgba(0,0,0,0) 48%), linear-gradient(black, black), radial-gradient(circle, rgba(0,0,0,0) 40%, black 41%, black 47%, rgba(0,0,0,0) 48%), linear-gradient(black, black), linear-gradient(black, black), linear-gradient(black, black), radial-gradient(circle, rgba(0,0,0,0) 40%, black 41%, black 47%, rgba(0,0,0,0) 48%), radial-gradient(circle, rgba(0,0,0,0) 40%, black 41%, black 47%, rgba(0,0,0,0) 48%), radial-gradient(circle, rgba(0,0,0,0) 44%, black 45%, black 47%, rgba(0,0,0,0) 48%), radial-gradient(circle, rgba(0,0,0,0) 44%, black 45%, black 47%, rgba(0,0,0,0) 48%), linear-gradient(black, black), linear-gradient(black, black), linear-gradient(black, black), linear-gradient(black, black), linear-gradient(black, black), linear-gradient(black, black), linear-gradient(black, black), linear-gradient(black, black), linear-gradient(-150deg, rgba(0,0,0,0) 30%, black 31%, black 34.5%, rgba(0,0,0,0) 35.5%), linear-gradient(black, black);
+  background-size: 4em 4em, 4em 0.2em, 4em 4em, 0.2em 4.8em, 2em 0.2em, 2em 0.2em, 4em 4em, 4em 4em, 8em 8em, 8em 8em, 0.2em 3.1em, 0.2em 3.2em, 2.5em 0.2em, 0.2em 2em, 0.2em 2em, 0.2em 2.5em, 0.2em 2.5em, 2.5em 0.2em, 3em 3em, 2em 0.2em;
+  background-position: left -0.5em bottom 4em, left 0 bottom 4em, right -0.5em bottom 3.3em, left 17.8em bottom 2.8em, left 15em bottom 6em, left 19em bottom 6em, left 8em bottom 0.8em, right 8em bottom 1.4em, left 6em bottom -1.2em, right 6em bottom -0.5em, 15em 7.8em, 21.7em 7.5em, 17.1em 9.3em, 13em 5.4em, 19.8em 5.4em, 15em 2.4em, 21.1em 2.6em, 17em 3.7em, right 7.8em bottom 7.8em, right 9.2em bottom 10.6em;
+}

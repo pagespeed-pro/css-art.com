@@ -1,0 +1,282 @@
+article {
+  --skin: #fca;
+  --hair: #963;
+  width: 70vmin;
+  height: 90vmin;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+article *,
+article *::before,
+article *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.face {
+  width: 58%;
+  height: 60%;
+  border: 0.75vmin solid;
+  border-bottom-width: 1vmin;
+  border-top-width: 1vmin;
+  border-radius: 100% / 66% 70% 120% 120%;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: 
+    radial-gradient(70% 7% at 50% 58%, #f002, #0000),
+    var(--skin);
+  box-shadow:
+    inset 1.5vmin 0 2vmin #6003,
+    inset -1.5vmin -0.5vmin 2vmin #fff5
+}
+
+.body {
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+}
+
+.shoulders {
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(60% 110% at 50% 0, #0000 50%, #000 0),
+    var(--skin);
+  border-radius: 50% / 100% 100% 0 0;
+  border: 0.75vmin solid;
+  border-bottom-width: 0;
+  border-top-width: 1vmin;
+  box-shadow:
+    inset 1.5vmin -0.5vmin 2vmin #6003,
+    inset -1.5vmin -0.5vmin 2vmin #fff5
+}
+
+.neck {
+  width: 45%;
+  height: 140%;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -80%);
+  background: 
+    radial-gradient(70% 140% at 50% 0, #6008, #0000 50%) no-repeat,
+    radial-gradient(110% 150% at -20% 9.5%, #0000 55%, #000 0 57.5%, var(--skin) 0) 0 0 / 60% 100% no-repeat,
+    radial-gradient(110% 150% at 120% 9.5%, #0000 55%, #000 0 57.5%, var(--skin) 0) 100% 0 / 60% 100% no-repeat;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.ear {
+  width: 20%;
+  height: 26%;
+  border: 0.75vmin solid;
+  border-top-width: 1vmin;
+  border-radius: 100% / 70% 80% 100% 110%;
+  background: 
+    radial-gradient(farthest-side at 30% 100%, #0000 80%, #000 0 84%, #0000 0) 100% 0 / 80% 80% no-repeat,
+    radial-gradient(#0000 40%, #000 0 55%, #0000 0) 33% 80% / 40% 40% no-repeat,
+    var(--skin);
+  transform: rotate(-15deg);
+  top: 30%;
+  left: 14.5%;
+  box-shadow:
+    inset 1vmin 1vmin 1vmin #6002
+}
+
+.ear + .ear {
+  left: auto;
+  right: 15%;
+  transform: scaleX(-1) rotate(-13deg);
+  background: 
+    radial-gradient(farthest-side at 35% 100%, #0000 80%, #000 0 84%, #0000 0) 80% 0 / 80% 80% no-repeat,
+    radial-gradient(#0000 43%, #000 0 56%, #0000 0) 33% 80% / 40% 40% no-repeat,
+    var(--skin);
+  box-shadow:
+    inset 1vmin 1vmin 1vmin #fff3
+}
+
+.bangs {
+  width: 120%;
+  height: 35%;
+  left: 50%;
+  top: -1.25vmin;
+  transform: translateX(-50%);
+  background: 
+    radial-gradient(100% 180% at 90% 0, var(--hair) 0 43%, #0000 0),
+    radial-gradient(100% 170% at 0 0, var(--hair) 0 53%, #000 0 55%, #0000 0),
+    radial-gradient(100% 180% at 90% 0, #0000 0 43%, #000 0 45%, #0000 0);
+  border-radius: 50% / 100% 100% 0 0;
+}
+
+.bangs::before {
+  content: "";
+  width: 50%;
+  height: 60%;
+  border-left: 1vmin solid;
+  border-bottom: 0.125vmin solid #0000;
+  border-radius: 0 0 0 100%;
+  left: 49%;
+  top: 36%;
+}
+
+.hair-back {
+  width: 90%;
+  height: 100%;
+  background: var(--hair);
+  left: 50%;
+  top: -1%;
+  transform: translateX(-50%) rotate(4deg);
+  border-radius: 95% / 80% 80% 120% 110%;
+  border: 0.75vmin solid;
+  border-top: 1vmin solid;
+  box-shadow:
+    inset 2.5vmin -0.5vmin 2vmin #6002,
+    inset -1.5vmin -0.5vmin 2vmin #fff3
+}
+
+.nose {
+  width: 20%;
+  height: 10%;
+  border-top: 0.85vmin solid;
+  border-right: 0.6vmin solid;
+  border-bottom: 0.25vmin solid #0000;
+  border-left: 0.125vmin solid #0000;
+  border-radius: 50%;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-30%);
+  background: var(--skin);
+}
+
+.nose::before {
+  content: "";
+  left: 50%;
+  top: 0;
+  height: 70%;
+  width: 0.75vmin;
+  background: linear-gradient(to bottom right, #0000 50%, #000 0);
+  transform: translateY(-105%) rotate(-20deg);
+}
+
+.eye {
+  --pos: 15%;
+  width: 25%;
+  height: 15%;
+  background: 
+    radial-gradient(circle at 50% 42%, #fffd 7%, #0000 0),
+    radial-gradient(circle at 35% 48%, #fffd 14%, #0000 0),
+    radial-gradient(circle at 50% 60%, #000 20%, #0000 0),
+    radial-gradient(75% 120% at 50% 55%, #587 0, #365 50%, #000 0 56%, #fff 57%)
+    #fff;
+  top: 42%;
+  left: var(--pos);
+  border-radius: 100% 70% 60% 100% / 100% 80% 40% 50%;
+  box-shadow: 
+    0.25vmin -0.5vmin,
+    -0.5vmin -0.25vmin,
+    0 0vmin 0 0.35vmin;
+}
+
+.eye + .eye {
+  left: auto;
+  right: 13%;
+  border-radius: 70% 100% 100% 60% / 80% 100% 50% 40%;
+  box-shadow: 
+    -0.25vmin -0.5vmin,
+    0.5vmin -0.25vmin,
+    0 0vmin 0 0.35vmin;;
+}
+
+.eyebrow {
+ width: 35%;
+  height: 15%;
+  background: linear-gradient(#6001, #6000);
+  top: 35%;
+  left: 10%;
+  border-radius: 130% 100% 0 0;
+  box-shadow: 0.25vmin -2vmin 0 -0.75vmin;
+  transform: rotate(-3deg);
+}
+.eyebrow + .eyebrow {
+  left: auto;
+  right: 8%;
+  top: 34.5%;
+  box-shadow: -0.25vmin -2vmin 0 -0.75vmin;
+  transform: rotate(7deg);
+}
+
+.mouth {
+  width: 35%;
+  height: 6%;
+  top: 80%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  background: #f004;
+  border-radius: 50%;
+  background:
+    radial-gradient(100% 80% at 50% 100%, #000 45%, #0000 48%) 0 20% / 60% 50% no-repeat,
+    radial-gradient(100% 80% at 50% 100%, #000 45%, #0000 48%) 100% 20% / 60% 50% no-repeat,
+    radial-gradient(100% 150% at 60% 100%, #fa8 50%, #0000 55%) 0 0% / 55% 50% no-repeat,
+    radial-gradient(100% 150% at 40% 100%, #fa8 50%, #0000 55%) 100% 0% / 55% 50% no-repeat,
+    linear-gradient(#0000 50%, #fa8 0)
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

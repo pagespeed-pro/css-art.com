@@ -1,0 +1,41 @@
+{
+    "name": "casio-sa-20-replica-in-css-with-sound-",
+    "version": "1.0.0",
+    "title": "Casio SA-20 replica in CSS (with sound!)",
+    "description": "A HTML+CSS representation of a CASIO SA-20 keyboard piano. It has sound that is controlled by CSS, but it only really works on Chrome or Chromium-based browsers.\n\nBeware: if you turn the on/off button to OFF, the keys won't play (as the keyboard will be off)",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "casio-sa-20-replica-in-css-with-sound-.html",
+    "css": [
+        "casio-sa-20-replica-in-css-with-sound-.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "html",
+        "audio",
+        "sound",
+        "demo"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/bGGjNom",
+    "codepen": "https://codepen.io/alvaromontoro/pen/bGGjNom"
+}

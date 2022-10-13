@@ -1,0 +1,40 @@
+{
+    "name": "10-game-divtober-2022",
+    "version": "1.0.0",
+    "title": "10. Game - Divtober 2022",
+    "description": " This entry was an attempt at trying to do something simple but polished, a respite from some of the complex versions I have been working on the first week of divtober.",
+    "author": {
+        "name": "Greg Robleto",
+        "avatar": "https://assets.codepen.io/28337/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1641427924&width=512",
+        "web": "http://www.robleto.com",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/robleto/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/robleto"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/robleto"
+            }
+        ]
+    },
+    "html": "10-game-divtober-2022.html",
+    "css": [
+        "10-game-divtober-2022.css"
+    ],
+    "js": "/* This entry was an attempt at trying to do something simple but polished, a respite from some of the complex versions I have been working on the first week of divtober. Still couldn't help trying to figure out perspective again.  There is a time-lapse video of making this piece at https://youtu.be/88fKEUnMgNs */",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "cssart",
+        "divtober",
+        "singlediv"
+    ],
+    "original": "https://codepen.io/robleto/pen/ZEoqxqv",
+    "codepen": "https://codepen.io/robleto/pen/ZEoqxqv"
+}

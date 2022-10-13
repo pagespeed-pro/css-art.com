@@ -1,0 +1,73 @@
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #e8f4ff;
+  background: linear-gradient(#ace, #bde);
+  background: linear-gradient(#e8f4ff calc(50% + 25vmin), white 0);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+div {
+  --corn: #fae177;
+  --bowl: #5a9;
+  --bowl-dark: #387;
+  --bowl-light: #6ba;
+  --queso: #ffb909;
+  --queso-light: #fc1;
+  --margarita: #bde;
+  position: relative;
+  width: 90vmin;
+  height: 90vmin;
+  background:
+    /* queso dripping */
+    radial-gradient(50% 100% at 50% 0%, var(--queso) 80%, transparent 0) 28% 30% / 4% 10%,
+    radial-gradient(50% 100% at 50% 0%, var(--queso) 80%, transparent 0) 31% 29% / 5% 7%,
+    radial-gradient(50% 100% at 50% 0%, var(--queso) 80%, transparent 0) 34% 29.5% / 4% 8%,
+    radial-gradient(farthest-side at 50% 100%, var(--queso) 99.9%, transparent 0) 30% 26.5% / 9% 1%,
+
+    /* arm + glass */
+    radial-gradient(closest-side, black 90%, transparent 0) 80.25% 27.5% / 3.5% 3.5%,
+    linear-gradient(white, white) 82.125% 21% / 10.5% 1%,
+    radial-gradient(50% 120% at 50% 0, var(--margarita) 99.9%, transparent 0) 82% 22% / 10% 3%,
+    radial-gradient(25% 70% at 50% 0, limegreen 70%, var(--margarita) 0 99.9%, transparent 0) 82% 25% / 10% 3%,
+    linear-gradient(var(--margarita), var(--margarita)) 79.25% 25% / 1% 7%,
+    linear-gradient(var(--margarita), var(--margarita)) 80% 30.5% / 4% 1%,
+    radial-gradient(farthest-side at 30% 30%, transparent 80%, black 0 86.5%, transparent 0) 80% 35% / 20% 16%,
+    /* arm 2*/
+    radial-gradient(closest-side, black 90%, transparent 0) 35.75% 48.25% / 3.25% 3.25%,
+    radial-gradient(farthest-side at 120% 50%, transparent 80%, black 0 92%, transparent 0) 24.25% 44% / 15% 7%,
+
+    /* nacho */
+    radial-gradient(closest-side, white 99.9%, transparent 0) 46.5% 39.5% / 0.75% 0.75%,
+    radial-gradient(closest-side, white 99.9%, transparent 0) 54.5% 39.5% / 0.75% 0.75%,
+    radial-gradient(closest-side, black 99.9%, transparent 0) 46% 40% / 3% 3%,
+    radial-gradient(closest-side, black 99.9%, transparent 0) 54% 40% / 3% 3%,
+    radial-gradient(farthest-side at 50% 0%, transparent 0 75%, black 0 99%, transparent 0) 50% 43% / 4% 1.75%,
+    conic-gradient(at 50% 160%, var(--corn) 28deg, transparent 0 332deg, var(--corn) 0) 50% 36.5% / 45% 26%,
+    
+    /* queso waves */
+    radial-gradient(closest-side, var(--queso-light) 0 80%, transparent 0) 50% 53% / 33% 4%,
+    radial-gradient(closest-side, var(--queso) 0 80%, transparent 0) 45% 53% / 33% 7%,
+    radial-gradient(closest-side, var(--queso-light) 0 80%, transparent 0) 43% 53% / 33% 6%,
+    radial-gradient(closest-side, var(--queso) 0 80%, transparent 0) 52% 53% / 33% 7%,
+    radial-gradient(closest-side, var(--queso-light) 0 80%, transparent 0) 53% 53% / 33% 6%,
+    radial-gradient(closest-side, var(--queso) 0 80%, transparent 0) 55% 53% / 33% 7%,
+    radial-gradient(closest-side, var(--queso-light) 0 80%, transparent 0) 57% 53% / 33% 6%,
+    /* bowl + queso */
+    radial-gradient(closest-side, transparent 90%, var(--bowl-light) 0 99.9%, transparent 0) 50% 50% / 80% 20%,
+    radial-gradient(farthest-side at 50% 0%, transparent 94%, var(--bowl) 0 ) 50% 56% / 80% 10%,
+    radial-gradient(farthest-side at 50% 100%, var(--queso) 0 99.9%, transparent 0) 50% 55% / 78% 10%,
+    radial-gradient(closest-side, var(--bowl-dark) 92%, transparent 0) 50% 50% / 80% 20%,
+    radial-gradient(50% 110% at 50% 0%, var(--bowl) 99.9%, transparent 0) 50% 92% / 80% 35%,
+    radial-gradient(closest-side, var(--bowl) 0 99.9%, transparent 0) 50% 96.75% / 35.5% 7%,
+    
+    /* shadow */
+    radial-gradient(closest-side, #ddd 90%, transparent 0) 50% 100% / 60% 11%
+  ;
+  background-repeat: no-repeat;
+  background-color: #c000;
+}

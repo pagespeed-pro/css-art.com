@@ -1,0 +1,34 @@
+{
+    "name": "colossal-titan-css-only-",
+    "version": "1.0.0",
+    "title": "Colossal Titan  (CSS only)",
+    "description": "https://twitter.com/ChallengesCss/status/1472891196615892994",
+    "author": {
+        "name": "Temani Afif",
+        "avatar": "https://assets.codepen.io/1480814/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1637754747&width=512",
+        "web": "https://css-only.art/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/t_afif/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/ChallengesCss"
+            }
+        ]
+    },
+    "html": "colossal-titan-css-only-.html",
+    "css": [
+        "colossal-titan-css-only-.css"
+    ],
+    "js": "let head = document.querySelector('.head');\n\ndocument.querySelector('[name=sk]').addEventListener(\"change\", function(e){\n  head.style.setProperty(\"--sk\", e.target.value)\n}, false);\n\ndocument.querySelector('[name=sb]').addEventListener(\"change\", function(e){\n  head.style.setProperty(\"--sb\", e.target.value)\n}, false);\n\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "css-art"
+    ],
+    "original": "https://codepen.io/t_afif/pen/VwMzLGR",
+    "codepen": "https://codepen.io/t_afif/pen/VwMzLGR"
+}

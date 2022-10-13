@@ -1,0 +1,39 @@
+{
+    "name": "pure-css-batman",
+    "version": "1.0.0",
+    "title": "Pure CSS Batman",
+    "description": "",
+    "author": {
+        "name": "Shreyasi Patil",
+        "avatar": "https://avatars.githubusercontent.com/u/53648200?v=4",
+        "web": "https://shreyasi.me/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/error404_sp/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/error404_sp"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/error404-sp"
+            },
+            {
+                "title": "Hashnode",
+                "url": "https://error404-sp.hashnode.dev/"
+            }
+        ]
+    },
+    "html": "pure-css-batman.html",
+    "css": [
+        "pure-css-batman.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [],
+    "original": "https://codepen.io/error404_sp/pen/vYLqEoO",
+    "codepen": "https://codepen.io/error404_sp/pen/vYLqEoO"
+}

@@ -1,0 +1,249 @@
+.sign {
+  --green: #02754e;
+  --blue: #06a7bf;
+  --pink: #fea2a2;
+  --yellow: #fed41a;
+  --black: #141414;
+  --white: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.group {
+  display: inline-block;
+}
+
+.letter {
+  position: relative;
+  display: inline-block;
+  width: 21vmin;
+  height: 21vmin;
+  background: #eee;
+}
+
+.bar {
+  position: absolute;
+  border-radius: 50vmin;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  width: 33.33%;
+  height: 33.33%;
+  background: var(--black);
+}
+
+/* LETTER 0: L/A */
+.letter-0 {
+  background: linear-gradient(to right, var(--green) 16.66%, transparent 0), linear-gradient(var(--green) 66.66%, var(--blue) 0);
+}
+
+.letter-0 .circle {
+  top: 14vmin;
+  left: 0vmin;
+}
+
+.letter-0 .bar-1 {
+  width: 7vmin;
+  height: 21vmin;
+  top: 0;
+  left: 0;
+  background: var(--pink);
+  transform-origin: 3.5vmin 3.5vmin;
+}
+
+.letter-0 .bar-2 {
+  width: 14vmin;
+  height: 7vmin;
+  top: 14vmin;
+  left: 7vmin;
+  background: linear-gradient(90deg, var(--white) 50%, var(--yellow) 0);
+  transform-origin: 3.5vmin 3.5vmin;
+}
+
+.sign:hover .letter-0 {
+  background: linear-gradient(to right, var(--blue) 50%, transparent 0) , linear-gradient(60deg, var(--blue) 50%, var(--green) 0)  
+}
+
+.sign:hover .letter-0 .circle {
+  transform: rotate(33deg);
+  left: 33.33%;
+  top: 0;
+}
+
+.sign:hover .letter-0 .bar-1 {
+  transform: rotate(26.5deg);
+  height: 22.6vmin;
+  left: 7vmin;
+}
+
+.sign:hover .letter-0 .bar-2 {
+  transform: rotate(-26.5deg);
+  height: 22.6vmin;
+  width: 7vmin;
+    top: 0;
+  left: 7vmin;
+  background: linear-gradient(180deg, var(--white) 50%, var(--yellow) 0)
+}
+
+/* LETTER 1: O/M */
+.letter-1 {
+  background: linear-gradient(135deg, var(--pink) 25%, var(--green) 0 75%, var(--blue) 0);
+}
+
+.letter-1 .circle {
+  top: 7vmin;
+  left: 7vmin;
+}
+
+.letter-1 .bar-1 {
+  width: 21vmin;
+  height: 21vmin;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, var(--yellow) 50%, transparent 0), linear-gradient(to bottom, var(--blue) 50%, var(--white) 0)
+}
+
+.sign:hover .letter-1 {
+  background: linear-gradient(to left, var(--pink) 7vmin, transparent 0 14vmin, var(--green) 0), linear-gradient(to bottom, var(--green) 7vmin, var(--pink) 0);
+}
+
+.sign:hover .letter-1 .circle {
+  top: 16.66%;
+}
+
+.sign:hover .letter-1 .bar-1 {
+  left: 0;
+  width: 7vmin;
+  border-radius: 7vmin;
+  background: var(--yellow);
+}
+
+.sign:hover .letter-1 .bar-2 {
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 7vmin;
+  border-radius: 7vmin;
+  background: linear-gradient(to bottom, var(--white) 50%, var(--blue) 0);
+}
+
+/* LETTER 2: V/O */
+.letter-2 {
+  transform: rotate(180deg);
+  background: linear-gradient(to right, var(--blue) 50%, transparent 0) , linear-gradient(60deg, var(--blue) 50%, var(--green) 0)  
+}
+
+.letter-2 .circle {
+  transform: rotate(33deg);
+  left: 33.33%;
+  top: 0;
+}
+
+.letter-2 .bar-1 {
+  width: 7vmin;
+  top: 0;
+  left: 0;
+  background: var(--pink);
+  transform-origin: 3.5vmin 3.5vmin;
+  transform: rotate(26.5deg);
+  height: 22.6vmin;
+  left: 7vmin;
+}
+
+.letter-2 .bar-2 {
+  transform: rotate(-26.5deg);
+  transform-origin: 3.5vmin 3.5vmin;
+  height: 22.6vmin;
+  width: 7vmin;
+  top: 0;
+  left: 7vmin;
+  background: linear-gradient(180deg, var(--white) 50%, var(--yellow) 0)
+}
+
+.sign:hover .letter-2 {
+  transform: rotate(90deg);
+  background: linear-gradient(135deg, var(--pink) 25%, var(--green) 0 75%, var(--blue) 0);
+}
+
+.sign:hover .letter-2 .circle {
+  top: 7vmin;
+  left: 7vmin;
+}
+
+.sign:hover .letter-2 .bar-1 {
+  width: 21vmin;
+  height: 21vmin;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, var(--yellow) 50%, transparent 0), linear-gradient(to bottom, var(--blue) 50%, var(--white) 0);
+  transform: none;
+}
+
+.sign:hover .letter-2 .bar-2 {
+  display: none;
+}
+
+/* LETTER 3: E/R */
+.letter-3 {
+  background:  linear-gradient(to right, transparent 50%, var(--pink) 0), linear-gradient(to bottom, var(--pink) 33.33%, var(--green) 0 )
+}
+
+.letter-3 .circle {
+  top: 7vmin;
+  left: 7vmin;
+}
+
+.letter-3 .bar-1 {
+  width: 21vmin;
+  height: 7vmin;
+  background: var(--yellow);
+}
+
+.letter-3 .bar-2 {
+  top: 14vmin;
+  width: 21vmin;
+  height: 7vmin;
+  background: var(--blue);
+}
+
+.sign:hover .letter-3 {
+  background:  linear-gradient(-45deg, transparent 80%, var(--green) 0), linear-gradient(to right, transparent 90%, var(--green) 0), linear-gradient(45deg, var(--blue) 50%, var(--green) 0)
+}
+
+.sign:hover .letter-3 .circle {
+  top: 1.75vmin;
+  left: 7vmin;
+}
+
+.sign:hover .letter-3 .bar-1 {
+  height: 10.5vmin;
+  border-radius: 7vmin;
+  background: var(--blue);
+  background: linear-gradient(to top, var(--yellow) 50%, var(--blue) 0)
+}
+
+.sign:hover .letter-3 .bar-2 {
+  transform-origin: 3.5vmin 3.5vmin;
+  transform: rotate(27.5deg);
+  border-radius: 21vmin;
+  top: 10.5vmin;
+  left: 7vmin;
+  width: 15vmin;
+  height: 7vmin;
+  background: var(--white);
+}
+
+.sign:hover .letter-3 .bar-3 {
+  width: 7vmin;
+  height: 21vmin;
+  top: 0vmin;
+  background: var(--pink)
+}
+ 

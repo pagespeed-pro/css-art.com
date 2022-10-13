@@ -1,0 +1,76 @@
+html {
+  background: #456;  
+}
+
+article {
+  width: 90vmin;
+  height: 90vmin;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background:
+    /* hat */
+    linear-gradient(black, black) 50% 25% / 15% 0.5%,
+    linear-gradient(purple, purple) 50.125% 23.5% / 9.4% 2%,
+    conic-gradient(at 50% 600%, black 4.5deg, transparent 4.75deg 356.25deg, black 356.5deg) 49.5% 14.5% / 15% 12%,
+    /* face */
+    radial-gradient(farthest-side at 0% 50%, #963 80%, transparent 0) 46.5% 24% / 2% 6%,
+    radial-gradient(farthest-side at 100% 50%, #963 80%, transparent 0) 53.5% 24% / 2% 5%,
+    linear-gradient(white, white) 50% 33% / 2.5% 0.25%,
+    radial-gradient(farthest-side at 50% 0%, #900 99%, transparent) 50% 33.25% / 2.5% 1%,
+    linear-gradient(#c003, #d85) 50.25% 29% / 0.25% 2%,
+    radial-gradient(closest-side, #fca 99.9%, transparent 0) 49.75% 31% / 2.25% 1.75%,
+    radial-gradient(closest-side, #d85 99.9%, transparent 0) 50.5% 30.75% / 1.75% 1.75%,
+    radial-gradient(closest-side, #fca 99.9%, transparent 0) 50% 35% / 2.5% 2.5%,
+    radial-gradient(closest-side, #fca 99.9%, transparent 0) 49% 25.5% / 3% 3%,
+    radial-gradient(closest-side, #963 99.9%, transparent 0) 50% 25% / 3% 3%,
+    radial-gradient(closest-side, black 80%, transparent 0) 48.5% 28% / 1% 1%,
+    radial-gradient(closest-side, black 80%, transparent 0) 51.5% 28% / 1% 1%,
+    radial-gradient(farthest-side at 130% 20%, #fca 80%, transparent 0) 47% 27% / 6% 18%,
+    radial-gradient(farthest-side at -30% 20%, #fca 80%, transparent 0) 53% 27% / 6% 18%,
+    radial-gradient(closest-side, #963 80%, transparent 0) 47% 25% / 6% 7.75%,
+    radial-gradient(closest-side, #963 80%, transparent 0) 53% 25% / 6% 8%,
+    radial-gradient(closest-side, #da8 80%, transparent 0) 47% 28.6% / 6% 7%,
+    radial-gradient(closest-side, #da8 80%, transparent 0) 53% 28.6% / 6% 7%,
+    /* bowtie */
+    radial-gradient(closest-side, #b00 90%, transparent 0) 50% 38.25% / 2% 2%,
+    conic-gradient(transparent 58deg, #e00 0 122deg, transparent 0 238deg, #d00 0 302deg, transparent 0) 50% 38% / 7.5% 4%,
+    /* body */
+    radial-gradient(closest-side, black 80%, transparent 0) 50% 49% / 1% 1%,
+    radial-gradient(closest-side, black 80%, transparent 0) 50% 45% / 1% 1%,
+    radial-gradient(closest-side, black 80%, transparent 0) 50% 41% / 1% 1%,
+    radial-gradient(farthest-side at 140% 20%, white 80%, transparent 82%) 49% 48% / 2% 20%,
+    radial-gradient(farthest-side at -40% 20%, white 80%, transparent 82%) 51% 48% / 2% 20%,
+    linear-gradient(black, black) 50% 55% / 5.5% 30%,
+    linear-gradient(#c97, #fca) 50% 35% / 1.75% 7%,
+    /* shoes */
+    radial-gradient(farthest-side at 40% 150%, black 90%, transparent 0) 59% 100% / 10% 2.5%,
+    radial-gradient(farthest-side at 60% 120%, black 90%, transparent 0) 41% 100% / 10% 2.5%,
+    /* pants */
+    radial-gradient(farthest-side at 50% 100%, transparent 50%, #000 50.75% 70%, transparent 71%) 50% 100% / 10% 70%,
+    /* arms */
+    linear-gradient(80deg, transparent 40%, white 41% 51%, transparent 52%) 66.33% 28% / 5% 2%,
+    linear-gradient(80deg, transparent 40%, black 41% 51%, transparent 52%) 67.25% 30.5% / 5% 9%,
+    radial-gradient(closest-side, #fca 99%, transparent 0) 68% 37.25% / 3% 2%,
+    radial-gradient(closest-side, #fca 99%, transparent 0) 69% 36% / 4% 4%,
+    radial-gradient(closest-side, #fca 99%, transparent 0) 42.125% 68.75% / 3% 2%,
+    radial-gradient(closest-side, #fca 99%, transparent 0) 41.125% 70% / 4% 4%,
+    radial-gradient(farthest-side at 100% 100%, transparent 80%, black 81% 90%, transparent 91%) 44.75% 50.75% / 11% 32.5%,
+    radial-gradient(farthest-side at 50% 0%, transparent 78%, black 79% 90%, transparent 91%) 63% 46% / 18% 15%,
+    linear-gradient(white, white) 68.5% 38.25% / 1% 1.5%,
+    linear-gradient(white, white) 41.33% 67.75% / 1% 1.5%,
+    /* penguin */
+    radial-gradient(farthest-side at 0% 0%, black 80%, transparent 0) 47.5% 71% / 2% 45%,
+    radial-gradient(farthest-side at 100% 0%, black 80%, transparent 0) 52.5% 70% / 2% 45%,
+    linear-gradient(#111, #222) 50% 75% / 6.6% 10%,
+    radial-gradient(farthest-side at 50% 0%, #222 80%, transparent 0) 48.25% 86% / 4.5% 15%,
+    radial-gradient(farthest-side at 50% 0%, #222 80%, transparent 0) 51.6% 86% / 4.5% 15%,
+    
+    /* bg */
+    radial-gradient(40% 40% at 50% 55%, #678, #456)
+    ;
+  background-color: #f001;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}

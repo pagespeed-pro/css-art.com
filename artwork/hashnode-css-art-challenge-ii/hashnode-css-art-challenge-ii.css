@@ -1,0 +1,474 @@
+html {
+  background: #9dced2;
+}
+html:before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  width: 50px;
+  aspect-ratio: 1;
+  background: radial-gradient(farthest-side,#0000 40%,#dddddd 44%);
+  border-radius: 27%;
+  transform: rotate(45deg);
+  left: calc(50% - 25px);
+  bottom: 180px;
+  filter: drop-shadow(0px 120px 0 #ddd) drop-shadow(0px 240px 0 #ddd) drop-shadow(0px -360px 0 #ddd) drop-shadow(120px 0 0 #ddd) drop-shadow(240px 0 0 #ddd) drop-shadow(600px 0 0 #ddd) drop-shadow(-480px 0 0 #ddd) drop-shadow(-600px 240px 0 #ddd) drop-shadow(840px -840px 0 #ddd);
+}
+body {
+  margin:0;
+  height:100vh;
+  display:grid;
+  background: linear-gradient(0deg,#e9d7c7 95px,#debd9c 0 97px,#0000 0);
+  position:relative;
+  z-index:1;
+}
+body:before {
+    content: "#HashnodeChallenge";
+    font-family: sans-serif;
+    color: #0000;
+    font-size: 28px;
+    font-weight: bold;
+    position: fixed;
+    right: 554px;
+    bottom: 237px;
+    transform: rotate(-10deg);
+    z-index: -1;
+    background: 
+      linear-gradient(to bottom right,#0000 45%,red,#0000 55%),
+      linear-gradient(to bottom left,#0000 45%,red,#0000 55%),
+      #1d9bf0;
+    -webkit-background-clip: padding-box,padding-box,text;
+            background-clip: padding-box,padding-box,text;
+}
+.h:before{
+  content: "";
+  border-radius: 25%;
+  background: radial-gradient(farthest-side,#0000 40%,#2962ff 41%);
+  transform: rotate(45deg);
+  z-index: -1;
+  font-family: sans-serif;
+  font-size: 18px;
+  text-align: center;
+  line-height: 36px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: #fff;
+}
+.boss {
+    width: 180px;
+    aspect-ratio: 1;
+    display: grid;
+    position: absolute;
+    background: 
+      linear-gradient(#000 0 0) 50% 16%/18px 3px,
+      radial-gradient(farthest-side,#fff 98%,#0000) 58% 5%/4px 4px,
+      radial-gradient(farthest-side,#fff 98%,#0000) 39% 5%/4px 4px,
+      radial-gradient(farthest-side,#000 98%,#0000) 40% 2%/12px 12px,
+      radial-gradient(farthest-side,#000 98%,#0000) 60% 2%/12px 12px;
+    background-repeat: no-repeat;
+    bottom: 120px;
+    right: 100px;
+}
+.boss:before {
+    content: "Hash-boss.png";
+}
+.boss:after {
+    content: "";
+    position: absolute;
+    inset: 6% -50% -30%;
+    background: radial-gradient(farthest-side,#000 94%,#0000) 93% 67%/11px 12px,      
+    radial-gradient(farthest-side at bottom left,#0000 92%,#000 94% 98%,#0000) 90% 47%/25% 36%,
+    radial-gradient(farthest-side,#000 94%,#0000) 10% 67%/11px 12px,
+    radial-gradient(farthest-side at bottom right,#0000 92%,#000 94% 98%,#0000) 14% 47%/25% 36%,
+    radial-gradient(farthest-side,#000 94%,#0000) 64% 100%/16px 11px,
+    radial-gradient(farthest-side,#000 94%,#0000) 33% 100%/16px 11px,
+    linear-gradient(#000 0 0) 35% 96%/4px 34%,
+    linear-gradient(#000 0 0) 65% 96%/4px 34%;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+.boss i {
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    width: 91px;
+    background: linear-gradient(90deg,#000 20%,#0000 0 44%,#000 0 56%,#0000 0 81%,#000 0);
+    height: 2px;
+    transform: translate(-50%);
+}
+.boss i:before, 
+.boss i:after {
+    content: "";
+    position: absolute;
+    border: 2px solid #000;
+    background:#fff4;
+    aspect-ratio: 1;
+    width: 18px;
+    border-radius: 6px;
+    transform: translate(82%,-39%) rotate(45deg);
+    top: 0;
+    left: 0;
+} 
+.boss i:after {
+    transform: translate(228%,-39%) rotate(45deg);
+}
+
+.one {
+  width: 128px;
+  aspect-ratio: 1;
+  display: inline-grid;
+  position:absolute;    
+  bottom: 60px;
+  right: 400px;
+  background: 
+    radial-gradient(farthest-side,#0000 98%,#e4d60a) 51% 15%/12px 10px,
+    radial-gradient(farthest-side,red 98%,#0000) 52.5% 19%/7px 5px,
+    radial-gradient(farthest-side,#000 98%,#0000) 51% 15%/12px 10px,
+    radial-gradient(farthest-side,#fff 98%,#0000) 61% 4%/4px 4px,
+    radial-gradient(farthest-side,#fff 98%,#0000) 42% 4%/4px 4px,
+    radial-gradient(farthest-side,#000 98%,#0000) 40% 2%/12px 12px,
+    radial-gradient(farthest-side,#000 98%,#0000) 60% 2%/12px 12px;
+  background-repeat: no-repeat;
+}
+.one::before {
+    background: linear-gradient(90deg, #fc2e2e 11%,#ff8c00 0 22%,#e4d60a 0 33%,#9fe40a 0 44%,#05ba17 0 55%,#a4d9ff 0 66%,#1f9df8 0 77%,#f35bb6 0 88%,#e10ae5 0);
+    -webkit-mask: radial-gradient(farthest-side,#0000 40%,#2962ff 41%);
+}
+.one:after {
+  content: "";
+  position: absolute;
+  inset: 6% -50% -30%;
+  background: 
+    radial-gradient(farthest-side,#000 94%,#0000) 93% 5%/10px 12px,      
+    radial-gradient(farthest-side at top left,#0000 92%,#000 94% 98%,#0000) 90% 15%/25% 36%,
+    radial-gradient(farthest-side,#000 94%,#0000) 10% 67%/10px 12px,
+    radial-gradient(farthest-side at bottom right,#0000 92%,#000 94% 98%,#0000) 14% 47%/25% 36%,
+    radial-gradient(farthest-side,#000 94%,#0000) 67% 100%/12px 8px,
+    radial-gradient(farthest-side,#000 94%,#0000) 36% 100%/12px 8px,
+    linear-gradient(#000 0 0) 35% 96%/4px 34%,
+    linear-gradient(#000 0 0) 65% 96%/4px 34%;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+.two {
+  width: 128px;
+  aspect-ratio: 1;
+  display: inline-grid;
+  position:absolute;
+  bottom: 100px;
+  right: 550px;
+  background:
+    linear-gradient(to bottom left,#2962ff 49.5%,#0000 50%) 43% 1%/15px 15px,
+    linear-gradient(to bottom right,#2962ff 49.5%,#0000 50%) 58% 1%/15px 15px,
+    radial-gradient(farthest-side,#0000 98%,#2962ff) 51% 15%/12px 10px,    
+    radial-gradient(farthest-side,red 98%,#0000) 50.5% 19%/7px 5px,    
+    radial-gradient(farthest-side,#000 98%,#0000) 51% 15%/12px 10px,    
+    radial-gradient(farthest-side,#fff 98%,#0000) 62% 4%/4px 4px,    
+    radial-gradient(farthest-side,#fff 98%,#0000) 42% 4%/4px 4px,    
+    radial-gradient(farthest-side,#000 98%,#0000) 40% 2%/12px 12px,    
+    radial-gradient(farthest-side,#000 98%,#0000) 60% 2%/12px 12px;
+  background-repeat: no-repeat;
+}
+
+.two:after {
+    content: "";
+    position: absolute;
+    inset: 6% -50% -30%;
+    background: radial-gradient(farthest-side,#000 94%,#0000) 93% 2%/10px 12px,      
+    radial-gradient(farthest-side at top left,#0000 92%,#000 94% 98%,#0000) 90% 10%/25% 36%,
+    radial-gradient(farthest-side,#000 94%,#0000) 0% 7%/10px 12px,
+    radial-gradient(farthest-side at top right,#0000 92%,#000 94% 98%,#0000) 1% 16%/25% 36%,
+    radial-gradient(farthest-side,#000 94%,#0000) 67% 100%/12px 8px,
+    radial-gradient(farthest-side,#000 94%,#0000) 30% 100%/12px 8px,
+    linear-gradient(#000 0 0) 29% 96%/4px 34%,
+    linear-gradient(#000 0 0) 65% 96%/4px 34%;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+.h.two:before {
+    filter: drop-shadow(-4px 4px 0 #0044ff) drop-shadow(-4px 4px 0 #0044ff) drop-shadow(-4px 4px 0 #0044ff) drop-shadow(-4px 4px 0 #0044ff);
+}
+
+
+.three {
+    width: 80px;
+    aspect-ratio: 1;
+    display: inline-grid;
+    position: absolute;
+    bottom: 40px;
+    right: 730px;
+    background: linear-gradient(#2962ff 0 0) 51% 0%/31% 5px,
+    radial-gradient(farthest-side,#000 98%,#0000) 51% 19%/12px 6px,
+    radial-gradient(farthest-side,#fff 98%,#0000) 61% 6%/3px 3px,
+    radial-gradient(farthest-side,#fff 98%,#0000) 42% 6%/3px 3px,
+    radial-gradient(farthest-side,#000 98%,#0000) 40% 2%/10px 10px,
+    radial-gradient(farthest-side,#000 98%,#0000) 60% 2%/10px 10px;
+    background-repeat: no-repeat;
+}
+
+.three:after {
+    content: "";
+    position: absolute;
+    inset: 6% -50% -30%;
+    background: radial-gradient(farthest-side,#000 94%,#0000) 93% 5%/8px 10px,      
+    radial-gradient(farthest-side at top left,#0000 92%,#000 94% 98%,#0000) 90% 15%/25% 36%,
+    radial-gradient(farthest-side,#000 94%,#0000) 67% 100%/10px 8px,
+    radial-gradient(farthest-side,#000 94%,#0000) 36% 100%/10px 8px,
+    linear-gradient(#000 0 0) 35% 96%/3px 34%,
+    linear-gradient(#000 0 0) 65% 96%/3px 34%;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.four {
+    width: 80px;
+    aspect-ratio: 1;
+    display: inline-grid;
+    position: absolute;
+    bottom: 40px;
+    right: 810px;
+    background: radial-gradient(farthest-side at top,#000 98%,#0000) 51% 19%/12px 6px,
+    radial-gradient(farthest-side,#fff 90%,#0000) 61% 6%/3px 3px,
+    radial-gradient(farthest-side,#fff 90%,#0000) 42% 6%/3px 3px,
+    radial-gradient(farthest-side,#000 98%,#0000) 40% 2%/10px 10px,
+    radial-gradient(farthest-side,#000 98%,#0000) 60% 2%/10px 10px;
+    background-repeat: no-repeat;
+}
+
+.four:after {
+    content: "";
+    position: absolute;
+    inset: 6% -50% -30%;
+    background: radial-gradient(farthest-side,#000 94%,#0000) 6% 64%/8px 10px,      
+    radial-gradient(farthest-side at bottom right,#0000 92%,#000 94% 98%,#0000) 9% 38%/25% 36%,
+    radial-gradient(farthest-side,#000 94%,#0000) 67% 100%/10px 8px,
+    radial-gradient(farthest-side,#000 94%,#0000) 36% 100%/10px 8px,
+    linear-gradient(#000 0 0) 35% 96%/3px 34%,
+    linear-gradient(#000 0 0) 65% 96%/3px 34%;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.five {
+    width: 128px;
+    aspect-ratio: 1;
+    display: inline-grid;
+    position: absolute;
+    bottom: 118px;
+    right: 850px;
+    background: linear-gradient(to bottom left,#2962ff 49.5%,#0000 50%) 63% 1%/15px 15px,
+    linear-gradient(to bottom right,#2962ff 49.5%,#0000 50%) 37% 1%/15px 15px,    
+      
+    radial-gradient(farthest-side at bottom,#000 98%,#0000) 51% 15%/15px 7px,    
+    radial-gradient(farthest-side,#fff 98%,#0000) 60% 4%/4px 4px,    
+    radial-gradient(farthest-side,#fff 98%,#0000) 41% 4%/4px 4px,    
+    radial-gradient(farthest-side,#000 98%,#0000) 40% 2%/12px 12px,    
+    radial-gradient(farthest-side,#000 98%,#0000) 60% 2%/12px 12px;
+    background-repeat: no-repeat;
+}
+
+.five:after {
+    content: "";
+    position: absolute;
+    inset: 6% -50% -30%;
+    background: radial-gradient(farthest-side,#000 94%,#0000) 93% 70%/10px 12px,      
+    radial-gradient(farthest-side at bottom left,#0000 92%,#000 94% 98%,#0000) 90% 48%/25% 36%,
+    radial-gradient(farthest-side,#000 94%,#0000) 3% 71%/10px 12px,
+    radial-gradient(farthest-side at bottom right,#0000 92%,#000 94% 98%,#0000) 5% 53%/25% 36%,
+    radial-gradient(farthest-side,#000 94%,#0000) 67% 100%/12px 8px,
+    radial-gradient(farthest-side,#000 94%,#0000) 38% 100%/12px 8px,
+    linear-gradient(#000 0 0) 37% 96%/4px 34%,
+    linear-gradient(#000 0 0) 65% 96%/4px 34%;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.six {
+    width: 80px;
+    aspect-ratio: 1;
+    display: inline-grid;
+    position: absolute;
+    bottom: 40px;
+    right: 960px;
+    background: radial-gradient(farthest-side at top,#0000 75%,#000 75% 98%,#0000) 50% 93%/30px 15px;
+    background-repeat: no-repeat;
+}
+.h.six:before {
+    background: radial-gradient(farthest-side,#fff 98%,#0000) 42% 55%/6px 6px no-repeat,radial-gradient(farthest-side,#000 29%,#c6f0aa 30% 40%,#2962ff 41%);
+}
+
+.six:after {
+    content: "";
+    position: absolute;
+    inset: 6% -50% -30%;
+    background: radial-gradient(farthest-side,#010462 92%,#0000) 23% 92%/11% 51%,radial-gradient(farthest-side,#010462 92%,#0000) 74% 92%/11% 51%,radial-gradient(farthest-side,#010462 92%,#0000) 36% 92%/11% 51%,radial-gradient(farthest-side,#010462 92%,#0000) 61% 92%/11% 51%,radial-gradient(farthest-side,#010462 92%,#0000) 49% 92%/11% 51%;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.seven {
+    width: 80px;
+    aspect-ratio: 1;
+    display: inline-grid;
+    position: absolute;
+    bottom: 80px;
+    right: 1080px;
+    background: 
+    radial-gradient(farthest-side at bottom,#000 98%,#0000) 51% 19%/12px 6px,
+    radial-gradient(farthest-side,#fff 98%,#0000) 61% 6%/3px 3px,
+    radial-gradient(farthest-side,#fff 98%,#0000) 42% 6%/3px 3px,
+    radial-gradient(farthest-side,#000 98%,#0000) 40% 2%/10px 10px,
+    radial-gradient(farthest-side,#000 98%,#0000) 60% 2%/10px 10px;
+    background-repeat: no-repeat;
+}
+
+.h.seven:before {
+    background: radial-gradient(farthest-side,#fdbb14 40%,#f6eddb 41%);
+}
+
+.seven:after {
+    content: "";
+    position: absolute;
+    inset: 6% -50% -30%;
+    background: radial-gradient(farthest-side,#000 94%,#0000) 7% 5%/8px 7px,radial-gradient(farthest-side,#000 94%,#0000) 93% 5%/8px 7px,          linear-gradient(to bottom right,#0000 45%,#000,#0000 55%) 88% 10%/20% 20%,linear-gradient(to top right,#0000 45%,#000,#0000 55%) 12% 10%/20% 20%,    radial-gradient(farthest-side,#000 94%,#0000) 67% 100%/10px 8px,    radial-gradient(farthest-side,#000 94%,#0000) 36% 100%/10px 8px,    linear-gradient(#000 0 0) 35% 96%/3px 34%,    linear-gradient(#000 0 0) 65% 96%/3px 34%;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.bubble {
+  filter:drop-shadow(0px 0px 1px black) drop-shadow(0px 0px 1px black) drop-shadow(0px 0px 0px black)
+}
+.bubble:before {
+  content:"Stay calm everyone, it will end soon";
+  position: absolute;
+  padding: 10px 10px 40px;
+  text-align: center;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 18px;
+  width: 173px;
+  right: 250px;
+  bottom: 290px;
+  box-sizing: border-box;
+  border-radius: 10px 10px 0 0;
+  clip-path: polygon(0 0,100% 0,100% 100%,calc(100% - 30px) calc(100% - 30px),0 calc(100% - 30px));
+  background: #ffab40; 
+  animation:speak 65s linear infinite;
+}
+.bubble:after {
+    content: "HAHAHA, I need to take a photo of all of them";
+    position: absolute;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 13px;
+    width: 110px;
+    height: 110px;
+    right: 32px;
+    bottom: 350px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background: #f5ba6f;
+    box-shadow: -36px 39px 0 -31px #f5ba6f,-56px 65px 0 -41px #f5ba6f,-76px 83px 0 -47px #f5ba6f;
+    opacity: 0.8;
+  animation:o 65s linear infinite;
+}
+
+@keyframes speak {
+  0%,6.66% {
+    content:"Stay calm everyone, it will end soon";
+    right: 220px;
+    bottom: 320px;
+    opacity:1;
+    background: #c3e0c4;
+  }
+  6.67%,13.33% {
+    content:"No one want to talk with me anymore!";
+    right: 480px;
+    bottom: 200px;
+    background: #ffab40; 
+  }
+  13.34%,20% {
+    content:"Why? you look pretty like this";
+    right: 220px;
+    bottom: 320px;
+    background: #c3e0c4;
+  }
+  20.01%,26.66% {
+    content:"Someone made me fat!";
+    right: 635px;
+    bottom: 244px;
+    background: #ffab40; 
+  }
+  26.67%,33.33% {
+    content:"Your are not fat, you are 3D and it's cool";
+    right: 220px;
+    bottom: 320px;
+    background: #c3e0c4;
+  }
+  33.34%,40%{
+    content:"It's not funny to stay glued a whole week";    
+    right: 780px;
+    bottom: 133px;
+    background: #ffab40; 
+  }
+  40.01%,46.66%{
+    content:"It was funny for me";   
+    right: 850px;
+    bottom: 133px;
+    background: #ffab40; 
+  }
+  46.67%,53.33%{
+    content:"Shut Up!!";    
+    right: 780px;
+    bottom: 133px; 
+    background: #ffab40; 
+  }
+  53.34%,60%{
+    content:"But you made a great Owl and the SuperHero 'H'";
+    right: 220px;
+    bottom: 320px;
+    background: #c3e0c4;
+  }
+  60.01%,66.66%{
+    content:"I hate unicorns, I hate unicorns, I hate unicorns...";    
+    right: 915px;
+    bottom: 265px;
+    background: #ffab40; 
+  }
+  66.67%,73.33%{
+    content:"Why? it was a little kind unicorn";
+    right: 220px;
+    bottom: 320px;
+    background: #c3e0c4;
+  }
+  73.34%,80%{
+    content:"Octy, Octy, Octy..";
+    right: 1000px;
+    bottom: 137px;
+    background: #ffab40; 
+  }
+  80.01%,86.66%{
+    content:"I am a logo, not an egg!";
+    right: 1120px;
+    bottom: 175px;
+    background: #ffab40; 
+  }
+  86.67%,93.33%{
+    content:"And you are unique, no one was dressed like you";
+    right: 220px;
+    bottom: 320px;
+    opacity:1;
+    background: #c3e0c4;
+  }
+  93.34%,100%{
+    opacity:0;
+  }
+}
+
+@keyframes o {
+  0%,93.33% {opacity:0}
+  93.34%,100% {opacity:0.8}
+}

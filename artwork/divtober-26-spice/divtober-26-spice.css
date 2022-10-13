@@ -1,0 +1,176 @@
+div {
+  width: 50vmin;
+  height: 45vmin;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3vmin;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50% 50% 6% 6% / 6% 6% 4% 4%;
+  background:
+    radial-gradient(70% 170%, transparent, #f003),
+    radial-gradient(farthest-side at 0% 30%, #3007 60%, transparent 80%) no-repeat 0.25% 8% / 2% 35%,
+    radial-gradient(farthest-side at 100% 30%, #3216 60%, transparent 80%) no-repeat 99.25% 8% / 2% 20%,
+    radial-gradient(farthest-side at 0% 70%, #0007 60%, transparent 80%) no-repeat 0.25% 100% / 2% 20%,
+    radial-gradient(farthest-side at 0% 50%, #fffa, transparent 80%) no-repeat 1px 0% / 3% 100%,
+    radial-gradient(farthest-side at 50% 0%, transparent, #ffa7 30%, transparent) no-repeat 0% 5% / 90% 5%,
+    radial-gradient(farthest-side at 100% 0%, #0003 30%, transparent) no-repeat 100% 5% / 40% 5%,
+    radial-gradient(farthest-side at 0% 0%, #0001 30%, transparent) no-repeat 0% 5% / 40% 5%,
+    radial-gradient(farthest-side at 0% 50%, #0002, transparent 80%) no-repeat 0% 0% / 15% 100%,
+    radial-gradient(farthest-side at 100% 50%, #0001, transparent 80%) no-repeat 100% 0% / 15% 100%,
+    /* logo */
+    conic-gradient(at 50% 0%, transparent 145deg, #25a 0 215deg, transparent 0) no-repeat 45.5% 21.25% / 3vmin 1.75vmin,
+    conic-gradient(at 50% 0%, transparent 145deg, #25a 0 215deg, transparent 0) no-repeat 49.5% 21.25% / 3vmin 1.75vmin,
+    conic-gradient(at 50% 0%, transparent 141deg, #25a 0 215deg, transparent 0) no-repeat 53.25% 21.25% / 3vmin 1.75vmin,
+    linear-gradient(#25a 20%, #36c) no-repeat 46.5% 26.75% / 1vmin 5.5vmin,
+    linear-gradient(#25a 20%, #36c) no-repeat 50.5% 26.75% / 1vmin 5.5vmin,
+    linear-gradient(#25a 20%, #36c) no-repeat 54.75% 26.75% / 1vmin 5.5vmin,
+    linear-gradient(white, white) no-repeat 50% 23.5% / 8vmin 8vmin,
+    linear-gradient(#25a, #36c) no-repeat 50% 23% / 9vmin 9vmin,
+    /* sticker */
+    linear-gradient(-5deg, transparent 23%, red 23.1% 33%, #ffd 33.1% 60%, lightgray 60.05%, darkgray 63%, red 0 70%, transparent 0) no-repeat 0 0 / 100% 100%,
+    linear-gradient(red, red) no-repeat 50% 21% / 12vmin 12vmin,
+    /* content */
+    radial-gradient(#0005 2.5%, transparent 0) 0 0 / 11vmin 11vmin,
+    radial-gradient(#f002 4%, transparent 6%) 3vmin 3vmin / 13vmin 13vmin,
+    radial-gradient(#0001 4%, transparent 80%) 3vmin 3vmin / 13vmin 13vmin,
+    radial-gradient(#fa0f 3%, transparent 0) 4vmin 34vmin / 9vmin 9vmin,
+    radial-gradient(#fb5 3.5%, transparent 4.5%) 5vmin 0vmin / 7vmin 7vmin,
+    radial-gradient(#fff4 2.5%, transparent 3.5%) 3vmin 4vmin / 17vmin 17vmin,
+    radial-gradient(#0006 2.5%, transparent 3.5%) 4vmin 0vmin / 5vmin 5vmin,
+    radial-gradient(#fb5f 2.5%, transparent 3.35%) 5vmin 5vmin / 3vmin 3vmin,
+    radial-gradient(#ff04 3.5%, transparent 4.5%) 0 0 / 10vmin 12vmin,
+    radial-gradient(#0005 2.5%, transparent 2.75%) 2vmin 4vmin / 7vmin 9vmin,
+    
+    radial-gradient(#0f05 2.5%, transparent 0) 0 0 / 13vmin 11vmin,
+    radial-gradient(#0002 4%, transparent 6%) 3vmin 3vmin / 13vmin 16vmin,
+    radial-gradient(#0001 4%, transparent 80%) 17vmin 13vmin / 13vmin 13vmin,
+    radial-gradient(#fa0f 3%, transparent 0) 4vmin 34vmin / 19vmin 20vmin,
+    radial-gradient(#fb5a 3.5%, transparent 4.5%) 5vmin 0vmin / 17vmin 3vmin,
+    radial-gradient(#fff4 2.5%, transparent 3.5%) 3vmin 4vmin / 12vmin 18vmin,
+    radial-gradient(#0006 2.5%, transparent 3.5%) 4vmin 0vmin / 10vmin 15vmin,
+    radial-gradient(#fb5f 2.5%, transparent 3.35%) 5vmin 5vmin / 14vmin 4vmin,
+    radial-gradient(#ff04 3.5%, transparent 4.5%) 0 0 / 7vmin 7vmin,
+    radial-gradient(#0005 2.5%, transparent 2.75%) 2vmin 4vmin / 4vmin 6vmin
+    ;
+  background-color: #fa0; #ea3;
+  box-sizing: border-box;
+  font-size: 6vmin;
+  font-style: italic;
+  font-family: Georgia, Garamond, 'Times New Roman', serif;
+  white-space: pre;
+  line-height: 5vmin;
+  text-align: center;
+  color: #222d;
+  filter: drop-shadow(1.5vmin 1.5vmin 4vmin #0009);
+  box-shadow:
+    inset 1vmin 0 3vmin #fff8,
+    inset -2vmin 0 2vmin #0003,
+    inset 2vmin 0 2vmin #0003,
+    inset 0 500vmin 1vmin -498vmin #1006,
+    inset 9vmin 0 5vmin -3vmin #0003,
+    inset -9vmin 0 5vmin -3vmin #0003,
+    inset 0 -2vmin 1vmin -1vmin #555a,
+    0.25vmin 2vmin 3vmin -1vmin #5328;
+}
+
+div::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 1%;
+  display: block;
+  width: 98%;
+  height: 35%;
+  background:
+    radial-gradient(farthest-side at 0% 30%, #fff4, transparent) no-repeat 1px 0% / 4% 100%,
+    radial-gradient(70% 170% at 50% 40%, transparent 50%, #0002),
+    linear-gradient(to right, #0001, #0000, #0002),
+    linear-gradient(transparent 25%, #0003 0 calc(25% + 0.75px), transparent 0),
+    radial-gradient(70% 170% at 50% -30%, #d00, transparent 55%, #00000013 70%, #0003 0 calc(70% + 0.25px), #f22 0, #f00 90%) 50% 40% / 35% 40%,
+    linear-gradient(#b00, #f00) 50% 27.5% / 35% 10%
+    ;
+  background-repeat: no-repeat;
+  background-color: red;
+  border-radius: 15% 15% 2% 2% / 2% 2% 2% 2%;
+  transform: translate(0, -94%);
+  box-shadow:
+    inset 7vmin 0 5vmin -3vmin #0001,
+    inset -7vmin 0 5vmin -3vmin #0002,
+    0 -7vmin 0 -6vmin #d00,
+    inset 0 1vmin 1.5vmin -1.25vmin #fff8
+    ;
+}
+
+div::after {
+  content: "The CSS Taste You Trust\2122";
+  white-space: pre;
+  display: block;
+  position: absolute;
+  width: 70%;
+  height: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) skewY(-5deg);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  line-height: 5vmin;
+  color: #fffe;
+  font-weight: 500;
+  font-size: 2.5vmin;
+  font-family: Helvetica, Arial, Verdana, serif;
+  font-style: initial;
+  filter: blur(0.25px);
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+  font-size: 0;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}

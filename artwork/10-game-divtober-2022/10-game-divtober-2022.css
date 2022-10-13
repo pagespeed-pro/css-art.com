@@ -1,0 +1,39 @@
+/* colors */
+/*dimensions */
+/* Presets */
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  perspective-origin: 25% 75%;
+  background: linear-gradient(187.47deg, #DEF9F1 15%, #C1EFE1 100%);
+  perspective: 700px;
+  perspective-origin: 50% 50%;
+}
+
+div:before, div:after {
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+div.game {
+  width: 100vw;
+  height: 100vh;
+  margin-top: -30vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(15deg);
+  background: linear-gradient(90deg, gray 0vh, #333333 100vh, transparent 3vh) 57.5vh 0vh/1.5vh 50vh no-repeat, linear-gradient(gray 10vh, gray 10vh, transparent 3vh) 53vh 48vh/11vh 2vh no-repeat, linear-gradient(#cccccc 10vh, #cccccc 10vh, transparent 3vh) 51vh 52vh/15vh 7vh no-repeat, linear-gradient(-55deg, #cccccc, 0.75vh, transparent 0.75vh) 38.5vh 57vh/1.5vh 1.5vh no-repeat, linear-gradient(55deg, #cccccc, 0.75vh, transparent 0.75vh) 40vh 57vh/1.5vh 1.5vh no-repeat, linear-gradient(#333333 10vh, #333333 10vh, transparent 3vh) 37.5vh 56vh/5vh 7vh no-repeat, linear-gradient(-125deg, #cccccc, 0.75vh, transparent 0.75vh) 38.5vh 67vh/1.5vh 1.5vh no-repeat, linear-gradient(125deg, #cccccc, 0.75vh, transparent 0.75vh) 40vh 67vh/1.5vh 1.5vh no-repeat, linear-gradient(#333333 10vh, #333333 10vh, transparent 3vh) 37.5vh 63vh/5vh 7vh no-repeat, linear-gradient(-115deg, black 1vh, transparent 1vh) 37.5vh 69.75vh/1vh 1vh no-repeat, linear-gradient(115deg, #272727 1vh, transparent 1vh) 41.5vh 69.75vh/1vh 1vh no-repeat, linear-gradient(#272727 10vh, #272727 10vh, transparent 3vh) 38vh 69.75vh/4vh 1vh no-repeat, linear-gradient(-145deg, #cccccc, 0.75vh, transparent 0.75vh) 34vh 62.25vh/1.5vh 1.5vh no-repeat, linear-gradient(-35deg, #cccccc, 0.75vh, transparent 0.75vh) 34vh 60.75vh/1.5vh 1.5vh no-repeat, linear-gradient(#333333 10vh, #333333 10vh, transparent 3vh) 33vh 60vh/7vh 5vh no-repeat, linear-gradient(-115deg, black 1vh, transparent 1vh) 33.1vh 64.75vh/1vh 1vh no-repeat, linear-gradient(#272727 10vh, #272727 10vh, transparent 3vh) 34vh 63.75vh/8vh 2vh no-repeat, linear-gradient(145deg, #cccccc, 0.75vh, transparent 0.75vh) 44.5vh 62.25vh/1.5vh 1.5vh no-repeat, linear-gradient(35deg, #cccccc, 0.75vh, transparent 0.75vh) 44.5vh 60.75vh/1.5vh 1.5vh no-repeat, linear-gradient(#333333 10vh, #333333 10vh, transparent 3vh) 40vh 60vh/7vh 5vh no-repeat, linear-gradient(115deg, #272727 1vh, transparent 1vh) 46vh 64.75vh/1vh 1vh no-repeat, linear-gradient(#272727 10vh, #272727 10vh, transparent 3vh) 40vh 63.75vh/6vh 2vh no-repeat, radial-gradient(circle, #FFFFFF 10vh, transparent 10vh) 15vh 38vh/50vh 50vh no-repeat, radial-gradient(circle, #D9D9D9 13vh, transparent 13vh) 15vh 38vh/50vh 50vh no-repeat, radial-gradient(circle, #CA5D5D 2.5vh, transparent 2.5vh) 80vh 60vh/5vh 5vh no-repeat, radial-gradient(circle, #a53636 2.5vh, transparent 2.5vh) 80vh 60.5vh/5vh 5vh no-repeat, radial-gradient(circle, #60CA5D 2.5vh, transparent 2.5vh) 75vh 65vh/5vh 5vh no-repeat, radial-gradient(circle, #39a536 2.5vh, transparent 2.5vh) 75vh 65.5vh/5vh 5vh no-repeat, radial-gradient(circle, #5D75CA 2.5vh, transparent 2.5vh) 70vh 60vh/5vh 5vh no-repeat, radial-gradient(circle, #364ea5 2.5vh, transparent 2.5vh) 70vh 60.5vh/5vh 5vh no-repeat, radial-gradient(circle, #CAC65D 2.5vh, transparent 2.5vh) 75vh 55vh/5vh 5vh no-repeat, radial-gradient(circle, #a5a136 2.5vh, transparent 2.5vh) 75vh 55.5vh/5vh 5vh no-repeat, radial-gradient(circle, #FFFFFF 10vh, transparent 10vh) 52vh 38vh/50vh 50vh no-repeat, radial-gradient(circle, #D9D9D9 13vh, transparent 13vh) 52vh 38vh/50vh 50vh no-repeat, radial-gradient(ellipse, #666666 2vh, transparent 2vh) 55vh 60vh/3vh 5vh no-repeat, radial-gradient(ellipse, #4d4d4d 2vh, transparent 2vh) 55vh 60.75vh/3vh 5vh no-repeat, radial-gradient(ellipse, #666666 2vh, transparent 2vh) 59vh 60vh/3vh 5vh no-repeat, radial-gradient(ellipse, #4d4d4d 2vh, transparent 2vh) 59vh 60.75vh/3vh 5vh no-repeat, linear-gradient(#D9D9D9 30vh, #D9D9D9 30vh, transparent 3vh) 38vh 50vh/40vh 17vh no-repeat, radial-gradient(ellipse, #666666 2vh, transparent 2vh) 55vh 60vh/3vh 5vh no-repeat, radial-gradient(ellipse, #666666 2vh, transparent 2vh) 59vh 60vh/3vh 5vh no-repeat, linear-gradient(silver 30vh, silver 30vh, transparent 3vh) 50vh 63vh/15vh 7vh no-repeat, radial-gradient(circle, silver 13vh, transparent 13vh) 14.5vh 41vh/52vh 50vh no-repeat, radial-gradient(circle, silver 13vh, transparent 13vh) 50.5vh 41vh/52vh 50vh no-repeat;
+}

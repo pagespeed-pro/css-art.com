@@ -1,0 +1,228 @@
+*{
+  padding:0;
+  margin:0;
+}
+body{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  width:100%;
+}
+h1{
+  position:absolute;
+  margin-top:-80vh;
+  font-family: Merriweather, serif;
+}
+.main{
+  height:47vh;
+  width:42vh;
+  border:4px solid black;
+  border-top-left-radius:50%;
+  border-top-right-radius:50%;
+  border-bottom:none;
+  background-color:white;
+}
+
+.curve1{
+   width: 10vh;
+  height: 10vh;
+  border: 4px solid black;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(135deg);
+  margin-top:41vh;
+  margin-left:-0.8vh;
+}
+.curve2{
+  width: 4vh;
+  height:4vh;
+  border: 4px solid black;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(-45deg);
+  margin-top:-7.7vh;
+  margin-left:9.98vh;
+}
+.curve3{
+   width: 13vh;
+  height: 13vh;
+  border: 4px solid black;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(135deg);
+  margin-top:-10.5vh;
+  margin-left:14.9vh;
+}
+.curve4{
+  width: 3vh;
+  height:3vh;
+  border: 4px solid black;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(-45deg);
+  margin-top:-9vh;
+  margin-left:28.6vh;
+}
+.curve5{
+   width: 8.8vh;
+  height: 9vh;
+  border: 4px solid black;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  transform: rotate(135deg);
+  margin-top:-8vh;
+  margin-left:32.4vh;
+}
+.shadow{
+  height:10vh;
+  width:42vh;
+  background-color:#cfcecc;
+  border-radius:50%;
+  margin-top:80vh;
+  margin-left:-40vh;
+}
+.small-curve{
+  position:absolute;
+  width: 3vh;
+  height: 3vh;
+  border: 4px solid black;
+  border-radius: 50%;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+}
+.eye-left{
+  transform: rotate(-45deg);
+  margin-left:-12vh;
+  margin-top:-25vh;
+}
+.eye-right{
+  transform: rotate(-45deg);
+  margin-left:12vh;
+  margin-top:-25vh;
+}
+.lips{
+  transform: rotate(135deg);
+  margin-left:0vh;
+  margin-top:-22vh;
+}
+.cheeks{
+  position:absolute;
+  height:2.5vh;
+  width:4vh;
+  border-radius:50%;
+  background-color:#fdcccb;
+  opacity:0.5;
+}
+.cheeks-left{
+  margin-top:-18vh;
+  margin-left:-17vh;
+}
+.cheeks-right{
+   margin-top:-18vh;
+  margin-left:17vh;
+}
+.arm{
+  position:absolute;
+  height:6vh;
+  width:15vh;
+  border:4px solid black;
+  z-index:-1;
+}
+.arm-right{
+  border-top-right-radius:50%;
+  border-bottom-right-radius:50%;
+  margin-left:42vh;
+  transform:rotate(-15deg); 
+  animation-name:move;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count:infinite;
+}
+@keyframes move {
+  0%   {transform:rotate(-15deg);}
+  50%  {transform:rotate(-30deg);}
+  100%  {transform:rotate(-15deg);}
+}
+.arm-left{
+  border-top-left-radius:50%;
+  border-bottom-left-radius:50%;
+  margin-right:45vh;
+  transform:rotate(15deg);  
+}
+.bag-strap{
+  position:absolute;
+  height:47vh;
+  width:2.5vh;
+  border:4px solid black;
+  background:#3B5998;
+  transform:rotate(50deg);
+  border-radius:50% 0;
+  margin-left:1vh;
+  margin-top:10vh;
+}
+.bag{
+  position:absolute;
+  height:11vh;
+  width:10vh;
+  border:3px solid black;
+  background-color:#3B5998;
+  border-radius:0 0 30% 30%;
+  margin-left:-42vh;
+  margin-top:36vh;
+  z-index:1;
+  transform:rotate(8deg);
+}
+.papers{
+  position:absolute;
+  border:3px solid black;
+  background:white;
+  transform:rotate(-10deg);
+}
+.paper1{
+  height:8vh;
+  width:5vh;
+  margin-left:-45vh;
+  margin-top:20vh;
+}
+.paper2{
+  height:6vh;
+  width:5vh;
+  margin-left:-42vh;
+  margin-top:21vh;
+}
+.cap{
+  position:absolute;
+  z-index:5;
+  height:7vh;
+  width:18vh;
+  background-image: repeating-linear-gradient(#3B5998 0%,#3B5998 70%, #fa5f5f 70%,#fa5f5f 100%);
+  border:3px solid black;
+  margin-top:-50vh;
+  margin-left:-4vh;
+  border-top-left-radius:30%;
+  border-top-right-radius:30%;
+   border-bottom-left-radius:20%;
+  border-bottom-right-radius:20%;
+  transform:rotate(-5deg);
+}
+.cap::after{
+  content:"";
+  border:0.8vh solid black;
+  margin-left:8.5vh;
+}
+.cap-flap{
+  position:absolute;
+  height:5vh;
+  width:20vh;
+  background:gray;
+  border:3px solid black;
+  border-radius:50%;
+  margin-top:-43vh;
+  margin-left:-1vh;
+}

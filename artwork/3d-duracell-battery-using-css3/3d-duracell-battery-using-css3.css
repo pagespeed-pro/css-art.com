@@ -1,0 +1,304 @@
+@-moz-keyframes spin {
+  from {
+    transform: rotateY(0deg) rotateX(0) rotateZ(0);
+    -moz-transform: rotateY(0deg) rotateX(0) rotateZ(0);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+    -moz-transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    transform: rotateY(0deg) rotateX(0) rotateZ(0);
+    -webkit-transform: rotateY(0deg) rotateX(0) rotateZ(0);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+    -webkit-transform: rotateY(360deg) rotateX(360deg) rotateZ(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotateY(0deg) rotateX(0) rotateZ(360);
+  }
+  to {
+    transform: rotateY(360deg) rotateX(360deg) rotateZ(0deg);
+  }
+}
+body, html { font-size: 16px; }
+.container {
+  -moz-perspective: 1000px;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  position: absolute;
+  width: 120px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+#battery {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-animation: spin 14s infinite linear;
+  -moz-animation: spin 14s infinite linear;
+  animation: spin 14s infinite linear;
+}
+.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  opacity: 10.6;
+  overflow: hidden;
+}
+.face:before,
+.face:after,
+.face span:after,
+.face span:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: left top 0;
+  -webkit-transform-origin: left top 0;
+  -moz-transform-origin: left top 0;
+  display: block;
+  font-family: arial, sans-serif;
+  white-space: pre;
+}
+.large {
+  width: 120px;
+  height: 200px;
+  background: #111111;
+  box-sizing: border-box;
+  box-shadow: inset 0px 66px 0px #cc7722;
+}
+.side {
+  width: 66px;
+  height: 200px;
+  background: black;
+  box-sizing: border-box;
+  box-shadow: inset 0px 66px 0px #aa5500;
+}
+.short {
+  width: 120px;
+  height: 66px;
+  background: #222222;
+}
+.top {
+  box-shadow: inset 0 0 0 8px #bb6611;
+}
+.bottom {
+  box-shadow: inset 0 0 0 8px #111111;
+}
+.top::before,
+.top::after {
+  content: "";
+  position: absolute;
+  top: 23.5px;
+  left: 19.5px;
+  width: 22px;
+  height: 22px;
+  background: #aaaaaa;
+  border-radius: 20px;
+}
+.top::after {
+  left: auto;
+  right: 20px;
+}
+.front:before,
+.back:before,
+.right:before {
+  content: "DURACELL";
+  color: silver;
+  transform: rotate(90deg) translate(72px, -68px);
+  -webkit-transform: rotate(90deg) translate(72px, -68px);
+  -moz-transform: rotate(90deg) translate(72px, -68px);
+  font-weight: bold;
+  font-size: 1.3em;
+}
+.front:after,
+.back:after {
+  content: "ALKALINE BATTERY";
+  color: silver;
+  transform: rotate(90deg) translate(73px, -44px);
+  -webkit-transform: rotate(90deg) translate(73px, -44px);
+  -moz-transform: rotate(90deg) translate(73px, -44px);
+  font-weight: bold;
+  font-size: 0.5em;
+}
+.back:after {
+  content: "PILE ALCALINE";
+}
+.right:before {
+  transform: rotate(90deg) translate(72px, -50px);
+  -webkit-transform: rotate(90deg) translate(72px, -50px);
+  -moz-transform: rotate(90deg) translate(72px, -50px);
+}
+.right:after {
+  content: "Duracell, div of P&G, Bethel, CT 06801 \a P&G Inc., Toronto, ON M5W1C5 \a Made in U.S.A. / Fabrique aux E.-U. \a 95756099";
+  width: 130px;
+  color: silver;
+  transform: rotate(90deg) translate(73px, -27px);
+  -webkit-transform: rotate(90deg) translate(73px, -27px);
+  -moz-transform: rotate(90deg) translate(73px, -27px);
+  font-weight: bold;
+  font-size: 0.29em;
+  letter-spacing: -0.1px;
+  line-height: 1.2em;
+}
+.right span:before {
+  content: "\2b06\a+"; /* 21e7 2b06 */
+  font-weight: bold;
+  line-height: 0.8em;
+  top: 20px;
+  left: 20px;
+  font-size: 1.3em;
+}
+/* small hack for Edge */
+@supports (-ms-ime-align: auto) {
+  .right span:before {
+    content: "\21e7\a+";
+  }
+}
+.right span:after {
+  content: "MAR \a 2015";
+  color: #aa5500;
+  transform: rotate(90deg) translate(150px, -23px);
+  -webkit-transform: rotate(90deg) translate(150px, -23px);
+  -moz-transform: rotate(90deg) translate(150px, -23px);
+  width: 60px;
+  font-weight: bold;
+  font-size: 0.6em;
+  text-align: center;
+}
+.left:before {
+  content: "MN1604 \a 6LR61 \a 9 VOLTS";
+  line-height: 1em;
+  transform: rotate(90deg) translate(15px, -59px);
+  -webkit-transform: rotate(90deg) translate(15px, -59px);
+  -moz-transform: rotate(90deg) translate(15px, -59px);
+  font-size: 0.5em;
+  font-weight: bold;
+  letter-spacing: -0.1px;
+}
+.left span:before {
+  content: "Caution: do not connect improperly. Charge or dispose of in fire. Battery may explode or leak. Do not carry batteries loose in your pocket or elsewhere as burn injury could result.";
+  width: 120px;
+  color: silver;
+  transform: rotate(90deg) translate(73px, -60px);
+  -webkit-transform: rotate(90deg) translate(73px, -60px);
+  -moz-transform: rotate(90deg) translate(73px, -60px);
+  font-weight: 200;
+  font-size: 0.4em;
+  letter-spacing: -0.2px;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  white-space: normal;
+}
+
+#battery .front {
+  transform: rotateY(0deg) translateZ(66px);
+  -webkit-transform: rotateY(0deg) translateZ(66px);
+  -moz-transform: rotateY(0deg) translateZ(66px);
+}
+#battery .back {
+  transform: rotateY(180deg) translateX(-120px);
+  -webkit-transform: rotateY(180deg) translateX(-120px);
+  -moz-transform: rotateY(180deg) translateX(-120px);
+}
+#battery .right {
+  transform: rotateY(90deg) translateZ(120px) translateX(-66px);
+  -webkit-transform: rotateY(90deg) translateZ(120px) translateX(-66px);
+  -moz-transform: rotateY(90deg) translateZ(120px) translateX(-66px);
+}
+#battery .left {
+  transform: rotateY(-90deg) translateZ(0);
+  -webkit-transform: rotateY(-90deg) translateZ(0);
+  -moz-transform: rotateY(-90deg) translateZ(0);
+}
+#battery .top {
+  transform: rotateX(-270deg) translateZ(0);
+  -webkit-transform: rotateX(-270deg) translateZ(0);
+  -moz-transform: rotateX(-270deg) translateZ(0);
+}
+#battery .bottom {
+  transform: rotateX(90deg) translateZ(-200px);
+  -webkit-transform: rotateX(90deg) translateZ(-200px);
+  -moz-transform: rotateX(90deg) translateZ(-200px);
+}
+
+#battery .top {
+  overflow: visible;
+}
+
+#battery .terminal {
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+}
+
+#battery .terminal > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 10px;
+  background: #dddddd;
+  content: "";
+  transform-origin: left top 0;
+  -webkit-transform-origin: left top 0;
+  -moz-transform-origin: left top 0;
+  transform: translate3d(25px, -9px, 25px);
+  -webkit-transform: translate3d(25px, -9px, 25px);
+  -moz-transform: translate3d(25px, -9px, 25px);
+}
+
+#battery .terminal > div:nth-child(2) {
+  transform: translate3d(36px, -9px, 24px) rotateY(-60deg);
+  -webkit-transform: translate3d(36px, -9px, 24px) rotateY(-60deg);
+  -moz-transform: translate3d(36px, -9px, 24px) rotateY(-60deg);
+  background: #cccccc;
+}
+#battery .terminal > div:nth-child(3) {
+  transform: translate3d(42px, -9px, 34px) rotateY(-120deg);
+  -webkit-transform: translate3d(42px, -9px, 34px) rotateY(-120deg);
+  -moz-transform: translate3d(42px, -9px, 34px) rotateY(-120deg);
+  background: #bbbbbb;
+}
+#battery .terminal > div:nth-child(4) {
+  transform: translate3d(25px, -9px, 44px);
+  -webkit-transform: translate3d(25px, -9px, 44px);
+  -moz-transform: translate3d(25px, -9px, 44px);
+  background: #aaaaaa;
+}
+#battery .terminal > div:nth-child(5) {
+  transform: translate3d(19px, -9px, 35px) rotateY(60deg);
+  -webkit-transform: translate3d(19px, -9px, 35px) rotateY(60deg);
+  -moz-transform: translate3d(19px, -9px, 35px) rotateY(60deg);
+  background: #cccccc;
+}
+#battery .terminal > div:nth-child(6) {
+  transform: translate3d(25px, -9px, 44px) rotateY(120deg);
+  -webkit-transform: translate3d(25px, -9px, 44px) rotateY(120deg);
+  -moz-transform: translate3d(25px, -9px, 44px) rotateY(120deg);
+  background: #bbbbbb;
+}
+
+#battery .terminal.t-right {
+  transform: translate(58.5px, 0);
+  -webkit-transform: translate(58.5px, 0);
+  -moz-transform: translate(58.5px, 0);
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+}

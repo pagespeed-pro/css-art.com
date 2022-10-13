@@ -1,0 +1,66 @@
+body {
+  min-height: 400px;
+  height: 100vh;
+  position: relative;
+  background-color: #ff6347;
+  text-align: center;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div:before,
+div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+@media (max-width: 400px) {
+  div:not(.no-scale) {
+    transform: scale(0.8);
+  }
+}
+#knot {
+  box-sizing: border-box;
+  width: 200px;
+  height: 280px;
+  margin-left: -130px;
+  margin-top: -156px;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle at 50% 100%, rgba(255,255,255,0) 60px, white 61px), linear-gradient(white, white), linear-gradient(#ffb6c1, #ffb6c1), linear-gradient(#ffb6c1, #ffb6c1), linear-gradient(to right, white 39px, rgba(255,255,255,0) 40px), radial-gradient(circle at 50% 100%, rgba(255,255,255,0) 60px, #ffb6c1 61px, #ffb6c1 70px, rgba(255,255,255,0) 71px), radial-gradient(circle at 0 0, rgba(255,255,255,0) 60px, #ffb6c1 61px, #ffb6c1 70px, rgba(255,255,255,0) 71px), radial-gradient(circle at 100% 100%, rgba(255,255,255,0) 60px, white 61px, white 100px, rgba(255,255,255,0) 101px), linear-gradient(white, white), linear-gradient(to top, white 39px, rgba(255,255,255,0) 40px);
+  background-size: 200px 100px, 39px 120px, 5px 39px, 40px 5px, 100% 100%, 200px 100px, 100px 100px, 100px 100px, 100px 39px, 90% 100%;
+  background-position: 50% 0, 81px 100%, 76px 161px, 0 200px, 0 0, right 5px top 3px, right 5px top 103px, 80px 80px, 0 161px, 0 0;
+  border-radius: 100px 100px 0 15px;
+  transform: rotate(-45deg);
+}
+@media (max-width: 400px) {
+  #knot {
+    margin-left: -120px;
+    margin-top: -150px;
+  }
+}
+@media (max-width: 400px) {
+  #knot {
+    transform: rotate(-45deg) scale(0.8);
+  }
+}
+#knot:before {
+  width: 280px;
+  height: 200px;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle at 0 50%, rgba(255,255,255,0) 60px, white 61px), radial-gradient(circle at 0 0, rgba(255,255,255,0) 60px, white 61px, white 100px, rgba(255,255,255,0) 101px), linear-gradient(white, white), radial-gradient(circle at 0 50%, rgba(255,255,255,0) 60px, #ffb6c1 61px, #ffb6c1 70px, rgba(255,255,255,0) 71px);
+  background-size: 100px 280px, 100px 100px, 30px 30px, 100px 280px;
+  background-position: 100% 50%, right 80px top 20px, right 80px bottom 9px, right 5px top calc(50% + 3px);
+  border-radius: 0 100px 100px 0;
+}
+#knot:after {
+  width: 39px;
+  height: 39px;
+  bottom: -29px;
+  left: 81px;
+  background-image: linear-gradient(to bottom, white 10px, #ffb6c1 10px, #ffb6c1 15px, white 15px);
+  border-radius: 10px;
+  box-shadow: -110px -109px 0 white;
+}

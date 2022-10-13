@@ -1,0 +1,31 @@
+{
+    "name": "mechanical-pencil",
+    "version": "1.0.0",
+    "title": "Mechanical pencil",
+    "description": "",
+    "author": {
+        "name": "Ronnie",
+        "avatar": "https://assets.codepen.io/4564591/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1657882759&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/idrinkcss/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/_ronnieTech"
+            }
+        ]
+    },
+    "html": "mechanical-pencil.html",
+    "css": [
+        "mechanical-pencil.css"
+    ],
+    "js": "// TWITTER - @idrinkcss",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [],
+    "original": "https://codepen.io/idrinkcss/pen/GRmGyox",
+    "codepen": "https://codepen.io/idrinkcss/pen/GRmGyox"
+}

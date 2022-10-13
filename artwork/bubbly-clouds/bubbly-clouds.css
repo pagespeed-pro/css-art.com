@@ -1,0 +1,531 @@
+@import 'https://fonts.googleapis.com/css?family=VT323:400';
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 700vh;
+  background-color: #f9c872;
+  font-family: "VT323", monospace;
+  font-size: 16px;
+  line-height: 1.875em;
+}
+
+.waddle-dee {
+  position: fixed;
+  left: calc(50% - 4.5rem);
+  z-index: 100;
+  top: 15rem;
+  transform-origin: center -7rem;
+  animation: sway-sm 5s infinite linear;
+}
+.waddle-dee.is-sitting {
+  position: absolute;
+  width: auto;
+  animation: auto;
+}
+.waddle-dee.is-sitting .parasol {
+  transform: translateY(-2000px) translateX(-50%);
+  transition: transform 3s ease-out;
+}
+.waddle-dee.is-sitting .waddle-arm-left {
+  transform: rotate(-90deg);
+}
+.waddle-dee.is-sitting .waddle-arm-right {
+  transform: rotate(70deg);
+  animation: arm-wave-right 0.6s 0.45s infinite;
+}
+.waddle-body {
+  position: relative;
+  height: 7.75rem;
+  width: 8.5rem;
+  background-color: #f6ac29;
+  border-top-left-radius: 50% 60%;
+  border-top-right-radius: 50% 60%;
+  border-bottom-left-radius: 3.5rem 40%;
+  border-bottom-right-radius: 3.5rem 40%;
+  border: solid 4px #e2940a;
+  overflow: hidden;
+}
+.waddle-face {
+  position: absolute;
+  top: 1.5rem;
+  left: 50%;
+  background-color: #ffeed5;
+  height: 3rem;
+  width: 5.5rem;
+  border-top-left-radius: 45% 80%;
+  border-top-right-radius: 45% 80%;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  transform: translateX(-50%);
+}
+.waddle-face::after {
+  content: "";
+  position: absolute;
+  top: calc(100% - 0.75rem);
+  left: 50%;
+  height: 3.25rem;
+  width: 6.5rem;
+  background-color: #ffeed5;
+  border-top-left-radius: 40% 60%;
+  border-top-right-radius: 40% 60%;
+  border-bottom-left-radius: 60% 55%;
+  border-bottom-right-radius: 60% 55%;
+  transform: translateX(-50%);
+}
+.waddle-blush {
+  position: absolute;
+  z-index: 2;
+  top: 2.75rem;
+  height: 0.75rem;
+  width: 1.25rem;
+  background-color: #e67b94;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+.waddle-blush-left {
+  left: -0.125rem;
+}
+.waddle-blush-right {
+  right: -0.125rem;
+}
+.waddle-eye {
+  position: absolute;
+  z-index: 3;
+  top: 1.25rem;
+  height: 2rem;
+  width: 0.75rem;
+  background-color: #444;
+  border-radius: 0.5rem/0.75rem;
+  overflow: hidden;
+  transform-origin: center 70%;
+  animation-name: blinky;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+.waddle-eye::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0.125rem;
+  height: 40%;
+  width: calc(100% - 0.125rem * 2);
+  border-radius: 40%;
+  background-color: #fff;
+  transform: translateX(-50%);
+}
+.waddle-eye-left {
+  left: 1.5rem;
+}
+.waddle-eye-right {
+  right: 1.5rem;
+}
+.waddle-arm {
+  position: absolute;
+  top: -1.75rem;
+  height: 3.5rem;
+  width: 3.25rem;
+  border-top-left-radius: 60% 85%;
+  border-top-right-radius: 60% 85%;
+  border-bottom-left-radius: 20% 10%;
+  border-bottom-right-radius: 20% 10%;
+  border: solid 4px #e2940a;
+  background-color: #e2940a;
+  transform-origin: center 5rem;
+  transition: 0.25s ease-out;
+}
+.waddle-arm-left {
+  left: 1.5rem;
+}
+.waddle-arm-right {
+  right: 1.5rem;
+}
+.waddle-foot {
+  position: absolute;
+  bottom: -0.5rem;
+  height: 4.25rem;
+  width: 3.25rem;
+  border-top-left-radius: 50% 60%;
+  border-top-right-radius: 50% 60%;
+  border-bottom-left-radius: 50% 30%;
+  border-bottom-right-radius: 50% 30%;
+  border: solid 4px #e2940a;
+  background-color: #ffde5a;
+}
+.waddle-foot-left {
+  left: -0.75rem;
+  transform: rotate(-40deg);
+  transform-origin: center 70%;
+  animation: foot-rotate-left 3s infinite linear;
+}
+.waddle-foot-right {
+  right: -0.75rem;
+  transform-origin: center 70%;
+  transform: rotate(40deg);
+  animation: foot-rotate-right 3s infinite linear;
+}
+.waddle-dee-the-second {
+  position: absolute;
+  top: -4.5rem;
+  z-index: -1;
+  transform: scale(0.6);
+}
+.waddle-dee-the-second .sign {
+  position: absolute;
+  left: calc(100% + 0.75rem);
+  bottom: calc(100% - 2.625rem);
+  padding: 0 0.25rem;
+  border-radius: 1rem;
+  border: solid 4px #e2940a;
+  background-color: #ffeed5;
+  font-size: 3rem;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #f6ac29;
+  transform: rotate(50deg);
+  transform-origin: -6rem -5rem;
+  animation: sign-flick 0.3s 4s forwards;
+}
+.waddle-dee-the-second .waddle-eye {
+  animation-delay: 0.4s;
+}
+.waddle-dee-the-second .waddle-arm-left {
+  transform: rotate(-120deg);
+}
+.waddle-dee-the-second .waddle-arm-right {
+  transform: rotate(120deg);
+  animation: arm-flick 0.3s 4s forwards;
+}
+
+.parasol {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.5s ease-out;
+}
+.parasol::after {
+  content: "";
+  position: absolute;
+  top: -5rem;
+  left: 50%;
+  width: 0.5rem;
+  height: 1.5rem;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  background-color: #ffde5a;
+  transform: translate(-50%, -50%);
+}
+.parasol-stick {
+  position: relative;
+  bottom: 0;
+  height: 5rem;
+  width: 0.5rem;
+  background-color: #fff;
+}
+.parasol-stick::after {
+  content: "";
+  position: absolute;
+  left: -50%;
+  bottom: 0;
+  width: 200%;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  background-color: #ffde5a;
+}
+.parasol-top {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: calc(100% - 1rem);
+  width: 12rem;
+  transform: translateX(-50%);
+}
+.parasol-top-material {
+  position: absolute;
+  bottom: 0.75rem;
+  width: 100%;
+  height: 5rem;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+.parasol-top-material::after {
+  content: "";
+  position: absolute;
+  left: 20%;
+  height: 100%;
+  width: 60%;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  background-color: #ee3131;
+}
+.parasol-top-footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  height: 0.75rem;
+  width: 100%;
+  overflow: hidden;
+}
+.parasol-top-footer-center, .parasol-top-footer-left, .parasol-top-footer-right {
+  position: relative;
+}
+.parasol-top-footer-center {
+  width: 60%;
+  height: 120%;
+  background-image: radial-gradient(at bottom, rgba(238, 49, 49, 0) 70%, #ee3131 70%);
+}
+.parasol-top-footer-left {
+  left: 0;
+  width: 20%;
+  height: 120%;
+  background-image: radial-gradient(at bottom left, rgba(255, 255, 255, 0) 70%, white 70%);
+}
+.parasol-top-footer-right {
+  right: 0;
+  width: 20%;
+  height: 120%;
+  background-image: radial-gradient(at bottom right, rgba(255, 255, 255, 0) 70%, white 70%);
+}
+
+.cloud {
+  position: absolute;
+  width: 6rem;
+  height: 3rem;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: #ffeed5;
+}
+.cloud::before, .cloud::after {
+  position: absolute;
+  border-top-left-radius: 50% 100%;
+  border-top-right-radius: 50% 100%;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  background-color: #ffeed5;
+}
+.cloud-medium {
+  width: 10rem;
+  height: 4rem;
+}
+.cloud-medium::after {
+  content: "";
+  right: -4rem;
+  bottom: 0;
+  width: 7rem;
+  height: 3.5rem;
+}
+.cloud-large {
+  width: 14rem;
+  height: 5rem;
+}
+.cloud-large::before {
+  content: "";
+  left: -1.5rem;
+  bottom: 0;
+  width: 4rem;
+  height: 2rem;
+}
+.cloud-large::after {
+  content: "";
+  right: -4rem;
+  bottom: 0;
+  width: 6rem;
+  height: 3rem;
+}
+.cloud-1 {
+  top: 10vh;
+  left: 50%;
+}
+.cloud-2 {
+  top: 70vh;
+  left: 5%;
+}
+.cloud-3 {
+  top: 110vh;
+  left: 80%;
+}
+.cloud-4 {
+  top: 160vh;
+  left: 10%;
+}
+.cloud-5 {
+  top: 200vh;
+  left: 20%;
+}
+.cloud-6 {
+  top: 260vh;
+  left: 60%;
+}
+.cloud-7 {
+  top: 300vh;
+  left: 50%;
+}
+.cloud-8 {
+  top: 370vh;
+  left: 40%;
+}
+.cloud-9 {
+  top: 420vh;
+  left: 15%;
+}
+
+.star-block {
+  position: relative;
+  display: flex;
+  height: 10rem;
+  width: 10rem;
+  border-radius: 1rem;
+  border: solid 12px #ffeed5;
+  background-color: #f6ac29;
+  opacity: 0.5;
+}
+.star-block-star {
+  position: relative;
+  margin: 3rem auto 0;
+  height: 4em;
+  width: 4em;
+  border-right: 4em solid transparent;
+  border-left: 4em solid transparent;
+  border-top: 3.5em solid #ffeed5;
+  font-size: 0.75rem;
+  border-radius: 0.5em;
+}
+.star-block-star::before, .star-block-star::after {
+  content: "";
+  position: absolute;
+  top: -3em;
+  left: -4em;
+  border-right: 4em solid transparent;
+  border-left: 4em solid transparent;
+  border-top: 3em solid #ffeed5;
+  border-radius: 0.5em;
+}
+.star-block-star::before {
+  transform: rotate(-69.75deg);
+}
+.star-block-star::after {
+  transform: rotate(69.75deg);
+}
+.star-block-1 {
+  top: 300vh;
+  left: 20%;
+}
+.star-block-2 {
+  top: 400vh;
+  left: 75%;
+}
+.star-block-3 {
+  top: 430vh;
+  left: 10%;
+}
+.star-block-4 {
+  top: 450vh;
+  left: 40%;
+}
+.star-block-5 {
+  top: 500vh;
+  left: 15%;
+}
+
+.ground {
+  position: absolute;
+  top: 700vh;
+  width: 100%;
+  min-height: 100vh;
+  height: 500px;
+  background-color: #de7b31;
+  background-image: linear-gradient(to bottom, #de7b31 50%, #e28947 50%);
+  background-size: 100% 70px;
+}
+.ground-grass {
+  position: relative;
+  height: 80px;
+  border-top: solid 4px #e2940a;
+  background-color: #d5cd31;
+}
+.ground-grass::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 30px;
+  background-image: radial-gradient(at top, #d5cd31 70%, rgba(213, 205, 49, 0) 70%);
+  background-size: 80px 100%;
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(25deg);
+  }
+  75% {
+    transform: rotate(-25deg);
+  }
+}
+@keyframes sway-sm {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+}
+@keyframes foot-rotate-left {
+  0%, 100% {
+    transform: rotate(-40deg);
+  }
+  50% {
+    transform: rotate(-60deg);
+  }
+}
+@keyframes foot-rotate-right {
+  0%, 100% {
+    transform: rotate(40deg);
+  }
+  50% {
+    transform: rotate(60deg);
+  }
+}
+@keyframes arm-wave-right {
+  0%, 100% {
+    transform: rotate(70deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+}
+@keyframes blinky {
+  0%, 9%, 11%, 19%, 21%, 69%, 71%, 100% {
+    transform: scaleY(1);
+  }
+  10%, 20%, 70% {
+    transform: scaleY(0.1);
+  }
+}
+@keyframes arm-flick {
+  0% {
+    transform: rotate(120deg);
+  }
+  100% {
+    transform: rotate(80deg);
+  }
+}
+@keyframes sign-flick {
+  0% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

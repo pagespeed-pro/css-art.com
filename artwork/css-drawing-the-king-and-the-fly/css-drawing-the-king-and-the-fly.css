@@ -1,0 +1,1223 @@
+html, body {
+  background: #ccc;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+div {
+  position: absolute;
+}
+
+input {
+  position: absolute;
+  left: -10000vw;
+}
+
+input + label::before {
+  content: "Start ";
+}
+
+input:checked + label::before {
+  content: "Stop ";
+}
+
+label {
+  left: 0.5em;
+  position: absolute;
+  background: rgba(0,0,0,0.7);
+  z-index: 2;
+  color: white;
+  font-family: verdana, arial, sans-serif;
+  font-size: 14px;
+  padding: 0.5em;
+  display: inline-block;
+  border-radius: 0 0 4px 4px;
+}
+
+input:not(:checked) ~ div,
+input:not(:checked) ~ div *,
+input:not(:checked) ~ div *::before,
+input:not(:checked) ~ div *::after {
+  animation-name: none !important;
+  transition: none !important;
+}
+
+.back-wall {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #e9dcca;
+  background-image: linear-gradient(to left, darkgray 1%, transparent 0, transparent 100%), linear-gradient(to bottom, darkgray 1%, transparent 0, transparent 99%, darkgray 0);
+  background-size: 12vmin 6vmin;
+  background-position: bottom center;
+  filter: blur(3px);
+  box-shadow: inset 0 30vmin 50vmin rgba(0,0,0,0.4);
+}
+
+.back-wall div {
+  position: absolute;
+  perspective: 100px;
+}
+
+.flag {
+  top: 0;
+  bottom: 35vmin;
+  left: 50%;
+  aheight: 60vmin;
+  width: 20vmin;
+  background: #c00;
+  background: linear-gradient(to bottom, #990022, #dd2244);
+  transform: translate(150%, 0) rotateX(0deg);
+  transform-origin: top center;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 95%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 95%, 0% 100%);
+}
+
+.flag::before {
+  content: "G";
+  color: #ee9900;
+  font-size: 7vmin;
+  display: block;
+  align-items: center;
+  text-align: center;
+  width: 10vmin;
+  height: 10vmin;
+  line-height: 10vmin;
+  border-radius: 50%;
+  border: 1vmin solid #ee9900;
+  text-align: center;
+  font-family: Palatino, Palatyno, serif;
+  bottom: 20%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.65;
+}
+
+.flag + .flag {
+  background: #00c;
+  background: linear-gradient(to bottom, #036, #369);
+  transform: translate(-250%, 0);
+}
+
+.flag + .flag::before {
+  content: "K";
+}
+
+.window {
+  background: skyblue;
+  width: 10vmin;
+  height: 35vmin;
+  border-radius: 100% 100% 0 0;
+  box-shadow: 0 3vmin #d9ccba, 0 3.75vmin 1vmin -1vmin, inset 0 0.5vmin 1.5vmin -1vmin;
+  afilter: blur(2px);
+  bottom: 45vmin;
+  left: 50%;
+  transform: translate(-65vmin, 0);
+  overflow: hidden;
+}
+
+.window + .window {
+  transform: translate(-50%, 0);
+}
+
+.window + .window + .window {
+  transform: translate(55vmin, 0);
+}
+
+@keyframes cloud {
+  0% { transform: translate(10vmin, 0); }
+  15%, 100% { transform: translate(-100%, 0); }
+}
+
+.window .cloud {
+  width: 40vmin;
+  height: 20vmin;
+  background: white;
+  transform: translate(100%, 0);
+  animation: cloud 12.5s linear infinite;
+  border-radius: 100%;
+}
+
+.window .cloud {
+  animation-delay: 8s;
+}
+
+.window + .window .cloud {
+  animation-delay: 4s;
+}
+
+.window + .window + .window .cloud {
+  animation-delay: 0s;
+}
+
+#canvas {
+  width: 100vmin;
+  height: 100vmin;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0)
+}
+
+.king {
+  height: 50vmin;
+  width: 30vmin;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.king div {
+  position: absolute;
+}
+
+.head {
+  width: 9vmin;
+  height: 11vmin;
+  top: 6vmin;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.face {
+  width: 9vmin;
+  height: 11vmin;
+  background: #fcc;
+  -webkit-clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(15% 0%, 85% 0%, 100% 100%, 0% 100%);
+}
+
+.nose {
+  width: 25%;
+  height: 40%;
+  background: #daa;
+  background: linear-gradient(to bottom, #daa 40%, #e88);
+  border-radius: 80% 80% 100% 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.eyebrows, .eyes {
+  width: 65%;
+  height: 10%;
+  background-color: white;
+  background-image: linear-gradient(to bottom, rgba(255,255,255,0.5) 75%, rgba(239,239,239,0.5)), linear-gradient(to right, #eee 15%, #fff 50%, #eee 85%);
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px 20px 20% 20%;
+}
+
+@keyframes blink {
+  0%, 10%, 100% { 
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 200%, 0% 200%, 0% 0%); 
+    clip-path: polygon(0% 0%, 100% 0%, 100% 200%, 0% 200%, 0% 0%); 
+  }
+  5% { 
+    -webkit-clip-path: polygon(0% 180%, 100% 180%, 100% 200%, 0% 200%, 0% 0%);
+    clip-path: polygon(0% 180%, 100% 180%, 100% 200%, 0% 200%, 0% 0%);
+  }
+}
+
+.eyes {
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 200%, 0% 200%, 0% 0%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 200%, 0% 200%, 0% 0%);
+  background: none;
+  animation: blink 6s infinite linear;
+}
+
+.eyes::before,
+.eyes::after {
+  content: "";
+  width: 1vmin;
+  height: 1vmin;
+  background: rgba(0,0,0,0.8);
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 90%;
+  left: 10%;
+  z-index: -1;
+}
+
+.eyes::after { 
+  left: auto;
+  right: 10%;
+}
+
+@keyframes wiggle {
+  0%, 2%, 4%, 100% { transform: translate(-50%, -50%) rotate(0); }
+  1% { transform: translate(-50%, -50%) rotate(5deg); }
+  3% { transform: translate(-50%, -50%) rotate(-5deg); }
+}
+
+.mustache {
+  width: 90%;
+  height: 25%;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0);
+  animation: wiggle 10s infinite linear;
+}
+
+.mustache::before,
+.mustache::after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: white;
+  background: linear-gradient(to bottom, #fff, #eee);
+  display: inline-block;
+  border-radius: 100% 50% 50% 25%;
+  transform: rotate(-10deg);
+  position: absolute;
+  left: 1%;
+}
+
+.mustache::after {
+  border-radius:  50% 100% 25% 50%;
+  transform: rotate(10deg);
+  left: auto;
+  right: 1%;
+}
+
+.beard {
+  width: 120%;
+  height: 70%;
+  border-radius: 100%;
+  background: red;
+  background: linear-gradient(to bottom, white 15%, #e8e8e8 85%);
+  top: 70%;
+  left: -10%;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 75% 100%, 70% 92%, 65% 98%, 60% 90%, 55% 100%, 50% 85%, 45% 98%, 40% 88%, 35% 98%, 30% 90%, 25% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 75% 100%, 70% 92%, 65% 98%, 60% 90%, 55% 100%, 50% 85%, 45% 98%, 40% 88%, 35% 98%, 30% 90%, 25% 100%, 0% 100%);
+}
+
+.mouth {
+  width: 4vmin;
+  height: 2vmin;
+  border-radius: 50%;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%,-75%);
+  background: #a00;
+  background: radial-gradient(at 50% 100%, #d00 25%, #600 25%);
+}
+
+.ears {
+  width: 20%;
+  height: 30%;
+  border-radius: 100%;
+  background: red;
+  top: 40%;
+  left: -5%;
+  background: #daa;
+  background: linear-gradient(to left, #daa 40%, #ebb);
+  box-shadow: 8vmin 0 #daa;
+}
+
+.crown {
+  width: 150%;
+  height: 100%;
+  top: -85%;
+  left: -25%;
+  overflow: hidden;
+}
+
+.crown-base {
+  width: 60%;
+  background: yellow;
+  background: linear-gradient(to bottom, gold, yellow);
+  height: 15%;
+  bottom: 0;
+  left: 20%;
+  border-radius: 5px 5px 15% 15%;
+  box-shadow: 0 -5px 5px -5px rgba(0, 0, 0, 0.2);
+}
+
+.crown-triangle {
+  width: 30%;
+  height: 60%;
+  background: gold;
+  bottom: 0;
+}
+
+#crown-triangle-left {
+  transform: rotate(-25deg);
+  left: 20%;
+  border-radius: 100% 1000% 0 0;
+  background: linear-gradient(to right, yellow, gold 40%);
+}
+
+#crown-triangle-right {
+  transform: rotate(25deg);
+  right: 20%;
+  border-radius: 1000% 100% 0 0;
+  background: linear-gradient(to left, #deb700, gold 40%);
+}
+
+#crown-triangle-center {
+  right: 35%;
+  bottom: 5%;
+  border-radius: 1000% 1000% 0 0;
+}
+
+#crown-triangle-center::before {
+  content: "";
+  display: block;
+  height: 20%;
+  width: 33%;
+  border-radius: 50%;
+  background: #ee0000;
+  background: radial-gradient(at 20% 55%, white 10%, transparent 12%), radial-gradient(at 33% 30%, white 10%, #dd2244 25%);
+  box-shadow: 0 0 0.3vmin rgba(0,0,0,0.2), 4.2vmin 1.4vmin 0 0px #dd2244, -4.2vmin 1.4vmin 0 0px #dd2244;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.hair {
+  background: white;
+  background: linear-gradient(to bottom, #fff, #eee);
+  width: 100%;
+  height: 60%;
+  border-radius: 100%;
+}
+
+.body {
+  width: 18vmin;
+  height: 20vmin;
+  background: #369;
+  background: radial-gradient(at 50% 20%, #369 55%, #136);
+  border-radius: 8vmin 8vmin 50% 50%;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.arm {
+  width: 30vmin;
+  height: 7vmin;
+  border: 5vmin solid #369;
+  border-radius: 100%;
+  border-bottom: 5vmin solid transparent;
+  top: 17vmin;
+  left: -5vmin;
+  -webkit-clip-path: polygon(0% 0%, 50% 0, 50% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 50% 0, 50% 100%, 0% 100%);
+  animation: movearm 2s alternate infinite linear;
+}
+
+.arm2 {
+  width: 15vmin;
+  height: 10vmin;
+  border: 5vmin solid transparent;
+  border-radius: 100%;
+  border-top: 4.5vmin solid #369;
+  transform: rotate(40deg);
+  top: 18.5vmin;
+  left: 9vmin;
+}
+
+.arm3 {
+  height: 4.5vmin;
+  width: 9vmin;
+  background: #369;
+  background: linear-gradient(to right, #369, #258);
+  top: 24.5vmin;
+  left: 28vmin;
+  border-radius: 50vmin;
+}
+
+
+@keyframes movearm {
+  0% { border-radius: 100% 100% 100% 100%; }
+  100% { border-radius: 95% 100% 100% 100%; }
+}
+
+.arm::before {
+  content:"";
+  position: absolute;
+  display: block;
+  width: 5vmin;
+  height: 3vmin;
+  background: #013;
+  background: linear-gradient(to bottom, #013, #000);
+  border-radius: 50%;
+  top: 75%;
+  left: -2.5vmin;
+  transform: rotate(-30deg);
+}
+
+.hand {
+  background: #daa;
+  width: 5vmin;
+  height: 3vmin;
+  border-radius: 40%;
+  top: 55%;
+  left: -2vmin;
+}
+
+.hand + .hand {
+  top: 25vmin;
+  left: 34.5vmin;
+  transform: rotate(-90deg);
+}
+
+.hand + .hand::before {
+  content:"";
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  top: -1.5vmin;
+  background: #daa;
+  display: block;
+  position: absolute;
+}
+
+.hand + .hand::after {
+  content:"";
+  position: absolute;
+  width: 1.25vmin;
+  height: 100%;
+  display: inline-block;
+  background: #fcc;
+  background: linear-gradient(80deg, #daa, #fcc);
+  border-radius: 2vmin;
+  top: -1.5vmin;
+  right: -1vmin;
+  transform: rotate(-10deg);
+}
+
+.hand + .hand .finger {
+  animation: none !important;
+}
+
+@keyframes finger {
+  0%, 20%, 100% { transform: scale(1); }
+  10% { transform: scale(1.2); }
+}
+
+.hand .finger {
+  position: relative;
+  float: left;
+  width: 1.25vmin;
+  height: 100%;
+  display: inline-block;
+  background: #fcc;
+  background: linear-gradient(80deg, #fcc, #daa);
+  border-radius: 2vmin;
+  top: 0.2vmin;
+  animation: finger 7s infinite;
+}
+
+.finger:nth-child(2) { animation-delay: 0.5s; }
+.finger:nth-child(3) { animation-delay: 1s; }
+.finger:nth-child(4) { animation-delay: 1.5s; }
+
+.finger + .finger {
+  height: 115%;
+  top: -0.1vmin;
+}
+
+.finger:nth-child(3) {
+  top: -0.3vmin;
+  height: 125%;
+}
+
+.buttons {
+  width: 1vmin;
+  height: 1vmin;
+  background: rgba(0,0,0,0.5);
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  top: 47%;
+  box-shadow: 0 3vmin rgba(0,0,0,0.5), 0 6vmin rgba(0,0,0,0.5);
+}
+
+.belt {
+  width: 56%;
+  background: #222;
+  background: linear-gradient(to left, #000, #222, #000);
+  height: 5%;
+  bottom: 32%;
+  left: 6.5vmin;
+  border-radius: 0.5vmin;
+}
+
+.skirt {
+  width: 62%;
+  height: 11%;
+  border: 1vmin solid #258;
+  border-radius: 5vmin;
+  bottom: 23%;
+  left: 19%;
+  atransform: translate(-1vmin, 1vmin);
+  box-sizing: border-box;
+  background: #222;
+  background: radial-gradient(#013, #258);
+}
+
+.legs {
+  width: 60%;
+  height: 33%;
+  bottom: 0;
+  left: 20%;
+  z-index:0;
+}
+
+.legs::before,
+.legs::after {
+  content: "";
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 35%;
+  border-radius: 100vmin 100vmin 1000% 1000%;
+  background: #369;
+  background: linear-gradient(to bottom, #369, #136);
+  background: linear-gradient(to bottom, #fff, #ddd);
+  z-index: -1;
+}
+
+.legs::after {
+  right: 0;
+}
+
+.boots {
+  background: #222;
+  background: linear-gradient(#222, #111);
+  width: 37%;
+  height: 60%;
+  left: -1%;
+  bottom: 0;
+  box-shadow: 11.75vmin 0 #222;
+  border-radius: 1vmin 1vmin 200% 200%;
+}
+
+.boots::before,
+.boots::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: -2.5%;
+  width: 105%;
+  height: 40%;
+  background: #333;
+  background: linear-gradient(#333, #111);
+  border-bottom: 1vmin solid black;
+  box-sizing: border-box;
+  border-radius: 500% 500% 0 0;
+}
+
+@keyframes tap {
+  0%, 10% { border-bottom: 1vmin solid black; }
+  5% { border-bottom: 1.5vmin solid black; }
+}
+
+.boots::after { 
+  left: auto;
+  right: -12vmin;
+  border-bottom: 1vmin solid black;
+  animation: tap 5s alternate infinite linear;
+}
+
+.bar {
+  width: 1.5vmin;
+  height: 50vmin;
+  bottom: 0;
+  right: -8vmin;
+  background: orange;
+  background: linear-gradient(to bottom, gold, orange);
+  box-shadow: inset 0 1vmin 1vmin -0.5vmin rgba(0,0,0,0.25);
+  transform: rotate(5deg)
+}
+
+.bar::before,
+.bar::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  top: -2vmin;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5vmin;
+  height: 5vmin;
+  background: orange;
+  background: radial-gradient(at 20% 20%, gold, orange);
+}
+
+.bar::after {
+  top: -4.5vmin;
+  width:2vmin;
+  height: 2vmin;
+  box-shadow: 0 0.2vmin 0vmin -0vmin rgba(0,0,0,0.1); 
+}
+
+
+@keyframes move {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+#fly {
+  width: 1vmin;
+  height: 1vmin;
+  background: black;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 49vmin;
+  left: 50vw;
+  offset-path: path('M0,0 C20,-20 50,-50 200,100 250,150 -50,-50 -400,-40 -130,0 -80,80 -50,50 20,-20 50,-50 100,100 -3,15 200,-5 176,151 176,165 187,178 194,178 175,149 205,141 189,110 195,113 202,122 203,126 208,121 205,105 200,97 290,118 259,182 304,193 267,160 346,117 282,79 293,77 301,80 304,82 298,54 248,62 244,62 247,58 259,50 266,50 239,39 185,59 178,93 146,87 117,142 166,172 170,173 178,173 178,173 178,173 178,163 178,163 178,163 177,160 176,151');
+  animation: move 10s infinite alternate ease-in-out;
+}
+
+#fly::before,
+#fly::after {
+  content:"";
+  display: block;
+  position: absolute;
+  background: rgba(255,255,255,0.5);
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  transform: translate(-100%, 0);
+}
+#fly::after {
+  transform: translate(100%, 0);
+}
+
+
+.chair {
+  height: 75vmin;
+  width: 36vmin;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.column {
+  width: 5vmin;
+  height: 90%;
+  bottom: 0;
+  background: #654321;
+  background: linear-gradient( #654321, #543210 70%, #654321 0, #543210);
+  box-shadow: 2.5vmin 5vmin 1vmin -2vmin rgba(0,0,0,0.35);
+}
+
+.column::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -4vmin;
+  left: -1.5vmin;
+  width: 8vmin;
+  height: 8vmin;
+  border-radius: 50%;
+  background: #654321;
+  background: radial-gradient(at 25% 25%, #654321, #543210);
+}
+
+.column + .column {
+  left: 31vmin;
+  box-shadow: -2.5vmin 5vmin 1vmin -2vmin rgba(0,0,0,0.25);
+}
+
+.armrest {
+  width: 7vmin;
+  height: 2.5vmin;
+  left: -1vmin;
+  top: 72%;
+  background: #654321;
+  border-radius: 0.5vmin;
+  box-shadow: 0 1.5vmin 1vmin -1vmin, 31vmin 0 #654321, 31vmin 1.5vmin 1vmin -1vmin;
+}
+
+.bottom {
+  width: 26vmin;
+  height: 11.5vmin;
+  bottom: 0;
+  background :#654321;
+  background: linear-gradient(to right, transparent, rgba(0,0,0,0.25), transparent, rgba(0,0,0,0.25), transparent), linear-gradient(#654321 -60%, #543210);
+  left: 5vmin;
+  box-shadow: inset -0.75vmin 0 1vmin -0.7vmin rgba(0,0,0,0.33), inset 0.75vmin 0 1vmin -0.7vmin rgba(0,0,0,0.33), 0 -4vmin 3vmin -1vmin rgba(0,0,0,0.4);
+}
+
+.back {
+  width: 100%;
+  height: 85%;
+  -webkit-clip-path: polygon(0% 30%, 50% 0%, 100% 30%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 30%, 50% 0%, 100% 30%, 100% 100%, 0% 100%);
+  background: brown;
+  background: radial-gradient(at 55% 100%, rgba(0,0,0,0.75), transparent 56%), linear-gradient(to right, #654321 10%, #5c3c1c 35%, #654321 35%, #5c3c1c 65%, #654321 65%, #5c3c1c 90%);
+}
+
+.candelabra {
+  width: 30vmin;
+  height: 4vmin;
+  background: #111;
+  background: linear-gradient(#222, #111);
+  border-radius: 0.5vmin;
+  bottom: 80vmin;
+  transform: translate(-60%, 0);
+  left: 0;
+}
+
+.candelabra + .candelabra {
+  left: auto;
+  right: 0;
+  transform: translate(75%, 0);
+}
+
+.cord {
+  left: 50%;
+  width: 1vmin;
+  height: 100vmax;
+  bottom: 100%;
+  border-left: 1vmin dashed #222;
+  background: rgba(0,0,0,0.2);
+  box-sizing: border-box;
+  border-collapse: collapse;
+  box-shadow: inset 0 0 0 1vmin;
+}
+
+.candelabra .candles {
+  display: flex;
+  width: 106%;
+  left: -3%;
+  height: 1vmin;
+  justify-content: space-between;
+}
+
+.candle {
+  position: relative;
+  height: 6vmin;
+  width: 2vmin;
+  border-radius: 4vmin 4vmin 1000% 1000%;
+  background: #222;
+  background: linear-gradient(#222, #000);
+  top: -1vmin;
+}
+
+.candle::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 70%;
+  left: 15%;
+  height: 4vmin;
+  background: white;
+  background: linear-gradient(to bottom, #ffe, #ccb);
+  top: -4vmin;
+}
+
+@keyframes fire {
+  0%, 100% {
+    border-radius: 1000% 100% 1000% 1000%;
+    box-shadow: inset 0 -1vmin rgba(255,128,0, 0.5);
+    height: 50%;
+    width: 70%;
+  }
+  33% {
+    border-radius: 1000% 200% 1000% 1000%;
+    box-shadow: inset 0 -0.5vmin 1vmin rgba(255,128,0, 0.5);
+    height: 51%;
+    width: 80%;
+  }
+  66% {
+    border-radius: 1000% 1000% 1000% 1000%;
+    box-shadow: inset 0 -1.5vmin rgba(255,128,0, 0.5);
+    height: 49%;
+    width: 65%;
+  }
+}
+
+.candle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 70%;
+  height: 50%;
+  border-radius: 1000% 100% 1000% 1000%;
+  left: 50%;
+  background: rgba(255,255,0, 0.75);
+  box-shadow: inset 0 -1vmin rgba(255,128,0, 0.5);
+  top: -7vmin;
+  transform: translate(-50%, 0);
+  animation: fire 2s infinite;
+}
+
+.candle + .candle { animation-delay: -0.5s !important; }
+.candle + .candle + .candle { animation-delay: -3s !important; }
+.candle + .candle + .candle + .candle { animation-delay: -2.1s !important; }
+
+@keyframes rat {
+  0% { transform: translate(150vmax, 0); }
+  100% { transform: translate(-350vmax, 0); }
+}
+
+.mouse {
+  width: 10vmin;
+  height: 3vmin;
+  bottom: 0.1vmin;
+  animation: rat 30s infinite;
+  left: -10vmin;
+  transform: translate(150vmax, 0);
+  filter: blur(2px);
+}
+
+.mousebody {
+  background: black;
+  width: 60%;
+  left: 40%;
+  height: 100%;
+  border-radius: 20% 100% 0% 0;
+}
+
+.mousebody::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 66%;
+  transform: translate(-90%, 0);
+  height: 100%;
+  background: #111;
+  clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+}
+
+.mousebody::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0.5vmin;
+  height: 0.5vmin;
+  background: #d00;
+  top: 50%;
+  left: -10%;
+}
+
+.mousefeet{
+  width: 0.75vmin;
+  height: 0.75vmin;
+  bottom: -0.5vmin;
+  background: #111;
+  left: 4vmin;
+  border-radius: 50%;
+  box-shadow: 4vmin 0;
+}
+
+.mousetail {
+  width: 4vmin;
+  height: 4vmin;
+  border: 0.5vmin solid transparent;
+  border-right: 0.5vmin solid #111;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  right: -2vmin;
+  bottom: 0.5vmin;
+}
+
+.mousetail::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+  width: 4vmin;
+  height: 4vmin;
+  border: 0.5vmin solid transparent;
+  border-top: 0.5vmin solid #111;
+  border-left: 0;
+  top: -0.25vmin;
+  left: 0.25vmin;
+}
+
+.guard {
+  width: 20vmin;
+  height: 70vmin;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-57vmin, 0);
+  filter: blur(1px);
+}
+
+.shield {
+  width: 75%;
+  height: 45%;
+  background: #ccc;
+  background: linear-gradient(135deg, #ccc, #777);
+  border-radius: 0 0 100% 100%;
+  bottom: 0;
+  left: -15%;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 2vmin rgba(0,0,0,0.25);
+}
+
+.sword {
+  width: 10%;
+  height: 48%;
+  background: #bbb;
+  border-radius: 0 0 100% 0;
+  bottom: 0;
+  right: 0;
+}
+
+.sword::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translate(-98%, 0);
+  background: #c8c8c8;
+  border-radius: 0 0 0 100%;
+}
+
+.sword-traverse {
+  height: 3%;
+  width:50%;
+  background: #333;
+  border-radius: 100%;
+  bottom: 47%;
+  right: -15%;
+}
+
+.sword-traverse::before {
+  content:"";
+  display: block;
+  position: absolute;
+  width: 2vmin;
+  height: 2vmin;
+  border-radius: 50%;
+  background: #333;
+  top: 24%;
+  left: -0.5vmin;
+  box-shadow: 9vmin 0 #333;
+}
+
+.guard .hand {
+  top: 52%;
+  transform: scale(0.9);
+}
+
+
+.guard .hand + .hand {
+  top: 44.75%;
+  left: auto;
+  right: -4%;
+  transform: scale(0.9) rotate(-90deg);
+}
+
+.guard .hand + .hand::before {
+  left: 0%;
+  top: -40%;
+}
+
+.handle {
+  height: 80%;
+  width: 150%;
+  background: #222;
+  border-radius: 0 100% 100% 0;
+}
+
+.handle::before {
+  content: "";
+  display:block;
+  position: relative;
+  width: 3vmin;
+  height: 3vmin;
+  border-radius: 50%;
+  background: #222;
+  right: -90%;
+  transform: translate(0%, -10%);
+}
+
+
+.guard .legs {
+  height: 45%;
+}
+
+.guard .legs::before,
+.guard .legs::after {
+  background: #e8e8e8;
+  box-shadow: inset 0.5vmin 0.5vmin 1vmin rgba(0,0,0,0.25);
+}
+
+.guard .boots {
+  width: 40%;
+  height: 30%;
+  box-shadow: 7.75vmin 0 #222;
+}
+
+.guard .boots::before,
+.guard .boots::after {
+  left: 7.75vmin;
+}
+
+.guard .boots::after {
+  left: 0.25vmin;
+}
+
+.tackedshirt {
+  width: 70%;
+  height: 20%;
+  background: #c00;
+  background: linear-gradient(to bottom, #d24, #990022);
+  box-shadow: inset 10vmin 0 1vmin #902, inset -1vmin 0 1vmin #902;
+  border-radius: 10% 15% 5px 5px;
+  bottom: 26%;
+  left: 15%;
+}
+
+.guard .belt {
+  width: 60%;
+  left: 18%;
+  bottom: 46%;
+  height: 2vmin;
+  background: #987654;
+  box-shadow: inset -5vmin -0.5vmin 1vmin #876543;
+}
+
+.guard .belt::after {
+  content: "";
+  width: 25%;
+  height: 100%;
+  left: 37.5%;
+  display: block;
+  box-shadow: inset 0.7vmin 0 0 0.6vmin #876543;
+  background: rgba(238,208,0,0.5);
+  position: relative;
+  box-sizing: border-box;
+  border: 0.2vmin solid rgba(238,208,0,0.5);
+  border-radius: 0.125vmin;
+}
+
+.chest {
+  width: 74%;
+  height: 25%;
+  background: #d24;
+  background: linear-gradient(to bottom, #d24, #990022);
+  abox-shadow: inset 10vmin 0 1vmin #902, inset -1vmin 0 1vmin #902;
+  border-radius: 35% 35% 10% 15%;
+  bottom: 48.5%;
+  left: 13%;
+}
+
+.shoulders {
+  width: 120%;
+  height: 12%;
+  left: -10%;
+  background: #d24;
+  background: linear-gradient(to bottom, #d24 20%, #a02);
+  bottom: 62%;
+  border-radius: 100vmin 100vmin 0 0;
+}
+
+.arm-right,
+.arm-left {
+  width: 27%;
+  height: 25%;
+  background: white;
+  background: linear-gradient(to bottom, #ddd, #fff);
+  box-shadow: inset -2vmin 6vmin 1vmin rgba(0,0,0,0.1);
+  bottom: 44%;
+  left: -7.5%;
+  border-radius: 100%;
+}
+
+.arm-right::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 20%;
+  background: #ccc;
+  background: radial-gradient(#888, #ccc);
+  border-radius: 100%;
+  bottom: -3%;
+  left: -8%;
+}
+
+.arm-left {
+  width: 25%;
+  left: auto;
+  right: -7%;
+}
+
+.guard .mustache,
+.guard .eyes {
+  animation-delay: 4s;
+}
+
+.guard .mustache::before,
+.guard .mustache::after {
+  background: #876543;
+  background: linear-gradient(to bottom, #876543, #654321);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 75% 100%, 70% 92%, 65% 100%, 57% 90%, 55% 100%, 50% 80%, 45% 95%, 40% 88%, 35% 98%, 30% 90%, 25% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 75% 100%, 70% 92%, 65% 100%, 57% 90%, 55% 100%, 50% 80%, 45% 95%, 40% 88%, 35% 98%, 30% 90%, 25% 100%, 0% 100%);
+}
+
+.guard .beard {
+  left: 0;
+  width: 100%;
+  height: 90%;
+  background: #876543;
+  background: linear-gradient(to bottom, #876543, #654321 75%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 75% 100%, 70% 92%, 65% 100%, 57% 90%, 55% 100%, 50% 80%, 45% 95%, 40% 88%, 35% 98%, 30% 90%, 25% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 75% 100%, 70% 92%, 65% 100%, 57% 90%, 55% 100%, 50% 80%, 45% 95%, 40% 88%, 35% 98%, 30% 90%, 25% 100%, 0% 100%);
+}
+
+.guard .face {
+  top: -1vmin;
+  height: 13.5vmin;
+  border-radius: 100% 100% 10vmin 10vmin;
+}
+
+.guard .eyebrows {
+  left: 30%;
+  width: 35%;
+  height: 10%;
+  background: #876543;
+  box-shadow: 3.6vmin 0 #876543;
+}
+
+.guard .nose {
+  background: #daa;
+  background: linear-gradient(to bottom, #fcc 10%, #e88);
+}
+
+.guard .hair {
+  top: -5%;
+  height: 80%;
+  background: #876543;
+  background: linear-gradient(to bottom, #876543, #654321 75%);
+}
+
+.guard .face::before {
+  content:"";
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate( -50%, -50%);
+  width: 30%;
+  border-bottom: 0.125vmin solid #ebb;
+  box-shadow: 0 0.5vmin #ebb, 0.25vmin 1vmin #ebb, -0.25vmin 1vmin #ebb;
+}

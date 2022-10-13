@@ -1,0 +1,253 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 1vmin solid black;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+.cartoon {
+  --skin: #fca;
+  --skin-dark: #fa8;
+  --hair: brown;
+  --line: rgba(0,0,0,0.75);
+  width: 80vmin;
+  height: 80vmin;
+  overflow: hidden;
+  border-radius: 0 0 30% 50%;
+}
+
+.forehead {
+  width: 33%;
+  height: 40%;
+  background: var(--skin);
+  border-radius: 20% 50% 50% 100% / 70% 100% 100% 100%;
+  top: 22%;
+  left: 35%;
+}
+
+.neck {
+  width: 9%;
+  height: 30%;
+  background: var(--skin);
+  transform: rotate(8deg);
+  top: 48%;
+  left: 55%;
+  background: linear-gradient(45deg, transparent  50%, var(--skin) 0), linear-gradient(-65deg, var(--skin) 47%, var(--skin-dark) 0);
+}
+
+.chin {
+  width: 20%;
+  height: 10%;
+  border-radius: 50% 100% / 100%;
+  background: var(--skin);
+  transform: rotate(-39deg);
+  top: 58.5%;
+  left: 41.5%;
+}
+
+.cheek {
+  width: 11%;
+  height: 30%;
+  box-shadow: 7.5vmin -5vmin var(--skin);
+  top: 49%;
+  left: 31%;
+  transform: rotate(-15deg);
+}
+
+.hair {
+  width: 45%;
+  height: 16%;
+  background: var(--hair);
+  top: 10%;
+  left: 25%;
+  transform: rotate(2deg);
+}
+
+.hair::after {
+  width: 50%;
+  height: 150%;
+  top: 0%;
+  background: var(--hair);
+  border-radius: 50%;
+  transform: translate(0, -15%);
+  clip-path: polygon(100% 50%, 0% 50%, 0% 0%, 50% 0%, 30% 25%, 62% 0%, 50% 20%, 75% 5%, 40% 50%);
+}
+
+.hair::before {
+  top: 67%;
+  height: 160%;
+  width: 30%;
+  border-radius: 100% 70% 150% 100%;
+  background: var(--hair);
+  right: -10%;
+  transform: rotate(-4deg)
+}
+
+.hair-back {
+  width: 10%;
+  height: 25%;
+  top: 20%;
+  left: 33%;
+  transform: rotate(-10deg);
+  background: var(--hair);
+  box-shadow: inset 0 0 0 100vmin rgba(0, 0, 0, 0.33)
+}
+
+.ear {
+  box-sizing: border-box;
+  border: 2vmin solid var(--skin);
+  width: 9vmin;
+  height: 12vmin;
+  background: var(--skin);
+  border-radius: 100% 100% 100% 100% / 100% 70% 130% 100%;
+  transform: rotate(18deg);
+  top: 40%;
+  left: 64%;
+  box-shadow: inset 0.5vmin 0.5vmin var(--skin-dark);
+}
+
+.ear::after {
+  border-radius: 50%;
+  top: 60%;
+  left: 5%;
+  width: 3vmin;
+  height: 3vmin;
+  box-shadow: 0.25vmin -0.5vmin 0vmin 0.125vmin var(--skin-dark);
+}
+
+.ear2 {
+  width: 9%;
+  height: 15%;
+  background: var(--skin-dark);
+  transform: rotate(-15deg);
+  top: 40%;
+  left: 34.5%;
+}
+
+.mouth {
+  width: 10%;
+  height: 2%;
+  top: 56%;
+  left: 44%;
+  transform: rotate(-9deg);
+  box-shadow: 0.25vmin 0.25vmin var(--line);
+}
+
+.mouth::after {
+  width:3vmin;
+  height: 2vmin;
+  border-radius: 50%;
+  border: 0.25vmin solid transparent;
+  border-right-color: var(--line);
+  transform: rotate(-6deg);
+  right: -0.33vmin;
+}
+
+.eyebrow-1 {
+  width: 10%;
+  height: 0%;
+  border-bottom: 2vmin solid var(--hair);
+  border-right: 0;
+  top: 37%;
+  left: 48.5%;
+  transform: rotate(-4deg);
+  clip-path: polygon(0% 40%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.eyebrow-2 {
+  width: 12%;
+  height: 7%;
+  border: 2vmin solid transparent;
+  border-right: 0.25vmin solid transparent;
+  border-top: 2vmin solid var(--hair);
+  top: 34%;
+  transform: rotate(20deg);
+  left: 33.5%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 0% 50%);
+}
+
+.eyes {
+  width: 3vmin;
+  height: 3vmin;
+  background: #531; var(--line);
+  top: 38%;
+  left: 40%;
+  box-shadow: 8vmin 1vmin #531; var(--line);
+  clip-path: polygon(0% 0%, 100% 40%, 100% 80%, 400% 60%, 400% 200%, 0% 200%);
+}
+
+.nose {
+  width: 5vmin;
+  height: 10vmin;
+  transform: skew(-10deg);
+  box-shadow:  -0.75vmin 0.5vmin var(--skin-dark);
+  border-radius: 50% 0 30% 20%;
+  top: 40%;
+  left: 44%;
+}
+
+.body, .shirt {
+  width: 60%;
+  height: 80%;
+  background: var(--skin);
+  top: 75%;
+  left: 50%;
+  transform: translate(-38%, 0);
+  border-radius: 50% 45%;
+  box-shadow: inset 1vmin -53vmin white, inset 1vmin -54vmin #fafafa;
+}
+
+.mullet {
+  width: 20%;
+  height: 15%;
+  background: var(--hair);
+  clip-path: polygon(0% 100%, 100% 100%, 60% 90%, 90% 80%, 70% 75%, 100% 70%, 65% 60%, 100% 50%, 100% 50%, 0% 40%);
+  top: 45%;
+  left: 60%;
+}
+
+/* Shirt pattern adapted from Lea Verou's https://leaverou.github.io/css3patterns/#marrakesh*/
+.shirt-neck {
+  width: 40%;
+  height: 25%;
+  bottom: 0;
+  left: 35%;
+  background: #6af;
+  clip-path: polygon(22% 13%, 34% 4%, 40% 100%, 73% 100%, 77% 0%, 90% 7%, 93% 30%, 80% 37%, 93% 45%, 85% 100%, 28% 100%, 18% 48%, 27% 40%, 19% 37%);
+  background-image:
+repeating-radial-gradient(#d00 0, #0d0 3px, transparent 4px, transparent 20px, #ff6 21px, #ff6 25px, transparent 26px, transparent 50px);
+  background-size:90px 90px;
+  background-position: -30px;
+}
+
+.shirt {
+  box-shadow: none;
+  transform: translate(-38%, 0) scale(1.01);
+  clip-path: polygon(0% 0%, 35% 0%, 40% 50%, 60% 60%, 65% 0%, 100% 0%, 100% 100%, 0% 100%);
+  background-color: #9cf;
+  background-image:
+repeating-radial-gradient(#d00 0, #0d0 3px, transparent 4px, transparent 20px, #ff6 21px, #ff6 25px, transparent 26px, transparent 50px);
+  background-size:90px 90px;
+}
+

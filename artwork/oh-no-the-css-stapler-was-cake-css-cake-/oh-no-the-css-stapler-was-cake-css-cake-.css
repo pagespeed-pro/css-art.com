@@ -1,0 +1,210 @@
+body {
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+article {
+  position: absolute;
+  top: 53%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+}
+
+article:nth-child(1) {
+  clip-path: polygon(0 -100%, 45% -100%, 100% -100%, 100% 200%, 45% 95%, 35.66% 75%, 35.66% -40%);
+}
+
+@keyframes slideSlide {
+  0% { transform: translate(-50%, -50%); }
+  100% { transform: translate(-60%, -35%); }
+}
+
+article:nth-child(3) {
+  clip-path: polygon(0.5% -100%, 45.1% -20%, 45.1% 200%, 0 200%);
+  animation: slideSlide 1s 1.75s forwards;
+}
+
+@keyframes moveKnife {
+  0% { transform: translate(-30%, -100vh) rotate(10deg); }
+  100% { transform: translate(-30%, 100vh) rotate(-10deg); } 
+}
+
+section {
+  animation: moveKnife 6s forwards;
+  background: 
+    radial-gradient(100% 400% at 100% 20%, #0000, #00000003 40%,  #fff1 40.75%, #0000 41%),
+    radial-gradient(113% 100% at 100% 0, #0000 89%, #fff8 89.3%, #fff2 89.5%, #0000),
+    linear-gradient(#0122, #0000, #fff2),
+    #ddd;
+  width: 85vmin;
+  height: 10vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, -100vmin) rotate(10deg) ;  
+  border-radius: 5% 1% 1% 100% / 5% 10% 10% 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 60% 40%, 60.5% 100%, 0 100%);
+}
+
+
+aside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  background:
+    linear-gradient(25deg, #0000 51.5%, #9a4e4e 0),
+    linear-gradient(89.5deg, #9a4e4e 36%, #df7c50 0 36.2%, #0000 36.3% 44%, #df7c50 44.1% 44.2%, #9a4e4e 44.3%),
+    radial-gradient(circle, #cc8d2718 17%, #0000 35%) 17% 17% / 6.66% 13%,
+    radial-gradient(#eeebd844 13%, #0000 28%) 13% 13% / 2.5% 15.5%,
+    radial-gradient(circle, #f7d4a744 17%, #0000 35%) 11% 14% / 5.55% 11.5%,
+    linear-gradient(25deg, #0000 37%, #df7c50 37.1% 37.7%, #eec 37.8% 38.2%, #df7c50 38.3% 39%, #0000 39.1% 51%, #df7c50 51.5%),
+    
+    #f7ebb2;
+  transform: translateY(-50%);  
+  clip-path: polygon(30% 27%, 44.75% 40.25%, 44.75% 100%, 30% 100%);
+}
+
+div {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  appearance: none;
+  display: inline-block;
+  width: 85vmin;
+  height: 20vmin;
+  position: relative;
+  top: 20vmin;
+  transform-origin: 0 0;
+  transform: perspective(1000px) rotateY(17.5deg) skewY(-25deg);
+/*   clip-path: polygon(0 0, 78% 0, 99.25% 72.5%, 100% 100%, 17.1% 100%, 16.6% 99%, 0 22%); */
+  clip-path: polygon(0 0, 0 -500%, 500% -500%, 87% -100%, 95.5% 23.5%, 94% 35%, 88% 36.75%,  99.5% 72.5%, 100% 100%, 17.1% 100%, 16.6% 99%, 0 22%);
+  border-radius: 0.5vmin;
+  background:
+    /* base - sides */
+    conic-gradient(#0002, #fff8 50%, #fff0 66%) 86.9% 51% / 2% 5%,
+    linear-gradient(92deg, #1117, #fff1, #1118) 16% 100% / 2% 23%,
+    linear-gradient(45deg, #000 20%, #242424 56%, #555 0, #121212 56.5%, #0000 0) 0 50% / 17% 100%,
+    linear-gradient(-0.5deg, #242424, #343434 , #242424 88%, #444 0, #343434 90%, #0000 0) 100% 100% / 100% 27%,
+    /* light/shadow */
+    radial-gradient(70% 60% at 10% 5%, #ffffff18 73%, #0000 80%),
+    radial-gradient(17% 140% at 100% 100%, #ffffff08 80%, #0000 85%),
+    linear-gradient(#12121466 0 0) 81.75% 80% / 29% 70%,
+    linear-gradient(#12121466 0 0) 81.75% 180% / 29% 70%,
+    /* base - top */
+    linear-gradient(90deg, #eee1, #fff0 20%),
+    linear-gradient(47deg, #000, #0005 17.5%, #0000 18.1%),
+    linear-gradient(180deg, #242424, #fffc 1%, #000 0 2.5%, #242424 0, #fff4 3%, #242424 5% 13%, #fff0 0 64%, #242424 0), 
+    linear-gradient(44.5deg, #242424 22.5%, #fff3 22.55%, #000 22.65% 22.75%, #0000 23% 28.75%, #242424 29%),
+    linear-gradient(180deg, #000 13%, #fff0 14% 62%, #000 64%), 
+    /* metallic chip */
+    linear-gradient(45deg, #0000 44%, #003 0, #0000 45%, #fff3 48%, #0005 49% 50%, #0000 0) 11.125% 29.75% / 8% 12%,
+    linear-gradient(45deg, #0000 44%, #003 0, #0000 45%, #fff3 48%, #0005 49% 50%, #0000 0) 14.5% 45% / 8% 12%,
+    linear-gradient(45deg, #0000 44%, #003 0, #0000 45%, #fff3 48%, #0005 49% 50%, #0000 0) 14% 23% / 7% 11%,
+    linear-gradient(45deg, #0000 45%, #000a 50% 50.05%, #0000 0) 14% 23% / 7% 11%,
+    linear-gradient(45deg, #0000 44%, #003 0, #0000 45%, #fff3 48%, #0005 49% 50%, #0000 0) 20% 49% / 7% 11%,
+    linear-gradient(45deg, #0000 45%, #000a 50% 50.05%, #0000 0) 20% 49% / 7% 11%,
+    linear-gradient(45deg, #0000 45%, #000a 50% 50.05%, #0000 0) 12.75% 35% / 8% 25%,
+    linear-gradient(180deg, #e9e8e688, #bebdb988 70%, #706f6d88) -3% 25% / 30% 52%,
+    radial-gradient(farthest-side at 50% 0%, #fff9, #fff0) 12% 24% / 10% 40%,
+    radial-gradient(farthest-side at 50% 0%, #fffc, #fff0) 9% 22% / 10% 44%,
+    radial-gradient(farthest-side at 30% 80%, #fff6, #fff0) 15% 30% / 10% 50%,
+    #343434;
+  background-repeat: no-repeat;
+}
+
+div::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 150%;
+  top: -95%;
+  left: 3%;
+  clip-path:
+    polygon(54% 100%, 54% 80%, 14% 79%, 14% 67%, 12% 66.5%, 0 36%, 1% 6%, 76% 30%, 100% 75%, 100% 100%, 0 100%);
+  clip-path:
+    polygon(54% 100%, 54% 80%, 14% 79%, 14% 67%, 12% 66.5%, 0 36%, 0.95% 6.1%, 1.3% 5.9%, 76% 30%, 99.8% 74.3%, 100% 75%, 100% 100%, 0 100%);
+  background: 
+    /* top cover */
+    linear-gradient(40deg, #6000 35%, #8124 44%, #6002 46%, #fff3 0, #6002 46.75%, #0000 0) 0% -9% / 12.5% 40%,
+    linear-gradient(#4000 45%, #6008 0 55%, #6000 0) 86% 76% / 1% 6%,
+    linear-gradient(90deg, #6000 40%, #6008 60%, #6000 0) 85.75% 75.8% / 1.5% 4.5%,
+    radial-gradient(20% 50%, #c6c6d588 40%, #1109, #0000) 86.75% 76.25% / 4% 7%,
+    radial-gradient(20% 50%, #ccc6 40%, #012c, #0000) 87% 76% / 4% 7%,
+    linear-gradient(90deg, #6000 20%, #6002, #ffe1) 9% 50% / 4% 35%,
+    radial-gradient(20% 60%, #fdd2, #6000) 11.25% 33.5% / 4% 7%,
+/*     radial-gradient(60% 100%, #ccc1, #1232, #0000) 11.25% 36% / 4% 6%, */
+    radial-gradient(farthest-side, #8e2e2e, #8e2e2e11) 110% 61% / 50% 15%,
+    conic-gradient(at 12.5% 33%, #6000 180deg, #fff3 0 181deg, #6000 184deg 310deg, #0000 0),
+    conic-gradient(at 12.5% 33%, #6000 180deg, #6008 0, #842424 186deg 310deg, #0000 0),
+    linear-gradient(186deg, #6000 43% 44.5%, #c07072 45.25%, #6000 46%),
+/*     linear-gradient(186deg, #0000 43%, #24242433 45%, #707072 45.5%, #0000 46%), */
+    linear-gradient(186deg, #6000 43%, #72121222 47%, #6000 49%),
+    linear-gradient(186deg, #6000 44%, #6006 45.5%, #6000 46%),
+    linear-gradient(181deg, #6000 56%, #8e2e2e 0 84.5%, #6000 84.75%) 50% 50% / 100% 50%,
+    conic-gradient(at 30% 65%, #6000 86.75deg, #8e2e2e 0 95deg, #8a2a2e 98.5deg, #0000 98.6deg),
+    conic-gradient(from -90deg at 12.5% 54%, #6000 186.2deg, #8e2e2e 0) 50% 0 / 100% 60%,
+    linear-gradient(0deg, #6001 30%, #fff1) 50% 0 / 100% 54%,
+    radial-gradient(at 100% 40%, #fff3, #fff0) 50% 0 / 100% 60% no-repeat,
+    radial-gradient(at 30% 40%, #6003, #6000) 50% 0 / 100% 60% no-repeat,
+    linear-gradient(185.75deg, #6000 40%, #8133 50%, #6000 51%) 50% 40% / 100% 50%,
+    linear-gradient(42deg, #6004 12.5%, #6000 15%) 0 0 / 100% 40%,
+    linear-gradient(42deg, #6004 13%, #6000 25%) 0 0 / 100% 40%,
+    conic-gradient(from -90deg at 12.5% 33%, #c07072 185.9deg, #6009 186.2deg, #0000 0),
+    linear-gradient(184deg, #6008, #6002 65%, #6000 75%),
+    /* staples holder */
+    radial-gradient(#0006, #0000),
+    radial-gradient(#fed3, #fff0) -80% 50% / 80% 90%,
+    linear-gradient(#0000 40%, #000e 0) 15.125% 71.25% / 1.2% 8.5%,
+    radial-gradient(#000e, #000c 55%, #0000 0) 17% 75% / 2% 5%,
+    linear-gradient(#0000 0%, #000 0 0) 18.5% 68% / 0.16% 10%,
+    linear-gradient(#0000, #fff3 40%, #121214aa 0) 33% 70% / 40% 1.23%,
+    linear-gradient(#0000 40%, #fff8 0, #242425cc 95%) 30.5% 71.25% / 40% 3%,
+    linear-gradient(#0000, #fff3 40%, #121214aa 0) 33% 79% / 50% 1.6%,
+    linear-gradient(#0000, #fff3 60%, #12121488 0) 33% 77.75% / 50% 2%,
+    linear-gradient(#0000 40%, #cecacb 0 88%, #0000 99%) 25% 75% / 56% 23%,
+    /* shadow base */
+    radial-gradient(farthest-side at 0 0, #ffe2 50%, #0000 ) 81.25% 90% / 20% 20%,
+    radial-gradient(farthest-side at 50% 0, #000, #0000 ) 67% 90% / 10% 20%,
+    /* base */
+    conic-gradient(at 36% 100%, #fff8, #121214aa 3deg 180deg, #0000 0 305deg, #121214aa 0) 77.25% 80% / 30% 95%;
+  background-repeat: no-repeat;
+}
+
+div::before {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 50%;
+  top: -27%;
+  left: 11%;
+  background:    
+    /* front */
+    conic-gradient(at 0 0, #0000 135deg, #0002 0, #0000 180deg) 0 0 / 15% 100%,
+    linear-gradient(45deg, #c5c5c5 80%, #0000 0) 0 100% / 6.5% 100%,
+    linear-gradient(45deg, #c5c5c5 80%, #0000 0) 8% 145% / 6.5% 80%,
+    linear-gradient(45deg, #888 80%, #0000 0) 2% 85% / 6.5% 80%,
+    linear-gradient(45deg, #aaa5a9 80%, #0000 0) 1% 20% / 6.5% 80%,
+    linear-gradient(45deg, #aaa5a0 80%, #0000 0) 9% 150% / 6.5% 80%,
+    linear-gradient(45deg, #444 80%, #0000 0) 9.2% 165% / 6.5% 80%,
+    /* tray */
+    linear-gradient(90deg, #876c, #0000 35%, #8762 60%) 0% 93% / 60% 15%,
+    linear-gradient(#0000, #fff5 60%, #12121488 80%, #0000 0) 40% 90% / 50% 3%,
+    linear-gradient(90deg, #c0c0c0 75%, #cecac8) 0 92% / 40% 15%,
+    linear-gradient(90deg, #a0a0a0 75%, #aeaab8) 0 92% / 40% 17%,
+    /* staples */
+    linear-gradient(#0001, #0000, #fca2, #6302) 1% 20% / 40% 40%,
+    linear-gradient(#0001, #fff2 5%, #cF650022 10%, #0000 50%) 0 90% / 40% 45%,
+    repeating-linear-gradient(90deg, #ceba90 0 4%, #fff 4.25%, #864 0 4.75%) 0 90% / 40% 45%,
+    repeating-linear-gradient(45deg, #ceba90 0 3%, #fff 3.25%, #864 0 3.75%) 1% 20% / 40% 45%;
+  background-repeat: no-repeat;
+  transition: transform 0.4s;
+  tranform: translate(0, 0);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 14% 100%, 0 55%);
+}
+
+

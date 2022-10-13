@@ -1,0 +1,35 @@
+{
+    "name": "backpack",
+    "version": "1.0.0",
+    "title": "Backpack",
+    "description": "",
+    "author": {
+        "name": "Greg Robleto",
+        "avatar": "https://assets.codepen.io/28337/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1641427924&width=512",
+        "web": "http://www.robleto.com",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/robleto/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/robleto"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/robleto"
+            }
+        ]
+    },
+    "html": "backpack.html",
+    "css": [
+        "backpack.css"
+    ],
+    "js": "/*. Still learning by replicating this piece by Tricia Katz */",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [],
+    "original": "https://codepen.io/robleto/pen/gOxbyxX",
+    "codepen": "https://codepen.io/robleto/pen/gOxbyxX"
+}

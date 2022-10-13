@@ -1,0 +1,176 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+/*   background-color: #eee;
+  background-image: linear-gradient(to right, transparent 99%, gray 0), linear-gradient(to bottom, transparent 99%, gray 0);
+  background-size: 10% 100%, 100% 10%; */
+}
+
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 1vmin solid black;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+.cartoon {
+  --pot: #f79226;
+  --pot-dark: #e78216;
+  --line: #a50;
+  --soil: #631;
+  --leaf: #4ea042;
+  afilter: drop-shadow(1.25vmin 0 var(--line)) drop-shadow(0 1vmin var(--line)) drop-shadow(0 -1vmin var(--line)) drop-shadow(-1.25vmin 0vmin var(--line))
+}
+
+.pot-top {
+  width: 40%;
+  height: 27%;
+  left: 50%;
+  top: 25%;
+  background: var(--pot);
+  border-radius: 100% / 80% 80%;
+  transform: translate(-50%, 0);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 10%, 99% 100%, 1% 100%, 0% 10%);
+}
+
+.pot-top::after {
+  width: 90%;
+  height: 65%;
+  background: var(--soil);
+  border-radius: 100%;
+  top: 4%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: inset 0 5.25vmin var(--pot-dark), 0 0.125vmin 0 1vmin #f9a758, -0.5vmin 0.25vmin 0 0.75vmin #f9a758, 0.5vmin 0.25vmin 0 0.75vmin #f9a758;
+}
+
+.pot-body {
+  left: 50%;
+  top: 35%;
+  width: 39%;
+  height: 38%;
+  background: var(--pot-dark);
+  border-radius: 100% / 75%;
+  clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+  box-shadow: inset 0 -23vmin 0 -7vmin var(--pot);
+  transform: translate(-50%, 0);
+}
+
+.eye {
+  width: 3vmin;
+  height: 3vmin;
+  background: white;
+  top: 62%;
+  left: 43%;
+  box-shadow: inset -0.75vmin -0.75vmin 0 1.125vmin black;
+}
+
+.eye + .eye {
+  left: 53%;
+}
+
+.mouth {
+  top: 65%;
+  left: 50%;
+  width: 3vmin;
+  height: 3vmin;
+  border-width: 0.75vmin;
+  transform: translate(-50%, 0) rotate(45deg);
+  border-left-color: transparent;
+  border-top-color: transparent;
+}
+
+.legs {
+  border-radius: 10vmin;
+  width: 25%;
+  height: 25%;
+  border: 3vmin solid black;
+  clip-path: polygon(-200% 0%, 200% 0%, 200% 60%, -200% 60%);
+  transform: translate(-50%,0);
+  left: 50%;
+  top: 67%;
+}
+
+.legs::before {
+  width: 70%;
+  height: 27%;
+  border-radius: 10vmin 10vmin 0 0;
+  background: black;
+  top: 40%;
+  left: -70%;
+  box-shadow: 24vmin 0;
+}
+
+.arms {
+  width: 90%;
+  height: 100%;
+  border: 2.25vmin solid transparent;
+  border-radius: 40vmin;
+  border-top-color: black;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.arms::before {
+  width: 5vmin;
+  height: 5vmin;
+  border-radius: 50%;
+  background: black;
+  top: 10%;
+  left: 8.25%;
+  box-shadow: 51vmin 0;
+}
+
+.green {
+  width: 50%;
+  height: 40%;
+  border-radius: 50%;
+  top: 0%;
+  left: 49%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+}
+
+.green::after {
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 50%;
+  bottom: -12vmin;
+  left: 5%;
+  box-shadow: inset -3vmin 1vmin 0 -1vmin var(--leaf);
+}
+
+.green::before {
+  width: 20vmin;
+  height: 30vmin;
+  border-radius: 50%;
+  bottom: -12vmin;
+  left: 5%;
+  box-shadow: inset -3vmin 1vmin 0 -1vmin var(--leaf);
+}
+
+.green-2::after {
+  height: 25vmin;
+  left: 52%;
+  box-shadow: inset 3.5vmin 1vmin 0 -1vmin var(--leaf);
+}

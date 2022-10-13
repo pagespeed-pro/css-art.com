@@ -1,0 +1,41 @@
+{
+    "name": "plugs-css-repeating-background",
+    "version": "1.0.0",
+    "title": "Plugs CSS repeating background",
+    "description": "\\#divtober Day 10: Organized 🔌 [a.singlediv.com](https://a.singlediv.com)",
+    "author": {
+        "name": "Lynn Fisher",
+        "avatar": "https://s.cdpn.io/profiles/user/1025350/512.jpg?1",
+        "web": "https://lynnandtonic.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/lynnandtonic"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/lynnandtonic"
+            },
+            {
+                "title": "Medium.com",
+                "url": "https://medium.com/@lynnandtonic"
+            }
+        ]
+    },
+    "html": "plugs-css-repeating-background.html",
+    "css": [
+        "plugs-css-repeating-background.css"
+    ],
+    "js": "// @lynnandtonic\n// a.singlediv.com\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "divtober",
+        "css",
+        "singlediv",
+        "illustration",
+        "drawing"
+    ],
+    "original": "https://codepen.io/lynnandtonic/pen/JjyjwXX",
+    "codepen": "https://codepen.io/lynnandtonic/pen/JjyjwXX"
+}

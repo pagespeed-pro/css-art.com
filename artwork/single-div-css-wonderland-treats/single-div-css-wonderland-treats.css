@@ -1,0 +1,64 @@
+body {
+  min-height: 220px;
+  height: 100vh;
+  position: relative;
+  background-color: #a52a2a;
+  text-align: center;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div:before,
+div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+#surprise {
+  width: 17em;
+  height: 10em;
+  margin-left: -8.5em;
+  margin-top: -5em;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#5f9ea0, #5f9ea0), linear-gradient(#ffd700, #ffd700), linear-gradient(#ccac00, #ccac00), linear-gradient(#ccac00, #ccac00), linear-gradient(#ccac00, #ccac00), radial-gradient(ellipse at 0 0, #ffd700 54%, rgba(255,215,0,0) 55%), radial-gradient(ellipse at 100% 0, #ffd700 54%, rgba(255,215,0,0) 55%), linear-gradient(#ffd700, #ffd700), linear-gradient(#ffd700, #ffd700), radial-gradient(ellipse at 100% 50%, #ccac00 60%, rgba(255,215,0,0) 61%), linear-gradient(#ffd700, #ffd700), linear-gradient(#ffd700, #ffd700), repeating-linear-gradient(to right, #8b4513, #8b4513 0.5em, #f4a460 0.5em, #f4a460 1em), repeating-linear-gradient(to right, #f4a460, #f4a460 0.5em, #8b4513 0.5em, #8b4513 1em), radial-gradient(circle, #00ced1 60%, rgba(0,206,209,0) 60.5%), radial-gradient(circle, #00ced1 60%, rgba(0,206,209,0) 60.5%), radial-gradient(circle, #00ced1 60%, rgba(0,206,209,0) 60.5%), radial-gradient(circle, #afeeee 54%, #00ced1 54.5%, #00ced1 60%, rgba(0,206,209,0) 60.5%), linear-gradient(to bottom, #ffd700 0.3em, #565078 0.3em);
+  background-size: 10.9em 2em, 13em 3.8em, 2em 3.8em, 0.6em 1em, 0.6em 1em, 2.5em 1.5em, 2.5em 1.5em, 0.6em 1em, 0.6em 1em, 2em 4.9em, 0.3em 5em, 0.3em 5em, 3em 1em, 3em 1em, 0.3em 0.3em, 0.3em 0.3em, 0.3em 0.3em, 6em 6em, 14em 5em;
+  background-position: right 1em bottom 1.9em, right bottom 1em, left 2em bottom 1em, left 2em bottom, left 3.4em bottom, left 4em bottom, right bottom, left 4em bottom, right bottom, left bottom 4.45em, left 2em bottom 4em, right 1em bottom 4em, left 3.8em bottom 4.2em, left 3.8em bottom 4.6em, left 4.2em bottom 6em, left 5.1em bottom 6.8em, left 5.5em bottom 5.8em, left 2.5em bottom 2.2em, left 2em bottom 4em;
+}
+#surprise:before,
+#surprise:after {
+  font-family: Myriad Pro, Helvetica, Arial;
+  font-weight: bold;
+}
+#surprise:before {
+  content: 'TRY ME';
+  width: 5em;
+  height: 5em;
+  display: grid;
+  place-content: center;
+  right: 0.5em;
+  bottom: 3em;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(-7deg, transparent 30%, #ffd700 30%, #ffd700 37%, transparent 37%), repeating-linear-gradient(180deg, #ffefd5, #ffefd5 0.2em, rgba(255,255,255,0) 0.21em, rgba(255,255,255,0) 0.4em), repeating-linear-gradient(90deg, #ffefd5, #ffefd5 0.2em, rgba(255,255,255,0) 0.21em, rgba(255,255,255,0) 0.4em), linear-gradient(-7deg, rgba(255,218,185,0) 37%, #ffdab9 37%);
+  background-size: 100% 100%, 100% 1em, 1em 70%, 100% 100%;
+  background-position: 0 0, 0 47%, 50% 0, 0 0;
+  border-radius: 50%;
+  color: #9370db;
+  transform: rotate(7deg);
+}
+#surprise:after {
+  font-size: 15px;
+  content: 'EAT ME';
+  width: 6em;
+  height: 1.1em;
+  padding-top: 1.4em;
+  left: 6.8em;
+  top: 3.05em;
+  background-repeat: space repeat, no-repeat;
+  background-image: radial-gradient(circle, #db7093 68%, rgba(219,112,147,0) 68.5%), linear-gradient(#db7093, #db7093);
+  background-size: 0.6em 0.6em, 5.5em 2.5em;
+  background-position: 50% 0, 50% 0.25em;
+  color: #ffc0cb;
+  text-align: center;
+}

@@ -1,0 +1,464 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300';
+body {
+  background-color: #ff5757;
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.875;
+}
+
+.container-boxy {
+  position: relative;
+  width: 820px;
+  margin: 50px auto;
+  padding: 60px;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 10px 10px 0 #ff2424;
+  background-color: #fff;
+}
+
+@keyframes rotateTail {
+  0%, 100% {
+    transform: rotate(-25deg);
+  }
+  50% {
+    transform: rotate(-35deg);
+  }
+}
+@keyframes mouthOpen {
+  0% {
+    width: 25px;
+  }
+  100% {
+    width: 7px;
+  }
+}
+@keyframes bubbs {
+  0%, 10% {
+    width: 10px;
+    height: 10px;
+    border-bottom-right-radius: 0;
+    transform: translate(0) scale(1);
+  }
+  30% {
+    border-bottom-right-radius: 0;
+    transform: translate(0) scale(2.3);
+  }
+  100% {
+    width: 10px;
+    height: 10px;
+    transform: translate(-70px, -20px) scale(4);
+  }
+}
+@keyframes flicker {
+  0% {
+    transform: skewY(0deg);
+  }
+  50% {
+    transform: skewY(10deg);
+  }
+}
+.poke {
+  position: relative;
+  display: inline-block;
+}
+.poke::before, .poke::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: -30px;
+  height: 40px;
+  width: 25px;
+  border-bottom-left-radius: 50% 40px;
+  border-bottom-right-radius: 50% 40px;
+}
+.poke::before {
+  left: 40px;
+  transform: rotate(-10deg);
+}
+.poke::after {
+  right: 40px;
+  transform: rotate(10deg);
+}
+
+.head {
+  position: relative;
+  z-index: 5;
+  width: 200px;
+  height: 155px;
+  border-top-left-radius: 50% 80px;
+  border-top-right-radius: 50% 80px;
+  border-bottom-left-radius: 55px;
+  border-bottom-right-radius: 55px;
+  overflow: hidden;
+}
+.head > div {
+  position: absolute;
+}
+.head .eye {
+  bottom: 35px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.head .eye:nth-child(1) {
+  left: 30px;
+}
+.head .eye:nth-child(2) {
+  right: 30px;
+}
+.head .mouth {
+  left: 50%;
+  bottom: 40px;
+  height: 10px;
+  width: 25px;
+  transform: translateX(-50%);
+}
+.head .mouth::after, .head .mouth::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  border-radius: 50%;
+  border-bottom: solid 3px #444;
+}
+.head .mouth::after {
+  left: 50%;
+}
+.head .cheek {
+  bottom: 15px;
+  height: 15px;
+  width: 30px;
+  border-radius: 50px/30px;
+  background-color: rgba(255, 112, 179, 0.8);
+}
+.head .cheek:nth-child(3) {
+  left: 10px;
+}
+.head .cheek:nth-child(4) {
+  right: 10px;
+}
+
+#pika .ear {
+  position: absolute;
+  top: -30px;
+  height: 80px;
+  width: 40px;
+  border-top-left-radius: 25px 100%;
+  border-top-right-radius: 25px 100%;
+  background-color: #fff069;
+  overflow: hidden;
+  transform-origin: center bottom;
+  transition: 0.3s;
+}
+#pika .ear::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 150%;
+  height: 40px;
+  background-color: #444;
+}
+#pika .ear:nth-child(1) {
+  left: 5px;
+  transform: rotate(-20deg);
+}
+#pika .ear:nth-child(1)::after {
+  transform: rotate(-15deg);
+}
+#pika .ear:nth-child(2) {
+  right: 5px;
+  transform: rotate(20deg);
+}
+#pika .ear:nth-child(2)::after {
+  transform: rotate(15deg);
+}
+#pika .head {
+  background-color: #fff069;
+}
+#pika .eye {
+  background-color: #444;
+}
+#pika .cheek {
+  bottom: -10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #ff5757;
+}
+#pika .cheek:nth-child(3) {
+  left: -10px;
+}
+#pika .cheek:nth-child(4) {
+  right: -10px;
+}
+#pika .tail {
+  position: absolute;
+  left: calc(50% - 10px);
+  top: -25px;
+  width: 20px;
+  height: 30px;
+  background-color: #ffe81d;
+  transform: rotate(-25deg);
+  transform-origin: center bottom;
+}
+#pika .tail::before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  width: 50px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #ffe81d;
+}
+#pika::before, #pika::after {
+  background-color: #ffe81d;
+}
+#pika:hover .ear:nth-child(1) {
+  transform: rotate(-35deg);
+}
+#pika:hover .ear:nth-child(2) {
+  transform: rotate(35deg);
+}
+#pika:hover .tail {
+  animation-name: rotateTail;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+}
+
+#squirt .head {
+  background-color: #4ee4ff;
+}
+#squirt .eye {
+  background-color: #594944;
+}
+#squirt::before, #squirt::after {
+  background-color: #1bdcff;
+}
+#squirt .tail {
+  position: absolute;
+  left: calc(50% - 15px);
+  top: -40px;
+  width: 60px;
+  height: 100px;
+  border-radius: 50px;
+  border-left: 40px solid #1bdcff;
+  transform-origin: center bottom;
+  transition: 0.3s;
+}
+#squirt .tail::before, #squirt .tail::after {
+  content: "";
+  position: absolute;
+}
+#squirt .tail::before {
+  top: 0;
+  left: -20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #1bdcff;
+}
+#squirt .tail::after {
+  top: 20px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border-left: solid 3px #00c4e7;
+  border-top: solid 3px #00c4e7;
+}
+#squirt .bubble {
+  position: absolute;
+  z-index: 14;
+  bottom: 40px;
+  left: 85px;
+  border-radius: 50%;
+  background-color: #4ee4ff;
+  mix-blend-mode: screen;
+  transform-origin: right bottom;
+}
+#squirt:hover .tail {
+  transform: rotate(-10deg);
+}
+#squirt:hover .mouth {
+  animation-name: mouthOpen;
+  animation-duration: 0.4s;
+  width: 7px;
+  height: 5px;
+  background-color: #594944;
+  border-radius: 50%;
+}
+#squirt:hover .mouth::after, #squirt:hover .mouth::before {
+  visibility: hidden;
+}
+#squirt:hover .bubble {
+  animation-delay: 0.4s;
+  animation-name: bubbs;
+  animation-duration: 1.4s;
+  animation-iteration-count: infinite;
+}
+
+#char .head {
+  background-color: #ff9147;
+}
+#char .eye {
+  background-color: #405955;
+}
+#char::before, #char::after {
+  background-color: #ff7314;
+}
+#char .tail {
+  position: absolute;
+  left: calc(50% - 10px);
+  top: -40px;
+  width: 60px;
+  height: 100px;
+  border-radius: 50px;
+  border-left: 40px solid #ff7314;
+  transform-orgin: center bottom;
+  transition: 0.3s;
+}
+#char .tail::before, #char .tail::after {
+  content: "";
+  position: absolute;
+}
+#char .tail::before {
+  top: -35px;
+  left: calc(50% - 40px);
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 0 50% 50%;
+  background-color: #fff069;
+}
+#char .tail::after {
+  top: -15px;
+  left: calc(50% - 30px);
+  width: 20px;
+  height: 20px;
+  border-radius: 50% 0 50% 100%;
+  background-color: #ff5757;
+}
+#char:hover .tail {
+  transform: rotate(-15deg);
+}
+#char:hover .tail::before, #char:hover .tail::after {
+  animation-delay: 0.4s;
+  animation-name: flicker;
+  animation-iteration-count: infinite;
+}
+#char:hover .tail::before {
+  animation-duration: 0.4s;
+}
+#char:hover .tail::after {
+  animation-duration: 0.2s;
+}
+
+#bulba .ear {
+  position: absolute;
+  z-index: 3;
+  top: -10px;
+  height: 40px;
+  width: 55px;
+  border-top-left-radius: 50px 70px;
+  border-top-right-radius: 50px 70px;
+  background-color: #56ffe9;
+  transform-origin: center bottom;
+  transition: 0.3s;
+}
+#bulba .ear:nth-child(1) {
+  left: 5px;
+  transform: rotate(-40deg);
+}
+#bulba .ear:nth-child(2) {
+  right: 5px;
+  transform: rotate(40deg);
+}
+#bulba .head {
+  background-color: #56ffe9;
+}
+#bulba .head::before, #bulba .head::after {
+  content: "";
+  position: absolute;
+  background-color: #00bca4;
+}
+#bulba .head::before {
+  top: 40px;
+  left: 60px;
+  height: 35px;
+  width: 35px;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 10px 40px;
+  border-top-left-radius: 40px 10px;
+  border-top-right-radius: 5px;
+  transform: rotate(-20deg);
+}
+#bulba .head::after {
+  top: 25px;
+  right: 40px;
+  height: 20px;
+  width: 20px;
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 5px 10px;
+  border-top-left-radius: 10px 5px;
+  border-top-right-radius: 5px;
+  transform: rotate(20deg);
+}
+#bulba .eye {
+  background-color: #444;
+}
+#bulba::before, #bulba::after {
+  background-color: #0affdf;
+}
+#bulba .bulbs {
+  position: absolute;
+  z-index: 2;
+  top: -30px;
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  transform: rotate(45deg);
+}
+#bulba .bulbs::before, #bulba .bulbs::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  width: 80px;
+  height: 80px;
+  border-radius: 0 50% 100% 50%;
+  background-color: #00bca4;
+}
+#bulba .bulbs::before {
+  transform: translate(-20px, 25px) rotate(15deg);
+}
+#bulba .bulbs::after {
+  transform: translate(25px, -20px) rotate(-15deg);
+}
+#bulba .bulbs .bulb {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 50% 100% 50%;
+  background-color: #00d6ba;
+}
+#bulba:hover .ear:nth-child(1) {
+  transform: rotate(-55deg) translateY(5px);
+}
+#bulba:hover .ear:nth-child(2) {
+  transform: rotate(55deg) translateY(5px);
+}
+#bulba:hover .bulbs {
+  animation-name: squish;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes squish {
+  0% {
+    transform: rotate(45deg) scale(1);
+  }
+  80% {
+    transform: rotate(45deg) scale(1.2);
+  }
+}

@@ -1,0 +1,268 @@
+html, body {
+    background-color: #ddf8ff;
+  background: linear-gradient(to right, #d6effd 47%, #ffd8dd 53%)
+}
+
+.cartoon {
+  --angel-skin: #fca;
+  --demon-skin: #d43;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.4vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+.text {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12vmin;
+}
+
+.text span {
+  font-family: Parisienne;
+}
+
+.text span:nth-child(2) {
+  font-size: 6vmin;
+}
+
+.text span:last-child {
+  font-family: Ruthie;
+  font-size: 14vmin;
+}
+
+.angel, .demon {
+  width: 40%;
+  height: 70%;
+  top: 30%;
+}
+
+.angel {
+  left: 0;
+  color: #222;
+}
+
+.head {
+  width: 40%;
+  height: 15%;
+  border-radius: 100% / 20%;
+  top: 35%;
+}
+
+.angel.head {
+  background: var(--angel-skin);
+}
+
+.demon.head {
+  left: 60%;
+  background: var(--demon-skin);
+  color: #000;
+}
+
+.eye {
+  left: 42%;
+  width: 2.5%;
+  height: 6.6666%;
+  background: #333;
+  top: 50%;
+  transform: translate(-50%, 0);
+}
+
+.eye + .eye {
+  left: 58%;
+}
+
+.demon .eye {
+  background: #111;
+}
+
+.demon .eye::before {
+  width: 200%;
+  height: 25%;
+  background: #111;
+  transform: translate(-35%, -50%)  rotate(15deg) ;
+}
+
+.demon .eye + .eye {
+  transform: scaleX(-1);
+}
+
+.mouth {
+  width: 6%;
+  height: 16%;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  left: 50%;
+  top: 55%;
+  transform: rotate(-45deg) translate(-50%, 0);
+}
+
+.demon .mouth {
+  width: 6.66%;
+  height: 17.333%;
+}
+
+.ear {
+  width: 9%;
+  height: 24%;
+  background: var(--angel-skin);
+  top: 50%;
+  left: 0;
+  transform: translate(-50%,-50%);
+}
+
+.ear + .ear {
+  left: 100%;
+}
+
+.demon .ear {
+  background: var(--demon-skin)
+}
+
+.halo {
+  border-width: 0.75vmin;
+  width: 50%;
+  height: 20%;
+  color: gold;
+  left: 50%;
+  top: -40%;
+  transform: translate(-50%, -50%);
+}
+
+.horn {
+  width: 66.6%;
+  top: -66.6%;
+  height: 80%;
+  left: 16.6%;
+  box-shadow: 0 1.9vmin 0 1.7vmin var(--demon-skin);
+  clip-path: polygon(-50% 28%, 150% 28%, 150% 150%, -50% 150%)
+}
+
+.angel .hair {
+  width: 15%;
+  height: 33%;
+  background: darkorange;
+  color: darkorange;
+  left: 42.5%;
+  top: -17%;
+  box-shadow: -3vmin 0 0 -0.5vmin, -2vmin -1.5vmin 0 -1vmin, 3vmin -0.75vmin 0 0.25vmin;
+}
+
+.demon .hair {
+  width: 40%;
+  height: 15%;
+  top: 4%;
+  left: 24%;
+  box-shadow: 3vmin -0.5vmin 0 3vmin #222;
+  transform: rotate(6.66deg);
+  clip-path: polygon(0% 50%, 100% 50%, 105% 25%, 110% 66.6%, 115% 20%, 120% 66.6%, 125% 33.3%, 130% 66.6%, 135% 45%, 140% 66.6%, 145% 0%, 150% -200%, 0% -200%);
+  clip-path: polygon(0% 50%, 100% 70%, 120% 50%, 110% 85%, 130% 85%, 150% 75%, 150% -200%, 0% -200%);
+  clip-path: polygon(0% 50%, 100% 50%, 100% 4%, 120% 55%, 120% 18%, 144% 60%, 135% 10%, 200% 100%, 150% 0%, 150% -200%, 0% -200%);
+}
+
+.body {
+  width: 10%;
+  height: 40%;
+  top: 45%;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 200% 100%, 200% 200%, -100% 200%, -100% 0%, 0% 100%);
+  transform: translate(-50%, 0);
+}
+
+.angel.body {
+  background: white;
+  left: 20%;
+}
+
+.demon.body {
+  background: #222;
+  left: 80%;
+}
+
+.foot {
+  width: 25%;
+  height: 15%;
+  top: 100%;
+  border-radius: 0 0 50% 100%;
+}
+
+.foot + .foot {
+  transform: scaleX(-1);
+  margin-left: 65%;
+}
+
+.angel .foot {
+  background: var(--angel-skin);
+  left: 5%;
+}
+
+.demon .foot {
+  background: var(--demon-skin);
+  left: 6.66%;
+}
+
+.demon .foot + .foot {
+  transform: scaleX(-1);
+  margin-left: 62%;
+}
+
+.demon.tail {
+  width: 20%;
+  height: 20%;
+  box-shadow: -0.666vmin 0.666vmin var(--demon-skin);
+  top: 66.6%;
+  left: 66.6%;
+  margin-left: 0.666%;
+  margin-top: -6.66%;
+}
+
+
+.demon.tail::after {
+  width: 20%;
+  height: 20%;
+  background: var(--demon-skin);
+  transform: rotate(45deg);
+  clip-path: polygon(50% 0%, 100% 100%, 50% 75%, 0% 100%);
+  top: 10%;
+  left: 1.5%;
+}
+
+.angel.wing {
+  width: 15%;
+  height: 10%;
+  top: 52%;
+  left: 2.5%;
+  background: radial-gradient(at 30% -10%, #aaddee 40%, transparent 0), radial-gradient(at 75% 25%, #aaddee 42%, transparent 0)
+}
+
+.angel.wing + .wing {
+  transform: scaleX(-1);
+  left: auto;
+  left: 22.5%;
+}

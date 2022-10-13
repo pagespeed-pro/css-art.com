@@ -1,0 +1,30 @@
+.wonder {
+  width: 300px;
+  aspect-ratio: 1;
+  border-radius: 0 0 50% 50%;
+  --_g: #0000, #da8e40 0.5% 6%,#f7b770 6.5% 22.5%,#0000 23%;
+  --_l: linear-gradient(#dc9247 0 0) no-repeat;
+  background:
+    var(--_l) 48% 30%/6% 2px,var(--_l) 40% 35%/4% 2px,
+    var(--_l) 55% 40%/6% 2px,var(--_l) 45% 45%/6% 2px,
+    var(--_l) 50% 50%/8% 2px,var(--_l) 30% 51%/8% 2px,
+    var(--_l) 30% 40%/8% 2px,var(--_l) 25% 45%/4% 2px,
+    var(--_l) 18% 53%/4% 2px,var(--_l) 72% 43%/4% 2px,
+    var(--_l) 82% 53%/6% 2px,var(--_l) 78% 47%/4% 2px,
+    linear-gradient(#0000 56%,#c37d38 0),
+    conic-gradient(from 141deg at 30% 33%,var(--_g)),
+    conic-gradient(from 141deg at 49% 21%,var(--_g)),
+    conic-gradient(from 141deg at 75% 33%,var(--_g)),
+    radial-gradient(circle at 50% 38%,#ffcb03 44%,#0000 45%);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background: #A7DBD8;
+}
+
+
+/* https://www.istockphoto.com/vector/egyptian-pyramids-isolated-on-white-background-gm1342284703-421764129 */

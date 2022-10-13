@@ -1,0 +1,537 @@
+.cartoon {
+  --skin: #ffd8aa;
+  --hair: #000;
+  --color: #000;
+  --line-width: 0.6vmin;
+  --neck: #fff;
+  --dress: #d00;
+  --nose: #f96;
+  color: var(--color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: var(--line-width) solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+.chin {
+  width: 43%;
+  height: 23%;
+  border-radius: 50% 50% 70% 70% / 90%;
+  background: var(--skin);
+  left: 28%;
+  top: 34%;
+  transform: rotate(4deg);
+  border-top-color: var(--skin);
+}
+
+.chin::before,
+.chin::after {
+  width: 30%;
+  height: 83%;
+  border-radius: 60% / 100%;
+  border: var(--line-width) solid;
+  transform: rotate(-30deg);
+  top: -66%;
+  left: -15%;
+  background: var(--hair);
+  box-shadow: 10vmin 5vmin 0 4vmin var(--skin)
+}
+
+.chin::before {
+  left: auto;
+  width: 35%;
+  right: -15%;
+  top: -69.75%;
+  transform: rotate(33deg);
+  box-shadow: -10vmin 5vmin 0 4vmin var(--skin);
+  z-index: 1;
+}
+
+.eyebrow {
+  width: 22%;
+  height: 11%;
+  border: 0.75vmin solid;
+  border-radius: 100vmin 100vmin 0 0;
+  border-bottom: 0;
+  top: 13%;
+  left: 40.5%;
+  transform: rotate(3deg);
+}
+
+.neck {
+  width: 22%;
+  height: 12.5%;
+  top: 47.75%;
+  left: 37%;
+  transform: rotate(3deg);
+  background: var(--skin);
+}
+
+.dress-neck {
+  width: 20%;
+  height: 11.5%;
+  transform: rotate(-42deg);
+  top: 52%;
+  left: 31.5%;
+  background: var(--neck);
+}
+
+.dress-neck::after {
+  width: 110%;
+  height: 110%;
+  border: var(--line-width) solid;
+  border-radius: 50% 50% 60% 50%;
+  transform: rotate(90deg);
+  top: 7.5vmin;
+  left: 6.5vmin;
+  background: var(--neck);
+}
+
+.dress-buttons {
+  width: 9%;
+  height: 20%;
+  transform: skewY(2deg) rotate(5deg);
+  top: 51%;
+  left: 43.5%;
+  background: var(--neck);
+}
+
+.dress-buttons::before {
+  width: 80%;
+  height: 40%;
+  border-radius: 90%;
+  background: var(--color);
+  top: 30%;
+}
+
+.dress-buttons::after {
+  width: 45%;
+  height: 20%;
+  border-radius: 120%  90% 150% 100% ;
+  background: var(--color);
+  top: 75%;
+  left: 15%;
+}
+
+.dress {
+  width: 70%;
+  height: 24%;
+  border-color: transparent;
+  border-bottom-color: var(--color);
+  top: 56%;
+  left: 11%;
+  transform: rotate(4deg);
+  overflow: hidden;
+}
+
+.dress::after {
+  border-right: var(--line-width) solid;
+  height: 140%;
+  width: 30%;
+  right: -3.5%;
+  transform-origin: bottom left;
+  transform: rotate(-50deg);
+  top: 7.5%;
+  background: var(--dress);
+}
+
+.dress::before {
+  height: 160%;
+  width: 17%;
+  border: var(--line-width) solid;
+  border-radius: 50%;
+  transform: rotate(53deg);
+  border-left-color: transparent;
+  top: -40.5%;
+  left: 4%;
+  box-shadow: 15vmin -5vmin 0 14vmin var(--dress);
+}
+
+.arms {
+  width: 30%;
+  height: 20%;
+  top: 56%;
+  left: 19.6%;
+  background: var(--dress);
+}
+
+.arms::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 100% 110% 60% 100% / 100%;
+  border: var(--line-width) solid;
+  left: 84%;
+  top: 5%;
+  background: var(--dress);
+}
+
+.legs {
+  width: 20%;
+  height: 20%;
+  top: 70%;
+  left: 27%;
+  transform: skewX(-10deg);
+  background: var(--skin);
+  background: linear-gradient(185deg, var(--skin) 59%, var(--color) 59.25% 63%, white 63.25% 66%, var(--color) 66.5% 70%, white 70.5%)
+}
+
+.legs::after {
+  transform: skewX(10deg);
+  width: 100%;
+  height: 100%;
+  border: var(--line-width) solid;
+  left: 90%;
+  background: var(--skin);
+  background: linear-gradient(-183deg, var(--skin) 60%, var(--color) 60.25% 63.5%, white 63.85%)
+}
+
+.shoe {
+  width: 26%;
+  height: 20.5%;
+  border-radius: 90% 120% 0 0;
+  top: 83.5%;
+  left: 21%;
+  overflow: hidden;
+}
+
+.shoe + .shoe {
+  height: 19%;
+  width:25%;
+  top: 84%;
+  left: 43%;
+  transform: scaleX(-1);
+  border-radius: 90% 120% 40% 60%;
+}
+
+.shoe::before {
+  width: 130%;
+  left: -24%;
+  top: -30%;
+  height: 80%;
+  border-radius: 50%;
+  background: var(--color);
+}
+
+.shoe::after {
+  width: 50%;
+  height: 45%;
+  border-radius: 0 100% 0% 100%;
+  background: #ccc;
+  transform: scaleX(-1) rotate(-34deg);
+  left: 20%;
+  top: -3%;
+}
+
+.shoe + .shoe::after {
+  width: 52%;
+  transform: scaleX(-1) rotate(-30deg);
+}
+.eyes {
+  width: 4%;
+  height: 24%;
+  background: var(--color);
+  top: -34%;
+  left: 38%;
+  z-index: 1;
+  transform: rotate(-2deg);
+  box-shadow: 6vmin 0vmin 0 -0.125vmin, 6.125vmin 0vmin 0 -0.125vmin;;
+}
+
+.nose {
+  width: 18%;
+  height: 30%;
+  left: 40%;
+  top: -12%;
+  z-index: 1;
+  border: 0.75vmin solid;
+  border-radius: 90% 120% 100% 100%;
+  background: var(--nose);
+}
+
+.mouth {
+  width: 67%;
+  height: 50%;
+  top: -5%;
+  left: 15.5%;
+}
+
+.mouth::after {
+  width: 100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  background: var(--skin);
+
+  transform: rotate(-2deg);
+  border-radius: 0 0 3vmin 2.75vmin;
+  box-shadow: -2.75vmin -2.75vmin var(--skin), 2.95vmin -2.75vmin var(--skin), -0.5vmin 0.66vmin, 0.5vmin 0.6vmin;
+}
+
+.mouth::before {
+  width: 80%;
+  left: 10%;
+  height: 75%;
+  top: 60%;
+  border-radius: 50%;
+  background: var(--color);
+}
+
+.hair-top {
+  width: 40.5%;
+  height: 40%;
+  top: 6.25%;
+  left: 30%;
+  overflow: hidden;
+}
+
+.hair-top::after {
+  width: 120%;
+  left: -10%;
+  height: 120%;
+  top: 30%;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10vmin;
+}
+
+.hair-back {
+  width: 76%;
+  left: 10%;
+  top: 10%;
+  height:50%;
+  background: var(--color);
+  border-radius: 100% 100% 50% 100% / 100% 100% 90% 70%;
+}
+
+.pompom {
+  width: 4%;
+  height: 4%;
+  border-top-width: 0.75vmin;
+  background: var(--dress);
+  left: 21%;
+  top: 85%;
+}
+
+.pompom::after {
+  width: 120%;
+  height: 130%;
+  border: var(--line-width) solid;
+  background: var(--dress);
+  border-radius: 100%;
+  left: 1700%;
+  top: -20%;
+}
+
+.knot {
+  width: 6.5%;
+  height: 6%;
+  transform: rotate(40deg);
+  border-radius: 1vmin;
+  top: 4.5%;
+  left: 45%;
+  background: var(--dress);
+}
+
+.knot::after {
+  width: 100%;
+  height: 130%;
+  border: var(--line-width) solid;
+  border-radius: 1vmin;
+  transform: rotate(30deg);
+  left: 60%;
+  top: -70%;
+  background: var(--dress);
+  z-index: -1;
+}
+
+.bow-1 {
+  width: 30%;
+  height: 25%;
+  border-color: transparent;
+  border-top-color: var(--color);
+  top: 4%;
+  left: 20%;
+  overflow: hidden;
+}
+
+.bow-1::after {
+  width: 25%;
+  height: 70%;
+  border:var(--line-width) solid;
+  top: 13%;
+  left: 11%;
+  transform-origin: top left;
+  transform: skewY(30deg);
+  border-radius: 0 2vmin;
+  box-shadow: 9vmin -17vmin 0 2vmin var(--dress), 2vmin -9vmin 0 2vmin var(--dress);
+  border-left-color: transparent;
+}
+
+.bow-1 + .bow-1 {
+  transform: scaleX(-1) rotate(-2deg);
+  left: 50%;
+  width: 32%;
+  top: 5%;
+}
+
+.hair {
+  width: 22%;
+  height: 10%;
+  border: var(--line-width) solid transparent;
+  border-top-color: var(--color);
+  border-radius: 49%;
+  transform-origin: top right;
+  abackground: #f006;
+}
+
+.hair-1 {
+  top: 10%;
+  left: 13%;
+  transform: rotate(-20deg)
+}
+
+.hair-4 {
+  top: 15.75%;
+  left: 5.5%;
+  transform: rotate(-22deg)
+}
+
+.hair-3 {
+  top: 17.5%;
+  left: 2%;
+  transform: rotate(-30deg)
+}
+
+.hair-2 {
+  top: 21%;
+  left: -1.25%;
+  transform: rotate(-40deg)
+}
+
+.hair-5 {
+  top: 25%;
+  left: -8.5%;
+  transform: rotate(-70deg);
+}
+
+.hair-6 {
+  top: 23%;
+  left: -6.5%;
+  transform: rotate(-60deg);
+}
+
+.hair-7 {
+  top: 27%;
+  left: -8.6%;
+  transform: rotate(-75deg);
+}
+
+.hair-8 {
+  top: 36%;
+  left: -9%;
+  transform: rotate(-100deg);
+}
+
+
+
+
+
+
+
+
+.hair-9 {
+  top: 18%;
+  left: 63%;
+  transform: rotate(17deg)
+}
+
+.hair-10 {
+  width: 24%;
+  top: 24%;
+  left: 64%;
+  transform: rotate(28deg)
+}
+
+.hair-11 {
+  top: 29%;
+  left: 68%;
+  transform: rotate(35deg)
+}
+
+.hair-12 {
+  top: 34%;
+  left: 68.5%;
+  transform: rotate(50deg)
+}
+
+.hair-13 {
+  top: 47%;
+  left: 68.5%;
+  transform: rotate(70deg);
+}
+
+.hair-14 {
+  top: 51%;
+  left: 66%;
+  transform: rotate(79deg);
+}
+
+.hair-15 {
+  top: 61%;
+  left: 59%;
+  transform: rotate(105deg);
+}
+
+.hair-16 {
+  top: 62%;
+  left: 54%;
+  transform: rotate(120deg);
+}
+
+.hair-17 {
+  top: 8%;
+  left: 30%;
+  transform: rotate(3deg);
+}
+
+.hair-18 {
+  top: 8%;
+  left: 30%;
+  transform: rotate(-6deg);
+}
+
+.hair-19 {
+  top: 7.5%;
+  left: 47%;
+  transform: rotate(-3deg);
+}
+
+.hair-20 {
+  top: 11%;
+  left: 49%;
+  transform: rotate(6deg);
+}

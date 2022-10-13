@@ -1,0 +1,34 @@
+{
+    "name": "css-only-nezuko",
+    "version": "1.0.0",
+    "title": "CSS only Nezuko",
+    "description": "More CSS Arts: http://css-only.art/",
+    "author": {
+        "name": "Temani Afif",
+        "avatar": "https://assets.codepen.io/1480814/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1637754747&width=512",
+        "web": "https://css-only.art/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/t_afif/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/ChallengesCss"
+            }
+        ]
+    },
+    "html": "css-only-nezuko.html",
+    "css": [
+        "css-only-nezuko.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "css-art"
+    ],
+    "original": "https://codepen.io/t_afif/pen/abEeMyY",
+    "codepen": "https://codepen.io/t_afif/pen/abEeMyY"
+}

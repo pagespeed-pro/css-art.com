@@ -1,0 +1,41 @@
+{
+    "name": "css-driving-game",
+    "version": "1.0.0",
+    "title": "CSS Driving Game",
+    "description": "You are the white car driving on the highway, and need to avoid hitting the other cars on the road. \n\nThis game was developed using CSS and HTML and doesn't have any JavaScript. But if follows a different approach to other CSS games as it doesn't have checkboxes/radios. And it works on desktop and mobile!\n\n## How to play\n\nMove your mouse around for the car to move, and be careful not to get out of the road or crash against another car!\n\n- Keep your mouse moving to move the car\n- Stay on the road (you'll lose if your mouse gets out of the road)\n- Don't hit other cars\n\nTo restart the game, just place your mouse outside of the square and then back on the road. Enjoy :)\n",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "css-driving-game.html",
+    "css": [
+        "css-driving-game.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "html",
+        "game",
+        "nojs",
+        "nojavascript"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/eYYzzWg",
+    "codepen": "https://codepen.io/alvaromontoro/pen/eYYzzWg"
+}

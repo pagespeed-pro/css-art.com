@@ -20,6 +20,7 @@
     },
     "html": "css-art-red-polaroid-camera.html",
     "css": [
+        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css",
         "css-art-red-polaroid-camera.css"
     ],
     "js": "",

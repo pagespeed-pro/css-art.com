@@ -1,0 +1,41 @@
+{
+    "name": "13-forever-divtober-2022",
+    "version": "1.0.0",
+    "title": "13. Forever - Divtober 2022",
+    "description": "This entry for #divtober was the most challenging in terms of time-sunk since the day 2 sunset. The track and car came remarkably quickly, but the animating of the car around the track became a complex math problem I couldn't figure out how to solve elegantly.  I know there must be a smoother approach and welcome feedback on how to refactor this to be less bumpy.",
+    "author": {
+        "name": "Greg Robleto",
+        "avatar": "https://assets.codepen.io/28337/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1641427924&width=512",
+        "web": "http://www.robleto.com",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/robleto/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/robleto"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/robleto"
+            }
+        ]
+    },
+    "html": "13-forever-divtober-2022.html",
+    "css": [
+        "13-forever-divtober-2022.css"
+    ],
+    "js": "/* This entry  for #divtober was the most challenging in terms of time-sunk since the day 2 sunset. The track and car came remarkably quickly, but the animating of the car around the track became a complex math problem I couldn't figure out how to solve elegantly.  I know there must be a smoother approach and welcome feedback on how to refactor this to be less bumpy. There is a time-lapse video of making this piece at https://youtu.be/j2_0uhsJpEY */",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "cssart",
+        "cssanimation",
+        "racecar",
+        "divtober"
+    ],
+    "original": "https://codepen.io/robleto/pen/LYmgdXq",
+    "codepen": "https://codepen.io/robleto/pen/LYmgdXq"
+}

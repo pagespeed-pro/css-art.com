@@ -1,0 +1,50 @@
+#one-dollar {
+  width: 456px;
+  height: 194px;
+  background: #ebeec7;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+/*   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+
+#one-dollar::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  color: #998;
+  /*
+  The box shadow has been added as an external file because its content is too large to be in the editor. You can see the file here: https://s3-us-west-2.amazonaws.com/s.cdpn.io/1506195/one-dollar.css
+  */
+}
+
+@keyframes rain {
+  from {
+    top: 5px;
+    left: 5px;
+    transform: rotate(0deg)
+  }
+  to {
+    top: 150vh;
+    left: 45vw;
+    transform: rotate(720deg);
+  }
+}
+
+#one-dollar {
+  animation: rain 3s infinite;
+}
+
+
+#one-dollar:nth-child(2) { animation-delay: -0.0s; }
+#one-dollar:nth-child(3) { animation-delay: -0.5s; }
+#one-dollar:nth-child(4) { animation-delay: -1.0s; }
+#one-dollar:nth-child(5) { animation-delay: -1.5s; }
+#one-dollar:nth-child(6) { animation-delay: -2.0s; }
+#one-dollar:nth-child(7) { animation-delay: -2.5s; }
+#one-dollar:nth-child(1) { animation: none; }

@@ -1,0 +1,54 @@
+body {
+  min-height: 400px;
+  height: 100vh;
+  position: relative;
+  background-color: #444;
+  overflow: hidden;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div:before,
+div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+#zap {
+  font-size: 10px;
+  width: 40em;
+  height: 35em;
+  margin-left: -20em;
+  top: auto;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, white 50%, rgba(255,255,255,0) 51%), radial-gradient(circle, #ccc 50%, transparent 51%), radial-gradient(circle, #999 50%, transparent 51%), repeating-linear-gradient(to bottom, #888, #888 0.5em, transparent 0.5em, transparent 1.5em), repeating-linear-gradient(to bottom, white, white 0.5em, transparent 0.5em, transparent 1.5em), repeating-linear-gradient(to bottom, #ccc, #ccc 0.5em, transparent 0.5em, transparent 1.5em), linear-gradient(to right, #aaa 50%, #ccc 50%), radial-gradient(circle, white 50%, rgba(255,255,255,0) 51%), radial-gradient(circle, #ccc 50%, transparent 51%), radial-gradient(circle, #999 50%, transparent 51%), repeating-linear-gradient(to bottom, #888, #888 0.5em, transparent 0.5em, transparent 1.5em), repeating-linear-gradient(to bottom, white, white 0.5em, transparent 0.5em, transparent 1.5em), repeating-linear-gradient(to bottom, #ccc, #ccc 0.5em, transparent 0.5em, transparent 1.5em), linear-gradient(to left, #aaa 50%, #ccc 50%), linear-gradient(110deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(80deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(100deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(82deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(97deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(70deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(105deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(78deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(100deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(75deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(110deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(80deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(110deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(75deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(100deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(70deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(100deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(60deg, rgba(0,255,0,0) 40%, rgba(0,255,0,0.5) 49.5%, #0f0 49%, #0f0 51%, rgba(0,255,0,0.5) 51.5%, rgba(0,255,0,0) 60%), linear-gradient(290deg, rgba(255,255,255,0) 50%, #ddd 51%), linear-gradient(290deg, #ddd 50%, rgba(255,255,255,0) 51%);
+  background-size: 3em 3em, 8em 8em, 9em 9em, 1em 65%, 0.8em 65%, 2.5em 65%, 1.5em 80%, 3em 3em, 8em 8em, 9em 9em, 1em 65%, 0.8em 65%, 2.5em 65%, 1.5em 80%, 4em 5em, 4em 10em, 4em 9em, 4em 4em, 4em 3em, 4em 5em, 4em 4em, 4em 3em, 4em 5em, 4em 3em, 4em 5em, 4em 7em, 4em 5em, 4em 3em, 4em 2em, 4em 4em, 4em 6em, 4em 5em, 0.8em 2em, 0.8em 2em;
+  background-position: left 5em top 5.5em, left 2em top 4em, left 1.4em top 3.9em, left 4.6em bottom, left 6.3em bottom, left 4.6em bottom, left 5.1em bottom, right 5em top 5.5em, right 2em top 4em, right 1.4em top 3.9em, right 4.6em bottom, right 6.3em bottom, right 4.6em bottom, right 5.1em bottom, 7.2em 5em, 9.1em 5em, 10.8em 6em, 11.9em 6em, 12.4em 7em, 13.6em 7em, 15.1em 8em, 16em 8em, 16.8em 6em, 17.7em 6em, 19.1em 4em, 20.7em 4em, 22.2em 6em, 23.6em 6em, 24.2em 7em, 25.2em 7em, 26.5em 5em, 28.6em 5em, 5.8em 2em, 5.1em 0em;
+}
+@media screen and (max-width: 400px) {
+  #zap {
+    font-size: 8px;
+  }
+}
+#zap:before,
+#zap:after {
+  width: 36em;
+  height: 36em;
+  left: 2em;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(160deg, rgba(255,255,255,0) 50%, #ddd 51%), linear-gradient(160deg, #ddd 50%, rgba(255,255,255,0) 51%), linear-gradient(160deg, rgba(255,255,255,0) 50%, #ddd 51%), linear-gradient(160deg, #ddd 50%, rgba(255,255,255,0) 51%);
+  background-size: 2em 0.8em;
+}
+#zap:before {
+  top: -7em;
+  background-position: left 0 bottom 4em, left 2em bottom 4.5em, right 6em top 1.5em, right 4em top 1em;
+  transform: rotate(55deg);
+}
+#zap:after {
+  top: -8em;
+  background-position: left 2.5em top 4em, left 4.5em top 4.5em, right 2em bottom 7.5em, right 0em bottom 7em;
+  transform: rotate(-55deg);
+}

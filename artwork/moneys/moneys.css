@@ -1,0 +1,55 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300';
+@keyframes fadeOn {
+  50%, 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  0%, 10% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+svg .f-seaweed {
+  fill: #588886;
+}
+
+#stackInd use {
+  animation-name: fadeOn;
+  animation-duration: 0.8s;
+}
+
+#moneyMain {
+  transition: 0.8s;
+}
+
+body {
+  background-color: #588886;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a.button {
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  background-color: #416866;
+  color: #fff;
+  display: inline-block;
+  transition: 0.15s;
+}
+a.button:hover {
+  background-color: #abc3c2;
+}
+
+.container {
+  margin: 20px auto;
+  padding: 20px;
+  width: 40%;
+  min-width: 220px;
+  box-shadow: 10px 10px 0 #416866;
+  background-color: #fff;
+  text-align: center;
+}
+
+.container-btns {
+  text-align: center;
+}

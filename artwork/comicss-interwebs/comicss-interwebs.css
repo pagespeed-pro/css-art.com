@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+
+article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.75vmin solid;
+  width: 90vmin;
+  aspect-ratio: 1;
+  background: #beeeef;
+  box-sizing: border-box;
+}
+
+article *,
+article *::before,
+article *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.web {
+  width: 90%;
+  height: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  background:
+    /* main threads */
+    linear-gradient(#000 0 0) 50% 0 / 0.4% 90%,
+    linear-gradient(15deg, #0000 59.5%, #000 0 61%, #0000 0) 80% 0 / 35% 40%,
+    linear-gradient(45deg, #0000 60%, #000 0 61%, #0000 0) 60% 0 / 35% 70%,
+    linear-gradient(-55deg, #0000 60%, #000 0 61%, #0000 0) 45% 0 / 35% 70%,
+    linear-gradient(-24deg, #0000 59.9%, #000 0 61%, #0000 0) 30% 0 / 40% 45%,
+    /* connectors */
+    linear-gradient(92deg, #0000 60%, #000 0 61%, #0000 0) -4% 0 / 35% 40%,
+    radial-gradient(farthest-side at 0 100%, #0000 96.5%, #000 0 99.9%, #0000 0) 40.5% 88% / 17% 22%,
+    radial-gradient(farthest-side at 10% 100%, #0000 95%, #000 0 99.9%, #0000 0) 43.5% 58% / 12% 18%,
+    radial-gradient(farthest-side at 10% 100%, #0000 93%, #000 0 99.9%, #0000 0) 46.25% 34% / 7.7% 13%,
+    radial-gradient(farthest-side at 100% 100%, #0000 94%, #000 0 99.9%, #0000 0) 55.5% 32% / 10.25% 13%,
+    radial-gradient(farthest-side at 90% 100%, #0000 96%, #000 0 99.9%, #0000 0) 59.5% 58% / 16.5% 20%,
+    radial-gradient(farthest-side at 90% 105%, #0000 97%, #000 0 99.9%, #0000 0) 65.25% 88% / 23.75% 25%,
+    radial-gradient(farthest-side at 90% 105%, #0000 97%, #000 0 99.9%, #0000 0) 85.5% 48% / 14% 44%,
+    radial-gradient(farthest-side at 100% 200%, #0000 98%, #000 0 99.9%, #0000 0) 75% 27% / 14.5% 28%,
+    radial-gradient(farthest-side at 100% 100%, #0000 94%, #000 0 99.9%, #0000 0) 64.25% 13% / 7% 18%,
+    radial-gradient(farthest-side at 100% 100%, #0000 94%, #000 0 99.9%, #0000 0) 72% -8% / 7% 18%,
+    radial-gradient(farthest-side at 100% 100%, #0000 96%, #000 0 99.9%, #0000 0) 85.5% -4% / 9% 24%,
+    radial-gradient(farthest-side at 0 100%, #0000 98%, #000 0 99.9%, #0000 0) -1.75% -6% / 20% 39%,
+    radial-gradient(farthest-side at 0 100%, #0000 97.5%, #000 0 99.9%, #0000 0) 21.75% 56% / 15% 30.5%,
+    radial-gradient(farthest-side at 0 100%, #0000 96%, #000 0 99.9%, #0000 0) 29.5% 36% / 13% 20%,
+    radial-gradient(farthest-side at 0 100%, #0000 92%, #000 0 99.9%, #0000 0) 41% 12% / 5.25% 15%,
+    radial-gradient(farthest-side at 0 100%, #0000 97.5%, #000 0 99.9%, #0000 0) 19.5% -32% / 16% 40%,
+    radial-gradient(farthest-side at 0 100%, #0000 97.5%, #000 0 99.9%, #0000 0) 12% -29% / 16% 45%,
+    radial-gradient(farthest-side at 90% 100%, #0000 90%, #000 0 99.9%, #0000 0) 58% 6% / 5% 8%,
+    linear-gradient(20deg, #0000 50%, #000 0 55%, #0000 0) 35% 22% / 14.5% 11%,
+    linear-gradient(60deg, #0000 52%, #000 0 55%, #0000 0) 34% -20% / 14.5% 25%,
+    linear-gradient(-20deg, #0000 0 48%, #000 0 55%, #0000 0) 52.5% 13% / 5% 7%,
+    linear-gradient(-39deg, #0000 0 45.5%, #000 0 47%, #0000 0) 105% -21% / 20% 40%
+    ;
+  background-repeat: no-repeat;
+}
+
+.spider {
+  width: 3%;
+  aspect-ratio: 1;
+  background: black;
+  border-radius: 50%;
+  top: 55%;
+  left: 20%;
+  transform-origin: 50% -30vmin;
+  transform: translate(-50%, 0);
+}
+
+.spider::before {
+  --eyes: linear-gradient(#0000 0 0);
+  content: "";
+  width: 200%;
+  height: 200%;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, 0);
+  background: 
+    var(--eyes),
+    radial-gradient(farthest-side at 50% 100%, #0000 90%, #000 0 99.9%, #0000 0) 50% 100% / 60% 80%,
+    radial-gradient(farthest-side at 50% 100%, #0000 90%, #000 0 99.9%, #0000 0) 50% 40% / 76% 80%,
+    radial-gradient(farthest-side at 50% 100%, #0000 90%, #000 0 99.9%, #0000 0) 50% 20% / 90% 60%;
+  background-repeat: no-repeat;
+}
+
+.spider::after {
+  content: "";
+  top: 0%;
+  left: 50%;
+  width: 0.25vmin;
+  height: 30vmin;
+  background: black;
+  transform: translate(-50%, -100%);
+}
+
+.spider:nth-child(1) { left: 35%; }
+.spider:nth-child(2) { left: 41%; }
+.spider:nth-child(3) { left: 47%; }
+.spider:nth-child(4) { left: 53%; }
+.spider:nth-child(5) { left: 59%; }
+.spider:nth-child(6) { left: 65%; }
+
+@keyframes moveSpider1 {
+  0%, 60%, 100% { transform: translate(-50%, 0) rotate(0); }
+  33.33% { transform: translate(-50%, 0) rotate(30deg); }
+}
+
+@keyframes moveSpider6 {
+  0%, 60%, 100% { transform: translate(-50%, 0) rotate(0); }
+  33.33% { transform: translate(-50%, 0) rotate(-30deg); }
+}
+
+/* * { animation: none !important; } */
+
+.spider:nth-child(1) { 
+  animation: moveSpider1 2s cubic-bezier(0.5,0.5,0,1) infinite; 
+}
+
+.spider:nth-child(6) { 
+  transform-origin: 50% -31vmin;
+  animation: moveSpider6 2s 1s cubic-bezier(0.5,0.5,0,1) infinite;
+}
+  
+.spider:nth-child(3)::after,
+.spider:nth-child(4)::after {
+  height: 28vmin;
+}
+
+.spider:nth-child(4)::before {
+/*   --eyes: 
+    radial-gradient(circle at 50% 4%, #fff 10%, #0000 0) 35% 60% / 50% 50% no-repeat,
+    radial-gradient(circle at 50% 4%, #fff 10%, #0000 0) 65% 60% / 50% 50% no-repeat; */
+}
+  
+.spider:nth-child(6)::after {
+  height: 31vmin;
+}
+
+p {
+  font-family: 'Amatic SC', Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 6vmin;
+  top: 66.6%;
+  left: 60%;
+  width: 80%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+p::before {
+  content: "";
+  width: 30%;
+  height: 68%;
+  background:
+    radial-gradient(100% 200% at -50% 150%, #0000 120%, #000 0 121%, #0000 0);
+  left: 45%;
+  top: 0;
+  transform: translate(-50%, -100%)
+}

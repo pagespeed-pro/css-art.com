@@ -1,0 +1,50 @@
+body {
+  background-color: #efefc8;
+  position: relative;
+  height: 100vh;
+  text-align: center;
+}
+.entry {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.entry:before,
+.entry:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+.entry.taco {
+  width: 100px;
+  height: 50px;
+  margin-left: -55px;
+  margin-top: -35px;
+  background-color: #ffae1a;
+  background-image: radial-gradient(#eb9800 15%, transparent 16%), radial-gradient(#eb9800 15%, transparent 16%);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+  border: 3px solid #faa200;
+  border-radius: 50px 50px 5px 5px;
+}
+.entry.taco:before {
+  width: 10px;
+  height: 10px;
+  top: 40px;
+  left: -6px;
+  background-color: #8b4513;
+  border-radius: 50%;
+  box-shadow: 13px -22px 0 #98fb98, 16px -26px 0 #98fb98, 22px -28px 0 #98fb98, 28px -29px 0 #98fb98, 3px 5px 0 #8b4513, 6px 5px 0 #8b4513, 6px 0 0 #8b4513, 3px -5px 0 #8b4513, 5px -5px 0 #8b4513, 6px -9px 0 #8b4513, 9px -10px 0 #8b4513, 8px -15px 0 #8b4513, 12px -17px 0 #8b4513;
+}
+.entry.taco:after {
+  width: 100px;
+  height: 50px;
+  margin-left: 5px;
+  margin-top: 5px;
+  background-color: #ffc966;
+  background-image: radial-gradient(#ffa500 15%, transparent 16%), radial-gradient(#ffa500 15%, transparent 16%);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+  border: 3px solid #ffa500;
+  border-radius: 50px 50px 5px 5px;
+}

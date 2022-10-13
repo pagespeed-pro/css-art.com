@@ -1,0 +1,41 @@
+{
+    "name": "unicorn-holding-the-hashnode-logo",
+    "version": "1.0.0",
+    "title": "Unicorn holding the hashnode logo",
+    "description": "Cartoon of a unicorn holding the Hashnode logo.\n\nBased on: https://www.shutterstock.com/image-vector/painting-unicorn-flat-pony-cartoon-hug-2020942808",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "unicorn-holding-the-hashnode-logo.html",
+    "css": [
+        "unicorn-holding-the-hashnode-logo.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "html",
+        "cssart",
+        "unicorn",
+        "hashnodechallenge"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/rNGPLGy",
+    "codepen": "https://codepen.io/alvaromontoro/pen/rNGPLGy"
+}

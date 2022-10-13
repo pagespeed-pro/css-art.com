@@ -1,0 +1,371 @@
+html, body {
+  --bg: #bdb;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.cartoon {
+  position: absolute;
+  bottom: 10vmin;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+.cartoon {
+  --skin: #7c6;
+}
+
+.face {
+  width: 44%;
+  height: 60%;
+  border-radius: 100% / 50% 50% 125% 125%;
+  background: var(--skin);
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: linear-gradient(transparent 16%, var(--skin) 0)
+}
+
+.hat-bottom {
+  width: 90%;
+  height: 12%;
+  border-radius: 50%;
+  left: 5%;
+  top: 31%;
+}
+
+.hat-bottom.back {
+  border: 0.5vmin solid #222;
+  background: #1f1f1f;
+}
+
+.hat-bottom.front {
+  border-top: 0.5vmin solid #222;
+  box-shadow: 0 -1.1vmin 0 1vmin #444;
+}
+
+.eye {
+  width: 28%;
+  height: 19%;
+  background: white;
+  border-radius: 4% 100% 10% 100%;
+  transform: rotate(-30deg);
+  top: 34%;
+  left: 10%;
+  box-shadow: inset 1vmin 1.5vmin, 0.75vmin -1.25vmin 1vmin 1vmin #0803;
+}
+
+.eye + .eye {
+  transform: scaleX(-1) rotate(-30deg);
+  left: auto;
+  right: 10%;
+}
+
+.eye::before {
+  width: 1.5vmin;
+  height: 1.5vmin;
+  background: #111;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  box-shadow: 0 0 1.5vmin 0.5vmin #fff3, 0 0 0 1.5vmin green, 0 0 0 1.75vmin #262;
+}
+
+.eye::after {
+  width: 0.75vmin;
+  height: 0.75vmin;
+  background: white;
+  left: 55%;
+  top: 45%;
+  border-radius: 50%;
+  box-shadow: 0.5vmin 0.5vmin 0 -0.125vmin white;
+}
+
+.eye + .eye::after {
+  box-shadow: -0.5vmin -0.25vmin 0 -0.125vmin white;
+}
+
+.eyebrow {
+  width: 45%;
+  height: 15%;
+  top: 30%;
+  left: 0%;
+  box-shadow: 0.5vmin -1.5vmin 0 -1vmin #111;
+  transform: rotate(-5deg);
+}
+
+.eyebrow + .eyebrow {
+  left: 55%;
+  transform: scaleX(-1) rotate(-8deg);
+}
+
+.nose {
+  width: 18%;
+  height: 12%;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: inset 0 -5vmin 0 -4vmin #0a0, inset 0 -5.25vmin 0 -4vmin #080, 0 -0.5vmin var(--skin), 0 -2vmin 0 -1.25vmin #0807;
+  border: 0.5vmin solid transparent;
+  border-top: 0.25vmin solid #0807;
+}
+
+.mouth {
+  width: 37%;
+  height: 3%;
+  border: 0.25vmin solid transparent;
+  border-bottom: 0.5vmin solid #222;
+  top: 76%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(-4deg);
+  background: green;
+}
+
+.mouth::before {
+  width: 20%;
+  height: 250%;
+  border: 0.15vmin solid transparent;
+  border-right: 0.3vmin solid;
+  border-radius: 50%;
+  right: -3%;
+  top: -20%;
+  transform: rotate(-10deg);
+}
+
+.bottom-lip {
+  width: 39%;
+  height: 18%;
+  top: 65%;
+  left: 30.5%;
+  border-radius: 50%;
+  background: linear-gradient(transparent 70%, #090 0);
+  transform: rotate(-4deg);
+}
+
+.neck {
+  width: 11%;
+  height: 16%;
+  background: var(--skin);
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-image: linear-gradient(rgba(0,0,0,0.2), transparent 50%);
+  border-radius: 100% / 0 0 20% 20%;
+}
+
+.hat-top {
+  width: 110%;
+  height: 70%;
+  border-radius: 50%;
+  background: #f007;
+  top: 19.25%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: linear-gradient(#222, #333 21%, transparent 0)
+}
+
+.hat-lace {
+  width: 48%;
+  height: 7%;
+  background: purple;
+  background-image: linear-gradient(transparent, rgba(0,0,0,0.2));
+  left: 26%;
+  top: 15.75%;
+  transform: skew(2deg);
+  clip-path: polygon(3% 0%, 97% 0%, 100% 100%, 0% 100%);
+}
+
+.hat-triangle {
+  width: 36vmin;
+  height: 60vmin;
+  box-sizing: border-box;
+  bottom: 83%;
+  left: 27.5%;
+  border-left: 15vmin solid transparent;
+  border-right: 19vmin solid transparent;
+  border-bottom: 60vmin solid #333;
+}
+
+.ear {
+  width: 10%;
+  height: 25%;
+  background: var(--skin);
+  transform: rotate(-13deg);
+  top: 42%;
+  left: 26%;
+  box-shadow: inset 0 0 0 10vmin rgba(0,0,0,0.075);
+}
+
+.ear + .ear {
+  transform: scaleX(-1) rotate(-11deg);
+  left: auto;
+  right: 26%;
+}
+
+.hair {
+  width: 150%;
+  height: 150%;
+  top: 17%;
+  left: -25%;
+  overflow: hidden;
+}
+
+.body {
+  width: 70%;
+  height: 100%;
+  background: #222;
+  top: 87.5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 100% / 40% 40% 120% 120%;
+}
+
+.broom {
+  width: 10%;
+  height: 150%;
+  background: #963;
+  border-radius: 100% / 3vmin 3vmin 0 0; 
+  transform: rotate(10deg);
+  top: 50%;
+  left: 80%;
+  overflow: hidden;
+}
+
+.broom::after {
+  width: 100%;
+  height: 2vmin;
+  background: #fff7;
+  border-radius: 50%;
+}
+
+.hair-front {
+  width: 23%;
+  height: 12%;
+  top: 14%;
+  left: 45%;
+  transform: translate(-50%,0);
+  box-shadow: inset -2.5vmin 0 #111
+}
+
+.hair-front::after {
+  width: 60%;
+  height: 80%;
+  border-radius: 50%;
+  top: 88%;
+  left: 30%;
+  box-shadow: inset -1.25vmin 0.5vmin 0 0.25vmin; , inset -1.5vmin -1vmin
+}
+
+.hair-back {
+  width: 60%;
+  height: 100%;
+  top: 31%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  overflow: hidden;
+}
+
+.hair-back::before {
+  width: 40%;
+  height: 50%;
+  background: #111;
+  border-radius: 50%;
+  top: -25%;
+  left: 5%;
+  box-shadow: 
+    24vmin 10vmin,
+    25vmin 25vmin,
+    -2vmin 39vmin, 
+    10vmin 39vmin, 
+    22.25vmin 48vmin 0vmin 3vmin;
+}
+
+.hair-back::after {
+  width: 20%;
+  height: 40%;
+  border-radius: 50%;
+  left: -12%;
+  transform: rotate(1deg);
+  box-shadow: 
+    5vmin 0 0 -3vmin, 
+    48.125vmin 8.5vmin 0 -2vmin var(--bg);
+}
+
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

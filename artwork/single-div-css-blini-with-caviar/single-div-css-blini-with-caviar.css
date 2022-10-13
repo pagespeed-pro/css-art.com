@@ -1,0 +1,62 @@
+body {
+  min-height: 250px;
+  height: 100vh;
+  position: relative;
+  background-color: #ff6347;
+  font-size: 10px;
+}
+div {
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div:before,
+div:after {
+  box-sizing: border-box;
+  display: block;
+  content: '';
+  position: absolute;
+}
+@media (max-width: 400px) {
+  div {
+    transform: scale(0.8);
+  }
+}
+#fancy {
+  box-sizing: border-box;
+  width: 20em;
+  height: 8em;
+  margin-left: -10em;
+  margin-top: -5em;
+  background-color: #cd853f;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(ellipse, rgba(255,255,255,0.2) 60%, rgba(255,255,255,0) 62%), radial-gradient(ellipse, rgba(255,255,255,0.2) 60%, rgba(255,255,255,0) 62%), radial-gradient(ellipse, rgba(255,255,255,0.2) 60%, rgba(255,255,255,0) 62%), radial-gradient(ellipse, rgba(255,255,255,0.2) 60%, rgba(255,255,255,0) 62%);
+  background-size: 1em 0.5em, 2em 1em, 1.4em 0.7em, 1em 0.5em;
+  background-position: 0.8em 3em, 1.1em 4em, 9.9em 6.5em, 12.2em 6.5em;
+  border-radius: 50%;
+  border: 0.2em solid #8b4513;
+  box-shadow: 0 0.6em 0 0.2em #deb887, 0 0.6em 0 0.4em #8b4513, -0.3em 2em 0 0em #cd853f, -0.3em 2em 0 0.2em #8b4513, -0.3em 2.6em 0 0.4em #deb887, -0.3em 2.6em 0 0.6em #8b4513, 0.5em 4em 0 0em #cd853f, 0.5em 4em 0 0.2em #8b4513, 0.5em 4.6em 0 0.4em #deb887, 0.5em 4.6em 0 0.6em #8b4513, 0.5em 5.7em 0 0.5em rgba(139,69,19,0.4);
+}
+#fancy:before {
+  width: 15em;
+  height: 6em;
+  left: 3em;
+  top: -0.6em;
+  background-color: white;
+  border-top-right-radius: 8em 4em;
+  border-top-left-radius: 8em 4em;
+  border-bottom-right-radius: 6em 2.5em;
+  border-bottom-left-radius: 6em 2.5em;
+  border: 0.2em solid #8b4513;
+  box-shadow: inset 0 -0.8em 0 rgba(139,69,19,0.2), 0 0.8em 0 rgba(139,69,19,0.2);
+}
+#fancy:after {
+  width: 0.3em;
+  height: 0.3em;
+  left: 8em;
+  top: -0.5em;
+  background-color: #faf0e6;
+  border-radius: 50%;
+  box-shadow: 0em 1em 0 0.1em #228b22, 2em 0.5em 0 0.1em #228b22, 3em 1em 0 0.1em #228b22, 5em 0.5em 0 0.1em #228b22, -3.6em 2.2em 0 0.1em #228b22, -2em 3.2em 0 0.1em #228b22, -1em 3em 0 0.1em #228b22, 5em 3em 0 0.1em #228b22, 7.9em 2.4em 0 0.1em #228b22, -2.6em 1.8em 0 #faf0e6, -2.4em 2em 0 0.6em #111, -0.4em 1.8em 0 #faf0e6, -0.2em 2em 0 0.6em #111, 1.1em 2em 0 #faf0e6, 1.2em 2.2em 0 0.6em #111, 3.1em 2.1em 0 #faf0e6, 3.2em 2.3em 0 0.6em #111, 4.2em 2em 0 0.6em #111, 6.1em 2.3em 0 #faf0e6, 6.2em 2.5em 0 0.6em #111, 0.2em 0.2em 0 0.6em #111, 1.6em -0.1em 0 #faf0e6, 1.7em 0.1em 0 0.6em #111, 3em 0.3em 0 #faf0e6, 3.1em 0.5em 0 0.6em #111, 4.9em 0em 0 #faf0e6, 5em 0.2em 0 0.6em #111, -1em 0.9em 0 #faf0e6, -0.9em 1.1em 0 0.6em #111, 1.1em 0.9em 0 #faf0e6, 1.2em 1.1em 0 0.6em #111, 4em 0.9em 0 #faf0e6, 4.1em 1.1em 0 0.6em #111, 0.3em 1.3em 0 0.6em #111, 2.3em 1.3em 0 0.6em #111, 3.1em 1.3em 0 0.6em #111, 5.5em 1.1em 0 0.6em #111, 7em 0.9em 0 #faf0e6, 7.1em 1.1em 0 0.6em #111, 2.1em 3.6em 0 #faf0e6, 2.2em 3.8em 0 0.6em #111;
+}

@@ -1,0 +1,59 @@
+body {
+  min-height: 300px;
+  height: 100vh;
+  position: relative;
+  background-color: #faf0e6;
+  text-align: center;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div:before,
+div:after {
+  display: block;
+  position: absolute;
+}
+@media (max-width: 400px) {
+  div:not(.no-scale) {
+    transform: scale(0.8);
+  }
+}
+#homonym {
+  width: 16em;
+  height: 12em;
+  margin-left: -8em;
+  margin-top: -6em;
+  background-color: #a0522d;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#111, #111), linear-gradient(#111, #111), radial-gradient(circle at 50% 10%, transparent 35%, #111 36%, #111 50%, transparent 51%), linear-gradient(25deg, transparent 65%, #111 66%, #111 78%, transparent 79%), linear-gradient(-25deg, transparent 65%, #111 66%, #111 78%, transparent 79%), linear-gradient(#111, #111), linear-gradient(#111, #111), linear-gradient(-20deg, transparent 70%, #111 71%, #111 85%, transparent 86%), linear-gradient(30deg, transparent 72%, #111 73%, #111 84%, transparent 85%), radial-gradient(circle at 50% 0, transparent 20%, #111 21%, #111 33%, transparent 34%), linear-gradient(#111, #111), linear-gradient(#111, #111), radial-gradient(ellipse, transparent 34%, #111 36%, #111 54%, transparent 56%), radial-gradient(ellipse, transparent 34%, #111 36%, #111 54%, transparent 56%), linear-gradient(to bottom, #dbb25e, #907335 40%, #655125), linear-gradient(#111, #111), linear-gradient(to bottom, #dbb25e, #907335, #655125, #dbb25e, #907335), linear-gradient(to top, rgba(0,0,0,0.2) 25%, rgba(0,0,0,0) 60%), repeating-linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.1) 3%, rgba(0,0,0,0) 7%, rgba(0,0,0,0) 8%), linear-gradient(to right, transparent 30%, rgba(178,34,34,0.2) 50%, transparent 70%), linear-gradient(95deg, transparent 75%, rgba(0,0,0,0.1) 80%, transparent 85%), linear-gradient(102deg, transparent 25%, rgba(0,0,0,0.1) 30%, transparent 40%);
+  background-size: 4.5em 0.1em, 3.5em 0.25em, 0.6em 0.6em, 0.3em 0.6em, 0.3em 0.6em, 4.5em 0.1em, 3.5em 0.25em, 0.3em 0.6em, 0.3em 0.6em, 0.6em 0.6em, 4.5em 0.1em, 3.5em 0.25em, 1em 0.6em, 1em 0.6em, 7em 3.8em, 85% 82%, 90% 88%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+  background-position: 50% 3em, 50% 2.95em, calc(50% - 2.5em) 3em, calc(50% + 2.4em) 3em, calc(50% + 2.7em) 3em, 50% 5em, 50% 4.95em, calc(50% - 2.35em) 5em, calc(50% - 2.61em) 5em, calc(50% + 2.45em) 5em, 50% 4em, 50% 3.95em, calc(50% - 2.5em) 3.75em, calc(50% + 2.5em) 3.75em, 50% 2.2em, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%, 50% 50%;
+  border-radius: 0.1em;
+  border: 0.5em solid rgba(255,255,255,0.1);
+  border-top-color: rgba(255,255,255,0.4);
+  border-bottom-color: rgba(0,0,0,0.08);
+  box-shadow: 0 0.1em 0.1em rgba(139,69,19,0.5), 0 0.2em 0.2em rgba(139,69,19,0.5), 0 0.3em 0.3em rgba(0,0,0,0.3);
+  color: #dbb25e;
+}
+#homonym:before,
+#homonym:after {
+  width: 100%;
+  height: 2em;
+  font-family: 'Comic Sans MS', sans-serif;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#homonym:before {
+  bottom: 2em;
+  content: 'Plaque Attack Award';
+  background-image: linear-gradient(to top, #dbb25e, #907335);
+  font-size: 1.2em;
+}
+#homonym:after {
+  bottom: 1em;
+  content: 'Phil Crentist, DDS';
+  background-image: linear-gradient(to bottom, #dbb25e 20%, #907335);
+  font-size: 1em;
+}

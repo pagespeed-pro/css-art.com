@@ -1,0 +1,45 @@
+.box {
+  width:100vmin;
+  height:100vmin;
+  display:flex;
+  margin:auto;
+  position:relative;
+}
+.box::before,
+.box div::before{
+   content:"";
+   position:absolute;
+  border-radius:50%;
+  inset:0; 
+  background:
+     conic-gradient(from 30deg,hsl(30, 100%, 40%) 30deg,#0000 30.1deg),
+     conic-gradient(from 60deg,hsl(60, 100%, 40%) 30deg,#0000 30.1deg),
+     conic-gradient(from 90deg,hsl(90, 100%, 40%) 30deg,#0000 30.1deg),
+     conic-gradient(from 120deg,hsl(120, 100%, 40%) 30deg,#0000 30.1deg),
+     conic-gradient(from 150deg,hsl(150, 100%, 40%) 30deg,#0000 30.1deg),
+     conic-gradient(from 180deg,hsl(180, 100%, 40%) 30deg,#0000 30.1deg),
+     conic-gradient(from 210deg,hsl(210, 100%, 40%) 30deg,#0000 30.1deg),
+     conic-gradient(from 240deg,hsl(240, 100%, 40%) 30deg,#0000 30.1deg),
+     conic-gradient(from 270deg,hsl(270, 100%, 40%) 30deg,#0000 30.1deg),
+     conic-gradient(from 300deg,hsl(300, 100%, 40%) 30deg,#0000 30.1deg),
+     conic-gradient(from 330deg,hsl(330, 100%, 40%) 30deg,#0000 30.1deg),
+     conic-gradient(from 360deg,hsl(360, 100%, 40%) 30deg,#0000 30.1deg);
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 5vmin - 1px),#000 calc(100% - 5vmin) )
+ }
+ 
+.box  div {
+   background:inherit;
+   position:relative;
+   flex-grow:1;
+   border-radius:inherit;
+   display:inherit;
+   opacity:0.9;
+   margin:5vmin;
+   animation: r 10s linear infinite;
+}
+
+@keyframes r {
+  to {
+    transform:rotate(360deg);
+  }
+}

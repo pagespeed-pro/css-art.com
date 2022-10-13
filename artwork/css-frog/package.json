@@ -1,0 +1,40 @@
+{
+    "name": "css-frog",
+    "version": "1.0.0",
+    "title": "CSS Frog",
+    "description": "A frog drawn with HTML and CSS. The water is slightly animated.",
+    "author": {
+        "name": "Alvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "http://www.alvaromontoro.com",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro/"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            }
+        ]
+    },
+    "html": "css-frog.html",
+    "css": [
+        "css-frog.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "html",
+        "illustration",
+        "cssart"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/PoGWZom",
+    "codepen": "https://codepen.io/alvaromontoro/pen/PoGWZom"
+}

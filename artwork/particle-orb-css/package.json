@@ -1,0 +1,41 @@
+{
+    "name": "particle-orb-css",
+    "version": "1.0.0",
+    "title": "Particle Orb CSS",
+    "description": "\n\nForked from [Nate Wiley](http://codepen.io/natewiley/)'s Pen [Particle Orb CSS](http://codepen.io/natewiley/pen/GgONKy/).",
+    "author": {
+        "name": "Nikhil Krishnan",
+        "avatar": "https://s.cdpn.io/profiles/user/308279/512.jpg?1514981257",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/nikhil8krishnan/"
+            },
+            {
+                "title": "LinkedIn",
+                "url": "https://www.linkedin.com/pub/nikhil-krishnan/72/277/498"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/Nikhil8Krishnan"
+            },
+            {
+                "title": "Facebook",
+                "url": "https://www.facebook.com/nikhil8krishnan"
+            }
+        ]
+    },
+    "html": "particle-orb-css.html",
+    "css": [
+        "particle-orb-css.css"
+    ],
+    "js": "// no js",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css3",
+        "animation"
+    ],
+    "original": "https://codepen.io/nikhil8krishnan/pen/mPBOaW",
+    "codepen": "https://codepen.io/nikhil8krishnan/pen/mPBOaW"
+}

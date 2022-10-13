@@ -1,0 +1,40 @@
+{
+    "name": "ace-ventura-like-caricature-in-css",
+    "version": "1.0.0",
+    "title": "Ace Ventura-like caricature in CSS",
+    "description": "This is a cartoon done from scratch without a plan on what to do exactly. As the cartoon went, I thought about making it an Ace Ventura-looking cartoon... but instead of histrionic, the expression came up more like an evil James Bond character :S\n\nCredit: the pattern in the t-shirt is a variation of [Lea Verou's Marrakesh CSS pattern](https://leaverou.github.io/css3patterns/#marrakesh).",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "ace-ventura-like-caricature-in-css.html",
+    "css": [
+        "ace-ventura-like-caricature-in-css.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "html",
+        "illustration",
+        "cssart"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/XWdbEaY",
+    "codepen": "https://codepen.io/alvaromontoro/pen/XWdbEaY"
+}

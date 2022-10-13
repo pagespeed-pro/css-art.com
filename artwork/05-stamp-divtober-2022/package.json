@@ -1,0 +1,40 @@
+{
+    "name": "05-stamp-divtober-2022",
+    "version": "1.0.0",
+    "title": "05. Stamp - Divtober 2022",
+    "description": "This entry is personal as I am taking the family on the first international trip in 3 years next month and am really excited for getting this passport stamp. There is a time-lapse video of making this piece at https://youtu.be/c9RW1PzTtXQ ",
+    "author": {
+        "name": "Greg Robleto",
+        "avatar": "https://assets.codepen.io/28337/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1641427924&width=512",
+        "web": "http://www.robleto.com",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/robleto/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/robleto"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/robleto"
+            }
+        ]
+    },
+    "html": "05-stamp-divtober-2022.html",
+    "css": [
+        "05-stamp-divtober-2022.css"
+    ],
+    "js": "/* This entry is personal as I am taking the family on the first international trip in 3 years next month and am really excited for getting this passport stamp.There is a time-lapse video of making this piece at https://youtu.be/vPW7UJc8dig */",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "cssart",
+        "divtober",
+        "singediv"
+    ],
+    "original": "https://codepen.io/robleto/pen/BaxPyxq",
+    "codepen": "https://codepen.io/robleto/pen/BaxPyxq"
+}

@@ -1,0 +1,41 @@
+{
+    "name": "it-s-just-css-",
+    "version": "1.0.0",
+    "title": "It's just CSS.",
+    "description": "CSS only Shouko Komi-san featuring 2 hover states / moods",
+    "author": {
+        "name": "Tiffany Choong",
+        "avatar": "https://assets.codepen.io/765377/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1516941279&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/tiffachoo/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/tiffachooo"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/tiffachoo"
+            }
+        ]
+    },
+    "html": "it-s-just-css-.html",
+    "css": [
+        "it-s-just-css-.css"
+    ],
+    "js": "// (=｀ω´=) !?",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css-image",
+        "css-only",
+        "css-animation",
+        "komi",
+        "anime"
+    ],
+    "original": "https://codepen.io/tiffachoo/pen/wvyXRzL",
+    "codepen": "https://codepen.io/tiffachoo/pen/wvyXRzL"
+}

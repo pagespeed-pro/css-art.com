@@ -1,0 +1,57 @@
+body {
+  min-height: 300px;
+  height: 100vh;
+  position: relative;
+  background-color: #b0e0e6;
+  text-align: center;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div:before,
+div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+#growing {
+  box-sizing: border-box;
+  width: 10em;
+  min-height: 11em;
+  max-height: calc(100% - 2em);
+  margin-left: -5em;
+  bottom: 1em;
+  top: auto;
+  resize: vertical;
+  overflow: hidden;
+  transform: rotate(180deg);
+  background-repeat: no-repeat;
+  background-image: linear-gradient(#dc143c, #dc143c), linear-gradient(to top, #5b3918, #cd853f 90%), linear-gradient(black, black), linear-gradient(black, black), radial-gradient(circle at 50% 100%, #cd853f 16%, #dc143c 16.5%), linear-gradient(black, black), linear-gradient(to bottom, transparent 0.3em, #cd853f 0.3em), repeating-linear-gradient(to right, #cd853f, #cd853f 0.1em, transparent 0.1em, transparent 0.2em), linear-gradient(to bottom, transparent 0.3em, #cd853f 0.3em), repeating-linear-gradient(to right, #cd853f, #cd853f 0.1em, transparent 0.1em, transparent 0.2em), linear-gradient(to right, #4682b4 40%, transparent 40%, transparent 60%, #4682b4 60%), linear-gradient(to top, #4682b4 80%, transparent 80%), linear-gradient(to top, white 70%, rgba(255,255,255,0) 70%), radial-gradient(circle at 50% 30%, #8b4513 0.09em, #cd853f 0.12em), linear-gradient(to right, #dc143c 30%, transparent 30%, transparent 70%, #dc143c 70%), linear-gradient(to right, white 30%, transparent 30%, transparent 70%, white 70%), linear-gradient(to right, #cd853f 30%, transparent 30%, transparent 70%, #cd853f 70%), linear-gradient(10deg, rgba(255,255,255,0) 30%, white 31%), linear-gradient(-10deg, rgba(255,255,255,0) 30%, white 31%), linear-gradient(-45deg, #4682b4 50%, rgba(70,130,180,0) 51%);
+  background-size: 1.5em 0.2em, 0.6em 1em, 0.6em 3.5em, 0.6em 3.5em, 3em 2.5em, 2em 3.5em, 0.5em 40%, 0.5em 40%, 0.5em 40%, 0.5em 40%, 3em 2em, 3em 2em, 2.9em 2em, 2.75em calc(100% - (4em + 45%)), 2.4em 0.2em, 2.4em 2em, 2.4em 45%, 1em 0.7em, 1em 0.7em, 0.8em 0.8em;
+  background-position: left calc(50% - 1.5em) bottom 0.8em, left 50% bottom 2.1em, left calc(50% + 0.81em) bottom 1em, left calc(50% - 0.81em) bottom 1em, left 50% bottom 3em, left 50% bottom 1em, left calc(50% - 1.8em) bottom 4em, left calc(50% - 1.8em) bottom 4em, right calc(50% - 1.8em) bottom 4em, right calc(50% - 1.8em) bottom 4em, 50% 47%, 50% 47%, 50% calc(47% + 0.2em), left 50% bottom 3.2em, 50% 1.5em, 50% 0, 50% 1em, calc(50% - 1.6em) 0, calc(50% + 1.6em) 0, 100% 100%;
+}
+#growing:before {
+  width: 4.2em;
+  height: 1.4em;
+  left: 50%;
+  margin-left: -2.1em;
+  bottom: 3em;
+  background-image: linear-gradient(to right, #dc143c 1em, transparent 1em), linear-gradient(to left, #dc143c 1em, transparent 1em);
+  border-radius: 0 0 0.8em 0.8em;
+}
+#growing:after {
+  width: 2.2em;
+  height: 2.7em;
+  left: 50%;
+  margin-left: -1.1em;
+  bottom: 0;
+  top: auto;
+  background-color: #cd853f;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, black 50%, rgba(0,0,0,0) 51%), radial-gradient(circle, black 50%, rgba(0,0,0,0) 51%), linear-gradient(to top, #dc143c 1em, transparent 1em), linear-gradient(black, black), linear-gradient(black, black);
+  background-size: 0.4em 0.4em, 0.4em 0.4em, 100% 100%, 0.4em 100%, 0.4em 100%;
+  background-position: 0.6em 1em, right 0.6em top 1em, 0 0, 100% 0, 0 0;
+  border-radius: 1.5em;
+}

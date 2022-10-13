@@ -1,0 +1,33 @@
+{
+    "name": "scrabble-typewriter-more-text-",
+    "version": "1.0.0",
+    "title": "scrabble typewriter (more text)",
+    "description": "Demo for the following article: https://dev.to/afif/the-css-scrabble-writer-the-next-gen-typewriter-fbi",
+    "author": {
+        "name": "Temani Afif",
+        "avatar": "https://assets.codepen.io/1480814/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1637754747&width=512",
+        "web": "https://css-only.art/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/t_afif/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/ChallengesCss"
+            }
+        ]
+    },
+    "html": "scrabble-typewriter-more-text-.html",
+    "css": [
+        "scrabble-typewriter-more-text-.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css"
+    ],
+    "original": "https://codepen.io/t_afif/pen/MWoaxNa",
+    "codepen": "https://codepen.io/t_afif/pen/MWoaxNa"
+}

@@ -1,0 +1,135 @@
+html, body {
+  --wood: #e89848;
+  --wood-light: #ea5;
+  --wood-dark: #d84;
+  --wood-darker: #d07733;
+  --water: skyblue;
+  background: var(--water);
+  overflow: hidden;
+}
+
+@keyframes moveboat {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+div {
+  animation: moveboat 160s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg);
+  width: 60vmin;
+  height: 60vmin;
+  background:
+    /* handles */
+    radial-gradient(160% 80%, #999, #666 60%, transparent 0) 23.5% 54% / 2vmin 7vmin,
+    /* frame */
+    linear-gradient(transparent, #3212 30%, var(--wood-dark) 0, var(--wood)) 50% 100% / 32% 4vmin,
+    radial-gradient(150% 120% at 120% 60%, transparent calc(50% - 3vmin), #3212 calc(50% - 2vmin), var(--wood-dark) 0, var(--wood) 50%, var(--water) 0) 0 0 / 50% 100%,
+    radial-gradient(150% 120% at -20% 60%, transparent calc(50% - 3vmin), #3212 calc(50% - 2vmin), var(--wood-dark) 0, var(--wood) 50%, var(--water) 0) 100% 0 / 50% 100%,
+    /* seating */
+    linear-gradient(var(--wood-darker), var(--wood-dark) 20%, #3215 0, #3213 22% 40%, #3215 42%, var(--wood-darker) 0, var(--wood-dark) 52%, var(--wood) 0, var(--wood-darker) 52.5%, var(--wood-dark) 62.5%, #3215 0, #3213 65% 80%, #3215 82%, var(--wood-darker) 0, var(--wood-dark)) 50% 50% / 98% 98%,
+    /* floor */
+    repeating-linear-gradient(to left, var(--wood-dark) 0 10%, var(--wood-darker) 20%) 50% 50% / 48% 98%
+    ;
+  background-repeat: no-repeat;
+}
+
+div::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background:
+    /* hadle */
+    radial-gradient(160% 80%, #999, #666 60%, transparent 0) 63% 52% / 2vmin 7vmin,
+    /* row */
+    linear-gradient(10deg, #0000 35%, #3212 40%, var(--wood-darker) 0, var(--wood-dark), var(--wood-darker) 50%, #3212 0, #0000 55%) 75% 52% / 25% 10%,
+    radial-gradient(100% 27% at 100% 51%, transparent 56%, var(--water) 0) 83% 56% / 7% 20%,
+    linear-gradient(to right, #87CEEB00 30%, var(--water) 90%) 86.5% 54.5% / 7% 20%,
+    linear-gradient(10deg, #f000 30%, var(--wood-darker) 0, var(--wood-dark), var(--wood-darker) 55%, #f000 0) 86.5% 54.5% / 7% 20%,
+    radial-gradient(50% 50% at 90% 50%, var(--wood-dark), var(--wood-darker) 45%, #3211 0, transparent 70%) 55% 50.33% / 4vmin 4vmin
+    ;
+  background-color: #f000;
+  background-repeat: no-repeat;
+}
+
+@keyframes movepaddle {
+  0%, 100% { transform: rotate(-10deg); }
+  50% { transform: rotate(5deg); }
+}
+
+@keyframes splash {
+  0%, 80%, 100% { filter: drop-shadow(0 0 0vmin #fff0); }
+  40% { filter: drop-shadow(0 1vmin 1vmin #fff8); }
+}
+
+div::after {
+  animation: movepaddle 20s infinite;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background:
+    /* row1 */
+    linear-gradient(to right, var(--wood-darker), var(--wood-dark), var(--wood-darker)) 5vmin 0.875vmin / 1.75vmin 60%,
+    radial-gradient(closest-side, var(--wood-darker), var(--wood-dark) 99.9%, transparent 0) 5vmin 0 / 1.75vmin 1.75vmin,
+    radial-gradient(100% 50% at 50% 100%, var(--wood-dark) 60%, var(--wood-darker) 90%, transparent 0) 2.5vmin 60% / 7vmin 25vmin
+  ;
+  background-repeat: no-repeat;
+  transform: rotate(-6deg);
+}
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+  font-size: 0;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+

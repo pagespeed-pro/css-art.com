@@ -1,0 +1,60 @@
+body {
+  min-height: 250px;
+  height: 100vh;
+  position: relative;
+  background-color: #556b2f;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div:before,
+div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+@media (max-width: 400px) {
+  div {
+    transform: scale(0.8);
+  }
+}
+#stack {
+  font-size: 10px;
+  width: 37em;
+  height: 11em;
+  margin-left: -18.5em;
+  margin-top: -5.5em;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(white, white), linear-gradient(white, white), linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), repeating-linear-gradient(to top, rgba(255,255,255,0), rgba(255,255,255,0) 0.2em, white 0.2em, white 0.3em), linear-gradient(white, white), linear-gradient(white, white), linear-gradient(white, white), linear-gradient(white, white), linear-gradient(white, white), linear-gradient(to right, white 0.2em, rgba(255,255,255,0) 0.2em, rgba(255,255,255,0) 1em, white 1em, white 1.1em, rgba(255,255,255,0) 1.1em, rgba(255,255,255,0) calc(100% - 0.1em), white calc(100% - 0.1em)), linear-gradient(to bottom, white 0.1em, rgba(255,255,255,0) 0.2em, rgba(255,255,255,0) calc(100% - 0.1em), white calc(100% - 0.1em)), radial-gradient(circle at 50% 0, rgba(255,255,255,0) 65%, rgba(255,255,255,0.25) 66%, rgba(255,255,255,0.25) 68%, rgba(255,255,255,0) 69%), radial-gradient(circle at 50% 100%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.25) 66%, rgba(0,0,0,0.25) 68%, rgba(0,0,0,0) 69%), radial-gradient(circle, rgba(0,0,0,0) 7%, rgba(0,0,0,0.3) 8%, rgba(0,0,0,0.3) 9.5%, rgba(0,0,0,0) 10.5%);
+  background-size: 12em 0.5em, 1em 0.5em, 1em 9.5em, 1.2em 10.4em, 1.2em 10.4em, 0.6em 10.4em, 9em 9em, 0.1em 10.6em, 0.1em 10.6em, 10.2em 0.1em, 1em 0.2em, 0.2em 3em, 11em 10em, 11em 10em, 10em 5em, 10em 5em, 10em 10em;
+  background-position: 0 100%, left 5.5em bottom 9.5em, 5.5em 100%, 1.2em 100%, 9.8em 100%, 8.5em 100%, left 1.5em bottom 0.5em, 0.9em 100%, 11em 100%, left 0.9em bottom 10.5em, left 23.4em bottom 6.9em, left 24.2em bottom 4em, 100% 100%, 100% 100%, 100% 100%, right 0 bottom 5em, 100% 100%;
+}
+#stack:before {
+  width: 9em;
+  height: 9em;
+  left: 12.5em;
+  bottom: 0;
+  background-color: rgba(255,255,255,0.1);
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, #556b2f 10%, white 10.5%, white 13%, rgba(255,255,255,0.2) 13.5%, rgba(255,255,255,0.2) 20%, rgba(255,255,255,0) 20.5%), conic-gradient(rgba(255,255,255,0) 79deg, rgba(255,255,255,0.7) 80deg, rgba(255,255,255,0.7) 100deg, rgba(255,255,255,0) 101deg), conic-gradient(rgba(255,255,255,0) 59deg, rgba(255,255,255,0.2) 60deg, rgba(255,255,255,0.2) 120deg, rgba(255,255,255,0) 121deg), conic-gradient(rgba(255,255,255,0) 259deg, rgba(255,255,255,0.7) 260deg, rgba(255,255,255,0.7) 280deg, rgba(255,255,255,0) 281deg), conic-gradient(rgba(255,255,255,0) 239deg, rgba(255,255,255,0.2) 240deg, rgba(255,255,255,0.2) 300deg, rgba(255,255,255,0) 301deg), conic-gradient(rgba(0,0,0,0.2) 15deg, rgba(0,0,0,0) 11deg, rgba(0,0,0,0) 344deg, rgba(0,0,0,0.2) 345deg), conic-gradient(rgba(0,0,0,0) 165deg, rgba(0,0,0,0.2) 166deg, rgba(0,0,0,0.2) 194deg, rgba(0,0,0,0) 195deg);
+  border: 0.1em solid white;
+  border-radius: 50%;
+}
+#stack:after {
+  box-sizing: border-box;
+  width: 0.9em;
+  height: 9em;
+  left: 23em;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to bottom, white 45%, rgba(255,255,255,0) 45%), linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4));
+  background-size: 100% 100%, 0.1em 3em;
+  background-position: 0 0, 50% 85%;
+  border-top-left-radius: 0.5em 3em;
+  border-top-right-radius: 0.5em 3em;
+  border-bottom-left-radius: 0.5em 1em;
+  border-bottom-right-radius: 0.5em 1em;
+  border: 0.1em solid white;
+}

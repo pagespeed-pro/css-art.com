@@ -1,0 +1,37 @@
+body {
+  display: grid;
+  overflow: hidden;
+  margin: 0;
+  height: 100vh;
+  background: #1e1e1e;
+  filter: drop-shadow(2px 2px 5px);
+  animation: a 5s infinite;
+}
+
+.item {
+  --f: calc((var(--j) + 1)/var(--n));
+  grid-area: 1/1;
+  place-self: center;
+  padding: calc(.5*var(--rad)/var(--tan)/var(--m) - 3px);
+  border-radius: 50%;
+  animation: r 5s infinite linear alternate;
+  box-shadow: 0 0 2px 2px currentcolor, inset 0 0 2px 2px currentcolor;
+  color: hsl(calc(var(--i)/var(--m)*360), 85%, 65%);
+}
+
+@keyframes r {
+  from {
+    transform: rotate(calc(var(--i)/var(--m)*1turn + 1*var(--phi))) translate(calc(1*var(--rad))) rotate(45deg);
+  }
+  50% {
+    transform: rotate(calc(var(--i)/var(--m)*1turn + 0*var(--phi))) translate(calc(2.2*var(--rad))) rotate(45deg);
+  }
+  to {
+    transform: rotate(calc(var(--i)/var(--m)*1turn + -1*var(--phi))) translate(calc(1*var(--rad))) rotate(45deg);
+  }
+}
+@keyframes a {
+  to {
+    transform: rotate(360deg);
+  }
+}

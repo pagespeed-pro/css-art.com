@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@800&display=swap');
+
+body {
+  margin:0;
+  height:100vh;
+  background:#000;
+  display:grid;
+  place-content:center;
+}
+.spooky {
+  text-align: center;
+  font-size: 150px;
+  padding: 90px 10px 15px;
+  font-family: 'Inconsolata', monospace;
+  font-weight: bold;
+  background: #000;
+  filter: blur(5px) contrast(10);
+  animation:b 1.5s forwards;
+}
+.spooky:after {
+  content: "THE END";
+  color: #ff0000;
+  display: block;
+  --c: linear-gradient(red 0 0);
+  background: 
+    var(--c) 59px 45px /9px 14%,
+    var(--c) 209px 43px/9px 13%,
+    var(--c) 80px 120px/8px 26%,
+    var(--c) 110px 85px/9px 15%,    
+    var(--c) 5px 45px  /12px 20%,    
+    var(--c) 158px 110px/14px 20%,    
+    var(--c) 179px 115px /9px 15%,    
+    var(--c) 359px 40px  /9px 15%,    
+    var(--c) 341px 40px  /9px 14%,    
+    var(--c) calc(100% - 10px) 113px/9px 23%,    
+    var(--c) calc(100% - 43px) 114px/12px 18%,    
+    var(--c) calc(100% - 61px) 118px/8px 19%,
+    var(--c) calc(100% - 210px) 118px/8px 22%,
+    var(--c) calc(100% - 164px) 118px/8px 17%,
+    var(--c) calc(100% - 112px) 57px/8px 42%,
+    var(--c) calc(100% - 128px) 123px/8px 17%;
+  background-repeat: no-repeat;
+  animation:a 1.5s both 2s;
+}
+
+.spooky:before {
+   content: "";
+   position: absolute;
+   inset: 0 0 auto 0;
+   height: 100px;
+   background:
+     linear-gradient(-35deg,#0000 50%,#000 0)67% 14px /20% 86px,
+     linear-gradient( 35deg,#0000 50%,#000 0)33% 14px /20% 86px,
+     radial-gradient(farthest-side,#fff 100%,#0000 ) 40% 70px/5% 12px,
+     radial-gradient(farthest-side,#f00 100%,#0000 ) 33% 14px/20% 86px,
+     radial-gradient(farthest-side,#fff 100%,#0000 ) 60% 70px/5% 12px,
+     radial-gradient(farthest-side,#f00 100%,#0000 ) 67% 14px/20% 86px;
+   background-repeat: no-repeat;
+   animation:c 1s both 1.8s;
+}
+
+@keyframes a {
+  0% {
+    background-size:
+     8px 0%,
+     9px 0%,
+     8px 0%,
+     9px 0%,    
+     12px 0%,    
+     14px 0%,    
+     9px 0%,    
+     9px 0%,    
+     9px 0%,    
+     9px 0%,    
+     12px 0%,    
+     8px 0%,
+     8px 0%,
+     8px 0%,
+     8px 0%,
+     8px 0%;
+  }
+}
+
+@keyframes b {
+  0% {filter: blur(50px) contrast(10);}
+}
+
+@keyframes c {
+  0% {opacity:0;}
+}

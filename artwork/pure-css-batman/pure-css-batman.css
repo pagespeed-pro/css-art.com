@@ -1,0 +1,415 @@
+body {
+  background: #1d6887;
+}
+.semicircle {
+  width: 50px;
+  height: 0px;
+  position: absolute;
+  border-top: 60px #060709 solid;
+  border-radius: 50%;
+}
+.batman {
+  top: 60px;
+  position: absolute;
+  left: 45%;
+  z-index: 999;
+}
+.polygon1 {
+  clip-path: polygon(15% 0, 85% 0, 100% 100%, 0% 100%);
+  background: #060709;
+  position: absolute;
+  width: 58px;
+  height: 65px;
+  top: 30px;
+  left: -4px;
+}
+.an1 {
+  clip-path: polygon(74% 0, 74% 0, 89% 100%, 31% 99%);
+  background: #060709;
+  width: 15px;
+  height: 25px;
+  position: absolute;
+  top: -16px;
+  left: 30px;
+}
+.an2 {
+  clip-path: polygon(27% 0, 0% 100%, 48% 90%);
+  background: #060709;
+  width: 15px;
+  height: 32px;
+  position: absolute;
+  top: -15px;
+  left: 5px;
+}
+.face1 {
+  clip-path: polygon(
+    1% 0%,
+    40% 13%,
+    60% 13%,
+    99% 1%,
+    80% 25%,
+    85% 75%,
+    65% 100%,
+    35% 100%,
+    15% 75%,
+    20% 25%
+  );
+  background: #f7af89;
+  position: absolute;
+  height: 40px;
+  width: 45px;
+  top: 45px;
+  left: 2px;
+}
+.mouth {
+  width: 18px;
+  height: 0px;
+  border: solid 1px #e69e78;
+  position: absolute;
+  top: 20px;
+  left: 12px;
+}
+.eye1 {
+  clip-path: polygon(50% 100%, 0 65%, 100% 80%);
+  background: white;
+  position: absolute;
+  width: 17px;
+  height: 15px;
+  top: 23px;
+  left: 5px;
+}
+.eye2 {
+  clip-path: polygon(50% 100%, 100% 65%, 0 80%);
+  background: white;
+  position: absolute;
+  width: 17px;
+  height: 15px;
+  top: 23px;
+  left: 25px;
+}
+.should1 {
+  clip-path: polygon(100% 100%, 100% 0, 0 100%);
+  background: #060709;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 80px;
+  left: -80px;
+}
+.should2 {
+  clip-path: polygon(100% 100%, 0 0, 0 100%);
+  background: #060709;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 80px;
+  left: 50px;
+}
+.circle1 {
+  width: 30px;
+  height: 30px;
+  background: #060709;
+  border-radius: 50%;
+  position: absolute;
+  top: 150px;
+  left: -80px;
+}
+.circle2 {
+  width: 30px;
+  height: 30px;
+  background: #060709;
+  border-radius: 50%;
+  position: absolute;
+  top: 150px;
+  left: 100px;
+}
+.square {
+  width: 50px;
+  height: 70px;
+  background: #060709;
+  position: absolute;
+  top: 90px;
+}
+.rect {
+  width: 208px;
+  height: 185px;
+  background: #060709;
+  position: absolute;
+  top: 160px;
+  left: -79px;
+}
+.icon {
+  width: 80px;
+  height: 45px;
+  background: #f3ec20;
+  left: 65px;
+  position: absolute;
+  top: -10px;
+  border-radius: 25px;
+}
+.up {
+  width: 70px;
+  height: 0px;
+  border-bottom: #060709 solid 12px;
+  border-radius: 50%;
+  position: absolute;
+  left: 5px;
+}
+.down1 {
+  width: 27px;
+  height: 0px;
+  border-top: #060709 solid 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  transform: rotate(30deg);
+}
+.down2 {
+  width: 25px;
+  height: 0px;
+  border-top: #060709 solid 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 35px;
+  transform: rotate(30deg);
+  left: 20px;
+}
+.down3 {
+  width: 27px;
+  height: 0px;
+  border-top: #060709 solid 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  transform: rotate(-30deg);
+  left: 55px;
+}
+.down4 {
+  width: 25px;
+  height: 0px;
+  border-top: #060709 solid 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 35px;
+  transform: rotate(-30deg);
+  left: 38px;
+}
+.bat-face {
+  width: 15px;
+  height: 0px;
+  border-top: solid 15px #f3ec20;
+  position: absolute;
+  border-radius: 50%;
+  top: 4px;
+  left: 34px;
+}
+.fan1 {
+  clip-path: polygon(74% 0, 74% 0, 89% 100%, 31% 99%);
+  width: 5px;
+  height: 10px;
+  background: #f3ec20;
+  position: absolute;
+  top: -20px;
+}
+.fan2 {
+  clip-path: polygon(74% 0, 74% 0, 89% 100%, 31% 99%);
+  width: 5px;
+  height: 10px;
+  background: #f3ec20;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+}
+.circle6 {
+  width: 220px;
+  height: 220px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+}
+.circle5 {
+  width: 250px;
+  height: 250px;
+  background: #b4bec9;
+  border-radius: 50%;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+.circle4 {
+  width: 290px;
+  height: 290px;
+  background: #58809a;
+  border-radius: 50%;
+  position: absolute;
+  left: 30%;
+  z-index: -99;
+}
+.b1 {
+  width: 40px;
+  height: 350px;
+  background: #144d68;
+  position: absolute;
+  top: 50px;
+}
+
+.b2 {
+  width: 40px;
+  height: 380px;
+  background: #144d68;
+  position: absolute;
+  top: 150px;
+  left: 70px;
+}
+
+.b3 {
+  width: 40px;
+  height: 380px;
+  background: #144d68;
+  position: absolute;
+  top: 100px;
+  left: 130px;
+}
+.top {
+  width: 20px;
+  height: 20px;
+  background: #144d68;
+  position: relative;
+  top: -20px;
+  left: 10px;
+}
+.b4 {
+  width: 40px;
+  height: 380px;
+  background: #144d68;
+  position: absolute;
+  top: 190px;
+  left: 330px;
+  z-index: -2;
+}
+.b5 {
+  width: 40px;
+  height: 380px;
+  background: #144d68;
+  position: absolute;
+  top: 100px;
+  left: 430px;
+  z-index: -1;
+}
+.b6 {
+  width: 40px;
+  height: 380px;
+  background: #144d68;
+  position: absolute;
+  top: 150px;
+  left: 530px;
+  z-index: 1;
+}
+.b7 {
+  width: 40px;
+  height: 380px;
+  background: #144d68;
+  position: absolute;
+  top: 80px;
+  left: 630px;
+}
+.b8 {
+  width: 40px;
+  height: 380px;
+  background: #144d68;
+  position: absolute;
+  top: 170px;
+  left: 730px;
+  z-index: 2;
+}
+.b9 {
+  width: 40px;
+  height: 380px;
+  background: #1e6174;
+  position: absolute;
+  top: 200px;
+  left: 30px;
+  z-index: 3;
+}
+.b10 {
+  width: 40px;
+  height: 380px;
+  background: #1e6174;
+  position: absolute;
+  top: 90px;
+  left: 360px;
+  z-index: 4;
+}
+.b11 {
+  width: 40px;
+  height: 380px;
+  background: #1e6174;
+  position: absolute;
+  top: 160px;
+  left: 460px;
+  z-index: 5;
+}
+.b12 {
+  width: 40px;
+  height: 380px;
+  background: #1e6174;
+  position: absolute;
+  top: 160px;
+  left: 590px;
+  z-index: 6;
+}
+.b13 {
+  width: 40px;
+  height: 380px;
+  background: #1e6174;
+  position: absolute;
+  top: 160px;
+  left: 690px;
+  z-index: 7;
+}
+.b14 {
+  width: 40px;
+  height: 380px;
+  background: #29768a;
+  position: absolute;
+  top: 100px;
+  left: 390px;
+  z-index: 8;
+}
+.b15 {
+  width: 40px;
+  height: 380px;
+  background: #29768a;
+  position: absolute;
+  top: 40px;
+  left: 490px;
+}
+.b16 {
+  width: 40px;
+  height: 380px;
+  background: #29768a;
+  position: absolute;
+  top: 120px;
+  left: 490px;
+  z-index: 9;
+}
+.b17 {
+  width: 40px;
+  height: 380px;
+  background: #29768a;
+  position: absolute;
+  top: 60px;
+  left: 590px;
+  z-index: 10;
+}
+.b18 {
+  width: 40px;
+  height: 380px;
+  background: #29768a;
+  position: absolute;
+  top: 190px;
+  left: 660px;
+  z-index: 11;
+}

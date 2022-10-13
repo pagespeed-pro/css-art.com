@@ -1,0 +1,41 @@
+{
+    "name": "11-burger-divtober-2022",
+    "version": "1.0.0",
+    "title": "11. Burger - Divtober 2022",
+    "description": "This entry for #divtober eally reinforced the use of variables to be able to have nearly the same shape as that burger pattie in multiple different places (without mixins being available cause these are just linear and radial gradients layers in a single background).",
+    "author": {
+        "name": "Greg Robleto",
+        "avatar": "https://assets.codepen.io/28337/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1641427924&width=512",
+        "web": "http://www.robleto.com",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/robleto/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/robleto"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/robleto"
+            }
+        ]
+    },
+    "html": "11-burger-divtober-2022.html",
+    "css": [
+        "11-burger-divtober-2022.css"
+    ],
+    "js": "/* This entry for #divtober 2022 really reinforced the use of variables to be able to have nearly the same shape in multiple different places (without mixins being available). There is a time-lapse video of making this piece at https://youtu.be/E798cZrYBQ0 */",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "cssart",
+        "cssvariables",
+        "burgers",
+        "grill"
+    ],
+    "original": "https://codepen.io/robleto/pen/JjvmLme",
+    "codepen": "https://codepen.io/robleto/pen/JjvmLme"
+}

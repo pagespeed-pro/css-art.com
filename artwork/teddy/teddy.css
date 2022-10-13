@@ -1,0 +1,55 @@
+body {
+  background-color: rgb(35, 33, 33);
+  padding: 0;
+  margin: 0;
+  /* background-color: aqua; */
+}
+.taddy {
+  background-color: #edeae3;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.taddy::before {
+  position: absolute;
+  content: "";
+  background-color: #edeae3;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  top: 150px;
+  left: 50px;
+}
+.taddy::before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  top: 180px;
+  left: 110px;
+  box-shadow: -95px -180px 0 30px #5f1912, 95px -180px 0 30px #5f1912,
+    -95px -180px 0 50px #edeae3, 95px -180px 0 50px #edeae3,
+    50px -105px 0 -8px #ffffff, -50px -105px 0 -8px #ffffff,
+    38px -91px 0 -12px #ffffff, -38px -91px 0 -12px #ffffff,
+    -45px -100px 0 2px #5f1912, 45px -100px 0 2px #5f1912, 0 -40px 0 3px #5f1912,
+    0 17px 0 3px #5f1912;
+
+  /* animation: animate 2s linear; */
+}
+@keyframes animate {
+  0% {
+    background-color: red;
+  }
+}
+.outer {
+  -webkit-box-reflect: below 0px linear-gradient(to bottom, transparent, black);
+}

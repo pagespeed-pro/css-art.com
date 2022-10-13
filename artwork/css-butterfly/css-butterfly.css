@@ -1,0 +1,273 @@
+html, body {
+  overflow: hidden;  
+}
+
+* {
+/*   animation: none !important; */
+}
+
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+.cartoon {
+  --body: #630;
+}
+
+.antenna, 
+.body {
+  width: 4%;
+  height: 4%;
+  background: var(--body);
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.body::before {
+  width: 60%;
+  height: 1000%;
+  background: var(--body);
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+}
+
+.body::after {
+  width: 150%;
+  height: 400%;
+  background: var(--body);
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+}
+
+.antenna {
+  box-shadow: 
+    -4.1vmin -9.1vmin 0 -1vmin var(--body),
+    4.1vmin -9.1vmin 0 -1vmin var(--body);
+}
+
+.antenna::after,
+.antenna::before {
+  width: 150%;
+  height: 350%;
+  border-radius: 50%;
+  left: 80%;
+  bottom: 20%;
+  border: 0.25vmin solid transparent;
+  border-left: 0.5vmin solid var(--body);
+  transform: rotate(20deg);
+}
+
+.antenna::after {
+  border-left: 0.5vmin solid transparent;
+  border-right: 0.5vmin solid var(--body);
+  transform: rotate(-20deg);
+  left: -135%;
+}
+
+@keyframes wingTopFlap1 {
+  0%, 100% { transform: rotate(-12deg) rotate3d(0, 0, 0, 10deg); }
+  50% { transform: rotate(-12deg) rotate3d(0, 1, 0, 10deg); }
+}
+
+@keyframes wingTopFlap2 {
+  0%, 100% { transform: scaleX(-1) rotate(-12deg) rotate3d(0, 0, 0, 10deg); }
+  50% { transform: scaleX(-1) rotate(-12deg) rotate3d(0, 1, 0, 10deg); }
+}
+
+.wing-top {
+  top: 5%;
+  width: 50%;
+  height: 45%;
+  left: -0.125%;
+  background: linear-gradient(darkorange, orange);
+  border-radius: 20% 100% 10% 80%;
+  transform-origin: right bottom;
+  transform: rotate(-12deg);
+  box-shadow: 
+    inset 3.5vmin 1.5vmin 0 1vmin,
+    inset -0.5vmin 0 0 1vmin;
+  animation: wingTopFlap1 2s linear infinite;
+  overflow: hidden;
+}
+
+.wing-top::after {
+  width: 120%;
+  height: 90%;
+  border-radius: 50%;
+  transform: rotate(35deg);
+  left: 30%;
+  top: -5%;
+  box-shadow: inset 1vmin -2vmin;
+}
+
+.wing-top::before {
+  width: 64%;
+  height: 25%;
+  transform: rotate(0deg);
+  top: 61.5%;
+  border-radius: 50% 50% 40% 60%;
+  box-shadow: -1vmin -0.25vmin 0 1.5vmin;
+}
+
+.wing-top ~ .wing-top {
+  left: 0;
+  transform: scaleX(-1) rotate(-12deg);
+  animation: wingTopFlap2 2s linear infinite;
+}
+
+.dots {
+  width: 2vmin;
+  height: 2vmin;
+  background: white;
+  color: white;
+  left: 5%;
+  top: 10%;
+  box-shadow: -0.5vmin 3vmin,
+    -0.5vmin 6vmin 0 0.125vmin,
+    1.5vmin -2.25vmin orange,
+    3.5vmin -3vmin 0 -0.5vmin,
+    20vmin 7vmin 0 2vmin black,
+    20vmin 7.25vmin 0 3vmin
+}
+
+@keyframes wingBottomFlap1 {
+  0%, 100% { transform: rotate(55deg) rotate3d(0, 0, 0, 10deg); }
+  50% { transform: rotate(55deg) rotate3d(0, 1, 0, 10deg); }
+}
+
+@keyframes wingBottomFlap2 {
+  0%, 100% { transform: scaleX(-1) rotate(55deg) rotate3d(0, 0, 0, 10deg); }
+  50% { transform: scaleX(-1) rotate(55deg) rotate3d(0, 1, 0, 10deg); }
+}
+
+.wing-bottom {
+  width: 28%;
+  height: 40%;
+  background: linear-gradient(95deg, darkorange, orange);
+  border-radius: 100% / 125% 125% 70% 50%;
+  transform-origin: right top;
+  transform: rotate(55deg);
+  top: 59%;
+  left: 27.5%;
+  box-shadow: inset 1vmin -2vmin 0 0.5vmin;
+  animation: wingBottomFlap1 2s linear infinite;
+  overflow: hidden;
+}
+
+.wing-bottom ~ .wing-bottom {
+  transform: scaleX(-1) rotate(55deg);
+  left: auto;
+  right: 55.5%;
+  animation: wingBottomFlap2 2s linear infinite;
+}
+
+.wing-bottom::before {
+  width: 100%;
+  height: 100%;
+  left: 55%;
+  top: -30%;
+  border-radius: 50%;
+  box-shadow: -1vmin 0.5vmin,
+    -3vmin 2vmin 0 1vmin orange,
+    -3vmin 3vmin 0 1.5vmin
+}
+
+.wing-bottom::after {
+  width: 3vmin;
+  height: 3vmin;
+  background: black;
+  top: 70%;
+  left: 15%;
+  border-radius: 50%;
+  box-shadow: 
+    2vmin 2vmin 0 -0.5vmin, 
+    2.75vmin -0.5vmin 0 -0.5vmin white,
+    4.25vmin 1.5vmin 0 -0.75vmin red,
+    11vmin -10vmin 0 1vmin,
+    15vmin -12vmin 0 -0.5vmin white;
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

@@ -1,0 +1,115 @@
+@property --center {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 28%;
+}
+
+@property --skin {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #fff;
+}
+
+@property --mane {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #c60;
+}
+
+@keyframes drawLion {
+  0% {
+    --skin: #fff;
+    --center: 28%;
+    background-color: #2962ff;
+  }
+  20% {
+    --skin: #fff;
+    --center: 40%;
+    background-color: #2962ff;
+  }
+  30% {
+    --skin: #fb4;
+    background-color: #c60;
+  }
+  100% {
+    --center: 40%;
+    --skin: #fb4;
+    background-color: #c60;
+  }
+}
+
+.hashnode-logo {
+  aanimation: drawLion 4s 1s 1 forwards;
+  
+  --center: 28%;
+  --skin: #fff;
+  
+  width: 60vmin;
+  box-shadow: 30vmin 0 #ddd, 60vmin 0 #ddd, 90vmin 0 #ddd, 120vmin 0 #ddd;
+  aspect-ratio: 1;
+  position: absolute;
+  border-radius: 27%;
+  transform: rotate(45deg);
+  background:
+    /* sun lightness*/
+    linear-gradient(to right, #fff2, #0000),
+    
+    /* whiskers */
+    radial-gradient(#000 4%, #0000 0) 51% 75% / 20% 20%,
+    radial-gradient(#000 4%, #0000 0) 75% 51% / 20% 20%,
+    radial-gradient(#000 4%, #0000 0) 50% 80% / 20% 20%,
+    radial-gradient(#000 4%, #0000 0) 81% 50% / 20% 20%,
+    radial-gradient(#000 4%, #0000 0) 57% 75% / 20% 20%,
+    radial-gradient(#000 4%, #0000 0) 75% 58% / 20% 20%,
+    
+    /* eyes */
+    radial-gradient(#fff 5%, #0000 0) 30.5% 57% / 20% 20%,
+    radial-gradient(#fff 5%, #0000 0) 55% 32.5% / 20% 20%,
+    radial-gradient(#000 15%, #c60 16% 24%, #0000 25%) 33% 57% / 20% 20%,
+    radial-gradient(#000 15%, #c60 16% 24%, #0000 25%) 57% 33% / 20% 20%,
+    radial-gradient(#fff 45%, #0000 0) 32% 56% / 20% 20%,
+    radial-gradient(#fff 45%, #0000 0) 56% 32% / 20% 20%,
+    
+    /* nose */
+    linear-gradient(135deg, #0000 90%, #630 0) 30% 30% / 45% 45%,
+    conic-gradient(at 0 0, #0000 125deg, #fff3 0 145deg, #0000 0) 44.5% 44.5% / 31% 31%,
+    
+    /* mouth line */
+    linear-gradient(45deg, #0000 48%, #000 0 52%, #0000 0) 66.6% 66.6% / 10% 10%,
+    radial-gradient(var(--skin) var(--center), #0000 0),
+    
+    /* ears */
+    radial-gradient(circle at 50% 100%, #fd9 20%, var(--skin) 0 45%, #0000 0) 50% 0% / 20% 20%,
+    radial-gradient(circle at 100% 50%, #fd9 20%, var(--skin) 0 45%, #0000 0) 0% 50% / 20% 20%,
+    
+    /* chin */
+    radial-gradient(at 61% 65%, #fd9 14.75%, #0000 15%),
+    radial-gradient(at 65% 61%, #fd9 14.75%, #0000 15%),
+    linear-gradient(135deg, #fd9 0 0) 69% 69% / 15% 15%,
+    linear-gradient(135deg, #fd9 0 0) 67% 70% / 15% 15%,
+    linear-gradient(135deg, #fd9 0 0) 70% 67% / 15% 15%,
+    
+    /* shadow lines */
+    linear-gradient( #0002 0 0) 100% 50% / 50% 57%,
+    linear-gradient( #0002 0 0) 100% 11% / 50% 10.125%,
+    linear-gradient( #0002 0 0) 35% 50% / 50% 20%,
+    
+    /* mane lines */
+    repeating-conic-gradient(#0000 0 13deg, #fff3 0 15deg),
+    repeating-conic-gradient(#0000 0 27deg, #0001 0 29deg),
+    repeating-conic-gradient(var(--mane) 0 21deg, #6002 0 23deg)
+    ;
+  background-repeat: no-repeat;
+  background-color: #2962ff;
+  /* for demo, centering it on the page */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  
+  
+  
+   --center: 40%;
+    --skin: #fb4;
+  --mane: #c60;
+    background-color: #c60;
+}

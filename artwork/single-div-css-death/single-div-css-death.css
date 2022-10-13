@@ -1,0 +1,51 @@
+body {
+  min-height: 360px;
+  height: 100vh;
+  position: relative;
+  background-color: #4b0082;
+  overflow: hidden;
+}
+div {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+div:before,
+div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+#spooky {
+  font-size: 10px;
+  width: 20em;
+  height: 30em;
+  margin-left: -10em;
+  top: auto;
+  bottom: -2em;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(45deg, rgba(255,255,255,0) 30%, #ccc 35%, #ccc 37%, rgba(255,255,255,0) 42%), linear-gradient(-45deg, rgba(255,255,255,0) 30%, #ccc 35%, #ccc 37%, rgba(255,255,255,0) 42%), linear-gradient(45deg, rgba(255,255,255,0) 30%, #ddd 35%, #ddd 37%, rgba(255,255,255,0) 42%), linear-gradient(140deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.2) 47%, rgba(0,0,0,0.2) 52%, rgba(0,0,0,0) 58%), linear-gradient(-140deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.2) 47%, rgba(0,0,0,0.2) 52%, rgba(0,0,0,0) 58%), radial-gradient(ellipse at 50% 100%, black 50%, rgba(0,0,0,0) 52%), linear-gradient(white, white);
+  background-size: 2em 2em, 2em 1em, 2em 1em, 5em 5em, 5em 5em, 1.5em 2.5em, 80% 90%;
+  background-position: 50% 12%, 48% 18.5%, 52% 22%, 2em 7em, right 2em top 7em, 50% 42%, 50% 50%;
+  border-radius: 10em 10em 0 0;
+  box-shadow: inset 0 0 0 2em #2e004f, inset 0 0 0 4em #10001c, inset 0 -16.5em 0 0 #10001c, inset 4.5em 1em 0.4em rgba(0,0,0,0.5), inset 5.5em 1em 0.7em rgba(0,0,0,0.2), inset -4.5em 1em 0.4em rgba(0,0,0,0.5), inset -5.5em 1em 0.7em rgba(0,0,0,0.2);
+}
+#spooky:before {
+  width: 3.4em;
+  height: 3em;
+  left: 5.9em;
+  top: 9.2em;
+  background-color: black;
+  border-radius: 1.3em;
+  box-shadow: 0.2em 0.2em 0 0.1em #aaa, 4.8em 0 0 black, 5em 0.2em 0 0.1em #aaa;
+}
+#spooky:after {
+  width: 36em;
+  height: 35em;
+  left: -8em;
+  top: -8em;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, #7fff00 20%, rgba(127,255,0,0) 80%), radial-gradient(circle, #7fff00 20%, rgba(127,255,0,0) 80%), linear-gradient(black, black), repeating-linear-gradient(to right, black, black 0.3em, rgba(0,0,0,0) 0.3em, rgba(0,0,0,0) 1em), linear-gradient(to right, rgba(0,0,0,0.3), rgba(0,0,0,0) 20%), linear-gradient(to left, rgba(0,0,0,0.3), rgba(0,0,0,0) 20%), linear-gradient(white, white), linear-gradient(to right, rgba(255,255,255,0.3), rgba(255,255,255,0.1), rgba(255,255,255,0.1), rgba(255,255,255,0.3)), linear-gradient(to bottom, #10001c, rgba(0,0,0,0)), radial-gradient(ellipse at 50% 0, rgba(218,165,32,0) 50%, #daa520 51%, #daa520 53%, rgba(218,165,32,0) 54%), linear-gradient(#daa520, #daa520), linear-gradient(#daa520, #daa520), linear-gradient(80deg, #483d8b, #6a5acd 45%, rgba(106,90,205,0) 46%), linear-gradient(10deg, rgba(106,90,205,0) 35%, #483d8b 36%, #6a5acd 55%, rgba(106,90,205,0) 56%), linear-gradient(160deg, rgba(106,90,205,0) 25%, #6a5acd 26%, #483d8b 32%, rgba(106,90,205,0) 33%), linear-gradient(105deg, rgba(106,90,205,0) 60%, #6a5acd 61%, #483d8b), linear-gradient(160deg, rgba(106,90,205,0) 25%, #6a5acd 26%, #483d8b 35%, rgba(106,90,205,0) 36%), linear-gradient(120deg, rgba(106,90,205,0) 70%, #6a5acd 71%, #483d8b), linear-gradient(20deg, rgba(106,90,205,0) 55%, #483d8b 56%, #6a5acd 65%, rgba(106,90,205,0) 66%), linear-gradient(70deg, #483d8b, #6a5acd 30%, rgba(106,90,205,0) 31%), linear-gradient(-80deg, #483d8b, #6a5acd 45%, rgba(106,90,205,0) 46%), linear-gradient(-10deg, rgba(106,90,205,0) 35%, #483d8b 36%, #6a5acd 55%, rgba(106,90,205,0) 56%), linear-gradient(-160deg, rgba(106,90,205,0) 25%, #6a5acd 26%, #483d8b 32%, rgba(106,90,205,0) 33%), linear-gradient(-105deg, rgba(106,90,205,0) 60%, #6a5acd 61%, #483d8b), linear-gradient(-160deg, rgba(106,90,205,0) 25%, #6a5acd 26%, #483d8b 35%, rgba(106,90,205,0) 36%), linear-gradient(-120deg, rgba(106,90,205,0) 70%, #6a5acd 71%, #483d8b), linear-gradient(-20deg, rgba(106,90,205,0) 55%, #483d8b 56%, #6a5acd 65%, rgba(106,90,205,0) 66%), linear-gradient(-70deg, #483d8b, #6a5acd 30%, rgba(106,90,205,0) 31%);
+  background-size: 2em 2em, 2em 2em, 5em 0.3em, 5.3em 1.5em, 7em 3.5em, 7em 3.5em, 7em 3.5em, 10em 3.5em, 8em 5em, 8em 7em, 1em 0.2em, 0.2em 2em, 2em 10em, 10em 3em, 10em 3em, 2em 5em, 7em 2em, 2em 3em, 6em 2em, 2em 3em, 2em 10em, 10em 3em, 10em 3em, 2em 5em, 7em 2em, 2em 3em, 6em 2em, 2em 3em;
+  background-position: left 14.6em bottom 15.2em, right 14.6em bottom 15.2em, left 50% bottom 11.3em, left 50% bottom 10.7em, left 50% bottom 10em, left 50% bottom 10em, left 50% bottom 10em, left 50% bottom 10em, left 50% bottom 4em, left 50% bottom 1em, left 50% bottom 1.9em, left 50% bottom 1em, 5em 4em, 5em 13em, 5em 6em, 9em 1em, 5em 10em, 7.4em 7em, 0em 11em, 1em 8em, right 5em top 4em, right 5em top 13em, right 5em top 6em, right 9em top 1em, right 5em top 10em, right 7.4em top 7em, right 0em top 11em, right 1em top 8em;
+}

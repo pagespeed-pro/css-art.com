@@ -1,0 +1,50 @@
+body {
+  min-height: 300px;
+  height: 100vh;
+  position: relative;
+  background-color: #1e90ff;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div::before,
+div::after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+@media (max-width: 400px) {
+  div:not(.no-scale) {
+    transform: scale(0.8);
+  }
+}
+#game {
+  width: 160px;
+  height: 110px;
+  margin-left: -90px;
+  margin-top: -100px;
+  background: linear-gradient(#eee, #eee) 36.3% 38.5%/0.45em 0.1em, linear-gradient(#eee, #eee) 35.65% 39.5%/0.55em 0.1em, linear-gradient(#eee, #eee) 36% 52%/0.5em 1.6em, linear-gradient(#eee, #eee) 33.1% 43%/0.2em 0.5em, linear-gradient(#eee, #eee) 44.3% 38.5%/0.45em 0.1em, linear-gradient(#eee, #eee) 43.7% 39.5%/0.55em 0.1em, linear-gradient(#eee, #eee) 44% 52%/0.5em 1.6em, linear-gradient(#eee, #eee) 41% 43%/0.2em 0.5em, linear-gradient(#eee, #eee) 50% 44%/0.4em 0.4em, linear-gradient(#eee, #eee) 50% 56%/0.4em 0.4em, linear-gradient(#eee, #eee) 57.5% 38.5%/0.45em 0.1em, linear-gradient(#eee, #eee) 57.1% 39.5%/0.55em 0.1em, linear-gradient(#eee, #eee) 57.3% 52%/0.5em 1.6em, linear-gradient(#eee, #eee) 54.1% 43%/0.2em 0.5em, linear-gradient(#eee, #eee) 65.7% 38.5%/0.45em 0.1em, linear-gradient(#eee, #eee) 65.3% 39.5%/0.55em 0.1em, linear-gradient(#eee, #eee) 65.5% 52%/0.5em 1.6em, linear-gradient(#eee, #eee) 61.7% 43%/0.2em 0.5em;
+  background-repeat: no-repeat;
+  background-color: #666;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 7px #444, -2px -2px 0 2px #ffd700, 21px -2px 0 2px #ffd700, -2px 80px 0 2px #ffd700, 21px 80px 0 2px #ffd700, -2px 90px 0 2px #ffa500, 21px 90px 0 2px #ffa500;
+}
+#game::before {
+  width: 211px;
+  height: 200px;
+  top: -2px;
+  left: -2px;
+  background: radial-gradient(#444 20%, rgba(0,0,0,0) 21%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 51%, rgba(0,0,0,0.4) 63%, rgba(0,0,0,0) 64%) right 1.75em top 0/1.2em 1.2em, radial-gradient(rgba(255,215,0,0) 50%, #ffd700 50.5%, #ffd700 79%, rgba(255,215,0,0) 79.5%) right 1.75em top 0/1.2em 1.2em, repeating-conic-gradient(from 0deg, #aaa 0deg 10deg, #ddd 10deg 60deg, #aaa 60deg 90deg) right 1.9em top 0.1em/0.9em 1em, radial-gradient(#444 20%, rgba(0,0,0,0) 21%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 51%, rgba(0,0,0,0.4) 63%, rgba(0,0,0,0) 64%) left 0 bottom 0.5em/1.2em 1.2em, radial-gradient(rgba(255,215,0,0) 50%, #ffd700 50.5%, #ffd700 79%, rgba(255,215,0,0) 79.5%) left 0 bottom 0.5em/1.2em 1.2em, repeating-conic-gradient(from 0deg, #aaa 0deg 10deg, #ddd 10deg 60deg, #aaa 60deg 90deg) left 0.15em bottom 0.6em/0.9em 1em, radial-gradient(#444 20%, rgba(0,0,0,0) 21%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.4) 51%, rgba(0,0,0,0.4) 63%, rgba(0,0,0,0) 64%) right 1.75em bottom 0.5em/1.2em 1.2em, radial-gradient(rgba(255,215,0,0) 50%, #ffd700 50.5%, #ffd700 79%, rgba(255,215,0,0) 79.5%) right 1.75em bottom 0.5em/1.2em 1.2em, repeating-conic-gradient(from 0deg, #aaa 0deg 10deg, #ddd 10deg 60deg, #aaa 60deg 90deg) right 1.9em bottom 0.6em/0.9em 1em, radial-gradient(white 20%, #ffd700 21%, #ffd700 50%, #ffa500 51%, #ffa500 62%, rgba(255,165,0,0) 63%) right 1.75em top 1.3em/1.2em 1.2em, radial-gradient(#ffa500 62%, rgba(255,165,0,0) 63%) right 1.75em top 1.4em/1.2em 1.2em, radial-gradient(circle, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0) 70.5%) right 2.31em top 3.25em/0.1em 0.1em, radial-gradient(circle, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0) 70.5%) right 2.31em top 3.55em/0.1em 0.1em, radial-gradient(circle, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0) 70.5%) right 2.31em top 3.85em/0.1em 0.1em, radial-gradient(circle, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0) 70.5%) right 2.31em top 4.15em/0.1em 0.1em, radial-gradient(circle, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0) 70.5%) right 2.31em top 4.45em/0.1em 0.1em, radial-gradient(circle, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0) 70.5%) right 2.31em top 4.75em/0.1em 0.1em, radial-gradient(circle, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0) 70.5%) right 2.31em top 5.05em/0.1em 0.1em, radial-gradient(circle, #aaa 70%, rgba(170,170,170,0) 70.5%) right 2.1em top 3em/0.5em 0.5em, linear-gradient(to right, #aaa, #aaa) right 2.1em top 3.3em/0.5em 1.8em, radial-gradient(circle, #aaa 70%, rgba(170,170,170,0) 70.5%) right 2.1em top 4.9em/0.5em 0.5em, linear-gradient(to bottom, rgba(255,215,0,0) 14%, #ffd700 14.5%, #ffd700 85.5%, rgba(255,215,0,0) 86%) left 1.55em bottom 2.7em/1.9em 1em, linear-gradient(to right, rgba(255,215,0,0) 14%, #ffd700 14.5%, #ffd700 85.5%, rgba(255,215,0,0) 86%) left 2em bottom 2.3em/1em 1.9em, radial-gradient(circle at 50% 100%, rgba(255,165,0,0) 50%, #ffa500 50.5%, #ffa500 70%, rgba(255,165,0,0) 70.5%) left 2em bottom 4.1em/1em 0.5em, radial-gradient(circle at 50% 0, #ffd700 50%, #ffa500 50.5%, #ffa500 70%, rgba(255,165,0,0) 70.5%) left 2em bottom 1.8em/1em 0.5em, radial-gradient(circle, #ffa500 70%, rgba(255,165,0,0) 70.5%) left 2em bottom 1.6em/1em 1em, linear-gradient(to right, #ffa500, #ffa500 14%, rgba(255,165,0,0) 14.5%, rgba(255,165,0,0) 85.5%, #ffa500 86%, #ffa500 100%) left 2em bottom 2.2em/1em 1.9em, radial-gradient(circle at 100% 50%, #ffd700 50%, #ffa500 50.5%, #ffa500 70%, rgba(255,165,0,0) 70.5%) left 1.05em bottom 2.7em/0.5em 1em, radial-gradient(circle, #ffa500 70%, rgba(255,165,0,0) 70.5%) left 1.05em bottom 2.6em/1em 1em, radial-gradient(circle at 0 50%, #ffd700 50%, #ffa500 50.5%, #ffa500 70%, rgba(255,165,0,0) 70.5%) left 3.45em bottom 2.7em/0.5em 1em, radial-gradient(circle, #ffa500 70%, rgba(255,165,0,0) 70.5%) left 2.95em bottom 2.6em/1em 1em, linear-gradient(to bottom, #ffa500, #ffa500 14%, rgba(255,165,0,0) 14.5%, rgba(255,165,0,0) 85.5%, #ffa500 86%, #ffa500 100%) left 1.55em bottom 2.7em/1.9em 1em, linear-gradient(#ffa500, #ffa500) left 1.55em bottom 2.6em/1.9em 1em, radial-gradient(white 25%, #ffd700 26%, #ffd700 55%, #ffa500 56%, #ffa500 65%, rgba(255,165,0,0) 65%) right 5.6em bottom 3em/1.8em 1.8em, radial-gradient(#ffa500 65%, rgba(255,165,0,0) 65%) right 5.6em bottom 2.8em/1.8em 1.8em, radial-gradient(white 25%, #ffd700 26%, #ffd700 55%, #ffa500 56%, #ffa500 65%, rgba(255,165,0,0) 65%) right 3.2em bottom 3em/1.8em 1.8em, radial-gradient(#ffa500 65%, rgba(255,165,0,0) 65%) right 3.2em bottom 2.8em/1.8em 1.8em, radial-gradient(circle, #ffd700 45%, rgba(0,0,0,0.3) 45.5%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0) 60.5%) right 0.7em top 6.1em/0.5em 0.5em, radial-gradient(circle at 50% 0, #ccc 50%, rgba(204,204,204,0) 51%) right 0.35em top 6.3em/1.2em 0.6em, linear-gradient(to bottom, #aaa, #aaa 0.2em, white 0.2em, white 0.4em, #ccc 0.4em, #ccc) right 0.52em top 3.11em/0.86em 3.2em, linear-gradient(#bbb, #bbb) right 1.35em top 5.9em/0.28em 0.8em;
+  background-repeat: no-repeat;
+}
+#game::after {
+  width: 1.8em;
+  height: 1.2em;
+  right: -4.5em;
+  top: 3em;
+  border-radius: 0.2em;
+  background-color: #ffd700;
+  box-shadow: 0 0.3em 0 #ffa500, -0.35em 0.15em 0 -0.2em #ff8c00;
+}

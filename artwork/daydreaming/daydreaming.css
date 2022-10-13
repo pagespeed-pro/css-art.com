@@ -1,0 +1,147 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+.canvas {
+  top: 5%;
+  height: 90%;
+  width: 60%;
+  background: #222;
+  border-radius: 100% / 120% 115% 30% 30%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.body {
+  width: 90%;
+  height: 40%;
+  background: white;
+  border-radius: 100% / 130% 120% 60% 60%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: 2%;
+  box-shadow: 
+    inset -7vmin -13vmin 0 -2vmin #369,
+    inset 0 -4vmin white,
+    inset 20vmin 2vmin 0 2vmin white,
+    inset 21.5vmin -0.75vmin 0 1.35vmin #222;
+}
+
+.head {
+  width: 29vmin;
+  height: 33vmin;
+  background: #fff;
+  border-radius: 50%;
+  left: 50%;
+  top: 3%;
+  transform: translate(-50%, 0);
+}
+
+.head::after {
+  width: 50%;
+  height: 80%;
+  border-radius: 50%;
+  transform: rotate(18deg);
+  top: 76%;
+  left: -20%;
+  box-shadow: 6vmin -2vmin 0 2vmin white
+}
+
+.head::before {
+  width: 50%;
+  height: 80%;
+  border-radius: 50%;
+  transform: rotate(-18deg);
+  top: 76%;
+  right: -20%;
+  box-shadow: -5vmin -2vmin 0 2vmin white
+}
+
+.hair-1 {
+  width: 50%;
+  height: 50%;
+  background: #222;
+  border-radius: 100% 0; 
+  top: -14%;
+  left: 44%;
+  transform: translate(-100%, 0) rotate(10deg);
+  box-shadow: 
+    1.25vmin 2.5vmin 0 -3vmin white, 
+    2.25vmin 2.5vmin 0 -3vmin #222;
+}
+
+.hair-2 {
+  width: 65%;
+  height: 65%;
+  background: #222;
+  border-radius: 0 100%; 
+  top: -20%;
+  right: 63%;
+  transform: translate(100%, 0) rotate(-20deg);
+}
+
+.head + .head {
+  background: transparent;
+  box-shadow: 0 -1vmin 3vmin #2228;
+}
+
+.eye {
+  width: 22%;
+  height: 11%;
+  background: #fff;
+  top: 47%;
+  left: 20%;
+  border-radius: 0 0 10vmin 10vmin;
+  box-shadow: 
+    12vmin -1vmin 0 -0.5vmin #fff,
+    12vmin 0 #222, 
+    inset 0 -1vmin 0 0.5vmin #222
+}
+
+.blush {
+  width: 25%;
+  height: 7%;
+  border-radius: 50%;
+  background: #f002;
+  top: 60%;
+  left: 18%;
+  box-shadow: 12vmin 0 #f002;
+}
+
+.mouth {
+  width: 32%;
+  height: 11%;
+  border: 0.5vmin solid transparent;
+  border-bottom: 1vmin solid #222;
+  border-radius: 50%;
+  top: 74%;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(-5deg);
+}

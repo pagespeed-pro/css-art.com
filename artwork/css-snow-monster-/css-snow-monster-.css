@@ -1,0 +1,264 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(#ace, #9bd)
+}
+
+.border {
+  filter:
+    drop-shadow(0 0.125vmin) drop-shadow(0.25vmin 0) drop-shadow(-0.25vmin 0) drop-shadow(0 -0.25vmin) drop-shadow(0 0.25vmin) drop-shadow(0.25vmin 0) 
+}
+
+.yeti {
+  --skin: #8bf;
+  --skin-dark: #7ad;
+  --fur: #fff;
+  --fur-dark: #ddd;
+  --line: #036;
+  color: var(--line);
+  width: 80vmin;
+  height: 80vmin;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.yeti *,
+.yeti *::before,
+.yeti *::after {
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.ground {
+  left: 50%;
+  top: 60%;
+  transform: translateX(-50%);
+  width: 200vw;
+  height: 100vh;
+  aopacity: 0.5;
+/*   background: radial-gradient(250% 50vmin at 30% 0%, #0000 20%, #def 20.25%, #fff 50%); */
+  background: radial-gradient(250% 50vmin at 40% 0%, #0000 20%, var(--line) 20.25% 20.7%, #fff 21%);
+}
+
+.ground::before {
+  content: "";
+  top: 20vmin;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100% / 20%;
+  background: #fff;
+  border-top: 0.5vmin solid;
+  z-index: 1
+}
+
+.leg {
+  width: 2%;
+  height: 20%;
+  background: var(--skin);
+  top: 66%;
+  left: 46%;
+  background: linear-gradient(to right, var(--skin) 75%, var(--skin-dark) 0);
+}
+
+.leg::before {
+  content: "";
+  width: 666%;
+  height: 15%;
+  background: var(--skin);
+  border-radius: 50% / 100% 100% 0 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to right, var(--skin) 96%, var(--skin-dark) 0);
+  box-shadow: inset 1.75vmin 3vmin 0 -2.75vmin var(--skin-dark);
+}
+
+.leg::after {
+  content: "";
+  width: 350%;
+  height: 70%;
+  right: -40%;
+  top: 0;
+  background: 
+/*     linear-gradient(to right, #0000 85%, var(--fur-dark) 0)
+    , */
+    linear-gradient(250deg, var(--fur) 73%, #0000 0)
+    ;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 80% 90%, 70% 100%, 60% 90%, 40% 100%, 0% 100%)
+}
+
+.leg + .leg {
+  left: 52%;
+  transform: scaleX(-1);
+}
+
+.leg + .leg::after {
+  height: 75%;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 85% 88%, 70% 98%, 60% 85%, 50% 100%, 35% 86%, 0% 100%)
+}
+
+.body {
+  width: 60%;
+  height: 50%;
+  background:
+    radial-gradient(130% 100% at 46% 63%, var(--line) 1%, #0000 0),
+    radial-gradient(130% 100% at 54% 63%, var(--line) 1%, #0000 0),
+    radial-gradient(100% 100% at 50% 60%, var(--skin) 4%, #0000 0),
+    radial-gradient(100% 100% at 50% 59%, var(--line) 4.5%, #0000 0),
+    radial-gradient(circle at 45.5% 61.5%, var(--skin) 2.75%, #0000 0),
+    radial-gradient(circle at 45% 61%, var(--line) 3.5%, #0000 0),
+    radial-gradient(circle at 54.5% 61.5%, var(--skin) 2.75%, #0000 0),
+    radial-gradient(circle at 55% 61%, var(--line) 3.5%, #0000 0),  
+    linear-gradient(#0000 20%, var(--skin-dark) 0 22%, #0000 0 30%, var(--skin-dark) 0 32%, #0000 0) no-repeat 50% 35% / 35% 30%,
+    radial-gradient(120% 108% at 50% 67%, var(--skin) 18%, #0000 0),
+    radial-gradient(var(--skin) 48.75%, var(--line) 49% 50%, #0000 50.25%),
+    radial-gradient(120% 108% at 50% 68%, var(--line) 18%, #0000 0)
+    ;
+  background-color: var(--fur);
+  border-radius: 100% / 80% 80% 110% 110%;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.body::before {
+  content: "";
+  width: 120%;
+  height: 120%;
+  top: -10%;
+  left: -10%;
+  background:
+    conic-gradient(from 0.05turn, var(--fur) 20deg, #0000 0) -14% 49% / 30% 30%,
+    conic-gradient(from 0.95turn, var(--fur) 20deg, #0000 21deg) -1% 85% / 30% 30%,
+    conic-gradient(from 0.35turn, var(--fur) 15deg, #0000 16deg) 35% -20% / 30% 30%,
+    conic-gradient(from 0.25turn, var(--fur) 20deg, #0000 21deg) 10% -11% / 40% 30%,
+    conic-gradient(from 0.65turn, var(--fur) 20deg, #0000 21deg) 65% -15% / 30% 30%,
+    conic-gradient(from 0.85turn, var(--fur) 20deg, #0000 21deg) 36% 115% / 30% 30%,
+    conic-gradient(from 0.85turn, var(--fur) 35deg, #0000 36deg) 45% 118% / 30% 30%,
+    conic-gradient(from 0.87turn, var(--fur) 90deg, #0000 91deg) 50% 116% / 30% 30%,
+    conic-gradient(from 0.00turn, var(--fur) 40deg, #0000 41deg) 55% 120% / 30% 30%,
+    conic-gradient(from 0.90turn, var(--fur) 32.5deg, #0000 33.5deg) 110.5% 75% / 30% 40%,
+    conic-gradient(from 0.02turn, var(--fur) 15deg, #0000 16deg) 93% 95% / 20% 40%,
+    conic-gradient(from 0.77turn, var(--fur) 12deg, #0000 13deg) 111% -0.5% / 40% 40%,
+    conic-gradient(from 0.07turn, var(--fur) 20deg, #0000 21deg) 61% 128% / 30% 40%,
+    conic-gradient(from 0.01turn, var(--fur) 41deg, #0000 31deg) 71% 125% / 30% 40%,
+    conic-gradient(from 0.92turn, var(--fur) 24deg, #0000 25deg) 10% 109% / 30% 40%
+    ;
+  background-repeat: no-repeat;
+}
+
+.eye {
+  --pos: 25%;
+  width: 18%;
+  height: 20%;
+  border-radius: 50%;
+  top: 40%;
+  left: var(--pos);
+  background:
+    radial-gradient(circle at 58% 40%, #fff 3%, #0000 4%),
+    radial-gradient(circle at 48% 45%, #fff 7%, #0000 8%),
+    radial-gradient(circle at 60% 55%, #000 20%, #0000 21%),
+    radial-gradient(circle at 60% 55%, red 40%, #0000 41%)
+    ;
+  background-color: #ee0;
+  box-shadow: 0 0 0 0.4vmin;
+}
+
+.eye + .eye {
+  right: var(--pos);
+  left: auto;
+  transform: scaleX(-1);
+  background-image:
+    radial-gradient(circle at 63% 40%, #fff 3%, #0000 4%),
+    radial-gradient(circle at 73% 45%, #fff 7%, #0000 8%),
+    radial-gradient(circle at 60% 55%, #000 20%, #0000 21%),
+    radial-gradient(circle at 60% 55%, red 40%, #0000 41%)
+    ;
+}
+
+.mouth {
+  width: 25%;
+  height: 8%;
+  background:
+    conic-gradient(at 50% 70%, #ee0 30deg, #0000 0 330deg, #ee0 0) repeat-x 0 0 / 25% 100%,
+    
+    conic-gradient(at 50% 30%, #0000 150deg, #ee0 0 210deg, #0000 0) repeat-x -15% 0 / 25% 100%
+    ;
+  background-color: #f00;
+  top: 72%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 0.5vmin solid;
+  border-radius: 50% / 0 0 100% 100%;
+}
+
+.forehead {
+  width: 60%;
+  height: 20%;
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    conic-gradient(from 0.06turn at 20% 100%, var(--fur) 30deg, #0000 0) 10% 0% / 40% 100%,
+    conic-gradient(from 0.83turn at 90% 100%, var(--fur) 35deg, #0000 0) 90% 0% / 40% 90%,
+    conic-gradient(from 0.03turn at 10% 100%, var(--fur) 45deg, #0000 0) 50% 0% / 40% 70%,
+    conic-gradient(from 0.92turn at 50% 100%, var(--fur) 45deg, #0000 0) 60% 0% / 40% 75%
+    ;
+  background-repeat: no-repeat;
+  
+  filter: drop-shadow(0.25vmin 0.25vmin) drop-shadow(-0.25vmin 0.25vmin) drop-shadow(0.5vmin 0.125vmin) drop-shadow(-0.25vmin 0.25vmin);
+  clip-path: polygon(0 100%, 30% 0%, 60% 0%, 100% 58%, 100% 100%)
+}
+
+.arm {
+  width: 5%;
+  height: 20%;
+  border-radius: 0 0 5vmin 5vmin;
+  border-left: 1.5vmin solid var(--skin);
+  border-bottom: 1vmin solid var(--skin);
+  top: 60%;
+  left: 35%;
+}
+
+.arm::before {
+  content: "";
+  width: 100%;
+  height: 10%;
+  background: var(--skin);
+  bottom: 5%;
+  left: -2%;
+  border-radius: 50% / 0 0 100% 80%;
+}
+
+.arm::after {
+  content: "";
+  width: 2.5vmin;
+  height: 75%;
+  left: -2vmin;
+  background: white;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 75% 90%, 50% 100%, 25% 90%, 0% 100%);
+}
+
+
+.arm + .arm {
+  transform: scaleX(-1) rotate(2deg);
+  left: 60%;
+}
+
+.arm + .arm::after {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 75% 90%, 50% 100%, 25% 85%, 0% 100%)
+}
+
+.shadow {
+  width: 60%;
+  height: 5%;
+  background: #0001;
+  border-radius: 50%;
+  left: 50%;
+  top: 85%;
+  transform: translateX(-50%);
+}

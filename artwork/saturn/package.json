@@ -1,0 +1,31 @@
+{
+    "name": "saturn",
+    "version": "1.0.0",
+    "title": "Saturn",
+    "description": "",
+    "author": {
+        "name": "Ronnie",
+        "avatar": "https://assets.codepen.io/4564591/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1657882759&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/idrinkcss/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/_ronnieTech"
+            }
+        ]
+    },
+    "html": "saturn.html",
+    "css": [
+        "saturn.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [],
+    "original": "https://codepen.io/idrinkcss/pen/LYLREPp",
+    "codepen": "https://codepen.io/idrinkcss/pen/LYLREPp"
+}

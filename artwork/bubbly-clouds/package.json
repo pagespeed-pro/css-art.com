@@ -1,0 +1,41 @@
+{
+    "name": "bubbly-clouds",
+    "version": "1.0.0",
+    "title": "Bubbly clouds",
+    "description": "CSS-only Waddle Dee with some scroll watching jazz",
+    "author": {
+        "name": "Tiffany Choong",
+        "avatar": "https://assets.codepen.io/765377/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1516941279&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/tiffachoo/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/tiffachooo"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/tiffachoo"
+            }
+        ]
+    },
+    "html": "bubbly-clouds.html",
+    "css": [
+        "bubbly-clouds.css"
+    ],
+    "js": "console.clear();\n\nconst dee = document.getElementById('waddleDee');\nconst deeBottom = dee.getBoundingClientRect().height + dee.getBoundingClientRect().top;\nconst ground = document.getElementById('ground');\nconst groundPos = ground.getBoundingClientRect().top + window.pageYOffset;\nconst offset = 50; // px on the ground\n\nwindow.addEventListener('scroll', handleScroll)\n\nfunction handleScroll() {\n\tlet pos = window.pageYOffset;\n\t\n\tif (pos > groundPos - deeBottom + offset) {\n\t\tif (!dee.classList.contains('is-sitting')) {\n\t\t\tdee.classList.add('is-sitting');\n\t\t\tdee.style.top = `${pos + dee.getBoundingClientRect().height + (offset * 2)}px`;\n\t\t}\n\t} else {\n\t\tdee.classList.remove('is-sitting');\n\t\tdee.style.top = null;\n\t}\n}",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css-image",
+        "css-animation",
+        "scss",
+        "sticky",
+        "kirby"
+    ],
+    "original": "https://codepen.io/tiffachoo/pen/VEKmpr",
+    "codepen": "https://codepen.io/tiffachoo/pen/VEKmpr"
+}

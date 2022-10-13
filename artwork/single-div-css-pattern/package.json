@@ -1,0 +1,41 @@
+{
+    "name": "single-div-css-pattern",
+    "version": "1.0.0",
+    "title": "Single div CSS pattern",
+    "description": "\\#divtober Day 13: Repeating 💠 [a.singlediv.com](https://a.singlediv.com)",
+    "author": {
+        "name": "Lynn Fisher",
+        "avatar": "https://s.cdpn.io/profiles/user/1025350/512.jpg?1",
+        "web": "https://lynnandtonic.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/lynnandtonic"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/lynnandtonic"
+            },
+            {
+                "title": "Medium.com",
+                "url": "https://medium.com/@lynnandtonic"
+            }
+        ]
+    },
+    "html": "single-div-css-pattern.html",
+    "css": [
+        "single-div-css-pattern.css"
+    ],
+    "js": "// @lynnandtonic\n// a.singlediv.com\n",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "singlediv",
+        "illustration",
+        "divtober",
+        "pattern"
+    ],
+    "original": "https://codepen.io/lynnandtonic/pen/KKMdJdM",
+    "codepen": "https://codepen.io/lynnandtonic/pen/KKMdJdM"
+}

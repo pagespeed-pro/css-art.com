@@ -1,0 +1,57 @@
+/* colors */
+/* Presets */
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  perspective-origin: 25% 75%;
+  background: linear-gradient(187.47deg, #99C0CD 15%, #5993A7 100%);
+  perspective-origin: 50% 50%;
+}
+
+div:before, div:after {
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+div.splash {
+  width: 100vh;
+  height: 100vh;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#0d0d0d 1.5vh, #0d0d0d 1.75vh, transparent 10vh) 32vh 52vh/45vh 6vh no-repeat, linear-gradient(#cccccc 0.25vh, #4d4d4d 0.5vh, #4d4d4d 4.75vh, #272727 4.75vh, transparent 10vh) 12.5vh 53.5vh/10vh 4vh no-repeat, linear-gradient(#0d0d0d 1.5vh, #0d0d0d 1.75vh, transparent 10vh) 12vh 53vh/11vh 5vh no-repeat, radial-gradient(circle, #404040 0vh, #404040 3.25vh, transparent 3.2vh) 83.5vh 51.25vh/8vh 8vh no-repeat, radial-gradient(circle, #e6e6e6 0vh, #e6e6e6 3vh, transparent 3vh) 83.5vh 50.5vh/8vh 8vh no-repeat, radial-gradient(circle, #4d4d4d 0vh, #4d4d4d 1.2vh, #333333 3.5vh, #272727 3.5vh, #0d0d0d 4vh, transparent 4vh) 83.5vh 51vh/8vh 8vh no-repeat, radial-gradient(circle, #4d4d4d 0vh, #4d4d4d 1vh, transparent 1vh) 24.25vh 54.45vh/2.5vh 2.5vh no-repeat, radial-gradient(circle, #e6e6e6 0vh, #e6e6e6 1vh, transparent 1vh) 24.25vh 54.25vh/2.5vh 2.5vh no-repeat, radial-gradient(circle, #333333 0vh, #333333 1.2vh, #272727 1.2vh, #0d0d0d 1.5vh, transparent 1.5vh) 24vh 54vh/3vh 3vh no-repeat, radial-gradient(circle, #4d4d4d 0vh, #4d4d4d 1vh, transparent 1vh) 13.25vh 64.5vh/2.5vh 2.5vh no-repeat, radial-gradient(circle, #e6e6e6 0vh, #e6e6e6 1vh, transparent 1vh) 13.25vh 64.25vh/2.5vh 2.5vh no-repeat, radial-gradient(circle, #4d4d4d 0vh, #4d4d4d 1.2vh, #272727 1.2vh, #0d0d0d 1.5vh, transparent 1.5vh) 13vh 64vh/3vh 3vh no-repeat, radial-gradient(circle, #4d4d4d 0vh, #4d4d4d 1vh, transparent 1vh) 18.25vh 64.5vh/2.5vh 2.5vh no-repeat, radial-gradient(circle, #e6e6e6 0vh, #e6e6e6 1vh, transparent 1vh) 18.25vh 64.25vh/2.5vh 2.5vh no-repeat, radial-gradient(circle, #4d4d4d 0vh, #4d4d4d 1.2vh, #272727 1.2vh, #0d0d0d 1.5vh, transparent 1.5vh) 18vh 64vh/3vh 3vh no-repeat, radial-gradient(circle, #4d4d4d 0vh, #4d4d4d 1vh, transparent 1vh) 23.25vh 64.5vh/2.5vh 2.5vh no-repeat, radial-gradient(circle, #e6e6e6 0vh, #e6e6e6 1vh, transparent 1vh) 23.25vh 64.25vh/2.5vh 2.5vh no-repeat, radial-gradient(circle, #4d4d4d 0vh, #4d4d4d 1.2vh, #272727 1.2vh, #0d0d0d 1.5vh, transparent 1.5vh) 23vh 64vh/3vh 3vh no-repeat, radial-gradient(circle, #4d4d4d 0vh, #4d4d4d 1vh, transparent 1vh) 72.25vh 64.5vh/2.5vh 2.5vh no-repeat, radial-gradient(circle, #e6e6e6 0vh, #e6e6e6 1vh, transparent 1vh) 72.25vh 64.25vh/2.5vh 2.5vh no-repeat, radial-gradient(circle, #4d4d4d 0vh, #4d4d4d 1.2vh, #272727 1.2vh, #0d0d0d 1.5vh, transparent 1.5vh) 72vh 64vh/3vh 3vh no-repeat, linear-gradient(#cccccc 0.25vh, #6a9eb0 0.5vh, #6a9eb0 4.75vh, #477686 4.75vh, transparent 10vh) 30.5vh 63.5vh/25vh 4vh no-repeat, linear-gradient(#0d0d0d 1.5vh, #0d0d0d 1.75vh, transparent 10vh) 30vh 63vh/26vh 5vh no-repeat, linear-gradient(#cccccc 0.25vh, #4d4d4d 0.5vh, #4d4d4d 4.75vh, #272727 4.75vh, transparent 10vh) 60.5vh 63.5vh/10vh 4vh no-repeat, linear-gradient(#0d0d0d 1.5vh, #0d0d0d 1.75vh, transparent 10vh) 60vh 63vh/11vh 5vh no-repeat, linear-gradient(#0d0d0d 1.5vh, #0d0d0d 1.75vh, transparent 10vh) 87vh 63vh/0.5vh 5vh no-repeat, linear-gradient(#cccccc 0.25vh, #4d4d4d 0.5vh, #4d4d4d 4.75vh, #272727 4.75vh, transparent 10vh) 80.5vh 63.5vh/14vh 4vh no-repeat, linear-gradient(#0d0d0d 1.5vh, #0d0d0d 1.75vh, transparent 10vh) 80vh 63vh/15vh 5vh no-repeat, linear-gradient(#1a1a1a 1.5vh, #0d0d0d 1.75vh, transparent 6vh) 10vh 60vh/90vh 2vh no-repeat, linear-gradient(#333333 30vh, #404040 30vh, transparent 3vh) 10vh 50vh/90vh 20vh no-repeat, radial-gradient(ellipse, #1a1a1a 7.5vh, black 8vh, transparent 8vh) 25vh 69vh/15vh 2vh no-repeat, radial-gradient(ellipse, #1a1a1a 7.5vh, black 8vh, transparent 8vh) 75vh 69vh/15vh 2vh no-repeat;
+}
+
+div.splash:before {
+  width: 100vh;
+  height: 100vh;
+  margin: 0 auto;
+  z-index: 99;
+  transform: perspective(1000px) rotateX(55deg);
+  background: linear-gradient(#a6a6a6 0vh, #929292 0.5vh) 42vh 54.5vh/26vh 0.25vh no-repeat, linear-gradient(#a6a6a6 0vh, #929292 0.5vh) 42vh 55.5vh/26vh 0.25vh no-repeat, linear-gradient(#a6a6a6 0vh, #929292 0.5vh) 42vh 56.5vh/26vh 0.25vh no-repeat, linear-gradient(#a6a6a6 0vh, #bfbfbf 6vh, transparent 10vh) 41vh 54vh/28vh 4vh no-repeat, linear-gradient(black 0vh, black 4vh, transparent 6vh) 33.5vh 54vh/42.25vh 4.75vh no-repeat, linear-gradient(#404040 20vh, #272727 30vh, transparent 3vh) 10vh 20vh/90vh 50vh no-repeat;
+}
+
+div.splash:after {
+  width: 100vh;
+  height: 100vh;
+  z-index: 999;
+  margin: 0 auto;
+  display: flex;
+  content: "Splash";
+  font-family: "Special Elite", cursive;
+  font-size: 3vh;
+  padding-top: 19vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(#929292 0vh, #929292 0.5vh) 69vh 57.75vh/1.25vh 2.75vh no-repeat, linear-gradient(#a6a6a6 0vh, #929292 0.5vh) 35vh 58vh/33vh 0.25vh no-repeat, linear-gradient(#a6a6a6 0vh, #929292 0.5vh) 35vh 59vh/33vh 0.25vh no-repeat, linear-gradient(#a6a6a6 0vh, #929292 0.5vh) 35vh 60vh/33vh 0.25vh no-repeat, linear-gradient(#a6a6a6 0vh, #bfbfbf 6vh, transparent 10vh) 33.75vh 57vh/38vh 4vh no-repeat, linear-gradient(black 0vh, black 6vh, transparent 14vh) 32.25vh 55.5vh/46vh 7vh no-repeat;
+}

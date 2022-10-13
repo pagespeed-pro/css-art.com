@@ -1,0 +1,140 @@
+
+html, body {
+  --background: #7cc6e7;
+  --wood: #e39648;
+  --wood-dark: #c17e36;
+  --wood-light: #e7a574;
+  --wood-dark2: #dc9040;
+  background: var(--background);
+}
+
+.boat {
+  animation: waves 3s infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  box-shadow: inset 0 0 0.5vmin rgba(255,255,255,0.5), inset 0 0 2vmin #630, 1vmin 1vmin 2vmin #fff6, 5vmin 1vmin 2vmin -2vmin rgba(0,0,129,0.05), 2vmin 5vmin 2vmin -2vmin rgba(0,0,128,0.05);
+  width: 48vmin;
+  height: 48vmin;
+  border-radius: 0 100%;
+  border: 1.5vmin solid var(--wood);
+  background-image: 
+    linear-gradient(135deg, 
+      var(--wood) 16.5%, 
+      var(--wood) 0 25%, 
+      var(--wood-light) 25.75%,
+      var(--wood-dark) 26.5%, 
+      rgba(0,0,0,0.1) 0 27%, 
+      transparent 30.5% 37%, 
+      rgba(0,0,0,0.15) 45%, 
+      var(--wood) 0 51.5%, 
+      var(--wood-light) 52.25%,
+      var(--wood-dark) 53%, 
+      var(--wood) 0 58.5%, 
+      var(--wood-light) 59.25%,
+      var(--wood-dark) 60%, 
+      transparent 0 80%,
+      rgba(0,0,0,0.15) 85%, 
+      var(--wood) 0 90%, 
+      var(--wood-light) 91.75%, 
+      var(--wood-dark) 92.5%, 
+      var(--wood) 0
+    )
+    ,
+    linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2))
+    ,
+    linear-gradient(-135deg,
+      var(--wood) 35%,
+      var(--wood-dark2) 0 40%,
+      var(--wood) 0 45%,
+      var(--wood-dark2) 0 50%,
+      var(--wood) 0 55%,
+      var(--wood-dark2) 0 60%,
+      var(--wood) 0 65%,
+      var(--wood-dark2) 0 70%,
+      var(--wood) 0
+    )
+}
+
+.boat::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  width: 27.75%;
+  height: 38%;
+  top: -24%;
+  left: -5%;
+  transform-origin: 0% 50%;
+  transform: rotate(45deg);
+  background: var(--background);
+  box-shadow: 2vmin 0 0 -0.5vmin var(--wood), 3.75vmin 0 2vmin -2.25vmin #6308;
+  background-image: radial-gradient(at 140% 50%, #fff6, transparent 50%);
+}
+
+.boat::before {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+  width: 9%;
+  height: 6%;
+  background: black;
+  z-index:1;
+  transform: rotate(45deg);
+  background: silver;
+  border: 0.75vmin solid var(--wood);
+  border-radius: 2vmin;
+  top: 58%;
+  left: 18%;
+  box-shadow: 0 -25.5vmin 0 -1.125vmin silver, 0 -25.5vmin 0.25vmin -1.125vmin #999, 0 -25.5vmin 0 -0.6vmin #aaa, 0 -25.5vmin var(--wood), 0 -25vmin 0.5vmin rgba(0,0,0,0.1), 0 -0.5vmin 0.5vmin rgba(0,0,0,0.1), inset 0 0.5vmin 0.5vmin -0.5vmin #666, inset 0 -0.5vmin 0.5vmin -0.5vmin #ccc, inset 0 0 0 0.5vmin #aaa;
+}
+
+.oar {
+  position: absolute;
+  width: 1.25vmin;
+  height: 30vmin;
+  background: var(--wood);
+  border-radius: 5vmin;
+  top: 50%;
+  left: 50%;
+  transform: translate(4vmin, -36vmin);
+  background-image: linear-gradient(transparent 70%, var(--wood-dark)), linear-gradient(to right, var(--wood-light), var(--wood), var(--wood-dark2))
+}
+
+.oar::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 500%;
+  height: 30%;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 40% 40% 100% 100% / 60% 60% 120% 120%;
+  background-image: linear-gradient(var(--background) 20%, #0001 35%, var(--wood) 55%)
+}
+
+.oar::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 230%;
+  height: 1vmin;
+  background: red;
+  transform: rotate(45deg);
+  top: 75%;
+  left: -50%;
+  border-radius: 5vmin;
+  background: #999;
+  background: linear-gradient(to right, #999, silver 20% 50%, #999);
+}
+
+.oar + .oar {
+  transform: translate(-20vmin, -4.5vmin) rotate(-130deg);
+}
+
+.oar + .oar::after {
+   transform: rotate(0deg);
+}

@@ -1,0 +1,60 @@
+body {
+  min-height: 400px;
+  height: 100vh;
+  position: relative;
+  background-color: #cd853f;
+  overflow: hidden;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div:before,
+div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+@media (max-width: 400px) {
+  div:not(.no-scale) {
+    transform: scale(0.8);
+  }
+}
+#letter {
+  font-size: 8px;
+  width: 94%;
+  max-width: 600px;
+  height: 94%;
+  max-height: 500px;
+  transform: translateX(-50%);
+  top: auto;
+  bottom: 0;
+  background-color: #fffaf0;
+  background-repeat: no-repeat;
+  background-image: repeating-linear-gradient(to right, #a9a9a9, #a9a9a9 0.3em, transparent 0.3em, transparent 5em), linear-gradient(136deg, transparent 49.5%, #a9a9a9 50%, #a9a9a9 53%, transparent 53.5%), linear-gradient(44deg, transparent 46.5%, #a9a9a9 47%, #a9a9a9 50%, transparent 50.5%), repeating-linear-gradient(to right, #a9a9a9, #a9a9a9 0.3em, transparent 0.3em, transparent 5em), linear-gradient(45deg, transparent 44%, #a9a9a9 44.5%, #a9a9a9 47%, transparent 47.5%), linear-gradient(45deg, transparent 47%, #a9a9a9 47.5%, #a9a9a9 50%, transparent 50.5%), linear-gradient(136deg, transparent 32%, #a9a9a9 32.5%, #a9a9a9 36.5%, transparent 37%), linear-gradient(135deg, transparent 63.5%, #a9a9a9 64%, #a9a9a9 68%, transparent 68.5%), linear-gradient(136deg, transparent 46.5%, #a9a9a9 47%, #a9a9a9 50%, transparent 50.5%), linear-gradient(44deg, transparent 49.5%, #a9a9a9 50%, #a9a9a9 53%, transparent 53.5%), radial-gradient(circle, #cd853f 60%, rgba(205,133,63,0) 61%), radial-gradient(circle, #cd853f 60%, rgba(205,133,63,0) 61%), linear-gradient(#ff69b4, #ff69b4), repeating-linear-gradient(to bottom, #afeeee, #afeeee 0.25em, transparent 0.25em, transparent 2.5em);
+  background-size: 10.3em 5em, 5.15em 5em, 5.15em 5em, 10.3em 5em, 6.18em 5em, 6.18em 5em, 5.15em 2.4em, 5.15em 2.5em, 5.15em 5em, 5.15em 5em, 3em 3em, 3em 3em, 0.2em 100%, 100% 80%;
+  background-position: right 14em top 10em, right 19.15em top 5em, right 14.01em top 5em, right 14em top 20em, right 18.1em top 15em, right 13.4em top 15em, right 19.15em top 17.6em, right 14.01em top 15em, right 14.01em top 25em, right 19.15em top 25em, 3.4em 29%, left 3.4em bottom -1.5em, 10em 0, 0 100%;
+}
+#letter:before {
+  width: 6.3em;
+  height: 15em;
+  right: 3.5em;
+  top: 2em;
+  background-repeat: no-repeat;
+  background-image: repeating-linear-gradient(to right, #a9a9a9, #a9a9a9 0.3em, transparent 0.3em, transparent 3em), linear-gradient(136deg, transparent 49.5%, #a9a9a9 50%, #a9a9a9 54.5%, transparent 55%), linear-gradient(44deg, transparent 45%, #a9a9a9 45.5%, #a9a9a9 50%, transparent 50.5%), repeating-linear-gradient(to right, #a9a9a9, #a9a9a9 0.3em, transparent 0.3em, transparent 3em), linear-gradient(45deg, transparent 44%, #a9a9a9 44.5%, #a9a9a9 48.5%, transparent 49%), linear-gradient(45deg, transparent 47%, #a9a9a9 47.5%, #a9a9a9 51.5%, transparent 52%), linear-gradient(136deg, transparent 32%, #a9a9a9 32.5%, #a9a9a9 38.5%, transparent 39%), linear-gradient(135deg, transparent 61%, #a9a9a9 61.5%, #a9a9a9 68%, transparent 68.5%), linear-gradient(136deg, transparent 45%, #a9a9a9 45.5%, #a9a9a9 50%, transparent 50.5%), linear-gradient(44deg, transparent 49.5%, #a9a9a9 50%, #a9a9a9 54.5%, transparent 55%);
+  background-size: 100% 3em, 50% 3em, 50% 3em, 100% 3em, 60% 3em, 60% 3em, 50% 1.5em, 50% 1.5em, 50% 3em, 50% 3em;
+  background-position: 0 3em, 0 0, 100% 0, 0 9em, 0 6em, 2.8em 6em, 0 7.6em, 100% 6em, 100% 12em, 0 12em;
+  transform: rotate(-15deg);
+}
+#letter:after {
+  width: 4.3em;
+  height: 10em;
+  right: 4.5em;
+  top: 18em;
+  background-repeat: no-repeat;
+  background-image: repeating-linear-gradient(to right, #a9a9a9, #a9a9a9 0.3em, transparent 0.3em, transparent 2em), linear-gradient(136deg, transparent 49%, #a9a9a9 49.5%, #a9a9a9 56.5%, transparent 57%), linear-gradient(44deg, transparent 42.5%, #a9a9a9 43%, #a9a9a9 50%, transparent 50.5%), repeating-linear-gradient(to right, #a9a9a9, #a9a9a9 0.3em, transparent 0.3em, transparent 2em), linear-gradient(45deg, transparent 44%, #a9a9a9 44.5%, #a9a9a9 50.5%, transparent 51%), linear-gradient(45deg, transparent 44%, #a9a9a9 44.5%, #a9a9a9 51%, transparent 51.5%), linear-gradient(136deg, transparent 31%, #a9a9a9 31.5%, #a9a9a9 42%, transparent 42.5%), linear-gradient(135deg, transparent 57%, #a9a9a9 57.5%, #a9a9a9 68%, transparent 68.5%), linear-gradient(136deg, transparent 42.5%, #a9a9a9 43%, #a9a9a9 50%, transparent 50.5%), linear-gradient(44deg, transparent 49%, #a9a9a9 49.5%, #a9a9a9 56.5%, transparent 57%);
+  background-size: 100% 2em, 50% 2em, 50% 2em, 100% 2em, 60% 2em, 60% 2em, 50% 1em, 50% 1em, 50% 2em, 50% 2em;
+  background-position: 0 2em, 0 0, 100% 0, 0 6em, 0 4em, 2em 4em, 0 5em, 100% 4em, 100% 8em, 0 8em;
+  transform: rotate(-30deg);
+}

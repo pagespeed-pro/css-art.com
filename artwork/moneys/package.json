@@ -1,0 +1,35 @@
+{
+    "name": "moneys",
+    "version": "1.0.0",
+    "title": "Moneys",
+    "description": "",
+    "author": {
+        "name": "Tiffany Choong",
+        "avatar": "https://assets.codepen.io/765377/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1516941279&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/tiffachoo/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/tiffachooo"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/tiffachoo"
+            }
+        ]
+    },
+    "html": "moneys.html",
+    "css": [
+        "moneys.css"
+    ],
+    "js": "var counter = 0,\n\t\tstackLength = 0;\n\nfunction makeElem(counter) {\n\t// create namespaced XML element\n\tvar useElem = document.createElementNS('http://www.w3.org/2000/svg', 'use');\n\t// set namespaced attribute href\n\tuseElem.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#moneySingle');\n\tuseElem.setAttribute('y', counter);\n\treturn useElem;\n}\n\nfunction stackBills (el,money) {\n\tcounter = 0;\n\tstackLength = document.getElementById(el).getAttribute(\"data-stack-total\");\n\tfor (var i = 0; i <= stackLength; i++) {\n\t\tsetTimeout(function(){\n\t\t\tvar useElem = makeElem(counter);\n\t\t\tdocument.getElementById(el).appendChild(useElem);\n\t\t\tdocument.getElementById(money).setAttribute(\"transform\", \"translate(0 \"+ counter +\")\");\n\t\t\tcounter -= 8;\n\t\t}, 700 + (i * 100));\n\t}\n}\n\ndocument.getElementById(\"clicky\").addEventListener(\"click\", function () {\n\tvar useElem = makeElem(counter);\n\tdocument.getElementById(\"stackInd\").appendChild(useElem);\n\tdocument.getElementById(\"moneyMain\").setAttribute(\"transform\", \"translate(0 \"+ counter +\")\");\n\tcounter -= 8;\n});\n\ndocument.getElementById(\"clicky2\").addEventListener(\"click\", function () {\n\tstackBills(\"stackInd\",\"moneyMain\")\n});",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [],
+    "original": "https://codepen.io/tiffachoo/pen/jromoL",
+    "codepen": "https://codepen.io/tiffachoo/pen/jromoL"
+}

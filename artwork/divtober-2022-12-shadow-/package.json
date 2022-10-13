@@ -1,0 +1,35 @@
+{
+    "name": "divtober-2022-12-shadow-",
+    "version": "1.0.0",
+    "title": "Divtober 2022 #12 (Shadow)",
+    "description": "",
+    "author": {
+        "name": "Temani Afif",
+        "avatar": "https://assets.codepen.io/1480814/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1637754747&width=512",
+        "web": "https://css-only.art/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/t_afif/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/ChallengesCss"
+            }
+        ]
+    },
+    "html": "divtober-2022-12-shadow-.html",
+    "css": [
+        "divtober-2022-12-shadow-.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "singlediv",
+        "divtober",
+        "css"
+    ],
+    "original": "https://codepen.io/t_afif/pen/RwyqLKZ",
+    "codepen": "https://codepen.io/t_afif/pen/RwyqLKZ"
+}

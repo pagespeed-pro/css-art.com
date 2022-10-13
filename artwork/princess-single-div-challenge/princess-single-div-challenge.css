@@ -1,0 +1,90 @@
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+div:before, div:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+}
+
+body {
+  --inner-circle: #EBECD5;
+  --outer-circle: #F9FAE8;
+  background: radial-gradient(circle, var(--inner-circle) 369px, var(--outer-circle) 370px);
+}
+
+div.princess {
+  position: relative;
+  display: block;
+  width: 400px;
+  height: 500px;
+  margin-bottom: 6em;
+  /* colors */
+  --inner-circle: #EBECD5;
+  --lip-color: #C24962;
+  --skin-color: #EEB590;
+  --hair-color: #151D2A;
+  --earring-color: #445B6C;
+  --headband-color: #8D0939;
+  --choker-color: #0F0301;
+  /* positions */
+  --y-center: 50%;
+  --y-left-ear: 29%;
+  --y-right-ear: 71%;
+  --x-eyes-ears: 50%;
+  /* placements */
+  --lips: linear-gradient(30deg, transparent 37%, var(--skin-color) 37%) var(--y-center) 56% / 40px 30px no-repeat, linear-gradient(-30deg, transparent 37%,var(--skin-color) 37%) var(--y-center) 56% / 40px 30px no-repeat, linear-gradient(var(--lip-color), var(--lip-color)) var(--y-center) 57% / 40px 20px no-repeat, radial-gradient(ellipse at 50% 0%, var(--lip-color) 14px, transparent 15px) center 60% / 40px 15px no-repeat;
+  --hair-bangs: /* black hair front */ radial-gradient(ellipse at 15% 8%, var(--hair-color) 49px, transparent 50px) calc(var(--y-center) + 12%) calc(var(--x-eyes-ears) - 7%) / 180px 100px no-repeat, /* black hair front */ radial-gradient(ellipse at 15% 10%, var(--skin-color) 50px, transparent 50px) calc(var(--y-center) + 14%) calc(var(--x-eyes-ears) - 6%) / 180px 100px no-repeat, /* black hair front */ radial-gradient(ellipse at 15% 10%, var(--hair-color) 49px, transparent 50px) calc(var(--y-center) + 18%) calc(var(--x-eyes-ears) - 7%) / 180px 100px no-repeat;
+  --hair-back: /* more face */ radial-gradient(circle, var(--skin-color) 75px, transparent 75px) var(--y-center) var(--x-eyes-ears) / 150px 150px no-repeat, /* black hair front */ radial-gradient(circle at 50% 100%, var(--hair-color) 85px, transparent 85px) var(--y-center) calc(var(--x-eyes-ears) - 32%) / 170px 170px no-repeat, /* headband */ radial-gradient(circle at 50% 100%, var(--headband-color) 85px, transparent 85px) var(--y-center) calc(var(--x-eyes-ears) - 35%) / 170px 170px no-repeat, /* black hair back */ radial-gradient(circle at 50% 90%, var(--hair-color) 89px, transparent 90px) var(--y-center) calc(var(--x-eyes-ears) - 40%) / 180px 180px no-repeat, /* black hair back */ radial-gradient(circle at 50% 40%, var(--hair-color) 89px, transparent 90px) var(--y-center) calc(var(--x-eyes-ears) - 7%) / 180px 180px no-repeat;
+  --hair-bun: radial-gradient(circle, var(--hair-color) 44px, transparent 45px) var(--y-center) calc(var(--x-eyes-ears) - 35%) / 90px 90px no-repeat;
+  --left-ear: /*earring */ radial-gradient(circle, var(--earring-color) 9px, transparent 10px) var(--y-left-ear) calc(var(--x-eyes-ears) + 6%) / 20px 20px no-repeat, /* ear */ radial-gradient(ellipse, var(--skin-color) 10px, transparent 10px) var(--y-left-ear) var(--x-eyes-ears) / 20px 40px no-repeat;
+  --right-ear: /*earring */ radial-gradient(circle, var(--earring-color) 9px, transparent 10px) var(--y-right-ear) calc(var(--x-eyes-ears) + 6%) / 20px 20px no-repeat, /* ear */ radial-gradient(ellipse, var(--skin-color) 10px, transparent 10px) var(--y-right-ear) var(--x-eyes-ears) / 20px 40px no-repeat;
+  --face: /* masking top */ linear-gradient(var(--inner-circle) 250px, transparent 250px) var(--y-center) 20% / 200px 140px no-repeat, /* face */ radial-gradient(circle, var(--skin-color) 80px, transparent 80px) var(--y-center) 50% / 160px 160px no-repeat;
+  --choker: linear-gradient(var(--choker-color) 20px, transparent 100px) center 75% / 100px 20px no-repeat;
+  --neck: linear-gradient(var(--skin-color) 200px, transparent 200px) var(--y-center) 100% / 200px 200px no-repeat;
+  --neck-whitespace-left: radial-gradient(ellipse, var(--inner-circle) 80px, transparent 80px) calc(var(--y-center) - 42%) 90% / 160px 200px no-repeat;
+  --neck-whitespace-right: radial-gradient(ellipse, var(--inner-circle) 80px, transparent 80px) calc(var(--y-center) + 42%) 90% / 160px 200px no-repeat;
+  background: var(--lips), var(--hair-bangs), var(--left-ear), var(--right-ear), var(--hair-back), var(--hair-bun), var(--face), var(--neck-whitespace-left), var(--neck-whitespace-right), var(--choker), var(--neck);
+}
+
+div.princess:before {
+  --skin-color: #EEB590;
+  --eyelash-color: #0F0301;
+  position: absolute;
+  top: 48%;
+  left: 55%;
+  width: 23.5px;
+  height: 15px;
+  border: solid 1px #333;
+  background-color: #552E20;
+  rotate: -12deg;
+  border-radius: 50%;
+  box-shadow: 0.1em 0.95em 0 1em var(--skin-color), 0.25em 0.35em 0 0.65em var(--eyelash-color), 1.4em -0.9em 0 0.2em var(--skin-color), 1.4em -0.525em 0 0.02em var(--eyelash-color), 1.6em -0.7em 0 0.2em var(--skin-color), 1.6em -0.325em 0 0.02em var(--eyelash-color);
+}
+
+div.princess:after {
+  --skin-color: #EEB590;
+  --eyelash-color: #0F0301;
+  position: absolute;
+  top: 48%;
+  left: 38%;
+  width: 27px;
+  height: 18px;
+  border: solid 1px #333;
+  background-color: #552E20;
+  rotate: 12deg;
+  border-radius: 50%;
+  box-shadow: -0.1em 0.95em 0 1em var(--skin-color), -0.25em 0.35em 0 0.65em var(--eyelash-color), -1.4em -0.9em 0 0.2em var(--skin-color), -1.4em -0.525em 0 0.02em var(--eyelash-color), -1.6em -0.7em 0 0.2em var(--skin-color), -1.6em -0.325em 0 0.02em var(--eyelash-color);
+}

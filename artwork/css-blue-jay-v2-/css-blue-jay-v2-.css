@@ -1,0 +1,174 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 1vmin solid black;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+html, body {
+  --primary: #48e;
+  --secondary: #ccc;
+  background: var(--secondary);
+}
+
+.cartoon {
+  width: 100vmin;
+  height: 100vmin;
+  background-size: cover;
+  background-position: center center;
+}
+
+.body {
+  width: 42%;
+  height: 38%;
+  background: var(--primary);
+  background: radial-gradient(at 36% 45%, black 22%, var(--primary) 0);
+  transform: rotate(45deg);
+  top: 25%;
+  left: 24%;
+  clip-path: polygon(52% 35%, 41% 39%, 50% 0%, 100% 0, 100% 200%, 53% 200%, 65% 40%, 60% 30%);
+  box-shadow: inset 14vmin 1vmin black, inset -4vmin 4vmin white;
+}
+
+.body::before {
+  width: 40%;
+  height: 20%;
+  background: var(--primary);
+  border-radius: 50%;
+  transform: rotate(90deg);
+  top: 83%;
+  left: 48.5%;
+  box-shadow: 3vmin -1vmin var(--secondary), inset -1vmin 0.5vmin white;
+}
+
+.body::after {
+  width: 60%;
+  height: 26%;
+  background: var(--primary);
+  border-radius: 100%;
+  transform: rotate(94deg);
+  top: 95%;
+  left: 27.5%;
+  box-shadow: 3vmin -1vmin var(--secondary), inset -1vmin 0.5vmin white;
+}
+
+.eye {
+  width: 2.5%;
+  height: 2.5%;
+  background: black;
+  box-shadow: 1vmin 0.8vmin 0 1.35vmin white;
+  top: 36.5%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+}
+
+.neck {
+  width: 60%;
+  height: 20%;
+  box-shadow: 6vmin 2vmin 0 -3vmin var(--primary);
+  border-radius: 0 0% 70% 0%;
+  transform: rotate(-27deg);
+  top: 44%;
+  left: -3%;
+}
+
+.neck::after {
+  z-index: ;
+  width: 40%;
+  height: 80%;
+  right: 5%;
+  top: 13%;
+  border-radius: 100%;
+  box-shadow: 4.5vmin 0 0 -3vmin var(--primary), inset -0.5vmin 1vmin var(--secondary);
+  transform: rotate(5deg);
+}
+
+.hair {
+  width: 12.5%;
+  height: 8%;
+  background: var(--primary);
+  border-radius: 200% 0 100% 40% / 200% 100% 100% 50%;
+  transform: skew(-10deg) rotate(-31deg);;
+  top: 28%;
+  left: 48%;
+  box-shadow: 7vmin 2.5vmin 0 -3vmin var(--secondary);
+}
+
+.hair::after {
+  width: 40%;
+  height: 80%;
+  border-radius: 60%;
+  right: 0.5%;
+  top: -33%;
+  box-shadow: 0.65vmin -0.15vmin var(--secondary);
+}
+
+.twitch {
+  border-radius: 50% 50% 3vmin 5vmin / 4vmin 4vmin 2vmin 3vmin;
+  width: 39%;
+  height: 5%;
+  transform: rotate(-42deg);
+  top: 63.5%;
+  left: 45%;
+  box-shadow: 0 -3vmin 0 -1vmin brown; var(--primary);
+}
+
+.legs {
+  top: 58.25%;
+  left: 57.25%;
+  width: 1.75%;
+  height: 6%;
+  background: linear-gradient(black 50%, brown 90%);
+  transform: skewY(50deg) rotate(-35deg);
+  box-shadow: -1.75vmin 0.25vmin var(--secondary);
+}
+
+.legs::after {
+  width: 65%;
+  height: 65%;
+  background: linear-gradient(black 50%, brown 90%); var(--primary);
+  transform:  rotate(35deg) skewY(-50deg) rotate(-34deg);
+  top:-1.25vmin;
+  left: 6.5vmin;
+}
+
+.leaves {
+  width: 6%;
+  height: 6%;
+  background: #080; var(--primary);
+  border-radius: 20% 100% 100% 100% / 100% 80% 100% 100%;
+  transform: rotate(20deg) skewY(40deg);
+  top: 46%;
+  left: 68.5%;
+}
+
+.leaves::after {
+  width: 90%;
+  height: 80%;
+  background:  #080; var(--primary);
+  transform: rotate(90deg) skewY(30deg);
+  border-radius: 20% 100% 100% 100% / 100% 100% 100% 100%;
+  top: 120%;
+  left: 79%;
+}

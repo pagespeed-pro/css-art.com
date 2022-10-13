@@ -1,0 +1,2274 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+
+article {
+  --banner: #ffc;
+  width: 95vmin;
+  margin: auto;
+  font-family: 'Comic Neue', 'Comic Sans', Helvetia, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+section {
+  display: flex;
+  box-sizing: border-box;
+  gap: 1vmin;
+  flex-wrap: wrap;
+  margin-bottom: 1vmin;
+}
+
+.box {
+  position: relative;
+  box-sizing: border-box;
+  border: 0.5vmin solid;
+  overflow: hidden;
+  height: 35vmin;
+  background: linear-gradient(#c9c8, #c9c0);
+}
+
+.box *,
+.box *::before,
+.box *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.box br {
+  position: unset;
+}
+
+.box-all {
+  flex: 1;
+}
+
+.box-min-25 {
+  flex: 1;
+  min-width: 25%;
+}
+
+.box-min-30 {
+  flex: 1;
+  min-width: 25%;
+}
+
+.box-40 {
+  width: 40%;
+}
+
+.box-min-50 {
+  flex: 1;
+  min-width: 50%;
+}
+
+.box-min-60 {
+  flex: 1;
+  min-width: 60%;
+}
+
+.bubble {
+  font-size: 2vmin;
+  padding: 1.5vmin;
+  border-radius: 100%;
+  background: #ffd;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.bubble:nth-of-type(2n) {
+  background: #dff;
+}
+
+
+/* section 1: the death of IE */
+.box-1 {
+  background: white;
+}
+
+.box-1 .banner {
+  width: 100%;
+  height: 5vmin;
+  line-height: 5vmin;
+  background: var(--banner);
+  font-size: 2.25vmin;
+  padding: 0 1.5vmin;
+  border-bottom: 0.5vmin solid;
+}
+
+.box-1 .ie-logo {
+  --s: 18vmin;
+  transform: rotate(-30deg) rotate3d(1.5, 1, 0, 40deg);
+  top: 20%;
+  left: 14%;
+}
+
+.box-1 .ie-eye {
+  transform: rotate(-30deg) rotate3d(1.5, 1, 0, 40deg);
+  width: 9%;
+  aspect-ratio: 1;
+  background:
+    linear-gradient(45deg, #0000 45%, #000 0 55%, #0000 0),
+    linear-gradient(-45deg, #0000 45%, #000 0 55%, #0000 0);
+  top: 39%;
+  left: 30%;
+}
+
+.box-1 .ie-eye + .ie-eye {
+  transform: rotate(-30deg) rotate3d(1.5, 1, 0, 40deg) translateX(150%) scale(0.96)
+}
+
+.box-1 .ie-mouth {
+  width: 15%;
+  height: 10%;
+  border-top: 0.4vmin solid;
+  top: 50%;
+  left: 40%;
+  transform: rotate(-30deg);
+  border-radius: 100% / 30%;
+  overflow: hidden;
+}
+
+.box-1 .ie-mouth::before {
+  content: "";
+  left: 10%;
+  height: 100%;
+  width: 60%;
+  border: 0.4vmin solid;
+  border-top: 0;
+  border-radius: 0 0 10vmin 10vmin;
+  background: 
+    linear-gradient(90deg, #0000 45%, #000 0 55%, #0000 0) 0 0 / 100% 50% no-repeat,
+    #c00;
+  transform-origin: 100% 0;
+  transform: rotate(10deg);
+}
+
+.box-1 .ie-leg {
+  width: 15%;
+  height: 33%;
+  border-left: 0.5vmin solid;
+  transform: rotate(-70deg);
+  left: 67%;
+  top: 40%;
+}
+
+.box-1 .ie-leg::before {
+  content: "";
+  width: 100%;
+  height: 13%;
+  background: black;
+  border-radius: 50% / 100% 100% 0 0;
+  bottom: -0.1vmin;
+  left: -0.5vmin;
+  transform-origin: bottom left;
+  transform: rotate(-10deg);
+}
+
+.box-1 .ie-leg + .ie-leg {
+  left: 54%;
+  top: 57%;
+  transform: rotate(-30deg);
+}
+
+.box-1 .ie-leg + .ie-leg::before {
+  transform: rotate(-40deg);
+  bottom: -0.2vmin;
+  left: -0.25vmin;
+}
+
+.box-1 .ie-arm {
+  width: 0.4vmin;
+  height: 25%;
+  background: #000;
+  top: 60%;
+  left: 30%;
+}
+
+.box-1 .ie-arm::before {
+  content: "";
+  width: 300%;
+  height: 25%;
+  background: #000;
+  border-radius:  100% / 0 100% 100% 100%;
+  top: 90%;
+}
+
+.box-1 .ie-arm + .ie-arm {
+  top: 37%;
+  left: 73%;
+  transform: rotate(-88deg) scaleX(-1)
+}
+
+.box-2 .bubble-1 {
+  width: 47%;
+  top: -2.5vmin;
+  left: -1vmin;
+  padding: 4vmin 1vmin 2vmin 1vmin
+}
+
+.box-2 .bubble-2 {
+  width: 63%;
+  top: -3vmin;
+  padding: 4vmin 1vmin 2vmin 3vmin;
+  right: -2vmin;
+}
+
+.box-2 .chrome-logo {
+  --s: 13vmin;  
+  bottom: 30%;
+  left: 60%;
+}
+
+.box-2 .safari-logo {
+  position: absolute;
+  --s: 13.5vmin;
+  bottom: 29%;
+  left: 25%;
+}
+
+.box-2 .ie-leg {
+  width: 15%;
+  height: 10%;
+  background: linear-gradient(#0000 calc(100% - 0.5vmin), #000 0);
+  bottom: 0;
+}
+
+.box-2 .ie-leg::before {
+  content: "";
+  height: 100%;
+  width: 10%;
+  right: 0;
+  background: black;
+  border-radius: 100% 0 0 100% / 50%;
+}
+
+.box-2 .chrome-legs {
+  --w: 8%;
+  --foot: 1vmin;
+  --footwidth: 120%;
+  --foottop: 84%;
+  border: 0.75vmin solid;
+  height: 40%;
+  width: var(--w);
+  border-radius: 50% / 100%;
+  bottom: -5%;
+  left: 68%;
+}
+
+.box-2 .chrome-legs::before,
+.box-2 .chrome-legs::after {
+  content: "";
+  top: var(--foottop);
+  width: var(--footwidth);
+  height: var(--foot);
+  background: black;
+  border-radius: 50% / 100% 100% 0 0;
+  transform: translate(-100%, 0);
+}
+.box-2 .chrome-legs::after { 
+  right: 0;
+  transform: translate(100%, 0);
+}
+
+.box-2 .safari-leg {
+  --w: 8%;
+  --foot: 1vmin;
+  --footwidth: 120%;
+  --foottop: 82%;
+  width: 5%;
+  height: 38%;
+  border-radius: 50%;
+  box-shadow: -0.6vmin 0;
+  bottom: -4%;
+  left: 33%;
+}
+
+.box-2 .safari-leg::after {
+  content: "";
+  top: var(--foottop);
+  width: var(--footwidth);
+  height: var(--foot);
+  background: black;
+  left: 5%;
+  border-radius: 50% / 100% 100% 0 0;
+  transform: translate(-100%, 0);
+}
+
+.box-2 .safari-leg + .safari-leg {
+  --footwidth: 100%;
+  width: 6%;
+  left: 40.5%;
+  transform: rotate(-4deg);
+}
+
+.box-2 .chrome-eye,
+.box-2 .safari-eye {
+  width: 1.2vmin;
+  height: 1.5vmin;
+  border-radius: 50%;
+  background: black;
+  border-radius: 50%;
+  top: 48%;
+  left: 33%;
+}
+
+.box-2 .safari-eye + .safari-eye {
+  left: 38%;
+}
+
+.box-2 .chrome-eye {
+  left: 69%;
+}
+
+.box-2 .chrome-eye + .chrome-eye {
+  left: 74%;
+}
+
+.box-2 .safari-mouth {
+  width: 3vmin;
+  height: 1vmin;
+  border-radius: 50% / 100% 100% 0 0;
+  background: black;
+  -webkit-mask: radial-gradient(150% 100% at 50% 100%, #0000 30%, #000 33%);
+  mask: radial-gradient(150% 100% at 50% 100%, #0000 30%, #000 33%);
+  top: 58%;
+  left: 34%;
+  transform: rotate(-5deg);
+}
+
+.box-2 .chrome-mouth {
+  width: 3vmin;
+  height: 1.2vmin;
+  border-radius: 50% / 100% 100% 0 0;
+  background: black;
+  top: 57.5%;
+  left: 69%;
+  transform: rotate(10deg);
+}
+
+.box-2 .safari-arms {
+  width: 30%;
+  height: 30%;
+  border: 0.4vmin solid;
+  border-bottom: 0.4vmin solid #0000;
+  border-radius: 50%;
+  top: 55%;
+  left: 22%;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+  transform: rotate(4deg);
+}
+.box-2 .safari-arms + .safari-arms {
+  height: 13%;
+  width: 20%;
+  left: 16%;
+  top: 40%;
+  border-bottom: 0.2vmin solid #0000;
+  transform: rotate(240deg);
+  clip-path: none;
+}
+
+.box-2 .safari-arms::before {
+  content: "";
+  width: 10%;
+  height: 10%;
+  background: black;
+  border-radius: 50%;
+  top: 80%;
+  left: 10%;
+  transform: rotate(10deg);
+  left: auto;
+  right: 8%;
+  transform: rotate(-25deg);
+}
+
+.box-2 .safari-arms + .safari-arms::before {
+  width: 17%;
+  height: 24%;
+  right: 5%;
+  top: 70%;
+}
+
+.box-2 .chrome-arms {
+  width: 23%;
+  height: 30%;
+  border: 0.4vmin solid #0000;
+  border-top: 0.4vmin solid;
+  transform: rotate(-60deg);
+  right: 17%;
+  top: 62%;
+  border-left: 0.2vmin solid #0000;
+  border-radius: 50%;
+}
+
+.box-2 .chrome-arms::before {
+  content: "";
+  width: 1vmin;
+  aspect-ratio: 0.8;
+  background: #000;
+  border-radius: 50%;
+  transform: translate(40%, 150%);
+}
+
+.box-2 .chrome-arms  + .chrome-arms {
+  transform: scaleX(-1) rotate(-60deg);
+}
+
+.box-3 .later {
+  font-size: 2vmin;
+  border-right: 0.4vmin solid;
+  border-bottom: 0.4vmin solid;
+  padding: 0.5vmin;
+  background: #ffc;
+}
+
+.box-3 .leg {
+  --w: 5%;
+  --foot: 1vmin;
+  --footwidth: 100%;
+  --foottop: 84%;
+  border: 0.75vmin solid;
+  height: 37%;
+  width: var(--w);
+  border-radius: 50% / 100%;
+  bottom: -5%;
+}
+
+.box-3 .leg::before,
+.box-3 .leg::after {
+  content: "";
+  top: var(--foottop);
+  width: var(--footwidth);
+  height: var(--foot);
+  background: black;
+  border-radius: 50% / 100% 100% 0 0;
+  transform: translate(-100%, 0);
+}
+.box-3 .leg::after { 
+  right: 0;
+  transform: translate(100%, 0);
+}
+
+.box-3 .chrome-legs { left: 11%; }
+.box-3 .safari-legs { left: 29%; border-radius: 70% / 100%;}
+.box-3 .opera-legs { 
+  --footwidth: 70%;
+  --w: 7%;
+  left: 48%;
+  clip-path: polygon(-100% 10%, 200% 10%, 200% 100%, -100% 100%);
+}
+.box-3 .tor-legs { left: 64%; }
+.box-3 .netscape-legs { 
+  --foottop: 87%;
+  --footwidth: 50%;
+  border: 0.66vmin solid;
+  left: 82.5%; 
+  width: 8%;
+  bottom: -2%;
+  height: 25%;
+}
+.box-3 .netscape-legs::before {
+  left: 5%;
+}
+.box-3 .netscape-legs::after {
+  right: 7%;
+}
+
+
+.box-3 .chrome-logo {
+  --s: 12.5vmin;
+  bottom: 25%;
+  left: 7%;
+}
+
+.box-3 .safari-logo {
+  position: absolute;
+  --s: 12.5vmin;
+  bottom: 25%;
+  left: 25%;
+}
+
+.box-3 .opera-logo {
+  position: absolute;
+  --s: 12.5vmin;
+  bottom: 25%;
+  left: 45%;
+}
+
+.box-3 .tor-logo {
+  position: absolute;
+  --s: 12.5vmin;
+  bottom: 25%;
+  left: 60%;
+}
+
+.box-3 .netscape-logo {
+  position: absolute;
+  --s: 12vmin;
+  bottom: 20%;
+  left: 80%;
+}
+
+.box-3 .eye {
+  width: 1vmin;
+  aspect-ratio: 0.85;
+  background: black;
+  border-radius: 50%;
+  top: 55%;
+}
+
+.box-3 .chrome-eye {
+  animation-duration: 6s;
+  left: 11.5%;
+  clip-path: polygon(0 30%, 100% 0, 100% 100%, 0 100%);
+}
+
+.box-3 .chrome-eye + .chrome-eye {
+  left: 14.5%;
+  transform: scaleX(-1);
+}
+
+.box-3 .chrome-mouth {
+  left: 12.75%;
+  top: 65%;
+  width: 2vmin;
+  border-top: 0.5vmin solid;
+  border-radius: 50%;
+}
+
+.box-3 .safari-eye {
+  left: 29.5%;
+  clip-path: polygon(0 20%, 100% 10%, 100% 100%, 0 100%);
+}
+
+.box-3 .safari-eye + .safari-eye {
+  left: 32.5%;
+  transform: scaleX(-1);
+}
+
+.box-3 .safari-mouth {
+  left: 30.2%;
+  top: 64%;
+  width: 2.4vmin;
+  border: 0.35vmin solid;
+  border-bottom: 0.1vmin solid #0000;
+  border-radius: 50%;
+  height: 2.5%;
+}
+
+.box-3 .opera-eye {
+  left: 50%;
+  clip-path: polygon(0 20%, 100% 10%, 100% 100%, 0 100%);
+}
+
+.box-3 .opera-eye + .opera-eye {
+  left: 53%;
+  transform: scaleX(-1);
+}
+
+.box-3 .opera-mouth {
+  left: 50%;
+  top: 64%;
+  width: 3vmin;
+  border-top: 0.33vmin solid;
+  border-radius: 50%;
+  transform: rotate(4deg);
+  height: 2%;
+}
+
+.box-3 .tor-eye {
+  left: 64%;
+  clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0 100%);
+}
+
+.box-3 .tor-eye + .tor-eye {
+  left: 67%;
+  transform: scaleX(-1);
+}
+
+.box-3 .tor-mouth {
+  left: 65%;
+  top: 65%;
+  width: 3vmin;
+  border-top: 0.33vmin solid;
+  border-radius: 50%;
+  transform: rotate(-7deg);
+  height: 3%;
+}
+
+.box-3 .tor-tear {
+  left: 64%;
+  top: 61%;
+  width: 1vmin;
+  aspect-ratio: 1;
+  background: skyblue;
+  border-radius: 0 50% 50% 50%;
+  transform: rotate(45deg);
+}
+
+.box-3 .netscape-eye {
+  width: 1.2vmin;
+  top: 60%;
+  left: 84%;
+  clip-path: polygon(0 10%, 100% 40%, 100% 100%, 0 100%);
+}
+
+.box-3 .netscape-eye + .netscape-eye {
+  left: 87%;
+  transform: scaleX(-1);
+}
+
+.box-3 .netscape-mouth {
+  left: 85%;
+  top: 68%;
+  width: 3vmin;
+  background: #f55;
+  border-radius: 50% / 100% 100% 0 0;
+  transform: rotate(-7deg);
+  height: 3%;
+  border: 0.2vmin solid;
+}
+
+.box-3 .bubble-1 {
+  left: 10%;
+  border-radius: 100%;
+  padding: 4vmin 2vmin 2vmin 2vmin;
+  top: -3vmin;
+}
+
+.box-2 .bubble-1::before,
+.box-3 .bubble-1::before {
+  content: "";
+  height: 100%;
+  width: 10%;
+  border-right: 0.5vmin solid #dff;
+  border-radius: 50%;
+  left: 50%;
+  clip-path: polygon(0 40%, 100% 40%, 100% 100%, 0 100%);
+}
+
+.box-2 .bubble-1::before {
+  border-right: 0;
+  border-left: 0.5vmin solid #dff;
+}
+.box-3 .bubble-2 {
+  right: 2%;
+  top: 10%;
+  font-size: 1.8vmin;
+}
+
+.box-2 .bubble-2::before,
+.box-3 .bubble-2::before {
+  content: "";
+  height: 100%;
+  width: 10%;
+  border-right: 0.75vmin solid #ffd;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  clip-path: polygon(0 40%, 100% 40%, 100% 100%, 0 100%);
+}
+.box-2 .bubble-2::before {
+  height: 60%;
+  top: 60%;
+}
+
+.box-3 .chrome-talk {
+  font-size: 1.1vmin;
+  text-align: center;
+  top: 29%;
+  left: 15%;
+  transform: rotate(4deg);
+}
+
+.box-3 .tor-talk {
+  font-size: 1.4vmin;
+  top: 33%;
+  left: 60%;
+  transform: rotate(6deg);
+}
+
+.box-3 .netscape-cane {
+  width: 1%;
+  height: 22%;
+  border-radius: 100% / 80% 80% 200% 200%;
+  background: brown;
+  bottom: 0;
+  right: 5%;
+  transform-origin: 50% 100%;
+  transform: rotate(9deg)
+}
+
+.box-3 .arm {
+  width: 10%;
+  height: 20%;
+  border: 0.4vmin solid #0000;
+  border-top: 0.4vmin solid;
+  transform: rotate(-60deg);
+  right: 12%;
+  top: 72%;
+  border-left: 0.2vmin solid #0000;
+  border-radius: 50%;
+}
+
+.box-3 .arm::before {
+  content: "";
+  width: 1vmin;
+  aspect-ratio: 0.8;
+  background: #000;
+  border-radius: 50%;
+  transform: translate(50%, 80%);
+}
+
+.box-3 .arm  + .arm {
+  transform: scaleX(-1) rotate(-60deg);
+}
+
+.box-3 .netscape-arm + .netscape-arm {
+  top: 68%;
+  right: 3%;
+  transform: scaleX(-1) rotate(-20deg);
+}
+
+.box-3 .opera-arm,
+.box-3 .chrome-arm {
+  left: 5%;
+  top: 67%;
+  transform: rotate(-80deg);
+}
+
+.box-3 .opera-arm::before,
+.box-3 .chrome-arm::before {
+  aspect-ratio: 0.6;
+  transform: translate(0, 50%) rotate(40deg);
+}
+.box-3 .chrome-arm + .chrome-arm {
+  left: 12%;
+  transform: scaleX(-1) rotate(-80deg);
+}
+
+.box-3 .safari-arm {
+  left: 24.5%;
+  top: 65%;
+  transform: rotate(-80deg);
+}
+
+.box-3 .safari-arm::before {
+  transform: translate(0, 80%) rotate(40deg);
+}
+.box-3 .safari-arm + .safari-arm {
+  left: 29%;
+  top: 66.6%;
+  transform: scaleX(-1) rotate(-80deg);
+}
+
+.box-3 .opera-arm {
+  left: 43%;
+}
+
+.box-3 .opera-arm + .opera-arm {
+  left: 54%;
+  top: 46%;
+  transform:  rotate(170deg);
+}
+
+.box-3 .tor-arm {
+  right: 26%;
+  top: 69%;
+  transform: scaleX(-1) rotate(-75deg);
+  
+}
+
+.box-3 .tor-arm + .tor-arm {
+  right: 29.5%;
+  top: 67%;
+  border-radius: 0;
+  transform: rotate(-88deg);
+}
+
+.box-3 .tor-arm + .tor-arm::before {
+  transform: rotate(90deg) translate(-70%, 20%);;
+}
+
+
+/* section 2: the necromancer */
+section:nth-child(2) .box {
+  background: linear-gradient(#242, #697);
+  background: linear-gradient(#464, #697)
+}
+
+.box-4 {
+  display: flex;
+  align-items: center;
+  font-size: 2.5vmin;
+  text-align: center;
+  padding: 4vmin;
+  max-width: 30%;
+  background: #ffc !important;
+}
+
+.necromancer-bubble {
+  --color: #bf8;
+  background: var(--color);
+  font-size: 2.25vmin;
+  padding: 1vmin 3vmin 1vmin 3vmin;
+  border-radius: 100% / 0 0 30% 30%;
+  text-align: center;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.necromancer-bubble::after {
+  content: "";
+  width: 10%;
+  height: 130%;
+  top: 90%;
+  right: 20%;
+  border-radius: 0 0 100% 0;
+  box-shadow: 0.5vmin -0.5vmin var(--color);
+}
+
+.necromancer-bubble::before {
+  content: "";
+  width: 100%;
+  height: 40%;
+  bottom: -25%;
+  left: 0;
+  background:
+    radial-gradient(50% 400% at 50% 0, var(--color) 20%, #0000 0) 20% 100% / 10% 100%,
+    radial-gradient(50% 400% at 50% 0, var(--color) 20%, #0000 0) 20% 100% / 24% 100%,
+    radial-gradient(60% 200% at 50% 0, var(--color) 30%, #0000 0) 10% 100% / 9% 100%,
+    radial-gradient(40% 300% at 50% 0, var(--color) 33%, #0000 0) 50% 100% / 7% 100%,
+    radial-gradient(70% 100% at 50% 20%, var(--color) 23%, #0000 0) 50% 100% / 5% 100%,
+    radial-gradient(farthest-side at 50% 50%, var(--color) 99.9%, #0000 0) 50% 20% / 7% 30%,
+    linear-gradient(var(--color) 25%, #0000 0)
+    ;
+  background-repeat: repeat-x;
+}
+
+.necromancer {
+  --c: #333; /* #527; */
+  width: 20vmin;
+  height: 60%;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.necromancer .body {
+  width: 90%;
+  height: 100%;
+  background: 
+    /* chain */
+    radial-gradient(circle at 24% 18%, gold 0.5vmin, #0000 0),
+    radial-gradient(circle at 26% 22%, gold 0.5vmin, #0000 0),
+    radial-gradient(circle at 30% 25%, gold 0.5vmin, #0000 0),
+    radial-gradient(circle at 35% 28%, gold 0.5vmin, #0000 0),
+    radial-gradient(circle at 40% 30%, gold 0.5vmin, #0000 0),
+    radial-gradient(circle at 76% 18%, gold 0.5vmin, #0000 0),
+    radial-gradient(circle at 74% 22%, gold 0.5vmin, #0000 0),
+    radial-gradient(circle at 70% 25%, gold 0.5vmin, #0000 0),
+    radial-gradient(circle at 65% 28%, gold 0.5vmin, #0000 0),
+    radial-gradient(circle at 60% 30%, gold 0.5vmin, #0000 0),
+    /* medallion */
+    radial-gradient(circle at 47% 36%, #0004 0.33vmin, #0000 0),
+    radial-gradient(circle at 53% 36%, #0004 0.33vmin, #0000 0),
+    radial-gradient(circle at 50% 36%, gold 1.5vmin, #0000 0),
+    radial-gradient(circle at 47% 43.5%, gold 0.33vmin, #0000 0),
+    radial-gradient(circle at 53% 43.5%, gold 0.33vmin, #0000 0),
+    radial-gradient(circle at 50% 44%, gold 0.33vmin, #0000 0),
+    var(--c);
+  box-shadow: inset 0 0 2vmin #0006;
+  left: 50%;
+  top: 40%;  
+  transform: translate(-50%, 0);
+  border-radius: 100% / 120% 120% 80% 80%;
+}
+
+.necromancer .body .hand {
+  width: 20%;
+  height: 30%;
+  border-radius: 50%;
+  box-shadow: inset 1vmin 0;
+  background:
+    radial-gradient(farthest-side, #000 99.9%, #0000 0) 0 100% / 25% 70% repeat-x,
+    linear-gradient(#0000 40%, #000 0);
+  transform: rotate(60deg);
+  top: 50%;
+  left: 20%;
+}
+
+.necromancer .body .hand + .hand {
+  transform: scaleX(-1) rotate(60deg);
+  top: 45%;
+  left: 60%;
+}
+
+.necromancer .body .hand + .hand::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  left: 20%;
+  top: 15%;
+  box-shadow: inset 0.7vmin 0;
+}
+
+.necromancer .head {
+  width: 70%;
+  height: 60%;
+  background: 
+    var(--c);
+  box-shadow: 
+    inset 0 0 2vmin #0005,
+    0 4vmin 3vmin -3vmin #000;
+  left: 50%;
+  top: 0;  
+  transform: translate(-50%, 0);
+  border-radius: 110% 120% 100% 100% / 140% 130% 80% 60%;
+}
+
+.necromancer .head::before {
+  content: "";
+  width: 70%;
+  height: 70%;
+  background: 
+    radial-gradient(150% 60% at 50% 0, var(--c) 30%, #0000 0),
+    black;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 110% 120% 100% 100% / 140% 130% 80% 60%;
+}
+
+.box-5 .necromancer .eye {
+  width: 15%;
+  height: 17%;
+  background: #cf0;
+  border-radius: 0 100%;
+  top: 50%;
+  left: 27%;
+  transform: rotate(-20deg);
+}
+
+.box-5 .necromancer .eye + .eye {
+  left: auto;
+  right: 27%;
+  transform: scaleX(-1) rotate(-20deg);
+}
+
+/* .box-5 .necromancer .mouth {
+  background: 
+    radial-gradient(100% 50% at 50% 100%, #000 50%, #0000 0),
+    #800;
+  width: 20%;
+  height: 5%;
+  top: 80%;
+  left: 50%;
+  transform: translate(-60%, 0) rotate(5deg);
+  border-radius: 50% / 100% 100% 0 0;
+} */
+
+.box-6 .bubble {
+  background: #def;
+  border-radius: 100% / 0 0 50% 50%;
+}
+
+.box-6 .bubble::before {
+  content: "";
+  width: 14%;
+  height: 70%;
+  border-radius: 0 0 50%;
+box-shadow: inset -0.5vmin 0.5vmin #def;
+  top: 85%;
+  left: 25%;
+  transform: rotate(4deg);
+}
+
+.big,
+.corp {
+  width: 13vmin;
+  height: 60%;
+  bottom: 0;
+}
+
+.big {
+  --skin: #fca;
+  --skin-dark: #eb9;
+  --hair: #753;
+  --suit: #555;
+  --suit-dark: #333;
+  --shirt: #fff;
+  left: 5%;
+}
+
+.corp {
+  --skin: #da8;
+  --skin-dark: #c97;
+  --hair: #322;
+  --suit: #dca;
+  --suit-dark: #ba9;
+  --shirt: #ffe;
+  right: 5%;
+  bottom: -5%;
+}
+
+.person .head {
+  --width: 20%;
+  --hairback: 0 0 0 -10vmin var(--hair);
+  width: 90%;
+  height: 40%;
+  background: 
+    radial-gradient(at 50% 0, var(--hair) var(--width), #0000 0),
+    radial-gradient(at 30% 0, var(--hair) 15%, #0000 0),
+    radial-gradient(at 65% 0, var(--hair) 13%, #0000 0),
+    var(--skin);
+  border-radius: 100% 105% 100% 110%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow:
+    0 -3.5vmin 0 -2.75vmin var(--hair),
+    -1.2vmin -3.5vmin 0 -3.5vmin var(--hair),
+    1.5vmin -3.5vmin 0 -3.5vmin var(--hair),
+    var(--hairback),
+    -4vmin 0 0 -3vmin var(--skin-dark),
+    4vmin 0 0 -3vmin var(--skin-dark);
+}
+
+.corp .head {
+  --width: 16%;
+  --hairback:
+    -1vmin -3vmin 0 -2vmin var(--hair),
+    1.1vmin -3.1vmin 0 -1.9vmin var(--hair),
+    -1vmin -1vmin 0 -0.75vmin var(--hair),
+    1vmin -1vmin 0 -0.75vmin var(--hair)
+    ;
+  top: 3%;
+}
+
+.person .eye {
+  width: 1vmin;
+  aspect-ratio: 1;
+  background: #000;
+  border-radius: 59%;
+  top: 45%;
+  left: 35%;
+  transform: translate(-50%, 0);
+}
+.person .eye + .eye {
+  left: 65%;
+}
+
+.big .mouth {
+  --tongue: #f003;
+  width: 35%;
+  height: 18%;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: radial-gradient(farthest-side at 50% 40%, var(--tongue) 60%, #0000 0);
+}
+
+.big .mouth::before {
+  content: "";
+  width: 70%;
+  height: 140%;
+  background: var(--hair);
+  border-radius: 100% 0 100% 0;
+  left: 50%;
+  transform-origin: 100% 0;
+  transform: translate(-90%, 0) rotate(10deg);
+}
+
+.big .mouth::after {
+  content: "";
+  width: 70%;
+  height: 140%;
+  background: var(--hair);
+  border-radius: 0 100% 0 100%;
+  left: 50%;
+  transform-origin: 0 0;
+  transform: translate(-10%, 0) rotate(-10deg);
+}
+
+.corp .mouth {
+  width: 25%;
+  top: 73%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-top: 0.35vmin solid;
+  border-radius: 100% 100% 0 0;
+}
+
+.person .neck {
+  width: 10%;
+  height: 20%;
+  background: var(--skin-dark);
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 100% / 20%;
+}
+
+.person .body {
+  --color: #b43;
+  --tie: conic-gradient(at 30% 45%, #0000 5deg, var(--color) 6deg 169deg, #0000 170deg) 45% 10% / 10% 50% no-repeat,
+    conic-gradient(at 75% 45%, #0000 190deg, var(--color) 191deg 354deg, #0000 355deg) 55% 10% / 10% 50% no-repeat;
+  --bg: linear-gradient(var(--suit-dark) 0 0) 50% 0 / 50% 15% no-repeat;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1.75vmin solid var(--suit);
+  top: 45%;
+  border-top: 0;
+  background:
+    linear-gradient(#0004 0 0) 50% 0 / 12% 10% no-repeat,
+    linear-gradient(var(--color) 0 0) 50% 0 / 12% 10% no-repeat,
+    var(--tie),
+    conic-gradient(at 50% 45%, var(--shirt) 8deg, #0000 8.5deg 352deg, var(--shirt) 352.5deg),
+    conic-gradient(at 50% 0%, #0000 39%, var(--suit-dark) 0 61%, #0000 0) 50% 8% / 50% 15% no-repeat,
+    conic-gradient(at 50% 100%, var(--suit-dark) 7%, #0000 0 93%, var(--suit-dark) 0) 50% 28% / 50% 25% no-repeat,
+    var(--bg),
+    radial-gradient(100% 200%, var(--suit) 40%, #0000 41%)
+}
+
+.corp .body {
+  --color: #358;
+  --bg: conic-gradient(at 50% -60%, #0000 42.25%, var(--suit-dark) 0 57.75%, #0000 0) 50% 0 / 50% 15% no-repeat;
+  border: 2vmin solid var(--suit);
+  border-top: 0;
+}
+
+.person .name-tag {
+  font-size: 1.2vmin;
+  padding: 0.4vmin;
+  width: 3.5vmin;
+  height: 2.6vmin;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(black 0 0) 50% 2% / 50% 10% no-repeat,
+    linear-gradient(red 20%, white 0 80%, red 0)
+  ;
+  border: 0.25vmin solid red;
+  top: 66%;
+  left: 57%;
+}
+
+.corp .name-tag {
+  font-size: 1vmin;
+  left: 20%;
+  top: 68%;
+}
+
+.box-7 .necromancer-bubble::after {
+  height: 300%;
+}
+
+.box-7 .eye {
+  width: 17%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(100% 50% at 70% 0, #000 60%, #0000 0) no-repeat,
+    #cf0;
+  top: 57%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+}
+
+.box-7 .eye + .eye {
+  background: #cf0;
+  width: 22%;
+  top: 54%;
+  left: 62%;
+  clip-path: polygon(0 40%, 100% 15%, 100% 100%, 0 100%);
+}
+
+.box-8 .big,
+.box-10 .big,
+.box-11 .big{
+  left: 25%;
+}
+
+.box-8 .corp,
+.box-10 .corp,
+.box-11 .corp{
+  right: 25%;
+}
+
+.box-8 .bubble {
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4vmin 5vmin 11vmin 5vmin;
+  background: #def;
+  border-radius: 100%;
+  font-size: 2.25vmin;
+  top: -3vmin;
+}
+
+.box-10 .bubble::before,
+.box-11 .bubble::before,
+.box-8 .bubble::before {
+  content: "";
+  width: 20%;
+  height: 80%;
+  border-radius: 50% 0 0 50%;
+  left: 15%;
+   top: 35%;
+  box-shadow: inset 0.7vmin 0.4vmin #def;
+  clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+} 
+
+.box-10 .bubble::after,
+.box-8 .bubble::after {
+  content: "";
+  width: 20%;
+  height: 100%;
+  border-radius: 0 50% 50% 0;
+  right: 15%;
+   top: 35%;
+  box-shadow: inset -0.7vmin 0.4vmin #def;
+  clip-path: polygon(0 40%, 100% 40%, 100% 100%, 0 100%);
+} 
+
+.box-11 .bubble::before {
+  height: 100%;
+  top: 50%;
+  left: 22%;
+  clip-path: polygon(0 30%, 100% 30%, 100% 100%, 0 100%);
+}
+
+.box-8 .bubble span {
+  left: 3vmin;
+  width: 55%;
+  color: #444;
+  text-align: center;
+}
+
+.box-8 .bubble span:nth-of-type(2) {
+  left: auto;
+  right: 3vmin;
+  color: #448;
+  margin-top: 1vmin;
+}
+
+.box-8 .corp .mouth {
+  border-left: 0.5vmin solid;
+  border-bottom: 0.1vmin solid #0000;
+  height: 10% !important;
+  border-radius: 50%;
+}
+
+.box-9 .big { left: 10%; }
+.box-9 .corp { right: 10%; }
+
+.box-9 .big .eye { width: 1.2vmin; left: 43%; }
+.box-9 .big .eye + .eye { left: 67%; }
+.box-9 .corp .eye { width: 1.1vmin; left: 32%; transform: translate(-50%, -25%); }
+.box-9 .corp .eye + .eye { left: 55%; }
+
+.box-9 .big .mouth {
+  transform: translateX(-50%) rotate(3deg);
+}
+
+.box-9 .corp .mouth {
+  background: 
+    linear-gradient(#0000 45%, #000 0 55%, #c00 0),
+    repeating-linear-gradient(90deg, #0000 0 15%, #000 0 16%, #0000 20%),
+    #ffe;
+  border-radius: 5vmin;
+  border: 0;
+  top: 75%;
+  transform: translate(-50%, 0) rotate(-3deg);
+  height: 7%;
+}
+
+.box-9 .corp .drop {
+  width: 20%;
+  aspect-ratio: 1;
+  transform: rotate(45deg);
+  border-radius: 0 50% 50% 50%;
+  background: #aef;
+  top: 10%;
+  left: 74%;
+}
+
+.box-11 .corp .mouth {
+  transform: translateX(-50%) rotate(-5deg);
+  height: 10%;
+}
+
+.box-10 .corp .mouth {
+  border-right: 0.5vmin solid;
+  border-bottom: 0.1vmin solid #0000;
+  height: 10% !important;
+  border-radius: 50%;
+}
+
+.box-10 .bubble {
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4vmin 5vmin 11vmin 5vmin;
+  background: #def;
+  border-radius: 100%;
+  font-size: 2.25vmin;
+  top: -3vmin;
+}
+
+.box-10 .bubble span {
+  left: 3vmin;
+  width: 55%;
+  color: #444;
+  text-align: center;
+}
+
+.box-10 .bubble span:nth-of-type(2) {
+  left: auto;
+  right: 3vmin;
+  color: #448;
+  margin-top: 1vmin;
+}
+
+.box-6 .big .mouth,
+.box-8 .big .mouth,
+.box-10 .big .mouth, 
+.box-11 .big .mouth {
+  --tongue: #f78;
+}
+.box-11 .big .mouth::before {
+  transform: translate(-90%, 0) rotate(20deg);
+}
+
+.box-11 .bubble {
+  background: #def;
+  border-radius: 100% / 0 0 50% 50%;
+}
+
+.box-12 .eye {
+  width: 17%;
+  height: 9%;
+  background: #cf0;
+  border-radius: 50% / 0 0 100% 100%;
+  top: 55%;
+  left: 29%;
+}
+.box-12 .eye + .eye {
+  left: auto;
+  right: 29%;
+}
+
+.box-12 .hand {
+  transform-origin: bottom left;
+  transform: rotate(35deg) !important;
+  top: 37% !important;
+  left: 15% !important;
+}
+
+/* section 3: the return of the IE */
+.box-13 {
+  display: flex;
+  align-items: center;
+  font-size: 2.5vmin;
+  text-align: center;
+  padding: 4vmin;
+  max-width: 30%;
+  background: #ffc;
+}
+
+.box-14 .ie {
+  opacity: 0.75;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 1vmin #fff)
+}
+
+.box-14 .ie-logo {
+  --s: 17vmin;
+  top: 20%;
+  left: 5%;
+}
+
+.box-14 .cloth {
+  width: 19vmin;
+  height: 22vmin;
+  background: #fffc;
+  left: 2.5vmin;
+  top: 19.25%;
+  border-radius: 80% 4vmin 20% 10% / 66.6% 4vmin 70% 50%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 90% 90%, 80% 100%, 70% 90%, 60% 100%, 50% 88%, 40% 100%, 30% 94%, 20% 100%, 10% 92%, 0% 100%);
+}
+
+.box-14 .cloth ~ .cloth {
+  background: linear-gradient(#fffc, #fffa);
+}
+
+.box-14 .ie-eye {
+  width: 4%;
+  aspect-ratio: 1;
+  border: 0.75vmin solid #0000;
+  border-top: 0.75vmin solid;
+  border-left: 0.75vmin solid;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  top: 40%;
+  left: 16%;
+}
+
+.box-14 .ie-eye + .ie-eye {
+  left: 23%;
+}
+
+.box-14 .ie-mouth {
+  width: 3.5%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(#0000 50%, #000 0);
+  top: 47%;
+  left: 20%;
+}
+
+.box-14 .safari-scared {
+  top: -5%;
+  right: 10%;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(-1);
+}
+
+.box-14 .safari-logo {
+  --s: 16vmin;
+  position: absolute;
+  bottom: 21%;
+  left: 5%;
+}
+
+.box-14 .safari-eye {
+  width: 9%;
+  top: 40%;
+  left: 17%;
+  aspect-ratio: 1;
+  background: radial-gradient(at 60% 55%, #000 3%, #fff 4% 15%, #000 16%, #fff 17%);
+  background: radial-gradient(at 60% 55%, #fff 8%, #000 10%, #fff 11%);
+  border-radius: 50%;
+}
+
+.box-14 .safari-eye + .safari-eye {
+  width: 8.5%;
+  left: 10%;
+  top: 45%;
+}
+
+.box-14 .safari-eye::before,
+.box-14 .safari-eye::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 0.15vmin solid;
+  border-radius: 50%;
+}
+
+.box-14 .safari-eye::after {
+  transform: translate(-3%, -1%);
+}
+
+.box-14 .safari-mouth {
+  width: 6%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: linear-gradient(black 50%, #0000 0);
+  transform: rotate(-14deg);
+  top: 65%;
+  left: 17%;
+}
+
+.box-14 .safari-leg-1 {
+  border-radius: 0;
+  transform: rotate(-15deg);
+  top: 75%;
+  left: 17%;
+  width: 20vmin;
+  height: 10vmin;
+  border-left: 0.66vmin solid;
+  transform-origin: 20% 20%;
+}
+
+.box-14 .safari-leg-2 {
+  border-radius: 0;
+  transform: rotate(-20deg);
+  top: 72%;
+  left: 23%;
+  width: 20vmin;
+  height: 10vmin;
+  border-left: 0.66vmin solid;
+  transform-origin: 20% 20%;
+}
+
+.box-14 .ie-leg::before {
+  content: "";
+  width: 3vmin;
+  bottom: 0;
+  left: -0.25vmin;
+  height: 1vmin;
+  background: black;
+  border-radius: 50% / 100% 100% 0 0;
+  transform-origin: 0% 100%;
+  transform: rotate(-10deg);
+}
+
+.box-14 .safari-arm-1 {
+  width: 0.4vmin;
+  height: 40%;
+  background: #000;
+  top: 56%;
+  left: 12%;
+  transform: rotate(10deg);
+}
+
+.box-14 .safari-arm-2 {
+  width: 0.4vmin;
+  height: 40%;
+  background: #000;
+  top: 49%;
+  left: 26%;
+  transform: rotate(-35deg);
+}
+
+.safari-arm-1::before,
+.safari-arm-2::before {
+  content: "";
+  width: 250%;
+  aspect-ratio: 1;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  background: black;
+  border-radius: 50%;
+}
+
+.box-14 .scared {
+  width: 20%;
+  height: 25%;
+  background: 
+    repeating-linear-gradient(95deg, #0000 0 3%, #000 0 4%, #0000 0 6%),
+    radial-gradient(farthest-side at 50% 50%, #00fa, #00f0);
+  transform: rotate(-14deg);
+  border-radius: 100% ;
+  top: 40%;
+  left: 8%;
+}
+
+.box-14 .bubble-ghost {
+  top: 65%;
+  left: 40%;
+  transform: rotate(-10deg);
+}
+
+.box-14 .aiiieee {
+  font-size: 10vmin;
+  width: 80%;
+  right: -15%;
+  top: -5%;
+  line-height: 0.8;
+}
+
+.box-14 .bubble-1 {
+  top: 3%;
+  left: 30%;
+  font-size: 0.875em;
+  background: #ffc;
+}
+
+.box-14 .bubble-1::before {
+  content: "";
+  left: -5%;
+  top: 20%;
+  border: 2vmin solid #0000;
+  border-bottom: 0.75vmin solid #ffc;
+  border-left: 0 solid #0000;
+  border-radius: 50%;
+  width: 70%;
+  height: 150%;
+  transform: rotate(-65deg);
+}
+
+
+.box-14 .bubble-2 {
+  right: 2%;
+  top: 2%;
+  font-weight: bold;
+  background: #ffc;
+}
+
+.box-14 .bubble-2::before {
+  content: "";
+  left: 40%;
+  top: 60%;
+  border: 2vmin solid #0000;
+  border-bottom: 0.75vmin solid #ffc;
+  border-right: 0.25vmin solid #0000;
+  border-radius: 50%;
+  width: 100%;
+  height: 150%;
+  transform: rotate(35deg);
+}
+
+
+.box-14b .ie {
+  width: 70%;
+  left: 4%;
+}
+
+.box-14b .ie-eye {
+  border: 0;
+  background: #000;
+  transform: scale(0.7);
+  left: 17%;
+}
+
+.box-14b .ie-eye + .ie-eye {
+  border: 0;
+  left: 22%;
+  background: #000;
+  transform: scale(0.8) translateY(-0.25vmin);
+}
+
+.box-14b .ie-mouth {
+  background: linear-gradient(#000 50%, #0000 0);
+  transform: rotate(-10deg) translate(-0.5vmin, 1.5vmin);
+}
+
+.box-14b .ie-tear {
+  width: 5%;
+  aspect-ratio: 1;
+  border-radius: 0 100% 100% 100%;
+  background: 
+    radial-gradient(at 30% 60%, white 20%, #0000 0),
+    skyblue;
+  transform: rotate(45deg);
+  left: 10%;
+  top: 35%;
+  opacity: 0.7;
+}
+
+.box-14b .bubble-1 {
+  top: 15%;
+  left: 29%;
+  font-size: 1.5vmin;
+}
+
+.box-14b .bubble-1::before,
+.box-14b .bubble-2::before,
+.box-14b .bubble-3::before{
+  content: "";
+  box-sizing: content-box;
+  left: -40%;
+  border: 2vmin solid #0000;
+  border-bottom: 0.75vmin solid #ffc;
+  border-left: 0 solid #0000;
+  border-radius: 50%;
+  width: 70%;
+  height: 150%;
+  transform: rotate(-65deg);
+  top: -20%;
+  clip-path: polygon(0% 50%, 100% 35%, 100% 100%, 0% 100%)
+}
+
+
+.box-14b .bubble-3 {
+  top: 15%;
+  left: 40%;
+  padding: 3vmin;
+  background: #ffc;
+}
+
+.box-14b .bubble-3::before {
+  top: 25%;
+  left: -30%;
+  height: 80%;
+  transform: rotate(-24deg);
+}
+
+.box-14b .bubble-2 {
+  top: 30%;
+  right: 20%;
+  font-weight: normal;
+  font-size: 2vmin;
+}
+
+.box-14b .bubble-2::before{
+  left: auto;
+  top: 0%;
+  right: 10%;
+  width: 250%;
+  transform: rotate(-20deg);
+}
+
+.box-15::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(farthest-side at 100% 50%, #ffff, #fff0);
+}
+
+.box-15 .ie {
+  opacity: 0.75;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 0 1vmin #fff)
+}
+
+.box-15 .ie-logo {
+  --s: 17vmin;
+  top: 20%;
+  left: 6%;
+}
+
+.box-15 .cloth {
+  width: 19vmin;
+  height: 22vmin;
+  background: #fffc;
+  left: 2vmin;
+  top: 19.25%;
+  border-radius: 80% 4vmin 20% 10% / 66.6% 4vmin 70% 50%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 90% 90%, 80% 100%, 70% 90%, 60% 100%, 50% 88%, 40% 100%, 30% 94%, 20% 100%, 10% 92%, 0% 100%);
+}
+
+.box-15 .cloth ~ .cloth {
+  background: linear-gradient(#fffc, #fffa);
+}
+
+.box-15 .ie-eye {
+  width: 4.5%;
+  aspect-ratio: 0.9;
+  background: 
+    radial-gradient(circle at 35% 35%, #fff 20%, #0000 0),
+    radial-gradient(circle at 23% 58%, #fff 10%, #0000 0),
+    black;
+  border-radius: 50%;
+  top: 40%;
+  left: 21%;
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+}
+
+.box-15 .ie-eye + .ie-eye {
+  left: 29.5%;
+  background: 
+    radial-gradient(circle at 65% 35%, #fff 20%, #0000 0),
+    radial-gradient(circle at 77% 58%, #fff 10%, #0000 0),
+    black;
+  transform: scaleX(-1)
+}
+
+.box-15 .ie-mouth {
+  width: 3.5%;
+  aspect-ratio: 1.5;
+  border-radius: 50%;
+  background: linear-gradient(#000 50%, #0000 0);
+  top: 53%;
+  left: 25.5%;
+}
+
+.box-15 .ie-tear {
+  width: 3%;
+  aspect-ratio: 1;
+  border-radius: 0 100% 100% 100%;
+  background: skyblue;
+  transform: rotate(45deg);
+  left: 20%;
+  top: 50%;
+}
+
+.box-15 .ie-speech {
+  font-size: 1.25vmin;
+  text-transform: none;
+}
+
+.box-15 .ie-speech-1 {
+  top: 16%;
+  left: 3%;
+  transform: rotate(-7deg);
+}
+
+.box-15 .ie-speech-2 {
+  top: 3%;
+  left: 19%;
+  transform: rotate(2deg);
+  width: 30%;
+}
+
+.box-15 .ie-speech-3 {
+  top: 15%;
+  left: 35%;
+  transform: rotate(6deg);
+  width: 30%;
+}
+
+.box-15 .ie-speech-4 {
+  top: 65%;
+  left: 48%;
+  transform: rotate(8deg);
+}
+
+.box-16 { 
+  overflow: visible;
+}
+
+.box-16 .flash-talk {
+  background: #cfc;
+  font-size: 2vmin;
+  padding: 1.5vmin;
+}
+
+.box-16 .flash-talk strong {
+  position: relative;
+}
+
+.box-16 .flash-talk-1 {
+  font-size: 1.5vmin;
+  left: -25vmin;
+  top: 40%;
+}
+
+.box-16 .flash-talk-2 {
+  border-radius: 20% 20% 100% 100% / 100% 100% 120% 120%;
+  top: 0;
+  left: -12vmin;
+  width: 70%;
+  font-size: 1.75vmin;
+  padding: 2vmin;
+  padding-top: 1vmin;
+}
+
+.box-16 .flash-talk-3 {
+  top: 45%;
+  left: 8vmin;
+  font-size: 1.75vmin;
+}
+
+
+.box-16 .flash-ghost {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.75;
+  filter: drop-shadow(0 0 2vmin #fff);
+}
+
+.box-16 .flash-talk-connect {
+  width: 60%;
+  height: 35%;
+  border: 1vmin solid #cfc;
+  border-radius: 50% / 100% 100% 0 0;
+  top: 20%;
+  left: -13vmin;
+  border-bottom: 0;
+  transform: rotate(5deg);
+}
+.box-16 .flash-talk-connect::before {
+  content: "";
+  width: 40%;
+  height: 50%;
+  left: 100%;
+  top: 90%;
+  transform: rotate(-20deg);
+  border-radius: 0 0 0 100%;
+  box-shadow: inset 1vmin 0 #cfc;
+}
+
+.box-16 .flash {
+  --s: 17vmin;
+  top: 16%;
+  left: 70%;
+  transform: translateX(-50%);
+}
+
+.box-16 .cloth {
+  width: 18.5vmin;
+  height: 22vmin;
+  background: #fffd;
+  border-radius: 100% 100% 60% 60% / 80% 80% 110% 110%;
+  top: 14.5%;
+  left: 70%;
+  transform: translate(-50%, 0);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 90% 90%, 80% 100%, 70% 90%, 60% 100%, 50% 85%, 40% 100%, 33% 88%, 23% 100%, 17% 90%, 0 100%);
+}
+
+.box-16 .cloth ~ .cloth {
+  background: linear-gradient(#fffc, #fffa);
+}
+
+.box-16 .to-be-continued {
+  bottom: 0;
+  right: 0;
+  padding: 0.5vmin 1vmin;
+  border-top: 0.35vmin solid;;
+  border-left: 0.35vmin solid;
+  background: #ffc;
+  font-size: 2vmin;
+}
+
+.box-16 .flash-eye {
+  width: 4%;
+  aspect-ratio: 0.8;
+  background: #000;
+  border-radius: 50%;
+  left: 59%;
+  top: 36%;
+}
+
+.box-16 .flash-eyebrow {
+  width: 8%;
+  height: 10%;
+  border: 0.5vmin solid #0000;
+  border-top: 0.5vmin solid;
+  border-radius: 50%;
+  left: 57%;
+  top: 30%;
+}
+
+.box-16 .flash-eyebrow + .flash-eyebrow {
+  left: 66%;
+  transform: scaleX(-1);
+}
+
+.box-16 .flash-eye + .flash-eye {
+  left: 68%;
+  transform: scaleX(-1);
+}
+
+.box-16 .flash-mouth {
+  left: 63.25%;
+  width: 6%;
+  aspect-ratio: 1.25;
+  background: linear-gradient(#0000 55%, #000 0);
+  border-radius: 50%;
+  top: 46%;
+}
+
+/* browser logos */
+/* Chrome */
+.chrome-logo {
+  --s: 20vmin;
+  --b: #0071f0;
+  --r: #f11718;
+  --g: #00a944;
+  --y: #ffbe01;
+  display: inline-block;
+  width: var(--s);
+  aspect-ratio: 1;
+  background:
+    radial-gradient(var(--b) 28.75%, #fff 29% 35.25%, #0000 35.5%),
+    linear-gradient(var(--r) 25%, #0000 0),
+    linear-gradient(60deg, var(--g) 31.75%, #0000 0),
+    linear-gradient(-60deg, var(--y) 31.75%, #0000 0),
+    conic-gradient(var(--y) 33.33%, var(--g) 0 66.66%, var(--r) 0)
+    ;
+  border-radius: 50%;
+}
+
+/* Internet Explorer */
+/* Far from perfect, but good enough, I guess... just like the real IE */
+.ie-logo {
+  --c: #1EBBEE;
+  --s: 20vmin;
+  width: var(--s);
+  aspect-ratio: 1;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.ie-logo::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background:
+    linear-gradient(#0000 57.5%, #fff 0 66%, #0000 0) 100% 50% / 25% 100% no-repeat,
+    radial-gradient(135% 130% at 50% 100%, #fff 30%, #0000 30.25%) 63% 0% / 50% 46% no-repeat,
+    radial-gradient(135% 145% at 50% 0%, #fff 30%, #0000 30.25%) 64% 100% / 50% 42.5% no-repeat,
+    radial-gradient(88% 88% at 56% 52%,  var(--c) 50%, #0000 50.25%)
+    ;
+  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%, 0 75%, 10% 50%);
+}
+
+.ie-logo::after {
+  content: "";
+  box-sizing: content-box;
+  position: absolute;
+  width: 115%;
+  height: 44%;
+  border: calc(var(--s) * 0.04) solid var(--c);
+  border-top: calc(var(--s) * 0.1) solid var(--c);
+  border-bottom: calc(var(--s) * 0.01) solid #0000;
+  border-left: calc(var(--s) * 0.06) solid var(--c);
+border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  box-shadow: calc(var(--s) * -0.25) calc(var(--s) * -0.055) #fff;
+}
+
+/* Safari */
+.safari-logo {
+  --s: 20vmin;
+  display: inline-block;
+  width: var(--s);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    radial-gradient(#2fa4d4 10%, #277ec2 50% 65.5%, #0000 65.66%),
+    linear-gradient(#f2f2f2, #dad9da)
+    ;
+  background-color: #f002;
+  position: relative;
+}
+
+.safari-logo::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 88%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    /* circle cutting long lines*/
+    radial-gradient(#2fa4d4 10%, #277ec2 57%, #0000 57.25%),
+    /* long lines */
+    linear-gradient(#0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(11.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(22.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(33.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(45deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(56.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(67.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(78.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(90deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(101.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(112.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(123.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(135.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(146.25deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(157.5deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(168.75deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    /* circle cutting short lines*/
+    radial-gradient(#2fa4d4 10%, #277ec2 57% 63.5%, #0000 63.75%),
+    /* short lines */
+    linear-gradient(5.6deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(16.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(28.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(39.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(50.6deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(61.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(73.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(84.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(95.6deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(106.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(118.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(129.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(140.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(151.85deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(163.1deg, #0000 49.5%, #fff 0 50.5%, #0000 0),
+    linear-gradient(174.35deg, #0000 49.5%, #fff 0 50.5%, #0000 0)
+    ;
+}
+
+.safari-logo::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 13%;
+  height: 89%;
+  background:
+    linear-gradient(to bottom right, #0000 50%, #ff2d3a 0) 0 0,
+    linear-gradient(to bottom left, #0000 50%, #dd0017 0) 100% 0,
+    linear-gradient(to top right, #0000 50%, #dbdadb 0) 0 100%,
+    linear-gradient(to top left, #0000 50%, #abaaab 0) 100% 100%
+    ;
+  background-size: 50.125% 50.125%;
+  background-repeat: no-repeat;
+}
+
+/* Opera */
+.opera-logo {
+  --s: 20vmin;
+  position: relative;
+  display: inline-block;
+  width: var(--s);
+  aspect-ratio: 1;
+  background:
+    linear-gradient(#f02 75%, #b00);
+  background-size:
+    100% 100%,
+    cover
+    ;
+  border-radius: 50%;
+  -webkit-mask: radial-gradient(52.5% 74% at 50.5% 50%, #0000 50%, #000 50.25%);
+  mask: radial-gradient(52.5% 74% at 50.5% 50%, #0000 50%, #000 50.25%);
+}
+
+.opera-logo::before {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: #00f4;
+  width: 79.5%;
+  height: 87%;
+  right: -4%;
+  top: 50%;
+  transform: translate(0, -50%);
+  background: linear-gradient(#ad0000, #ff3241);
+}
+
+/* Tor */
+.tor-logo {
+  --s: 20vmin;
+  width: var(--s);
+  aspect-ratio: 1;
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 0 50%, #f5e3ff 0 15%, #0000 15.25% 28%, #f5e3ff 28.25% 37%, #0000 37.25% 49.5%, #f5e3ff 49.75% 57.5%, #0000 58%) 100% 50% / 50% 100% no-repeat,
+   linear-gradient(#a300d8, #4a0062)
+    ;
+  background-color: #f002;
+}
+
+/* Netscape Navigator */
+/* Netscape Navigator */
+.netscape-logo {
+  --s: 15vmin;
+  --light: #6cc0c3;
+  --dark: #007e87;
+  --gray: #999;
+  width: var(--s);
+  aspect-ratio: 1;
+  display: inline-block;
+  position: relative;
+  background: 
+    radial-gradient(145% 100% at 55% 148%, #000 80%, #0000 80.5%),
+    radial-gradient(145% 100% at 51% 144%, #fff 80%, #0000 80.5%);
+  background-color: #f002;
+  border-radius: 50%;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: calc(var(--s) * 0.02) solid var(--gray);
+  box-shadow: inset 0 0 0 calc(var(--s) * 0.045) var(--light);
+  background-color: var(--dark)
+}
+
+.netscape-logo::before {
+  content: "N";
+  color: #fff;
+  font-family: Times, 'Times New Roman', serif;
+  font-size: calc(var(--s) * 0.75);
+  height: 100%;
+  display: grid;
+  place-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 50% 67%, 50% 100%, 0 100%);
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+
+.flash {
+  --s: 20vmin;
+  --red: #f04;
+  --gray: #323b46;
+  --darkgray: #252b34;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  height: var(--s);
+  aspect-ratio: 1;
+  background: 
+    linear-gradient(#fff 0 0) 60% 47% / 20% 13% no-repeat,
+    linear-gradient(-45deg, #500, #c00);
+}
+
+.flash::before {
+  content: "";
+  position: absolute;
+  width: 77%;
+  height: 85%;
+  bottom: 17.5%;
+  left: -22.5%;
+  border: calc(var(--s) * 0.15) solid #fff;
+  box-sizing: border-box;
+  border-radius: 50%;
+  clip-path: polygon(50% 55%, 100% 55%, 100% 100%, 50% 100%)
+}
+
+.flash::after {
+  content: "";
+  position: absolute;
+  width: 77.5%;
+  height: 80%;
+  top: 12%;
+  right: -16%;
+  border: calc(var(--s) * 0.15) solid #fff;
+  box-sizing: border-box;
+  border-radius: 50%;
+  clip-path: polygon(50% 45%, 0% 45%, 0% 0%, 50% 0%)
+}
+
+/* Flash logo */
+.flash {
+  --s: 20vmin;
+  --red: #f04;
+  --gray: #323b46;
+  --darkgray: #252b34;
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+  height: var(--s);
+  aspect-ratio: 1;
+  background: 
+    linear-gradient(#fff 0 0) 60% 47% / 20% 13% no-repeat,
+    linear-gradient(-45deg, #500, #c00);
+}
+
+.flash::before {
+  content: "";
+  position: absolute;
+  width: 77%;
+  height: 85%;
+  bottom: 17.5%;
+  left: -22.5%;
+  border: calc(var(--s) * 0.15) solid #fff;
+  box-sizing: border-box;
+  border-radius: 50%;
+  clip-path: polygon(50% 55%, 100% 55%, 100% 100%, 50% 100%)
+}
+
+.flash::after {
+  content: "";
+  position: absolute;
+  width: 77.5%;
+  height: 80%;
+  top: 12%;
+  right: -16%;
+  border: calc(var(--s) * 0.15) solid #fff;
+  box-sizing: border-box;
+  border-radius: 50%;
+  clip-path: polygon(50% 45%, 0% 45%, 0% 0%, 50% 0%)
+}

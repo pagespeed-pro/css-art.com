@@ -1,0 +1,193 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  background-color: #fed767;
+  overflow: hidden;
+}
+.ground {
+  height: 9.37em;
+  width: 100%;
+  background-color: #f07c08;
+  position: absolute;
+  bottom: 0;
+}
+.ground:after {
+  position: absolute;
+  content: "";
+  height: 1.56em;
+  width: 343em;
+  background-repeat: repeat no-repeat;
+  background-size: 2.5em 1.56em;
+  background-image: radial-gradient(
+    circle at 1.25em 1.56em,
+    #f07c08 1.56em,
+    #fed767 1.56em
+  );
+  animation: slide 20s infinite linear;
+  transform: translateX(-250em);
+}
+@keyframes slide {
+  100% {
+    transform: translateX(0);
+  }
+}
+.container {
+  height: 31.25em;
+  width: 31.25em;
+  position: absolute;
+  transform: translateX(-50%);
+  bottom: 9.37em;
+  left: 50%;
+}
+.face {
+  height: 6.25em;
+  width: 8.75em;
+  background: linear-gradient(to right, #0c333f 80%, #0078bc 80%);
+  position: absolute;
+  top: 17.5em;
+  border-radius: 3.12em 0 0 3.12em;
+  left: 2.81em;
+  transform-origin: 50% 100%;
+  animation: face-shake 0.3s infinite;
+}
+@keyframes face-shake {
+  50% {
+    transform: rotate(-5deg);
+  }
+}
+.eye,
+.eye:before {
+  position: absolute;
+  background-color: #002336;
+  height: 1.87em;
+  width: 1.87em;
+  border: 0.56em solid #ffffff;
+  border-radius: 50%;
+}
+.eye {
+  top: 1.25em;
+  left: 2.18em;
+}
+.eye:before {
+  content: "";
+  top: -0.56em;
+  left: 0.87em;
+}
+.ears,
+.ears:after {
+  position: absolute;
+  height: 3.12em;
+  width: 1.25em;
+  background-color: #0c333f;
+  border-radius: 0.62em;
+}
+.ears {
+  top: -2em;
+  left: 4.68em;
+  transform: rotate(-25deg);
+}
+.ears:after {
+  content: "";
+  left: 0.93em;
+  top: 0.31em;
+  transform: rotate(50deg);
+}
+.mouth {
+  background-color: #8c1837;
+  height: 1.25em;
+  width: 2.5em;
+  border-radius: 0 0 1.25em 1.25em;
+  position: absolute;
+  left: 3.75em;
+  top: 4em;
+  overflow: hidden;
+}
+.mouth:after {
+  position: absolute;
+  content: "";
+  background-color: #c32954;
+  height: 0.93em;
+  width: 1.87em;
+  border-radius: 0.31em;
+  top: 0.31em;
+  left: 0.93em;
+}
+.body {
+  height: 15.62em;
+  width: 15.62em;
+  background-color: #0c333f;
+  border-radius: 50%;
+  position: absolute;
+  left: 11.87em;
+  top: 11.87em;
+  box-shadow: 0 7.81em 0 -5.62em #0c333f, 0 -7.81em 0 -5.62em #0c333f,
+    7.81em 0 0 -5.62em #0c333f, -7.81em 0 0 -5.62em #0c333f,
+    7.18em 3.12em 0 -5.62em #0c333f, 7.18em -3.12em 0 -5.62em #0c333f,
+    -7.18em 3.12em 0 -5.62em #0c333f, -7.18em -3.12em 0 -5.62em #0c333f,
+    3.12em 7.18em 0 -5.62em #0c333f, 3.12em -7.18em 0 -5.62em #0c333f,
+    -3.12em 7.18em 0 -5.62em #0c333f, -3.12em -7.18em 0 -5.62em #0c333f,
+    -5.62em -5.62em 0 -5.62em #0c333f, -5.62em 5.62em 0 -5.62em #0c333f,
+    5.62em -5.62em 0 -5.62em #0c333f, 5.62em 5.62em 0 -5.62em #0c333f;
+  animation: body-shake 0.4s infinite linear;
+}
+@keyframes body-shake {
+  50% {
+    transform: translateY(0.62em);
+  }
+}
+.leg {
+  position: absolute;
+  height: 6.25em;
+  width: 1.25em;
+  background-color: #002436;
+  border-radius: 1.25em;
+  bottom: 0;
+}
+.leg-1 {
+  left: 15em;
+}
+.leg-2 {
+  left: 17.5em;
+}
+.leg-3 {
+  left: 21.87em;
+}
+.leg-4 {
+  left: 24.37em;
+}
+.leg-2,
+.leg-4 {
+  animation: run-1 0.4s infinite linear;
+}
+@keyframes run-1 {
+  33% {
+    transform: translate(-2.5em, -2.5em);
+  }
+  66% {
+    transform: translate(-2.5em, 0);
+  }
+}
+.leg-1,
+.leg-3 {
+  animation: run-2 0.4s infinite linear;
+}
+@keyframes run-2 {
+  65% {
+    transform: translateY(0);
+  }
+  66% {
+    transform: translateY(-2.5em);
+  }
+}
+
+@media screen and (min-width: 700px) {
+  body {
+    font-size: 18px;
+  }
+}

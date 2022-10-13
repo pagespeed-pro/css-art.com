@@ -1,0 +1,115 @@
+/* Presets */
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* colors */
+  --gray: #D9D9D9;
+  --red: #CB1313;
+  --white: #FFFFFF;
+  /*dimensions */
+  --width: 50vh;
+  --height: 50vh;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: var(--white);
+  transform: rotate(-35deg);
+}
+
+div:before, div:after {
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+div.quiet {
+  width: var(--width);
+  height: var(--height);
+  --redline:
+    /* stem */ linear-gradient(to bottom left, var(--red) 100vh, transparent 100vh) 50% 42% / 4% 82% no-repeat;
+  background: var(--redline);
+}
+
+div.quiet:after {
+  width: var(--width);
+  height: var(--height);
+  position: relative;
+  overflow: visible;
+  z-index: -999;
+  animation: swing 2s infinite linear;
+  /* placements */
+  --trumpet:
+   /* mouthpiece */ radial-gradient(ellipse, var(--gray) 1.5vh, transparent 1.5vh) 20% 49% / 3vh 8vh no-repeat,
+   /* base */ radial-gradient(ellipse, var(--gray) 5vh, transparent 5vh) 70% 48% / 10vh 20vh no-repeat,
+   /* mask-top */ radial-gradient(ellipse, var(--white) 10vh, transparent 10vh) 8.75vh 16vh / 20vh 7vh no-repeat,
+   /* mask-bottom */ radial-gradient(ellipse, var(--white) 10vh, transparent 10vh) 8.75vh 26vh / 20vh 7vh no-repeat,
+   /* stem */ linear-gradient(var(--gray) 10vh, transparent 10vh) 45% 100% / 25vh 30vh no-repeat;
+  --handle:
+    /* handle=left */ radial-gradient(circle, var(--white) 2vh, transparent 2vh) 13vh 26vh / 6vh 6vh no-repeat,
+    /* handle-right */ radial-gradient(circle, var(--white) 2vh, transparent 2vh) 22vh 26vh / 6vh 6vh no-repeat,
+    /* handle-base */ linear-gradient(var(--white) 4vh, transparent 4vh) 16vh 27vh / 9.5vh 10vh no-repeat,
+    /* handle=left */ radial-gradient(circle, var(--gray) 3vh, transparent 3vh) 13vh 26vh / 6vh 6vh no-repeat,
+    /* handle-right */ radial-gradient(circle, var(--gray) 3vh, transparent 3vh) 22vh 26vh / 6vh 6vh no-repeat,
+    /* handle-base */ linear-gradient(var(--gray) 6vh, transparent 6vh) 16vh 26vh / 9.5vh 10vh no-repeat;
+  --red-circle:
+  /* white */ radial-gradient(circle, var(--white) 55%, transparent 55%) 10% 10% / 100% 100% no-repeat,
+  /* red */ radial-gradient(circle, var(--red) 60%, transparent 60%) 10% 10% / 100% 100% no-repeat;
+  background: var(--handle), var(--trumpet), var(--red-circle);
+}
+
+div.quiet:before {
+  width: var(--width);
+  height: var(--height);
+  transform: rotate(35deg);
+  animation: dance 1s infinite linear;
+  --quarter-note-1:
+  /* 8th-left */ radial-gradient(circle, var(--gray) 1.25vh, transparent 1.25vh) 95% 13% / 10% 10% no-repeat,
+  /* 8th-left-bar */ linear-gradient(var(--gray) 8vh, transparent 8vh) 93% 7% / 1% 10% no-repeat,
+  /* 8th-left-mask */ radial-gradient(circle, var(--white) 2vh, transparent 2vh) 101% 3.5% / 8% 8% no-repeat,
+  /* 8th-hor-bar */ linear-gradient(var(--gray) 3vh, transparent 3vh) 96% 6.5% / 4% 6% no-repeat;
+  --quarter-note-2:
+  /* 8th-left */ radial-gradient(circle, var(--gray) 1.25vh, transparent 1.25vh) 95% 43% / 10% 10% no-repeat,
+  /* 8th-left-bar */ linear-gradient(var(--gray) 8vh, transparent 8vh) 93% 37% / 1% 10% no-repeat,
+  /* 8th-left-mask */ radial-gradient(circle, var(--white) 2vh, transparent 2vh) 101% 31.5% / 8% 8% no-repeat,
+  /* 8th-hor-bar */ linear-gradient(var(--gray) 3vh, transparent 3vh) 96% 34% / 4% 6% no-repeat;
+  --eighth-notes:
+  /* 8th-left */ radial-gradient(circle, var(--gray) 1.25vh, transparent 1.25vh) 82% 23% / 10% 10% no-repeat,
+  /* 8th-right */ radial-gradient(circle, var(--gray) 1.25vh, transparent 1.25vh) 73% 19% / 10% 10% no-repeat,
+  /* 8th-left-bar */ linear-gradient(var(--gray) 8vh, transparent 8vh) 73% 12% / .5vh 6vh no-repeat,
+  /* 8th-right-bar */ linear-gradient(var(--gray) 8vh, transparent 8vh) 81% 14% / .5vh 12vh no-repeat,
+  /* 8th-hor-bar */ linear-gradient(var(--gray) 8vh, transparent 8vh) 79.5% 10.5% / 9% 1% no-repeat,
+  /* 8th-hor-bar-2 */ linear-gradient(var(--gray) 8vh, transparent 8vh) 79.5% 12.5% / 9% 1% no-repeat;
+  background: var(--quarter-note-1), var(--quarter-note-2), var(--eighth-notes);
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes dance {
+  0% {
+    transform: translateY(0px) rotate(35deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(35deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(35deg);
+  }
+}

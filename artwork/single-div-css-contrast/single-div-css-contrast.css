@@ -1,0 +1,75 @@
+body {
+  position: relative;
+}
+div {
+  position: absolute;
+}
+div:before,
+div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+#contrast {
+  width: 100%;
+  min-height: 300px;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, #000 50%, #fff 50%);
+}
+#contrast:before,
+#contrast:after {
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  margin-left: -4em;
+  background-image: linear-gradient(to right, #fff 50%, #000 50%);
+}
+#contrast:before {
+  margin-top: -8em;
+}
+@media (prefers-reduced-motion: no-preference) {
+  #contrast:before {
+    animation: contrast 2000ms infinite linear;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  #contrast:after {
+    animation: contrast 2000ms infinite linear;
+  }
+}
+@-moz-keyframes contrast {
+  0 {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes contrast {
+  0 {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes contrast {
+  0 {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes contrast {
+  0 {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

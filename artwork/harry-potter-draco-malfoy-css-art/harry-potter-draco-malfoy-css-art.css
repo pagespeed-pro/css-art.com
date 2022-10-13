@@ -1,0 +1,272 @@
+@property --scarf1 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: brown;
+}
+
+@property --scarf2 {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: brown;
+}
+
+@property --bg {
+  syntax: '<color>';
+  inherits: true;
+  initial-value: #d003;
+}
+
+.character {
+  --scarf1: brown;
+  --scarf2: gold;
+  --skin: #fca;
+  --eyes: #222;
+  --hair: #642;
+  --bg: #d003;
+  width: 60vmin;
+  height: 60vmin;
+  background: #f003;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12vmin;
+  overflow: hidden;
+  background: var(--skin);
+  color: #c005;
+  box-shadow:
+    0 1vmin 4vmin,
+    0 0 0 100vmax var(--bg);
+  transition:
+    --scarf1 1s, --scarf2 1s, background 1s, color 1s, box-shadow 1s;
+}
+
+.character div,
+.character div::before,
+.character div::after {
+  position: absolute;
+  box-sizing: border-box;
+  transition: all 1s;
+}
+
+.eyes {
+  width: 10vmin;
+  height: 10vmin;
+  background: var(--eyes);
+  border-radius: 50%;
+  top: 27vmin;
+  left: 17vmin;
+  transform: translateX(-50%);
+  box-shadow: 26vmin 0 var(--eyes);
+  clip-path: polygon(0% 0%, 200% 0%, 400% 0%, 400% 100%, 0% 100%)
+}
+
+.eyes::before {
+  content: "";
+  width: 20%;
+  height: 20%;
+  background: white;
+  border-radius: 50%;
+  top: 20%;
+  left: 20%;
+  box-shadow: 26vmin 0 white;
+}
+
+.hair {
+  width: 60%;
+  height: 70%;
+  border-radius: 50%;
+  background: var(--hair);
+  transform: translate(-50%, -50%);
+}
+
+.hair::before {
+  content: "";
+  width: 150%;
+  height: 120%;
+  top: -15%;
+  left: 95%;
+  border-radius: 50%;
+  box-shadow: inset 5vmin 1vmin var(--hair);
+}
+
+.hair::after {
+  content: "";
+  width: 150%;
+  height: 110%;
+  top: -10%;
+  left: 105%;
+  background: var(--hair);
+  border-radius: 50%;
+}
+
+.accessory-1 {
+  width: 3vmin;
+  height: 5vmin;
+  background: #4003;
+  top: 17%;
+  left: 28%;
+  transform: skewX(10deg) skewY(10deg);
+}
+
+.accessory-1::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: -50%;
+  background: red;
+  background: linear-gradient(to bottom left, #4003 50%, #0000 0);
+}
+
+.accessory-2 {
+  width: 100%;
+  height: 40%;
+  top: 32.5%;
+  background:
+    linear-gradient(to right, #000 7%, #0000 0 43%, #000 0 57%, #0000 0 93%, #000 0) 0 50% / 100% 8%,
+    radial-gradient(circle at 25% 50%, #0000 22%, #000 0 25%, #0000 0),
+    radial-gradient(circle at 75% 50%, #0000 22%, #000 0 25%, #0000 0)
+    ;
+  background-repeat: no-repeat;
+}
+
+.accessory-2::before {
+  content: "";
+  width: 9%;
+  height: 11%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    repeating-linear-gradient(to right, #0000 0 7%, #0002 0 9%)
+    ;
+  background-color: white;
+  border-radius: 0.5vmin;
+}
+
+.accessory-3 {
+  width: 100%;
+  height: 25%;
+  bottom: 0;
+  left: 0;
+  box-shadow: 
+    0 -1vmin #222,
+    inset 0 5vmin 10vmin -4vmin #0002;
+  background: 
+    repeating-linear-gradient(to right, var(--scarf1) 0 20%, var(--scarf2) 0 40%);
+}
+
+/**/
+.character:hover {
+  --skin: #fcb;
+  --hair: #ffd;
+  --scarf1: green;
+  --scarf2: white;
+  --eyes: #444;
+  --bg: #0503;
+  color: #0705;
+}
+
+.character:hover .eyes {
+  clip-path: polygon(0% 0%, 170% 50%, 370% 0%, 370% 100%, 0% 100%)
+}
+
+.character:hover .eyes::before  {
+  top: 30%;
+}
+
+.character:hover .hair {
+  width: 105%;
+  height: 30%;
+}
+
+.character:hover .hair::before,
+.character:hover .hair::after {
+  width: 100%;
+  height: 100%;
+  left: 95%;
+  top: 0;
+}
+
+.character:hover .accessory-1 {
+  width: 25%;
+  height: 3%;
+  left: 15%;
+  top: 35%;
+  background: var(--hair);
+  border-radius: 100% 100% 0 0;
+}
+
+.character:hover .accessory-1::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--hair);
+  border-radius: 100% 100% 0 0;
+  transform: skewX(-10deg) skewY(-20deg) translate(26vmin, 4.5vmin) scaleX(-1)
+}
+
+.character:hover .accessory-2 {
+  opacity: 0;
+}
+
+.character:hover .accessory-3 {
+  height: 20%;
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

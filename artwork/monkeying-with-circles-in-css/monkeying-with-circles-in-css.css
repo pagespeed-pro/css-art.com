@@ -1,0 +1,132 @@
+body {
+  --skin: lightgray; #da7;
+  --fur: gray; #963;
+  --line: #222;
+  --mouth: #d00;
+  --ground: #77aa77;
+  --sky: #ddeeff;
+  --light: #f4f6f8;
+  --astro1: #ffe;
+  --astro2: #ffe;
+  --star: var(--sky);
+  /* night mode */
+/*   --sky: #369;
+  --astro1: var(--sky);
+  --star: #ffe;
+  --skin: #777;
+  --fur: #444; */
+  width: 1vmin;
+  height: 1vmin;
+  background: var(--light);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-6vmin, -6vmin);
+  box-shadow:
+    /* eyes */
+    0.5vmin 0.5vmin 0 1vmin var(--line),
+    6vmin 0 var(--light),
+    6.6vmin 0.5vmin 0 1vmin var(--line),
+    /* nostrils */
+    3vmin 3vmin 0 -0.125vmin var(--line),
+    4vmin 3vmin 0 -0.125vmin var(--line),
+    /* mouth */
+    3.5vmin 2vmin 0 4vmin var(--skin),
+    3.5vmin 5vmin 0 2vmin var(--mouth), 
+    /* face */
+    -0.5vmin -1vmin 0 4vmin var(--skin),
+    7.5vmin -1vmin 0 4vmin var(--skin),
+    3.5vmin 5vmin 0 4vmin var(--skin),
+    /* head */
+    3.5vmin 0 0 9vmin var(--fur),
+    /* ears */
+    -6vmin 1vmin 0 2vmin var(--skin),
+    13vmin 1vmin 0 2vmin var(--skin),
+    /* ear lobs */
+/*     -5vmin 3vmin 0 1vmin var(--skin),
+    12vmin 3vmin 0 1vmin var(--skin), */
+    /* body option 1 */
+/*     3.75vmin 19vmin 0 10vmin var(--fur), */
+    /* body option 2 */
+    3.5vmin 14vmin 0 8vmin var(--fur),
+    3.5vmin 16.5vmin 0 7.75vmin var(--fur),
+    3.5vmin 19vmin 0 7.5vmin var(--fur),
+    3.5vmin 21vmin 0 7.25vmin var(--fur),
+    3.5vmin 23vmin 0 7vmin var(--fur),
+    /* legs */
+    -13.5vmin 45.25vmin 0 0.25vmin var(--skin),
+    -12vmin 45.25vmin 0 0.25vmin var(--skin),
+    -10.5vmin 45.25vmin 0 0.25vmin var(--skin),
+    -8.5vmin 45vmin 0 0.5vmin var(--skin),
+    -11vmin 42.5vmin 0 1vmin var(--skin),
+    -11vmin 41vmin 0 1vmin var(--fur),
+    -11vmin 43vmin 0 2.25vmin var(--skin),
+    22.5vmin 45.25vmin 0 0.25vmin var(--skin),
+    21vmin 45.25vmin 0 0.25vmin var(--skin),
+    19.5vmin 45.25vmin 0 0.25vmin var(--skin),
+    17.5vmin 45vmin 0 0.5vmin var(--skin),
+    20vmin 42.5vmin 0 1.25vmin var(--skin),
+    20vmin 41vmin 0 1vmin var(--fur),
+    20vmin 43vmin 0 2.25vmin var(--skin),
+    0 calc(400vmax + 44vmin) 0 400vmax var(--ground),
+    4.5vmin 45vmin 0 13vmin var(--sky),
+    -12vmin 55vmin 0 13vmin var(--sky),
+    20vmin 55vmin 0 13vmin var(--sky),
+    4.5vmin 65vmin 0 13vmin var(--sky),
+    4.5vmin 45vmin 0 18vmin var(--fur),
+    /* top-hair */
+    0 -8.5vmin 0 2vmin var(--sky),
+    1vmin -8.5vmin 0 2vmin var(--fur),
+    6.75vmin -8.25vmin 0 2.5vmin var(--sky),
+    5.5vmin -8.25vmin 0 2.5vmin var(--fur),
+    /* arm-1 */
+    -15vmin -10vmin 0 0.75vmin var(--skin),
+    -15vmin -12vmin 0 0.5vmin var(--skin),
+    -16vmin -13vmin 0 0.5vmin var(--skin),
+    -17.5vmin -13.5vmin 0 0.5vmin var(--skin),
+    -17.5vmin -13vmin 0 0.5vmin var(--fur),
+    -16vmin -12.5vmin 0 0.5vmin var(--fur),
+    -15.25vmin -10.5vmin 0 0.75vmin var(--fur),
+    -17vmin -11vmin 0 1.25vmin var(--skin),
+    -18.5vmin -10vmin 0 1vmin var(--fur),
+    -17vmin -11vmin 0 2vmin var(--skin),
+    -7vmin -3vmin 0 11vmin var(--sky),
+    -5vmin -18vmin 0 15vmin var(--sky),
+    -7vmin -3vmin 0 15vmin var(--fur),
+    /* arm-2 */
+    26.5vmin 25.5vmin 0 1.5vmin var(--skin),
+    24.5vmin 25.5vmin 0 0.75vmin var(--skin),
+    25.5vmin 27vmin 0 0.5vmin var(--skin),
+    26.75vmin 27.5vmin 0 0.5vmin var(--skin),
+    28vmin 27vmin 0 0.5vmin var(--skin),
+    26.5vmin 23vmin 0 1vmin var(--fur),
+    26.6vmin 25.5vmin 0 2vmin var(--skin),
+    13vmin 22vmin 0 11vmin var(--sky),
+    27vmin 35vmin 0 11vmin var(--sky),
+    13vmin 22vmin 0 15vmin var(--fur),
+    /* tail */
+    -40vmin -15vmin 0 0.75vmin var(--fur),
+    -43vmin -13vmin 0 3vmin var(--sky),
+    -34.65vmin -6.25vmin 0 7vmin var(--sky), 
+    -36.25vmin -4vmin 0 7vmin var(--sky), 
+    -41.25vmin -3vmin 0 11vmin var(--sky), 
+    -35.5vmin -5vmin 0 7vmin var(--sky), 
+    -34vmin -8vmin 0 7.5vmin var(--sky),
+    -34vmin -8vmin 0 10vmin var(--fur),
+    -15vmin -20vmin 0 20vmin var(--sky),
+    -12vmin 10vmin 0 17.5vmin var(--sky),
+    -12vmin 10vmin 0 20vmin var(--fur),
+    /* sun/moon/stars */
+    35vmin -55vmin 0 10vmin var(--astro1),
+    30vmin -55vmin 0 15vmin var(--astro2),
+    -20vmin -60vmin 0 0.25vmin var(--star),
+    0vmin -90vmin 0 0.25vmin var(--star),
+    20vmin -120vmin 0 0.25vmin var(--star),
+    30vmin -100vmin 0 0.25vmin var(--star),
+    -30vmin -115vmin 0 0.25vmin var(--star),
+    -10vmin -150vmin 0 0.25vmin var(--star),
+    
+    /* sky/background */
+    0 0 0 200vmax var(--sky);
+}

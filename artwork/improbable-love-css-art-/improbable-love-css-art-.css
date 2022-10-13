@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.spider {
+  width: 20vmin;
+  height: 18vmin;
+  background:
+    /* cheeks */
+    radial-gradient(80% 50% at 24% 75%, pink 8%, #0000 8.5%),
+    radial-gradient(80% 50% at 76% 75%, pink 8%, #0000 8.5%),
+    /* mouth */
+    radial-gradient(circle at 50% 0%, #0000 8%, #ddd 8.5% 12%, #0000 12.5%) 50% 150% / 50% 50%,
+    /* eyes */
+    radial-gradient(90% 100% at 24% 38%, #fff 1.2%, #0000 1.45%),
+    radial-gradient(94% 100% at 64% 38%, #fff 1%, #0000 1.25%),
+    radial-gradient(90% 100% at 21% 41%, #fff 3%, #0000 3.25%),
+    radial-gradient(94% 100% at 61% 41%, #fff 3%, #0000 3.25%),
+    radial-gradient(90% 100% at 24% 45%, #000 10%, #0000 10.5%),
+    radial-gradient(94% 100% at 64% 45%, #000 10%, #0000 10.25%),
+    radial-gradient(90% 100% at 30% 50%, #fff 20%, #0000 20.25%),
+    radial-gradient(94% 100% at 70% 50%, #fff 20%, #0000 20.25%)
+    ;
+  background-repeat: no-repeat;
+  background-color: black;
+  border-radius: 100% / 100% 100% 90% 94%;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+}
+
+.spider::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 300%;
+  height: 200%;
+  top: -10%;
+  left: -100%;
+  background:
+    /* legs */
+    radial-gradient(circle at 5% 90%, #0000 21%, #000 21.25% 25%, #0000 25.25%) 147% 10% / 55% 53%,
+    radial-gradient(circle at 90% 90%, #0000 21%, #000 21.25% 25%, #0000 25.25%) -59% 10% / 60% 50%,
+    radial-gradient(circle at 5% 85%, #0000 21%, #000 21.25% 26%, #0000 26.25%) 123% 35% / 47% 45%,
+    radial-gradient(circle at 90% 80%, #0000 21%, #000 21.25% 26%, #0000 26.25%) -25% 35% / 50% 45%,
+    radial-gradient(circle at 100% 90%, #0000 30%, #000 30.25% 35%, #0000 35.25%) 0% 50% / 40% 40%,
+    radial-gradient(circle at 0% 90%, #0000 30%, #000 30.25% 35%, #0000 35.25%) 100% 51% / 42% 42%,
+    radial-gradient(circle at 50% 100%, #0000 40%, #000 40.25% 45%, #0000 45.25%) 50% 40% / 60% 60%
+    ;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.spider::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2.5%;
+  height: 100vh;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -99.5vh);
+  background: repeating-linear-gradient(#000 0 1.3%, #0000 0 2%);
+}
+
+.fly {
+  width: 20vmin;
+  height: 18vmin;
+  background:
+    /* cheeks */
+/*     radial-gradient(80% 50% at 38% 76%, pink 8%, #0000 0),
+    radial-gradient(80% 50% at 83% 76%, pink 8%, #0000 0), */
+    /* mouth */
+    radial-gradient(#0000 8%, #ddd 8.25% 12%, #0000 12.25%) 85% 152% / 50% 70%,
+    linear-gradient(#ddd 19%, #0000 19.25% 81%, #ddd 81.25%) 65% 84.5% / 10% 12%,
+    /* eyes */
+    repeating-linear-gradient(to right, #000 0 1%, #0000 0 4%),
+    repeating-linear-gradient(#000 0 1%, #0000 0 4%),
+    radial-gradient(90% 100% at 45% 50%, pink 20%, #000 20.25% 23%, #0000 23.35%),
+    radial-gradient(94% 100% at 79% 50%, pink 20%, #0000 20.25%)
+    ;
+  background-repeat: no-repeat;
+  background-color: black;
+  border-radius: 100% / 100% 100% 90% 94%;
+  position: absolute;
+  top: calc(50% - 18vmin);
+  left: calc(45% - 20vmin);
+}
+
+
+.fly::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 300%;
+  height: 200%;
+  top: -30%;
+  left: -100%;
+  background:
+    /* legs */
+    linear-gradient(100deg, #0000 50%, #000 50.5% 62%, #0000 62.5%) 40% 70% / 20% 20%,
+    linear-gradient(105deg, #0000 50%, #000 50.5% 62%, #0000 62.5%) 34% 72% / 20% 20%,
+    linear-gradient(115deg, #0000 50%, #000 50.5% 62%, #0000 62.5%) 29% 66% / 20% 20%,
+    linear-gradient(80deg, #0000 50%, #000 50.5% 62%, #0000 62.5%) 55% 69% / 20% 18%,
+    linear-gradient(74deg, #0000 50%, #000 50.5% 62%, #0000 62.5%) 60% 72% / 20% 18%,
+    linear-gradient(66deg, #0000 50%, #000 50.5% 62%, #0000 62.5%) 64% 67% / 20% 18%
+    ;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.fly::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background:
+    radial-gradient(150% 100%, #fff 20%, #000 20.25% 23%, #0000 23.25%) -30% 35% / 70% 70%,
+    radial-gradient(80% 150%, #fff 20%, #000 20.25% 23%, #0000 23.25%) 60% -30% / 70% 70%
+    ;
+  background-repeat: no-repeat;
+  width: 200%;
+  height: 200%;
+  left: -50%;
+  top: -80%;
+  transform: rotate(35deg);
+  z-index: -1;
+}
+
+.heart {
+  width: 5vmin;
+  height: 5vmin;
+  background: red;
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: red;
+  border-radius: 50%;
+  transform: translate(-50%, 0)
+}
+
+.heart::after {
+  transform: translate(0, -50%)
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

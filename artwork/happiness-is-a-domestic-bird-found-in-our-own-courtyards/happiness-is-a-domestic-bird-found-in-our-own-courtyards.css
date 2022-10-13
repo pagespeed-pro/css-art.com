@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Zen+Loop&display=swap');
+
+html, body {
+  --background: #f2f4ff;
+  background: var(--background);
+}
+
+figure {
+  
+  width: 60vmin;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.big {
+  font-size: 1.5em;
+}
+
+.small {
+  font-size: 0.75em;
+}
+
+.x-small {
+  font-size: 0.6em;
+}
+
+blockquote {
+  font-family: 'Zen Loop';
+  font-size: 7vmin;
+  width: 70%;
+  text-align: center;
+  position: absolute;
+  top: 11%;
+  right: -15%;
+  line-height: 0.95;
+}
+
+figcaption {
+  font-family: 'Lato', Helvetica, sans-serif;
+  font-weight: 300;
+  align-text: center;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font-size: 2vmin;
+  position: absolute;
+  right: 0;
+  top: 80%;
+}
+
+b {
+  font-size: 1.2em;
+}
+
+.cartoon {
+  --size: 20vmin;
+  --primary: #acf;
+  --primary-semi: #9be4;
+  --secondary: #bbe;
+  --secondary-semi: #aad4;
+  --shadow: #8ad4;
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  top: 50%;
+  left: 12vmin;
+  transform: translate(-50%, -60%);
+}
+
+.cartoon div {
+  position: absolute;
+}
+
+.b {
+  border: 1vmin solid black;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+.sc {
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+  transform-origin: 50% 75%;
+  background: var(--primary);
+}
+
+.body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(-60deg);
+}
+
+.head {
+  transform: translate(30%, -52%) rotate(210deg) scale(0.5) ;
+}
+
+.wing {
+  transform-origin: 100% 50%;
+  box-shadow: inset -10vmin 0 4vmin -3vmin var(--shadow);
+}
+
+
+.wing-1 {
+  transform: translate(-50%, 0%) rotate(5deg) scale(1, 0.8);
+}
+
+.wing-1.shadow {
+  background: linear-gradient(to right, var(--primary-semi) 90%, transparent);
+  transform: translate(-50%, 0%) rotate(15deg) scale(1, 0.8);
+}
+
+.wing-1.shadow-1 {
+  background: linear-gradient(to right, var(--primary-semi) 70%, transparent);
+  transform: translate(-50%, 0%) rotate(-5deg) scale(1, 0.8);
+}
+
+
+
+.wing-2 {
+  background: var(--secondary);
+  transform: translate(-30%, 10%) rotate(35deg) scale(1, 0.7);
+}
+
+.wing-2.shadow {
+  background: linear-gradient(to right, var(--secondary-semi) 90%, transparent);
+  transform: translate(-30%, 10%) rotate(45deg) scale(1, 0.7);
+}
+
+.wing-2.shadow-1 {
+  background: linear-gradient(to right, var(--secondary-semi) 70%, transparent);
+  transform: translate(-30%, 10%) rotate(25deg) scale(1, 0.7);
+}
+
+.tail {
+  transform-origin: 0% 50%;
+  transform: translate(4%, 54%) rotate(30deg) scale(0.525, 0.475) ;
+}
+
+.tail.shadow {
+  background: linear-gradient(-45deg, var(--primary-semi) 50%, transparent);
+  transform:  translate(4%, 54%) rotate(20deg) scale(0.525, 0.475);
+}
+
+.tail.shadow-1 {
+  background: linear-gradient(-45deg, var(--primary-semi) 50%, transparent);
+  transform:  translate(4%, 54%) rotate(45deg) scale(0.525, 0.475);
+}
+
+.neck {
+  background: var(--background);
+  transform: translate(47.5%, -33%) rotate(135deg) scale(0.6) ;
+}
+
+.beak {
+  transform: translate(47.5%, -49%) rotate(5deg) scale(0.9, 0.055) ;
+}
+
+.eye {
+  background: var(--background);
+  clip-path: none;
+  transform: translate(33%, -52%) scale(0.05);
+}

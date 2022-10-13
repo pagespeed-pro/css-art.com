@@ -1,0 +1,41 @@
+{
+    "name": "rabbit-crossing",
+    "version": "1.0.0",
+    "title": "Rabbit crossing",
+    "description": "CSS only rabbits from Animal Crossing selector",
+    "author": {
+        "name": "Tiffany Choong",
+        "avatar": "https://assets.codepen.io/765377/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1516941279&width=512",
+        "web": "",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/tiffachoo/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/tiffachooo"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/tiffachoo"
+            }
+        ]
+    },
+    "html": "rabbit-crossing.html",
+    "css": [
+        "rabbit-crossing.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css-animation",
+        "css-only",
+        "css-image",
+        "animal crossing",
+        "css-variables"
+    ],
+    "original": "https://codepen.io/tiffachoo/pen/xxGGLKB",
+    "codepen": "https://codepen.io/tiffachoo/pen/xxGGLKB"
+}

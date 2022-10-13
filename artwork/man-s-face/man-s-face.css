@@ -1,0 +1,331 @@
+html, body {
+  overflow: hidden;
+  background: #8c73;
+}
+
+.cartoon {
+  position: absolute;
+  bottom: 00%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 0.5vmin solid;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+/****/
+.cartoon {
+  --skin: #fca;
+  --hair: #630;
+  --iris: #7c6;
+  --line-face: #da8;
+  --shirt: #fff;
+}
+
+.head {
+  width: 50%;
+  height: 70%;
+  background: var(--skin);
+  border-radius: 100% / 30% 30% 120% 120%;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: 1.25vmin 3.5vmin 0 -0vmin var(--hair), -1.25vmin 3.5vmin 0 -0vmin var(--hair), -2vmin -7vmin var(--hair), 2vmin -7vmin var(--hair);
+}
+
+.hair-top {
+  width: 59%;
+  height: 10%;
+  background: var(--hair);
+  left: 50%;
+  top: -4%;
+  transform: translate(-50%, 0)
+}
+
+.eye {
+  width: 30%;
+  height: 13%;
+  background: #fff;
+  border-radius: 100% / 90%;
+  top: 33%;
+  left: 9%;
+  box-shadow: inset 0 4vmin 0 -3vmin rgba(0,0,0,0.1), inset 0 4vmin 0 -3vmin var(--skin), 0 -3vmin 3vmin -1vmin rgba(0,0,0,0.05); /* inset 0 -1vmin 0 -0.5vmin var(--skin) */
+}
+
+.eye::before {
+  width: 3vmin;
+  height: 3vmin;
+  background: #222;
+  border-radius: 50%;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 1.25vmin var(--iris);
+}
+
+.eye::after {
+  width: 1vmin;
+  height: 1vmin;
+  background: #fff;
+  border-radius: 50%;
+  top: 35%;
+  left: 55%;
+  box-shadow: 0.5vmin 0.5vmin 0 -0.25vmin #fff;
+}
+
+.eye + .eye {
+  left: 61%;
+}
+
+.nose {
+  width: 16%;
+  height: 40%;
+  border-radius: 0 2vmin 5vmin 5vmin;
+  border: 1vmin solid var(--line-face);
+  border-right: 0.75vmin solid var(--line-face);
+  border-left-color: transparent;
+  border-top: 0;
+  left: 50%;
+  top: 27%;
+  transform: translate(-50%, 0);
+  background: var(--skin);
+}
+
+.eyebrow {
+  width: 40%;
+  height: 20%;
+  border-radius: 0 30% 0 0;
+  box-shadow: -0.75vmin -3vmin 0 -1vmin var(--hair);
+  top: 30%;
+  left: 57%;
+}
+
+.eyebrow + .eyebrow {
+  border-radius: 30% 0 0 0;
+  box-shadow: 0.75vmin -3vmin 0 -1vmin var(--hair);
+  left: 2%;
+}
+
+.nose::before {
+  width: 4vmin;
+  height: 4vmin;
+  border: 0.75vmin solid var(--line-face);
+  border-radius: 50%;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  bottom: -1%;
+  right: -3.45vmin;
+  box-shadow: inset -1.1vmin -0.65vmin var(--skin);
+}
+
+.nose::after {
+  width: 4vmin;
+  height: 4vmin;
+  border: 0.75vmin solid var(--line-face);
+  border-bottom: 1vmin solid var(--line-face);
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  bottom: -1.1%;
+  left: -2.9vmin;
+  background: var(--skin);
+}
+
+.mustache {
+  width: 40%;
+  height: 11%;
+  background: var(--hair);
+  border-radius: 100% 20% 50%;
+  left: 52%;
+  top: 67%;
+  transform-origin: left center;
+  transform: translate(-100%, 0) rotate(-10deg);
+  box-shadow: inset 0 0 0 4vmin rgba(0,0,0,0.2);
+}
+
+.mustache + .mustache {
+  left: 48%;
+  border-radius: 20% 100% 20% 50%;
+  transform-origin: right center;
+  transform: rotate(10deg);
+}
+
+.lip {
+  width: 35%;
+  height: 9%;
+  background: #f007;
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: var(--skin);
+  box-shadow: inset 0 0 0 5vmin rgba(128, 0, 0, 0.2);
+}
+
+.beard {
+  width: 80%;
+  height: 40%;
+  background: #f007;
+  left: 10%;
+  border-radius: 100% / 80% 80% 110% 110%;
+  bottom: -5%;
+  background: var(--hair);
+}
+
+.ear {
+  width: 15%;
+  height: 30%;
+  background: var(--skin);
+  border-radius: 70% 70% 50% 100%;
+  top: 30%;
+  left: 19%;
+  transform: rotate(-4deg);
+}
+
+.ear::after {
+  width: 100%;
+  height: 100%;
+  border-radius: 70% 70% 100% 50%;
+  background: var(--skin);
+  transform: rotate(10deg);
+  left: 37vmin;
+  top: 10%;
+}
+
+.back-hair {
+  width: 20%;
+  height: 30%;
+  background: var(--hair);
+  color: var(--hair);
+  left: 20%;
+  top: 10%;
+  box-shadow: 33vmin 0, 0vmin -6vmin, 33vmin -6vmin;
+}
+
+.back-hair::after,
+.back-hair::before {
+  width: 80%;
+  height: 25%;
+  background: var(--hair);
+  border-radius: 50%;
+  top: -37%;
+  left: 40%;
+  transform: rotate(-10deg);
+  box-shadow: 23vmin 5vmin, 9vmin -2vmin 0 1vmin
+}
+
+.back-hair::after {
+  top: -43%;
+  left: 80%;
+  transform: rotate(10deg);
+  box-shadow: 13vmin -4vmin, 7vmin -3vmin;
+}
+
+.forehead {
+  width: 60%;
+  height: 0.5%;
+  background: #0000000d;
+  top: 16%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.forehead::before {
+  width: 70%;
+  height: 100%;
+  background: #00000009;
+  top: -2.25vmin;
+  left: 15%;
+}
+
+.neck {
+  width: 30%;
+  height: 20%;
+  background: var(--skin);
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.shoulder {
+  width: 120%;
+  height: 25%;
+  border-radius: 100% 100% 0 0;
+  background: var(--skin);
+  bottom: -13%;
+  left: -10%;
+  background-image: radial-gradient(at 50% 0%, var(--skin) 23%, var(--shirt) 0);
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

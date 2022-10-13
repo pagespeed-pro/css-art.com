@@ -1,0 +1,57 @@
+body {
+  background-color: #808000;
+  position: relative;
+  height: 100vh;
+}
+.entry {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.entry:before,
+.entry:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+.entry.mike-wazowski {
+  width: 150px;
+  height: 90px;
+  margin-left: -75px;
+  margin-top: -155px;
+  background: transparent;
+  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  box-shadow: 0 30px 3px 1px #ffe4c4, 0 18px 0 4px #555;
+}
+@media (max-width: 400px) {
+  .entry.mike-wazowski {
+    margin-top: -125px;
+  }
+}
+.entry.mike-wazowski:before {
+  width: 200px;
+  height: 220px;
+  margin-left: -100px;
+  top: 45px;
+  left: 50%;
+  background-color: #9acd32;
+  background-image: radial-gradient(circle, white 50%, transparent 50%), radial-gradient(circle, #444 50%, transparent 50%), radial-gradient(circle, #20b2aa 30%, rgba(34,139,34,0) 80%), radial-gradient(circle, #444 50%, transparent 50%), radial-gradient(ellipse, white 35%, #ddd 60%, transparent 60%), radial-gradient(ellipse, #333 45%, #9acd32 55%, #9acd32 60%, transparent 60%), radial-gradient(ellipse, rgba(34,139,34,0.9) 45%, #9acd32 55%, #9acd32 60%, transparent 60%), radial-gradient(ellipse, #9acd32 55%, rgba(34,139,34,0.5) 56%, rgba(34,139,34,0) 63%), radial-gradient(circle, rgba(34,139,34,0) 30%, rgba(34,139,34,0.6) 60%);
+  background-repeat: no-repeat;
+  background-size: 8px 8px, 20px 20px, 25px 25px, 50px 50px, 110px 95px, 120px 110px, 130px 110px, 115px 95px, 250px 260px;
+  background-position: 53% 57px, center 59px, 49% 59px, center 45px, center 25px, center 13px, center -2px, center 35px, 0 -40px;
+  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+}
+.entry.mike-wazowski:after {
+  width: 70px;
+  height: 40px;
+  margin-left: -35px;
+  left: 50%;
+  top: 185px;
+  background: #444;
+  background-image: radial-gradient(ellipse, white 50%, transparent 50%), radial-gradient(ellipse, white 50%, transparent 50%), radial-gradient(ellipse, white 50%, transparent 50%), radial-gradient(ellipse, white 50%, transparent 50%), radial-gradient(ellipse, rgba(255,255,255,0.2) 50%, transparent 50%);
+  background-repeat: no-repeat;
+  background-size: 25px 18px, 25px 18px, 25px 18px, 25px 18px, 56px 30px;
+  background-position: -5px 30px, 15px 32px, 35px 32px, 55px 28px, center 20px;
+  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  box-shadow: 0 6px 0 #9acd32, 0 15px 3px -4px rgba(34,139,34,0.9);
+}

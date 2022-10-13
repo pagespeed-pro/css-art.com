@@ -1,0 +1,120 @@
+/* Presets */
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #2783D8;
+}
+
+div:before, div:after {
+  display: block;
+  position: absolute;
+}
+
+div.badge {
+  /* colors */
+  --orange: #D87A27;
+  --darker-orange: #C56C1D;
+  --darkest-orange: #B75600;
+  --gray: #D9D9D9;
+  --lighter-gray: #E0E0E0;
+  --lightest-gray: #F2F2F2;
+  --white: #fff;
+  --black: #000;
+  --bg-blue: #2783D8;
+  --width: 30vh;
+  --height: 45vh;
+  width: var(--width);
+  height: var(--height);
+  overflow: visible;
+  margin: 0 auto;
+  background-color: var(--bg-blue);
+  border: 1px solid var(--gray);
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: inset 0 6px 0 2px var(--lighter-gray), 0 6px 2px -2px var(--gray);
+  font-family: oswald, sans-serif;
+  color: var(--orange);
+  text-align: right;
+  font-size: 5vh;
+  font-weight: 500;
+  line-height: 1.05;
+  text-transform: uppercase;
+  padding: 7vh 3vh 0px 8vh;
+  margin-top: 25vh;
+  /* placements */
+  --hole-punch: radial-gradient(circle, var(--bg-blue) 1.6vh, transparent 1.7vh) 50% 5% / 4vh 4vh no-repeat, radial-gradient(circle, var(--gray) 1.9vh, transparent 2vh) 50% 5% / 4.2vh 4.2vh no-repeat;
+  --badge-bar: linear-gradient(var(--orange) 100%, transparent 100%) 100% 100% / 100% 15% no-repeat;
+  --badge-face: linear-gradient(var(--white) 100%, transparent 100%) 100% 100% / 100% 100% no-repeat;
+  background: var(--hole-punch), var(--badge-bar), var(--badge-face);
+}
+
+div.badge:before {
+  height: 100vh;
+  width: var(--width);
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  position: absolute;
+  left: calc(50% - (var(--width)/2));
+  top: 0;
+  content: "Greg Robleto";
+  font-size: 5vh;
+  font-weight: 500;
+  color: var(--black);
+  text-align: left;
+  text-transform: capitalize;
+  padding-top: 67vh;
+  padding-left: 3vh;
+  padding-right: 10vh;
+  /* placements */
+  --metal-link: radial-gradient(ellipse, var(--bg-blue) 8.5vh, transparent 8.6vh) 50% 28% / 22vh 14vh no-repeat, linear-gradient(var(--lightest-gray) 100%, transparent 100%) 50% 38% / 5% 7.5% no-repeat, linear-gradient(var(--lighter-gray) 100%, transparent 100%) 50% 38% / 6% 8% no-repeat, linear-gradient(var(--gray) 100%, transparent 100%) 50% 38% / 7% 8.5% no-repeat;
+  --ribbon: linear-gradient(var(--darkest-orange) 100%, transparent 100%) 50% 20% / 40% 10px no-repeat, linear-gradient(to bottom left, var(--darkest-orange) 60%, transparent 65%) 50% 22% / 40% 10% no-repeat,
+  linear-gradient(var(--orange) 100%, transparent 100%) 50% 0% / 40% 30% no-repeat;
+  --metal-hook:
+   radial-gradient(ellipse, var(--lightest-gray) 9vh, transparent 9.5vh) 50% 28% / 20.5vh 14vh no-repeat, radial-gradient(ellipse, var(--lighter-gray) 9.6vh, transparent 9.9vh) 50% 28% / 21vh 15vh no-repeat, radial-gradient(ellipse, var(--gray) 10.1vh, transparent 10.5vh) 50% 28% / 21.5vh 15vh no-repeat;
+  background: var(--metal-link), var(--ribbon), var(--metal-hook);
+}
+
+div.badge:after {
+  height: 100vh;
+  width: var(--width);
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  position: absolute;
+  left: calc(50% - (var(--width)/2));
+  top: 0;
+  content: "Participant";
+  font-size: 3.5vh;
+  font-weight: 500;
+  color: var(--white);
+  text-align: left;
+  text-transform: uppercase;
+  padding-top: 79.5vh;
+  padding-left: 3vh;
+  padding-right: 10vh;
+  /* colors */
+  --shirt: #717A88;
+  --head: #F0CAAB;
+  --eyes: #757F81;
+  --hair: #E3BA9B;
+  --profile-head:
+   /* left-eye */ radial-gradient(ellipse, var(--eyes) 0.35vh, transparent 0.36vh) 3.1vh 56vh / 8vh 8vh no-repeat,
+   /* right-eye */ radial-gradient(ellipse, var(--eyes) 0.35vh, transparent 0.36vh) 5vh 56vh / 8vh 8vh no-repeat,
+   /* left-ear */ radial-gradient(ellipse, var(--head) 0.55vh, transparent 0.56vh) 0.8vh 54.5vh / 8vh 12vh no-repeat,
+   /* right-ear */ radial-gradient(ellipse, var(--head) 0.55vh, transparent 0.56vh) 7.2vh 54.5vh / 8vh 12vh no-repeat,
+     /* hair */ radial-gradient(ellipse, var(--hair) 1.74vh, transparent 1.75vh) 5vh 56.5vh / 6vh 2vh no-repeat,
+   /* head */ radial-gradient(ellipse, var(--head) 3.2vh, transparent 3.2vh) 4vh 56vh / 8vh 8vh no-repeat,
+   /*neck */ radial-gradient(ellipse, var(--head) 1.1vh, transparent 1.2vh) 7vh 59.5vh / 2vh 5vh no-repeat;
+  --profile-shirt: radial-gradient(ellipse, var(--shirt) 3.4vh, transparent 3.5vh) 1vh 62vh / 14vh 6vh no-repeat;
+  --profile-pic-bg: radial-gradient(circle, var(--gray) 5.4vh, transparent 5.5vh) 2vh 55vh / 12vh 12vh no-repeat;
+  background: var(--profile-head), var(--profile-shirt), var(--profile-pic-bg);
+}

@@ -1,0 +1,41 @@
+{
+    "name": "14-splash-divtober-2022",
+    "version": "1.0.0",
+    "title": "14. Splash - Divtober 2022",
+    "description": "This entry skirted around the need to make water droplets that I just didn't have the energy for.  So here is the #divtober 2022 entry for \"splash\" going with the 1984 Tom Hanks / Darryl Hannah classic rom-com instead. ",
+    "author": {
+        "name": "Greg Robleto",
+        "avatar": "https://assets.codepen.io/28337/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1641427924&width=512",
+        "web": "http://www.robleto.com",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/robleto/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/robleto"
+            },
+            {
+                "title": "Github",
+                "url": "https://github.com/robleto"
+            }
+        ]
+    },
+    "html": "14-splash-divtober-2022.html",
+    "css": [
+        "14-splash-divtober-2022.css"
+    ],
+    "js": "/* This entry skirted around the need to make water droplets that I just didn't have the energy for.  So here is the #divtober 2022 entry for \"splash\" going with the 1984 Tom Hanks / Darryl Hannah classic rom-com instead. There is a time-lapse video of making this piece at https://youtu.be/E798cZrYBQ0 */",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "cssart",
+        "vcr",
+        "divtober",
+        "splash"
+    ],
+    "original": "https://codepen.io/robleto/pen/rNvoRaV",
+    "codepen": "https://codepen.io/robleto/pen/rNvoRaV"
+}

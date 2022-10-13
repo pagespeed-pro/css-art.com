@@ -1,0 +1,195 @@
+html, body {
+  background: #f001;
+}
+
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+}
+
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 1.5vmin solid black;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+.cartoon {
+  --skin: #fdecdf;
+  --cheeks: #f39b89;
+  --shirt: #f00;
+  --line: #000;
+}
+
+.multi {
+  width: 20%;
+  height: 20%;
+  top: 36%;
+  left: 21.5%;
+  background: var(--shirt);
+  box-shadow: -8.75vmin -4.75vmin 0 0.25vmin var(--line), 30vmin 0 0 -1.5vmin var(--shirt), 38.75vmin -4.75vmin 0 0.25vmin var(--line), 30vmin 0 var(--line), 0.5vmin 27vmin 0 -6vmin var(--skin), 0.5vmin 27vmin 0 -4.5vmin var(--line), 29.5vmin 27vmin 0 -6vmin var(--skin), 29.5vmin 27vmin 0 -4.5vmin var(--line), 10.5vmin 38vmin 0 -4.5vmin, 19.5vmin 38vmin 0 -4.5vmin;
+}
+
+.face {
+  background: var(--skin);
+  width: 53.5%;
+  height: 41%;
+  border-radius: 100% 100% 90% 90% / 100% 100% 90% 90%;
+  left: 23.5%;
+  top: 29.5%;
+  box-shadow: inset 0 4vmin, inset 2vmin 2vmin, inset -2vmin 2vmin;
+}
+
+.cheek {
+  width: 4vmin;
+  height: 4vmin;
+  background: var(--cheeks);
+  top: 77%;
+  left: 18%;
+  box-shadow: 22vmin 0 var(--cheeks);
+}
+
+.mouth {
+  width: 5vmin;
+  height: 6vmin;
+  border: 1.25vmin solid;
+  border-radius: 10vmin;
+  top: 69%;
+  left: 44%;
+  clip-path: polygon(0% 55%, 100% 55%, 100% 100%, 0% 100%);
+}
+
+.eye {
+  width: 27%;
+  border-top: 1.25vmin solid;
+  transform: rotate(16deg);
+  top: 61%;
+  left: 9%;
+}
+
+.eye + .eye {
+  transform:  scaleX(-1) rotate(16deg);
+  left: auto;
+  right: 9%;
+}
+
+.eyebrow {
+  width: 35%;
+  height: 35%;
+  border: 1.25vmin solid transparent;
+  border-top: 1.25vmin solid black;
+  border-radius: 50%;
+  top: 26%;
+  left: 1%;
+  transform: rotate(-15deg);
+}
+
+.eyebrow + .eyebrow {
+  transform:  scaleX(-1) rotate(-15deg);
+  left: auto;
+  right: 1%;
+}
+
+.arm {
+  width: 10%;
+  height: 15%;
+  border-radius: 55% 0 0 0; 
+  transform: rotate(44deg);
+  top: 67%;
+  left: 32.25%;
+  background: var(--shirt);
+}
+
+.arm + .arm {
+  transform: scaleX(-1) rotate(44deg);
+  left: auto;
+  right: 31.75%;
+}
+
+.body {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 93%;
+  background: conic-gradient(var(--line) 162deg, var(--shirt) 0 197deg, var(--line) 0);
+  clip-path: polygon(55% 55%, 71% 100%, 30% 100%, 45% 55%);
+}
+
+.legs {
+  width: 40%;
+  height: 40%;
+  background: var(--line);
+  bottom: 0%;
+  left: 30%;
+  clip-path: polygon(24% 50%, 25.75% 85%, 47.5% 85%, 50% 50%, 53.75% 85%, 75.6% 85%, 79% 50%)
+}
+
+.shadow {
+  width: 33.5%;
+  bottom: 1%;
+  left: 33.75%;
+  height: 6%;
+  background: #c7c7c9;
+}
+
+.heart {
+  background-color: red;
+  height: 10vmin;
+  width: 10vmin;
+  transform: rotate(-45deg);
+}
+
+.heart:before,
+.heart:after {
+  background-color: red;
+  border-radius: 50%;
+  height: 10vmin;
+  width: 10vmin;
+}
+
+.heart:before {
+  top: -5vmin;
+}
+
+.heart:after {
+  left: 5vmin;
+}
+
+.heart-1 {
+  top: 20%;
+  left: 30%;
+}
+
+.heart-2 {
+  top: 10%;
+  left: 70%;
+  opacity: 0.8;
+  transform: scale(0.7) rotate(-45deg);
+}
+
+.heart-3 {
+  top: 0%;
+  left: 50%;
+  opacity: 0.4;
+  transform: scale(0.4) rotate(-45deg);
+}

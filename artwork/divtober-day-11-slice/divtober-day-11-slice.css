@@ -1,0 +1,191 @@
+html {
+  --bg: #fff;
+  background: var(--bg);
+  overflow: hidden;
+}
+
+@property --top {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+@property --notepos {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+
+@property --open {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 0%;
+}
+@property --note {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: purple;
+}
+
+@keyframes dance {
+  0% { --top: 0%; --open: 0%; transform-origin: 60% 90%; }
+  25% { --top: 10%; transform-origin: 60% 90%; transform: translate(-50%, 0%) rotate(3deg); }
+  33% { --open: 8%;  }
+  50% { --top: 0%; --open: 0%; transform: translate(-50%, 0%) rotate(0deg); }
+  75% { --top: 7%; --open: % 10%; transform-origin: 40% 90%; transform: translate(-50%, 0%) rotate(-3deg);}
+  100% { --top: 0%; --open: 0%; }
+}
+
+@keyframes note {
+  0% { --note: purple; --notepos: 0%; }
+  100% { --note: var(--cheese); --notepos: 10%; }
+}
+
+audio {
+  animation: dance 2s linear infinite, note 2s infinite;
+  transform-origin: 60% 90%;
+  transform: translate(-50%, 0%) rotate(2deg);
+  --cheese: #fe3;
+  --crust: #ea5;
+  --crust-dark: #d94;
+  --mouth: #a00;
+  --eye: #000;
+  --pepperoni: #d12;
+  --note: purple;
+  --top: 0%;
+  --open: 0%;
+  --notepos: 5%;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  width: 75vmin;
+  height: 100vmin;
+  position: absolute;
+  display: block;
+  bottom: -10vmin;
+  box-sizing: border-box;
+  left: 50%;
+  background: var(--bg);
+  z-index: -1;
+  background-image: 
+    /* crop */
+    conic-gradient(at 50% var(--top), var(--bg) 155deg, transparent 0 205deg, var(--bg) 0),
+    /* music note */
+    radial-gradient(farthest-side, var(--note) 99.9%, transparent 0),
+    linear-gradient(var(--note), var(--note)),
+    /* arms */
+    linear-gradient(272deg, transparent 40%, black 0),
+    radial-gradient(farthest-side, black 80%, transparent 0),
+    radial-gradient(farthest-side at 0% 50%, transparent 85%, black 0 99%, transparent 0),
+    radial-gradient(farthest-side, black 80%, transparent 0),
+    /* microphone */
+    radial-gradient(farthest-side, #444 99.9%, transparent),
+    conic-gradient(at 130% 130%, transparent 309deg, #666 0 321deg, transparent 0),
+    /* face */
+    radial-gradient(circle at 54% 47%, white 3%, transparent 0),
+    radial-gradient(circle at 54% 47%, white 3%, transparent 0),
+    radial-gradient(circle, var(--eye) 10%, transparent 0),
+    radial-gradient(circle, var(--eye) 10%, transparent 0),
+    radial-gradient(ellipse calc(50% + var(--top)) calc(170% + var(--open) * 10) at 50% 0, transparent 25%, var(--cheese) 0),
+    linear-gradient(white 10%, transparent 0),
+    radial-gradient(circle at 50% 70%, red 20%, var(--mouth) 0),
+    /* legs */
+    radial-gradient(ellipse 140% 120% at 100% 70%, transparent 60%, black 0 70%, transparent 0),
+    radial-gradient(ellipse 140% 120% at 0% 70%, transparent 60%, black 0 70%, transparent 0),
+    radial-gradient(farthest-side at 50% 100%, black 99.9%, transparent 0),
+    radial-gradient(farthest-side at 50% 100%, black 99.9%, transparent 0),
+    /* topings */
+    radial-gradient(circle, var(--pepperoni) 50%, transparent 0),
+    radial-gradient(circle, var(--pepperoni) 45%, transparent 0),
+    /* cheese and crust */
+    radial-gradient(var(--cheese) 30%, transparent 0),
+    radial-gradient(var(--cheese) 50%, transparent 0),
+    radial-gradient(var(--cheese) 30%, transparent 0),
+    radial-gradient(var(--pepperoni) 30%, transparent 0),
+    radial-gradient(var(--pepperoni) 50%, transparent 0),
+    radial-gradient(var(--pepperoni) 30%, transparent 0),
+    radial-gradient(circle at 50% var(--top), var(--cheese) 60%, var(--crust) 0, var(--crust-dark) 70%, transparent 0)
+    ;
+  background-size:
+    /* crop */
+    100% 100%,
+    /* music note */
+    4vmin 3vmin,
+    0.75vmin 7vmin,
+    /* arms */
+    2% 12%,
+    5% 3%,
+    10% 10%,
+    5% 3%,
+    /* microphone */
+    5vmin 5vmin,
+    8vmin 8vmin,
+    /* face */
+    20% 20%,
+    20% 20%,
+    20% 20%,
+    20% 20%,
+    20% 5%,
+    16% 4%,
+    16% 4%,
+    /* legs */
+    7% calc(20% - var(--top) / 2),
+    7% calc(20% - var(--top) / 2),
+    10% 2%,
+    10% 2%,
+    /* topings */
+    30% 14%,
+    30% 24%,
+    /* cheese and crust */
+    60% 24%,
+    80% 30%,
+    70% 30%,
+    60% 24%,
+    80% 30%,
+    70% 30%,
+    100% 100%
+    ;
+  background-position:
+    /* crop */
+    0 0,
+    /* music note */
+    calc(59.5% + var(--notepos)) 45%,
+    calc(61.25% + var(--notepos) / 1.05) 41%,
+    /* arms */
+    27% calc(69vmin + var(--top) / 2.25),
+    27.25% calc(80vmin + var(--top) / 3),
+    76.25% calc(60.75vmin + var(--top) / 2.75),
+    70.5% calc(60.5vmin + var(--top) / 3),
+    /* microphone */
+    62.5% calc(57% + var(--top) / 3),
+    68% calc(61% + var(--top) / 3),
+    /* face */
+    45% calc(40vmin + var(--top) / 1.25),
+    55% calc(40vmin + var(--top) / 1.25),
+    45% calc(40vmin + var(--top) / 1.25),
+    55% calc(40vmin + var(--top) / 1.25),
+    50% calc(52vmin + var(--top) / 1.5),
+    50% calc(52vmin + var(--top) / 1.5),
+    50% calc(52vmin + var(--top) / 1.5),
+    /* legs */
+    40% calc(73vmin + var(--top) / 2),
+    60% calc(73vmin + var(--top) / 2),
+    69% 88vmin,
+    31% 88vmin,
+    /* topings */
+    calc(32% + var(--top) / 10) calc(35% + var(--top) / 1.5),
+    60% calc(10% + var(--top)),
+    /* cheese and crust */
+    130% calc(56% + var(--top) / 1.75),
+    70% calc(57% + var(--top) / 1.75),
+    -20% calc(59% + var(--top) / 1.75),
+    145% calc(57% + var(--top) / 1.75),
+    67% calc(58% + var(--top) / 1.75),
+    -25% calc(60.5% + var(--top) / 1.75),
+    0 0
+    ;
+  background-repeat: no-repeat;
+  text-indent: 40vmin;
+  overflow: visible;
+  clip-path: polygon(0 0, 200% 0%, 200% 90%, 0 90%);
+}

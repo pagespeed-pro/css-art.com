@@ -1,0 +1,22 @@
+html {
+  background:
+    repeating-linear-gradient(90deg,#0000 0 15px,#000 0 30px);
+}
+html:before,
+html:after {
+  content:"";
+  position:fixed;
+  top:40px;
+  left:0;
+  width:60px;
+  height:20px;
+  background:blue;
+  animation:a 60s linear infinite alternate;
+}
+html:after {
+  background:yellow;
+  top:100px;
+}
+@keyframes a {
+  to {left:calc(100% - 60px)}
+}

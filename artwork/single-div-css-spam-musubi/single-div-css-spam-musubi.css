@@ -1,0 +1,55 @@
+body {
+  min-height: 300px;
+  height: 100vh;
+  position: relative;
+  background-color: #ffd700;
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div::before,
+div::after {
+  box-sizing: border-box;
+  display: block;
+  content: '';
+  position: absolute;
+}
+@media (max-width: 400px) {
+  div:not(.no-scale) {
+    transform: scale(0.8);
+  }
+}
+#meaty {
+  box-sizing: border-box;
+  width: 120px;
+  height: 200px;
+  margin-left: -60px;
+  margin-top: -106px;
+  background-color: white;
+  background-repeat: no-repeat;
+  border-radius: 1.5em;
+  border: 0.15em solid #ccc;
+  box-shadow: 0 1.5em 0 -0.15em #f2f2f2, 0 1.5em 0 #bbb, 0 2em 0 rgba(0,0,0,0.1), inset 0 8em 0 white, inset 0 10.6em 0 -0.9em rgba(0,0,0,0.15);
+}
+#meaty::before {
+  width: 80%;
+  height: 80%;
+  left: 50%;
+  top: 7%;
+  margin-left: -40%;
+  background-color: #fa8072;
+  background-repeat: no-repeat;
+  border-radius: 1em;
+  border: 0.15em solid #f73d28;
+  box-shadow: 0 0.7em 0 -0.15em #f96a59, 0 0.7em 0 #f73d28, 0 1em 0 rgba(0,0,0,0.1), inset 0 5em 0 #fa8072, inset 0 8.35em 0 rgba(178,34,34,0.3);
+}
+#meaty::after {
+  width: calc(100% + 0.3em);
+  height: 100%;
+  left: -0.15em;
+  top: 75%;
+  border-radius: 1.5em;
+  box-shadow: 0 -0.2em 0 #228b22, 0 -7em 0 #0d350d, 0 -7.2em 0 #228b22;
+}

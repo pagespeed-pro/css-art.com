@@ -1,0 +1,34 @@
+{
+    "name": "one-div-hand-fan-divtober-1-2021",
+    "version": "1.0.0",
+    "title": "one div hand fan - divtober #1 2021",
+    "description": "",
+    "author": {
+        "name": "Temani Afif",
+        "avatar": "https://assets.codepen.io/1480814/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1637754747&width=512",
+        "web": "https://css-only.art/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/t_afif/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/ChallengesCss"
+            }
+        ]
+    },
+    "html": "one-div-hand-fan-divtober-1-2021.html",
+    "css": [
+        "one-div-hand-fan-divtober-1-2021.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "singlediv",
+        "divtober"
+    ],
+    "original": "https://codepen.io/t_afif/pen/JjJVrPj",
+    "codepen": "https://codepen.io/t_afif/pen/JjJVrPj"
+}

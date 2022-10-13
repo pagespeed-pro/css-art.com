@@ -1,0 +1,139 @@
+body {
+  height: 100vh;
+  position: relative;
+  background-color: #9370db;
+  text-align: center;
+  overflow: hidden;
+}
+div {
+  position: absolute;
+}
+div:before,
+div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+#train {
+  width: 60%;
+  height: 100%;
+  top: auto;
+  left: auto;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat, no-repeat, repeat-x, repeat-x, repeat-x, repeat, repeat, repeat, repeat, repeat, no-repeat;
+  background-image: linear-gradient(to right, #ccc 11em, #999 11em, #999 12em, transparent 12em), linear-gradient(to bottom, #dc143c 20%, #ffd700 20%, #ffd700 40%, #20b2aa 40%, #20b2aa 60%, #1e90ff 60%, #1e90ff 80%, #da70d6 80%), linear-gradient(to left, #aaa 2%, #555 2%), linear-gradient(to left, #888 2%, #333 2%), linear-gradient(to left, #444 2%, #c0c0c0 2%), radial-gradient(circle at 40% 20%, rgba(255,255,255,0.4) 0.1em, rgba(255,255,255,0) 0.11em), radial-gradient(circle at 80% 30%, rgba(255,255,255,0.4) 0.1em, rgba(255,255,255,0) 0.11em), radial-gradient(circle at 20% 60%, rgba(255,255,255,0.4) 0.1em, rgba(255,255,255,0) 0.11em), radial-gradient(circle at 60% 50%, rgba(255,255,255,0.8) 0.1em, rgba(255,255,255,0) 0.11em), radial-gradient(circle at 50% 50%, rgba(255,255,255,0.6) 0.1em, rgba(255,255,255,0) 0.11em), linear-gradient(black, black);
+  background-size: 100% 100%, 100% 1.5em, 7em 0.5em, 7em 1.3em, 7em 3em, 50% 55%, 50% 60%, 50% 60%, 50% 60%, 90% 100%, 100% 100%;
+  background-position: 0 0, right 0 bottom 1.8em, right 2em bottom 5.9em, right 2em bottom 5em, right 2em bottom 3.8em, 9em 0, 9em 0, 9em 0, 9em 0, 9em 0, 0 0;
+  animation: train-2 1000ms infinite linear;
+}
+@media (prefers-reduced-motion) {
+  #train {
+    animation: none;
+  }
+}
+@media screen and (max-width: 700px) {
+  #train {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 450px) {
+  #train {
+    width: 70%;
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 950px) and (min-height: 600px) {
+  #train {
+    font-size: 20px;
+  }
+}
+#train:before {
+  width: 8em;
+  height: 15em;
+  left: 1em;
+  bottom: 0;
+  background-color: #483d8b;
+  border-radius: 5em 5em 0 0;
+  box-shadow: inset 1.2em 0 0 rgba(255,255,255,0.2);
+}
+#train:after {
+  width: 120%;
+  height: 100%;
+  right: 100%;
+  margin-right: -9em;
+  background-repeat: repeat-x;
+  background-image: radial-gradient(circle at 50% 100%, transparent 60%, #8b4513 60.5%), radial-gradient(circle at 50% 100%, transparent 60%, #cd853f 60.5%), linear-gradient(#cd853f, #cd853f), linear-gradient(to left, transparent 20%, #555 20%, #555 30%, transparent 30%, transparent 40%, #555 40%, #555 50%, transparent 50%, transparent 60%, #555 60%, #555 70%, transparent 70%, transparent 80%, #555 80%, #555 90%, transparent 90%), linear-gradient(to left, transparent 20%, #333 20%, #333 30%, transparent 30%, transparent 40%, #333 40%, #333 50%, transparent 50%, transparent 60%, #333 60%, #333 70%, transparent 70%, transparent 80%, #333 80%, #333 90%, transparent 90%), linear-gradient(to left, transparent 10%, #ffd700 10%), linear-gradient(to left, transparent 10%, #ffd700 10%), linear-gradient(to left, transparent 10%, #dc143c 10%), linear-gradient(to left, transparent 10%, #444 10%), linear-gradient(to left, transparent 45%, #444 45%, #444 65%, transparent 65%), radial-gradient(circle at 0.7em 50%, #333 0.4em, transparent 0.4em), radial-gradient(circle at 1.6em 50%, #333 0.4em, transparent 0.4em), radial-gradient(circle at 5.5em 50%, #333 0.4em, transparent 0.4em), radial-gradient(circle at 4.6em 50%, #333 0.4em, transparent 0.4em), radial-gradient(circle at right 15em top 45%, #ffffe0 3em, rgba(255,255,224,0) 3em), linear-gradient(-50deg, #6a5acd 30%, transparent 30%), linear-gradient(50deg, #6a5acd 40%, transparent 40%);
+  background-size: 6em 3em, 6em 3em, 100% 0.4em, 7em 0.5em, 7em 1.2em, 7em 0.1em, 7em 0.1em, 7em 3em, 100% 0.2em, 7em 0.5em, 7em 2em, 7em 2em, 7em 2em, 7em 2em, 100% 35em, 100% 12em, 100% 10em;
+  background-position: 100% 100%, right -0.5em bottom 0, right 0 bottom 3em, left 10em bottom 5.6em, left 10em bottom 4.9em, left 10em bottom 6.5em, left 10em bottom 4.5em, left 10em bottom 3.8em, left 0 bottom 3.8em, left 10em bottom 3.6em, left 10em bottom 2.7em, left 10em bottom 2.7em, left 10em bottom 2.7em, left 10em bottom 2.7em, 0 100%, right 9em bottom 0, 0 100%;
+  animation: train-1 1000ms infinite linear;
+}
+@media (prefers-reduced-motion) {
+  #train:after {
+    animation: none;
+  }
+}
+@-moz-keyframes train-1 {
+  from {
+    background-position: 100% 100%, right -0.5em bottom 0, right 0 bottom 3em, left 10em bottom 5.6em, left 10em bottom 4.9em, left 10em bottom 6.5em, left 10em bottom 4.5em, left 10em bottom 3.8em, left 0 bottom 3.8em, left 10em bottom 3.6em, left 10em bottom 2.7em, left 10em bottom 2.7em, left 10em bottom 2.7em, left 10em bottom 2.7em, 0 100%, right 9em bottom 0, 0 100%;
+  }
+  to {
+    background-position: 100% 100%, right -0.5em bottom 0, right 0 bottom 3em, left 17em bottom 5.6em, left 17em bottom 4.9em, left 17em bottom 6.5em, left 17em bottom 4.5em, left 17em bottom 3.8em, left 7em bottom 3.8em, left 17em bottom 3.6em, left 17em bottom 2.7em, left 17em bottom 2.7em, left 17em bottom 2.7em, left 17em bottom 2.7em, 0 100%, right 9em bottom 0, 0 100%;
+  }
+}
+@-webkit-keyframes train-1 {
+  from {
+    background-position: 100% 100%, right -0.5em bottom 0, right 0 bottom 3em, left 10em bottom 5.6em, left 10em bottom 4.9em, left 10em bottom 6.5em, left 10em bottom 4.5em, left 10em bottom 3.8em, left 0 bottom 3.8em, left 10em bottom 3.6em, left 10em bottom 2.7em, left 10em bottom 2.7em, left 10em bottom 2.7em, left 10em bottom 2.7em, 0 100%, right 9em bottom 0, 0 100%;
+  }
+  to {
+    background-position: 100% 100%, right -0.5em bottom 0, right 0 bottom 3em, left 17em bottom 5.6em, left 17em bottom 4.9em, left 17em bottom 6.5em, left 17em bottom 4.5em, left 17em bottom 3.8em, left 7em bottom 3.8em, left 17em bottom 3.6em, left 17em bottom 2.7em, left 17em bottom 2.7em, left 17em bottom 2.7em, left 17em bottom 2.7em, 0 100%, right 9em bottom 0, 0 100%;
+  }
+}
+@-o-keyframes train-1 {
+  from {
+    background-position: 100% 100%, right -0.5em bottom 0, right 0 bottom 3em, left 10em bottom 5.6em, left 10em bottom 4.9em, left 10em bottom 6.5em, left 10em bottom 4.5em, left 10em bottom 3.8em, left 0 bottom 3.8em, left 10em bottom 3.6em, left 10em bottom 2.7em, left 10em bottom 2.7em, left 10em bottom 2.7em, left 10em bottom 2.7em, 0 100%, right 9em bottom 0, 0 100%;
+  }
+  to {
+    background-position: 100% 100%, right -0.5em bottom 0, right 0 bottom 3em, left 17em bottom 5.6em, left 17em bottom 4.9em, left 17em bottom 6.5em, left 17em bottom 4.5em, left 17em bottom 3.8em, left 7em bottom 3.8em, left 17em bottom 3.6em, left 17em bottom 2.7em, left 17em bottom 2.7em, left 17em bottom 2.7em, left 17em bottom 2.7em, 0 100%, right 9em bottom 0, 0 100%;
+  }
+}
+@keyframes train-1 {
+  from {
+    background-position: 100% 100%, right -0.5em bottom 0, right 0 bottom 3em, left 10em bottom 5.6em, left 10em bottom 4.9em, left 10em bottom 6.5em, left 10em bottom 4.5em, left 10em bottom 3.8em, left 0 bottom 3.8em, left 10em bottom 3.6em, left 10em bottom 2.7em, left 10em bottom 2.7em, left 10em bottom 2.7em, left 10em bottom 2.7em, 0 100%, right 9em bottom 0, 0 100%;
+  }
+  to {
+    background-position: 100% 100%, right -0.5em bottom 0, right 0 bottom 3em, left 17em bottom 5.6em, left 17em bottom 4.9em, left 17em bottom 6.5em, left 17em bottom 4.5em, left 17em bottom 3.8em, left 7em bottom 3.8em, left 17em bottom 3.6em, left 17em bottom 2.7em, left 17em bottom 2.7em, left 17em bottom 2.7em, left 17em bottom 2.7em, 0 100%, right 9em bottom 0, 0 100%;
+  }
+}
+@-moz-keyframes train-2 {
+  from {
+    background-position: 0 0, right 0 bottom 1.8em, right 2em bottom 5.9em, right 2em bottom 5em, right 2em bottom 3.8em, 9em 0, 9em 0, 9em 0, 9em 0, 9em 0, 0 0;
+  }
+  to {
+    background-position: 0 0, right 0 bottom 1.8em, right -5em bottom 5.9em, right -5em bottom 5em, right -5em bottom 3.8em, 9em 0, 9em 0, 9em 0, 9em 0, 9em 0, 0 0;
+  }
+}
+@-webkit-keyframes train-2 {
+  from {
+    background-position: 0 0, right 0 bottom 1.8em, right 2em bottom 5.9em, right 2em bottom 5em, right 2em bottom 3.8em, 9em 0, 9em 0, 9em 0, 9em 0, 9em 0, 0 0;
+  }
+  to {
+    background-position: 0 0, right 0 bottom 1.8em, right -5em bottom 5.9em, right -5em bottom 5em, right -5em bottom 3.8em, 9em 0, 9em 0, 9em 0, 9em 0, 9em 0, 0 0;
+  }
+}
+@-o-keyframes train-2 {
+  from {
+    background-position: 0 0, right 0 bottom 1.8em, right 2em bottom 5.9em, right 2em bottom 5em, right 2em bottom 3.8em, 9em 0, 9em 0, 9em 0, 9em 0, 9em 0, 0 0;
+  }
+  to {
+    background-position: 0 0, right 0 bottom 1.8em, right -5em bottom 5.9em, right -5em bottom 5em, right -5em bottom 3.8em, 9em 0, 9em 0, 9em 0, 9em 0, 9em 0, 0 0;
+  }
+}
+@keyframes train-2 {
+  from {
+    background-position: 0 0, right 0 bottom 1.8em, right 2em bottom 5.9em, right 2em bottom 5em, right 2em bottom 3.8em, 9em 0, 9em 0, 9em 0, 9em 0, 9em 0, 0 0;
+  }
+  to {
+    background-position: 0 0, right 0 bottom 1.8em, right -5em bottom 5.9em, right -5em bottom 5em, right -5em bottom 3.8em, 9em 0, 9em 0, 9em 0, 9em 0, 9em 0, 0 0;
+  }
+}

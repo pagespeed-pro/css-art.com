@@ -1,0 +1,156 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none !important;
+  }
+body {
+    background: #1B365C !important;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.title {
+    margin-bottom:10px;
+    margin-top:20px;
+    text-align: center;
+    color:white;
+    text-shadow: 0px 2px 0px rgb(0, 0, 0), 0px 4px 0px rgb(214 214 214 / 20%);
+}
+
+.grid-item { 
+    height:18px;
+    width:18px;
+    background-color: transparent;
+    border-radius: 6px;
+    box-shadow: 0px -1px 9px -2px white;
+}
+
+.grid {
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-gap:1px;
+    align-content: end;
+    margin:auto;
+    margin-top:30px;
+    height: 216px;
+    width: fit-content;
+    position:relative;
+    background-color: #add8e6;
+    border-radius: 6px;
+    box-shadow: 0px 0px 8px 5px white;
+}
+
+.p-straight {
+    background-color: yellow;
+}
+
+.p-Tshape {
+    background-color: red;
+}
+
+.p-Lshape {
+    background-color: green;
+}
+
+.p-Zshape {
+    background-color: lightseagreen;
+}
+
+.p-square {
+    background-color: coral;
+}
+
+.p-Gap {
+    background-color: transparent;
+}
+
+.grid-item.p {
+    box-shadow:none;
+}
+.move{
+  position: relative;
+  animation-name: tetris;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes tetris {
+0%   {top:-60px;}
+100% {top:76px;}
+}
+
+/*footer*/
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+    color:white;
+    background-color:rgba(44,53,128,1) 100%;
+  }
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    max-width: 1180px;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+  }
+  
+  .contact-details {
+    font-size: 15px;
+    transition: transform 0.3s ease-out;
+    color:white !important;
+   }
+  .btn {
+    padding: 1rem 1rem;
+    margin:auto;
+  }
+  .border-top {
+    border-top: 1px solid #dee2e6!important;
+  }
+  .contact-details:hover {
+    transform: translateY(4px);
+  }
+
+/*** ADDED BY ALVARO *****/
+
+@keyframes slideDown {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(0, 18px); }
+}
+
+@keyframes blink {
+  0%, 33%, 66% { background: #ffff; }
+  25%, 50%, 75%, 100% { background: #fff0; }
+}
+
+.grid {
+  overflow: hidden;
+}
+
+.grid::before {
+  content: "";
+  height: 18px;
+  width: 100%;
+  position: absolute;
+  background: #0000;
+  bottom: 0;
+  left: 0;
+  animation: blink 1s 6s linear 1 forwards;
+  z-index: 1;
+}
+
+.grid-item {
+  animation: slideDown 0.001s 7s linear forwards;
+}
+
+.move {
+  animation: tetris 6s linear 1 forwards, slideDown 0.001s 7s linear forwards;
+}

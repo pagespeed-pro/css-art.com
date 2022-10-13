@@ -1,0 +1,642 @@
+.songoku {
+  --m: #f9ddcc;
+  --t: #120e0d;
+  width: min(100vmin,500px);
+  aspect-ratio: 1.1;
+  margin: auto auto 0;
+  position: relative;
+  overflow:hidden;
+}
+
+.face {
+    position: absolute;
+    inset: 50% 29% 7% 33%;
+    background: 
+      radial-gradient(85% 50% at right,var(--m) 94%,#0000)49% 95%/13% 9%,
+      radial-gradient(79% 100% at top,#0000 75%,var(--t) 78% 98%,#0000) 49.5% 53%/4% 3%,
+      radial-gradient(39% 84% at top,#000 85%,#0000 ) 56% 53%/7% 2%,      
+      radial-gradient(50% 50%,#000 94%,#0000 ) 43.5% 52%/5% 3%,      
+      linear-gradient(to bottom right,#0000 44%,#000 56%) 44% 49%/4% 7%,      
+      linear-gradient(to bottom left,#0000 44%,#000 56%) 54% 49.5%/3% 6%,      
+      linear-gradient(-16deg,#0000 27%,#000 31% 71%,#0000 77%) 56.5% 51%/6% 5%,
+      radial-gradient(farthest-side at 50% 81%,var(--t) 31%,#0000) 51% 84%/12% 2%,
+      radial-gradient(farthest-side,#e8a690 98%,#0000) 48% 87%/18% 5%,
+      conic-gradient(from -131deg at 100% 0,#e8a690 26deg,#0000 0)53% 57%/14% 13%,
+      linear-gradient(-106deg,#0000 25%, #ba6d64 0 78%,#0000 0) 4% 27%/17% 46%,
+      conic-gradient(from 30deg,#0000 125deg,#e8a690 0)19% 19%/40% 50%,
+      linear-gradient(#e8a690 0 0) 43% 86%/11% 40%,      
+      conic-gradient(from -38deg at 50% 100%,var(--m) 74deg,#0000 0);
+    background-repeat: no-repeat;
+}
+.face:before {
+    content: "";
+    position: absolute;
+    right: 49%;
+    bottom: -2%;
+    width: 38%;
+    height: 27%;
+    background: 
+      linear-gradient(-45deg,#0000 20%,#ba6d64 0)4% 12%/39% 17%,
+      radial-gradient(107% 80% at 0 100%,#0000 96%,var(--m))79% 0%/26% 34%,
+      radial-gradient(85% 55% at right,var(--m) 97%,#0000)104% 83%/17% 26%,
+      conic-gradient(from -14deg at 40% 89%,#ba6d64 ,#e8a690 1deg 112deg,#ba6d64 117deg);
+    background-repeat: no-repeat;
+    border-left: 2px solid var(--t);
+    border-bottom: 2px solid var(--t);
+    border-radius: 0 0 34% 30%/0 0 13% 60%;
+    transform-origin: bottom right;
+    transform: skewY(36deg) skewX(14deg);
+}
+.face:after {
+    content: "";
+    position: absolute;
+    left: 49%;
+    bottom: -2%;
+    width: 38%;
+    height: 31%;
+    background: linear-gradient(to bottom right,#0000 50%,var(--m) 0);
+    border-right: 2px solid var(--t);
+    border-bottom: 2px solid var(--t);
+    border-radius: 0 0 30% 34%/0 0 82% 13%;
+    transform-origin: bottom left;
+    transform: skewY(-36deg) skewX(-15deg);
+}
+.mouth:before {
+    content: "";
+    position: absolute;
+    right: 41%;
+    bottom: 19%;
+    width: 7%;
+    height: 2%;
+    border-right: 2px solid var(--t);
+    border-top: 2px solid var(--t);
+    border-radius: 0 47% 0 0;
+    transform: skewX(16deg);
+  z-index:1;
+}
+.mouth:after {
+    content: "";
+    position: absolute;
+    left: 43%;
+    bottom: 19%;
+    width: 7%;
+    height: 2%;
+    border-left: 2px solid var(--t);
+    border-top: 2px solid var(--t);
+    border-radius:47% 0 0 0;
+    transform: skewX(-16deg);
+    z-index:1;
+}
+.noose {
+    position: absolute;
+    width: 10%;
+    height: 10%;
+    bottom: 23%;
+    left: 44%;
+    transform: rotate(45deg) skewX(18deg);
+    border: 2px solid var(--t);
+    border-right:1px solid var(--t);
+    border-top: 0;
+    border-radius: 0 0 85% 0;
+    clip-path: polygon(0 0,100% 37%,100% 100%,0 100%);
+    overflow: hidden;
+}
+.noose:before {
+    content: "";
+    position: absolute;
+    width: 109%;
+    height: 60%;
+    background: #ba6d64;
+    border-top: 2px solid var(--t);
+    border-right: 2px solid var(--t);
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: rotate(56deg);
+    border-radius: 0 75% 0 0;
+}
+.eye-r,
+.eye-l{
+    position: absolute;
+    width: 28%;
+    height: 20%;
+    right: 13%;
+    bottom: 43%;
+    background: 
+      radial-gradient(farthest-side,#000 90%,#0000 ) 9% 55%/36% 41% no-repeat,
+      linear-gradient(#ffffff 0 0) left/74% 100% no-repeat;
+    z-index: 1;
+    clip-path: polygon(-16% 84%,100% 6%,100% 100%,0 100%);
+    border-radius: 0 0 0 10%;
+}
+.eye-l {
+  left:13%;
+  right:auto;
+  transform:scaleX(-1);
+}
+.eye-r:before,
+.eye-l:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 50%;
+    width: 60%;
+    border-left: 2px solid var(--t);
+    border-bottom: 2px solid var(--t);
+    border-radius: 0 0 0 25%;
+    transform-origin: bottom;
+    transform: skewX(12deg);
+}
+.eye-l::before {
+    height: 51%;
+}
+.eye-r:after,
+.eye-l:after{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 20%;
+    height: 81%;
+    border-right: 2px solid var(--t);
+    border-bottom: 2px solid var(--t);
+    border-radius: 0 0 59% 0/0 0 30% 0;
+    transform-origin: top;
+    transform: skewX(-17deg);
+    background: #fff;
+}
+.t-eye-r {
+    position: absolute;
+    right: 11%;
+    top: 30%;
+    width: 36%;
+    height: 10%;
+    background: #000;
+    transform-origin: right;
+    transform: rotate(-30deg);
+    z-index: 2;
+    clip-path: polygon(0 26%,100% 0,92% 100%, 77% 71%, 0% 56%);
+}
+.t-eye-l {
+    position: absolute;
+    left: 12%;
+    top: 29%;
+    width: 37%;
+    height: 10%;
+    background: #000;
+    transform-origin: left;
+    transform: rotate(30deg);
+    z-index: 2;
+    clip-path: polygon(0 0,32% 0,100% 43%,100% 63%,17% 84%,5% 100%);
+}
+.u-eyes:before {
+    content: "";
+    position: absolute;
+    right: 21%;
+    bottom: 35.5%;
+    width: 19%;
+    height: 4%;
+    border-top: 2px solid var(--t);
+    border-radius: 50% 50% 0 0;
+}
+.u-eyes:after {
+    content: "";
+    position: absolute;
+    left: 18%;
+    bottom: 36%;
+    width: 22%;
+    height: 4%;
+    border-top: 2px solid var(--t);
+    border-radius: 50% 50% 0 0;
+    transform-origin: right;
+    transform: rotate(3deg);
+}
+
+.hair:after {
+    content: "";
+    position: absolute;
+    z-index: 3;
+    /* filter: drop-shadow(0px 0px 1px black); */
+    background: 
+      linear-gradient(#000 0 0) 35% 61%/9% 10%,
+      radial-gradient(44% 100% at 52% 109%,#000 98%,#0000) 0% 62%/28% 7%,
+      linear-gradient(to top left,#000 51%,#0000 53%) 27% 62%/5% 16%,
+      linear-gradient(to bottom left,#000 51%,#0000 53%) 27% 62%/7% 33%,
+      radial-gradient(50% 100% at 50% 115%,#252525 98%,#0000) 5% 60%/28% 11%,
+      radial-gradient(50% 100% at 50% 114%,#595959 98%,#0000) 6% 58%/33% 13%,
+      radial-gradient(50% 100% at 50% 118%,#252525 98%,#0000) 5% 57%/35% 15%,
+      radial-gradient(82% 51% at 102% 64%,#0000 93%,#000)35% 93.5%/4% 13%,
+      conic-gradient(from -48deg at 100% 100%,#0000,#000 1deg 23deg,#0000 28deg)33% 92%/10% 10%,
+      radial-gradient(82% 114% at 100% 98%,#0000 98%,#000)40% 85%/10% 11%,
+      radial-gradient(88% 91% at 100% 0,#000 98%,#0000) 31% 95%/5% 14%,
+      linear-gradient(#000 0 0) 28.5% 82%/12% 6%,
+      linear-gradient(to bottom right,#000 48%,#0000 50%) 54.5% 96%/4% 10%,
+      radial-gradient(62% 56% at -11% 72%,#0000 91%,#000) 55% 72%/3% 4%,
+      radial-gradient(100% 119% at 109% 118%,#000 96%,#0000) 54% 84%/4% 18%,
+      conic-gradient(from 25deg at 0 100%,#0000,#000 2deg 28deg,#0000 30deg) 70% 90%/10% 11%,
+      radial-gradient(85% 52% at 0 100%,#0000 92%,#000) 65.5% 80%/4% 7%,
+      radial-gradient(111% 128% at -3% 0%,#0000 96%,#000) 68% 89%/5% 14%,
+      radial-gradient(100% 100% at 0% 0%,#000 98%,#0000) 73% 90%/5% 9%,
+      linear-gradient(#000 0 0)76% 81%/12% 10%,
+      linear-gradient(to bottom right,#000 50%,#0000 51%)98.5% 83%/21% 16%,
+      radial-gradient(50% 100% at 50% 148%,#000 98%,#0000) 102% 67%/34% 10%,
+      linear-gradient(#000 0 0)88% 73%/37% 5%,
+      linear-gradient(to bottom right,#000 49%,#0000 50%) 63% 86%/12% 14%,
+      linear-gradient(#000 0 0) 65% 67%/28% 11%,
+      radial-gradient(100% 50% at 129% 52%,#000 95%,#0000) 40% 93%/4% 36%,
+      radial-gradient(156% 166% at 150% 150%,#0000 98%,#000) 49% 93%/14% 25%,
+      radial-gradient(119% 96% at 115% 100%,#000 92%,#0000) 13% 21%/9% 5%,
+      radial-gradient(148% 151% at -40% 140%,#0000 98%,#000)12% 35%/17% 31%,
+      radial-gradient(83% 100% at 17% 100%,#000 98%,#0000)26% 23%/21% 14%,
+      linear-gradient(#000 0 0) 55% 61%/3% 14%,
+      linear-gradient(#000 0 0) 25% 74%/3% 23%,
+      radial-gradient(120% 128% at 0 100%,#0000 87%,#000 88%) -27% 88%/41% 27%,
+      radial-gradient(79% 101% at 0 100%,#0000 69%,#000 0 98%,#0000 ) 46% 5%/20% 10%,
+      radial-gradient(100% 112% at 0 100%,#0000 98%,#000 ) 35% 7.5%/9% 37%,
+      radial-gradient(100% 100% at 0 100%,#000 98%,#0000 ) 48.5% 8%/16% 16%,
+      radial-gradient(50% 100% at 50% 139%,#000 98%,#0000) 1% 54%/40% 22%,
+      linear-gradient(#000 0 0)34% 59%/22% 44%,
+      linear-gradient(#000 0 0)47% 32%/13% 50%,
+      linear-gradient(to top right,#000 65%,#0000 67%) 58% 27%/9% 37%,
+      radial-gradient(97% 97% at 0% 92%,#000 98%,#0000) 70% 54%/21% 29%;
+    background-repeat: no-repeat;
+    inset: 0% 0% 27% 0%;
+}
+.hair:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 58% 2% 18% 9%;
+    background: 
+      radial-gradient(100% 93% at 0 100%,#0000 96%,#000) 23% 100%/15% 16%,
+      linear-gradient(#000 0 0)28% 82%/10% 18%,
+      radial-gradient(50% 95% at 50% 113%,#000 95%,#0000) 21% 82%/10% 16%,
+      radial-gradient(77% 111% at 0 100%,#0000 98%,#000)18% 74%/10% 33%,
+      linear-gradient(to bottom left,#000 49%,#0000 50%)4% 47%/30% 42%,
+      radial-gradient(50% 105% at 50% 129%,#000 96%,#0000)3% 5%/35% 24%,
+      radial-gradient(100% 102% at 94% 97%,#0000 96%,#000) 84% 108%/26% 26%,
+      linear-gradient(#000 0 0)75% 62%/8% 13%,
+      conic-gradient(from -96deg at right,#0000,#000 1deg 30deg,#0000 32deg) 79% 95%/30% 38%,
+      radial-gradient(103% 117% at 86% 111%,#0000 96%,#000) 88% 75%/13% 44%,
+      conic-gradient(from -111deg at 94% 23%,#0000,#000 1deg 32deg,#0000 34deg) 100% 0%/29% 93%;
+    background-repeat: no-repeat;
+}
+.ear-r {
+    position: absolute;
+    width: 9%;
+    height: 16%;
+    background: 
+      radial-gradient(50% 100% at bottom,#0000 84%,var(--t) 90% 96%,#0000) 74% 8%/63% 34% no-repeat,
+      var(--m);
+    right: 24%;
+    bottom: 23%;
+    border-radius: 0 43% 59% 0/0 23% 55% 0;
+    transform-origin: top;
+    transform: skewX(-18deg);
+    border: 1px solid var(--t);
+    overflow: hidden;
+}
+.ear-r::before {
+    content: "";
+    position: absolute;
+    inset: 35% 24% 19% 46%;
+    background: 
+      linear-gradient(var(--t)0 0) 0 23%/100% 5% no-repeat,
+      radial-gradient(86% 47% at 100% 100%,#f9ddcc 89%,var(--t) 91% 98%,#0000),
+      #e8a690;
+    box-shadow: -2px 2px 0 0 inset var(--t);
+    border-radius: 0 32% 0 0;
+    transform-origin: left;
+    transform: skewY(40deg);
+    clip-path: polygon(0 0,100% 0,100% 53%,0 100%);
+}
+.ear-l {
+    position: absolute;
+    width: 10%;
+    height: 16%;
+    background: 
+      radial-gradient(50% 102% at 54% 100%,#0000 82%,var(--t) 94% 96%,var(--m)) 13% 21%/43% 33% no-repeat,
+      radial-gradient(50% 50%,#e8a690 82%,#0000) 20% 22%/24% 21% no-repeat,var(--m);
+    left: 26.5%;
+    bottom: 23%;
+    box-shadow: 1px -4px 3px inset #e8a690;
+    border-radius: 31% 0 0 79%/51% 0 0 62%;
+    transform-origin: top;
+    transform: skewX(16deg);
+    border: 1px solid var(--t);
+}
+.ear-l:before {
+    content: "";
+    position: absolute;
+    inset: 46% 0% 13% 30%;
+    background: 
+      radial-gradient(34% 24% at 10% 2%,#cc8275 85%,var(--t) 88% 98%,#0000),
+      radial-gradient(27% 47% at 31% 110%,#f9ddcc 87%,var(--t) 91% 98%,#0000),
+      #e8a690;
+    box-shadow: 2px 0px 0 inset var(--t);
+    border-radius: 34% 0 0 66%/51% 0 0 71%;
+    clip-path: polygon(0 0,100% 0,100% 59%, 0% 80%);
+}
+.e1 {
+    position: absolute;
+    width: 33%;
+    height: 20%;
+    left: 10%;
+    top: 15%;
+    background: radial-gradient(81% 103% at 6% 115%,#000 98%,#0000),
+      radial-gradient(97% 83% at 1% 90%,#252525 98%,#0000) #595959;
+    -webkit-mask: radial-gradient(81% 103% at 6% 115%,#0000 98%,#000 0);
+    z-index: 8;
+    border-radius: 48% 68% 0 0/24% 85% 0 0;
+    clip-path: polygon(-9% 0%,100% 0,100% 75%,86% 100%);
+    border: 2px solid #252525;
+}
+.e2 {
+    position: absolute;
+    top: 4%;
+    left: 39%;
+    width: 23%;
+    height: 30%;
+    background: 
+      radial-gradient(65% 110% at -5% 111%,#000 99%,#0000),
+      linear-gradient(#252525 0 0) 0 100%/100% 18% no-repeat,
+      radial-gradient(85% 100% at 0 100%,#252525 99%,#0000) 0 0/100% 191%,#595959;
+    z-index: 4;
+    border-radius: 0 95% 0 0/0 100% 0 0;
+    clip-path: polygon(0 0,61% 7%,96% 88%,60% 93%);
+}
+.e3 {
+    position: absolute;
+    left: 12%;
+    top: 61%;
+    width: 13%;
+    height: 6%;
+    background: 
+      radial-gradient(66% 54% at 33% 100%,#000 98%,#0000),
+      radial-gradient(114% 111% at 62% 132%,#0000 98%,#595959),#252525;
+    border-radius: 100% 0 0 0/84% 0 0 0;
+    clip-path: polygon(0 0,100% 0,97% 90%,0% 52%);
+}
+.e4 {
+    position: absolute;
+    right: 6%;
+    top: 48%;
+    width: 19%;
+    height: 8%;
+    background: 
+      radial-gradient(89% 77% at 96% 100%,#000 98%,#0000),
+      radial-gradient(100% 92% at 64% 100%,#0000 98%,#585858),#252525;
+    z-index: 4;
+    border-radius: 47% 50% 0 50%/27% 24% 0 63%;
+    clip-path: polygon(0 0,100% 0,100% 18%,0 86%);
+}
+.e5 {
+    position: absolute;
+    right: 4%;
+    top: 60%;
+    width: 21%;
+    height: 7%;
+    background: 
+      linear-gradient(-20deg,#0000 68%,#595959 70%),
+      linear-gradient(6deg,#0000 65%,#595959 67%),
+      #252525;
+    z-index: 4;
+    clip-path: polygon(34% 3%,100% 45%,67% 49%,0 100%,11% 50%);
+}
+
+.e6 {
+    position: absolute;
+    right: 16%;
+    top: 73%;
+    height: 4%;
+    width: 10%;
+    background: linear-gradient(13deg,#0000 53%,#595959 56%)#252525;
+    clip-path: polygon(31% 8%, 88% 77%,54% 63%,0 90%);
+}
+.e7 {
+    position: absolute;
+    top: 50%;
+    right: 34%;
+    width: 14%;
+    height: 20%;
+    background: 
+      linear-gradient(-61deg,#0000 57%,#252525 58%),
+      linear-gradient(-52deg,#595959 53%,#252525 55%);
+    z-index: 4;
+    clip-path: polygon(67% 5%,88% 30%,29% 67%,3% 98%,13% 65%);
+    border-radius:0 79% 0 0/0 62% 0 0;
+}
+.e8 {
+    position: absolute;
+    right: 46%;
+    top: 45%;
+    width: 12%;
+    height: 24%;
+    background: radial-gradient(128% 159% at 82% 100%,#595959 62%,#252525 63%)0 0/228%;
+    -webkit-mask: radial-gradient(128% 159% at 85% 96%,#0000 63%,#000 64%)0 0/375%;
+    z-index: 4;
+    border-radius: 100% 0 0 0/76% 0 0 0;
+    clip-path: polygon(0 0,42% 0%,84% 16%,91% 27%,22% 71%,0 100%);
+}
+
+.neck-1 {
+    position: absolute;
+    inset: 78% 33.5% 0 36.5%;
+    background: 
+      linear-gradient(to bottom left,#0000 47%,var(--t),#0000  52%) 34% 51%/25% 56%,
+      linear-gradient(var(--t) 0 0)50% 89%/2px 14%,
+      linear-gradient(to bottom left,#0000 48%,var(--t),#0000  51%) 4% 50%/36% 100%,
+      linear-gradient(to bottom right,#0000 48%,var(--t),#0000  51%) 107% 50%/45% 100%,
+      conic-gradient(from -27deg at bottom,#ba6d64 29deg,#0000 31deg) 50% 89%/20% 25%,
+      conic-gradient(from -146deg at 100% 0,var(--m) 23deg,#0000 0) 61% 108%/17% 40%,
+      conic-gradient(from 126deg at 0 0,#e8a690 28deg,#0000 0) 37% 100%/24% 44%,
+      conic-gradient(from 123deg at 0 0,#ba6d64 31deg,#0000 0) 25% 100%/32% 64%,
+      conic-gradient(from -153deg at 100% 0,#e8a690 66deg,#0000 0) 100% 50%/50% 100%,
+      linear-gradient(90deg,#e8a690 50%,var(--m) 0);
+    background-repeat: no-repeat;
+    border-right: 2px solid;
+    border-left: 2px solid;
+    border-image: linear-gradient(var(--t) 64%,#0000 0) 2;
+    transform: perspective(100px) rotateX(9deg);
+}
+.neck-1:before {
+    content: "";
+    position: absolute;
+    right: 12%;
+    bottom: 5%;
+    width: 16%;
+    height: 45%;
+    background: radial-gradient(123% 71% at 114% -9%,#0000 98%,#e8a690);
+    border-radius: 0 0 0 51%;
+    border-left: 2px solid var(--t);
+    border-top: 2px solid var(--t);
+    clip-path: polygon(0 15%,100% 10%,100% 100%,0 100%);
+    transform: rotate(30deg);
+    transform-origin: bottom left;
+}
+.neck-1:after {
+    content: "";
+    position: absolute;
+    left: 8%;
+    bottom: 0;
+    height: 52%;
+    width: 14%;
+    background: radial-gradient(98% 70% at 0% 0%,#0000 98%,#ba6d64);
+    border-right: 2px solid var(--t);
+    transform-origin: bottom right;
+    transform: rotate(-19deg);
+    border-radius: 0 0 36% 0;
+}
+
+.b-neck {
+    position: absolute;
+    inset: 83% 15% -12% 17%;
+    background: 
+     linear-gradient(to bottom right,#0000 48%,var(--t),#0000  51%) -2% 59%/30% 50%,
+      linear-gradient(to bottom left,#0000 48%,var(--t),#0000  51%) 93% 57%/19% 48%,
+      linear-gradient(to bottom left,#0000 48%,var(--t),#0000  51%) 96% 57%/24% 48%,
+      conic-gradient(from 47deg at 23% 47%,#e8a690 58deg,#0000 69deg) 21% 0%/28% 100%,
+      conic-gradient(from 63deg at 0 66%,#ba6d64 20deg,#0000 0) 0 0/28% 100%,
+      conic-gradient(from 139deg at 3% 0%,#e8a690 30deg,#0000 36deg) 95% 49%/21% 39%,
+      linear-gradient(90deg, #e8a690 50%, var(--m) 0);
+    background-repeat: no-repeat;
+    border-radius: 50% 50% 0 0/100% 101% 0 0;
+    border: 2px solid var(--t);
+    border-bottom: 0;
+    overflow: hidden;
+}
+.b-neck:before {
+    content: "";
+    position: absolute;
+    right: 4%;
+    top: 47%;
+    width: 21%;
+    height: 17%;
+    background: #e8a690;
+    border: 1px solid var(--t);
+    border-radius: 50% 50% 0 0;
+}
+.b-neck:after {
+    content: "";
+    position: absolute;
+    left: 4%;
+    top: 48%;
+    width: 19%;
+    height: 17%;
+    background: #ba6d64;
+    border: 1px solid var(--t);
+    border-radius: 50% 50% 0 0;
+}
+
+.n1:before {
+    content: "";
+    position: absolute;
+    left: -18%;
+    height: 14%;
+    bottom: -5%;
+    width: 54%;
+    background: #e8a690;
+    z-index: 3;
+    border-radius: 100% 100% 0 0;
+    border: 1px solid var(--t);
+    border-bottom: 0;
+}
+
+.n1:after {
+    content: "";
+    position: absolute;
+    right: -16%;
+    height: 14%;
+    bottom: -6%;
+    width: 52%;
+    background: var(--m);
+    z-index: 3;
+    border-radius: 100% 100% 0 0;
+    border: 1px solid var(--t);
+    border-bottom: 0;
+}
+
+.cr:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 19%;
+    width: 7%;
+    height: 9.5%;
+    background: radial-gradient(44% 52%at 0 53%,var(--t) 97%,#193768);
+    -webkit-mask: radial-gradient(40% 48%at 0 53%,#0000 96%,#000);
+    border: 2px solid var(--t);
+    border-bottom: 0;
+    border-radius: 37% 52% 0 0;
+}
+
+.cr:after {
+    content: "";
+    position: absolute;
+    bottom: -7%;
+    right: 10%;
+    width: 14.5%;
+    height: 15%;
+    background: radial-gradient(37% 53% at 0 18%,var(--t) 96%,#fe6505);
+    -webkit-mask: radial-gradient(35% 52% at 0 18%,#0000 96%,#000);
+    border: 2px solid var(--t);
+    border-bottom: 0;
+    border-radius: 29% 100% 0 0;
+}
+
+.cl:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 21%;
+    width: 7%;
+    height: 9.5%;
+    background: radial-gradient(44% 52% at 100% 53%,var(--t) 97%,#061b39);
+    -webkit-mask: radial-gradient(40% 48% at 100% 53%,#0000 96%,#000);
+    border: 2px solid var(--t);
+    border-bottom: 0;
+    border-radius: 37% 52% 0 0;
+}
+
+.cl:after {
+    content: "";
+    position: absolute;
+    bottom: -7%;
+    left: 11.5%;
+    width: 14.5%;
+    height: 15%;
+    background: radial-gradient(37% 53% at 100% 18%,var(--t) 96%,#c04d00);
+    -webkit-mask: radial-gradient(35% 52% at 100% 18%,#0000 96%,#000);
+    border: 2px solid var(--t);
+    border-bottom: 0;
+    border-radius: 100% 29% 0 0;
+}
+
+.f {
+    position: absolute;
+    width: 8%;
+    height: 4%;
+    bottom: 1%;
+    left: 46%;
+    z-index: 2;
+    border-radius: 0 0 100% 100%;
+    border-bottom: 2px solid var(--t);
+    box-shadow: 0px 4px 0 #ba6d64;
+}
+.f:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 150%;
+    background: var(--m);
+    border-radius: 20% 20% 50% 50%;
+    bottom: 0;
+    transform: translateY(-75%);
+}
+body {
+  min-height:100vh;
+  display:grid;
+  margin:0;
+  background: #b1e6ff;
+}

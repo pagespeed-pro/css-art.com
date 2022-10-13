@@ -1,0 +1,304 @@
+.cartoon {
+  --skin: #fca;
+  --shade: #fb9;
+  --color1: #fc4;
+  --color2: #ffe;
+  width: 80vmin;
+  height: 80vmin;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+
+.cartoon div {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+}
+
+.arms {
+  width: 70%;
+  height: 60%;
+  border-radius: 100% 100% 80% 90% / 100%;
+  box-shadow: 
+    inset 0 0.5vmin 0 0.75vmin,
+    inset 0.95vmin 0, inset -0.75vmin 0,
+    inset 0 1.5vmin 0 1vmin var(--shade),
+    -2vmin -2vmin 0 white,
+    -5.5vmin -4.5vmin 0 -3.75vmin,
+    -3vmin -2vmin 0 1vmin white,
+    -9vmin -5vmin 0 -5vmin;
+  background-image:
+    radial-gradient(circle at 50% 70%, transparent 48%, var(--skin) 0),
+    radial-gradient(circle at 49.75% 73%, transparent 43%, #000 43.0% 44.4%, var(--shade) 44.5%),
+    radial-gradient(circle at 50% 75%, transparent 43%, #000 43.3% 44.4%, var(--shade) 44.5%);
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  clip-path: polygon(-100% 0%, 50% 0%, 50% 83%, -100% 83%);
+}
+
+.arms + .arms {
+  transform:  rotate(180deg) translate(40%, 65%);
+  box-shadow: 
+    inset 0 0.5vmin 0 0.75vmin,
+    inset 0.95vmin 0, inset -0.75vmin 0,
+    inset 0 1.5vmin 0 1vmin var(--shade);
+}
+
+.body {
+  width: 45%;
+  height: 40%;
+  background: var(--skin);
+  border-radius: 100% / 30% 40% 140% 140%;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 
+    inset 0 -0.75vmin 0 0.5vmin,
+    inset -2vmin -3vmin var(--shade),
+    0 -2vmin var(--skin);
+  clip-path: polygon(0% 20%, 10% -20%, 90% -20%, 100% 20%, 100% 93%, 0% 93%);
+  background-image: 
+    radial-gradient(circle at 50% 81%, var(--shade) 1.25%, black 0 2.5%, #0000 0),
+    radial-gradient(circle at 20% 36%, var(--shade) 2%, #0000 0),
+    radial-gradient(circle at 80% 35%, var(--shade) 2.5%, #0000 0);
+}
+
+.body::before,
+.body::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 44%;
+  height: 40%;
+  top: 10%;
+  left: 5%;
+  border-radius: 100% / 60%;
+  box-shadow: 
+    inset 0 -1.25vmin 0 -0.75vmin,
+    inset 0 -1.5vmin var(--shade);
+  transform: rotate(6deg);
+}
+
+.body::after {
+  border-radius: 100% / 0 60% 66% 66%;
+  transform: rotate(-8deg);
+  left: 52%;
+  box-shadow: 
+    inset 0 -1.25vmin 0 -0.75vmin,
+    inset -1vmin -1.5vmin var(--shade);
+}
+
+.hand {
+  width: 8%;
+  height: 6%;
+  border: 0.6vmin solid;
+  border-right-width: 0.75vmin;
+  border-radius: 0 100% 100%;
+  top: 69.5%;
+  left: 22.5%;
+  transform-origin: top left;
+  transform: rotate(-10deg);
+  background: var(--skin);
+  background-image: linear-gradient(150deg, var(--color1) 15%, black 0 23%, #0000 0);
+  box-shadow: inset -1vmin 0 var(--shade);
+}
+
+.hand + .hand {
+  transform: scaleX(-1) rotate(-80deg);
+  left: auto;
+  top: -8.5%;
+  right: 8%;
+  box-shadow: inset 1vmin 0 #f002;
+}
+
+.legs {
+  width: 30%;
+  height: 40%;
+  border-radius: 100%;
+  box-shadow: 
+    inset 0 0.5vmin 0 0.5vmin,
+    inset -0.5vmin 5vmin 0 2vmin var(--color1),
+    inset -0.5vmin 5.25vmin 0 2.5vmin;
+  left: 50%;
+  transform: translate(-50%);
+  top: 64%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 0% 60%);
+}
+
+.belt {
+  width: 20%;
+  height: 2.5%;
+  border: 0.75vmin solid;
+  border-radius: 0.25vmin;
+  left: 50%;
+  transform: translate(-50%);
+  top: 66.6%;
+  background: #d00;
+}
+
+.belt::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 0.6vmin solid;
+  border-radius: 50%;
+  background: gold;
+  width: 30%;
+  height: 500%;
+  box-shadow: inset -0.75vmin -0.25vmin #0003;
+}
+
+.head {
+  width: 23%;
+  height: 25%;
+  border: 0.75vmin solid;
+  border-bottom-width: 1vmin;
+  border-radius: 100% / 110% 120% 50% 55%;
+  background: var(--color1);
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-image:
+    radial-gradient(ellipse 90% 60% at 50% 58%, var(--skin) 8%, black 0 12%, #0000 0),
+    radial-gradient(circle at 30% 47%, black 10%, #0000 0),
+    radial-gradient(circle at 70% 47%, black 11%, #0000 0),
+    radial-gradient(circle at 50% -2%, var(--color2) 10%, #0000 0),
+    
+    radial-gradient(circle at 50% 17%, var(--color2) 10%, #0000 0),
+    radial-gradient(circle at 50% -1%, black 0 13%, #0000 0),
+    radial-gradient(circle at 50% 18%, black 0 13%, #0000 0),
+    radial-gradient(ellipse 150% 300% at 50% 70%, transparent 28%, black 0 30%, var(--color2) 0);
+  overflow: hidden;
+  box-shadow: 
+    0 1vmin var(--shade),
+    -2.5vmin -2.5vmin 0 -2vmin white,
+     -4.25vmin -4.75vmin 0 -4vmin,
+    -3vmin -3.5vmin 0 -1.5vmin white,
+     -4.5vmin -5.5vmin 0 -3.5vmin;
+}
+
+.head::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 80%;
+  height: 60%;
+  border: 0.6vmin solid;
+  border-top-width: 0.75vmin;
+  border-radius: 50%;
+  top: 66%;
+  left: 50%;
+  transform: translate(-50%);
+  background: var(--skin);
+}
+
+.head::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 34%;
+  height: 10%;
+  border: 0.75vmin solid;
+  border-bottom: 0.75vmin solid ;
+  border-radius: 50% 80% 60% 70% / 100% 90% 110% 85%;
+  top: 74%;
+  left: 50%;
+  transform: translate(-50%) rotate(3deg);
+  background: #fff;
+  background-image:
+    linear-gradient(to left, #0000 30%, #fff 0 60%, #0000 0),
+    linear-gradient(#0000 40%, #000 0 54%, #0000 0)
+}
+
+.boot {
+  width: 8%;
+  height: 5%;
+  border: 0.5vmin solid;
+  border-right-width: 0.75vmin;
+  border-radius: 120% 20% 10% 15%;
+  top: 87%;
+  left: 29.5%;
+  background: var(--color2);
+  border-top-width: 0.75vmin;
+  border-bottom-width: 0.6vmin;
+  background-image: linear-gradient(-170deg, black 18%, #0000 0)
+}
+
+.boot + .boot {
+  transform: scaleX(-1) rotate(-25deg);
+  top: 92%;
+  left: 60%;
+  background-image: linear-gradient(-150deg, black 15%, #0000 0);
+}
+
+.shadow {
+  width: 120%;
+  height: 8%;
+  border-radius: 100%;
+  top: 75%;
+  left: 90%;
+  transform: translate(-50%) rotate(-45deg);
+  filter: blur(1vmin);
+  background-image: radial-gradient(at 30% 50%, #0004, #0001)
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+

@@ -1,0 +1,40 @@
+{
+    "name": "css-drawing-the-king-and-the-fly",
+    "version": "1.0.0",
+    "title": "CSS  drawing: The king and the fly",
+    "description": "A CSS animation of a king and an annoying fly.\n\nYou can turn on/off the animations (off by default). If you turn them on, the sound of the fan will make for the buzzing of the fly :P :$",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "css-drawing-the-king-and-the-fly.html",
+    "css": [
+        "css-drawing-the-king-and-the-fly.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "html",
+        "animation",
+        "offset-path"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/dyojLvx",
+    "codepen": "https://codepen.io/alvaromontoro/pen/dyojLvx"
+}

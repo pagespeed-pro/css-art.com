@@ -1,0 +1,450 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto+Condensed:300';
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fcf7c5;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.pika {
+  position: relative;
+  animation-name: floaty;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.pika-head {
+  position: relative;
+  z-index: 10;
+  height: 9rem;
+  width: 10rem;
+}
+.pika-head-face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #f9ed7c;
+  overflow: hidden;
+  will-change: transform, opacity;
+  border-top-left-radius: 50% 4.5rem;
+  border-top-right-radius: 50% 4.5rem;
+  border-bottom-left-radius: 50% 3rem;
+  border-bottom-right-radius: 50% 3rem;
+}
+.pika-head-face::before, .pika-head-face::after {
+  content: "";
+  position: absolute;
+  bottom: 1.125rem;
+  height: 1.5rem;
+  width: 1.75rem;
+  border-radius: 50%;
+  background-color: #e65a41;
+}
+.pika-head-face::before {
+  left: -0.25rem;
+}
+.pika-head-face::after {
+  right: -0.25rem;
+}
+.pika-eye {
+  position: absolute;
+  background-color: #444;
+  bottom: 2.5rem;
+  height: 1.25rem;
+  width: 1.25rem;
+  overflow: hidden;
+  transform-origin: center 70%;
+  animation-name: blinky;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 45% 50%;
+  border-bottom-right-radius: 45% 50%;
+}
+.pika-eye::before {
+  content: "";
+  position: absolute;
+  top: 15%;
+  left: 15%;
+  height: 30%;
+  width: 30%;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.pika-eye-left {
+  left: 1.5rem;
+}
+.pika-eye-right {
+  right: 1.5rem;
+}
+.pika-nose {
+  position: absolute;
+  bottom: 2.5rem;
+  left: calc(50% - 0.125rem);
+  height: 0.125rem;
+  width: 0.25rem;
+  border-radius: 50%;
+  background-color: #444;
+}
+.pika-ear {
+  position: absolute;
+  top: -1rem;
+  height: 3.75rem;
+  width: 2rem;
+  background-color: #f9ed7c;
+  transform-origin: bottom center;
+  overflow: hidden;
+  border-top-left-radius: 50% 3rem;
+  border-top-right-radius: 50% 3rem;
+}
+.pika-ear::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 110%;
+  height: 45%;
+  background-color: #444;
+}
+.pika-ear-left {
+  left: 0;
+  transform: rotate(-40deg);
+  animation-name: rotateEarLeft;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes rotateEarLeft {
+  0%, 100% {
+    transform: rotate(-40deg);
+  }
+  50% {
+    transform: rotate(-35deg);
+  }
+}
+.pika-ear-left::before {
+  transform-origin: bottom left;
+  transform: rotate(-15deg);
+}
+.pika-ear-right {
+  right: 0;
+  transform: rotate(40deg);
+  animation-name: rotateEarRight;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes rotateEarRight {
+  0%, 100% {
+    transform: rotate(40deg);
+  }
+  50% {
+    transform: rotate(35deg);
+  }
+}
+.pika-ear-right::before {
+  transform-origin: bottom right;
+  transform: rotate(15deg);
+}
+.pika-body {
+  position: absolute;
+  z-index: 9;
+  right: -2rem;
+  top: 35%;
+  height: 8rem;
+  width: 9rem;
+}
+.pika-body .string {
+  position: absolute;
+  z-index: 6 !important;
+  bottom: 30%;
+  z-index: 9;
+  height: 1rem;
+  width: 9rem;
+  border-right: solid 1px #fff;
+  border-left: solid 1px #fff;
+  border-bottom: solid 1px #fff;
+  transform: rotate(-15deg);
+  border-bottom-left-radius: 50% 1rem;
+  border-bottom-right-radius: 50% 1rem;
+}
+.pika-body .string:nth-child(2) {
+  transform: rotate(-20deg);
+}
+.pika-body-body {
+  position: absolute;
+  z-index: 5;
+  height: 100%;
+  width: 100%;
+  background-color: #f9ed7c;
+  transform: skew(15deg);
+  overflow: hidden;
+  border-top-left-radius: 50% 5.5rem;
+  border-top-right-radius: 50% 5.5rem;
+  border-bottom-left-radius: 40% 2.5rem;
+  border-bottom-right-radius: 40% 2.5rem;
+}
+.pika-body-body::before, .pika-body-body::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 0.75rem;
+  background-color: #9c5200;
+  transform: skew(-15deg);
+  transform-origin: right center;
+  transform: rotate(-30deg);
+  border-top-left-radius: 2rem 50%;
+  border-bottom-left-radius: 2rem 50%;
+}
+.pika-body-body::before {
+  right: -0.5rem;
+  top: 2rem;
+}
+.pika-body-body::after {
+  right: -1rem;
+  top: 3rem;
+}
+.pika-arm {
+  position: absolute;
+  z-index: 9;
+  height: 1.5rem;
+  width: 1.25rem;
+  background-color: #f7e64b;
+  transform-origin: top center;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-left-radius: 3rem 5.5rem;
+  border-bottom-right-radius: 3rem 5.5rem;
+}
+.pika-arm-left {
+  top: 60%;
+  left: -0.5rem;
+  animation-name: rotateLeft;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes rotateLeft {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+}
+.pika-arm-right {
+  top: 60%;
+  left: 4.75rem;
+  animation-name: rotateRight;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes rotateRight {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-25deg);
+  }
+}
+.pika-leg {
+  position: absolute;
+  z-index: 1;
+  height: 1.75rem;
+  width: 1.25rem;
+  background-color: #f7e64b;
+  transform-origin: top center;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  border-bottom-left-radius: 3rem 5.5rem;
+  border-bottom-right-radius: 3rem 5.5rem;
+}
+.pika-leg-left {
+  top: calc(100% - 0.75rem);
+  left: 3rem;
+  animation-name: rotateLeft;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes rotateLeft {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(25deg);
+  }
+}
+.pika-leg-right {
+  top: calc(100% - 0.75rem);
+  left: 7.5rem;
+  animation-name: rotateRight;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes rotateRight {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-25deg);
+  }
+}
+.pika-tail {
+  position: absolute;
+  left: calc(100% - 0.75rem);
+  top: 40%;
+  height: 1.5rem;
+  width: 1rem;
+  background-color: #9c5200;
+  transform-origin: bottom center;
+  transform: rotate(45deg);
+  animation-name: rotateTail;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+@keyframes rotateTail {
+  0%, 100% {
+    transform: rotate(55deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+}
+.pika-tail::before, .pika-tail::after {
+  content: "";
+  position: absolute;
+  transform-origin: bottom center;
+  background-color: #f9ed7c;
+}
+.pika-tail::before {
+  top: -2.5rem;
+  left: 0.25rem;
+  height: 2rem;
+  width: 1.5rem;
+  transform: rotate(-90deg);
+  border-bottom-right-radius: 0.5rem;
+}
+.pika-tail::after {
+  top: -2.75rem;
+  left: -2.5rem;
+  height: 3rem;
+  width: 2rem;
+  border-bottom-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+}
+
+.balloons {
+  position: absolute;
+  left: 0;
+  top: -10rem;
+}
+
+.balloon {
+  position: absolute;
+  height: 6.25rem;
+  width: 6rem;
+  border-radius: 50%;
+  background-color: currentColor;
+}
+.balloon::before, .balloon::after {
+  content: "";
+  position: absolute;
+}
+.balloon::before {
+  top: 20%;
+  left: 10%;
+  width: 15%;
+  height: 20%;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.balloon::after {
+  bottom: -0.5rem;
+  left: calc(50% - 0.75rem);
+  height: 0.75rem;
+  width: 1.5rem;
+  background-color: currentColor;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.balloon:nth-child(1) {
+  z-index: 4;
+}
+.balloon:nth-child(1) .string {
+  transform: rotate(-10deg);
+}
+.balloon:nth-child(2) {
+  z-index: 5;
+  top: 2rem;
+  left: 4rem;
+}
+.balloon:nth-child(2) .string {
+  transform: rotate(10deg);
+}
+.balloon:nth-child(3) {
+  top: 3rem;
+  left: -2rem;
+}
+.balloon:nth-child(3) .string {
+  transform: rotate(-25deg);
+}
+.balloon:nth-child(4) {
+  top: 0.5rem;
+  left: 7rem;
+}
+.balloon:nth-child(4) .string {
+  transform: rotate(20deg);
+}
+.balloon .string {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  height: 6rem;
+  border-left: solid 1px #fff;
+  transform-origin: top center;
+}
+.balloon.pink {
+  color: #ffa5db;
+}
+.balloon.cyan {
+  color: #6bf0ff;
+}
+.balloon.blue {
+  color: #388eff;
+}
+.balloon.red {
+  color: #e65a41;
+}
+
+@keyframes floaty {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1rem);
+  }
+}
+@keyframes blinky {
+  0%, 9%, 11%, 19%, 21%, 69%, 71%, 100% {
+    transform: scaleY(1);
+  }
+  10%, 20%, 70% {
+    transform: scaleY(0.1);
+  }
+}

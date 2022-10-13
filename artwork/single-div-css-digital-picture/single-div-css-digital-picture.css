@@ -1,0 +1,168 @@
+body {
+  min-height: 400px;
+  height: 100vh;
+  position: relative;
+  background-color: #f5f5f5;
+  font-size: 10px;
+  text-align: center;
+}
+@media (max-width: 400px) {
+  body {
+    font-size: 8px;
+  }
+}
+div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+div:before,
+div:after {
+  display: block;
+  content: '';
+  position: absolute;
+}
+#digital {
+  box-sizing: border-box;
+  width: 15em;
+  height: 27em;
+  margin-left: -3em;
+  margin-top: -13.5em;
+  background-color: #f5f5f5;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle, #d8bfd8 1em, rgba(153,50,204,0) 1.1em), linear-gradient(110deg, rgba(255,255,255,0) 61%, #f5f5f5 61.5%), linear-gradient(-110deg, rgba(255,255,255,0) 61%, #f5f5f5 61.5%), linear-gradient(110deg, rgba(255,255,255,0) 66%, #f5f5f5 66.5%), linear-gradient(-110deg, rgba(255,255,255,0) 66%, #f5f5f5 66.5%), radial-gradient(circle, #9932cc 50%, rgba(153,50,204,0) 50.5%), linear-gradient(#dda0dd, #dda0dd), radial-gradient(circle, #9932cc 0.5em, rgba(153,50,204,0) 0.6em), radial-gradient(circle, #9932cc 0.5em, rgba(153,50,204,0) 0.6em), radial-gradient(circle, #9932cc 0.5em, rgba(153,50,204,0) 0.6em), linear-gradient(#d8bfd8, #d8bfd8), linear-gradient(#d8bfd8, #d8bfd8), linear-gradient(#d8bfd8, #d8bfd8);
+  background-size: 3em 3em, 6em 10em, 6em 10em, 6em 8em, 6em 8em, 8em 8em, 15em 16em, 2em 2em, 2em 2em, 2em 2em, 7em 0.2em, 12em 0.2em, 12em 0.2em;
+  background-position: -15.3em 0.9em, -11.4em 9.3em, -5.4em 9.3em, -15.6em 11.3em, -10.4em 11.3em, -14em 7.5em, -15em 4em, -15em 4em, -15.3em 20.2em, -16.7em 20.2em, -18.1em 20.2em, -15.7em 22.5em, -15.7em 23.5em, -15.7em 24.5em;
+  border: 0.1em solid #9932cc;
+  border-radius: 1.6em;
+  box-shadow: 0 0 0 0.8em #d8bfd8, 0 -1em 0 0.8em #d8bfd8, 0 -1em 0 1em #9932cc, 0 0 0 1em #9932cc;
+  animation: instagram 4500ms infinite ease-out;
+}
+#digital:before {
+  width: 8em;
+  height: 8em;
+  left: -14em;
+  top: -4em;
+  background-color: #dda0dd;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(110deg, rgba(255,255,255,0) 60%, #f5f5f5 60.5%), linear-gradient(-110deg, rgba(255,255,255,0) 60%, #f5f5f5 60.5%), linear-gradient(110deg, rgba(255,255,255,0) 66%, #f5f5f5 66.5%), linear-gradient(-110deg, rgba(255,255,255,0) 66%, #f5f5f5 66.5%), radial-gradient(circle, #9932cc 50%, rgba(153,50,204,0) 50.5%);
+  background-size: 3em 5em, 3em 5em, 3em 4em, 3em 4em, 4em 4em;
+  background-position: 2.6em 2.5em, 5.5em 2.5em, -0.2em 3.5em, 2.8em 3.5em, 0.5em 1.5em;
+  border: 0.1em solid #9932cc;
+  box-shadow: 0 0 0 0.8em #f5f5f5, 0 1.8em 0 0.8em #f5f5f5, 0 0 0 1em #9932cc, 0 1.8em 0 1em #9932cc;
+  z-index: -1;
+  animation: polaroid 4500ms infinite ease;
+}
+#digital:after {
+  width: 2.5em;
+  height: 0.5em;
+  left: 50%;
+  top: -1.2em;
+  margin-left: -1.25em;
+  background-color: #9932cc;
+  box-shadow: -17.2em 0.3em 0 6em #f5f5f5, -17.2em 1.5em 0 5em #9932cc, -17.2em 3em 0 4.8em #d8bfd8, -17.2em 3em 0 5em #9932cc;
+}
+@-moz-keyframes polaroid {
+  10% {
+    transform: translate(0, 0);
+  }
+  29% {
+    opacity: 1;
+  }
+  30%, 45% {
+    transform: translate(0, 12em);
+  }
+  55%, 100% {
+    transform: translate(20em, 12em);
+  }
+}
+@-webkit-keyframes polaroid {
+  10% {
+    transform: translate(0, 0);
+  }
+  29% {
+    opacity: 1;
+  }
+  30%, 45% {
+    transform: translate(0, 12em);
+  }
+  55%, 100% {
+    transform: translate(20em, 12em);
+  }
+}
+@-o-keyframes polaroid {
+  10% {
+    transform: translate(0, 0);
+  }
+  29% {
+    opacity: 1;
+  }
+  30%, 45% {
+    transform: translate(0, 12em);
+  }
+  55%, 100% {
+    transform: translate(20em, 12em);
+  }
+}
+@keyframes polaroid {
+  10% {
+    transform: translate(0, 0);
+  }
+  29% {
+    opacity: 1;
+  }
+  30%, 45% {
+    transform: translate(0, 12em);
+  }
+  55%, 100% {
+    transform: translate(20em, 12em);
+  }
+}
+@-moz-keyframes instagram {
+  47% {
+    background-position: -15.3em 0.9em, -11.4em 9.3em, -5.4em 9.3em, -15.6em 11.3em, -10.4em 11.3em, -14em 7.5em, -15em 4em, -15.3em 20.2em, -16.7em 20.2em, -18.1em 20.2em, -15.7em 22.5em, -15.7em 23.5em, -15.7em 24.5em;
+  }
+  55%, 80% {
+    background-position: 0.3em 0.9em, 4.4em 9.3em, 10.4em 9.3em, -0.6em 11.3em, 5.4em 11.3em, 1em 7.5em, 0em 4em, 0.3em 20.2em, 1.7em 20.2em, 3.1em 20.2em, 0.7em 22.5em, 0.7em 23.5em, 0.7em 24.5em;
+  }
+  85%, 100% {
+    background-position: 0.3em -27.9em, 4.4em -18.3em, 10.4em -18.3em, -0.6em -16.3em, 5.4em -16.3em, 1em -20.5em, 0em -23em, 0.3em -7.2em, 1.7em -7.2em, 3.1em -7.2em, 0.7em -5.5em, 0.7em -4.5em, 0.7em -3.5em;
+    animation-timing-function: ease-in-out;
+  }
+}
+@-webkit-keyframes instagram {
+  47% {
+    background-position: -15.3em 0.9em, -11.4em 9.3em, -5.4em 9.3em, -15.6em 11.3em, -10.4em 11.3em, -14em 7.5em, -15em 4em, -15.3em 20.2em, -16.7em 20.2em, -18.1em 20.2em, -15.7em 22.5em, -15.7em 23.5em, -15.7em 24.5em;
+  }
+  55%, 80% {
+    background-position: 0.3em 0.9em, 4.4em 9.3em, 10.4em 9.3em, -0.6em 11.3em, 5.4em 11.3em, 1em 7.5em, 0em 4em, 0.3em 20.2em, 1.7em 20.2em, 3.1em 20.2em, 0.7em 22.5em, 0.7em 23.5em, 0.7em 24.5em;
+  }
+  85%, 100% {
+    background-position: 0.3em -27.9em, 4.4em -18.3em, 10.4em -18.3em, -0.6em -16.3em, 5.4em -16.3em, 1em -20.5em, 0em -23em, 0.3em -7.2em, 1.7em -7.2em, 3.1em -7.2em, 0.7em -5.5em, 0.7em -4.5em, 0.7em -3.5em;
+    animation-timing-function: ease-in-out;
+  }
+}
+@-o-keyframes instagram {
+  47% {
+    background-position: -15.3em 0.9em, -11.4em 9.3em, -5.4em 9.3em, -15.6em 11.3em, -10.4em 11.3em, -14em 7.5em, -15em 4em, -15.3em 20.2em, -16.7em 20.2em, -18.1em 20.2em, -15.7em 22.5em, -15.7em 23.5em, -15.7em 24.5em;
+  }
+  55%, 80% {
+    background-position: 0.3em 0.9em, 4.4em 9.3em, 10.4em 9.3em, -0.6em 11.3em, 5.4em 11.3em, 1em 7.5em, 0em 4em, 0.3em 20.2em, 1.7em 20.2em, 3.1em 20.2em, 0.7em 22.5em, 0.7em 23.5em, 0.7em 24.5em;
+  }
+  85%, 100% {
+    background-position: 0.3em -27.9em, 4.4em -18.3em, 10.4em -18.3em, -0.6em -16.3em, 5.4em -16.3em, 1em -20.5em, 0em -23em, 0.3em -7.2em, 1.7em -7.2em, 3.1em -7.2em, 0.7em -5.5em, 0.7em -4.5em, 0.7em -3.5em;
+    animation-timing-function: ease-in-out;
+  }
+}
+@keyframes instagram {
+  47% {
+    background-position: -15.3em 0.9em, -11.4em 9.3em, -5.4em 9.3em, -15.6em 11.3em, -10.4em 11.3em, -14em 7.5em, -15em 4em, -15.3em 20.2em, -16.7em 20.2em, -18.1em 20.2em, -15.7em 22.5em, -15.7em 23.5em, -15.7em 24.5em;
+  }
+  55%, 80% {
+    background-position: 0.3em 0.9em, 4.4em 9.3em, 10.4em 9.3em, -0.6em 11.3em, 5.4em 11.3em, 1em 7.5em, 0em 4em, 0.3em 20.2em, 1.7em 20.2em, 3.1em 20.2em, 0.7em 22.5em, 0.7em 23.5em, 0.7em 24.5em;
+  }
+  85%, 100% {
+    background-position: 0.3em -27.9em, 4.4em -18.3em, 10.4em -18.3em, -0.6em -16.3em, 5.4em -16.3em, 1em -20.5em, 0em -23em, 0.3em -7.2em, 1.7em -7.2em, 3.1em -7.2em, 0.7em -5.5em, 0.7em -4.5em, 0.7em -3.5em;
+    animation-timing-function: ease-in-out;
+  }
+}

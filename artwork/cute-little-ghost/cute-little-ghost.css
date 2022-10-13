@@ -1,0 +1,90 @@
+/* Presets */
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+div:before, div:after {
+  content: "";
+}
+
+/* Colors */
+/* background */
+body {
+  background-color: #5ccbff;
+}
+
+/* Cute Little Ghost */
+div.cute-little-ghost {
+  background-color: white;
+  height: 170px;
+  width: 150px;
+  border-radius: 75% 75% 0 0;
+}
+div.cute-little-ghost:after {
+  position: absolute;
+  top: 155px;
+  content: ".";
+  font-family: Comic Sans MS;
+  font-size: 180px;
+  text-shadow: 15px -250px 0 pink, 95px -250px 0 pink, 30px -280px 0 #010008, 80px -280px 0 #010008;
+  height: 30px;
+  width: 30px;
+  color: transparent;
+  background-color: white;
+  border-radius: 100%;
+  box-shadow: 30px 0 0 #5ccbff, 60px 0 0 white, 90px 0 0 #5ccbff, 120px 0 0 white;
+}
+div.cute-little-ghost:before {
+  width: 125px;
+  height: 20px;
+  position: absolute;
+  bottom: -70px;
+  left: 105px;
+  background-color: #10b3ff;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* Animation */
+div.cute-little-ghost {
+  animation: float 3s ease-out infinite;
+}
+div.cute-little-ghost:before {
+  animation: shrink 3s ease-out infinite, floatUp 3s ease-out infinite;
+}
+
+/* Float up and down */
+@keyframes float {
+  50% {
+    transform: translate(0, 20px);
+  }
+}
+/* Keep shadow from floating up */
+@keyframes floatUp {
+  50% {
+    transform: translate(-50%, -20px);
+  }
+}
+/* Expand / contract shadow */
+@keyframes shrink {
+  0% {
+    width: 100%;
+  }
+  50% {
+    width: 60%;
+  }
+  100% {
+    width: 100%;
+  }
+}

@@ -1,0 +1,38 @@
+{
+    "name": "pure-css-moustached-nanny",
+    "version": "1.0.0",
+    "title": "Pure CSS Moustached Nanny",
+    "description": "Based on Beresnev's https://dribbble.com/shots/3005865-Moustached-nanny",
+    "author": {
+        "name": "Nikhil Krishnan",
+        "avatar": "https://s.cdpn.io/profiles/user/308279/512.jpg?1514981257",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/nikhil8krishnan/"
+            },
+            {
+                "title": "LinkedIn",
+                "url": "https://www.linkedin.com/pub/nikhil-krishnan/72/277/498"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/Nikhil8Krishnan"
+            },
+            {
+                "title": "Facebook",
+                "url": "https://www.facebook.com/nikhil8krishnan"
+            }
+        ]
+    },
+    "html": "pure-css-moustached-nanny.html",
+    "css": [
+        "pure-css-moustached-nanny.css"
+    ],
+    "js": "// Based on Beresnev's https://dribbble.com/shots/3005865-Moustached-nanny",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [],
+    "original": "https://codepen.io/nikhil8krishnan/pen/gjKdzM",
+    "codepen": "https://codepen.io/nikhil8krishnan/pen/gjKdzM"
+}

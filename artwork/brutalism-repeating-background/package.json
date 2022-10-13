@@ -1,0 +1,41 @@
+{
+    "name": "brutalism-repeating-background",
+    "version": "1.0.0",
+    "title": "Brutalism repeating background",
+    "description": "Fork of [Brutalism by Crystal S](https://codepen.io/CrystalS/pen/VwjYxoO)\n\nRedone as a repeating background on the `<body>`\n\nhttps://dribbble.com/shots/6774839-Brutalism",
+    "author": {
+        "name": "Lynn Fisher",
+        "avatar": "https://s.cdpn.io/profiles/user/1025350/512.jpg?1",
+        "web": "https://lynnandtonic.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/lynnandtonic"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/lynnandtonic"
+            },
+            {
+                "title": "Medium.com",
+                "url": "https://medium.com/@lynnandtonic"
+            }
+        ]
+    },
+    "html": "brutalism-repeating-background.html",
+    "css": [
+        "brutalism-repeating-background.css"
+    ],
+    "js": "// @lynnandtonic\n// a.singlediv.com",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "illustration",
+        "singlediv",
+        "repeating",
+        "pattern"
+    ],
+    "original": "https://codepen.io/lynnandtonic/pen/mdEyGgb",
+    "codepen": "https://codepen.io/lynnandtonic/pen/mdEyGgb"
+}

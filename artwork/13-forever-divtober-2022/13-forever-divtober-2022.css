@@ -1,0 +1,86 @@
+/* colors */
+*, *:before, *:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  z-index: 1;
+  background: radial-gradient(58.32% 55.47% at 50% 47.16%, #80B577 0%, #558D65 100%);
+}
+
+div:before, div:after {
+  display: block;
+  content: "";
+  position: absolute;
+}
+
+div.forever:before {
+  width: 100vW;
+  z-index: -999;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(45deg, #80B577 5vh, #80B577 5vh, transparent 5vh) 37vh 30vh/20vh 20.1vh no-repeat, linear-gradient(135deg, #80B577 5vh, #80B577 5vh, transparent 5vh) 37Vh 50vh/20vh 20vh no-repeat, linear-gradient(-45deg, #80B577 5vh, #80B577 5vh, transparent 5vh) 53vh 30.1vh/20vh 20vh no-repeat, linear-gradient(-135deg, #80B577 5vh, #80B577 5vh, transparent 5vh) 53vh 50vh/20vh 20vh no-repeat, linear-gradient(45deg, #393939 10vh, #393939 10vh, transparent 10vh) 50.5vh 10vh/40vh 40vh no-repeat, linear-gradient(-45deg, #393939 10vh, #393939 10vh, transparent 10vh) 19.5vh 10vh/40vh 40vh no-repeat, linear-gradient(135deg, #393939 10vh, #393939 10vh, transparent 10vh) 50.5vh 50vh/40vh 40vh no-repeat, linear-gradient(-135deg, #393939 10vh, #393939 10vh, transparent 10vh) 19.5vh 50vh/40vh 40vh no-repeat, radial-gradient(circle, #80B577 10vh, transparent 10vh) 0vh 20vh/60vh 60vh no-repeat, radial-gradient(circle, #393939 25vh, transparent 25vh) 0vh 20vh/60vh 60vh no-repeat, radial-gradient(circle, #80B577 10vh, transparent 10vh) 50vh 20vh/60vh 60vh no-repeat, radial-gradient(circle, #393939 25vh, transparent 25vh) 50vh 20vh/60vh 60vh no-repeat;
+}
+
+div.forever {
+  width: 100vh;
+  z-index: -999;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+}
+
+div.forever:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 40vh;
+  left: 10vh;
+  width: 12vh;
+  height: 20vh;
+  border-radius: 20px;
+  transform: rotateZ(0deg);
+  animation: drive-around 10s linear infinite;
+  background: radial-gradient(ellipse, #237C8C 1vh, #2D4454 2.5vh, transparent 2.5vh) 3.25vh 3vh/4.5vh 2.5vh no-repeat, radial-gradient(ellipse, #237C8C 0.5vh, #2D4454 2.5vh, transparent 2.5vh) 3.25vh 7.5vh/4.5vh 2.75vh no-repeat, radial-gradient(ellipse, #237C8C 0.25vh, #2D4454 0.5vh, transparent 0.5vh) 3vh 5.5vh/0.5vh 1.75vh no-repeat, radial-gradient(ellipse, #237C8C 0.25vh, #2D4454 0.5vh, transparent 0.5vh) 7.55vh 5.5vh/0.5vh 1.75vh no-repeat, linear-gradient(-45deg, #a6a6a6 0.75vh, transparent 0.5vh) 3.25vh 0.25vh/0.5vh 1.75vh no-repeat, linear-gradient(45deg, #a6a6a6 0.75vh, transparent 0.5vh) 7.25vh 0.25vh/0.5vh 1.75vh no-repeat, radial-gradient(ellipse, #06171a 0.25vh, transparent 0.5vh) 2vh 2.25vh/0.5vh 2vh no-repeat, radial-gradient(ellipse, #06171a 0.25vh, transparent 0.5vh) 8.5vh 2.25vh/0.5vh 2vh no-repeat, radial-gradient(ellipse, #06171a 0.25vh, transparent 0.5vh) 2vh 9vh/0.5vh 2vh no-repeat, radial-gradient(ellipse, #06171a 0.25vh, transparent 0.5vh) 8.5vh 9vh/0.5vh 2vh no-repeat, linear-gradient(180deg, #D9D9D9 15vh, transparent 15vh) 4.75vh 0.75vh/0.5vh 11vh no-repeat, linear-gradient(180deg, #D9D9D9 15vh, transparent 15vh) 5.75vh 0.75vh/0.5vh 11vh no-repeat, radial-gradient(ellipse, #FB4C55 2.5vh, transparent 2.5vh) 3.25vh 0.5vh/4.5vh 4.5vh no-repeat, radial-gradient(ellipse, #FB4C55 2.5vh, transparent 2.5vh) 4vh 3vh/3vh 6vh no-repeat, radial-gradient(ellipse, #FB4C55 2.5vh, transparent 2.5vh) 3.25vh 7.5vh/4.5vh 4.5vh no-repeat, radial-gradient(ellipse, #DF0345 3.5vh, transparent 3.5vh) 2.5vh 0vh/6vh 6vh no-repeat, radial-gradient(ellipse, #DF0345 3.5vh, transparent 3.5vh) 2.75vh 5vh/5.5vh 3vh no-repeat, radial-gradient(ellipse, #DF0345 3.5vh, transparent 3.5vh) 2.5vh 7vh/6vh 6vh no-repeat;
+}
+
+/* y */
+@keyframes drive-around {
+  0% {
+    transform: translateX(-2vh) translateY(0vh) rotateZ(30deg);
+  }
+  8% {
+    transform: translateX(8vh) translateY(-16vh) rotateZ(90deg);
+  }
+  16% {
+    transform: translateX(27.2vh) translateY(-16vh) rotateZ(145deg);
+  }
+  33% {
+    transform: translateX(52vh) translateY(16vh) rotateZ(90deg);
+  }
+  41% {
+    transform: translateX(72vh) translateY(16vh) rotateZ(60deg);
+  }
+  50% {
+    transform: translateX(81vh) translateY(0vh) rotateZ(0deg);
+  }
+  58% {
+    transform: translateX(72vh) translateY(-16vh) rotateZ(-60deg);
+  }
+  66% {
+    transform: translateX(52vh) translateY(-16vh) rotateZ(-145deg);
+  }
+  82% {
+    transform: translateX(27.2vh) translateY(16vh) rotateZ(-90deg);
+  }
+  92% {
+    transform: translateX(8vh) translateY(16vh) rotateZ(-30deg);
+  }
+  100% {
+    transform: translateX(-2vh) translateY(0vh);
+  }
+}

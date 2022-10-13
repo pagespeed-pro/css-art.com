@@ -1,0 +1,688 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Great+Vibes');
+
+article {
+  --skin: #fca;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1vmin;
+  width: 98vmin;
+}
+
+section {
+  position: relative;
+  border: 0.5vmin solid;
+  border-radius: 0.5vmin;
+  height: 32vmin;
+  box-sizing: border-box;
+  background:
+    linear-gradient(#c9c6, #c9c0 80%);
+  overflow: hidden;
+}
+
+section.two {
+  grid-column-end: span 2;
+}
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.bubble,
+.murmur {
+  margin: 0.5vmin;
+  font-size: 1.75vmin;
+  font-family: 'Comic Neue', Arial, sans-serif;
+  text-align: center;
+}
+
+.invitation *,
+.bubble *,
+.murmur * {
+  position: relative;
+}
+
+.bubble::before {
+  content: "";
+  top: 100%;
+  left: 60%;
+  width: 15%;
+  height: 100%;
+  border-radius: 0 0 100% 0;
+  border-right: 0.4vmin solid;
+}
+
+.bubble.bats::before {
+  transform: scaleX(-1);
+}
+
+.hand-invitation {
+  width: 3vmin;
+  height: 5vmin;
+  background: #f4f6f8;
+  bottom: 5%;
+  left: 28%;
+  transform: rotate(20deg);
+  box-shadow: inset 0 0 1vmin gold;
+}
+
+.hand-invitation::before {
+  content: "";
+  width: 70%;
+  aspect-ratio: 1;
+  background: var(--skin);
+  border-radius: 50%;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hand-invitation::after {
+  content: "";
+  width: 50%;
+  height: 80%;
+  background: var(--skin);
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+}
+
+.newspaper {
+  bottom: -34%;
+  width: 24vmin;
+  height: 16vmin;
+  right: -4%;
+}
+
+.newspaper::before,
+.newspaper::after {
+  --pic: linear-gradient(#0000 0 0);
+  --bg: #f8f8e8;
+  --bg-dark: #e8e8d8;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: 
+    var(--pic),
+    linear-gradient(90deg, #0000 32%, var(--bg) 0 34%, #0000 0 65%, var(--bg) 0 67%, #0000 0),
+    repeating-linear-gradient(#0000 0 2%, var(--bg-dark) 0 4%) 50% 50% / 90% 90% no-repeat,
+    var(--bg);
+    ;
+  transform-origin: 100% 0;
+  transform: skewY(10deg);
+  box-shadow: inset 0 0 4vmin #0002;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%, 3.5% 60%);
+}
+
+.newspaper::before {
+  --bg: #eed;
+  --bg-dark: #ddc;
+  --pic: 
+    linear-gradient(var(--bg-dark) 0 0) 88% 8.5% / 62% 20% no-repeat,
+    linear-gradient(var(--bg-dark) 0 0) 7% 58.5% / 27% 20% no-repeat;
+  left: 50%;
+  transform-origin: 0% 0;
+  transform: skewY(-10deg);
+  clip-path: polygon(0 0, 100% 0, 98% 50%, 100% 100%, 0% 100%);
+}
+
+.robin {
+  --skin-dark: #da8;
+  --mouth: 
+    linear-gradient(var(--skin) 78%, #0000 0),
+    radial-gradient(at 50% 70%, #fff 18%, #0000 18.5%);
+  --ears:
+    radial-gradient(circle at 6% 35%, var(--skin-dark) 5%, #0000 5.25%),
+    radial-gradient(circle at 94% 35%, var(--skin-dark) 5%, #0000 5.25%)
+    ;
+  --eye1: 8%;
+  --eye2: 8%;
+  --eyelid: linear-gradient(#0000 0 0);
+  --skin-extra: linear-gradient(#0000 0 0);
+  --extra: linear-gradient(#0000 0 0);
+  --dir: 50%;
+  width: 19vmin;
+  height: 20vmin;
+  bottom: 0;
+  left: 5%;
+  background:
+    /* ears */
+    var(--ears),
+    /* body */
+    conic-gradient(at 50% 100%, var(--skin-dark) 40deg, #0000 42deg 318deg, var(--skin-dark) 320deg) var(--dir) 55% / 80% 20% no-repeat,
+    radial-gradient(#ff5 21%, #0000 21.5%),
+    
+    linear-gradient(#ff5 0 0) 56.75% 77% / 1.5% 7% no-repeat,
+    radial-gradient(farthest-side at 0 50%, #0000 70%, #ff5 72% 98%, #0000 99.9%) 59.75% 74.75% / 4% 4.5% no-repeat,
+    linear-gradient(45deg, #0000 45%, #ff5 47% 68%, #0000 70%) 60% 78% / 3% 3% no-repeat,
+    
+    linear-gradient(90deg, #0000 47%, #ff5 0 53%, #0000 0) var(--dir) 75% / 80% 2% no-repeat,
+    linear-gradient(90deg, #0000 47%, #ff5 0 53%, #0000 0) var(--dir) 85% / 80% 2% no-repeat,
+    linear-gradient(90deg, #0000 47%, #ff5 0 53%, #0000 0) var(--dir) 95% / 80% 2% no-repeat,
+    radial-gradient(circle at 58% 75%, #000 4%, #0000 4.5%),
+    conic-gradient(at 50% -20%, #0000 170deg, red 170.33deg 189.66deg, #0000 190deg) 50% 100% / 80% 80% no-repeat,
+    /* sleeves + arms */
+    conic-gradient(at 50% 5%, #0000 155deg, green 155.5deg 204.75deg, #0000 205deg) 50% 60% / 80% 50% no-repeat,
+    radial-gradient(50% 70% at 50.125% 0, green 96%, #0000 99%) 50% 84% / 47% 5% no-repeat,
+    conic-gradient(at 55% -250%, #0000 170deg, var(--skin) 170.25deg 193.75deg, #0000 194deg) 50% 100% / 70% 30% no-repeat
+    ;
+}
+
+.robin::before {
+  content: "";
+  width: 16vmin;
+  height: 11vmin;
+  background: #00f3;
+  border-radius: 50% / 20%;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  background:
+    var(--extra),
+    /* eyes + mask */
+    var(--eyelid),
+    radial-gradient(circle at 35% 47%, #fff var(--eye1), #0000 calc(var(--eye1) + 0.5%)),
+    radial-gradient(circle at 65% 47%, #fff var(--eye2), #0000 calc(var(--eye2) + 0.5%)),
+    radial-gradient(75% 70% at 30% 45%, #000 30%, #0000 31%),
+    radial-gradient(75% 70% at 70% 45%, #000 30%, #0000 31%),
+    /* nose */
+    conic-gradient(at 50% 100%, var(--skin-dark) 34deg, #0000 36deg 324deg, var(--skin-dark) 326deg) 50% 65% / 20% 20% no-repeat,
+    /* mouth */
+    var(--mouth),
+    /**/
+    var(--skin-extra),
+    var(--skin);
+}
+
+.robin::after {
+  content: "";
+  width: 80%;
+  height: 20%;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  background: 
+    conic-gradient(at 50% 20%, #0000 100deg, #000 103deg 140deg, #0000 143deg),
+    radial-gradient(100% 100% at 60% 100%, #000 45%, #0000 47%)
+    ;
+  border-radius: 100%;
+  box-shadow: inset -5vmin -0.5vmin
+}
+
+.batman {
+  --gray: #333;
+  --gray-dark: #222;
+  --ears:
+    radial-gradient(150% 150% at 10% 36%, var(--gray-dark) 5%, #0000 5.25%),
+    radial-gradient(150% 150% at 90% 36%, var(--gray-dark) 5%, #0000 5.25%)
+    ;
+  --eye1: 8%;
+  --eye2: 8%;
+  --eyelids: linear-gradient(#0000 0 0);
+  --extra: linear-gradient(#0000 0 0);
+  --mouth: radial-gradient(circle at 49% 87%, #fff 2%, #0000 2.5%);
+  --arms: 50%;
+  width: 19vmin;
+  height: 22vmin;
+  background:
+    /* ears */
+    var(--ears),
+    /* collar */
+    radial-gradient(var(--gray-dark) 20%, #0000 21%),
+    /* logo */
+    linear-gradient(to top right, var(--gray) 50%, #0000 0) 50.5% 74% / 4% 4% no-repeat,
+    linear-gradient(to top left, var(--gray) 50%, #0000 0) 49.5% 74% / 4% 4% no-repeat,
+    conic-gradient(from 340deg, var(--gray) 40deg, #0000 41deg) 50% 80% / 10% 7% no-repeat,
+    conic-gradient(from 340deg, var(--gray) 40deg, #0000 41deg) 47.5% 79% / 10% 5% no-repeat,
+    conic-gradient(from 340deg, var(--gray) 40deg, #0000 41deg) 52.5% 79% / 10% 5% no-repeat,
+    radial-gradient(14% 5% at 50% 75%, #ff5 36% 49%, #0000 50%) 50% 69% / 60% 60% no-repeat,
+    radial-gradient(14% 5% at 50% 75%, #ff5 36% 49%, #0000 50%) 50% 81.1% / 60% 60% no-repeat,
+    radial-gradient(20% 10% at 50% 75%, var(--gray) 35%, #ff5 36% 49%, #0000 50%),
+    /* body */
+    linear-gradient(#dd2 0 0) 50% 100% / 8% 6% no-repeat,
+    linear-gradient(#dd2 0 0) 37% 100% / 3% 6% no-repeat,
+    linear-gradient(#dd2 0 0) 63% 100% / 3% 6% no-repeat,
+    linear-gradient(#ff5 0 0) 50% 100% / 40% 5% no-repeat,
+    conic-gradient(at 50% -20%, #0000 170deg, var(--gray) 170.33deg 189.66deg, #0000 190deg) 50% 100% / 80% 80% no-repeat,
+    /* arms */
+    radial-gradient(54% 115% at var(--arms) 118%, var(--gray-dark) 55%, #0000 55.2%);
+  bottom: 0;
+  right: 5%;
+  transform-origin: 50% 100%;
+}
+
+.batman::before {
+  content: "";
+  width: 17vmin;
+  height: 12vmin;
+  background: 
+    var(--extra),
+    /* eyes */
+    var(--eyelids),
+    radial-gradient(circle at 35% 53%, #fff var(--eye1), #0000 calc(var(--eye1) + 0.6%)),
+    radial-gradient(circle at 65% 53%, #fff var(--eye2), #0000 calc(var(--eye2) + 0.6%)),
+    /* mask */
+    linear-gradient(100deg, var(--gray) 30%, #0000 30.25%),
+    linear-gradient(-100deg, var(--gray) 30%, #0000 30.25%),
+    linear-gradient(-181deg, var(--gray) 69%, #0000 69.25%),
+    conic-gradient(from -50deg at 50% 76%, #0000, var(--gray) 1deg 99deg, #0000 100deg),
+    /* mouth */
+    var(--mouth),
+    var(--skin);
+  border-radius: 50% / 20%;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  clip-path: polygon(10% 0, 90% 0, 100% 80%, 100% 100%, 0 100%, 0 80%)
+}
+
+.batman::after {
+  content: "";
+  width: 17vmin;
+  height: 25%;
+  left: 50%;
+  top: -8%;
+  transform: translateX(-50%);
+  background:
+/*     linear-gradient(-120deg, #0000 87%, var(--gray) 88%),
+    linear-gradient(120deg, #0000 87%, var(--gray) 88%), */
+    conic-gradient(from 160deg at 11% 0, var(--gray) 26deg, #0000 27deg) no-repeat,
+    conic-gradient(from 174deg at 89% 0, #0000, var(--gray) 1deg 26deg, #0000 27deg) no-repeat
+    ;
+}
+
+/* section 1 */
+section:nth-child(1) .bubble {
+  right: 1vmin;
+  top: 1vmin;
+  width: 25vmin;
+}
+
+/* section 2 */
+.invitation {
+  width: 100%;
+  height: 130%;
+  top: 10%;
+  left: 10%;
+  background: #f4f6f8;
+  transform: rotate(-10deg);
+  box-shadow: inset 0 0 3vmin gold;
+  text-align: center;
+  padding: 2vmin;
+  font-size: 2.5vmin;
+  font-family: 'Great Vibes', Times, 'Times New Roman', serif;
+}
+
+.invitation::before {
+  content: "";
+  width: 20%;
+  height: 10%;
+  background: var(--skin);
+  border-radius: 50%;
+  left: 0;
+  top: 64%;
+  transform: translate(-50%, -50%);
+}
+
+.invitation p {
+  line-height: 1;
+}
+
+.invitation p:nth-child(2) {
+  margin: 0.75vmin;
+  padding: 0.75vmin;
+  position: relative;
+}
+
+.invitation p:nth-child(2)::before {
+  content: "";
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  border-bottom: 1px solid gold;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.invitation p span {
+  display: block;
+  font-size: 1.75em;
+}
+
+
+/* section 3 */
+section:nth-child(3) .robin {
+  --mouth: linear-gradient(#0000 0 0);
+  --ears:
+    radial-gradient(circle at 6.5% 39%, var(--skin-dark) 5%, #0000 0),
+    radial-gradient(circle at 93.5% 31%, var(--skin-dark) 5%, #0000 0)
+    ;
+  --eye2: 9%;
+  --eye1: 12%;
+  --dir: 45%;
+  left: 35%;
+}
+
+section:nth-child(3) .robin::before {
+  transform: translate(-50%, 0) rotate(-5deg);
+}
+
+section:nth-child(3) .robin::after {
+  transform: translate(-50%, -50%) rotate(-4deg) scaleX(-1);
+}
+
+section:nth-child(3) .murmur {
+  top: 35%;
+  left: 20%;
+  font-weight: bold;
+}
+
+section:nth-child(3) .hand-invitation {
+  transform: rotate(-30deg);
+  left: 36%;
+  bottom: 6%;
+}
+
+/* section 4 */
+section:nth-child(4) .robin {
+  --eyelid: 
+    radial-gradient(farthest-side at 30% 30%, #000 70%, #0000 75%) 70% 40% / 20% 10% no-repeat,
+    linear-gradient(to top right, #0000 50%, #000 55%) 20% 40% / 35% 11% no-repeat;
+  --mouth:
+    radial-gradient(at 43% 82%, white 5%, #0000 5.5%);
+}
+
+section:nth-child(4) .batman {
+  --eyelids: 
+    linear-gradient(var(--gray) 52%, #0000 47.5%) 0 0 / 50% 100% no-repeat,
+    linear-gradient(175deg, var(--gray) 50.5%, #0000 51%) 100% 0 / 50% 100% no-repeat;
+  transform: scale(0.7);
+  right: 2%
+}
+
+section:nth-child(4) .newspaper {
+  transform: scale(0.7);
+  right: -2%;
+  bottom: -19%;
+}
+
+section:nth-child(4) .bubble:nth-child(4) {
+  width: 38%;
+  left: 12%;
+  top: 5%;
+}
+
+section:nth-child(4) .bubble:nth-child(5) {
+  width: 40%;
+  left: 37%;
+  top: 33%;
+}
+
+section:nth-child(4) .bubble:nth-child(5)::before {
+  transform: rotate(-100deg);
+  left: 70%;
+  top: 0%;
+  height: 240%;
+}
+
+section:nth-child(4) .bubble:nth-child(6) {
+  width: 30%;
+  left: 36%;
+  top: 50%;
+}
+
+section:nth-child(4) .bubble:nth-child(6)::before {
+  aspect-ratio: 0.9;
+  width: 10%;
+  height: auto;
+  left: 0;
+  transform: translate(-130%, -100%) rotate(70deg);
+}
+
+/* section 5 */
+section:nth-child(5) .batman {
+  --mouth: 
+    linear-gradient(to top right, var(--skin) 72%, #0000 0) 50% 99.75% / 50% 13% no-repeat,
+    radial-gradient(circle at 52% 92%, #fff 6%, #0000 6.5%) 50% 50% / 130% 100%;
+}
+section:nth-child(5) .bubble {
+  top: 15%;
+  left: 5%;
+}
+
+/* section 6 */
+section:nth-child(6) .robin {
+  --eye1: 9%;
+  --eye2: 9%;
+  --mouth: linear-gradient(#0000 0 0);
+  --eyelid: linear-gradient(90deg, #000 40%, #0000 0 60%, #000 0) 50% 39.5% / 50% 8.5% no-repeat;
+  --extra: 
+    radial-gradient(farthest-side, white 94%, #0000 99.9%) 4% 35% / 4.5% 6% no-repeat,
+    conic-gradient(at 50% 0, #0000 155deg, #beeeff 156deg 204deg, #0000 205deg) 2% 10% / 15% 20% no-repeat,
+    radial-gradient(farthest-side, #beeeff 93%, #0000 99.9%) 2% 30% / 15% 20% no-repeat;
+  left: 45%;
+  transform: translate(-50%, 0);
+}
+
+section:nth-child(6) .murmur {
+  top: 28%;
+  right: 15%;
+}
+
+/* section 7 */
+section:nth-child(7) .robin {
+  --eye1: 9%;
+  --eye2: 9%;
+  --mouth: linear-gradient(#0000 0 0);
+  --eyelid: linear-gradient(to top left, #0000 50%, #000 55%) 73% 39.5% / 30% 8% no-repeat,
+    linear-gradient(to top right, #0000 50%, #000 55%) 27% 39.5% / 30% 8% no-repeat;
+  --mouth: 
+    linear-gradient(to bottom right, #0000 50%, var(--skin) 55%) 45% 88% / 35% 5% no-repeat,
+    radial-gradient(at 50% 100%, #fff 18%, #0000 18.5%) 50% 79% / 80% 40%;
+  --skin-extra: linear-gradient(#f004, #f000 50%);
+}
+
+section:nth-child(7) .bubble {
+  right: 0;
+  top: 1vmin;
+  width: 80%;
+}
+
+/* section 8 */
+section:nth-child(8) .bubble {
+  width: 60%;
+  top: 2%;
+}
+
+section:nth-child(8) .bubble::before {
+  left: 33%;
+  width: 20%;
+}
+
+section:nth-child(8) .batman {
+  --eyelids: 
+    linear-gradient(-170deg, var(--gray) 47%, #0000 47.5%) 0 0 / 50% 100% no-repeat,
+    linear-gradient(170deg, var(--gray) 47%, #0000 47.5%) 100% 0 / 50% 100% no-repeat;
+}
+
+section:nth-child(8) .newspaper {
+  transform: scale(0.8) rotate(60deg);
+  bottom: -57%;
+  right: 5%;
+}
+section:nth-child(8) .newspaper::before {
+  transform-origin: 0% 0;
+  transform: scaleX(-1) skewY(-15deg) rotateY(15deg);
+
+}
+
+/* section 9 */
+section:nth-child(9) .robin {
+  --mouth: linear-gradient(#0000 0 0);
+  --skin-extra: 
+    linear-gradient(#f004, #00f0 50%);
+  --eyelid: 
+    linear-gradient(to top left, #0000 50%, #000 55%) 73% 39.5% / 23% 9% no-repeat,
+    linear-gradient(to top right, #0000 50%, #000 55%) 27% 39.5% / 23% 9% no-repeat;
+  --mouth: 
+    linear-gradient(to bottom left, #0000 50%, var(--skin) 55%) 55% 88% / 36% 6% no-repeat,
+    radial-gradient(at 50% 100%, #fff 18%, #0000 18.5%) 50% 79% / 70% 34% no-repeat;
+  
+}
+
+section:nth-child(9) .bubble:nth-child(2) {
+  width: 90%;
+  right: 0;
+  top: 5%;
+}
+
+section:nth-child(9) .bubble.bats {
+  top: 70%;
+  right: 7%;
+  width: auto;
+}
+
+section:nth-child(9) .bubble.bats::before {
+  width: 70%;
+}
+/* section 10 */
+section:nth-child(10) .robin {
+  --mouth: linear-gradient(#0000 0 0);
+  --skin-extra: 
+    linear-gradient(-45deg, #0000 45%, #f99 0 60%, #0000 0) 12% 14% / 9% 9% no-repeat,
+    linear-gradient(30deg, #0000 35%, #6007 0 45%, #f99 0 60%, #6007 0 70%, #0000 0) 12% 14% / 9% 9% no-repeat,
+    linear-gradient(-45deg, #0000 35%, #6007 0 45%, #f99 0 60%, #6007 0 70%, #0000 0) 12% 14% / 9% 9% no-repeat,
+    linear-gradient(#f006, #00f0 50%);
+  --eyelid: 
+    linear-gradient(to top left, #0000 50%, #000 55%) 73% 39.5% / 20% 13% no-repeat,
+    linear-gradient(to top right, #0000 50%, #000 55%) 27% 39.5% / 20% 13% no-repeat;
+  --mouth: 
+    linear-gradient(to bottom right, #0000 50%, var(--skin) 55%) 45% 88% / 30% 5% no-repeat,
+    radial-gradient(at 50% 100%, #fff 18%, #0000 18.5%) 50% 79% / 60% 40%;
+}
+
+section:nth-child(10) .robin::before {
+  transform: translate(-50%, 0) rotate(-3deg);
+}
+
+section:nth-child(10) .robin::after {
+  transform: translate(-50%, -50%) rotate(-3deg);
+}
+
+section:nth-child(10) .bubble {
+  margin: 0.5vmin;
+}
+
+section:nth-child(10) .bubble::before {
+  height: 50%;
+  width: 10%;
+  left: 66%
+}
+
+/* section 11 */
+section:nth-child(11) .batman {
+  --arms: 50.5%;
+  --mouth: 
+    linear-gradient(to top right, var(--skin) 75%, #0000 0) 55% 98% / 50% 10% no-repeat,
+    radial-gradient(circle at 52% 89%, #fff 6%, #0000 6.5%) 50% 50% / 130% 100%;
+  --eyelids: 
+/*     linear-gradient(var(--gray) 50%, #0000 0) 0 0 / 50% 100% no-repeat,
+    linear-gradient(184deg, var(--gray) 50%, #0000 50.5%) 100% 0 / 50% 100% no-repeat; */
+    linear-gradient(var(--gray) 48%, #0000 0);
+}
+
+section:nth-child(11) .bubble {
+  width: 60%;
+}
+section:nth-child(11) .bubble::before {
+  left: 36%;
+  width: 22%;
+}
+
+/* section 12 */
+section:nth-child(12) .robin {
+  --eye1: 12%;
+  --eye2: 12%;
+  --mouth: linear-gradient(#0000 0 0);
+  --skin-extra: 
+/*     linear-gradient(#00f8, #00f0) 2% 0 / 1% 26% no-repeat,
+    linear-gradient(#00f8, #00f0) 4% 0 / 1% 34% no-repeat,
+    linear-gradient(#00f8, #00f0) 6% 0 / 1% 25% no-repeat,
+    linear-gradient(#00f8, #00f0) 8% 0 / 1% 30% no-repeat,
+    linear-gradient(#00f8, #00f0) 10% 0 / 1% 30% no-repeat,
+    linear-gradient(#00f8, #00f0) 12% 0 / 1% 30% no-repeat,
+    linear-gradient(#00f8, #00f0) 14% 0 / 1% 30% no-repeat,
+    linear-gradient(#00f8, #00f0) 16% 0 / 1% 29% no-repeat,
+    linear-gradient(#00f8, #00f0) 18% 0 / 1% 30% no-repeat,
+    linear-gradient(#00f8, #00f0) 20% 0 / 1% 31% no-repeat,
+    linear-gradient(#00f8, #00f0) 22% 0 / 1% 26% no-repeat,
+    linear-gradient(#00f8, #00f0) 24% 0 / 1% 25% no-repeat,
+    linear-gradient(#00f8, #00f0) 26% 0 / 1% 29% no-repeat,
+    linear-gradient(#00f8, #00f0) 28% 0 / 1% 20% no-repeat,
+    linear-gradient(#00f8, #00f0) 30% 0 / 1% 17% no-repeat,
+    linear-gradient(#00f8, #00f0) 32% 0 / 1% 15% no-repeat,
+    linear-gradient(#00f8, #00f0) 34% 0 / 1% 13% no-repeat, */
+    linear-gradient(#0000ff18, #00f0 50%);
+  left: 45%;
+  transform: translate(-50%, 0);
+}
+
+section:nth-child(12) .murmur {
+  top: 28%;
+  right: 15%;
+}
+
+/* section 13 */
+section:nth-child(13) .robin {
+  --eye1: 9%;
+  --eye2: 9%;
+  --mouth: linear-gradient(#0000 0 0);
+  --eyelid: linear-gradient(90deg, #000 40%, #0000 0 60%, #000 0) 50% 40% / 50% 8% no-repeat;
+  left: 45%;
+  transform: translate(-50%, 0);
+}
+
+section:nth-child(13) .hand-invitation {
+  left: 40%;
+  transform: rotate(30deg);
+  bottom: 3%;
+}
+
+/* section 14 */
+section:nth-child(14) .robin {
+  --mouth: 
+    linear-gradient(to bottom right, #0000 50%, var(--skin) 55%) 35% 90% / 20% 6% no-repeat,
+    radial-gradient(20% 30% at 45% 85%, #fff 15%, #0000 17%)
+    ;
+  --eyelid: linear-gradient(90deg, #000 40%, #0000 0 60%, #000 0) 50% 39% / 50% 8% no-repeat;
+  --skin-extra: 
+    radial-gradient(50% 30% at 20% 60%, #f002, #f000), 
+    radial-gradient(50% 30% at 80% 60%, #f002, #f000);
+}
+
+section:nth-child(14) .bubble {
+  right: 0;
+  top: 0.5vmin;
+  width: 80%;
+}
+
+section:nth-child(14) .bubble.bats {
+  top: 75%;
+  right: 7%;
+  width: auto;
+}
+
+section:nth-child(14) .bubble.bats::before {
+  width: 60%;
+}
+
+
+section:nth-child(14) .hand-invitation {
+  bottom: -10%;
+  transform: rotate(60deg);
+}

@@ -1,0 +1,34 @@
+{
+    "name": "css-game-gem-catcher",
+    "version": "1.0.0",
+    "title": "CSS Game - Gem Catcher",
+    "description": "A CSS Only playable game \n\nGrab the gem without touching the wall. Be as fast as possible!!\n\n✔️ No Javascript\n✔️ No SVG\n✔️ No Image\n✔️ No Inputs",
+    "author": {
+        "name": "Temani Afif",
+        "avatar": "https://assets.codepen.io/1480814/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1637754747&width=512",
+        "web": "https://css-only.art/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/t_afif/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/ChallengesCss"
+            }
+        ]
+    },
+    "html": "css-game-gem-catcher.html",
+    "css": [
+        "css-game-gem-catcher.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "css-game"
+    ],
+    "original": "https://codepen.io/t_afif/pen/YzeNyjR",
+    "codepen": "https://codepen.io/t_afif/pen/YzeNyjR"
+}

@@ -1,0 +1,167 @@
+.cartoon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cartoon div {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.b {
+  border: 1vmin solid black;
+}
+
+.r {
+  border-radius: 100%;
+}
+
+.hb::before,
+.ha::after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+/****/
+html, body {
+  --primary: #630;
+  --secondary: #fd4;
+  background: var(--secondary);
+}
+
+.cartoon {
+  width: 80vmin;
+  height: 80vmin;
+}
+
+.cartoon div {
+  transform: translate(-50%, -50%);
+}
+
+.nose {
+  width: 18%;
+  height: 12%;
+  background: var(--primary);
+  top: 45%;
+  left: 50%;
+}
+
+.mouth {
+  width: 50%;
+  height: 50%;
+  background: var(--primary);
+  top: 50%;
+  left: 50%;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
+}
+
+.lip {
+  width: 22%;
+  height: 22%;
+  background: var(--secondary);
+  top: 50%;
+  left: 38%;
+  background: linear-gradient(var(--secondary) 40%, white);
+}
+
+.lip + .lip {
+  left: auto;
+  right: 16%;
+}
+
+.lip::after {
+  width: 8.5%;
+  height: 8.5%;
+  background: var(--primary);
+  border-radius: 50%;
+  left: 0;
+  top: 50%;
+  transform: translate(-100%, -50%);
+  box-shadow: 38.375vmin 0 var(--primary);
+}
+
+.eyes {
+  width: 50%;
+  height: 20%;
+  left: 50%;
+  top: 30%;
+}
+
+.eyes::before,
+.eyes::after {
+  width: 22%;
+  height: 0%;
+  border-radius: 50%;
+  border: 2vmin solid transparent;
+  box-shadow: 0 -2vmin var(--primary);
+  aborder-top: 2vmin solid var(--primary);
+  transform: rotate(-15deg);
+  top: 50%;
+  left: 10%;
+}
+
+.eyes::after{
+  left: auto;
+  right: 10%;
+  transform: rotate(15deg);
+}
+
+.whiskers {
+  width: 2%;
+  height: 2%;
+  background: var(--primary);
+  color: var(--primary);
+  top: 50%;
+  left: 35%;
+  box-shadow: 25vmin 0, 3.5vmin 3vmin, 21.5vmin 3vmin, -1vmin 4vmin, 26vmin 4vmin;
+}
+
+.face, .ear {
+  background: var(--secondary);
+  width: 65%;
+  height: 78%;
+  border-radius: 90% 90% 100% 100% / 130% 130% 100% 80%;
+  left: 50%;
+  top: 45%;
+}
+
+.ear {
+  width: 40%;
+  height: 50%;
+  left: 30%;
+  top: 32%;
+  background: var(--primary);
+  transform: translate(-50%, -50%) rotate(25deg) !important;
+}
+
+.ear::after {
+  width: 70%;
+  height: 70%;
+  background: var(--primary);
+  border-radius: 50%;
+  bottom: -30%;
+  left: -10%;
+}
+
+.ear + .ear {
+  left: auto;
+  right: 30%;
+   transform: translate(50%, -50%) rotate(-25deg) !important;
+}
+
+.ear + .ear::after {
+  left: auto;
+  right: -10%;
+}
+
+.tongue {
+  width: 20%;
+  height: 30%;
+  border-radius: 10vmin 10vmin 50vmin 50vmin;
+  background: linear-gradient(to top, #d50000 75%, transparent);
+  left: 50%;
+  top: 80%;
+}

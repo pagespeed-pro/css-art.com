@@ -1,0 +1,149 @@
+body {
+  background: #ced;
+}
+
+div {
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+  background:
+    radial-gradient(farthest-side at 100% 100%, transparent 60%, black 0 80%, transparent 0) 18% 90% / 4% 4%,
+    radial-gradient(farthest-side at 100% 100%, transparent 60%, black 0 80%, transparent 0) 20% 91% / 4% 3%,
+    
+    radial-gradient(farthest-side at 0% 100%, transparent 60%, black 0 80%, transparent 0) 83.75% 90.5% / 4% 4%,
+    radial-gradient(farthest-side at 0% 100%, transparent 60%, black 0 80%, transparent 0) 82% 91.75% / 4% 3%,
+    
+    radial-gradient( closest-side at 50% 50%, white 70%, black 0 80%, transparent 0) 20% 94% / 40% 12%,
+    radial-gradient( closest-side at 50% 50%, white 70%, black 0 80%, transparent 0) 83% 94.5% / 40% 13%,
+    radial-gradient(farthest-side, #0006, #0003 99.9%, transparent 0) 50% 96% / 75% 10%
+    ;
+  background-repeat: no-repeat;
+}
+
+div::after {
+  content: "";
+  position: absolute;
+  top: 47.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vmin;
+  height: 80vmin;
+  background:
+    /* ear */
+    radial-gradient(at 50% 100%, black 10%, transparent 0) 56.5% 27.5% / 33% 5%,
+    radial-gradient(farthest-side at 50% 80%, pink 35%, black 0 40%, transparent 0) 55% -15% / 15% 40%,
+    radial-gradient(farthest-side at 50% 70%, white 55%, black 0 65%, transparent 0) 55% -15% / 19% 40%,
+    
+    radial-gradient(at 100% 50%, black 10%, transparent 0) 27.5% 56.5% / 5% 33%,
+    radial-gradient(farthest-side at 80% 50%, pink 35%, black 0 40%, transparent 0) -15% 55% / 40% 15%,
+    radial-gradient(farthest-side at 70% 50%, white 55%, black 0 65%, transparent 0) -15% 55% / 40% 19%,
+    
+    
+    
+    radial-gradient(white 60%, transparent 0) 69% 95% / 12% 10%,
+    radial-gradient(white 60%, transparent 0) 95% 70% / 7% 10%
+    ;
+  background-repeat: no-repeat;
+  transform: translate(-50%, -51%) rotate(45deg);
+}
+
+div::before {
+  content: "";
+  position: absolute;
+  border: 0.75vmin solid;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vmin;
+  height: 50vmin;
+  border-radius: 95% / 130% 120% 75% 60%;
+  background:
+    /* arms */
+    linear-gradient(to right, black 30%, transparent 0 70%, black 0)  12% 80% / 4% 5%,
+    linear-gradient(to right, black 30%, transparent 0 70%, black 0)  88% 80% / 4% 5%,
+    radial-gradient(50% 100% at 50% 20%, white 65%, black 0 80%, transparent 0) 8% 80% / 16% 16%,
+    radial-gradient(50% 100% at 50% 20%, white 65%, black 0 80%, transparent 0) 93% 80% / 16% 16%,
+    radial-gradient(50% 100% at 50% 20%, #ddd 80%, transparent 0) 7% 81% / 16% 16%,
+    radial-gradient(50% 100% at 50% 20%, #ddd 80%, transparent 0) 93.5% 82% / 16% 16%,
+    
+    
+    /* nose */
+    radial-gradient(closest-side, pink 99%, transparent 0) 28% 60% / 8% 6%,
+    radial-gradient(closest-side, pink 99%, transparent 0) 73% 60% / 8% 6%,
+    radial-gradient(closest-side, #333 99%, transparent 0) 50% 60% / 10% 7%,
+    radial-gradient(farthest-side at 50% 0%, transparent 65%, black 0 80%, transparent 0) 44% 68% / 15% 8%,
+    radial-gradient(farthest-side at 50% 0%, transparent 66%, black 0 80%, transparent 0) 57% 68% / 15% 8%,
+    radial-gradient(closest-side, black 90%, transparent 0) 57% 63% / 0.9% 0.9%,
+    radial-gradient(closest-side, black 90%, transparent 0) 56% 64% / 1% 1%,
+    radial-gradient(closest-side, black 90%, transparent 0) 58% 64% / 0.8% 0.8%,
+    
+    radial-gradient(closest-side, black 90%, transparent 0) 44% 63% / 1% 1%,
+    radial-gradient(closest-side, black 90%, transparent 0) 45% 64% / 1.1% 1.1%,
+    radial-gradient(closest-side, black 90%, transparent 0) 43% 64% / 0.9% 0.9%,
+    
+    linear-gradient(black, black) 50% 73.5% / 0.75% 5%,
+    linear-gradient(white, white) 50% 73% / 7.5% 7%,
+    linear-gradient(black, black) 50% 74% / 10% 8%,
+    /* eyes */
+    radial-gradient(closest-side, white 90%, transparent 0) 69% 42% / 4% 4%,
+    radial-gradient(closest-side, white 90%, transparent 0) 42% 42% / 4% 4%,
+    radial-gradient(closest-side, black 90%, transparent 0) 67% 45% / 22% 22%,
+    radial-gradient(closest-side, black 90%, transparent 0) 33% 45% / 22% 22%
+    ;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  
+  box-shadow: inset 0 0.75vmin #ddd;
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+  font-size: 0;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+

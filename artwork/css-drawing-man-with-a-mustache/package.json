@@ -1,0 +1,40 @@
+{
+    "name": "css-drawing-man-with-a-mustache",
+    "version": "1.0.0",
+    "title": "CSS Drawing: man with a mustache",
+    "description": "Cartoon of a man with a mustache coded with a single HTML element and CSS (with many many gradients :P)",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "css-drawing-man-with-a-mustache.html",
+    "css": [
+        "css-drawing-man-with-a-mustache.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "cssart",
+        "single-element",
+        "youtube"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/RwMzBrJ",
+    "codepen": "https://codepen.io/alvaromontoro/pen/RwMzBrJ"
+}

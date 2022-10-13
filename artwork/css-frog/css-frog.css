@@ -1,0 +1,239 @@
+html, body {
+  --skin: #66a869;
+  --eye: #ffd;
+  --pupil: #222;
+  --mouth: #a43;
+  --shadow: #0003;
+  --light-shadow: #0002;
+  --dark-shadow: #0004;
+  --rock: #c6cac8;
+  --water: #8ee;
+  --sky: #def;
+  overflow: hidden;
+  background: var(--sky);
+}
+
+.cartoon {
+  width: 80vmin;
+  height: 80vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cartoon div,
+.cartoon div.ha::after,
+.cartoon div.hb::before {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.body {
+  width: 40%;
+  height: 40%;
+  background: var(--skin);
+  border-radius: 50%;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  box-shadow: inset 0vmin -2.5vmin 1vmin -2vmin var(--shadow);
+}
+
+.eyes {
+  width: 5%;
+  height: 5%;
+  background: var(--pupil);
+  top: 2%;
+  left: 20%;
+  border-radius: 50%;
+  box-shadow: 
+    0 0 0 3vmin var(--eye), 
+    0 0 0 4.5vmin var(--skin),
+    18vmin 0 0 var(--pupil),
+    18vmin 0 0 3vmin var(--eye), 
+    18vmin 0 0 4.5vmin var(--skin)
+    ;
+}
+
+.mouth {
+  border-radius: 100% / 80%;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, 0);
+  width: 60%;
+  height: 40%;
+  box-shadow: 0 1vmin 0 -0.5vmin var(--mouth);
+}
+
+.leg {
+  width: 32%;
+  height: 16%;
+  background: var(--skin);
+  border-radius: 50%;
+  top: 42%;
+  left: 15%;
+  transform: rotate(20deg);
+  background-image: radial-gradient(at 100% 40%, var(--light-shadow), transparent 50%)
+}
+
+.leg + .leg {
+  left: auto;
+  right: 15%;
+  transform: rotate(-20deg);
+  background-image: radial-gradient(at 0% 40%, var(--light-shadow), transparent 50%)
+}
+
+.foot {
+  width: 30%;
+  height: 10%;
+  background: var(--skin);
+  border-radius: 30% 100% 100% 30%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 30% 75%, 0% 50%, 30% 25%);
+  transform: rotate(-20deg);
+  left: 15%;
+  top: 55%;
+  background-image: radial-gradient(at 60% 20%, var(--dark-shadow), transparent 50%)
+}
+
+.foot + .foot {
+  right: 15%;
+  left: auto;
+  transform: scaleX(-1) rotate(-20deg);
+}
+
+.arm {
+  width: 3%;
+  height: 15%;
+  transform: skewX(10deg) rotate(-25deg);
+  background: var(--skin);
+  box-shadow: 0 1vmin 1vmin var(--shadow);
+  top: 50%;
+  left: 38%;
+}
+
+.arm + .arm {
+  left: auto;
+  right: 38%;
+  transform: scaleX(-1) skewX(10deg) rotate(-25deg);
+}
+
+.hand {
+  width: 12%;
+  height: 6%;
+  background: var(--skin);
+  border-radius: 30% 100% 100% 30%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 30% 75%, 0% 50%, 30% 25%);
+  transform: rotate(-40deg);
+  left: 35%;
+  top: 65%;
+}
+
+.hand + .hand {
+  left: auto;
+  right: 35%;
+  transform: scaleX(-1) rotate(-50deg);
+}
+
+.rock {
+  width: 100%;
+  height: 45%;
+  top: 52.5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 100% 100% 0 0;
+  clip-path: polygon(0% 100%, 5% 0, 97% 0%, 100% 100%);
+  background-image: 
+    radial-gradient(at 50% 0%, var(--shadow) 10%, transparent 50%),
+    linear-gradient(var(--rock) 80%, transparent);
+}
+
+@keyframes waterMoving {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-45%, 0); }
+}
+
+.water,
+.water::before,
+.water::after {
+  width: 150vw;
+  height: 100vh;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  background: var(--water);
+  transform: translate(-50%, 0);
+  border-radius: 100% / 20%;
+  opacity: 0.7;
+  animation: waterMoving 2s infinite linear;
+}
+
+.water::before {
+  top: 0;
+  left: 25%;
+  border-radius: 100% / 10%;
+  animation: waterMoving 3s infinite linear;
+}
+
+.water::after {
+  top: 0;
+  left: 75%;
+  border-radius: 100% / 30%;
+  animation: waterMoving 1.5s infinite linear;
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}

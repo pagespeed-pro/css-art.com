@@ -1,0 +1,38 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  min-height: 1000px;
+  position: relative;
+  overflow: hidden;
+  background-color: #60b0ff;
+}
+body:before,
+body:after {
+  content: '';
+  width: 400%;
+  height: 400%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(25.5deg) translateX(-50%);
+  background-size: 170px 170px;
+}
+@media screen and (max-width: 600px) {
+  body:before,
+  body:after {
+    background-size: 120px 120px;
+  }
+}
+body:before {
+  background-image: radial-gradient(circle at 50% 52%, #dddcd0 2%, transparent 2%), radial-gradient(circle at 40.3% 58%, #dddcd0 1.1%, transparent 1.1%), radial-gradient(circle at 39.6% 58%, #fff 1.5%, transparent 1.5%), radial-gradient(circle at 61% 47.6%, #dddcd0 1.6%, transparent 1.6%), radial-gradient(circle at 45.5% 51.5%, #dddcd0 5.2%, transparent 5.2%), radial-gradient(circle at 51.9% 45.4%, #dddcd0 9.2%, transparent 9.2%), linear-gradient(64deg, transparent 58%, #60b0ff 58%), linear-gradient(64deg, #60b0ff 40.5%, transparent 40.5%), linear-gradient(154deg, transparent 51%, #fff 51%, #fff 51.5%, #dddcd0 51.5%, #dddcd0 53%, transparent 53%), radial-gradient(circle at 45% 51.5%, #fff 6%, transparent 6%), radial-gradient(circle at 51.2% 45.2%, #fff 10%, transparent 10%);
+  background-position: 92px 106px;
+}
+@media screen and (max-width: 600px) {
+  body:before {
+    background-position: 64px 75px;
+  }
+}
+body:after {
+  background-image: radial-gradient(circle at 29.8% 77.6%, #dddcd0 1.4%, transparent 1.4%), radial-gradient(circle at 28.5% 77.6%, #fff 1.8%, transparent 1.8%), radial-gradient(circle at 69% 57.9%, #dddcd0 2.1%, transparent 2.1%), radial-gradient(circle at 55% 54%, #dddcd0 5%, transparent 5%), radial-gradient(circle at 54.2% 53.2%, #fff 5%, transparent 5%), radial-gradient(circle at 52% 61%, #dddcd0 8%, transparent 8%), radial-gradient(circle at 42.7% 65.2%, #dddcd0 7.2%, transparent 7.2%), radial-gradient(circle at 49.5% 53.7%, #dddcd0 10.4%, transparent 10.4%), radial-gradient(circle at 48.5% 53.5%, #fff 11%, transparent 11%), radial-gradient(circle at 57% 52.5%, #dddcd0 12.5%, transparent 12.5%), radial-gradient(circle at 45.8% 47.8%, #dddcd0 15%, transparent 15%), linear-gradient(64deg, #60b0ff 26.5%, transparent 26.5%), linear-gradient(64deg, transparent 60%, #60b0ff 60%, #60b0ff 88%, transparent 88%), linear-gradient(154deg, transparent 60%, #fff 60%, #fff 60.8%, #dddcd0 60.8%, #dddcd0 63%, transparent 63%), radial-gradient(circle at 42% 65%, #fff 8%, transparent 8%), radial-gradient(circle at 45% 48%, #fff 16%, transparent 16%);
+}

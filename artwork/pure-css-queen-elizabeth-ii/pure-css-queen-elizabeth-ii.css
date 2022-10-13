@@ -1,0 +1,628 @@
+@import url("https://fonts.googleapis.com/css2?family=Damion");
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+}
+
+.name {
+  font-family: "Damion", cursive;
+  font-size: 8vmin;
+  color: whitesmoke;
+}
+
+body {
+  background: #0075;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.drawing-box {
+  width: 80vmin;
+  height: 80vmin;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  place-content: center;
+}
+
+.head {
+  position: relative;
+  height: 55%;
+  width: 50%;
+}
+.head > * {
+  position: absolute;
+}
+
+.hat {
+  position: relative;
+  left: -15%;
+  height: 50%;
+  width: 130%;
+  transform-style: preserve-3d;
+  perspective: 500px;
+}
+
+.hat-top {
+  position: absolute;
+  background: radial-gradient(ellipse 50% 20% at bottom, #5550 100%, #5552), linear-gradient(90deg, #5552, #5550 30% 70%, #5555) #da509d;
+  top: 0;
+  left: 12.5%;
+  height: 20%;
+  width: 75%;
+  border-radius: 40% 40% 10% 10%/100% 100% 0% 0%;
+}
+
+.hat-middle {
+  position: absolute;
+  top: 20%;
+  left: 12.5%;
+  height: 70%;
+  width: 75%;
+  transform-origin: top;
+  transform: rotateX(-15deg);
+  background: linear-gradient(90deg, #5552, #5550 30% 70%, #5555), #da509d;
+}
+
+.hat-bottom {
+  position: absolute;
+  top: 75%;
+  height: 25%;
+  width: 100%;
+  background: linear-gradient(#5552, #5550 50%), linear-gradient(#da509d 80%, #0000 80%);
+  border-radius: 40% 40% 10% 10%/100% 100% 0% 0%;
+}
+.hat-bottom::after {
+  content: "";
+  position: absolute;
+  left: -1.5%;
+  bottom: -10%;
+  width: 103%;
+  height: 50%;
+  background: radial-gradient(ellipse 50% 75% at bottom, #0000 100%, #da509d 0);
+  border-radius: 25vmin;
+}
+
+.feathers {
+  position: absolute;
+  bottom: 25%;
+  left: 15%;
+  width: 85%;
+  height: 95%;
+}
+
+.feather {
+  --col: #C63713;
+  position: absolute;
+  height: 100%;
+  width: 75%;
+  transform: rotate(7.5deg);
+  top: 15%;
+}
+.feather .feather-top {
+  position: absolute;
+  background: conic-gradient(at 50% 50%, #0000 270deg, var(--col) 270deg 280deg, #0000 280deg 360deg);
+  height: 200%;
+  width: 200%;
+  border-radius: 50%;
+  transform: translate(10%, -50%) rotate(-30deg);
+}
+.feather .feather-bottom {
+  position: absolute;
+  bottom: 25%;
+  height: 5%;
+  width: 50%;
+  background: linear-gradient(#0005, #0005), var(--col);
+  transform: rotate(-25deg);
+}
+
+.feather-back {
+  --col: #B33111;
+  top: 30%;
+  transform: rotate(22.5deg);
+}
+
+.face {
+  bottom: 0;
+  left: 5%;
+  height: 55%;
+  width: 90%;
+  background: radial-gradient(ellipse 100% 50% at center, #0000 77.5%, #5552), #e2c6b8;
+  border-radius: 20% 20% 33% 33%/45% 45% 25% 25%;
+}
+
+.eyes,
+.eyebrows {
+  height: 27.5%;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.eyes {
+  top: 45%;
+  width: 80%;
+}
+
+.eyebrows {
+  top: 27.5%;
+  width: 87.5%;
+  height: 10%;
+}
+
+.eyebrow {
+  position: relative;
+  width: 30%;
+  height: 100%;
+  background: #786c5e;
+  border-radius: 50%;
+}
+.eyebrow::after {
+  content: "";
+  position: absolute;
+  top: 35%;
+  right: 5%;
+  width: 100%;
+  height: 90%;
+  background: #e2c6b8;
+  border-radius: inherit;
+  transform: rotate(5deg);
+}
+.eyebrow.left-eyebrow {
+  transform: rotate(-2deg);
+}
+.eyebrow.right-eyebrow {
+  transform: rotate(2deg) rotateY(180deg);
+}
+
+.eye {
+  position: relative;
+  height: 100%;
+  aspect-ratio: 1;
+}
+.eye .eyelashes {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.eye .eyelashe {
+  position: absolute;
+  content: "";
+  height: 50%;
+  width: 50%;
+  top: 0%;
+  left: -10%;
+  border-radius: 100%;
+  border-bottom: 0.75vmin solid #222;
+}
+.eye .eyelashe:nth-child(1) {
+  top: -5%;
+  left: -5%;
+  transform: rotate(0deg);
+}
+.eye .eyelashe:nth-child(2) {
+  top: -15%;
+  left: 0%;
+  transform: rotate(22.5deg);
+}
+.eye .eyelashe:nth-child(3) {
+  top: -25%;
+  left: 5%;
+  transform: rotate(45deg);
+}
+.eye .eye-iris {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(circle at 50% 35%, #555 10%, #222 50%);
+  border-radius: 50%;
+}
+.eye::before {
+  position: absolute;
+  content: "";
+  height: 50%;
+  width: 75%;
+  bottom: 0%;
+  right: 0%;
+  border-radius: 100%;
+  border-bottom: 0.1vmin solid #0008;
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+
+.right-eye {
+  transform: rotateY(180deg);
+}
+
+.nose {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7.5%;
+  height: 15%;
+  background: conic-gradient(at 50% 0%, #e2c6b8 160deg, #0000 160deg 200deg, #e2c6b8 200deg 360deg), conic-gradient(at 50% 85%, #5555 120deg, #5553 120deg 240deg, #55555508 240deg 360deg);
+}
+
+.hair {
+  bottom: 10%;
+  left: -5%;
+  width: 110%;
+  height: 45%;
+}
+.hair::before {
+  content: "";
+  position: absolute;
+  top: 6%;
+  left: -11%;
+  width: 122%;
+  height: 45%;
+  background: linear-gradient(#5555, #5559), #da509d;
+  border-radius: 0% 0% 50% 50%/0% 0% 100% 100%;
+}
+.hair::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #ccc;
+  border-radius: 20% 20% 20% 20%/10% 10% 80% 80%;
+}
+
+.neck {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -16%;
+  height: 20%;
+  aspect-ratio: 1.2;
+  background: #e2c6b8;
+  border: 1vmin solid #ccc;
+  border-radius: 50%;
+}
+
+.body {
+  position: relative;
+  height: 45%;
+  width: 25%;
+}
+
+.coat {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.coat-sides {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.right-side {
+  transform: rotateY(180deg);
+}
+
+.coat-side-top {
+  position: relative;
+  width: 75%;
+  height: 45%;
+  background: linear-gradient(#5553 20%, #ddd3 35% 40%, #0000 60%), #da509d;
+  border-radius: 7.5% 0;
+  border-left: 0.25vmin solid #5552;
+}
+.coat-side-top::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 90%;
+  height: 80%;
+  left: -50%;
+  top: 0;
+  background: linear-gradient(#5553 20%, #0000 30%), #da509d;
+  transform: rotate(10deg);
+  border-top-left-radius: 25%;
+}
+
+.coat-side-bottom {
+  width: 90%;
+  height: 55%;
+  background: #da509d;
+  transform: skew(-10deg);
+}
+
+.buttonholes {
+  position: absolute;
+  width: 10%;
+  left: 41%;
+  height: 70%;
+  background: radial-gradient(circle at center, goldenrod 20%, #0000 25% 0), linear-gradient(#0000 45%, #5555 45% 55%, #0000 0);
+  background-size: 100% 20%;
+  background-position: 0 5%;
+  background-repeat: repeat;
+  border-right: 0.25vmin solid #5552;
+}
+
+.dress {
+  height: 65%;
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #e03b39;
+}
+
+.arms {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50%;
+}
+
+.arm-container {
+  position: relative;
+  top: 50%;
+  width: 20%;
+  height: 50%;
+}
+
+.arm {
+  position: relative;
+  border-top-left-radius: 50%;
+  height: 115%;
+  width: 120%;
+  left: 32.5%;
+  background: #da509d;
+  border: 0.25vmin solid #0000;
+  border-right-color: #5552;
+  border-bottom-color: #5558;
+  border-left-color: #5558;
+  transform: rotate(-60deg);
+}
+
+.glove {
+  position: absolute;
+  left: 150%;
+  top: 50%;
+  height: 100%;
+  width: 90%;
+  border-radius: 0 0 50% 50%;
+  transform: rotate(-55deg);
+  background: #514c49;
+}
+.glove::after {
+  position: absolute;
+  content: "";
+  width: 35%;
+  height: 80%;
+  background: #514c49;
+  right: -25%;
+  transform: rotate(-15deg);
+  border-radius: 0 0 25% 25%;
+  border: 0.25vmin solid #2228;
+  border-left-color: #0000;
+}
+
+.purse {
+  position: absolute;
+  display: flex;
+  top: 55%;
+  right: 5%;
+  height: 20%;
+  width: 20%;
+}
+.purse::after, .purse::before {
+  content: "";
+  position: absolute;
+}
+.purse::after {
+  width: 25%;
+  height: 175%;
+  left: 5%;
+  top: -135%;
+  background: #514c49;
+  transform: skew(-30deg) rotate(-30deg);
+}
+.purse::before {
+  width: 25%;
+  height: 45%;
+  right: 20%;
+  background: linear-gradient(#0005, #0005), #514c49;
+  top: -40%;
+  transform: rotate(-25deg);
+}
+
+.purse-side {
+  position: relative;
+  width: 37.5%;
+  height: 100%;
+  background: #514c49;
+}
+.purse-side::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 30%;
+  background: linear-gradient(#0005, #0005), #514c49;
+  transform: skew(-60deg);
+  top: -20%;
+  left: 75%;
+}
+
+.purse-front {
+  position: relative;
+  top: -12.5%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(#0005, #0005), #514c49;
+  transform: skewY(-25deg);
+}
+.purse-front::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) skewY(25deg);
+  height: 25%;
+  aspect-ratio: 0.25;
+  border-radius: 50%;
+  background: goldenrod;
+}
+
+.legs {
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  top: 70%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.legs::after {
+  position: absolute;
+  height: 120%;
+  aspect-ratio: 0.65;
+  border-radius: 50%;
+  bottom: -75%;
+  background: #0075;
+}
+
+.leg {
+  position: relative;
+  width: 20%;
+  top: -20%;
+  height: 80%;
+}
+
+.ankle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #e2c6b8;
+  border-radius: 50% 50% 50% 50%/30% 30% 70% 70%;
+}
+
+.foot {
+  position: absolute;
+  top: 65%;
+  left: -15%;
+  height: 50%;
+  width: 80%;
+  background: #e2c6b8;
+  transform: rotate(40deg);
+  border-radius: 0 50% 20% 20%;
+}
+.foot::after {
+  content: "";
+  position: absolute;
+  width: 110%;
+  height: 45%;
+  bottom: -15%;
+  left: -10%;
+  border-radius: 50% 50% 0 0;
+  transform: rotate(-35deg);
+  background: #514c49;
+  border-bottom: 2px solid goldenrod;
+}
+
+.shoe {
+  position: absolute;
+  height: 70%;
+  width: 125%;
+  background: #514c49;
+  bottom: -40%;
+  left: -55%;
+  transform: skew(-30deg);
+  border-radius: 50%/25%;
+}
+.shoe::before {
+  content: "";
+  position: absolute;
+  height: 105%;
+  top: -5%;
+  width: 100%;
+  left: 17.5%;
+  transform: skew(20deg);
+  border-radius: 50% 25% 0 0;
+  background: linear-gradient(105deg, #514c49 65%, #0009), #514c49;
+}
+
+/* ====== signature ====== */
+.link {
+  position: fixed;
+  z-index: 10;
+  left: calc(3vmin - .75rem);
+  bottom: calc(2.5vmin - .75rem);
+  font-size: 1.5rem;
+  font-family: arial, sans-serif;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.my-name {
+  position: relative;
+}
+
+.before, .after {
+  overflow: hidden;
+  width: 0px;
+  transition: width 0.5s;
+  transform-origin: right;
+}
+
+.before-text {
+  display: inline-block;
+  width: auto;
+  text-align: right;
+}
+
+.after-text {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 3rem;
+  transform-origin: top center;
+}
+
+.link:hover .before {
+  width: 2.5rem;
+}
+
+.link:hover .after {
+  width: 4rem;
+}
+
+.link:hover .spin {
+  display: inline-block;
+  transition: 0.5s transform 0.5s ease-in-out;
+  transform: rotate(360deg);
+}
+
+@media (orientation: portrait) {
+  body {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 2fr 2fr;
+    grid-template-areas: "head head" "js cb" "fw hov";
+    background: linear-gradient(5deg, var(--bg-color) 80%, var(--bg-second-color) 80%);
+  }
+}

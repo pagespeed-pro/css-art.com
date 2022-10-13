@@ -1,0 +1,269 @@
+html {
+  background: #cde;
+}
+
+.canvas {
+  --size: 80vmin;
+  width: var(--size);
+  aspect-ratio: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes shake {
+  0%, 50%, 100% {
+    transform: translate(-50%, -50%) rotate(0deg) translate(0, 0);
+  }
+  25% {
+    transform: translate(-50%, -50%) rotate(4deg) translate(0, -10%);
+  }
+  75% {
+    transform: translate(-50%, -50%) rotate(-6deg) translate(0, -12%);
+  }
+}
+
+.canvas:active {
+  animation: shake 1s infinite;
+}
+
+.canvas div,
+.canvas div::before,
+.canvas div::after {
+  position: absolute;
+  box-sizing: border-box;
+  display: block;
+}
+
+.base {
+  width: 60%;
+  height: 26%;
+  bottom: 0;
+  left: 20%;
+  border-radius: 100% / 40%;
+  background:
+    radial-gradient(100% 50% at 50% 14%, #000, #0000 80%),
+    linear-gradient(to right, #0004, #0000, #0004);
+  background-color: #222;
+}
+
+.base ~ .base {
+  -webkit-mask: radial-gradient(100% 50% at 50% 14%, #0000 50%, #000 51%);
+  mask: radial-gradient(100% 50% at 50% 14%, #0000 50%, #000 51%);
+  background:
+    radial-gradient(150% 112% at 50% 0%, #000 38%, #0000 0),
+    radial-gradient(100% 50% at 50% 14%, #000, #0000 80%),
+    linear-gradient(to right, #0004, #0000, #0004),
+    repeating-linear-gradient(to right, #444 0 1.2%, #666 1.4%, #333 0 2.4%);
+  z-index: 3;
+}
+
+.bowl {
+  top: 0;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: #beeeef33;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.bowl + .bowl {
+  z-index: 2;
+  background: #beeeef33;
+  box-shadow: 
+    inset 0 0 2vmin #fff8,
+    inset 3vmin 0 5vmin #0003,
+    inset -3vmin 0 5vmin #0003,
+    inset 0 -20vmin 3vmin -14vmin #0007
+    ;
+}
+
+.ground {
+  width: 80%;
+  height: 15%;
+  border-radius: 50%;
+  background: white;
+  top: 69%;
+  left: 50%;
+  transform: translateX(-50%);  
+}
+
+.snow {
+  width: 97.5%;
+  height: 95%;
+  border-radius: 50%;
+  background: linear-gradient(#0000 79%, #eee 0);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 
+    inset -2vmin 2vmin 4vmin -2vmin #fffa,
+    inset 2vmin 0 4vmin -2vmin #0001;
+}
+
+.reflection {
+  width: 45%;
+  height: 18%;
+  background: #f003;
+  background: linear-gradient(#fff4, #fff0);
+  border-radius: 50%;
+  top: 13%;
+  left: 60%;
+  transform: rotate(17deg) translateX(-50%);
+}
+
+.canvas:active .shadow {
+  opacity: 0;
+}
+
+.shadow {
+  width: 100%;
+  height: 15%;
+  background: radial-gradient(farthest-side, #0008, #0000);
+  border-radius: 50%;
+  bottom: -4%;
+  left: -5%;
+  filter: blur(1vmin);
+}
+
+@keyframes snowfall {
+  to {
+    transform: translate(0, calc(var(--size) * 0.77));
+  }
+}
+
+.snowflake {
+  left: 50%;
+  top: -5%;
+  width: 2%;
+  height: 2%;
+  background: white;
+  border-radius: 50%;
+  abox-shadow: inset 0.25vmin -0.25vmin 0.25vmin #0002;
+  animation: snowfall 4s 1 forwards;
+}
+
+/* this is super ugly, it would be better (or at least cleaner) in SASS */
+.snowflake:nth-child(3n) {
+  z-index: 1; 
+}
+.snowflake:nth-child(1)  { left: 25%; animation-delay: 1s; }
+.snowflake:nth-child(2)  { left: 20%; animation-delay: 2s; }
+.snowflake:nth-child(3)  { left: 30%; animation-delay: 3s; }
+.snowflake:nth-child(4)  { left: 40%; animation-delay: 4s; }
+.snowflake:nth-child(5)  { left: 50%; animation-delay: 5s; }
+.snowflake:nth-child(6)  { left: 60%; animation-delay: 1.5s; }
+.snowflake:nth-child(7)  { left: 70%; animation-delay: 2.5s; }
+.snowflake:nth-child(8)  { left: 80%; animation-delay: 3.5s; }
+.snowflake:nth-child(9)  { left: 75%; animation-delay: 4.5s; }
+.snowflake:nth-child(11) { left: 28%; animation-delay: 5.5s; }
+.snowflake:nth-child(12) { left: 19%; animation-delay: 0.5s; }
+.snowflake:nth-child(13) { left: 38%; animation-delay: 1.2s; }
+.snowflake:nth-child(14) { left: 48%; animation-delay: 2.2s; }
+.snowflake:nth-child(15) { left: 58%; animation-delay: 3.2s; }
+.snowflake:nth-child(16) { left: 68%; animation-delay: 4.2s; }
+.snowflake:nth-child(17) { left: 78%; animation-delay: 1.7s; }
+.snowflake:nth-child(18) { left: 82%; animation-delay: 2.7s; }
+.snowflake:nth-child(19) { left: 65%; animation-delay: 3.7s; }
+.snowflake:nth-child(20) { left: 54%; animation-delay: 4.7s; }
+.snowflake:nth-child(21) { left: 24%; animation-delay: 0.25s; }
+.snowflake:nth-child(22) { left: 24%; animation-delay: 0.5s; }
+.snowflake:nth-child(23) { left: 34%; animation-delay: 0.75s; }
+.snowflake:nth-child(24) { left: 44%; animation-delay: 0.6s; }
+.snowflake:nth-child(25) { left: 54%; animation-delay: 2.75s; }
+.snowflake:nth-child(26) { left: 64%; animation-delay: 1.75s; }
+.snowflake:nth-child(27) { left: 74%; animation-delay: 3.75s; }
+.snowflake:nth-child(28) { left: 84%; animation-delay: 1.4s; }
+.snowflake:nth-child(29) { left: 74%; animation-delay: 2.4s; }
+.snowflake:nth-child(30) { left: 17%; animation-delay: 3.4s; }
+
+.canvas:active .snowflake {
+  animation: none;
+}
+
+.something {
+  width: 50%;
+  height: 50%;
+  left: 50%;
+  bottom: 23%;
+  transform: translate(-50%, 0);
+  /* From Clippy by Bennett Feely */
+/*   clip-path: polygon(18% 100%, 24% 91%, 25% 85%, 25% 76%, 17% 84%, 11% 86%, 3% 86%, 1% 78%, 3% 70%, 14% 63%, 19% 55%, 24% 49%, 31% 45%, 37% 44%, 37% 38%, 43% 41%, 48% 42%, 47% 35%, 43% 26%, 47% 12%, 46% 7%, 49% 4%, 51% 8%, 59% 5%, 66% 7%, 70% 16%, 71% 23%, 70% 31%, 68% 46%, 76% 51%, 79% 47%, 80% 41%, 86% 48%, 88% 50%, 88% 53%, 87% 56%, 90% 63%, 98% 75%, 99% 82%, 98% 91%, 95% 96%, 88% 93%, 77% 85%, 78% 100%);
+  background: url(https://alvaromontoro.com/images/me6.webp);
+  background-size: cover; */ 
+  background:
+    radial-gradient(circle at 45% 22%, #222 3%, #0000 0),
+    radial-gradient(circle at 58% 22%, #222 3%, #0000 0),
+    radial-gradient(circle at 58% 60%, #222 3%, #0000 0),
+    radial-gradient(circle at 60% 70%, #222 2.75%, #0000 0),
+    radial-gradient(circle at 58% 80%, #222 2.5%, #0000 0),
+    conic-gradient(at 100% 50%, #0000 260deg, orange 0 280deg, #0000 0) 60% 25% / 15% 15%,
+    linear-gradient(30deg, #0000 40%, brown 0 50%, #0000 0) 100% 70% / 20% 20%,
+    linear-gradient(0deg, #0000 40%, brown 0 60%, #0000 0) 100% 70% / 10% 10%,
+    linear-gradient(60deg, #0000 40%, brown 0 55%, #0000 0) 100% 74% / 10% 10%,
+    linear-gradient(-30deg, #0000 40%, brown 0 50%, #0000 0) 5% 67% / 20% 20%,
+    linear-gradient(20deg, #0000 40%, brown 0 60%, #0000 0) 5% 65% / 10% 10%,
+    linear-gradient(130deg, #0000 40%, brown 0 60%, #0000 0) 6% 72% / 10% 10%,
+    radial-gradient(circle at 50% 25%, #fff, #eee 22%, #0000 0),
+    radial-gradient(circle at 50% 30%, #000, #0000 20%),
+    radial-gradient(circle at 50% 70%, #fff, #eee 40%, #0000 0)
+    ;
+  background-repeat: no-repeat;
+}
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+

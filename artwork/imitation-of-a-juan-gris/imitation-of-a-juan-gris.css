@@ -1,0 +1,137 @@
+body {
+  background: #c4811e44;
+  display: grid;
+  margin: 0;
+  height: 100vh;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+body > div:nth-child(1):hover ~ article { transform: translate(-50%, -50%) perspective(1000px) rotate3d(1,-1,0,30deg); }
+body > div:nth-child(2):hover ~ article { transform: translate(-50%, -50%) perspective(1000px) rotate3d(1,0,0,30deg); }
+body > div:nth-child(3):hover ~ article { transform: translate(-50%, -50%) perspective(1000px) rotate3d(1,1,0,30deg); }
+body > div:nth-child(4):hover ~ article { transform: translate(-50%, -50%) perspective(1000px) rotate3d(0,-1,0,30deg); }
+body > div:nth-child(6):hover ~ article { transform: translate(-50%, -50%) perspective(1000px) rotate3d(0,1,0,30deg); }
+body > div:nth-child(7):hover ~ article { transform: translate(-50%, -50%) perspective(1000px) rotate3d(-1,-1,0,30deg); }
+body > div:nth-child(8):hover ~ article { transform: translate(-50%, -50%) perspective(1000px) rotate3d(-1,0,0,30deg); }
+body > div:nth-child(9):hover ~ article { transform: translate(-50%, -50%) perspective(1000px) rotate3d(-1,1,0,30deg); }
+
+
+article {
+  --s: 80vmin;
+  width: var(--s);
+  aspect-ratio: 1;
+  background: conic-gradient(at 43.44% 20.75%, #a2936f 43deg, #c4811e 0 119deg, #2a541d 0 270deg, #a2936f 0);
+  box-shadow: 0 calc(0.0125 * var(--s)) calc(0.075 * var(--s)) calc(-0.025 * var(--s));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.5s;
+}
+
+article div {
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  aspect-ratio: 1;
+  top: 0;
+  left: 0;
+}
+
+.guitar-1 {
+  background: 
+    radial-gradient(100% 260% at 110% 0%, #0000 29%, #fff 29.1%) 70% 50% / 20% 20% no-repeat,
+    
+    radial-gradient(105% 100% at 60.75% 39.5%, #fff 10.9%, #0000 11%),
+    radial-gradient(105% 100% at 68% 67%, #fff 14.9%, #0000 0),
+    linear-gradient(67deg, #fff 60%, #0000 0)
+    ;
+  clip-path: polygon(59.91% 102.81%, 50.70%  90.17%, 87.99%  74.10%, 66.93%  24.65%, 23.40%  44.77%, 39.24%  90.33%, 47.11% 104.99%);
+}
+
+.guitar-0 {
+  background: 
+    radial-gradient(100% 59% at 100% 100%, #0000 90%, #fff 0 99.9%, #0000 0) 43.25% 49% / 6.5% 8% no-repeat,
+    radial-gradient(100% 39% at 30% 0%, #0000 85%, #fff 0 99.9%, #0000 0) 44% 54.25% / 8% 6% no-repeat,
+    radial-gradient(100% 59% at 45% 100%, #0000 90%, #000 0 99.9%, #0000 0) 49.5% 48.5% / 6.5% 9% no-repeat,
+    radial-gradient(100% 49% at 0% 0%, #0000 90%, #000 0 99.9%, #0000 0) 49.5% 53% / 6.5% 8% no-repeat,
+    linear-gradient(67deg, #0000 40%, #fff 0 41.5%, #0000 0) 29% 20% / 15% 15% no-repeat,
+    linear-gradient(67deg, #0000 40%, #fff 0 41.5%, #0000 0) 32% 18% / 16% 16% no-repeat,
+    linear-gradient(67deg, #0000 40%, #fff 0 41.5%, #0000 0) 34.5% 15% / 17% 17% no-repeat,
+    linear-gradient(67deg, #0000 40%, #fff 0 41.5%, #0000 0) 38.5% 12.5% / 18% 18% no-repeat,
+    linear-gradient(67deg, #0000 40%, #fff 0 41.5%, #0000 0) 42.25% 10.25% / 19% 19% no-repeat,
+    conic-gradient(at 39.08% 30.58%, #0000 69deg, #ce7219 0 157deg, #0000 0),
+    radial-gradient(100% 100% at 40% 70.5%, #000 11.5%, #0000 11.6%),
+    radial-gradient(100% 100% at 30% 39%, #000 11.5%, #0000 11.6%),
+    radial-gradient(at 21.5% 45.25%, #1d3d7a 2%, #0000 2.1%),
+    radial-gradient(100% 165% at -10% 110%, #0000 63%, #000 64%) 23.75% 61% / 17% 29% no-repeat,
+    linear-gradient(#000 29%, #0000 0),
+    linear-gradient(70deg, #0000 37%, #000 0)
+  ;
+  clip-path: polygon(10.06% 35.80%, 28.94% 26.68%, 25.94% 19.15%, 13.14% 19.11%, 37.56%  3.20%, 65.99% 72.07%, 26.21% 88.69%);
+}
+
+.table-0 {
+  background: 
+    linear-gradient(95.65deg, #ea7a2e 18.25%, #4b2021 18.5%) 50% 0% / 100% 91% no-repeat,
+    linear-gradient(#0000 50%, #ea7a2e 0)
+  ;
+  clip-path: polygon(-0.70% 19.11%, 36.74% 19.11%, 43.92% 19.81%, 76.60% 20.20%, 78.78% 68.95%, 39.24% 90.33%, 47.11% 105.0%, 0% 105%);
+}
+
+.table-1 {
+  color: #aa9469;
+  clip-path: polygon(43.60% 70.12%, 55.5% 95%, 10.5% 95%, 18.25% 19.11%, 36.74% 19.11%, 43.92% 19.81%, 76.60% 20.20%, 78.78% 68.95%);
+  background: 
+    radial-gradient(100% 220% at 0 110%, #0000 43%, #1d3d7a 44%) 15.1% 72% / 10% 15% no-repeat,
+    radial-gradient(100% 100% at 28% 75%, #1d3d7a 10%, #0000 10.1%),
+    radial-gradient(100% 100% at 24% 55.75%, #1d3d7a 12%, #0000 12.1%),
+    
+    
+    linear-gradient(96deg, #0000 50%, #322 0 60%, #0000 0) 11.5% 89% / 6% 6% no-repeat,
+    radial-gradient(100% 59% at 45% 100%, #0000 92%, #322 0 99.9%, #0000 0) 15% 87.5% / 6.5% 9% no-repeat,
+    
+    radial-gradient(100% 59% at 60% 0%, #0000 94%, #322 0 99.9%, #0000 0) 22.5% 88.6% / 10% 10% no-repeat,
+    
+    radial-gradient(100% 59% at 45% 0%, #0000 92%, #322 0 99.9%, #0000 0) 21.5% 94% / 10% 10% no-repeat,
+    radial-gradient(100% 59% at 45% 0%, #0000 92%, #322 0 99.9%, #0000 0) 37.5% 94.5% / 8% 9% no-repeat,
+    radial-gradient(100% 59% at 45% 0%, #0000 92%, #322 0 99.9%, #0000 0) 36% 91.5% / 10% 10% no-repeat,
+    radial-gradient(100% 59% at 45% 0%, #0000 88%, #322 0 99.9%, #0000 0) 23.5% 89% / 7% 5% no-repeat,
+    radial-gradient(100% 59% at 50% 0%, #0000 92%, #322 0 99.9%, #0000 0) 39% 85% / 13% 8% no-repeat,
+    
+    radial-gradient(100% 59% at 50% 0%, #0000 92%, #322 0 99.9%, #0000 0) 43% 88.5% / 10% 8% no-repeat,
+    radial-gradient(140% 59% at 20% 100%, #0000 80%, #322 0 99.9%, #0000 0) 30% 88.55% / 4% 4% no-repeat,
+    radial-gradient(100% 59% at 50% 100%, #0000 87%, #322 0 99.9%, #0000 0) 45% 89.4% / 8% 6% no-repeat,
+    radial-gradient(100% 59% at 27% 100%, #0000 87%, #322 0 99.9%, #0000 0) 30.75% 92.1% / 6% 6% no-repeat,
+    
+    
+    radial-gradient(100% 59% at 45% 100%, #0000 92%, #322 0 99.9%, #0000 0) 15.25% 90.25% / 8% 9% no-repeat,
+    radial-gradient(100% 59% at 45% 100%, #0000 92%, #322 0 99.9%, #0000 0) 14.5% 93.5% / 6.5% 9% no-repeat,
+    radial-gradient(100% 59% at 45% 100%, #0000 92%, #322 0 99.9%, #0000 0) 47% 94% / 9.5% 9% no-repeat,
+    
+    radial-gradient(100% 59% at 45% 100%, #0000 92%, #322 0 99.9%, #0000 0) 33% 88.5% / 9.5% 9% no-repeat,
+    
+    radial-gradient(130% 80% at 24% 90%, currentColor 5.5%, #0000 5.6%),
+    radial-gradient(130% 80% at 37.5% 90.5%, currentColor 5.5%, #0000 5.6%),
+    radial-gradient(200% 80% at 54% 90%, currentColor 5.5%, #0000 5.6%),
+    radial-gradient(100% 80% at 9% 88.5%, currentColor 5.5%, #0000 5.6%),
+    radial-gradient(100% 80% at 50% 100%, #0000 65.5%, currentColor 66%) 10.75% 96.5% / 10% 10% no-repeat,
+    radial-gradient(130% 80% at 50% 100%, #0000 90%, currentColor 86%) 29% 100.5% / 6% 10% no-repeat,
+    radial-gradient(130% 80% at 50% 100%, #0000 90%, currentColor 86%) 44% 100.5% / 10% 10% no-repeat,
+    
+    linear-gradient(84deg, #0000 50%, #322 0 58%, #0000 0) 11.5% 71% / 6.5% 5.5% no-repeat,
+    linear-gradient(-4deg, #0000 50%, #322 0 58%, #0000 0) 15% 68.5% / 6.5% 5.5% no-repeat,
+    radial-gradient(100% 59% at 45% 100%, #0000 93%, #322 0 99.9%, #0000 0) 15% 72% / 6.5% 9% no-repeat,
+    linear-gradient(-4deg, #0000 50%, #322 0 56%, #0000 0) 15.5% 73.75% / 6.5% 5.5% no-repeat,
+    
+    linear-gradient(84deg, #0000 50%, #322 0 60%, #0000 0) 11.5% 80% / 6% 6% no-repeat,
+    radial-gradient(100% 59% at 45% 100%, #0000 93%, #322 0 99.9%, #0000 0) 15% 80.5% / 6.5% 9% no-repeat,
+    radial-gradient(100% 59% at 45% 100%, #0000 92%, #322 0 99.9%, #0000 0) 14.5% 77.75% / 6.5% 9% no-repeat,
+    radial-gradient(100% 59% at 45% 100%, #0000 92%, #322 0 99.9%, #0000 0) 15.5% 84.25% / 8.5% 9% no-repeat,
+    
+    
+    
+    linear-gradient(#0000 60%, #aa9469 0 90%, #0000 0) 0 0 / 52% 100% no-repeat
+    ;
+}

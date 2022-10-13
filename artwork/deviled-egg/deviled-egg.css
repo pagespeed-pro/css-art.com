@@ -1,0 +1,50 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #45b7f4;
+}
+
+div {
+  height: 300px;
+  width: 230px;
+  background-color: #fff;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 50% 50% 50% 50%/60% 60% 40% 40%;
+  box-shadow: 25px 0 rgba(0, 0, 0, 0.1);
+}
+
+div:before {
+  content: "";
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  background-color: #010008;
+  border-radius: 50%;
+  top: 180px;
+  right: 88px;
+  box-shadow: -40px 0 0 #010008, 10px 15px 0 -2px #f5750f, -50px 15px 0 -2px #f5750f, -20px 0 0 70px #f5d201;
+}
+
+div:after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 25px;
+  background-color: #010008;
+  top: 200px;
+  left: 102px;
+  border-radius: 5px 5px 15px 15px;
+  border: 3px solid #010008;
+  background: radial-gradient(at 50% 100%, #f5750f 8px, #010008 8px);
+}

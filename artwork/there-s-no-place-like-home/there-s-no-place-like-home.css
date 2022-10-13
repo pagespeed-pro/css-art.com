@@ -1,0 +1,517 @@
+@font-face {
+  font-family: "Pokemon GB";
+  src: url("https://cdn.rawgit.com/Superpencil/pokemon-font/d36892e5/fonts/pokemon-font.eot");
+  src: url("https://cdn.rawgit.com/Superpencil/pokemon-font/d36892e5/fonts/pokemon-font.woff");
+  font-weight: 400;
+}
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --base-color: #fff;
+  --primary-color: #b888f8;
+  --secondary-color: #58b8f8;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #eaeaea;
+  font-family: "Pokemon GB", monospace;
+  font-size: 16px;
+  line-height: 1.875em;
+}
+
+.container {
+  flex: 0 0 auto;
+}
+
+.house {
+  position: relative;
+}
+.house::before {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  width: calc(100% + 0.25rem * 8);
+  height: 4rem;
+  bottom: -0.25rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary-color);
+}
+.house.pallet {
+  --primary-color: #b888f8;
+}
+.house.viridian {
+  --primary-color: #7ff71f;
+}
+.house.pewter {
+  --primary-color: #909078;
+}
+.house.cerulean {
+  --primary-color: #2840f8;
+}
+.house.vermillion {
+  --primary-color: #f89800;
+}
+.house.lavender {
+  --primary-color: #c820f8;
+}
+.house.celadon {
+  --primary-color: #28f828;
+}
+.house.saffron {
+  --primary-color: #f8f800;
+}
+.house.fuschia {
+  --primary-color: #f87878;
+}
+.house.cinnabar {
+  --primary-color: #f84040;
+}
+.house-base {
+  position: relative;
+  height: 6.5rem;
+  width: 13.5rem;
+  border: solid 0.25rem #555;
+  border-radius: 0.5rem;
+  background-color: var(--base-color);
+  overflow: hidden;
+}
+.house-base::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - (0.25rem * 2));
+  height: 0.5rem;
+  border-top: solid 0.25rem var(--primary-color);
+  border-left: solid 0.25rem var(--primary-color);
+  border-right: solid 0.25rem var(--primary-color);
+  background-color: var(--secondary-color);
+}
+.house-base .house-window-wrapper {
+  bottom: 1.5rem;
+  left: 6.5rem;
+}
+.house-base-detail {
+  position: absolute;
+  z-index: 1;
+  bottom: 1.25rem;
+  height: 0.25rem;
+  background-color: var(--primary-color);
+  width: 100%;
+}
+.house-base-detail::before, .house-base-detail::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: calc(100% - (0.25rem * 4));
+  height: 0.25rem;
+  background-color: var(--primary-color);
+  transform: translateX(-50%);
+}
+.house-base-detail::before {
+  top: -1rem;
+}
+.house-base-detail::after {
+  top: -2rem;
+}
+.house-door {
+  position: absolute;
+  bottom: 0;
+  left: 0.25rem;
+  height: 100%;
+  width: calc(100% - (0.25rem * 2));
+  border: solid 0.25rem #555;
+  border-bottom: 0;
+  background-color: var(--secondary-color);
+}
+.house-door-window {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  height: 1.5rem;
+  width: calc(100% - (0.25rem * 2));
+  border: solid 0.25rem #555;
+  background-color: #fff;
+}
+.house-door-window::before, .house-door-window::after {
+  content: "";
+  position: absolute;
+}
+.house-door-window::before {
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  border-left: solid 0.5rem var(--primary-color);
+  border-top: solid 0.5rem var(--primary-color);
+  border-bottom: solid 0.5rem transparent;
+  border-right: solid 0.5rem transparent;
+}
+.house-door-window::after {
+  bottom: 0;
+  height: 0.25rem;
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+.house-door-detail {
+  position: absolute;
+  left: 0.25rem;
+  bottom: 0.25rem;
+  height: 1rem;
+  width: calc(100% - (0.25rem * 2));
+  border: solid 0.25rem #555;
+  border-top: 0;
+}
+.house-door-detail::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0.25rem;
+  width: calc(100% - (0.25rem * 4));
+  height: 100%;
+  border-left: solid 0.25rem #555;
+  border-right: solid 0.25rem #555;
+}
+.house-door-wrapper {
+  position: absolute;
+  z-index: 3;
+  bottom: 0;
+  left: 2.5rem;
+  height: 3.5rem;
+  width: 4rem;
+  border-top: solid 0.25rem var(--primary-color);
+  border-left: solid 0.25rem var(--secondary-color);
+  border-right: solid 0.25rem var(--secondary-color);
+  background-color: #fff;
+}
+.house-window {
+  position: relative;
+  height: 1.75rem;
+  width: 2rem;
+  border: solid 0.25rem #555;
+  background-color: #fff;
+}
+.house-window::before, .house-window::after {
+  content: "";
+  position: absolute;
+}
+.house-window::before {
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  border-left: solid 0.625rem var(--primary-color);
+  border-top: solid 0.625rem var(--primary-color);
+  border-bottom: solid 0.625rem transparent;
+  border-right: solid 0.625rem transparent;
+}
+.house-window::after {
+  bottom: 0;
+  height: 0.25rem;
+  width: 100%;
+  background-color: var(--secondary-color);
+}
+.house-window-wrapper {
+  position: absolute;
+  z-index: 4;
+  display: flex;
+}
+.house-sandwich {
+  position: absolute;
+  z-index: 2;
+  bottom: 3.75rem;
+  left: -0.5rem;
+  height: 2rem;
+  width: 14.5rem;
+  border: solid 0.25rem #555;
+  box-shadow: inset 1rem 0 0 var(--primary-color), inset -1rem 0 0 var(--primary-color);
+  background-color: var(--secondary-color);
+}
+.house-upper {
+  position: absolute;
+  z-index: 3;
+  bottom: 4.25rem;
+  left: -0.25rem;
+  height: 3.75rem;
+  width: 14rem;
+  border: solid 0.25rem #555;
+  background-color: var(--base-color);
+}
+.house-upper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0.75rem;
+  width: calc(100% - (0.25rem * 6));
+  height: 1rem;
+  background-color: var(--primary-color);
+}
+.house-upper .house-window-wrapper {
+  bottom: 1.25rem;
+  left: 6.5rem;
+}
+.house-upper > .house-window {
+  position: absolute;
+  z-index: 3;
+  bottom: 1.25rem;
+  left: 3rem;
+}
+.house-upper-detail {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  height: 0.25rem;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+.house-upper-detail::before, .house-upper-detail::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 0.25rem;
+}
+.house-upper-detail::before {
+  width: calc(100% - (0.25rem * 6));
+  bottom: 1rem;
+  border-left: solid 0.75rem var(--primary-color);
+  border-right: solid 0.75rem var(--primary-color);
+  background-color: var(--secondary-color);
+}
+.house-upper-detail::after {
+  left: 5rem;
+  width: 2rem;
+  bottom: 2rem;
+  background-color: var(--primary-color);
+}
+.house-upper-shadow {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 0.25rem;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+.house-upper-shadow::before, .house-upper-shadow::after {
+  content: "";
+  position: absolute;
+  width: 3.25rem;
+  height: 1.25rem;
+  background-color: var(--primary-color);
+}
+.house-upper-shadow::before {
+  transform: skewY(-24deg);
+}
+.house-upper-shadow::after {
+  right: 0;
+  transform: skewY(24deg);
+}
+.house-roof {
+  position: absolute;
+  z-index: 5;
+  bottom: 8.25rem;
+  left: 2.5rem;
+  width: 8.5rem;
+  height: 3.5rem;
+  border-top: solid 0.25rem #555;
+  border-bottom: solid 0.25rem #555;
+  background-color: var(--primary-color);
+}
+.house-roof::before {
+  content: "";
+  position: absolute;
+  bottom: -0.75rem;
+  width: 100%;
+  height: 0.25rem;
+  border-bottom: solid 0.25rem #555;
+  background-color: var(--secondary-color);
+}
+.house-roof-side {
+  content: "";
+  position: absolute;
+  top: 0.625rem;
+  width: 3.75rem;
+  height: 3.5rem;
+  border-top: solid 0.25rem #555;
+  border-bottom: solid 0.25rem #555;
+  background-color: var(--secondary-color);
+}
+.house-roof-side::before {
+  content: "";
+  position: absolute;
+  bottom: -0.75rem;
+  width: calc(100% - (0.25rem * 1));
+  height: 0.25rem;
+  border-bottom: solid 0.25rem #555;
+  background-color: var(--secondary-color);
+}
+.house-roof-side-left {
+  right: 100%;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-left: solid 0.25rem #555;
+  box-shadow: inset 0.25rem 0.25rem 0 var(--base-color);
+  transform: skewY(-24deg);
+}
+.house-roof-side-left::before {
+  border-bottom-left-radius: 0.5rem;
+  border-left: solid 0.25rem #555;
+}
+.house-roof-side-right {
+  left: 100%;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-right: solid 0.25rem #555;
+  box-shadow: inset -0.25rem 0.25rem 0 var(--base-color);
+  transform: skewY(24deg);
+}
+.house-roof-side-right::before {
+  right: 0;
+  border-bottom-right-radius: 0.5rem;
+  border-right: solid 0.25rem #555;
+}
+.house-roof-detail {
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background-color: var(--secondary-color);
+}
+.house-roof-detail::before, .house-roof-detail::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+}
+.house-roof-detail::before {
+  bottom: 1rem;
+  background-color: var(--secondary-color);
+}
+.house-roof-detail::after {
+  bottom: 1.75rem;
+  background-color: var(--base-color);
+}
+
+.color-controls {
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  bottom: 0.75rem;
+  max-width: 37.5rem;
+  width: 100%;
+  margin-top: 1.25rem;
+  transform: translateX(-50%);
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: double 0.75rem #555;
+  box-shadow: inset 0 0.25rem 0 #555, 0 0.25rem 0 #555;
+  background-color: var(--base-color);
+  color: #555;
+}
+.color-controls p {
+  font-family: "Pokemon GB", monospace;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+}
+.color-controls-button {
+  flex-shrink: 0;
+  padding: 0;
+  margin: 0.25rem 0.75rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  border: solid 0.25rem #555;
+  cursor: pointer;
+}
+.color-controls-button:focus {
+  outline: 0;
+}
+.color-controls-button:hover::before {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+.color-controls-button::before {
+  content: attr(data-color);
+  position: absolute;
+  right: -0.75rem;
+  bottom: calc(100% + (0.25rem * 6));
+  transform: translateY(0.25rem);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.25s;
+  font-family: "Pokemon GB", monospace;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: double 0.75rem #555;
+  box-shadow: inset 0 0.25rem 0 #555, 0 0.25rem 0 #555;
+  background-color: var(--base-color);
+  color: #555;
+}
+.color-controls-button::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.5rem 0 0.5rem 0.5rem;
+  border-color: transparent transparent transparent #555;
+  transform: translate(-250%, -50%);
+  opacity: 0;
+  transition: 0.25s;
+}
+.color-controls-button.pallet {
+  background-color: #b888f8;
+}
+.color-controls-button.viridian {
+  background-color: #7ff71f;
+}
+.color-controls-button.pewter {
+  background-color: #909078;
+}
+.color-controls-button.cerulean {
+  background-color: #2840f8;
+}
+.color-controls-button.vermillion {
+  background-color: #f89800;
+}
+.color-controls-button.lavender {
+  background-color: #c820f8;
+}
+.color-controls-button.celadon {
+  background-color: #28f828;
+}
+.color-controls-button.saffron {
+  background-color: #f8f800;
+}
+.color-controls-button.fuschia {
+  background-color: #f87878;
+}
+.color-controls-button.cinnabar {
+  background-color: #f84040;
+}
+.color-controls-button.active::after {
+  transform: translate(-300%, -50%);
+  opacity: 1;
+}
+.color-controls-button-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 0.5rem;
+}

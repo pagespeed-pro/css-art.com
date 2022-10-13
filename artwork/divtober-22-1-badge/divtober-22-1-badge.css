@@ -1,0 +1,152 @@
+.badge {
+  width: 40vmin;
+  aspect-ratio: 1;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background:
+    /* ring */
+    radial-gradient(farthest-side, #0000 78%, #fff 78.25% 79%, #a7ca33 79.25%),
+    /* lis flower */
+    conic-gradient(#0000 35deg, #fff 0 140deg, #0000 0) 44% 54.5% / 7% 7%,
+    conic-gradient(#0000 220deg, #fff 0 325deg, #0000 0) 52.5% 54.5% / 7% 7%,
+    conic-gradient(at 50% 0, #0000 153deg, #fff 0 207deg, #0000 0) 47.8% 40% / 21% 5%,
+    radial-gradient(34% 50% at 50% 60%, #fff 99.99%, #0000) 48.05% 45% / 10.5% 10%,
+    radial-gradient(25% 50% at 100% 50%, #fff 99.99%, #0000) 42.2% 55.9% / 10.5% 13.9%,
+    radial-gradient(25% 50% at 0% 50%, #fff 99.99%, #0000) 53.8% 55.9% / 10.5% 13.9%,
+    radial-gradient(farthest-side at 50% 20%, #296f2a 99.99%, #0000 0) 43.6% 54.3% / 3.7% 3.4%,
+    radial-gradient(farthest-side at 50% 20%, #296f2a 99.99%, #0000 0) 52.8% 54.3% / 3.7% 3.4%,
+    radial-gradient(50% 50% at 33.8% 74.8%, #fff 29%, #0000 0) 47.8% 50.1% / 21% 23.9%,
+    radial-gradient(50% 50% at 66.2% 74.8%, #fff 29%, #0000 0) 47.8% 50.1% / 21% 23.9%,
+    radial-gradient(farthest-side at 50% 80%, #296f2a 99.99%, #0000 0) 43.1% 53% / 4.8% 3.5%,
+    radial-gradient(farthest-side at 50% 80%, #296f2a 99.99%, #0000 0) 53.3% 53% / 4.8% 3.5%,
+    radial-gradient(53% 47% at 21% 49%, #fff 40%, #0000 0) 47.8% 50.1% / 21% 23.9%,
+    radial-gradient(53% 47% at 79% 49%, #fff 40%, #0000 0) 47.8% 50.1% / 21% 23.9%,
+    /* center square */
+    linear-gradient(#296f2a 0 0) 47.75% 50% / 23.25% 24%,
+    linear-gradient(#000 0 0) 47.75% 50% / 26.25% 27%,
+    /* connections */
+    radial-gradient(50% 70%, #dce121 99.99%, #0000 0) 29% 39% / 10% 3.75%,
+    radial-gradient(50% 70%, #dce121 99.99%, #0000 0) 29% 46.2% / 10% 3.75%,
+    radial-gradient(50% 70%, #dce121 99.99%, #0000 0) 29% 53.4% / 10% 3.75%,
+    radial-gradient(50% 70%, #dce121 99.99%, #0000 0) 29% 60.6% / 10% 3.75%,
+    radial-gradient(50% 70%, #dce121 99.99%, #0000 0) 67.75% 39.1% / 10% 3.75%,
+    radial-gradient(50% 70%, #dce121 99.99%, #0000 0) 67.75% 46.3% / 10% 3.75%,
+    radial-gradient(50% 70%, #dce121 99.99%, #0000 0) 67.75% 53.5% / 10% 3.75%,
+    radial-gradient(50% 70%, #dce121 99.99%, #0000 0) 67.75% 60.7% / 10% 3.75%,
+    radial-gradient(70% 50%, #dce121 99.99%, #0000 0) 38.1% 30.4% / 3.75% 10%,
+    radial-gradient(70% 50%, #dce121 99.99%, #0000 0) 45.1% 30.4% / 3.75% 10%,
+    radial-gradient(70% 50%, #dce121 99.99%, #0000 0) 52.5% 30.4% / 3.75% 10%,
+    radial-gradient(70% 50%, #dce121 99.99%, #0000 0) 59.7% 30.4% / 3.75% 10%,
+    radial-gradient(70% 50%, #dce121 99.99%, #0000 0) 37.8% 69.8% / 3.75% 10%,
+    radial-gradient(70% 50%, #dce121 99.99%, #0000 0) 44.85% 69.8% / 3.75% 10%,
+    radial-gradient(70% 50%, #dce121 99.99%, #0000 0) 52.2% 69.8% / 3.75% 10%,
+    radial-gradient(70% 50%, #dce121 99.99%, #0000 0) 59.4% 69.8% / 3.75% 10%,
+    /* circles */
+    radial-gradient(circle at 28.6% 23.25%, #dce121 2.3%, #0000 2.4%),
+    radial-gradient(circle at 46.4% 16.1%, #dce121 2.4%, #0000 2.5%),
+    radial-gradient(circle at 59.25% 17.4%, #dce121 2.4%, #0000 2.5%),
+    radial-gradient(circle at 81.8% 53.3%, #dce121 2.45%, #0000 2.55%),
+    radial-gradient(circle at 67.3% 79.4%, #dce121 2.35%, #0000 2.45%),
+    radial-gradient(circle at 52.05% 80.25%, #dce121 2.45%, #0000 2.55%),
+    radial-gradient(circle at 15.05% 46.5%, #dce121 2.4%, #0000 2.5%),
+    radial-gradient(circle at 15.05% 53.2%, #dce121 2.4%, #0000 2.5%),
+    radial-gradient(circle at 15.05% 60%, #dce121 2.3%, #0000 2.4%),
+    /* vertical lines (left-top->right-bottom) */
+    linear-gradient(#dce121 39%, #0000 0 44.75%, #dce121 0) 38.25% 0 / 1.7% 50%,
+    linear-gradient(#0000 43%, #dce121 0) 45.2% 0 / 1.7% 50%,
+    linear-gradient(#0000 30.5%, #dce121 0) 52.4% 0 / 1.7% 50%,
+    linear-gradient(#0000 30%, #dce121 0) 59.5% 0 / 1.7% 50%,
+    linear-gradient(#0000 30%, #dce121 0) 80.6% 0 / 1.7% 35%,
+    linear-gradient(#dce121 0 60.5%, #0000 0) 38% 100% / 1.7% 50%,
+    linear-gradient(#0000 43%, #dce121 0) 44.9% 100% / 1.7% 50%,
+    linear-gradient(#dce121 60%, #0000 0) 52.1% 100% / 1.7% 50%,
+    linear-gradient(#dce121 60.25%, #0000 0) 59.2% 100% / 1.7% 50%,
+    /* horizontal lines */
+    linear-gradient(90deg, #dce121 14%, #0000 0) 100% 15.5% / 55% 1.7%,
+    linear-gradient(90deg, #0000 74%, #dce121 0) 0% 22.7% / 39.25% 1.7%,
+    linear-gradient(90deg, #dce121 31.8%, #0000 0) 0 33.8% / 50% 1.7%,
+    linear-gradient(90deg, #0000 40%, #dce121 0) 0 39.2% / 50% 1.7%,
+    linear-gradient(90deg, #dce121 51.2%, #0000 0) 100% 39.4% / 50% 1.7%,
+    linear-gradient(90deg, #0000 15.2%, #dce121 0) 100% 46.4% / 100% 1.7%,
+    linear-gradient(90deg, #0000 15.2%, #dce121 0 80%, #0000 0) 100% 53.4% / 100% 1.7%,
+    linear-gradient(90deg, #0000 30%, #dce121 0) 0% 60.1% / 50% 1.7%,
+    linear-gradient(90deg, #dce121 54.4%, #0000 0) 100% 60.7% / 50% 1.7%,
+    linear-gradient(90deg, #0000 63.5%, #dce121 0) 100% 65.9% / 50% 1.7%,
+    linear-gradient(90deg, #dce121 20%, #0000 0) 100% 79.9% / 41.8% 1.7%,
+    /* diagonal lines */
+    linear-gradient(22deg, #0000 29%, #dce121 30% 41%, #0000 42%) 41.1% 15% / 8.5% 10%,
+    linear-gradient(48deg, #0000 42%, #dce121 43% 60%, #0000 61%) 16% 35.8% / 5.5% 6.9%,
+    linear-gradient(-44deg, #0000 45%, #dce121 46% 62%, #0000 63%) 79.75% 36.7% / 5.85% 5.9%,
+    linear-gradient(45deg, #0000 43%, #dce121 44% 61%, #0000 62%) 81.2% 64% / 6.5% 6.7%,
+    linear-gradient(-44deg, #0000 46%, #dce121 47% 62%, #0000 63%) 34.3% 87.3% / 7% 10%,
+    /* base color */
+    #296f2a;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.badge.texture {
+  box-shadow:
+    inset -0.5vmin -1.5vmin 2vmin #0404,
+    0 0 0.5vmin #0001,
+    0 0 3vmin #0303,
+    1.5vmin 1.5vmin 1vmin #0101,
+    0 0 0 100vmax #296f2a22;
+}
+
+.badge.texture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:
+    repeating-conic-gradient(#0000 0 4.75deg, #0001 0 5.3deg),
+    repeating-conic-gradient(#0001 0 0.5deg, #fff2 0 1deg),
+    repeating-conic-gradient(#0000 0 2.35deg, #0003 0 2.45deg);
+  border-radius: 50%;
+  box-shadow: 
+    inset 0 0 2vmin #a7ca33,
+    inset 1vmin 1vmin 4vmin #ffcc,
+    inset -1vmin -1vmin 3vmin #0506;
+  -webkit-mask: radial-gradient(farthest-side, #0000 78%, #000 0);
+  mask: radial-gradient(farthest-side, #0000 78%, #000 0);
+}
+
+.badge.texture::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 78%;
+  height: 78%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: 
+    -0.5vmin -0.5vmin 0.75vmin 0.2vmin #0002,
+    0.5vmin 0.5vmin 0.75vmin 0.2vmin #ffc4;
+  background:
+    repeating-linear-gradient(transparent 0 13%, #00000016 0 14%, transparent 0) 30% 13.85% / 40% 20% no-repeat,
+    repeating-linear-gradient(transparent 0 13%, #ffffff16 0 14%, transparent 0) 30% 9% / 40% 40% no-repeat,
+    repeating-linear-gradient(transparent 0 13%, #ffffff04 0 15%, transparent 0) 30% 0% / 40% 40% repeat-y,
+    repeating-linear-gradient(transparent 0 7%, #ffffff06 0 9%, transparent 0) 70% 0% / 33% 100% no-repeat,
+    repeating-linear-gradient(transparent 0 11%, #ffffff04 0 13%, transparent 0) -10% 0% / 35% 100% no-repeat,
+    repeating-linear-gradient(transparent 0 17%, #ffffff08 0 19%, transparent 0) 110% 0% / 27% 100% no-repeat,
+    repeating-linear-gradient(transparent 0 13%, #0000000a 0 19%, transparent 0) 60% -10% / 33% 100% repeat-x,
+    repeating-linear-gradient(transparent 0 8%, #00000008 0 14%, transparent 0) 21% 2% / 27% 100% no-repeat,
+    repeating-linear-gradient(transparent 0 8%, #00000004 0 12%, transparent 0) 31% 7% / 19% 100% no-repeat,
+    repeating-linear-gradient(transparent 0 13%, #00000005 0 16.3%, transparent 0) 71% 15% / 19% 100% no-repeat,
+    repeating-linear-gradient(transparent 0 13%, #ffffff05 0 16.5%, transparent 0) 30% 0% / 4.0% 10.0% repeat,
+    repeating-linear-gradient(transparent 0 7%, #ffffff08 0 10.5%, transparent 0) 70% 0% / 30% 10.0% repeat-y,
+    repeating-linear-gradient(transparent 0 11%, #ffffff04 0 14.5%, transparent 0) -10% 0% / 3.5% 10.0% repeat,
+    repeating-linear-gradient(transparent 0 17%, #ffffff0a 0 20.5%, transparent 0) 110% 0% / 2.7% 10.0% repeat,
+    repeating-linear-gradient(transparent 0 13%, #00000008 0 15.8%, transparent 0) 60% -10% / 3.3% 10.0% repeat,
+    repeating-linear-gradient(transparent 0 8%, #00000014 0 10%, transparent 0) 11% 2% / 20% 10.0% repeat-y,
+    repeating-linear-gradient(transparent 0 8%, #00000004 0 12.2%, transparent 0) 31% 7% / 1.9% 10.0% repeat,
+    repeating-linear-gradient(transparent 0 13%, #00000011 0 16%, transparent 0) 71% 15% / 1.9% 10.0% repeat;
+}

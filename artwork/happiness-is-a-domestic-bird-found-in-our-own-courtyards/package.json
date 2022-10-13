@@ -1,0 +1,39 @@
+{
+    "name": "happiness-is-a-domestic-bird-found-in-our-own-courtyards",
+    "version": "1.0.0",
+    "title": "Happiness is a domestic bird found in our own courtyards",
+    "description": "A hummingbird drawn in HTML and CSS using semicircles (although _cheating_ a little bit by stretching and rotating them).\n\nInspired by the [Ivan Bobrov](https://dribbble.com/bigoodis)'s hummingbirds on Dribbble ([this one](https://dribbble.com/shots/4832273-Bird-Mark) and [this one](https://dribbble.com/shots/4838572-Colibri-mark)).\n\nSee more CSS drawings on this collection: https://codepen.io/collection/AOaOdx",
+    "author": {
+        "name": "Álvaro Montoro",
+        "avatar": "https://assets.codepen.io/1506195/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1638050839&width=512",
+        "web": "https://alvaromontoro.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/alvaromontoro"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/alvaro_montoro"
+            },
+            {
+                "title": "GitHub",
+                "url": "https://github.com/alvaromontoro"
+            }
+        ]
+    },
+    "html": "happiness-is-a-domestic-bird-found-in-our-own-courtyards.html",
+    "css": [
+        "happiness-is-a-domestic-bird-found-in-our-own-courtyards.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [
+        "css",
+        "htmldrawing",
+        "cssart"
+    ],
+    "original": "https://codepen.io/alvaromontoro/pen/qBxxLrw",
+    "codepen": "https://codepen.io/alvaromontoro/pen/qBxxLrw"
+}

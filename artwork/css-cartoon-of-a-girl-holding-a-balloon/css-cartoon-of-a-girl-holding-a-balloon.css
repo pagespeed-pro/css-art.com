@@ -1,0 +1,416 @@
+body {
+  overflow: hidden;
+}
+
+article {
+  --line: #632;
+  --skin: #fdc;
+  --hair: #963;
+  --hair-dark: #852;
+  --ribbon: #fe8;
+  --balloon: #c47;
+  width: 80vmin;
+  aspect-ratio: 1;
+  position: absolute;
+  color: #632;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -59%);
+}
+
+article *,
+article *::before,
+article *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.head {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  left: 50%;
+  top: 10%;
+  transform: translateX(-50%);
+}
+
+
+
+.hair {
+  width: 105%;
+  aspect-ratio: 1;
+  border: 0.8vmin solid;
+  border-radius: 50%;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 0 70%);
+  background: var(--hair);
+  left: 50%;
+  top: -1%;
+  transform: translateX(-50%);
+}
+
+.ear {
+  width: 20%;
+  aspect-ratio: 1;
+  border: 0.8vmin solid;
+  background: var(--skin);
+  border-radius: 50%;
+  top: 74%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+
+.ear + .ear {
+  left: auto;
+  right: 5%;
+  transform: translate(50%, -50%);
+}
+
+.bangs {
+  width: 115%;
+  aspect-ratio: 1;
+  background:
+    /* border */
+    radial-gradient(farthest-side at 50% 100%, #0000 20%, var(--line) 20.5% calc(20.5% + 0.6vmin), #0000 0) 17% 40.5% / 7% 6%,
+    radial-gradient(farthest-side at 50% 100%, #0000 20%, var(--line) 20.5% calc(20.5% + 0.6vmin), #0000 0) 34.5% 40.5% / 7% 6%,
+    radial-gradient(farthest-side at 50% 100%, #0000 20%, var(--line) 20.5% calc(20.5% + 0.6vmin), #0000 0) 49.5% 39% / 8% 7%,
+    radial-gradient(farthest-side at 50% 100%, #0000 20%, var(--line) 20.5% calc(20.5% + 0.6vmin), #0000 0) 66.5% 40.5% / 8% 6%,
+    radial-gradient(farthest-side at 50% 100%, #0000 10%, var(--line) 10.5% calc(10.5% + 0.6vmin), #0000 0) 80.5% 43% / 3% 6%,
+    radial-gradient(at 50% 20%, #0000 40%, var(--line) 40.5% calc(40.5% + 0.8vmin), #0000 calc(41% + 0.8vmin)) 0% 50% / 25% 15%,
+    radial-gradient(at 50% 20%, #0000 40%, var(--line) 40.5% calc(40.5% + 0.8vmin), #0000 calc(41% + 0.8vmin)) 18% 50% / 30% 17%,
+    radial-gradient(at 50% 20%, #0000 40%, var(--line) 40.5% calc(40.5% + 0.8vmin), #0000 calc(41% + 0.8vmin)) 40% 48% / 25% 15%,
+    radial-gradient(at 50% 20%, #0000 40%, var(--line) 40.5% calc(40.5% + 0.8vmin), #0000 calc(41% + 0.8vmin)) 60% 50% / 30% 16%,
+    radial-gradient(at 50% 20%, #0000 40%, var(--line) 40.5% calc(40.5% + 0.8vmin), #0000 calc(41% + 0.8vmin)) 79% 50% / 25% 15%,
+    radial-gradient(at 50% 20%, #0000 40%, var(--line) 40.5% calc(40.5% + 0.8vmin), #0000 calc(41% + 0.8vmin)) 99% 50% / 25% 15%,
+    /* hairs */
+    radial-gradient(100% 100% at 100% 100%, #0000 calc(99.9% - 0.8vmin), var(--hair-dark) 0 99.9%, #0000 99.9%) 17% 0% / 44% 53%,
+    radial-gradient(100% 100% at 100% 100%, #0000 calc(99.9% - 0.8vmin), var(--hair-dark) 0 99.9%, #0000 99.9%) 40% -5% / 40% 55%,
+    radial-gradient(100% 100% at 100% 85%, #0000 calc(99.9% - 0.8vmin), var(--hair-dark) 0 99.9%, #0000 99.9%) 60% -5% / 40% 52%,
+    radial-gradient(100% 100% at 0% 60%, #0000 calc(99.9% - 0.8vmin), var(--hair-dark) 0 99.9%, #0000 99.9%) 30% -5% / 40% 55%,
+    radial-gradient(100% 100% at 0% 90%, #0000 calc(99.9% - 0.8vmin), var(--hair-dark) 0 99.9%, #0000 99.9%) 60% -5% / 40% 55%,
+    radial-gradient(100% 100% at 0% 90%, #0000 calc(99.9% - 0.8vmin), var(--hair-dark) 0 99.9%, #0000 99.9%) 80% 5% / 40% 50%,
+    /* color fill */
+    radial-gradient(at 50% 20%, var(--hair) 40.5% calc(40.5% + 0.8vmin), #0000 calc(41% + 0.8vmin)) 0% 50% / 25% 15%,
+    radial-gradient(at 50% 20%, var(--hair) 40.5% calc(40.5% + 0.8vmin), #0000 calc(41% + 0.8vmin)) 18% 50% / 30% 17%,
+    radial-gradient(at 50% 20%, var(--hair) 40.5% calc(40.5% + 0.8vmin), #0000 calc(41% + 0.8vmin)) 40% 48% / 25% 15%,
+    radial-gradient(at 50% 20%, var(--hair) 40.5% calc(40.5% + 0.8vmin), #0000 calc(41% + 0.8vmin)) 60% 50% / 30% 16%,
+    radial-gradient(at 50% 20%, var(--hair) 40.5% calc(40.5% + 0.8vmin), #0000 calc(41% + 0.8vmin)) 79% 50% / 25% 15%,
+    radial-gradient(at 50% 20%, var(--hair) 40.5% calc(40.5% + 0.8vmin), #0000 calc(41% + 0.8vmin)) 99% 50% / 25% 15%,
+    linear-gradient(var(--hair) 49%, #0000 0);
+  background-repeat: no-repeat;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  border-radius: 100% 100% 0 0;
+}
+
+.face {
+  width: 90%;
+  aspect-ratio: 1;
+  border: 0.8vmin solid;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: 
+    radial-gradient(circle at 23% 85%, #f002 11%, #0000 0),
+    radial-gradient(circle at 77% 85%, #f002 11%, #0000 0),
+    var(--skin);
+}
+
+.eye {
+  --pos: 24%;
+  width: 13%;
+  height: 14%;
+  background: 
+    radial-gradient(circle at 34% 34%, #fff 15%, #0000 16%),
+    radial-gradient(circle at 20% 55%, #fff 7%, #0000 8%),
+    var(--line);
+  border-radius: 50%;
+  top: 62%;
+  right: var(--pos);
+}
+
+.eye::before {
+  content: "";
+  width: 180%;
+  height: 260%;
+  left: 50%;
+  transform: translate(-41%, -4%);
+  border: 0.8vmin solid #0000;
+  border-radius: 50%;
+  border-top-color: var(--line);
+  border-left: 0.7vmin solid #0000;
+}
+
+.eye::after {
+  content: "";
+  width: 220%;
+  height: 260%;
+  left: 50%;
+  transform: translate(-40%, -25%);
+  border: 0.9vmin solid #0000;
+  border-radius: 50%;
+  border-top-color: var(--line);
+  border-left: 0.7vmin solid #0000;
+}
+
+.eye + .eye {
+  left: var(--pos);
+}
+
+.eye + .eye::before {
+  transform: translate(-60%, -4%);
+  border-left: 0.8vmin solid #0000;
+}
+
+.eye + .eye::after {
+  transform: translate(-60%, -25%);
+}
+
+.nose {
+  width: 8%;
+  aspect-ratio: 1;
+  border: 0.8vmin solid #0000;
+  border-top-color: var(--line);
+  border-right-color: var(--line);
+  border-radius: 50%;
+  top: 79%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-10deg);
+}
+
+.mouth {
+  width: 30%;
+  aspect-ratio: 0.9;
+  border: 0.8vmin solid #0000;
+  border-bottom-color: var(--line);
+  border-radius: 50%;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.bun {
+  border: 0.8vmin solid;
+  border-radius: 50%;
+  width: 35%;
+  aspect-ratio: 1;
+  left: 56%;
+  top: 0;
+  transform: translate(-50%, -120%);
+  background: 
+    radial-gradient(100% 100% at 100% 80%, #0000 calc(99.9% - 0.8vmin), var(--hair-dark) 0 99.9%, #0000 99.9%) 57% -20% / 50% 90% no-repeat,
+    radial-gradient(150% 100% at 0 50%, #0000 calc(59.9% - 0.8vmin), var(--hair-dark) 0 59.9%, #0000 0) 70% 30% / 50% 100% no-repeat,
+    var(--hair);
+}
+
+.ribbon {
+  width: 23%;
+  height: 20%;
+  top: 0;
+  left: 56%;
+  transform: translate(-100%, -100%);
+  border-radius: 30% 130% 100% 50% / 100% 100% 100% 90%;
+  border: 0.8vmin solid;
+  background: 
+    radial-gradient(100% 100% at 50% 140%, #0000 50%, var(--line) 0 70%, #0000 0) 90% -20% / 50% 70% no-repeat,
+    var(--ribbon);
+}
+
+.ribbon::before {
+  content: "";
+  width: 130%;
+  height: 125%;
+  background: 
+    radial-gradient(100% 100% at 50% 140%, #0000 50%, var(--line) 0 70%, #0000 0) 10% -40% / 50% 70% no-repeat,
+    var(--ribbon);
+  border-radius: 100% 40% 60% 130% / 100% 110% 100% 90%;
+  left: 100%;
+  border: 0.8vmin solid;
+}
+
+.ribbon::after {
+  content: "";
+  width: 60%;
+  aspect-ratio: 1;
+  border: 0.8vmin solid;
+  background: var(--ribbon);
+  border-radius: 50%;
+  left: 105%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.dress {
+  width: 31%;
+  height: 40%;
+  border: 0.8vmin solid;
+  border-radius: 100% / 200% 200% 20% 20%;
+  top: 57%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: 
+    radial-gradient(circle at 50% 25%, white 1.5vmin, var(--line) 1.55vmin 2.2vmin, #0000 2.25vmin),
+    radial-gradient(circle at 50% 50%, white 1.5vmin, var(--line) 1.55vmin 2.2vmin, #0000 2.25vmin),
+    radial-gradient(circle at 50% 75%, white 1.5vmin, var(--line) 1.55vmin 2.2vmin, #0000 2.25vmin),
+    var(--ribbon)
+}
+
+.dress::before,
+.dress::after {
+  content: "";
+  width: 30%;
+  height: 15%;
+  background: #fff;
+  border: 0.8vmin solid;
+  border-radius: 50% / 0% 0% 100% 100%;
+  left: 50%;
+  top: 1%;
+  transform: rotate(-10deg);
+}
+
+.dress::before {
+  transform: translateX(-100%) scaleX(-1) rotate(-10deg);
+}
+
+.leg {
+  --pos: 32%;
+  width: 11.25%;
+  height: 33%;
+  border-radius: 100% / 95% 100% 80% 65%;
+  border: 0.8vmin solid;
+  background:
+    radial-gradient(300% 66% at 50% 100%, var(--ribbon) 20%, var(--line) calc(20% + 0.1vmin) calc(20% + 0.8vmin), white calc(20% + 0.9vmin) calc(25% + 0.8vmin), var(--line) calc(25% + 0.9vmin) calc(25% + 1.6vmin), #0000 calc(25% + 1.7vmin)),
+    var(--skin);
+  transform: translateX(-50%) rotate(-1deg);
+  right: var(--pos);
+  top: 85%;
+  transform-origin: 50% 0;
+}
+
+.leg + .leg {
+  left: var(--pos);
+  transform: scaleX(-1) translateX(-50%) rotate(-3deg);
+}
+
+.arm {
+  --pos: 34%;
+  width: 9%;
+  height: 33%;
+  border-radius: 100% / 95% 100% 80% 65%;
+  border: 0.8vmin solid;
+  background:
+    var(--skin);
+  transform: translateX(-50%) rotate(-30deg);
+  right: var(--pos);
+  top: 60%;
+  transform-origin: 50% 0;
+}
+
+.arm + .arm {
+  left: var(--pos);
+  transform: translate(58%, 3%) rotate(70deg);
+}
+
+.items {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.balloon {
+  width: 23%;
+  height: 30%;
+  border: 0.8vmin solid;
+  border-radius: 100% / 80% 80% 120% 120%;
+  background: 
+    radial-gradient(circle at 25% 25%, #fff7 12%, #0000 12.5%),
+    radial-gradient(circle at 12% 40%, #fff7 5%, #0000 5.5%),
+    var(--balloon);
+  left: 4%;
+  
+}
+
+.balloon::before {
+  content: "";
+  width: 0.8vmin;
+  height: 200%;
+  background: var(--line);
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.balloon::after {
+  content: "";
+  border: 0.8vmin solid;
+  width: 15%;
+  height: 15%;
+  background: var(--balloon);
+  border-radius: 100% / 130% 120% 20% 10%;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, 0)
+}
+
+
+
+/***/
+
+#youtube {
+  z-index: 2;
+  display: block;
+  width: 100px;
+  height: 70px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  border-radius: 50% / 11%;
+  transition: transform 0.5s;
+}
+
+#youtube:hover,
+#youtube:focus {
+  transform: scale(1.1);
+}
+
+#youtube::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 7.5%;
+  left: -6%;
+  width: 112%;
+  height: 85%;
+  background: red;
+  border-radius: 9% / 50%;
+}
+
+#youtube::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  width: 45px;
+  height: 30px;
+  border: 15px solid transparent;
+  box-sizing: border-box;
+  border-left: 30px solid white;
+}
+
+#youtube span {
+  font-size: 0;
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
