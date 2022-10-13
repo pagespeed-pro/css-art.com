@@ -1,0 +1,35 @@
+{
+    "name": "kawaii-mild-cookie-pure-css-drawing",
+    "version": "1.0.0",
+    "title": "Kawaii Mild&Cookie pure CSS Drawing",
+    "description": "",
+    "author": {
+        "name": "Magdalena",
+        "avatar": "https://assets.codepen.io/1513812/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1641728577&width=512",
+        "web": "http://makneta.herokuapp.com/",
+        "social": [
+            {
+                "title": "Codepen",
+                "url": "https://codepen.io/Magda_/"
+            },
+            {
+                "title": "Twitter",
+                "url": "https://twitter.com/makneta"
+            },
+            {
+                "title": "dev.to",
+                "url": "https://dev.to/makneta"
+            }
+        ]
+    },
+    "html": "kawaii-mild-cookie-pure-css-drawing.html",
+    "css": [
+        "kawaii-mild-cookie-pure-css-drawing.css"
+    ],
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": [],
+    "original": "https://codepen.io/Magda_/pen/NWxBxYR",
+    "codepen": "https://codepen.io/Magda_/pen/NWxBxYR"
+}
