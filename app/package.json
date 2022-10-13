@@ -41,7 +41,7 @@
         "googleapis": "^59.0.0",
         "helmet": "^3.12.0",
         "html-minifier": "^3.5.21",
-        "markdown-it": "^8.4.2",
+        "markdown-it": "^12.3.2",
         "memory-cache": "^0.2.0",
         "mustache-express": "^1.2.8",
         "mysql": "^2.16.0",
