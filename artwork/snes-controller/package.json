@@ -1,0 +1,25 @@
+{
+    "name": "purecss-snes-controller",
+    "version": "1.0.0",
+    "title": "Pure CSS Snes Controller",
+    "description": "Photorealistic drawing of a Super Nintendo controller. Hand-coded entirely in HTML & CSS.",
+    "author": {
+        "name": "Júnior Corrêa",
+        "avatar": "https://drive.google.com/file/d/1_PVtjjuGspOhk3LLgh6rikZxqOkPe7Zf/view?usp=share_link",
+        "social": [{
+            "title": "Github",
+            "url": "https://github.com/correasjr"
+        }, {
+            "title": "Instagram",
+            "url": "https://www.instagram.com/correasjr"
+        }]
+    },
+    "html": "snes.html",
+    "css": ["snes.css"],
+    "js": "",
+    "thumbnail": "snes-controller.PNG",
+    "splash": "snes-controller.PNG",
+    "keywords": ["snes", "nintendo", "controller"],
+    "original": "",
+    "github": ""
+}

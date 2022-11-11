@@ -1,0 +1,583 @@
+@font-face {
+   font-family: "SnesItalic";
+   src: url('SnesItalic-1G9Be.ttf');
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   background-color: #FB8DA0;
+}
+
+.controller{
+   position: absolute;
+   margin: auto;
+   border: 1px transparent black;
+   width: 650px;
+   height: 350px;
+   transform: translate(50%, 30%);
+}
+
+.roundside{
+   position: absolute;
+   margin: auto;
+   background-color: #d5d5dd;
+   height: 250px;
+   width: 250px;
+   border-radius: 50%;
+   top: 0;
+   bottom: 0;
+   box-shadow: 10px 10px 20px 0 #e9e8ed inset,
+   0px -15px 10px -10px rgb(112, 108, 108) inset;
+}
+
+.roundside:before{
+   content: "";
+   position: absolute;
+   width: 210px;
+   height: 90px;
+   top: 120px;
+   left: 20px;
+   margin: auto;
+   border-radius: 50%;
+   box-shadow: 0px 85px 40px -30px rgb(0,0,0,0.9);
+   z-index: -1;
+}
+
+.right{
+   right: 68px;
+   
+}
+
+.middle{
+   position: absolute;
+   background-color: #d5d5dd;
+   width: 400px;
+   height: 215px;
+   margin: auto;
+   left: 0;
+   right: 0;
+   top: 0;
+   bottom: 36px;
+   clip-path: polygon(3% 0px, 80% 0px, 62% 100%, 21% 100%);
+   box-shadow: 10px 10px 20px 0 #e9e8ed inset,
+   5px -12px 10px -10px rgb(112, 108, 108) inset;
+}
+
+.l-button{
+   position: absolute;
+   margin: auto;
+   background-color: #d5d5dd;
+   width: 140px;
+   height: 40px;
+   border-radius: 70% 10px;
+   top: 41px;
+   left: 55px;
+   box-shadow: 0px 3px 3px 0px #b0b2b4 inset;
+}
+
+.r-button{
+   position: absolute;
+   margin: auto;
+   background-color: #d5d5dd;
+   width: 140px;
+   height: 40px;
+   border-radius: 10px 70%;
+   top: 41px;
+   right: 125px;
+   box-shadow: 0px 3px 3px 0px #b0b2b4 inset;
+}
+
+.directional-container{
+   display: block;
+   position: absolute;
+   background-color: #d5d5dd;
+   width: 135px;
+   height: 135px;
+   border-radius: 50%;
+   margin: auto;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   z-index: 1;
+   border: 1px transparent;
+   box-shadow: 6px 5px 3px -5px rgb(112, 108, 108) inset,
+   -6px -5px 5px -5px #e9e8ed inset;
+}
+
+.encaixe{
+   display: block;
+   position: absolute;
+   margin: auto;
+   background-color: black;
+   width: 100px;
+   height: 30px;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   border-radius: 6px;
+   box-shadow: 0px 0px 0px 4px black;
+}
+
+.encaixe::before{
+   content: "";
+   position: absolute;
+   margin: auto;
+   background-color: black;
+   width: 100px;
+   height: 30px;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   border-radius: 6px;
+   box-shadow: 0px 0px 0px 4px black;
+   transform: rotate(90deg);
+}
+
+.directional{
+   display: block;
+   position: absolute;
+   margin: auto;
+   background-color: #686a6f;
+   width: 100px;
+   height: 30px;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   border-radius: 6px;
+}
+
+.up-down{
+   transform: rotate(90deg);
+   box-shadow: 2px -2px 5px 0px #e9e8ed inset;
+}
+
+.left-right{
+   box-shadow: 6px 0px 5px -4px #e9e8ed inset;
+}
+
+.arrows{
+   display: block;
+   position: absolute;
+   margin: auto;
+   background-color: rgb(66, 63, 63);
+   width: 18px;
+   height: 18px;
+   clip-path: polygon(0 45%, 90% 90%, 90% 0);
+}
+
+.u{
+   top: 7px;
+   left: 10px;
+}
+
+.u:before{
+   content: "";
+   position: absolute;
+   margin: auto;
+   background-color: #bfbec0;
+   width: 17px;
+   height: 17px;
+   bottom: 2px;
+   left: 1px;
+   clip-path: polygon(0 45%, 90% 90%, 90% 0);
+}
+
+.u:after{
+   content: "";
+   position: absolute;
+   margin: auto;
+   background-color: #6b6c71;
+   width: 16px;
+   height: 16px;
+   bottom: 2px;
+   left: 1px;
+   clip-path: polygon(0 45%, 90% 90%, 90% 0);
+}
+
+.r{
+   position: absolute;
+   margin: 0;
+   left: 75px;
+   right: 100px;
+   top: 5px;
+   right: 0px;
+   transform: rotate(180deg);
+}
+
+.r:before{
+   content: "";
+   position: absolute;
+   margin: auto;
+   background-color: #bfbec0;
+   width: 17px;
+   height: 17px;
+   right: 2px;
+   bottom: 3px;
+   top: 0px;
+   clip-path: polygon(0 45%, 90% 90%, 90% 0);
+}
+
+.r:after{
+   content: "";
+   position: absolute;
+   margin: auto;
+   background-color: #6b6c71;
+   width: 16px;
+   height: 16px;
+   right: 1px;
+   bottom: 2px;
+   top: 2px;
+   clip-path: polygon(0 45%, 90% 90%, 90% 0);
+}
+
+.d{
+   position: absolute;
+   margin: 0;
+   left: 75px;
+   right: 100px;
+   top: 5px;
+   right: 0px;
+   transform: rotate(180deg);
+}
+
+.d:before{
+   content: "";
+   position: absolute;
+   margin: auto;
+   background-color: #bfbec0;
+   width: 17px;
+   height: 17px;
+   left: 0px;
+   right: 1px;
+   top: 2px;
+   clip-path: polygon(0 45%, 90% 90%, 90% 0);
+}
+
+.d:after{
+   content: "";
+   position: absolute;
+   margin: auto;
+   background-color: #6b6c71;
+   width: 16px;
+   height: 16px;
+   top: 2px;
+   left: 1px;
+   right: 4px;
+   clip-path: polygon(0 45%, 90% 90%, 90% 0);
+}
+
+.l{
+   position: absolute;
+   margin: auto;
+   left: 3px;
+   top: 3px;
+   bottom: 4px;
+   top: 6px;
+   left: 6px;
+}
+
+.l:before{
+   content: "";
+   position: absolute;
+   margin: 0;
+   background-color: #bfbec0;
+   width: 17px;
+   height: 17px;
+   top: 2px;
+   left: 1px;
+   clip-path: polygon(0 45%, 90% 90%, 90% 0);
+}
+
+.l:after{
+   content: "";
+   position: absolute;
+   margin: 0;
+   background-color: #6b6c71;
+   width: 16px;
+   height: 16px;
+   top: 2px;
+   left: 1px;
+   clip-path: polygon(0 45%, 90% 90%, 90% 0);
+}
+
+.left-right:before{
+   content: "";
+   position: absolute;
+   margin: auto;
+   background-color: #515257;
+   width: 20px;
+   height: 20px;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   border-radius: 50%;
+   background: radial-gradient(farthest-side at 22px 22px ,#bfbec0, #515257);
+}
+
+.buttons-circle{
+   position: absolute;
+   margin: 0;
+   background-color: #94979c;
+   width: 210px;
+   height: 210px;
+   border-radius: 50%;
+   top: 20px;
+   bottom: 0;
+   right: 0;
+   left: 25px;
+   z-index: 1;
+   box-shadow: 0px 0px 0px 1px #515257,
+   1px 1px 3px 1px #bfbec0 inset;
+}
+
+
+.button-container{
+   position: absolute;
+   margin: auto;
+   background-color: #d5d5dd;
+   width: 115px;
+   height: 50px;
+   border-radius: 30px;
+   transform: rotate(-30deg);
+   box-shadow: 0.2px 0px 0px 1px #202022;
+}
+
+.top{
+   top: 0;
+   bottom: 50px;
+   left: 0;
+   right: 35px;
+}
+
+.bottom{
+   top: 45px;
+   bottom: 0;
+   left: 70px;
+   right: 25px;
+}
+
+.button{
+   position: absolute;
+   margin: 0;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+}
+
+.y{
+   background-color: #2a8752;
+   top: 5px;
+   left: 5px;
+   box-shadow: 0px 0px 0px 1.5px #202022, 
+   0px 1px 0px 2px #1fac77 inset,
+   -1.2px 5px 4px -0.9px #c7c7cc inset,
+   0.5px -2px 5px 0px #616266 inset,
+   1px 8px 7px 0px #565658;
+}
+
+.x{
+   background-color: #0548bd;
+   top: 5px;
+   left: 70px;
+   box-shadow: 0px 0px 0px 1.5px #202022, 
+   0px 1px 0px 2px #1d5dc4 inset,
+   -1.2px 5px 4px -0.9px #c7c7cc inset,
+   0.5px -2px 5px 1px #013da7 inset,
+   1px 8px 7px 0px #565658;
+}
+
+.b{
+   background-color: #ddb603;
+   top: 5px;
+   left: 5px;
+   box-shadow: 0px 0px 0px 1.5px #202022,
+   0px 1px 0px 2px #e0cd20 inset,
+   -1.2px 5px 4px -0.9px #e8e8ec inset,
+   0.5px -2px 5px 0px #c5a401 inset,
+   1px 8px 7px 0px #565658;
+}
+
+.a{
+   background-color: #b90705;
+   top: 5px;
+   left: 70px;
+   box-shadow: 0px 0px 0px 1.5px #202022,
+   0px 1px 0px 2px #d6272c inset,
+   -1.2px 5px 4px -0.9px #dadadf inset,
+   0.5px -2px 6px 0px #a80808 inset,
+   1px 8px 7px 0px #565658;
+}
+
+.button-slit{
+   position: absolute;
+   margin: auto;
+   background-color: black;
+   width: 50px;
+   height: 18px;
+   top: 65px;
+   bottom: 0;
+   left: 0;
+   border-radius: 10px;
+   transform: rotate(-35deg);
+   box-shadow: 1px -1px 4px 1.3px #565658;
+}
+
+.slct{
+   right: 175px;
+}
+
+.strt{
+   right: 40px;
+}
+
+.button-middle{
+   position: absolute;
+   margin: auto;
+   background-color: #686a6f;
+   width: 47px;
+   height: 16px;
+   border-radius: 10px;
+   top: 2px;
+   bottom: 0;
+   right: 0;
+   left: 1px;
+   box-shadow: 0px -6px 5px 0px #262627 inset,
+   0px -7px 4px 0px #505153 inset,
+   0px -8px 4px 0px #dadadf inset;
+}
+
+.letter{
+   font-family: 'Michroma', sans-serif;
+   color: #d5d5dd;
+   position: absolute;
+   margin: auto;
+}
+
+.Y{
+   left: 15px;
+   right: 0;
+   bottom: 0;
+   top: 110px;
+}
+
+.X{
+   left: 145px;
+   right: 0;
+   bottom: 0;
+   top: 25px;
+}
+
+.B{
+   left: 55px;
+   right: 0;
+   bottom: 0;
+   top: 155px;
+}
+
+.A{
+   left: 185px;
+   right: 0;
+   bottom: 0;
+   top: 75px;
+}
+
+.middle-text{
+   font-family: 'SnesItalic', sans-serif;
+   position: absolute;
+   margin: auto;
+   top: 167px;
+   bottom: 0;
+   right: 0;
+   color: rgb(104, 106, 111, 0.7);
+   letter-spacing: 2px;
+   font-size: large;
+}
+
+.sl{
+   left: 92px;
+}
+
+.st{
+   left: 162px;
+   letter-spacing: 3px;
+}
+
+.snes-logo{
+   font-family: 'SnesItalic', sans-serif;
+   position: absolute;
+   margin: auto;
+   left: 105px;
+   top: 25px;
+}
+
+.logo{
+   position: absolute;
+   margin: auto;
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   right: 285px;
+   left: 0;
+   top: 25px;
+   background: radial-gradient(circle at 10% 90%, #d5d5dd 30%, rgb(104, 106, 111, 0.9) 30%);
+}
+
+.logo:before{
+   content: "";
+   position: absolute;
+   margin: auto;
+   width: 15px;
+   height: 15px;
+   border-radius: 50%;
+   right: 210px;
+   left: 16px;
+   top: 6px;
+   background: radial-gradient(circle at 10% 90%, #d5d5dd 30%, rgb(104, 106, 111, 0.9) 30%);
+}
+
+.logo:after{
+   content: "";
+   position: absolute;
+   background-color: rgb(104, 106, 111, 0.9);
+   margin: auto;
+   width: 17px;
+   height: 9px;
+   border-radius: 50%;
+   top: 12px;
+   right: 8px;
+   box-shadow: 16px 7px 0px 0px rgb(104, 106, 111, 0.9);
+}
+
+.snes-text{
+   font-size: 30px;
+   position: absolute;
+   margin: auto;
+   width: 160px;
+   left: -23px;
+   bottom: 12px;
+   top: 0;
+   letter-spacing: 1.4px;
+   color: rgb(104, 106, 111, 0.9);
+}
+
+.entertainment-text{
+   position: absolute;
+   width: 137px;
+   color: #d5d5dd;
+   background-color: rgb(104, 106, 111, 0.9);
+   margin: auto;
+   top: 28px;
+   left: -21px;
+   font-size: x-small;
+   letter-spacing: 4px;
+}
