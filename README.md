@@ -18,4 +18,4 @@ A fan of pure CSS design and once a regular follower of cssbeauty.com (down sinc
 
 ![CSS Beauty ](https://user-images.githubusercontent.com/8843669/222985425-ad9250fb-5b11-4fdc-a3b1-0fe8e85d9c16.jpg)
 
-![CSS Beauty website 2001 ](https://user-images.githubusercontent.com/8843669/222985428-450d6c0a-e722-4098-9446-5b0328d6532f.jpg)
+![CSS Beauty website 2001 ](https://user-images.githubusercontent.com/8843669/222985428-450d6c0a-e722-4098-9446-5b0328d6532f.jpg) 
