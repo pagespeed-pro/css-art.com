@@ -4,38 +4,47 @@
   box-sizing:border-box}
 
   body{
-    background-color: lightseagreen;
-  }
+    position: absolute;
 
+    background-color: lightseagreen;
+    max-height: 100vmin;
+        max-width: 100vmin;
+    
+
+  }
+.chilisBody{
+  transform: translate(30vw,20vh);
+
+}
 .chilisHead{
     position: relative;
     background-color: rgb(236, 212, 212);
-height: 27vh;
-width: 30vh;
+height: 27vmin;
+width: 30vmin;
 border-radius: 50% / 40%  ;
-margin: 10vh;
+margin: 10vmin;
 overflow: hidden;
-border-bottom: .1vh solid rgb(160, 146, 146);
+border-bottom: .1vmin solid rgb(160, 146, 146);
 }
 
 .eyeL{
 position: absolute;
-width: 4vh;
-height: 4vh;
+width: 4vmin;
+height: 4vmin;
 background-color: black;
 border-radius: 50% ;
 
-margin-top: 13vh;
-margin-left: 5vh;
-box-shadow: -.1vh -.1vh 0 .3vh brown, -.3vh -.2vh .2vh .9vh white,-.8vh -.8vh 1.5vh .8vh;
+margin-top: 13vmin;
+margin-left: 5vmin;
+box-shadow: -.1vmin -.1vmin 0 .3vmin brown, -.3vmin -.2vmin .2vmin .9vmin white,-.8vmin -.8vmin 1.5vmin .8vmin;
 }
 .eyeL::after{
     content:" "; 
       position: absolute; 
-      top: 1.6vh; 
-      right: 3.3vh; 
-      width: 1vh; 
-      height: 1vh;
+      top: 1.6vmin; 
+      right: 3.3vmin; 
+      width: 1vmin; 
+      height: 1vmin;
       border-radius: 50%;
       background-color:white;
 
@@ -43,34 +52,34 @@ box-shadow: -.1vh -.1vh 0 .3vh brown, -.3vh -.2vh .2vh .9vh white,-.8vh -.8vh 1.
 .eyeL::before{
     content:" "; 
       position: absolute; 
-      top: 1vh; 
-      right: 5.4vh; 
-      width: 1vh; 
+      top: 1vmin; 
+      right: 5.4vmin; 
+      width: 1vmin; 
       color: black;
       background-color:black;
-      box-shadow: -.1vh -.1vh .2vh .1vh,-.1vh -.8vh .2vh .1vh,-.1vh -1.5vh .2vh .1vh ;
+      box-shadow: -.1vmin -.1vmin .2vmin .1vmin,-.1vmin -.8vmin .2vmin .1vmin,-.1vmin -1.5vmin .2vmin .1vmin ;
       transform: rotate(25deg);
     }
 
     
 .eyeR{
 position: absolute;
-width: 4vh;
-height: 4vh;
+width: 4vmin;
+height: 4vmin;
 background-color: black;
 border-radius: 50% ;
 
-margin-top: 13vh;
-margin-left: 20vh;
-box-shadow: -.1vh -.1vh 0 .3vh brown, .1vh -.2vh .2vh .9vh white, .3vh -.8vh 1.5vh .8vh;
+margin-top: 13vmin;
+margin-left: 20vmin;
+box-shadow: -.1vmin -.1vmin 0 .3vmin brown, .1vmin -.2vmin .2vmin .9vmin white, .3vmin -.8vmin 1.5vmin .8vmin;
 }
 .eyeR::after{
     content:" "; 
       position: absolute; 
-      top: 1.6vh; 
-      right: 3.3vh; 
-      width: 1vh; 
-      height: 1vh;
+      top: 1.6vmin; 
+      right: 3.3vmin; 
+      width: 1vmin; 
+      height: 1vmin;
       border-radius: 50%;
       background-color:white;
 
@@ -78,12 +87,12 @@ box-shadow: -.1vh -.1vh 0 .3vh brown, .1vh -.2vh .2vh .9vh white, .3vh -.8vh 1.5
 .eyeR::before{
     content:" "; 
       position: absolute; 
-      top: .8vh; 
-      left: 5.4vh; 
-      width: 1vh; 
+      top: .8vmin; 
+      left: 5.4vmin; 
+      width: 1vmin; 
       color: black;
       background-color:black;
-      box-shadow: -.1vh -.1vh .2vh .1vh,-.1vh -.8vh .2vh .1vh,-.1vh -1.5vh .2vh .1vh ;
+      box-shadow: -.1vmin -.1vmin .2vmin .1vmin,-.1vmin -.8vmin .2vmin .1vmin,-.1vmin -1.5vmin .2vmin .1vmin ;
       transform: rotate(-25deg)
     }
 
@@ -91,13 +100,13 @@ box-shadow: -.1vh -.1vh 0 .3vh brown, .1vh -.2vh .2vh .9vh white, .3vh -.8vh 1.5
     .glassL{
 
 position: inherit;
-      top: 9.5vh; 
-      right: -1.7vh; 
-      width: 10vh; 
-      height: 10vh;
+      top: 9.5vmin; 
+      right: -1.7vmin; 
+      width: 10vmin; 
+      height: 10vmin;
       border-radius: 25%;
       background-color:transparent;
-      border: .5vh solid black;
+      border: .5vmin solid black;
       z-index: 30;
       
 
@@ -108,13 +117,13 @@ position: inherit;
 
         content:" "; 
       position: absolute; 
-      top:-.5vh; 
-      right: -16.5vh; 
-      width: 10vh; 
-      height: 10vh;
+      top:-.5vmin; 
+      right: -16.5vmin; 
+      width: 10vmin; 
+      height: 10vmin;
       border-radius: 25%;
       background-color:transparent;
-      border: .5vh solid black;
+      border: .5vmin solid black;
       
       
 
@@ -124,10 +133,10 @@ position: inherit;
     .stick1{
 
         position: inherit; 
-      top: 2vh; 
-      right: 1.4vh; 
-      width: 3.3vh; 
-      height: .5vh;
+      top: 2vmin; 
+      right: 1.4vmin; 
+      width: 3.3vmin; 
+      height: .5vmin;
       background-color:black;
       transform: rotate(20deg)
 
@@ -135,10 +144,10 @@ position: inherit;
     .stick1::after{
         content:" "; 
       position: absolute; 
-      top:-10vh; 
-      right: -29vh; 
-      width: 5.5vh; 
-      height: .5vh;
+      top:-10vmin; 
+      right: -29vmin; 
+      width: 5.5vmin; 
+      height: .5vmin;
       background-color:black;
       transform: rotate(-30deg)
 
@@ -148,15 +157,15 @@ position: inherit;
 .stick2{
 
     position: inherit;
-      top: 2vh; 
-      right: -10.3vh; 
-      width: 9vh; 
-      height: 7vh;
+      top: 2vmin; 
+      right: -10.3vmin; 
+      width: 9vmin; 
+      height: 7vmin;
       border-radius: 50%;
       background-color:transparent;
-      border-top: .5vh solid black;
-      border-left: .5vh solid transparent;
-      border-right: .5vh solid transparent;
+      border-top: .5vmin solid black;
+      border-left: .5vmin solid transparent;
+      border-right: .5vmin solid transparent;
 
 
 }
@@ -165,22 +174,22 @@ position: inherit;
 
     content:" "; 
       position: absolute; 
-      top: 5vh; 
-      left: 2.2vh;
-      width: 2vh; 
-      height: 1vh;
+      top: 5vmin; 
+      left: 2.2vmin;
+      width: 2vmin; 
+      height: 1vmin;
       border-radius: 50%;
       background-color:transparent;
-      border-top: .5vh solid rgb(202, 179, 179);
+      border-top: .5vmin solid rgb(202, 179, 179);
      
 }
 
 .mouth{
     position: inherit;
-      top: 4vh; 
-      right: -12.8vh; 
-      width: 4vh; 
-      height: 3vh;
+      top: 4vmin; 
+      right: -12.8vmin; 
+      width: 4vmin; 
+      height: 3vmin;
       border-radius: 0 0 60% 60%;
       background-color:rgb(184, 22, 22);
       overflow: hidden;
@@ -189,10 +198,10 @@ position: inherit;
 
 .tooth{
   position: absolute;
-width: 1vh;
-height: 2vh;
-top: -1.1vh; 
-right: 1vh; 
+width: 1vmin;
+height: 2vmin;
+top: -1.1vmin; 
+right: 1vmin; 
 border-radius: 25%;
 background-color: white;
     }
@@ -200,10 +209,10 @@ background-color: white;
     .tooth::after{
       content: "";
   position: absolute;
-width: 1vh;
-height: 2vh;
-top: .1vh; 
-right: 1vh; 
+width: 1vmin;
+height: 2vmin;
+top: .1vmin; 
+right: 1vmin; 
 border-radius: 25%;
 background-color: black;
     }
@@ -213,34 +222,34 @@ background-color: black;
 .chicks{
     position: absolute;
 
-      top: 19.3vh; 
-      right: 23vh; 
-      width: 23vh; 
-      height: 29vh;
+      top: 19.3vmin; 
+      right: 23vmin; 
+      width: 23vmin; 
+      height: 29vmin;
       border-radius: 50%;
-      box-shadow: -1vh -1vh 3vh 2vh rgb(238, 150, 150),  38vh 1vh 3vh 2vh rgb(238, 150, 150);
+      box-shadow: -1vmin -1vmin 3vmin 2vmin rgb(238, 150, 150),  38vmin 1vmin 3vmin 2vmin rgb(238, 150, 150);
 
       
 }
 .chicks::after{
     content:" "; 
       position: absolute; 
-      top: 2vh; 
-      right: 3vh; 
-      width: .5vh; 
-      height: .5vh;
+      top: 2vmin; 
+      right: 3vmin; 
+      width: .5vmin; 
+      height: .5vmin;
       border-radius: 50%;
       background-color:rgb(203, 134, 134);
-      box-shadow: 1.5vh .5vh rgb(203, 134, 134),21.5vh .5vh rgb(203, 134, 134),19.5vh .5vh rgb(203, 134, 134),19.5vh 2vh rgb(203, 134, 134),.5vh 1.5vh rgb(203, 134, 134),2.5vh 1.5vh rgb(203, 134, 134),18vh 1.5vh rgb(203, 134, 134);
+      box-shadow: 1.5vmin .5vmin rgb(203, 134, 134),21.5vmin .5vmin rgb(203, 134, 134),19.5vmin .5vmin rgb(203, 134, 134),19.5vmin 2vmin rgb(203, 134, 134),.5vmin 1.5vmin rgb(203, 134, 134),2.5vmin 1.5vmin rgb(203, 134, 134),18vmin 1.5vmin rgb(203, 134, 134);
 }
 
 .hair{
 position:absolute;
-      top: -13vh; 
-      right: -4.7vh; 
-      width: 40vh; 
-      height: 105vh;
-      border-top: 15vh solid rgb(34, 9, 9);
+      top: -13vmin; 
+      right: -4.7vmin; 
+      width: 40vmin; 
+      height: 105vmin;
+      border-top: 15vmin solid rgb(34, 9, 9);
       background-color:transparent;
       border-radius: 50%;
      
@@ -249,13 +258,13 @@ position:absolute;
 .hair::before{
 position:absolute;
 content: "";
-      top: -2vh; 
-      right: 4vh; 
-      width: 31.5vh; 
-      height: 95vh;
-      border-top: 5vh solid rgb(34, 9, 9);
-      border-left: 5vh solid transparent;
-      border-right: 5vh solid transparent;
+      top: -2vmin; 
+      right: 4vmin; 
+      width: 31.5vmin; 
+      height: 95vmin;
+      border-top: 5vmin solid rgb(34, 9, 9);
+      border-left: 5vmin solid transparent;
+      border-right: 5vmin solid transparent;
 
 
       background-color:transparent;
@@ -267,13 +276,13 @@ content: "";
 .hair::after{
 position:absolute;
 content: "";
-      top: -2vh; 
-      right: 7vh; 
-      width: 25vh; 
-      height: 95vh;
-      border-top: 5vh solid rgb(34, 9, 9);
-      border-left: 5vh solid transparent;
-      border-right: 5vh solid transparent;
+      top: -2vmin; 
+      right: 7vmin; 
+      width: 25vmin; 
+      height: 95vmin;
+      border-top: 5vmin solid rgb(34, 9, 9);
+      border-left: 5vmin solid transparent;
+      border-right: 5vmin solid transparent;
 
 
       background-color:transparent;
@@ -283,42 +292,37 @@ content: "";
 }
 
 
-.chilisBody{
-  position: relative;
-  z-index: 1;
-  top: 10vh;
-  left: 20vh;
-}
+
 
 .ears{
 
   position: absolute;
-  left: 29vh;
-  top:2vh;
+  left: 29vmin;
+  top:2vmin;
     background-color: rgb(236, 212, 212);
-height: 5vh;
-width: 3vh;
+height: 5vmin;
+width: 3vmin;
 border-radius: 50% / 40%  ;
-margin: 10vh;
+margin: 10vmin;
 overflow: hidden;
-box-shadow: -30.6vh .1vh rgb(236, 212, 212);
+box-shadow: -30.6vmin .1vmin rgb(236, 212, 212);
 
 }
 
 .colitas{
 position: absolute;
-left: 28.8vh;
-top:-4.3vh;
+left: 28.5vmin;
+top:-5vmin;
   background-color: transparent;
-  border-top: 5vh solid  rgb(34, 9, 9);
-  border-right: 2vh solid  transparent;
-  border-left: 1vh solid  yellow;
-  border-bottom: 1vh solid transparent;
+  border-top: 5vmin solid  rgb(34, 9, 9);
+  border-right: 2vmin solid  transparent;
+  border-left: 1vmin solid  yellow;
+  border-bottom: 1vmin solid transparent;
 
-  height: 15vh;
-width: 15vh;
+  height: 15vmin;
+width: 15vmin;
 border-radius: 50% ;
-margin: 10vh;
+margin: 10vmin;
 
 transform: rotate(14deg);
 z-index: -2;
@@ -327,18 +331,18 @@ z-index: -2;
 .colitas::after{
   content: "";
 position: absolute;
-left: -51vh;
-top:-17vh;
+left: -50vmin;
+top:-14vmin;
   background-color: transparent;
-  border-top: 5vh solid  rgb(34, 9, 9);
-  border-right: 2vh solid  transparent;
-  border-left: 1vh solid  yellow;
-  border-bottom: 1vh solid transparent;
+  border-top: 5vmin solid  rgb(34, 9, 9);
+  border-right: 2vmin solid  transparent;
+  border-left: 1vmin solid  yellow;
+  border-bottom: 1vmin solid transparent;
 
-  height: 15vh;
-width: 15vh;
+  height: 15vmin;
+width: 15vmin;
 border-radius: 50% ;
-margin: 10vh;
+margin: 10vmin;
 
 transform: rotate(225deg);
 
@@ -348,43 +352,43 @@ transform: rotate(225deg);
 .neck{
 
 position: absolute;
-left: 12.5vh;
-top:14vh;
+left: 12.5vmin;
+top:14vmin;
   background-color: rgb(236, 212, 212);
-height: 5vh;
-width: 5vh;
+height: 5vmin;
+width: 5vmin;
 border-radius: 50% ;
-margin: 10vh;
-box-shadow: -2.5vh 2vh yellow,2vh 2vh yellow;
+margin: 10vmin;
+box-shadow: -2vmin 2vmin yellow,2vmin 2vmin yellow;
 z-index: -1;
-border-bottom: .1vh solid rgb(160, 146, 146);
+border-bottom: .1vmin solid rgb(160, 146, 146);
 
 }
 
 .dress{
 
 position: relative;
-left: 17vh;
-top:-15vh;
+left: 17vmin;
+top:-15vmin;
 
 z-index: -2;
-border-bottom: .1vh solid rgb(160, 146, 146);
-border-radius: 2vh;
+border-bottom: .1vmin solid rgb(160, 146, 146);
+border-radius: 2vmin;
 
 width: 0;
     height: 0;
-    border-left: 8vh solid transparent;
-    border-right: 8vh solid transparent;
-    border-bottom: 20vh solid green;
+    border-left: 8vmin solid transparent;
+    border-right: 8vmin solid transparent;
+    border-bottom: 20vmin solid green;
 
 }
 
 .pocket{
     position: absolute;
-      top: 15vh; 
-      right: -5.5vh; 
-      width: 3vh; 
-      height: 3vh;
+      top: 15vmin; 
+      right: -5.5vmin; 
+      width: 3vmin; 
+      height: 3vmin;
       border-radius: 0 0 60% 60%;
       background-color:yellow;
       transform: rotate(-12deg);
@@ -395,18 +399,19 @@ width: 0;
 .topL{
 
   position: absolute;
-left: 21vh;
-top:28vh;
-
-z-index: -2;
-border-bottom: .1vh solid rgb(160, 146, 146);
-border-radius: 2vh 0;
+  left: 20vmin;
+  top:28vmin;
+  border-radius: 50%;
+  
+  
+  width: 0;
+      height: 0;
 
 width: 0;
     height: 0;
-    border-left: 1.9vh solid transparent;
-    border-right: .7vh solid transparent;
-    border-bottom: 8vh solid red;
+    border-left: 1.9vmin solid transparent;
+    border-right: .7vmin solid transparent;
+    border-bottom: 8vmin solid red;
     z-index: -1;
     transform: rotate(22deg);
 
@@ -415,18 +420,16 @@ width: 0;
 .topR{
 
   position: absolute;
-left: 26.2vh;
-top:28vh;
+left: 27vmin;
+top:28vmin;
+border-radius: 50%;
 
-z-index: -2;
-border-bottom: .1vh solid rgb(160, 146, 146);
-border-radius: 0 2vh;
 
 width: 0;
     height: 0;
-    border-left: 1.9vh solid transparent;
-    border-right: .7vh solid transparent;
-    border-bottom: 8vh solid red;
+    border-left: 1.9vmin solid transparent;
+    border-right: .7vmin solid transparent;
+    border-bottom: 8vmin solid red;
     z-index: -1;
     transform: rotate(335deg);
 
@@ -435,10 +438,10 @@ width: 0;
 .arms{
 
   position: absolute;
-  left: 19vh;
-  top:28vh;
-  width: 1.2vh;
-    height: 10vh;
+  left: 19vmin;
+  top:28vmin;
+  width: 1.2vmin;
+    height: 10vmin;
     background-color: red;
     transform: rotate(35deg);
     z-index: -1;
@@ -450,10 +453,10 @@ width: 0;
   content: "";
 
 position: absolute;
-left: 7vh;
-top:-7vh;
-width: 1.2vh;
-  height: 11vh;
+left: 7vmin;
+top:-7vmin;
+width: 1.2vmin;
+  height: 11vmin;
 
   background-color: red;
   transform: rotate(1000deg);
@@ -469,11 +472,11 @@ width: 1.2vh;
 position: absolute;
 
   z-index: -4;
-left: 21vh;
+left: 21vmin;
     background-color: rgb(236, 212, 212);
-height: 11vh;
-width: 3vh;
-border-bottom: 3vh solid white;
+height: 11vmin;
+width: 3vmin;
+border-bottom: 3vmin solid white;
 
 }
 
@@ -482,11 +485,11 @@ border-bottom: 3vh solid white;
 position: absolute;
 content: "";
   z-index: -4;
-left: 5vh;
+left: 5vmin;
     background-color: rgb(236, 212, 212);
-height: 11vh;
-width: 3vh;
-border-bottom: 3vh solid white;
+height: 11vmin;
+width: 3vmin;
+border-bottom: 3vmin solid white;
 
 
 }
@@ -495,13 +498,13 @@ border-bottom: 3vh solid white;
 
   position: absolute;
 
-top:41.3vh;
-left: 20vh;
+top:41.3vmin;
+left: 20vmin;
 background-color: white;
-height: 1.5vh;
-width: 1.5vh;
+height: 1.5vmin;
+width: 1.5vmin;
 border-radius: 50%;
-border: .1vh solid rgb(160, 146, 146);
+border: .1vmin solid rgb(160, 146, 146);
 z-index: -3;
 
 }
@@ -510,13 +513,13 @@ z-index: -3;
   content: "";
 position: inherit;
 
-top:-.1vh;
-left: 1.4vh;
+top:-.1vmin;
+left: 1.4vmin;
 background-color: white;
-height: 1.5vh;
-width: 1.5vh;
+height: 1.5vmin;
+width: 1.5vmin;
 border-radius: 50%;
-border: .1vh solid rgb(160, 146, 146);
+border: .1vmin solid rgb(160, 146, 146);
 z-index: -3;
 
 }
@@ -525,13 +528,13 @@ z-index: -3;
 content: "";
 position: absolute;
 
-top:-.1vh;
-left: 2.9vh;
+top:-.1vmin;
+left: 2.9vmin;
 background-color: white;
-height: 1.5vh;
-width: 1.5vh;
+height: 1.5vmin;
+width: 1.5vmin;
 border-radius: 50%;
-border: .1vh solid rgb(160, 146, 146);
+border: .1vmin solid rgb(160, 146, 146);
 z-index: -3;
 
 }
@@ -540,13 +543,13 @@ z-index: -3;
 
 position: absolute;
 
-top:41.3vh;
-left: 25vh;
+top:41.3vmin;
+left: 25vmin;
 background-color: white;
-height: 1.5vh;
-width: 1.5vh;
+height: 1.5vmin;
+width: 1.5vmin;
 border-radius: 50%;
-border: .1vh solid rgb(160, 146, 146);
+border: .1vmin solid rgb(160, 146, 146);
 z-index: -3;
 
 }
@@ -555,13 +558,13 @@ z-index: -3;
 content: "";
 position: inherit;
 
-top:-.1vh;
-left: 1.4vh;
+top:-.1vmin;
+left: 1.4vmin;
 background-color: white;
-height: 1.5vh;
-width: 1.5vh;
+height: 1.5vmin;
+width: 1.5vmin;
 border-radius: 50%;
-border: .1vh solid rgb(160, 146, 146);
+border: .1vmin solid rgb(160, 146, 146);
 z-index: -3;
 
 }
@@ -570,13 +573,13 @@ z-index: -3;
 content: "";
 position: absolute;
 
-top:-.1vh;
-left: 2.9vh;
+top:-.1vmin;
+left: 2.9vmin;
 background-color: white;
-height: 1.5vh;
-width: 1.5vh;
+height: 1.5vmin;
+width: 1.5vmin;
 border-radius: 50%;
-border: .1vh solid rgb(160, 146, 146);
+border: .1vmin solid rgb(160, 146, 146);
 z-index: -3;
 
 }
@@ -585,25 +588,25 @@ z-index: -3;
 .hands{
 
   position: absolute;
-  left: 6vh;
-  top:26vh;
+  left: 6vmin;
+  top:26vmin;
     background-color: rgb(236, 212, 212);
-height: 2vh;
-width: 1.5vh;
+height: 2vmin;
+width: 1.5vmin;
 border-radius: 50% ;
-margin: 10vh;
-box-shadow: 16.4vh -1.4vh rgb(236, 212, 212);
+margin: 10vmin;
+box-shadow: 16.4vmin -1.4vmin rgb(236, 212, 212), -7.5vmin -27vmin 0 .5vmin yellow,23.5vmin -28vmin 0 .5vmin yellow;
 
 }
 
 .shoes{
   position: absolute;
-      top: 25vh; 
-      right: .9vh; 
-      width: 3.2vh; 
-      height: 3vh;
+      top: 25.5vmin; 
+      right: .9vmin; 
+      width: 3.1vmin; 
+      height: 3vmin;
       border-radius: 0 0 60% 60%;
       background-color:black;
-      box-shadow: 5vh -.2vh;
+      box-shadow: 5vmin -.1vmin;
 
 }
