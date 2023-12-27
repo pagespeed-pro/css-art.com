@@ -1,0 +1,29 @@
+{
+    "name": "Queen-Of-Spades",
+    "version": "1.0.0",
+    "title": "Queen Of Spades Pure CSS",
+    "description": "Queen Of Spades Pure CSS",
+    "author": {
+        "name": "plusTer",
+        "avatar": "https://assets.codepen.io/9053463/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1674426174&width=512",
+        "web": "https://github.com/masterPlusTer",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/PlusTer"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/MasTerPlusTer"
+        }, {
+            "title": "buymeacoffee",
+            "url": "https://www.buymeacoffee.com/plusTer"
+        }]
+    },
+    "html": "index.html",
+    "css": ["style.css"],
+    "js": "",
+    "thumbnail": "queen-of-swords.png",
+    "splash": "queen-of-swords.png",
+    "keywords": ["css", "responsive", "cards", "css-art"],
+    "original": "https://codepen.io/PlusTer/pen/eYjaJYQ",
+    "codepen": "https://codepen.io/PlusTer/pen/eYjaJYQ"
+}
