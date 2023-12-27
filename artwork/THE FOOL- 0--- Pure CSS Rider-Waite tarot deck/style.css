@@ -1,0 +1,2462 @@
+*,*::before, *::after{
+  margin:0;
+  padding:0;
+  box-sizing:border-box}
+
+  
+
+  
+  
+  .the-fool-card-0{
+ background-image: linear-gradient(-30deg, #8bdcf0 35%,#feeb3b 30%); 
+ 
+   overflow:hidden;
+    position:absolute;
+    top:5vmin;
+    left:30vw;
+    width:100vw;
+  width: 40vmin;
+  height: 80vmin;
+    border:.1vmin solid grey;
+    border-radius: 1vmin;
+    z-index:10;
+  }
+
+  .the-fool-card-0--top{
+    position:absolute;
+    width:100%;
+    height:5%;
+    font-size:3.5vmin;
+    text-align:center;
+    top:0;
+
+  }
+  .the-fool-card-0--bottom{
+    position:absolute;
+    width:100%;
+    height:5%;
+    font-size:3.5vmin;
+    text-align:center;
+        border-top:.1vmin solid black;
+    bottom:0;
+    background-color:white;
+    z-index:1000000;
+
+  }
+
+      .the-fool-card-0--sun{
+
+        position:absolute;
+
+        width:10vmin;
+        height:15vmin;
+        border-radius:50%;
+        background-color:rgba(250,244,246,255);
+        top:-8vmin;
+        left:32vmin;
+        border:.5vmin solid;
+        z-index:100;
+
+      }
+
+      .the-fool-card-0--sun1{     
+           position:absolute;
+           width:.5vmin;
+           height:15vmin;
+           top:-5vmin;
+           left:28vmin;
+           background-color:black;
+           transform:rotate(70deg);
+
+      }
+
+      .the-fool-card-0--sun1::before{
+        content:"";
+        position:absolute;
+        width:.5vmin;
+        height:15vmin;
+        top:-3vmin;
+        left:-1vmin;
+        background-color:black;
+        transform:rotate(10deg);
+
+      }
+      .the-fool-card-0--sun1::after{
+        content:"";
+
+        position:absolute;
+        width:.5vmin;
+        height:15vmin;
+        top:-2vmin;
+        left:1.8vmin;
+        background-color:black;
+        transform:rotate(-10deg);
+      }
+
+      .the-fool-card-0--sun2{     
+
+           position:absolute;
+           width:.5vmin;
+           height:15vmin;
+           top:-6vmin;
+           left:35vmin;
+           background-color:black;
+           transform:rotate(55deg);
+
+      }
+      
+      .the-fool-card-0--sun2::before{
+        content:"";
+        position:absolute;
+        width:.5vmin;
+        height:15vmin;
+        top:-1vmin;
+        left:.1vmin;
+        background-color:black;
+        transform:rotate(-10deg);
+      }
+      .the-fool-card-0--sun2::after{
+        content:"";
+        position:absolute;
+
+        width:.5vmin;
+        height:15vmin;
+        top:.1vmin;
+        left:1.2vmin;
+        background-color:black;
+        transform:rotate(-20deg);
+      }
+
+      .the-fool-card-0--sun3{       
+         position:absolute;
+
+         width:.5vmin;
+         height:15vmin;
+         top:4vmin;
+         left:37vmin;
+         background-color:black;   
+
+         box-shadow: 1.5vmin 2vmin 0 0;
+
+      }
+
+      .the-fool-card-0--sun3::before{
+         content:"";
+        position:absolute;
+
+        width:.5vmin;
+        height:15vmin;
+        top:6vmin;
+        left:68vmin;
+        background-color:black;
+        transform:rotate(10deg);
+      }
+      .the-fool-card-0--sun3::after{
+         content:"";
+        position:absolute;
+
+        width:.5vmin;
+        height:15vmin;
+        top:8vmin;
+        left:66vmin;
+        background-color:black;
+        transform:rotate(20deg);
+      }
+
+      .the-fool-card-0--sun4{      
+        position:absolute;
+
+        width:.5vmin;
+        height:15vmin;
+        top:-2vmin;
+        left:34.5vmin;
+        background-color:black;   
+        transform:rotate(15deg);
+
+        box-shadow: 1vmin 2vmin 0 0;
+      }
+
+      .the-fool-card-0--sun4::before{
+        content:"";
+        position:absolute;
+
+        width:.5vmin;
+        height:15vmin;
+        top:3vmin;
+        left:2vmin;
+        background-color:black;
+        transform:rotate(-4deg);
+      }
+
+      .the-fool-card-0--mountains{
+        position:absolute;
+        width:20vmin;
+        height:20vmin;
+        top:44vmin;
+        left:-3vmin;
+        background-color:black;
+        transform:rotate(-20deg);
+        z-index:-10;
+        
+
+        clip-path: polygon(0% 65%, 5% 61%, 10% 62%, 13% 68%, 17% 71%, 21% 64%, 25% 62%, 32% 58%, 35% 53%, 38% 48%, 40% 52%, 42% 60%, 43% 65%, 47% 65%, 53% 61%, 58% 61%, 61% 55%, 63% 52%, 65% 46%, 68% 50%, 69% 63%, 77% 67%, 81% 68%, 88% 73%, 95% 75%, 98% 76%, 97% 82%, 82% 79%, 66% 71%, 58% 71%, 35% 71%, 24% 76%, 15% 78%);
+      }
+
+     .the-fool-card-0--mountains::before{
+        content:"";
+        position:absolute;
+        width:20vmin;
+        height:20vmin;
+        top:.3vmin;
+        left:0vmin;
+        background-color:rgb(250,244,246);
+        z-index:-10;
+
+        
+ clip-path: polygon(0% 65%, 5% 61%, 10% 62%, 13% 68%, 17% 71%, 21% 64%, 25% 62%, 32% 58%, 35% 53%, 38% 48%, 40% 52%, 42% 60%, 43% 65%, 47% 65%, 53% 61%, 58% 61%, 61% 55%, 63% 52%, 65% 46%, 68% 50%, 69% 63%, 77% 67%, 81% 68%, 88% 73%, 95% 75%, 98% 76%, 97% 82%, 82% 79%, 66% 71%, 58% 71%, 35% 71%, 24% 76%, 15% 78%);
+      }
+
+  
+
+
+
+      .the-fool-card-0--mountains1{
+    position:absolute;
+        width:10vmin;
+        height:20vmin;
+        top:41.5vmin;
+        left:17vmin;
+        background-color:black;
+        transform:rotate(-30deg);
+        z-index:-10;
+
+        
+        clip-path: polygon(3% 62%, 23% 60%, 35% 51%, 40% 44%, 48% 39%, 45% 47%, 47% 57%, 55% 54%, 62% 59%, 70% 64%, 35% 65%, 9% 64%);
+      }
+
+   .the-fool-card-0--mountains1::before{
+         content:"";
+        position:absolute;
+        width:10vmin;
+        height:20vmin;
+        top:.2vmin;
+        left:.2vmin;
+        background-color:rgb(250,244,246);
+        clip-path: polygon(3% 62%, 23% 60%, 35% 51%, 40% 44%, 48% 39%, 45% 47%, 47% 57%, 55% 54%, 62% 59%, 70% 64%, 35% 65%, 9% 64%);
+        z-index:-10;
+
+      }
+       .the-fool-card-0--mountains1::after{
+      
+
+      }
+   
+
+
+      .the-fool-card-0--mountains2{
+        position:absolute;
+            width:25vmin;
+            height:20vmin;
+            top:31vmin;
+            left:22vmin;
+            background-color:black;
+            transform:rotate(-35deg);
+
+    
+            clip-path: polygon(1% 69%, 6% 67%, 11% 55%, 11% 60%, 15% 51%, 18% 60%, 22% 54%, 26% 57%, 32% 49%, 34% 58%, 40% 58%, 44% 56%, 49% 49%, 55% 47%, 54% 50%, 52% 57%, 57% 57%, 62% 53%, 66% 47%, 69% 40%, 71% 38%, 71% 43%, 70% 54%, 72% 61%, 79% 61%, 75% 66%, 63% 60%, 52% 63%, 48% 61%, 40% 64%, 28% 62%, 14% 68%, 8% 71%);
+            z-index:-10;
+          }
+    
+       .the-fool-card-0--mountains2::before{
+             content:"";
+            position:absolute;
+            width:25vmin;
+            height:20vmin;
+            top:.3vmin;
+            left:0vmin;
+            background-color:rgb(250,244,246);
+             clip-path: polygon(1% 69%, 6% 67%, 11% 55%, 11% 60%, 15% 51%, 18% 60%, 22% 54%, 26% 57%, 32% 49%, 34% 58%, 40% 58%, 44% 56%, 49% 49%, 55% 47%, 54% 50%, 52% 57%, 57% 57%, 62% 53%, 66% 47%, 69% 40%, 71% 38%, 71% 43%, 70% 54%, 72% 61%, 79% 61%, 75% 66%, 63% 60%, 52% 63%, 48% 61%, 40% 64%, 28% 62%, 14% 68%, 8% 71%);
+             z-index:-10;
+
+          }
+
+
+
+          .the-fool-card-0--mountains7{
+           position:absolute;
+           width:14vmin;
+           height:20vmin;
+           top:37vmin;
+           left:22vmin;
+           background-color:black;
+            clip-path: polygon(1% 69%, 6% 67%, 11% 55%, 11% 60%, 15% 51%, 18% 60%, 22% 54%, 26% 57%, 32% 49%, 34% 58%, 40% 58%, 44% 56%, 49% 49%, 55% 47%, 54% 50%, 52% 57%, 57% 57%, 62% 53%, 66% 47%, 69% 40%, 71% 38%, 71% 43%, 70% 54%, 72% 61%, 79% 61%, 75% 66%, 63% 60%, 52% 63%, 48% 61%, 40% 64%, 28% 62%, 14% 68%, 8% 71%);
+            z-index:-1;
+            transform:rotate(-20deg)
+
+         }
+
+
+         
+         .the-fool-card-0--mountains8{
+          position:absolute;
+          width:14vmin;
+          height:20vmin;
+          top:37.5vmin;
+          left:22vmin;
+          background-color:rgb(250,244,246);
+           clip-path: polygon(1% 69%, 6% 67%, 11% 55%, 11% 60%, 15% 51%, 18% 60%, 22% 54%, 26% 57%, 32% 49%, 34% 58%, 40% 58%, 44% 56%, 49% 49%, 55% 47%, 54% 50%, 52% 57%, 57% 57%, 62% 53%, 66% 47%, 69% 40%, 71% 38%, 71% 43%, 70% 54%, 72% 61%, 79% 61%, 75% 66%, 63% 60%, 52% 63%, 48% 61%, 40% 64%, 28% 62%, 14% 68%, 8% 71%);
+           z-index:-1;
+           transform:rotate(-20deg)
+
+
+        }
+
+
+
+
+           .the-fool-card-0--mountains2::after{
+          
+    
+          }
+
+
+
+
+
+
+  
+
+      .the-fool-card-0--mountains3{
+        
+        position:absolute;
+        width:40vmin;
+        height:42vmin;
+        top:37vmin;
+        left:5vmin;
+background-color:black;
+        z-index:-1;
+        clip-path: polygon(98% 26%, 87% 25%, 82% 26%, 78% 34%, 78% 41%, 83% 41%, 77% 48%, 69% 53%, 57% 53%, 50% 52%, 38% 54%, 26% 53%, 24% 50%, 20% 40%, 19% 40%, 14% 40%, 8% 45%, 3% 50%, 4% 57%, 4% 67%, 9% 71%, 8% 76%, 18% 79%, 11% 82%, 12% 84%, 18% 89%, 29% 85%, 32% 96%, 98% 100%);
+        transform:rotate(-20deg)
+      }
+
+      .the-fool-card-0--mountains4{
+        
+        position:absolute;
+        width:40vmin;
+        height:42vmin;
+        top:37.1vmin;
+        left:5.3vmin;
+background-color:#c49a3c;
+        z-index:-1;
+        clip-path: polygon(98% 26%, 87% 25%, 82% 26%, 78% 34%, 78% 41%, 83% 41%, 77% 48%, 69% 53%, 57% 53%, 50% 52%, 38% 54%, 26% 53%, 24% 50%, 20% 40%, 19% 40%, 14% 40%, 8% 45%, 3% 50%, 4% 57%, 4% 67%, 9% 71%, 8% 76%, 18% 79%, 11% 82%, 12% 84%, 18% 89%, 29% 85%, 32% 96%, 98% 100%);
+        transform:rotate(-20deg)
+      }
+
+      .the-fool-card-0--mountains5{
+        
+        position:absolute;
+        width:43vmin;
+        height:26vmin;
+        top:49.2vmin;
+        left:6.5vmin;
+background-color:black;
+        z-index:1;
+        clip-path: polygon(98% 72%, 82% 74%, 70% 74%, 67% 61%, 67% 61%, 59% 66%, 50% 60%, 45% 65%, 40% 75%, 30% 68%, 27% 75%, 18% 70%, 19% 77%, 11% 84%, 24% 86%, 36% 86%, 37% 92%, 51% 82%, 54% 89%, 62% 82%, 65% 89%, 73% 84%, 79% 90%, 88% 82%, 97% 94%, 100% 87%);
+        transform:rotate(15deg)
+      }
+      .the-fool-card-0--mountains6{
+        
+        position:absolute;
+        width:42vmin;
+        height:25vmin;
+        top:50vmin;
+        left:7vmin;
+background-color:#8c5433;
+        z-index:1;
+        clip-path: polygon(98% 72%, 82% 74%, 70% 74%, 67% 61%, 67% 61%, 59% 66%, 50% 60%, 45% 65%, 40% 75%, 30% 68%, 27% 75%, 18% 70%, 19% 77%, 11% 84%, 24% 86%, 36% 86%, 37% 92%, 51% 82%, 54% 89%, 62% 82%, 65% 89%, 73% 84%, 79% 90%, 88% 82%, 97% 94%, 100% 87%);
+        transform:rotate(15deg)
+      }
+
+      .the-fool-card-0--mountains3::after{
+       
+      }
+  /*    .the-fool-card-0--mountains3::before{
+        content:"";
+        position:absolute;
+        width:10vmin;
+        height:10vmin;
+        top:-10vmin;
+        left:20vmin;
+        border-radius:20%;
+background-color:brown;
+        z-index:10000;
+        transform:rotate(15deg);
+      }
+
+      
+      .the-fool-card-0--mountains4{
+        position:absolute;
+        width:6vmin;
+        height:6vmin;
+        top:62vmin;
+        left:30vmin;
+        border-radius:20%;
+background-color:brown;
+        z-index:100000;
+        transform:rotate(30deg);
+      }
+
+
+      .the-fool-card-0--mountains4::before{
+        content:"";
+
+        position:absolute;
+        width:7vmin;
+        height:7vmin;
+        top:1.5vmin;
+        left:1vmin;
+        border-radius:20%;
+background-color:brown;
+        z-index:100000;
+        transform:rotate(40deg);
+
+      }
+      .the-fool-card-0--mountains4::after{}
+
+
+*/
+
+
+      .the-fool-card-0--water{
+        position:absolute;
+        width:20vmin;
+        height:15vmin;
+        top:62vmin;
+        left:-1vmin;
+        background-color:black;
+        border-left:.2vmin solid;
+        clip-path: polygon(2% 69%, 11% 70%, 16% 69%, 19% 66%, 22% 63%, 25% 63%, 25% 66%, 25% 71%, 27% 76%, 33% 75%, 33% 75%, 38% 79%, 38% 81%, 43% 83%, 45% 81%, 49% 78%, 51% 78%, 55% 80%, 58% 84%, 62% 75%, 63% 71%, 62% 68%, 66% 68%, 67% 70%, 69% 75%, 67% 82%, 68% 87%, 70% 88%, 72% 86%, 74% 84%, 77% 86%, 78% 88%, 80% 91%, 85% 93%, 91% 92%, 94% 91%, 97% 91%, 98% 99%, 1% 99%);
+        z-index:-10;
+
+      }
+
+    .the-fool-card-0--water::before{
+        content:"";
+
+        position:absolute;
+        width:20vmin;
+        height:15vmin;
+        top:.2vmin;
+        left:-.1vmin;
+        background-color:#81b0ba;
+        border-left:.2vmin solid;
+             clip-path: polygon(2% 69%, 11% 70%, 16% 69%, 19% 66%, 22% 63%, 25% 63%, 25% 66%, 25% 71%, 27% 76%, 33% 75%, 33% 75%, 38% 79%, 38% 81%, 43% 83%, 45% 81%, 49% 78%, 51% 78%, 55% 80%, 58% 84%, 62% 75%, 63% 71%, 62% 68%, 66% 68%, 67% 70%, 69% 75%, 67% 82%, 68% 87%, 70% 88%, 72% 86%, 74% 84%, 77% 86%, 78% 88%, 80% 91%, 85% 93%, 91% 92%, 94% 91%, 97% 91%, 98% 99%, 1% 99%);
+      }
+    /*    .the-fool-card-0--water::after{
+        content:"";
+        position:absolute;
+        width:13vmin;
+        height:3vmin;
+        top:-2vmin;
+        left:1vmin;
+        background-color:#81b0ba;
+        border-top:.5vmin solid;
+        border-left:.5vmin solid;
+        border-radius:50%;
+
+        transform:rotate(10deg);
+      }
+
+
+*/
+      .the-fool-card-0--water1{
+        position:absolute;
+        width:5vmin;
+        height:3vmin;
+        top:70vmin;
+        left:1vmin;
+        transform:rotate(-30deg);
+
+        box-shadow: -1.5vmin -9vmin 1vmin 1vmin white,8vmin -8vmin  1vmin 1vmin white,-1vmin -9vmin  1vmin 0vmin white,45vmin -8vmin  2vmin 0vmin white,36vmin -6vmin  1vmin 0vmin white,14.5vmin -7vmin  1vmin 0vmin white,22vmin -5vmin  1vmin 0vmin white,26vmin -5vmin  1vmin 0vmin white,32vmin -5vmin  1vmin 0vmin white,36vmin -7vmin  1vmin 0vmin white,16vmin -6vmin  1vmin 0vmin white,12vmin -8vmin  1vmin 0vmin white,1vmin -6vmin  1vmin 0vmin white,1vmin -9vmin  1vmin 0vmin white,4vmin -8vmin 1vmin 0vmin white,3vmin -6vmin  1vmin 0vmin white;
+        z-index:-10;
+
+      }
+      .the-fool-card-0--water2{
+        position:absolute;
+        width:20vmin;
+        height:15vmin;
+        top:63vmin;
+        left:-5vmin;
+        background-color:black;
+        border-left:.2vmin solid;
+        clip-path: polygon(2% 69%, 11% 70%, 16% 69%, 19% 66%, 22% 63%, 25% 63%, 25% 66%, 25% 71%, 27% 76%, 33% 75%, 33% 75%, 38% 79%, 38% 81%, 43% 83%, 45% 81%, 49% 78%, 51% 78%, 55% 80%, 58% 84%, 62% 75%, 63% 71%, 62% 68%, 66% 68%, 67% 70%, 69% 75%, 67% 82%, 68% 87%, 70% 88%, 72% 86%, 74% 84%, 77% 86%, 78% 88%, 80% 91%, 85% 93%, 91% 92%, 94% 91%, 97% 91%, 98% 99%, 1% 99%);
+        z-index:-10;
+
+      }
+      .the-fool-card-0--water3{
+        position:absolute;
+        width:20vmin;
+        height:15vmin;
+        top:63.2vmin;
+        left:-5.2vmin;
+        background-color:#81b0ba;
+        border-left:.2vmin solid;
+        clip-path: polygon(2% 69%, 11% 70%, 16% 69%, 19% 66%, 22% 63%, 25% 63%, 25% 66%, 25% 71%, 27% 76%, 33% 75%, 33% 75%, 38% 79%, 38% 81%, 43% 83%, 45% 81%, 49% 78%, 51% 78%, 55% 80%, 58% 84%, 62% 75%, 63% 71%, 62% 68%, 66% 68%, 67% 70%, 69% 75%, 67% 82%, 68% 87%, 70% 88%, 72% 86%, 74% 84%, 77% 86%, 78% 88%, 80% 91%, 85% 93%, 91% 92%, 94% 91%, 97% 91%, 98% 99%, 1% 99%);
+        z-index:-10;
+      }
+      .the-fool-card-0--water4{
+        position:absolute;
+
+      }
+      .the-fool-card-0--rocks{
+        position:absolute;
+
+        width:2vmin;
+        height:22vmin;
+        top:65.9vmin;
+        left:27vmin;
+border:.3vmin solid#c49a3c;
+        background: repeating-linear-gradient(to bottom,#b36d34,#c49a3c 40%) 28.5% 75%/1vmin 1vmin;
+        transform:rotate(-10deg);
+
+      }
+
+      .the-fool-card-0--rocks::before{
+        content:"";
+position:absolute;
+        width:20vmin;
+        height:22vmin;
+        top:5vmin;
+        left:-4vmin;
+border:.3vmin solid#c49a3c;
+        background: repeating-linear-gradient(to bottom,#b36d34,#c49a3c 40%) 28.5% 75%/1vmin 1vmin;
+        transform:rotate(120deg);
+      }
+      .the-fool-card-0--rocks::after{
+        content:"";
+        position:absolute;
+
+        width:2vmin;
+        height:22vmin;
+        top:-1vmin;
+        left:-1vmin;
+border:.3vmin solid#c49a3c;
+        background: repeating-linear-gradient(to bottom,#b36d34,#c49a3c 40%) 28.5% 75%/1vmin 1vmin;
+        transform:rotate(15deg);
+      }
+
+
+
+
+      .the-fool-card-0--rocks1{
+        position:absolute;
+        width:3vmin;
+        height:22vmin;
+        top:67.9vmin;
+        left:21vmin;
+border:.3vmin solid#c49a3c;
+        background: repeating-linear-gradient(to bottom,#b36d54,#c49a3c 40%) 28.5% 75%/1vmin 1vmin;
+        transform:rotate(15deg);
+
+      }
+      .the-fool-card-0--rocks1::before{
+        content:"";
+        position:absolute;
+        width:2vmin;
+        height:22vmin;
+        top:-2vmin;
+        left:-1.5vmin;
+border:.3vmin solid#c49a3c;
+        background: repeating-linear-gradient(to bottom,#b36d54,#c49a3c 40%) 28.5% 75%/1vmin 1vmin;
+        transform:rotate(-5deg);
+      }
+      .the-fool-card-0--rocks1::after{
+        content:"";
+        position:absolute;
+        width:5vmin;
+        height:22vmin;
+        top:2vmin;
+        left:-6vmin;
+border:.3vmin solid#c49a3c;
+        background: repeating-linear-gradient(to bottom,#b36d54,#c49a3c 40%) 28.5% 75%/1vmin 1vmin;
+        transform:rotate(-5deg);
+      }
+
+
+
+      .the-fool-card-0--rocks2{
+        position:absolute;
+        background-color:#c66c1d;
+        width:8vmin;
+        height:6vmin;
+        top:44vmin;
+        left:35.7vmin;
+        border-left:.2vmin solid;
+        border-top:.2vmin solid;
+        border-radius:50% 30% 20% 30%;
+        transform:rotate(10deg);
+
+        z-index:100000;
+       
+
+      }
+      .the-fool-card-0--rocks3{
+        position:absolute;
+        background-color:rgb(138, 45, 38);
+        width:4vmin;
+        height:2vmin;
+        top:62vmin;
+        left:9vmin;
+        border-left:.2vmin solid;
+        border-top:.2vmin solid;
+        border-radius:50% 40% 20% 30%;
+        z-index:100000;
+        transform:rotate(-40deg);
+
+
+      }
+      .the-fool-card-0--rocks4{
+        position:absolute;
+
+      }
+      .the-fool-card-0--dog{
+        position:absolute;
+        width:13vmin;
+        height:17vmin;
+        top:51vmin;
+        left:27vmin;
+        background-color:white;
+        clip-path: polygon(32% 25%, 25% 48%, 28% 57%, 54% 66%, 64% 74%, 69% 81%, 81% 83%, 77% 65%, 44% 40%, 41% 27%);
+
+
+      }
+
+     .the-fool-card-0--dog::before{
+      
+ 
+        
+      }
+    .the-fool-card-0--dog::after{
+      
+      
+      }
+
+
+
+      .the-fool-card-0--dog1{
+        position:absolute;
+        width:9vmin;
+        height:9vmin;
+        top:58vmin;
+        left:33vmin;
+        background-color:white;
+        clip-path: polygon(21% 86%, 17% 82%, 12% 76%, 9% 66%, 11% 55%, 14% 51%, 17% 46%, 23% 45%);
+        transform:rotate(-20deg);
+
+      }
+
+
+  
+
+      .the-fool-card-0--dog1::before{
+        content:"";
+        position:absolute;
+        width:9vmin;
+        height:9vmin;
+        top:-.3vmin;
+        left:-.3vmin;
+
+        background-color:white;
+        clip-path: polygon(21% 86%, 17% 82%, 12% 76%, 9% 66%, 11% 55%, 14% 51%, 17% 46%, 23% 45%);
+
+      }
+        .the-fool-card-0--dog1::after{
+      content:"";
+       
+      }
+
+
+      .the-fool-card-0--dog2{
+        position:absolute;
+        width:12vmin;
+        height:9vmin;
+        top:58.2vmin;
+        left:34vmin;
+        background-color:black;
+        transform:rotate(-20deg);
+        clip-path: polygon(21% 86%, 17% 82%, 12% 76%, 9% 66%, 11% 55%, 14% 51%, 17% 46%, 23% 45%);  
+      }
+
+
+      .the-fool-card-0--dog21{
+        position:absolute;
+        width:12vmin;
+        height:9vmin;
+        top:58vmin;
+        left:34vmin;
+        background-color:white;
+        transform:rotate(-20deg);
+        clip-path: polygon(21% 86%, 17% 82%, 12% 76%, 9% 66%, 11% 55%, 14% 51%, 17% 46%, 23% 45%);  
+      }
+
+     .the-fool-card-0--dog2::before{
+      content:"";
+   
+      
+      }
+      .the-fool-card-0--dog2::after{
+ 
+      }
+
+
+
+      .the-fool-card-0--dog3{
+        position:absolute;
+
+        width:13vmin;
+        height:12.1vmin;
+        top:58vmin;
+        left:28.6vmin;
+        background-color:black;
+        clip-path: polygon(40% 89%, 46% 89%, 49% 89%, 54% 84%, 54% 69%, 53% 61%, 54% 54%, 55% 50%, 49% 49%, 48% 65%, 48% 82%, 40% 84%);
+        transform:rotate(-15deg);
+
+      }
+
+
+      .the-fool-card-0--dog20{
+        position:absolute;
+
+        width:12vmin;
+        height:12vmin;
+        top:58vmin;
+        left:29vmin;
+        background-color:white;
+        clip-path: polygon(40% 89%, 46% 89%, 49% 89%, 54% 84%, 54% 69%, 53% 61%, 54% 54%, 55% 50%, 49% 49%, 48% 65%, 48% 82%, 40% 84%);
+        transform:rotate(-15deg);
+
+      }
+       .the-fool-card-0--dog3::before{
+        
+      }
+      .the-fool-card-0--dog3::after{
+  
+      }
+
+
+
+      .the-fool-card-0--dog4{
+        position:absolute;
+
+
+        width:13vmin;
+      height:12vmin;
+      top:58.7vmin;
+      left:30.5vmin;
+      background-color:black;
+      clip-path: polygon(40% 89%, 46% 89%, 49% 89%, 54% 84%, 54% 69%, 53% 61%, 54% 54%, 55% 50%, 49% 49%, 48% 65%, 48% 82%, 40% 84%);
+      transform:rotate(-15deg);
+      }
+      .the-fool-card-0--dog19{
+        position:absolute;
+
+
+        width:12vmin;
+      height:12vmin;
+      top:58.7vmin;
+      left:31vmin;
+      background-color:white;
+      clip-path: polygon(40% 89%, 46% 89%, 49% 89%, 54% 84%, 54% 69%, 53% 61%, 54% 54%, 55% 50%, 49% 49%, 48% 65%, 48% 82%, 40% 84%);
+      transform:rotate(-15deg);
+      }
+
+
+      .the-fool-card-0--dog5{
+        position:absolute;
+
+        width:12.5vmin;
+        height:15.5vmin;
+        top:50vmin;
+        left:23.5vmin;
+        border-radius:50%;
+        background-color:black;
+clip-path: polygon(16% 31%, 33% 34%, 44% 46%, 47% 49%, 59% 49%, 61% 58%, 43% 60%, 32% 40%, 14% 37%, 9% 32%);
+z-index:10;
+transform:rotate(-15deg)
+      }
+
+      .the-fool-card-0--dog18{
+        position:absolute;
+
+        width:12vmin;
+        height:15vmin;
+        top:50.5vmin;
+        left:24vmin;
+        border-radius:50%;
+        background-color:white;
+clip-path: polygon(16% 31%, 33% 34%, 44% 46%, 47% 49%, 59% 49%, 61% 58%, 43% 60%, 32% 40%, 14% 37%, 9% 32%);
+z-index:10;
+transform:rotate(-15deg)
+      }
+
+
+    .the-fool-card-0--dog6{
+      position:absolute;
+
+      width:13vmin;
+      height:23vmin;
+      top:46.6vmin;
+      left:23.7vmin;
+      border-radius:50%;
+      background-color:black;
+      transform:rotate(-15deg);
+
+clip-path: polygon(12% 64%, 40% 56%, 45% 56%, 64% 59%, 64% 61%, 54% 63%, 37% 61%, 19% 65%, 13% 67%);
+
+      }
+
+
+      
+    .the-fool-card-0--dog17{
+      position:absolute;
+
+      width:12vmin;
+      height:25vmin;
+      top:45.7vmin;
+      left:24vmin;
+      border-radius:50%;
+      background-color:white;
+      transform:rotate(-15deg);
+
+clip-path: polygon(12% 64%, 40% 56%, 45% 56%, 64% 59%, 64% 61%, 54% 63%, 37% 61%, 19% 65%, 13% 67%);
+
+      }
+        .the-fool-card-0--dog7{
+
+        position:absolute;
+
+        width:3.2vmin;
+        height:3.2vmin;
+        top:52.5vmin;
+        left:31.4vmin;
+        border-radius:50%;
+        background-color:black;
+        box-shadow:-.4vmin 4vmin 0 0 ,-.5vmin 1vmin 0 -.5vmin ;
+
+        
+      }
+
+      .the-fool-card-0--dog16{
+
+        position:absolute;
+
+        width:3vmin;
+        height:3vmin;
+        top:52.5vmin;
+        left:31.4vmin;
+        border-radius:50%;
+        background-color:white;
+        box-shadow:-.4vmin 4vmin 0 0 white,-.5vmin 1vmin 0 -.5vmin white;
+        
+
+      }
+
+
+
+
+     .the-fool-card-0--dog8{
+
+        position:absolute;
+
+        width:.6vmin;
+        height:1vmin;
+        top:54vmin;
+        left:34.3vmin;
+        background-color:white;
+        transform:rotate(-60deg);
+        border-radius:40%;
+
+        
+      
+      }
+
+      .the-fool-card-0--dog8::before{
+        content:"";
+
+        
+
+      }
+    .the-fool-card-0--dog8::after{
+      content:"";
+    }
+
+    .the-fool-card-0--dog9{
+
+
+       position:absolute;
+
+        width:2vmin;
+        height:2vmin;
+        top:52.5vmin;
+        left:31.3vmin;
+        background-color:white;
+      }
+      .the-fool-card-0--dog9::before{
+        content:"";
+            position:absolute;
+
+        width:2vmin;
+        height:1vmin;
+        top:.5vmin;
+        left:-.8vmin;
+        border-radius:30%;
+        border: .1vmin solid;
+        background-color:white;
+        transform:rotate(50deg);
+
+        box-shadow: -.4vmin -.9vmin 0 0 white, -.4vmin -.9vmin 0 .1vmin;
+      }
+      .the-fool-card-0--dog10{
+
+
+        position:absolute;
+ 
+         width:11vmin;
+         height:11vmin;
+         top:52vmin;
+         left:28.6vmin;
+         background-color:black;
+         clip-path: polygon(51% 28%, 51% 41%, 51% 51%, 54% 60%, 60% 67%, 64% 74%, 70% 84%, 57% 84%, 52% 74%, 46% 62%, 44% 42%, 43% 31%, 39% 29%, 43% 26%);
+       }
+
+
+
+       .the-fool-card-0--dog15{
+
+
+        position:absolute;
+ 
+         width:10vmin;
+         height:10vmin;
+         top:53vmin;
+         left:29vmin;
+         background-color:white;
+         clip-path: polygon(51% 28%, 51% 41%, 51% 51%, 54% 60%, 60% 67%, 64% 74%, 70% 84%, 57% 84%, 52% 74%, 46% 62%, 44% 42%, 43% 31%, 39% 29%, 43% 26%);
+       }
+       .the-fool-card-0--dog11{
+
+
+        position:absolute;
+ 
+         width:1vmin;
+         height:6vmin;
+         top:55vmin;
+         left:32.3vmin;
+         background-color:white;
+         transform:rotate(15deg);
+         box-shadow:-1vmin -.5vmin 0 0 white;
+       
+       }
+
+       .the-fool-card-0--dog12{
+
+
+        position:absolute;
+ 
+         width:11vmin;
+         height:11vmin;
+         top:54.5vmin;
+         left:32.5vmin;
+         background-color:black;
+         clip-path: polygon(28% 68%, 39% 64%, 51% 58%, 55% 50%, 55% 43%, 54% 35%, 51% 28%, 59% 29%, 64% 40%, 64% 45%, 63% 52%, 60% 61%, 54% 64%, 49% 68%);       
+       }
+
+
+       .the-fool-card-0--dog14{
+
+
+        position:absolute;
+ 
+         width:10vmin;
+         height:10vmin;
+         top:55vmin;
+         left:33vmin;
+         background-color:white;
+         clip-path: polygon(28% 68%, 39% 64%, 51% 58%, 55% 50%, 55% 43%, 54% 35%, 51% 28%, 59% 29%, 64% 40%, 64% 45%, 63% 52%, 60% 61%, 54% 64%, 49% 68%);       
+       }
+
+       
+
+       .the-fool-card-0--dog13{
+
+
+        position:absolute;
+ 
+         width:.7vmin;
+         height:.7vmin;
+         top:52.8vmin;
+         left:32.5vmin;
+         border-radius:50%;
+         background-color:black;
+         z-index:1000000;
+
+         box-shadow: -1.3vmin -1.3vmin 0 -.1vmin,
+         
+         
+        /*eye  */
+         -13.8vmin -39.9vmin .2vmin -.1vmin,
+         -15.6vmin -39vmin 0vmin -.2vmin,
+         -15.4vmin -39vmin 0vmin -.2vmin
+       
+         ;
+               
+       }
+
+
+      .the-fool-card-0--fool-container{
+        position:absolute;
+
+      }
+      .the-fool-card-0--head{
+        position:absolute;
+        width:.2vmin;
+        height: 1vmin;
+        background-color: #ba2832;
+        border-radius: 50%; 
+        top:9vmin;
+        left:21vmin;
+        transform:rotate(30deg);
+        box-shadow: 0 0 0 .2vmin,
+
+        -.5vmin 1vmin 0 0 #ba2832,
+        -.5vmin 1vmin 0 .2vmin,
+        -.5vmin .5vmin 0 0 #ba2832,
+        -.5vmin .5vmin 0 .2vmin,
+
+        .1vmin -.1vmin 0 0 #ba2832,
+        .1vmin -.1vmin 0 .2vmin, 
+       .5vmin -.5vmin 0 0 #ba2832,
+       .5vmin -.5vmin 0 .2vmin,
+       .8vmin -.8vmin 0 0 #ba2832,
+       .8vmin -.8vmin 0 .2vmin,
+       1vmin -1vmin 0 0 #ba2832,
+       1vmin -1vmin 0 .2vmin,
+       1.3vmin -1.3vmin 0 0 #ba2832,
+       1.3vmin -1.3vmin 0 .2vmin,
+       1.8vmin -1.7vmin 0 0 #ba2832,
+       1.8vmin -1.7vmin 0 .2vmin,
+       2.1vmin -1.9vmin 0 0 #ba2832,
+       2.1vmin -1.9vmin 0 .2vmin,
+       2.5vmin -2.4vmin 0 0 #ba2832,
+       2.5vmin -2.4vmin 0 .2vmin,
+       2.9vmin -2.6vmin 0 0 #ba2832,
+       2.9vmin -2.6vmin 0 .2vmin,
+       3.2vmin -3vmin 0 0 #ba2832,
+       3.2vmin -3vmin 0 .2vmin,
+       3.6vmin -3.5vmin 0 0 #ba2832,
+       3.6vmin -3.5vmin 0 .2vmin,
+       3.9vmin -3.7vmin 0 0 #ba2832,
+       3.9vmin -3.7vmin 0 .2vmin,
+       4.2vmin -4.5vmin 0 0 #ba2832,
+       4.2vmin -4.5vmin 0 .2vmin,
+       4.5vmin -5.5vmin 0 0 #ba2832,
+       4.5vmin -5.5vmin 0 .2vmin,
+       4.8vmin -6.2vmin 0 0 #ba2832,
+       4.8vmin -6.2vmin 0 .2vmin,
+       5vmin -6.5vmin 0 0 #ba2832,
+       5vmin -6.5vmin 0 .2vmin,
+       5.2vmin -7vmin 0 0 #ba2832,
+       5.2vmin -7vmin 0 .2vmin,
+
+          /*bag button*/
+          9vmin -1.5vmin 0 .5vmin
+
+          ;
+z-index:1000;
+      }
+
+      .the-fool-card-0--head::before{
+        content:"";
+        position:absolute;
+        width:.2vmin;
+        height: 1vmin;
+        background-color: #ba2832;
+        border-radius: 50%; 
+        top:0vmin;
+        left:1vmin;
+        transform:rotate(90deg);
+        box-shadow: 0 0 0 .1vmin,
+
+       1vmin 1vmin 0 0 #ba2832,
+       1vmin 1vmin 0 .2vmin,
+       .5vmin .5vmin 0 0 #ba2832,
+       .5vmin .5vmin 0 .2vmin,
+
+        -.1vmin -.1vmin 0 0 #ba2832,
+        -.1vmin -.1vmin 0 .2vmin,
+        
+        -.5vmin -.5vmin 0 0 #ba2832,
+        -.5vmin -.5vmin 0 .2vmin,
+       -.8vmin -.8vmin 0 0 #ba2832,
+       -.8vmin -.8vmin 0 .2vmin,
+       -1vmin -1vmin 0 0 #ba2832,
+       -1vmin -1vmin 0 .2vmin,
+       -1.3vmin -1.3vmin 0 0 #ba2832,
+       -1.3vmin -1.3vmin 0 .2vmin,
+       -1.8vmin -1.7vmin 0 0 #ba2832,
+       -1.8vmin -1.7vmin 0 .2vmin,
+       -2.1vmin -1.9vmin 0 0 #ba2832,
+       -2.1vmin -1.9vmin 0 .2vmin,
+        -2.5vmin -2.4vmin 0 0 #ba2832,
+        -2.5vmin -2.4vmin 0 .2vmin,
+        -2.9vmin -2.6vmin 0 0 #ba2832,
+        -2.9vmin -2.6vmin 0 .2vmin,
+        -3.2vmin -3vmin 0 0 #ba2832,
+        -3.2vmin -3vmin 0 .2vmin,
+        -3.6vmin -3.5vmin 0 0 #ba2832,
+        -3.6vmin -3.5vmin 0 .2vmin,
+        -3.9vmin -3.7vmin 0 0 #ba2832,
+        -3.9vmin -3.7vmin 0 .2vmin,
+        -6.5vmin -4.3vmin 0 0 #ba2832,
+        -6.5vmin -4.3vmin 0 .2vmin,
+        -4.5vmin -3.5vmin 0 0 #ba2832,
+        -4.5vmin -3.5vmin 0 .2vmin,
+        -5.8vmin -4.2vmin 0 0 #ba2832,
+        -5.8vmin -4.2vmin 0 .2vmin,
+        -5.5vmin -4.5vmin 0 0 #ba2832,
+        -5.5vmin -4.5vmin 0 .2vmin,
+        -5vmin -4vmin 0 0 #ba2832,
+        -5vmin -4vmin 0 .2vmin
+            
+              
+              
+    
+
+
+
+            
+            ;
+
+      }
+      .the-fool-card-0--head::after{
+        content:"";
+        position:absolute;
+        width:.5vmin;
+        height:.2vmin;
+        border-radius:0 50%;
+        background-color:#36801e;
+        top:2vmin;
+        left:0vmin;
+        box-shadow: 0 0 0 .2vmin,
+         4.5vmin 1.5vmin 0 .2vmin #36801e,
+          4.5vmin 1.5vmin 0 .4vmin,
+           5vmin .5vmin 0 .2vmin #36801e, 
+           5vmin .5vmin 0 .4vmin,
+            2vmin .5vmin 0 .2vmin #36801e,
+             2vmin .5vmin 0 .4vmin,
+              5vmin 1vmin 0 .2vmin #36801e,
+               5vmin 1vmin 0 .2vmin,
+                3vmin 0vmin 0 .2vmin #36801e,
+                3vmin 0vmin 0 .4vmin, 
+                3vmin -.2vmin 0 .2vmin #36801e, 
+                3vmin -.2vmin 0 .4vmin,
+
+
+
+                1vmin 1.5vmin 0 .2vmin #36801e,
+                1vmin 1.5vmin 0 .4vmin,
+                 1.5vmin 1.5vmin 0 .2vmin #36801e, 
+                 1.5vmin 1.5vmin 0 .4vmin,
+                  2vmin 1.5vmin 0 .2vmin #36801e,
+                   2vmin 1.5vmin 0 .4vmin,
+                    1vmin 1.6vmin 0 .2vmin #36801e,
+                     1vmin 1.6vmin 0 .4vmin,
+                      3.5vmin 2vmin 0 .2vmin #36801e,
+                      3.5vmin 2vmin 0 .4vmin, 
+                      0vmin 1.2vmin 0 .2vmin #36801e, 
+                      -0vmin 1.2vmin 0 .4vmin,
+
+
+
+         1.8vmin .5vmin 0 .2vmin #36801e,
+          1.8vmin .5vmin 0 .4vmin,
+           1vmin .5vmin 0 .2vmin #36801e, 
+           1vmin .5vmin 0 .4vmin,
+            4vmin .5vmin 0 .2vmin #36801e,
+             4vmin .5vmin 0 .4vmin,
+              3vmin -.6vmin 0 .2vmin #36801e,
+               3vmin -.6vmin 0 .4vmin,
+                3vmin 1vmin 0 .2vmin #36801e,
+                3vmin 1vmin 0 .4vmin, 
+                2vmin -.2vmin 0 .2vmin #36801e, 
+                2vmin -.2vmin 0 .4vmin,
+                
+                
+                .5vmin .5vmin 0 .2vmin #36801e,
+                 .5vmin .5vmin 0 .4vmin,
+                  -.5vmin .5vmin 0 .2vmin #36801e, 
+                  -.5vmin .5vmin 0 .4vmin,
+                   1vmin .5vmin 0 .2vmin #36801e,
+                    1vmin .5vmin 0 .4vmin,
+                     .8vmin -.6vmin 0 .2vmin #36801e,
+                      .8vmin -.6vmin 0 .4vmin,
+                       1.8vmin 1vmin 0 .2vmin #36801e,
+                       1.8vmin 1vmin 0 .4vmin, 
+                       1.5vmin -.2vmin 0 .2vmin #36801e, 
+                       1.5vmin -.2vmin 0 .4vmin ,
+                       0 0 0 .2vmin,
+
+                       4.5vmin 2vmin 0 .2vmin #36801e,
+                        4.5vmin 2vmin 0 .4vmin,
+                         4.5vmin 1.8vmin 0 .2vmin #36801e, 
+                         4.5vmin 1.8vmin 0 .4vmin,
+                          4vmin 1vmin 0 .2vmin #36801e,
+                           4vmin 1vmin 0 .4vmin,
+                            3vmin 1.2vmin 0 .2vmin #36801e,
+                             3vmin 1.2vmin 0 .4vmin,
+                              3vmin 1vmin 0 .2vmin #36801e,
+                              3vmin 1vmin 0 .4vmin, 
+                              2vmin -.4vmin 0 .2vmin #36801e, 
+                              2vmin -.4vmin 0 .4vmin
+                ;
+
+      }
+
+
+
+
+
+
+      .the-fool-card-0--head1{
+        position:absolute;
+        width:5vmin;
+        height:13vmin;
+        border-radius:50%;
+        border:.1vmin solid;
+        background-color:#ffb88c;
+        z-index:0;
+        top:10vmin;
+        left:16vmin;
+        transform:rotate(30deg);
+        z-index:10;
+
+      }
+/*face THIS*/
+      .the-fool-card-0--head1::before{
+       position:absolute;
+       content:"";
+       height:4vmin;
+       width:3vmin;
+       top:1vmin;
+       left:-4vmin;
+       border-radius:50%;
+       background-color:#feeb3b;
+       transform:rotate(40deg);
+
+       /*left side shoulder*/
+       box-shadow:5vmin 3vmin 0 1vmin #feeb3b;
+
+      }
+      .the-fool-card-0--head1::after{
+        position:absolute;
+        content:"";
+        height:4vmin;
+        width:2.5vmin;
+        top:3vmin;
+        left:.2vmin;
+        border-radius:50%;
+        background-color:#ffb88c;
+        transform:rotate(100deg);
+
+
+        /*hands*/
+        box-shadow:20vmin 3vmin 0 -1vmin #ffb88c,-2vmin -5vmin 0 .2vmin;
+      }
+
+
+
+      .the-fool-card-0--head2{
+        position:absolute;
+        height:18vmin;
+        width:9vmin;
+        top:13.3vmin;
+        left:12.3vmin;
+        background-color:black;
+        z-index:1000;
+        transform:rotate(20deg);
+        clip-path: polygon(20% 33%, 27% 36%, 36% 38%, 43% 39%, 51% 41%, 57% 42%, 64% 40%, 73% 33%, 84% 23%, 88% 24%, 85% 29%, 80% 36%, 73% 43%, 68% 50%, 60% 55%, 46% 55%, 36% 54%, 28% 50%, 18% 41%);
+
+      }
+
+      .the-fool-card-0--head7{
+        position:absolute;
+        height:16vmin;
+        width:9vmin;
+        top:14.3vmin;
+        left:12.3vmin;
+        background-color:#f7f2ee;
+        z-index:1000;
+        transform:rotate(20deg);
+        clip-path: polygon(20% 33%, 27% 36%, 36% 38%, 43% 39%, 51% 41%, 57% 42%, 64% 40%, 73% 33%, 84% 23%, 88% 24%, 85% 29%, 80% 36%, 73% 43%, 68% 50%, 60% 55%, 46% 55%, 36% 54%, 28% 50%, 18% 41%);
+
+      }
+
+      .the-fool-card-0--head11{
+        position:absolute;
+        height:1vmin;
+        width:1vmin;
+        top:18.8vmin;
+        left:20vmin;
+
+
+        background-color:#ffb88c;
+        z-index:10;
+        
+
+      }
+
+
+      .the-fool-card-0--head11::before{
+        content:"";
+        position:absolute;
+        height:4vmin;
+        width:1vmin;
+        top:-.5vmin;
+        left:-1.5vmin;
+
+transform:rotate(50deg);
+        background-color:#ffb88c;
+        z-index:10;
+        
+
+      }
+
+
+      .the-fool-card-0--head3{
+        position:absolute;
+        height:11vmin;
+        width:10vmin;
+        top:11.8vmin;
+        left:14vmin;
+        background-color:black;
+        clip-path: polygon(45% 72%, 38% 62%, 34% 56%, 32% 51%, 35% 45%, 41% 37%, 47% 34%);
+        z-index:100000;
+        transform:rotate(20deg);
+
+      }
+
+      .the-fool-card-0--head9{
+        position:absolute;
+        height:11vmin;
+        width:10vmin;
+        top:11.7vmin;
+        left:14.2vmin;
+        background-color:#ffb88c;
+        clip-path: polygon(45% 72%, 38% 62%, 34% 56%, 32% 51%, 35% 45%, 41% 37%, 47% 34%);
+        z-index:100000;
+        transform:rotate(20deg);
+
+      }
+
+
+      .the-fool-card-0--head10{
+        position:absolute;
+        height:1.5vmin;
+        width:1.5vmin;
+        top:14.4vmin;
+        left:17.5vmin;
+        background-color:#ffb88c;
+        border-bottom:.1vmin solid ;
+        transform:rotate(25deg);
+
+        z-index:100000;
+
+      }
+
+      .the-fool-card-0--head10::before{
+        content:"";
+        position:absolute;
+        height:1vmin;
+        width:1vmin;
+        top:.8vmin;
+        left:1.5vmin;
+        background-color:#ffb88c;
+        border-bottom:.1vmin solid ;
+        transform:rotate(25deg);
+
+        z-index:100000;
+
+      }
+
+      .the-fool-card-0--head10::after{
+        content:"";
+        position:absolute;
+        height:1vmin;
+        width:.5vmin;
+        top:.6vmin;
+        left:-.3vmin;
+        background-color:transparent;
+        border-bottom:.1vmin solid ;
+        transform:rotate(30deg);
+
+        z-index:100000;
+
+      }
+
+      .the-fool-card-0--head4{
+        position:absolute;
+        height:3vmin;
+        width:3vmin;
+        top:12vmin;
+        left:15.7vmin;
+        border-radius:50%;
+        background-color:#feeb3b;
+        z-index:100;
+
+       
+      }
+
+
+      
+
+/*FACE*/
+      .the-fool-card-0--head5{
+        position:absolute;
+        height:8vmin;
+        width:7vmin;
+        top: 10.3vmin;
+        left:15.2vmin;
+        border-radius:50%;
+        background-color:black;
+        z-index:100;
+        clip-path: polygon(29% 31%, 34% 35%, 27% 39%, 25% 46%, 22% 53%, 23% 59%, 29% 63%, 37% 62%, 52% 63%, 60% 59%, 68% 50%, 70% 41%, 66% 34%, 50% 25%, 43% 25%);
+      }
+
+      .the-fool-card-0--head6{
+        position:absolute;
+        height:8vmin;
+        width:7vmin;
+        top: 10.4vmin;
+        left:15.4vmin;
+        background-color:#ffb88c;
+        z-index:100;
+        clip-path: polygon(29% 31%, 34% 35%, 27% 39%, 25% 46%, 22% 53%, 23% 59%, 29% 63%, 37% 62%, 52% 63%, 60% 59%, 68% 50%, 70% 41%, 66% 34%, 50% 25%, 43% 25%);
+      }
+
+
+
+      .the-fool-card-0--armR{
+        position:absolute;
+        height:3vmin;
+        width:6vmin;
+        border-radius:20%;
+        background-color:#f7f2ee;
+        border:.2vmin solid;
+        left:26.5vmin;
+        top:25vmin;
+        transform:rotate(-15deg);
+        z-index:1000000;
+
+      }
+      .the-fool-card-0--armR1{
+        position:absolute;
+        height:2.5vmin;
+        width:4vmin;
+        top:22.5vmin;
+        left:33vmin;
+        border-radius:50%;
+        background-color:#ffb88c;
+        border-bottom:.3vmin solid;
+
+      }
+
+      .the-fool-card-0--armR1::before{
+        content:"";
+        position:absolute;
+        height:2vmin;
+        width:1.5vmin;
+        top:1.5vmin;
+        left:-1vmin;
+        background-color:#ffb88c;
+        border-right:.3vmin solid;
+        transform:rotate(55deg);
+
+      }
+      .the-fool-card-0--armR1::after{
+        content:"";
+       
+      }
+
+
+
+
+
+      .the-fool-card-0--armR2{
+        position:absolute;
+        height:2vmin;
+        width:1vmin;
+        top:22vmin;
+        left:34.5vmin;
+        border-radius:50%;
+        background-color:#ffb88c;
+        border-right:.3vmin solid;
+        transform:rotate(55deg);
+        z-index:100000;
+
+      }
+      .the-fool-card-0--armR3{
+        position:absolute;
+
+      }
+      .the-fool-card-0--armR4{
+        position:absolute;
+
+      }
+      .the-fool-card-0--armL{
+        position:absolute;
+        height:3vmin;
+        width:7vmin;
+        border-radius:20%;
+        background-color:#f7f2ee;
+        border:.2vmin solid;
+        left:4.5vmin;
+        top:26.8vmin;
+        transform:rotate(-20deg);
+        z-index:1;
+
+      }
+      .the-fool-card-0--armL1{
+        position:absolute;
+        height:2.5vmin;
+        width:1.5vmin;
+        top:27.3vmin;
+        left:1.5vmin;
+        border-radius:50%;
+        background-color:#ffb88c;
+        border-left:.3vmin solid;
+        transform:rotate(55deg);
+      }
+      .the-fool-card-0--armL2{
+        position:absolute;
+        height:2vmin;
+        width:3vmin;
+        top:28.6vmin;
+        left:2vmin;
+        border-radius:50%;
+        background-color:#ffb88c;
+        border-bottom:.3vmin solid;
+      }
+      .the-fool-card-0--armL3{
+        position:absolute;
+
+      }
+      .the-fool-card-0--armL4{
+        position:absolute;
+
+      }
+      .the-fool-card-0--legR{
+        position:absolute;
+
+        width:3.5vmin;
+        height:6vmin;
+        top:45.5vmin;
+        left:21.4vmin;
+        border-left:.3vmin solid;
+        border-right:.3vmin solid;
+
+        border-radius:50% 20% 20% 50%;
+        background-color:#dcc045;        ;
+        transform:rotate(140deg);
+        
+      }
+
+      .the-fool-card-0--legR::before{
+        content:"";
+        position:absolute;
+
+        width:3.5vmin;
+        height:6vmin;
+        top:4vmin;
+        left:-1.2vmin;
+        border-left:.3vmin solid;
+        border-right:.3vmin solid;
+        border-radius:50% 20% 20% 50%;
+        background-color:#dcc045; 
+        transform:rotate(25deg);
+    
+      
+
+      }
+      .the-fool-card-0--legR::after{
+        content:"";
+        position:absolute;
+        width:2vmin;
+        height:6vmin;
+        top:0;
+        left:-.2vmin;
+        border-left:.2vmin solid;
+        border-radius:50%;
+        background-color:#dcc045; 
+
+      }
+
+
+
+
+      .the-fool-card-0--legR1{
+        position:absolute;
+
+      }
+      .the-fool-card-0--legR2{
+        position:absolute;
+
+      }
+      .the-fool-card-0--legR3{
+        position:absolute;
+
+      }
+      .the-fool-card-0--legR4{
+        position:absolute;
+
+      }
+      .the-fool-card-0--legL{
+        position:absolute;
+
+        width:3.5vmin;
+        height:6vmin;
+        top:48vmin;
+        left:16vmin;
+        border-left:.3vmin solid;
+        border-right:.3vmin solid;
+        border-radius:50% 20% 20% 50%;
+        background-color:#dcc045;        ;
+        transform:rotate(165deg);
+
+      }
+      .the-fool-card-0--legL::before{
+        content:"";
+        position:absolute;
+
+        width:4.5vmin;
+        height:9vmin;
+        top:4vmin;
+        left:-2vmin;
+        border-left:.3vmin solid;
+        border-right:.3vmin solid;
+        border-radius:50% 20% 20% 50%;
+        background-color:#dcc045; 
+        transform:rotate(15deg);
+      
+
+      }
+      .the-fool-card-0--legL::after{
+        content:"";
+        position:absolute;
+
+        width:2vmin;
+        height:5vmin;
+        top:3vmin;
+        left:.1vmin;
+        border-radius:50%;
+        background-color:#dcc045; 
+
+      }
+
+
+      .the-fool-card-0--legL1{
+        position:absolute;
+
+      }
+      .the-fool-card-0--legL2{
+        position:absolute;
+
+      }
+      .the-fool-card-0--legL3{
+        position:absolute;
+
+      }
+      .the-fool-card-0--legL4{
+        position:absolute;
+
+      }
+     .the-fool-card-0--chest{
+        position:absolute;
+
+        width:20vmin;
+        height:20vmin;
+        top:27.1vmin;
+        left:8.3vmin;
+     
+        background-color:black; 
+
+        clip-path: polygon(23% 31%, 63% 28%, 73% 41%, 75% 56%, 76% 62%, 80% 67%, 82% 75%, 86% 80%, 94% 83%, 60% 92%, 52% 88%, 44% 91%, 11% 88%, 12% 80%, 13% 70%, 17% 55%);
+        transform:rotate(-10deg);
+
+      }
+
+      .the-fool-card-0--chest7{
+        position:absolute;
+
+        width:20vmin;
+        height:20vmin;
+        top:27vmin;
+        left:8vmin;
+     
+        background-color:#536b0d; 
+        clip-path: polygon(23% 31%, 63% 28%, 73% 41%, 75% 56%, 76% 62%, 80% 67%, 82% 75%, 86% 80%, 94% 83%, 60% 92%, 52% 88%, 44% 91%, 11% 88%, 12% 80%, 13% 70%, 17% 55%);
+        transform:rotate(-10deg);
+
+      }
+     .the-fool-card-0--chest::before{
+      
+      }
+       .the-fool-card-0--chest::after{
+  
+
+      }
+
+
+
+      .the-fool-card-0--chest1{
+        content:"";
+        position:absolute;
+        width:8vmin;
+        height:10vmin;
+        top:18vmin;
+        left:16vmin;
+   
+
+        background-color:#536b0d;
+
+        content:"";
+        position:absolute;
+        width:27vmin;
+        height:25vmin;
+        top:14.9vmin;
+        left:3.2vmin;
+     
+        border-radius: 20%;
+        background-color:black; 
+       clip-path: polygon(64% 89%, 65% 82%, 60% 76%, 59% 68%, 74% 46%, 84% 29%, 88% 23%, 70% 15%, 41% 16%, 22% 35%, 19% 46%, 28% 45%, 21% 52%, 30% 50%, 39% 85%);
+       z-index:1;
+       
+      }
+
+
+      .the-fool-card-0--chest8{
+        content:"";
+        position:absolute;
+        width:8vmin;
+        height:10vmin;
+        top:18vmin;
+        left:16vmin;
+   
+
+        background-color:#536b0d;
+
+        content:"";
+        position:absolute;
+        width:25vmin;
+        height:25vmin;
+        top:15vmin;
+        left:4vmin;
+     
+        border-radius: 20%;
+        background-color:#536b0d; 
+       clip-path: polygon(64% 89%, 65% 82%, 60% 76%, 59% 68%, 74% 46%, 84% 29%, 88% 23%, 70% 15%, 41% 16%, 22% 35%, 19% 46%, 28% 45%, 21% 52%, 30% 50%, 39% 85%);
+       z-index:1;
+       
+      }
+
+
+
+      .the-fool-card-0--chest1::before{
+     
+      }
+      .the-fool-card-0--chest1::after{
+   
+      }
+
+
+
+
+      .the-fool-card-0--chest2{
+        position:absolute;
+        width:16vmin;
+        height:25vmin;
+        top:15.2vmin;
+        left:18.5vmin;
+        border-radius: 50%;
+        background-color:black;
+       
+        z-index:1000000;
+        clip-path: polygon(35% 15%, 47% 22%, 59% 29%, 66% 30%, 73% 28%, 70% 34%, 72% 40%, 64% 40%, 67% 45%, 61% 51%, 64% 54%, 59% 58%, 68% 60%, 61% 63%, 70% 66%, 64% 70%, 64% 70%, 72% 72%, 72% 78%, 77% 78%, 78% 83%, 78% 83%, 83% 83%, 80% 88%, 88% 91%, 77% 91%, 77% 91%, 61% 90%, 51% 86%, 43% 80%, 38% 74%, 35% 67%, 31% 54%, 29% 41%, 27% 31%, 26% 25%);
+        transform:rotate(-15deg);
+
+      }
+
+      .the-fool-card-0--chest9{
+        position:absolute;
+        width:15vmin;
+        height:25vmin;
+        top:15vmin;
+        left:19vmin;
+        border-radius: 50%;
+        background-color:#536b0d;
+       
+        z-index:1000000;
+        clip-path: polygon(35% 15%, 47% 22%, 59% 29%, 66% 30%, 73% 28%, 70% 34%, 72% 40%, 64% 40%, 67% 45%, 61% 51%, 64% 54%, 59% 58%, 68% 60%, 61% 63%, 70% 66%, 64% 70%, 64% 70%, 72% 72%, 72% 78%, 77% 78%, 78% 83%, 78% 83%, 83% 83%, 80% 88%, 88% 91%, 77% 91%, 77% 91%, 61% 90%, 51% 86%, 43% 80%, 38% 74%, 35% 67%, 31% 54%, 29% 41%, 27% 31%, 26% 25%);
+        transform:rotate(-15deg);
+
+      }
+
+
+      
+    .the-fool-card-0--chest3{
+        position:absolute;
+
+        width:20vmin;
+        height:20vmin;
+        top:21.5vmin;
+        left:.6vmin;
+        background-color:black; 
+        clip-path: polygon(38% 24%, 37% 32%, 44% 26%, 49% 33%, 48% 39%, 57% 39%, 57% 47%, 63% 46%, 68% 52%, 67% 78%, 60% 71%, 56% 75%, 55% 65%, 49% 66%, 49% 58%, 39% 59%, 42% 46%, 32% 51%);
+        transform:rotate(28deg);
+
+
+     
+      }
+
+      .the-fool-card-0--chest5{
+        position:absolute;
+
+        width:20vmin;
+        height:20vmin;
+        top:21.5vmin;
+        left:1vmin;
+        background-color:#fb571a; 
+        clip-path: polygon(38% 24%, 37% 32%, 44% 26%, 49% 33%, 48% 39%, 57% 39%, 57% 47%, 63% 46%, 68% 52%, 67% 78%, 60% 71%, 56% 75%, 55% 65%, 49% 66%, 49% 58%, 39% 59%, 42% 46%, 32% 51%);
+        transform:rotate(28deg);
+
+     
+      }
+
+
+        .the-fool-card-0--chest4{
+          position:absolute;
+
+          width:20vmin;
+          height:20vmin;
+          top:19.2vmin;
+          left:18.3vmin;
+          background-color:black; 
+          clip-path: polygon(38% 28%, 58% 24%, 61% 31%, 61% 31%, 61% 36%, 60% 46%, 65% 50%, 69% 51%, 67% 59%, 71% 61%, 68% 68%, 68% 68%, 75% 70%, 81% 71%, 78% 78%, 83% 78%, 83% 82%, 94% 81%, 92% 86%, 94% 90%, 87% 90%, 77% 89%, 68% 84%, 64% 78%, 56% 76%, 58% 69%, 52% 69%, 54% 62%, 45% 59%, 46% 48%, 39% 48%, 45% 39%, 40% 38%);
+          transform:rotate(-10deg);
+
+  
+      } 
+
+      .the-fool-card-0--chest6{
+        position:absolute;
+
+        width:20vmin;
+        height:20vmin;
+        top:19vmin;
+        left:18vmin;
+        background-color:#fb571a; 
+        clip-path: polygon(38% 28%, 58% 24%, 61% 31%, 61% 31%, 61% 36%, 60% 46%, 65% 50%, 69% 51%, 67% 59%, 71% 61%, 68% 68%, 68% 68%, 75% 70%, 81% 71%, 78% 78%, 83% 78%, 83% 82%, 94% 81%, 92% 86%, 94% 90%, 87% 90%, 77% 89%, 68% 84%, 64% 78%, 56% 76%, 58% 69%, 52% 69%, 54% 62%, 45% 59%, 46% 48%, 39% 48%, 45% 39%, 40% 38%);
+        transform:rotate(-10deg);
+
+
+    } 
+      .the-fool-card-0--stick{
+        position:absolute;
+
+        width:1vmin;
+        height:45vmin;
+        top:-3vmin;
+        left:14vmin;
+        background-color:#191515;
+        transform:rotate(52deg);
+        z-index:1;
+
+
+      }
+
+      .the-fool-card-0--stick::before{
+        content:"";
+
+       
+
+
+      }
+
+      
+      .the-fool-card-0--stick::after{
+        content:"";
+
+        position:absolute;
+
+        width:2vmin;
+        height:2vmin;
+        top:0vmin;
+        left:-.5vmin;
+        border:.3vmin solid;
+        border-radius:50%;
+        background-color:brown;
+        transform:rotate(-20deg);
+      }
+
+
+
+
+      .the-fool-card-0--stick1{
+       
+        position:absolute;
+
+        width:5vmin;
+        height:2vmin;
+        top:11vmin;
+        left:26.8vmin;
+        border-bottom:.2vmin solid;
+
+        background-color:#fe8b25;
+
+        border-radius:50% ;
+        transform:rotate(-20deg);
+        z-index:1000;
+
+      }
+      .the-fool-card-0--stick1::before{
+         position:absolute;
+         content:"";
+
+      
+      }
+      .the-fool-card-0--stick1::after{
+         position:absolute;
+         content:"";
+      }
+
+
+
+
+      .the-fool-card-0--stick2{
+        position:absolute;
+        width:1vmin;
+        height:8vmin;
+        top:14.8vmin;
+        left:15vmin;
+        background-color:#191515;
+        transform:rotate(52deg);
+        z-index:10000;
+
+      }
+      .the-fool-card-0--stick3{
+        position:absolute;
+
+        width:8vmin;
+        height:12vmin;
+        top:6vmin;
+        left:24.5vmin;
+        background-color:#fe8b25;
+        clip-path: polygon(41% 13%, 23% 27%, 15% 38%, 17% 56%, 22% 78%, 32% 84%, 60% 84%, 72% 85%, 84% 83%, 93% 75%, 95% 65%, 98% 51%, 99% 36%, 90% 15%, 81% 17%, 81% 30%, 73% 41%, 60% 44%, 49% 46%, 38% 41%, 34% 36%, 36% 28%, 48% 15%);
+        z-index:1;
+
+        transform:rotate(-20deg);
+      }
+      .the-fool-card-0--stick4{
+ position:absolute;
+
+        width:8.4vmin;
+        height:12.4vmin;
+        top:5.8vmin;
+        left:24.2vmin;
+        background-color:black;
+        clip-path: polygon(41% 13%, 23% 27%, 15% 38%, 17% 56%, 22% 78%, 32% 84%, 60% 84%, 72% 85%, 84% 83%, 93% 75%, 95% 65%, 98% 51%, 99% 36%, 90% 15%, 81% 17%, 81% 30%, 73% 41%, 60% 44%, 49% 46%, 38% 41%, 34% 36%, 36% 28%, 48% 15%);
+
+        transform:rotate(-20deg);
+      }
+      .the-fool-card-0--flower{
+        position:absolute;
+        width:.2vmin;
+        height:3vmin;
+        top:20.7vmin;
+        left:35vmin;
+        background-color:#191515;
+        
+
+      }
+
+      .the-fool-card-0--flower::before{
+                position:absolute;
+
+                content:"";
+                width:.2vmin;
+                height:1.5vmin;
+                top:.5vmin;
+                left:-.8vmin;
+                background-color:#191515;
+                transform:rotate(-60deg);
+      }
+      .the-fool-card-0--flower::after{
+                position:absolute;
+
+                content:"";
+               
+                width:.2vmin;
+                height:1.5vmin;
+                top:.5vmin;
+                left:.7vmin;
+                background-color:#191515;
+                transform:rotate(60deg);
+      }
+
+
+
+      .the-fool-card-0--flower1{
+        position:absolute;
+        width:.5vmin;
+        height:1vmin;
+        top:20.6vmin;
+        left:33.4vmin;
+        border-radius:0 50%;
+        
+        background-color:#191515;
+        box-shadow:2.5vmin .2vmin 0 0, 1.4vmin -1vmin 0 0,1vmin -1.5vmin 0 .3vmin white,1vmin -1.5vmin 0 .5vmin,.4vmin -2vmin 0 .3vmin white,.4vmin -2vmin 0 .5vmin;
+
+      }
+
+      .the-fool-card-0--flower1::before{
+        content:"";
+        position:absolute;
+        width:.5vmin;
+        height:1vmin;
+        top:0vmin;
+        left:1vmin;
+        border-radius:50% 0;
+        
+        box-shadow:2vmin .2vmin 0 0, .5vmin -1vmin 0 0,1vmin -1.5vmin 0 .3vmin white,1vmin -1.5vmin 0 .5vmin,1.5vmin -2vmin 0 .3vmin white,1.5vmin -2vmin 0 .5vmin;
+
+      }
+
+
+      .the-fool-card-0--flower2{
+        position:absolute;
+
+      }
+      .the-fool-card-0--flower3{
+        position:absolute;
+
+      }
+      .the-fool-card-0--flower4{
+        position:absolute;
+
+      }
+
+
+
+      .the-fool-card-0--bootL{
+        position:absolute;
+
+        width:6.5vmin;
+        height:2.5vmin;
+        top:61vmin;
+        left:14.5vmin;
+        border:.3vmin solid;
+        border-radius:50% 20% 20% 50%;
+        background-color:#feea3a;
+        transform:rotate(-27deg);
+        z-index:900; 
+     
+      
+      
+      }
+      .the-fool-card-0--bootL::before{
+        content:"";
+        position:absolute;
+
+        width:3vmin;
+        height:7vmin;
+        top:-6vmin;
+        left:4vmin;
+        border-left:.3vmin solid;
+        border-right:.3vmin solid;
+
+        background-color:#feea3a;
+        transform:rotate(20deg);   
+      }
+      .the-fool-card-0--bootL::after{
+        content:"";
+        position:absolute;
+
+        width:4vmin;
+        height:2vmin;
+        top:-7vmin;
+        left:5vmin;
+        border-radius:20%;
+        border:.3vmin solid;
+        transform:rotate(15deg);   
+
+
+        background-color:#feea3a;
+      }
+
+
+      .the-fool-card-0--bootL1{
+        position:absolute;
+      }
+      .the-fool-card-0--bootL2{
+        position:absolute;
+      }
+      .the-fool-card-0--bootL3{
+        position:absolute;
+      }
+      .the-fool-card-0--bootL4{
+        position:absolute;
+      }
+      .the-fool-card-0--bootR{
+        position:absolute;
+        width:6.5vmin;
+
+        height:2.5vmin;
+        top:56vmin;
+        left:24.5vmin;
+        border:.3vmin solid;
+        border-radius:50% 20% 20% 50%;
+        background-color:#feea3a;
+        transform:rotate(-60deg); 
+
+      }
+      .the-fool-card-0--bootR::before{
+        content:"";
+        content:"";
+        position:absolute;
+
+        width:3vmin;
+        height:7vmin;
+        top:-6vmin;
+        left:4.5vmin;
+        border-left:.3vmin solid;
+        border-right:.3vmin solid;
+
+        background-color:#feea3a;
+        transform:rotate(22deg); 
+      }
+      .the-fool-card-0--bootR::after{
+        content:"";
+        position:absolute;
+
+        width:4vmin;
+        height:2vmin;
+        top:-6vmin;
+        left:5vmin;
+        border-radius:20%;
+        border:.3vmin solid;
+
+        background-color:#feea3a;
+        transform:rotate(22deg); 
+      }
+
+
+
+      .the-fool-card-0--bootR1{
+        position:absolute;
+      }
+      .the-fool-card-0--bootR2{
+        position:absolute;
+      }
+      .the-fool-card-0--bootR3{
+        position:absolute;
+      }
+      .the-fool-card-0--bootR4{
+        position:absolute;
+      }
+      .the-fool-card-0--clothesDecoration0{
+        position:absolute;
+        width:2vmin;
+        height:2.5vmin;
+        top:28vmin;
+        left:26vmin;
+background: linear-gradient(135deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(13deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(50deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(93deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%);
+        border-radius:50%;
+        border: .2vmin solid;
+z-index:10000000;
+    box-shadow:1vmin 1vmin 1vmin, 2vmin 8.2vmin 0 0 #feeb3b,3.5vmin 8.3vmin 0 0 #feeb3b, 3vmin 7vmin 0 0 #ffdb33,3vmin 7vmin 0 .1vmin;
+      }
+
+
+
+
+      .the-fool-card-0--clothesDecoration1{
+        position:absolute;
+        width:2vmin;
+        height:2.5vmin;
+        top:25vmin;
+        left:18vmin;
+background: linear-gradient(135deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(13deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(50deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(93deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%);
+        border-radius:50%;
+        border: .2vmin solid;
+z-index:10000000;      }
+      .the-fool-card-0--clothesDecoration2{
+        position:absolute;
+        width:2vmin;
+        height:2.5vmin;
+        top:23vmin;
+        left:10.5vmin;
+background: linear-gradient(135deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(13deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(50deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(93deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%);
+        border-radius:50%;
+        border: .2vmin solid;
+z-index:10000000;       
+
+box-shadow:3vmin 0vmin 0 -.5vmin red,3vmin -.2vmin 0 0 #ffdb33, 1vmin 1vmin 1vmin;
+
+
+}
+      .the-fool-card-0--clothesDecoration3{
+        position:absolute;
+        width:2vmin;
+        height:2.5vmin;
+        top:41vmin;
+        left:19vmin;
+background: linear-gradient(135deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(13deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(50deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(93deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%);
+        border-radius:50%;
+        border: .2vmin solid;
+z-index:10000000;   
+
+
+box-shadow: 1vmin 1vmin 1vmin 0,
+-3vmin -5vmin 1vmin 0,
+10vmin -9vmin 1vmin 0,
+-5vmin -7vmin 1vmin 0,
+-2vmin -10vmin 1vmin 0,
+2vmin -19vmin 1vmin 0,
+-3vmin -17vmin 1vmin 0,
+-3.6vmin -15.7vmin 1vmin 0,
+-4vmin -14.6vmin 1vmin 0,
+-7vmin 2vmin 1vmin 0,
+-3vmin -3vmin 1vmin 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
+
+
+
+
+      }
+      .the-fool-card-0--clothesDecoration4{
+        position:absolute;
+        width:2vmin;
+        height:2.5vmin;
+        top:30vmin;
+        left:14vmin;
+background: linear-gradient(135deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(13deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(50deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(93deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%);
+        border-radius:50%;
+        border: .2vmin solid;
+z-index:10000000;       
+box-shadow: 1vmin 1vmin 1vmin, 12.4vmin 1vmin #536b0d,12vmin 1vmin,
+1vmin 10.4vmin #536b0d,1vmin 10vmin,
+6.8vmin -6vmin #536b0d,7vmin -6vmin,
+3.4vmin 1vmin #536b0d,3vmin 1vmin,
+9.6vmin 10vmin #536b0d,10vmin 10vmin,
+-2.4vmin 12vmin #536b0d,-2vmin 12vmin,
+11.7vmin -5vmin #536b0d,12vmin -5vmin,
+2.4vmin 6vmin #536b0d,2vmin 6vmin,
+4vmin -1.5vmin #536b0d,4vmin -2vmin#346012,
+10.6vmin -7vmin #536b0d,10vmin -7vmin#346012,
+5.6vmin 3vmin #536b0d,5vmin 3vmin#346012,
+-2.7vmin -3vmin #536b0d,-2vmin -3vmin#346012,
+1.6vmin -5vmin #536b0d,1vmin -5vmin#346012,
+1.4vmin -2vmin #536b0d,1vmin -2vmin#346012,
+-1.6vmin 8vmin #536b0d,-1vmin 8vmin#346012,
+-1.4vmin -8.5vmin #536b0d,-1.5vmin -9vmin#346012,
+5.4vmin -8vmin #536b0d,5vmin -8vmin#346012,
+.4vmin 13vmin #536b0d,0vmin 13vmin#346012,
+2.4vmin 13vmin #536b0d,3vmin 13vmin #346012
+
+
+
+;
+
+
+
+}
+      .the-fool-card-0--clothesDecoration5{
+        position:absolute;
+        width:2vmin;
+        height:2.5vmin;
+        top:35vmin;
+        left:13vmin;
+background: linear-gradient(135deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(13deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(50deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(93deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%);
+        border-radius:50%;
+        border: .2vmin solid;
+z-index:10000000;     
+
+
+
+
+
+}
+      .the-fool-card-0--clothesDecoration6{
+        position:absolute;
+        width:2vmin;
+        height:2.5vmin;
+        top:36vmin;
+        left:19vmin;
+background: linear-gradient(135deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(13deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(50deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%),linear-gradient(93deg, rgba(121,9,9,0) 46%, orangered 45%, rgba(235, 11, 11, 0) 55%, #ffdb33 100%);
+        border-radius:50%;
+        border: .2vmin solid;
+z-index:10000000;
+box-shadow:3vmin 4vmin 0 -.5vmin red,3vmin 4.3vmin 0 0 #ffdb33,
+1vmin -16vmin 0 -.5vmin red,1vmin -16vmin 0 0 #ffdb33,
+-6.5vmin -3.5vmin 0 -.7vmin yellow,-6.5vmin -3.5vmin 0 -.5vmin,
+-5.5vmin -3.8vmin 0 -.7vmin yellow,-5.5vmin -3.8vmin 0 -.5vmin,
+-4.5vmin -3.8vmin 0 -.7vmin yellow,-4.5vmin -3.8vmin 0 -.5vmin,
+-3.5vmin -3.8vmin 0 -.7vmin yellow,-3.5vmin -3.8vmin 0 -.5vmin,
+-2.5vmin -3.8vmin 0 -.7vmin yellow,-2.5vmin -3.8vmin 0 -.5vmin,
+-1.4vmin -4.1vmin 0 -.7vmin yellow,-1.4vmin -4.1vmin 0 -.5vmin,
+-.4vmin -4vmin 0 -.7vmin yellow,-.4vmin -4vmin 0 -.5vmin,
+1vmin 1vmin 1vmin;
+
+
+
+
+
+
+
+
+      }
+      .the-fool-card-0--clothesDecoration7{
+        position:absolute;
+      }
+
+
+     .the-fool-card-0--fillShapes0{
+      position:absolute;
+width:2vmin;
+height:2vmin;
+border-right:.3vmin solid;
+transform:rotate(-75deg);
+top:36.2vmin;
+left:28.8vmin;
+z-index:1000000000;
+
+box-shadow:-2vmin -18vmin #fb571a,-3vmin -18vmin #fb571a;
+
+     }
+
+     /*that shoulder*/
+     .the-fool-card-0--fillShapes1{
+      position:absolute;
+
+      width:7vmin;
+      height:3vmin;
+      border-radius:50% 0 50% 0;
+      background-color:#feeb3b;
+      transform:rotate(50deg);
+      top:20.2vmin;
+      left:24vmin;
+z-index:10000000;
+      border-bottom:.3vmin solid;
+
+
+      box-shadow: -4vmin -.6vmin 0 .3vmin #feeb3b
+     }
+
+
+
+   /*hair*/ 
+     .the-fool-card-0--fillShapes2{
+      position:absolute;
+
+      width:1vmin;
+      height:.2vmin;
+      transform:rotate(40deg);
+      border-radius:50%;
+      transform:rotate(50deg);
+      top:15vmin;
+      left:21vmin;
+z-index:10000000;
+
+box-shadow:1vmin 1vmin 0 0 yellow,
+1vmin 1vmin 0 .2vmin,
+1.5vmin .5vmin 0 0 yellow,
+1.5vmin .5vmin 0 .2vmin,
+1.5vmin 0 0 0 yellow,
+1.5vmin 0 0 .2vmin,
+.5vmin -.5vmin 0 0 yellow,
+.5vmin -.5vmin 0 .2vmin,
+1vmin .5vmin 0 0 yellow,
+1vmin .5vmin 0 .2vmin,
+
+
+1.5vmin 1.2vmin 0 0 yellow,
+1.5vmin 1.2vmin 0 .2vmin,
+2vmin .7vmin 0 0 yellow,
+2vmin .7vmin 0 .2vmin,
+2vmin .2vmin 0 0 yellow,
+2vmin .2vmin 0 .2vmin,
+1vmin -.7vmin 0 0 yellow,
+1vmin -.7vmin 0 .2vmin,
+2vmin .7vmin 0 0 yellow,
+2vmin .7vmin 0 .2vmin,
+
+
+2vmin .8vmin 0 0 yellow,
+2vmin .8vmin 0 .2vmin,
+2.5vmin .1vmin 0 0 yellow,
+2.5vmin .1vmin 0 .2vmin,
+2.5vmin -.8vmin 0 0 yellow,
+2.5vmin -.8vmin 0 .2vmin,
+1.5vmin -.1vmin 0 0 yellow,
+1.5vmin -.1vmin 0 .2vmin,
+2.5vmin .1vmin 0 0 yellow,
+2.5vmin .1vmin 0 .2vmin,
+
+1vmin .8vmin 0 0 yellow,
+1vmin .8vmin 0 .2vmin,
+1.5vmin .1vmin 0 0 yellow,
+1.5vmin .1vmin 0 .2vmin,
+1.5vmin -.8vmin 0 0 yellow,
+1.5vmin -.8vmin 0 .2vmin,
+.5vmin -.1vmin 0 0 yellow,
+.5vmin -.1vmin 0 .2vmin,
+1.5vmin .1vmin 0 0 yellow,
+1.5vmin .1vmin 0 .2vmin
+
+
+
+;
+
+    
+    
+    }
+     .the-fool-card-0--fillShapes3{
+      position:absolute;
+      height:3vmin;
+      width:2vmin;
+      top:16vmin;
+      left:18.7vmin;
+
+      background-color:#ffb88c;
+      z-index:10;     }
+     .the-fool-card-0--fillShapes4{
+      position:absolute;
+     }
+     .the-fool-card-0--fillShapes5{
+      position:absolute;
+     }
+     .the-fool-card-0--fillShapes6{
+      position:absolute;
+     }

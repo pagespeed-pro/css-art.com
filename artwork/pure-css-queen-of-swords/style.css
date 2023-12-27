@@ -1,0 +1,677 @@
+*,*::before, *::after{
+  margin:0;
+  padding:0;
+  box-sizing:border-box}
+
+  .card{
+        border-radius: 1vmin;
+
+    overflow:hidden;
+    position:relative;
+    top:5vmin;
+    left:30vw;
+    width:100vw;
+  width: 40vmin;
+  height: 80vmin;
+    border:1vmin double grey;
+  }
+
+.spades {
+  width: 3.5vmin;
+  height: 3.5vmin;
+  display: block;
+  top:10vmin;
+  left:3vmin;
+  position: absolute;
+  transform: rotate(-45deg);
+  background-color:black;
+
+
+}
+
+.spades:before, .spades:after {
+  content: "";
+  width: inherit;
+  height: inherit;
+  border: inherit;
+  background-color: inherit;
+  position: absolute;
+  transform: rotate(-45deg);
+  
+  
+
+
+}
+.spades:before {
+  top: 0;
+  left:-2vmin;
+  border-radius: 50%;
+
+  
+  box-shadow: 0 2.9vmin 0 0;
+
+  
+}
+.spades:after {
+  top: .1vmin;
+  right: 2vmin;
+  width: 1vmin;
+  height: 5vmin;
+  transform: rotate(45deg);
+
+
+}
+
+.letterK{
+    position:absolute;
+    width: 9vmin;
+    height: 9vmin;
+    top:1vmin;
+    left:.2vmin;
+    text-align: center;
+    font-size:7vmin;
+}
+
+.beforeEye{
+  background: rgb(236, 212, 212);
+  height: 10vmin;
+  width:10.1vmin;
+  position: absolute;
+  border-radius:50% 0 0 0 ;
+  top: 0vmin;
+  left: 9.9vmin;
+  z-index:100;
+  border-top: .1vmin solid grey;
+  border-right: .1vmin solid grey;
+
+
+}
+
+.beforeEye::before{
+  content:"";
+  background:rgb(236, 212, 212);
+  height: 10vmin;
+  width:10.3vmin;
+  position: absolute;
+  border-radius:0 50% 0 0 ;
+  top: 0vmin;
+  left: -9.9vmin;
+  border-top: .1vmin solid grey;
+  border-left: .1vmin solid grey;
+
+
+}
+
+.crown{
+  background: #E6EC09;
+  height: 15vmin;
+  width:20vmin;
+  position: absolute;
+  top: 5vmin;
+  left: 9vmin;
+  z-index:100;
+
+}
+.crown::before{
+  content:"";
+  position:absolute;
+  height:5vmin;
+  width:5vmin;
+  border-radius:50%;
+  background:white;
+  top:-1.5vmin;
+  box-shadow: 5.2vmin .1vmin 0 0vmin white,10.2vmin .1vmin 0 0vmin white,15.2vmin .1vmin 0 0vmin white;
+
+}
+.crown::after{
+  content:"";
+  position:absolute;
+  height:2vmin;
+  width:2vmin;
+  border-radius:50%;
+  background:#E6EC09;
+  top:-.1vmin;
+  left:-1vmin;
+  box-shadow: 5.2vmin .1vmin 0 0vmin #E6EC09,10.2vmin .1vmin 0 0vmin #E6EC09,15.2vmin .1vmin 0 0vmin #E6EC09,20vmin .1vmin 0 0vmin #E6EC09;
+}
+
+.face{
+  background: rgb(236, 212, 212);
+  height: 19vmin;
+  width:20vmin;
+  
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  top: 12vmin;
+  left: 9vmin;
+
+}
+
+
+.eyeL{
+  position: absolute;
+  width: 4vmin;
+  height: 4vmin;
+  background-color: black;
+  border-radius: 50% ;
+  
+  margin-top: 4vmin;
+  margin-left: 3vmin;
+  box-shadow: -.1vmin -.1vmin 0 .5vmin brown, -.3vmin -.2vmin .1vmin .9vmin white,-.8vmin -.8vmin 1.5vmin 1.1vmin,18.5vmin 31.8vmin 0vmin 0vmin rgb(236, 212, 212),-8.5vmin 31.8vmin 0vmin 0vmin rgb(236, 212, 212);
+  z-index:120;
+
+}
+
+
+
+
+
+  .eyeL::after{
+      content:" "; 
+        position: absolute; 
+        top: 1.6vmin; 
+        right: 3.3vmin; 
+        width: 1vmin; 
+        height: 1vmin;
+        border-radius: 50%;
+        background-color:white;
+  
+  }
+  .eyeL::before{
+      content:" "; 
+        position: absolute; 
+        top: 1vmin; 
+        right: 5.4vmin; 
+        width: 1vmin; 
+        color: black;
+        background-color:black;
+        box-shadow: -.1vmin -.1vmin .2vmin .1vmin,-.1vmin -.8vmin .2vmin .1vmin,-.1vmin -1.5vmin .2vmin .1vmin ;
+        transform: rotate(25deg);
+      }
+  
+      
+  .eyeR{
+  position: absolute;
+  width: 4vmin;
+  height: 4vmin;
+  background-color: black;
+  border-radius: 50% ;
+  
+  margin-top: 4vmin;
+  margin-left: 13vmin;
+  box-shadow: -.1vmin -.1vmin 0 .5vmin brown, .1vmin -.2vmin .1vmin .9vmin white, .3vmin -.8vmin 1.5vmin 1.1vmin;
+  z-index:120;
+
+  }
+  .eyeR::after{
+      content:" "; 
+        position: absolute; 
+        top: 1.6vmin; 
+        right: 3.3vmin; 
+        width: 1vmin; 
+        height: 1vmin;
+        border-radius: 50%;
+        background-color:white;
+  
+  }
+  .eyeR::before{
+      content:" "; 
+        position: absolute; 
+        top: .8vmin; 
+        left: 5.4vmin; 
+        width: 1vmin; 
+        color: black;
+        background-color:black;
+        box-shadow: -.1vmin -.1vmin .2vmin .1vmin,-.1vmin -.8vmin .2vmin .1vmin,-.1vmin -1.5vmin .2vmin .1vmin;
+        transform: rotate(-25deg)
+      }
+
+      .nose{
+        position: absolute; 
+        top: 11vmin; 
+        left: 8.5vmin;
+        width: 3vmin; 
+        height: 1.5vmin;
+        border-radius: 50%;
+        background-color:transparent;
+        border-top: .5vmin solid rgb(202, 179, 179);
+      
+      }     
+
+      .clothes{
+
+        position: absolute; 
+
+        top: 31.8vmin; 
+        left: 2.5vmin;
+        width: 33vmin; 
+        height: 45vmin;
+        background-color:purple;
+
+      border-radius:  50%  50% 0 0;
+      }
+
+      .clothes::after{
+        content:"";
+        position: absolute; 
+
+       top: -1vmin; 
+       left: 13vmin;
+       width: 7vmin; 
+       height: 2vmin;
+       background-color: purple;
+       box-shadow: -3vmin 20vmin .2vmin .1vmin,4vmin 20vmin .2vmin .1vmin;
+
+      }
+
+      .pants-top {
+        background-color: red;
+        height: 3vmin;
+        width: 14vmin;
+        position: absolute;
+        top: 53vmin;
+        left: 12.5vmin;
+      }
+      
+      .leg {
+        background-color: red;
+        height: 14vmin;
+        width: 5vmin;
+        position: absolute;
+        top: 56vmin;
+      }
+      
+      .leg-left {
+        left: 21.5vmin;
+      }
+      
+      .leg-right {
+        right: 20.6vmin;
+      }
+      
+      .foot {
+        background-color: black;
+        width: 8vmin;
+        height: 7vmin;
+        position: absolute;
+        border-radius: 30%;
+        top: 70vmin;
+        z-index: 50;
+      }
+      
+      .foot-left {
+        border-top-right-radius: 0; 
+        left: 9.5vmin;
+      }
+      
+      .foot-right {
+        border-top-left-radius: 0; 
+        right: 8.5vmin;
+      }
+
+      .shirt{
+        position: relative;
+        left: 3.5vmin;
+        top: 32vmin;
+        width: 30.0vmin;
+        height: 20.0vmin;
+      }
+      
+    
+      
+      .inside{
+        position: absolute;
+        left: 13vmin;
+        top: 1vmin;
+        width: 0; 
+        height: 0;
+        border-left: 2.5vmin solid transparent;
+        border-right: 2.5vmin solid transparent;
+        border-top: 5.0vmin solid rgb(236, 212, 212);
+      }
+      
+      .lCollar{
+        position: absolute;
+        top: .9vmin;
+        left: 10.6vmin;
+        border-top: 2.0vmin solid red;
+        border-left: .5vmin solid transparent;
+        border-right: .5vmin solid transparent;
+        height: 0;
+        width: 2.5vmin; 
+        transform: rotate(63deg);
+      }
+      
+      .rCollar{
+        position: absolute;
+        top: .9vmin;
+        left: 16.9vmin;
+        border-top: 2.0vmin solid red;
+        border-left: .5vmin solid transparent;
+        border-right: .5vmin solid transparent;
+        height: 0;
+        width: 2.5vmin; 
+        transform: rotate(297deg);
+      }
+      
+      .blCollar{
+        position: absolute;
+        top: 4vmin;
+        left: 12.3vmin;
+        border-top: .6vmin solid red;
+        border-left: .3vmin solid transparent;
+        border-right: .3vmin solid transparent;
+        height: 0;
+        width: 3.5vmin; 
+        transform: rotate(63deg);
+      }
+      
+      .brCollar{
+        position: absolute;
+        top: 4.0vmin;
+        left: 14.6vmin;
+        border-top: .6vmin solid red;
+        border-left: .3vmin solid transparent;
+        border-right: .3vmin solid transparent;
+        height: 0;
+        width: 3.5vmin; 
+        transform: rotate(296deg);
+      }
+      
+      .btCollar{
+        position: absolute;
+        left: 14.8vmin;
+        top: 5.9vmin;
+        width: 0; 
+        height: 0;
+        border-left: .7vmin solid transparent;
+        border-right: .7vmin solid transparent;
+        border-top: 1.5vmin solid red;
+      }
+      
+      .torso{
+        position: absolute;
+        top: 1.0vmin;
+        left: 7.5vmin;
+        width: 16.0vmin;
+        height: 37vmin;
+        background: hotpink;
+        border-radius:  50% 50% 0 0;
+
+      }
+      
+  
+      .clothes{
+
+        position: absolute; 
+
+        top: 31vmin; 
+        left: 2.5vmin;
+        width: 33vmin; 
+        height: 45vmin;
+        background-color:purple;
+
+      border-radius:  50%  50% 0 0;
+      }
+     
+ 
+      
+      .lArm{
+        position: absolute;
+        top: 8.7vmin;
+        left: 2.3vmin;
+        width: 4.5vmin;
+        height: 7.5vmin;
+        background:#E0E0D0 ;
+        transform: rotate(30deg);
+      }
+      
+      .rArm{
+        position: absolute;
+        top: 8.7vmin;
+        left: 24.2vmin;
+        width: 4.5vmin;
+        height: 7.5vmin;
+        background: #E0E0D0;
+        transform: rotate(330deg);
+      }
+      
+      .laTrim{
+        position: absolute;
+        top: 15.3vmin;
+        left: 0.2vmin;
+        border-top: 1.4vmin solid red;
+        border-left: 1.0vmin solid transparent;
+        border-right: 0vmin solid transparent;
+        height: 0;
+        width: 4.5vmin;
+        transform: rotate(30deg);
+        z-index:200;
+      }
+      
+      .raTrim{
+        position: absolute;
+        top: 15.3vmin;
+        left: 26.4vmin;
+        border-top: 1.4vmin solid red;
+        border-left: 0vmin solid transparent;
+        border-right: 1.0vmin solid transparent;
+        height: 0;
+        width: 4.5vmin;
+        transform: rotate(330deg);
+        z-index:200;
+
+      }
+      
+ 
+   
+      
+      .lShadow{
+        position: relative;
+        left: 5.8vmin;
+        top: 6.5vmin;
+        width: 0;
+        height: 0;
+        border-bottom: 2.0vmin solid #C1C1B3;
+        border-left: 6vmin solid transparent;
+        transform: rotate(300deg);
+      }
+      
+      .lShadow:after{
+        width: 0;
+        height: 0;
+        position: absolute;
+        right: 0;
+        content: "";
+        border-bottom: 2.0vmin solid #E0E0D0;
+        border-left: 3.5vmin solid transparent;
+      }
+      
+      .rShadow{
+        position: absolute;
+        left: 20.0vmin;
+        top: 7.4vmin;
+        width: 0; 
+        height: 0;
+        border-left: 2.5vmin solid transparent;
+        border-right: 1.6vmin solid transparent;
+        border-top: 1.0vmin solid #C1C1B3;
+        transform: rotate(91deg);
+      }
+      
+      .cShadow{
+        position: absolute;
+        top: 1.7vmin;
+        left: 16.8vmin;
+        border-top: 2.5vmin solid #C1C1B3;
+        border-left: .5vmin solid transparent;
+        border-right: .5vmin solid transparent;
+        height: 0;
+        width: 3.0vmin; 
+        transform: rotate(297deg);
+      }
+      
+      .cbShadow{
+        position: absolute;
+        top: 4.0vmin;
+        left: 16.0vmin;
+        width: 0; 
+        height: 0;
+        border-right: 1.5vmin solid transparent;
+        border-top: 4.0vmin solid #C1C1B3;
+        transform: rotate(20deg);
+      }
+
+      .point {
+        width: 0;
+        height: 0;
+        border-right: 6vmin solid gray;
+        border-top: 2vmin solid transparent;
+        border-bottom: 2vmin solid transparent;
+        position: absolute;
+        top: 29.5vmin;
+        left: .7vmin;
+        transform: rotate(35deg);
+
+      }
+      
+      .point::after {
+        width: 0;
+        height: 0;
+        content: "";
+        border-right: 5vmin solid white;
+        border-top: 1.5vmin solid transparent;
+        border-bottom: 1.5vmin solid transparent;
+        opacity: 0.2;
+        position: absolute;
+        top: -1.5vmin;
+        left: 1.5vmin;
+        z-index: 9;
+      }
+      
+     
+      
+      .blade {
+        width: 27vmin;
+        height: 4vmin;
+        background-color: gray;
+        position: absolute;
+        top: 38.8vmin;
+        left: 3.9vmin;
+        transform: rotate(34deg);
+
+      }
+      
+      .blade::after {
+        width: 30vmin;
+        height: .2vmin;
+        content: "";
+        background-color: white;
+        opacity: 0.3;
+        position: absolute;
+        top: 1.8vmin;
+        left: .5vmin;
+        z-index: 9;
+      }
+      
+      .guard {
+        width: 2vmin;
+        height: 6vmin;
+        background-color: black;
+        position: absolute;
+        top: 45vmin;
+        left: 27vmin;
+        transform: rotate(34deg);
+        z-index: 9;
+      }
+      
+    
+      
+      .grip {
+        width: 10vmin;
+        height: 1.5vmin;
+        background-color: black;
+        position: absolute;
+        top: 50vmin;
+        left:27vmin;
+        transform: rotate(34deg);
+
+      }
+      
+    
+      
+      .pommel {
+        width: 4vmin;
+        height: 4vmin;
+        background-color: black;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        position: absolute;
+        top:51.5vmin;
+        left: 34vmin;
+
+      }
+      .hair{
+
+        width: 20vmin;
+        height: 15vmin;
+        background-color: black;
+        position: absolute;
+        top: 16.5vmin;
+        left:15.5vmin;
+        border-radius: 50%;
+        transform: rotate(70deg);
+       
+      }
+      .hair2{
+
+       
+        width: 20vmin;
+        height: 15vmin;
+        background-color:black;
+        position: absolute;
+        top: 16.5vmin;
+        left:2.5vmin;
+        border-radius: 50%;
+        transform: rotate(-70deg);
+       
+            }
+
+
+.diamond {
+  position: relative;
+  width: 2.0vmin;
+  height: 2.0vmin;
+  transform: rotate(45deg);
+  top:1.7vmin;
+  left:-.9vmin;
+}
+
+
+
+
+
+span:nth-child(1) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 1.0vmin solid #1fb67c;
+  border-right: 1.0vmin solid #20bc7d;
+  border-bottom: 1.0vmin solid #26c893;
+  border-left: 1.0vmin solid #55ddb9;
+  filter: drop-shadow(0vmin 0vmin 1.0vmin rgba(38, 200, 146, 1));
+}
+
+.mouth{
+  position: absolute;
+    top: 14vmin; 
+    right: 8vmin; 
+    width: 4vmin; 
+    height: 2vmin;
+    border-radius: 0 0 60% 60%;
+    background-color:rgb(184, 22, 22);
+    z-index:300000;
+}

@@ -1,8 +1,8 @@
 {
-    "name": "La-Chilindrina",
-    "version": "2.0.0",
-    "title": "La Chilindrina CSS art",
-    "description": "Pure CSS ( La Chilindrina )",
+    "name": "Jack-Of-Spades",
+    "version": "1.0.0",
+    "title": "Jack Of Spades Pure CSS",
+    "description": "Jack Of Spades Pure CSS",
     "author": {
         "name": "plusTer",
         "avatar": "https://assets.codepen.io/9053463/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1674426174&width=512",
@@ -21,9 +21,9 @@
     "html": "index.html",
     "css": ["style.css"],
     "js": "",
-    "thumbnail": "chilis.png",
-    "splash": "chilis.png",
-    "keywords": ["css", "responsive", "chilindrina", "css-art"],
-    "original": "https://codepen.io/PlusTer/pen/MWBvvoQ",
-    "codepen": "https://codepen.io/PlusTer/pen/MWBvvoQ"
+    "thumbnail": "jack-of-swords.png",
+    "splash": "jack-of-swords.png",
+    "keywords": ["css", "responsive", "cards", "css-art"],
+    "original": "https://codepen.io/PlusTer/pen/eYjaJWo",
+    "codepen": "https://codepen.io/PlusTer/pen/eYjaJWo"
 }
