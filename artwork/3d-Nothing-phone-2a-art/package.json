@@ -1,0 +1,26 @@
+{
+    "name": "nothing-phone-3d-model",
+    "version": "1.0.0",
+    "title": "Nothing phone 2a - a CSS styled 3d model",
+    "description": "This is a 3d model of Nothing Phone 2a which was released on March 2024. This art was made using HTML and CSS",
+    "author": {
+        "name": "Subaash",
+        "avatar": "https://assets.codepen.io/10986411/internal/avatars/users/default.png?fit=crop&format=auto&height=512&version=1708798763&width=512",
+        "web": "https://subaash.vercel.app",
+        "social": [{
+            "title": "Codepen",
+            "url": "https://codepen.io/Subaash-the-sans"
+        }, {
+            "title": "Twitter",
+            "url": "https://twitter.com/Subaashbala"
+        }]
+    },
+    "html": "index.html",
+    "css": "style.css",
+    "js": "",
+    "thumbnail": "thumbnail.png",
+    "splash": "splash.png",
+    "keywords": ["animated", "css painting", "technology", "3d"],
+    "original": "https://codepen.io/Subaash-the-sans/pen/XWQrZoj",
+    "codepen": "https://codepen.io/Subaash-the-sans/pen/XWQrZoj"
+}
