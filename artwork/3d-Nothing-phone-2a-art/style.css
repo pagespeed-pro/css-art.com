@@ -1,0 +1,1022 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --MASTER-BG-COLOR: radial-gradient(
+      rgba(255, 255, 255, 0.25) 1.45px,
+      transparent 1.45px
+    ),
+    radial-gradient(rgba(255, 255, 255, 0.25) 1.45px, #000 1.45px);
+  --BG-COLOR-VARIANT: #e1e1e1;
+  --BG-SIDES: #dadadb;
+}
+body {
+  height: 100vh;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  touch-action: none;
+  zoom: 1;
+  background-color: #000;
+  opacity: 1;
+  background-image: var(--MASTER-BG-COLOR);
+  background-size: 58px 58px;
+  background-position: 0 0, 29px 29px;
+}
+.objectViewport {
+  width: 80vw;
+  height: 85vh;
+  perspective: 1000px;
+}
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  position: absolute;
+  left: 15px;
+  bottom: 2px;
+  width: 180px;
+  height: 8px;
+  background: white;
+  border-radius: 0px;
+  outline: 2px dotted white;
+  border-radius: 15px;
+  outline-offset: 5px;
+  margin: 35px 0;
+}
+.slider::after {
+  content: "Slide to rotate the model";
+  position: absolute;
+  top: -40px;
+  color: white;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35px;
+  aspect-ratio: 1;
+  background: yellow;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+  scale: 1;
+  cursor: grab;
+  transition: all 500ms ease;
+}
+
+.slider:active::-webkit-slider-thumb {
+  background: orange;
+  scale: 1.25;
+  cursor: grabbing;
+}
+
+.nothingBody {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 15rem;
+  max-width: 15rem;
+  aspect-ratio: 0.48/1;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transform: translate(-50%, -50%) rotateY(120deg);
+  transition: transform 500ms;
+  animation: spinShow 15s linear infinite;
+}
+@keyframes spinShow{
+    from{transform: rotateY(0deg) translate(-50%, -50%)}
+    to{transform: rotateY(-360deg) translate(-50%, -50%)}
+}
+.front,
+.back {
+  width: 15rem;
+  aspect-ratio: 0.48/1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 30px;
+  transform: translate(-50%, -50%);
+  backface-visibility: none;
+}
+.left,
+.right {
+  position: absolute;
+  width: 1.75rem;
+  height: 91%;
+  background: var(--BG-SIDES);
+  top: 50%;
+  transform: rotateY(90deg) translate(0, -50%);
+}
+.power {
+  appearance: none;
+  position: absolute;
+  width: 50%;
+  height: 4rem;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  left: 50%;
+  top: 25%;
+  border-radius: 25px;
+  box-shadow: -2px 0px 2px rgba(0, 0, 0, 0.25), inset -2px 2px 0px white;
+  transform: translate(-50%, 0);
+}
+.power:active {
+  box-shadow: inset 0px 0px 3px rgba(0, 0, 0, 0.25);
+}
+.front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--BG-COLOR-VARIANT);
+  transform: translate3d(-50%, -50%, 0.82rem);
+}
+.back {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dadadb;
+  transform: translate3d(-50%, -50%, -0.9rem);
+}
+.frontCamera {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3rem;
+  width: 100%;
+}
+.camModule {
+  margin-block-start: 0.35rem;
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 20px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background: black;
+}
+.camModule::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset -1px 1px 0px rgba(255, 255, 255, 0.5),
+    inset 0.5px -1px 0px rgba(255, 255, 255, 0.3);
+}
+.camModule::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  left: 45%;
+  top: 20%;
+}
+.screen {
+  width: 95%;
+  height: 98%;
+  border: 6px solid black;
+  background: rgba(50, 50, 50, 1);
+  border-radius: calc(30px - 6px);
+  overflow: hidden;
+  background: url(https://e0.pxfuel.com/wallpapers/4/705/desktop-wallpaper-nothing-phone-red-magenta.jpg);
+  background-size: contain;
+}
+.left {
+  left: -13px;
+}
+.right {
+  right: 14.8px;
+  transform: translateX(100%) translateY(-50%) rotateY(90deg);
+}
+.corner {
+  position: absolute;
+  width: 1.8rem;
+  height: 1.75rem;
+  background: #dadadb;
+  transform: rotateY(90deg) rotateX(-45deg);
+}
+.topLeft {
+  top: -1px;
+  left: -2px;
+}
+.topRight {
+  top: -1px;
+  right: -3px;
+  transform: rotateY(90deg) rotateX(45deg);
+}
+.bottomLeft {
+  bottom: -1px;
+  left: -2px;
+  transform: rotateY(90deg) rotateX(45deg);
+}
+.bottomRight {
+  bottom: -1px;
+  right: -2px;
+  transform: rotateY(90deg) rotateX(-45deg);
+}
+.frontElement {
+  width: 95%;
+  height: 97%;
+  border: 1px solid #8e8e8f;
+  border-radius: inherit;
+  box-shadow: 0 1.75px 0px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.cameraUnit {
+  width: 100%;
+  height: 40%;
+  border-bottom: 1px solid #929292;
+  position: relative;
+}
+.randomRectangle {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  background: #a6564d;
+}
+.hollowRegionContainer {
+  position: absolute;
+  height: 5rem;
+  width: 100%;
+  bottom: 5px;
+  left: 0;
+  /*   border: solid; */
+}
+.rightHollow {
+  width: 1.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  bottom: 35%;
+  background: #e4e4e4;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    inset 0 -1px 0px rgba(255, 255, 255, 1);
+}
+.leftHollow {
+  width: 0.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  left: 15px;
+  bottom: 25%;
+  background: #e4e4e4;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    inset 0 -1px 0px rgba(255, 255, 255, 1);
+}
+.leftHollow::after,
+.leftHollow::before {
+  content: "";
+  width: 0.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  left: 25px;
+  bottom: 25%;
+  background: #e4e4e4;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    inset 0 -1px 0px rgba(255, 255, 255, 1);
+}
+.leftHollow::after {
+  left: -8px;
+  bottom: 20px;
+}
+.leftHollow::before {
+  scale: 0.75;
+  bottom: -15px;
+  left: -10px;
+}
+.verticalScrews {
+  width: 2rem;
+  height: 100%;
+  position: absolute;
+}
+.verticalScrews::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 54px;
+  left: -15px;
+  top: 55px;
+  border-radius: 5px;
+  background: #dedede;
+  box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.75);
+}
+.verticalScrews * {
+  position: absolute;
+  top: 5%;
+  left: 10px;
+}
+.bottScrew2 {
+  top: 10%;
+  left: 5px;
+}
+.bottScrew3 {
+  top: 45%;
+  left: 5px;
+}
+.topRightElement {
+  position: absolute;
+  width: 5rem;
+  height: 3.5rem;
+  right: 0;
+  background: #d3d3d3;
+}
+.recordIndicator {
+  width: 23px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  left: 30px;
+  background: #efefef;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+.recordIndicator::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(255, 0, 0, 0.5);
+  transform: translate(-50%, -50%);
+}
+.subtleNotches {
+  width: 100%;
+  height: 1rem;
+  position: absolute;
+}
+.subtleNotches div {
+  position: absolute;
+  width: 22px;
+  height: 10px;
+  left: 5px;
+  top: 5px;
+  border-radius: 25px;
+  background: #efefef;
+  border: 1px solid #c2c2c2;
+}
+.subtleNotches div::after,
+.subtleNotches div::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #efefef;
+  box-shadow: inset -1px -1px 0px white, inset 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+.subtleNotches div::after {
+  right: -25px;
+}
+.subtleNotches div::before {
+  right: -35px;
+  border-radius: 50%;
+}
+.topCameraRidge {
+  position: absolute;
+  width: 22%;
+  height: 1rem;
+  top: -5px;
+  right: 38%;
+  background: var(--BG-COLOR-VARIANT);
+  border-bottom: 1px solid #c3c3c2;
+  border-right: 1px solid #c3c3c2;
+}
+.topCameraRidge div {
+  position: absolute;
+  left: -30%;
+  top: 50%;
+}
+.topCameraRidge::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-left: 1px solid #c3c3c2;
+  border-top: 1px solid #c3c3c2;
+  border-right: 1px solid #c3c3c2;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  transform: rotate(-30deg);
+  left: -17px;
+  bottom: -5px;
+}
+.bottomRidge {
+  width: 35px;
+  height: 10px;
+  box-shadow: 0px 0px 1px gray, inset 1px 1px 1px white,
+    inset -1px -1px 1px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  bottom: 0;
+  border-radius: 15px;
+  right: 55px;
+}
+.nothingLightRight {
+  position: absolute;
+  height: 60px;
+  width: 9px;
+  background: white;
+  right: 12px;
+  top: 48%;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px 2px white;
+  transform: translate(0, -50%);
+}
+.nothingLightTopLeft {
+  position: absolute;
+  height: 45px;
+  width: 90px;
+  left: 8px;
+  top: 25%;
+  border-top: 9px solid white;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-radius: 50%;
+  filter: drop-shadow(0px 0px 5px white);
+  transform: translate(0, -50%) rotateZ(-50deg);
+}
+.nothingLeftBottomLeft {
+  position: absolute;
+  height: 50px;
+  width: 85px;
+  left: 11px;
+  bottom: 1%;
+  border-bottom: 9px solid white;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-radius: 50%;
+  filter: drop-shadow(0px 0px 5px white);
+  transform: translate(0, -50%) rotateZ(52deg);
+}
+.cameraCircle {
+  background-color: #efefef;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 74%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid #b9b9bd;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.cameraBump {
+  width: 70%;
+  aspect-ratio: 1/0.6;
+  border-radius: 50px;
+  background-color: #bbbbb9;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.2), inset 5px 5px 15px white,
+    inset -5px -5px 15px rgba(0, 0, 0, 0.5), 0 2px 2px rgba(0, 0, 0, 0.45);
+}
+.cameraBump::after {
+  content: "";
+  position: absolute;
+  width: 60%;
+  border-radius: 25px;
+  height: 40%;
+  top: 51px;
+  border: none;
+  border-top: 4px solid white;
+  filter: blur(2px);
+}
+.camera {
+  width: 35%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.camring {
+  width: 100%;
+  height: 100%;
+  background: gray;
+  outline: 1px solid black;
+  outline-offset: -3px;
+  border-radius: 50%;
+  border-right: 1px soid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.camRegion {
+  width: 80%;
+  aspect-ratio: 1;
+  background: black;
+  border-radius: inherit;
+  position: relative;
+}
+.outerLens {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: inset -1px -1px 0 rgba(255, 255, 255, 0.5),
+    inset 1px 1px 0 rgba(255, 255, 255, 0.25);
+  /*   border: 1px solid white; */
+  transform: translate(-50%, -50%);
+}
+.lens {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 50%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #28253b;
+  transform: translate(-50%, -50%);
+  box-shadow: inset -0.75px -1px 0 rgba(255, 255, 255, 1),
+    inset 0.5px 0.5px 0 rgba(255, 255, 255, 0.5);
+}
+.lensglare {
+  position: absolute;
+  left: 20%;
+  top: 10%;
+  width: 40%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+}
+.flash {
+  background-color: #e5e5e5;
+  position: absolute;
+  width: 1.25rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  box-shadow: 1px 1px 2px #a5a5a5;
+  top: 20%;
+  left: 78%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flashElement {
+  width: 60%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid black;
+  background: conic-gradient(
+    from 300deg at 50% 50%,
+    #877973,
+    #fff,
+    #877973,
+    #fff,
+    #877973
+  );
+}
+.randomDots {
+  position: absolute;
+  height: 100%;
+  width: 2rem;
+  left: 56%;
+}
+.randomDots::after,
+.randomDots::before {
+  content: "";
+  position: absolute;
+  width: 0.875rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  left: 50%;
+  background-color: #e5e5e5;
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.25), -1px -1px 2px white;
+  transform: translate(-50%, -50%);
+}
+.randomDots::after {
+  top: 14%;
+}
+.randomDots::before {
+  bottom: 3%;
+}
+/* LOWER BODY */
+.lowerBody {
+  width: 100%;
+  height: 60%;
+  position: relative;
+  overflow: hidden;
+  background: #dadadb;
+  background: linear-gradient(to right, #dadadb 40%, #e0e0e0);
+}
+.lowerBodyTopRight {
+  position: absolute;
+  width: 75px;
+  height: 45px;
+  background: #e0e0e0;
+  right: 0;
+  top: 0;
+  z-index: 0;
+}
+.lowerBodyTopRight::after,
+.lowerBodyTopRight::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 7px;
+  right: 15px;
+  top: 5px;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.35);
+}
+.lowerBodyTopRight::before {
+  right: 25px;
+}
+.largeCurvedRibbon {
+  position: absolute;
+  height: 46%;
+  width: 62%;
+  border: solid;
+  top: 8px;
+  right: 3%;
+  border-radius: 65px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border: 0;
+  background-color: #eaeaea;
+  border-top: 1px solid #a0a09e;
+  border-right: 1px solid #a0a09e;
+  border-bottom: 1px solid #a0a09e;
+  z-index: 50;
+  filter: drop-shadow(0px 3px 0px #bfbfbf);
+}
+.largeCurvedRibbon::after {
+  content: "";
+  position: absolute;
+  height: 50%;
+  width: 60%;
+  right: 40%;
+  bottom: 0;
+  background-color: #eaeaea;
+  z-index: 100;
+}
+.upperConnector {
+  position: absolute;
+  width: 70%;
+  height: 4.25rem;
+  left: -50%;
+  border-bottom: 1px solid #a0a09e;
+  border-bottom-left-radius: 65px;
+  background: #eaeaea;
+  z-index: 999;
+}
+.upperConnector::after {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 0.75px;
+  bottom: -0.5px;
+  left: 60%;
+  background: #a0a09e;
+}
+.upperConnector::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  top: -40%;
+  background: #eaeaea;
+}
+.rectangularConnector {
+  position: absolute;
+  width: 5rem;
+  height: 8.5rem;
+  border: solid;
+  bottom: -47%;
+  left: -40%;
+  transform: rotate(45deg);
+  border: 1px solid #a0a09e;
+  border-top: 1px solid transparent;
+  border-top-left-radius: 40px;
+  background: #eaeaea;
+  z-index: 1;
+}
+.verticalRibbon {
+  width: 5rem;
+  height: 65%;
+  position: absolute;
+  background: #eaeaea;
+  z-index: 50;
+  top: 35%;
+}
+.brand {
+  font-size: 11px;
+  color: black;
+  position: absolute;
+  bottom: 50px;
+  left: -8px;
+  z-index: 900;
+  transform: rotate(-90deg);
+}
+.bottomScrews {
+  position: absolute;
+  width: 75%;
+  height: 5.25rem;
+  bottom: 0;
+  right: 0;
+  background: #dcdcda;
+  z-index: 100;
+  border: 1px solid #a0a09e;
+}
+.bottomScrews::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 45%;
+  height: 100%;
+  background: #d3d2d0;
+}
+.bottomScrewsContainer {
+  position: relative;
+  width: 50%;
+  height: 2rem;
+  position: absolute;
+  bottom: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.bottomScrewsContainer::after {
+  content: "";
+  position: absolute;
+  top: -38px;
+  left: 14%;
+  width: 13px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid gray;
+  background: #777674;
+  box-shadow: inset -1px -1px 5px white,
+    inset 1px 2px 1px rgba(255, 255, 255, 1);
+}
+.bottScrew {
+  position: relative;
+  width: 13px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid gray;
+  background: #777674;
+  box-shadow: inset -1px -1px 5px white,
+    inset 1px 2px 1px rgba(255, 255, 255, 1);
+}
+.bottScrew::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  box-shadow: inset -1px 1px 0px rgba(0, 0, 0, 0.5), inset -1px 1px 0 white;
+  transform: translate(-50%, -50%);
+}
+.horizontalRibbon {
+  position: absolute;
+  width: 80%;
+  height: 3rem;
+  background: #eaeaea;
+  bottom: 4.25rem;
+  border-top-right-radius: 30px;
+  border: 1px solid #a0a09e;
+}
+.horizontalRibbon::after {
+  content: "";
+  position: absolute;
+  width: 48%;
+  height: 9px;
+  left: 31%;
+  bottom: 7px;
+  border: solid;
+  z-index: 900;
+  background: #eaeaea;
+  border: none;
+  border-bottom: 1px solid #a0a09e;
+  border-right: 1px solid #a0a09e;
+}
+.horizontalRibbon::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 13px;
+  bottom: 12px;
+  left: 140px;
+  background: #dedede;
+  border: 1px solid #a0a09e;
+  border-bottom: none;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  z-index: 990;
+}
+
+.messyStripes {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+.l1 {
+  margin-block-start: 5px;
+  width: 25%;
+  height: 13.5%;
+  left: 20%;
+  border: solid;
+  border-bottom-left-radius: 85%;
+  border: none;
+  border-left: 2.5px solid #bfbfbf;
+  border-bottom: 2.5px solid #bfbfbf;
+  position: absolute;
+}
+.c1 {
+  width: 39%;
+  height: 25%;
+  position: absolute;
+  border: solid;
+  top: 14.5%;
+  left: 42%;
+  border-top-right-radius: calc(65px - 2.5px);
+  border-bottom-right-radius: calc(65px - 2.5px);
+  border-left: 2.5px solid transparent;
+  border-top: 2.5px solid #bfbfbf;
+  border-right: 2.5px solid #bfbfbf;
+  border-bottom: 2.5px solid #bfbfbf;
+}
+.c1::after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 22px;
+  border-top: 2.5px solid #bfbfbf;
+  top: 69px;
+  left: -14.25px;
+}
+.d1 {
+  position: absolute;
+  transform-origin: right;
+  width: 78px;
+  height: 20px;
+  left: 0px;
+  top: 97px;
+  border: none;
+  border-bottom: 2.5px solid #bfbfbf;
+  transform: rotate(-45deg);
+}
+.l2 {
+  position: absolute;
+  width: 2.5px;
+  height: 115px;
+  left: 28px;
+  top: 167.5px;
+  background: #bfbfbf;
+}
+.rotateButtons {
+  position: absolute;
+  width: 100%;
+  height: 7rem;
+  bottom: 0;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+.rotateButtons button {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 900;
+  height: 3.5rem;
+  aspect-ratio: 1;
+  border: none;
+  background: white;
+  outline: 2px dotted white;
+  outline-offset: 3px;
+  margin-inline: 1rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 150ms;
+}
+.incr {
+  transform: rotateX(180deg);
+}
+.decr:active {
+  transform: rotate(-15deg);
+}
+.incr:active {
+  transform: rotate(15deg) rotateX(180deg);
+}
+.disabled {
+  filter: brightness(0.5);
+  pointer-events: none;
+}
+.fadeShowRepeat {
+  animation: fadeShow 500ms infinite;
+}
+@keyframes fadeShow {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+.incrDegreeValue {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  top: 4.25rem;
+  left: 50%;
+  transform: translate(-50%) rotateX(180deg);
+}
+.decrDegreeValue {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  top: -3.5rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+.hide,
+.hidePermanent {
+  display: none;
+}
+
+.tooltip {
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: rotateY(-180deg) translate(50%, 0);
+  white-space: nowrap;
+  background: #dadadb;
+  border: 3px dotted black;
+  padding: 1rem;
+  animation: float 750ms infinite;
+}
+.tooltip::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 100%;
+  transform: translate(-50%, 0);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #000;
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: rotateY(-180deg) translate(50%, 0);
+  }
+  25% {
+    transform: rotateY(-180deg) translate(50%, 15%);
+  }
+  50% {
+    transform: rotateY(-180deg) translate(50%, 20%);
+  }
+  75% {
+    transform: rotateY(-180deg) translate(50%, 15%);
+  }
+}
+@media screen and (width< 660px) {
+  .slider {
+    display: none;
+  }
+  .rotateButtons {
+    display: flex;
+  }
+  .degreeValue {
+    display: block;
+  }
+}
+
+/* END OF STYLE SHEET */
